@@ -1,0 +1,323 @@
+head	1.3;
+access;
+symbols;
+locks
+	ullmer:1.3; strict;
+comment	@ * @;
+
+
+1.3
+date	96.11.18.05.57.05;	author ullmer;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	96.11.18.05.40.07;	author ullmer;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	96.11.15.04.18.21;	author ullmer;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@progress
+@
+text
+@//// 3Wish Tcl Code ////
+//// Brygg Ullmer, MIT Media Lab VLW 
+//// ullmer@@media.mit.edu / http://www.media.mit.edu/~ullmer
+//// Disaggregated from tcl_examp3 11/24/95
+
+#ifndef __WISH3__
+#define __WISH3__
+
+#include <Inventor/SoInput.h>
+#include <Inventor/SoDB.h>
+
+#include <Inventor/Xt/SoXt.h> 
+#include <Inventor/Xt/viewers/SoXtExaminerViewer.h> 
+
+#include <Inventor/nodes/SoSelection.h>
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <strings.h>
+#include <tcl.h>
+
+#ifndef WIN32
+#include "tclExtend.h"
+#endif 
+
+#endif
+
+@
+
+
+1.2
+log
+@progress
+@
+text
+@d25 1
+a25 1
+#endif WIN32
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a14 11
+#include <Inventor/nodes/SoCallback.h> 
+#include <Inventor/nodes/SoCube.h> 
+#include <Inventor/nodes/SoCone.h> 
+#include <Inventor/nodes/SoSeparator.h> 
+#include <Inventor/nodes/SoTexture2.h>  
+#include <Inventor/nodes/SoTranslation.h>
+#include <Inventor/nodes/SoTransform.h>
+#include <Inventor/nodes/SoMaterial.h>
+#include <Inventor/nodes/SoCoordinate3.h>
+#include <Inventor/nodes/SoFaceSet.h>
+#include <Inventor/nodes/SoCamera.h>
+a15 2
+#include <Inventor/nodes/SoEventCallback.h>
+#include <Inventor/events/SoKeyboardEvent.h>
+a16 9
+#include <Inventor/actions/SoAction.h>
+#include <Inventor/Xt/SoXtRenderArea.h>
+
+#include <Inventor/SbString.h>
+#include <Inventor/SbTime.h>
+#include <Inventor/SoPath.h>
+#include <Inventor/nodes/SoCallback.h>
+#include <Inventor/sensors/SoTimerSensor.h>
+#include <Inventor/sensors/SoAlarmSensor.h>
+a24 113
+#include "TextObj.h"
+#endif WIN32
+
+////// Tcl call wrappers /////
+
+int TclAddNKit(ClientData , Tcl_Interp *interp,
+   int argc, char *argv[]);
+
+int TclAddObj(ClientData , Tcl_Interp *interp,
+   int argc, char *argv[]);
+
+int TclAddNObj(ClientData , Tcl_Interp *interp,
+   int argc, char *argv[]);
+
+int TclAddNInlineObj(ClientData , Tcl_Interp *interp,
+   int argc, char *argv[]);
+
+int TclAddNFrame(ClientData , Tcl_Interp *interp,
+   int argc, char *argv[]);
+
+int TclDelNObj(ClientData , Tcl_Interp *interp,
+   int argc, char *argv[]);
+
+int TclGetNObj(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]);
+  
+int TclTweakNObj(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]);
+  
+int TclShowStaticTextWin(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclPlaceText(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclPlaceParText(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclInvRotz(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclPlaceParImage(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclPlaceParIv(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclPlaceTextureObj(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclMoveNObj(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+  
+int TclShiftNObj(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclShiftTo(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclMoveTo(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclSpinNObj(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+  
+int TclRotNObj(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+  
+int TclRotTo(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclSpinTo(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclTiAfter(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclTiPeriodic(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclTiIdle(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclGetCamPos(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclDist3D(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclDiff3D(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclAdd3D(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclCreateConsole(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclTweakDrawstyle(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclgetBBox(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclgetNObjTransf(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+#ifndef WIN32
+
+//relies on fopen call
+int TclSaveImage(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+a25 102
+
+#ifndef WIN32
+
+/// Bird Calls
+
+int TclInitFlock(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclCloseFlock(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclGetFlockPos(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclGetFlockOrient(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclGetFlockVecOrient(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+  
+/// Lego Calls
+
+int TclInitLegoDacta(ClientData, Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclCloseLegoDacta(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclGetLegoAnalogData(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclGetLegoRelativeRot(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclGetLegoAbsoluteRot(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclSetLegoMotorOn(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+int TclSetLegoMotorOff(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+#endif WIN32
+
+int TclW3Die(ClientData , Tcl_Interp *interp,
+  int argc, char *argv[]) ;
+
+#ifdef WIN32
+
+///// Win32 calls /////////
+////// DDE calls ///////////
+
+int TclInitDDE(ClientData, Tcl_Interp *interp,
+                          int argc, char *argv[]) ;
+
+int TclWinMsg(ClientData, Tcl_Interp *interp,
+                          int argc, char *argv[]);
+
+int WINinitDDE(HANDLE, Tcl_Interp *interp, char *func_call);
+
+#define WinMessage(mes) MessageBox(NULL, mes,"3Wish",MB_OK);
+
+#endif WIN32
+
+///// Tcl inits for included packages ///////
+
+extern "C" {
+void Gdtcl_Init( Tcl_Interp *interp );
+int tcl_gdbm_init( Tcl_Interp *interp);
+}
+
+#define HIERSEP_CHAR ':'
+
+///// Global functions ///////
+
+void keyboardCB(void *userData, SoEventCallback *eventCB);
+
+char *readFile(char *filename);
+SbVec3f *convTcl2Iv_vert(char *list);
+SbVec3f *convTcl2Iv_vertlist(Tcl_Interp *interp, char *list, int *numverts);
+
+void ShiftObj(SoTranslation *trans, 
+  SbVec3f *basevec, SbVec3f *targetvec, int steps, float duration);
+void ShiftCamTo(SbVec3f *destination, int steps, float duration);
+void shiftobjCallback(void *data, SoSensor *);
+void shiftcamCallback(void *data, SoSensor *);
+
+void exectclCallback(void *data, SoSensor *);
+void iexectclCallback(void *data, SoSensor *);
+void selectionCB(void *userData, SoPath *path);
+
+void SpinObj(SoRotation *rot,
+  SbVec3f *basevec, SbVec3f *targetvec, int steps, float duration);
+void RotateCamTo(SbVec3f *destination, int steps, float duration);
+void spinobjCallback(void *data, SoSensor *);
+void rotcamCallback(void *data, SoSensor *);
+
+SbRotation  *hprToRot(float heading, float pitch, float roll);
+SoNode      *getNamedNode(char *name);
+SoSeparator *getParentFrame(char *name);
+void w3_error(char *function_name, char *format, ...);
+@

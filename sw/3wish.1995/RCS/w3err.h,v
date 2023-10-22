@@ -1,0 +1,43 @@
+head	1.1;
+access;
+symbols;
+locks
+	ullmer:1.1; strict;
+comment	@ * @;
+
+
+1.1
+date	96.11.18.05.40.07;	author ullmer;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@//// 3Wish: w3core headers ////
+//// Brygg Ullmer, MIT Media Lab TMG
+//// ullmer@@media.mit.edu / http://www.media.mit.edu/~ullmer
+//// Disaggregated from tcl_examp3 11/24/95
+//// Disaggregated from bulk 3wish aggregation
+
+#ifndef __3WISH_ERR__
+#define __3WISH_ERR__
+
+#include <stdio.h>
+#include <stdarg.h>
+#include <math.h>
+#include <strings.h>
+#include <tcl.h>
+
+void w3_error(char *function_name, char *format, ...);
+
+#endif
+
+@

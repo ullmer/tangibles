@@ -1,0 +1,147 @@
+-rw-r--r-- brygg/brygg    4768 1996-11-19 22:44 3wish.cxx
+-rw-r--r-- brygg/brygg     540 1996-11-18 00:51 3wish.h
+-rw-r--r-- brygg/brygg    3258 1996-11-19 22:47 3wishPkg.cxx
+drwxr-xr-x brygg/brygg       0 2003-06-12 23:44 alpha/
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3shift.cxx -> ../w3shift.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3bind.cxx -> ../w3bind.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3flock.cxx -> ../w3flock.cxx
+-rw-r--r-- brygg/brygg   16496 1996-11-19 22:47 alpha/3wishPkg.o
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3rot.cxx -> ../w3rot.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3util.h -> ../w3util.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/base.h -> ../base.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/3wish.h -> ../3wish.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/3wishPkg.cxx -> ../3wishPkg.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3bind.h -> ../w3bind.h
+-rw-r--r-- brygg/brygg    1480 1996-11-19 22:46 alpha/w3err.o
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3core.cxx -> ../w3core.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3math.cxx -> ../w3math.cxx
+-rw-r--r-- brygg/brygg   35072 1996-11-19 22:46 alpha/w3core.o
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3corePkg.cxx -> ../w3corePkg.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/RCS -> ../RCS
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3lego.cxx -> ../w3lego.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3core.h -> ../w3core.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3lego.h -> ../w3lego.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3util.cxx -> ../w3util.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3shift.h -> ../w3shift.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/3wish.cxx -> ../3wish.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3math.h -> ../w3math.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3err.h -> ../w3err.h
+-rw-r--r-- brygg/brygg    3814 1996-11-18 00:57 alpha/tkXAppInit.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3time.cxx -> ../w3time.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3err.cxx -> ../w3err.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 alpha/w3flock.h -> ../w3flock.h
+-rw-r--r-- brygg/brygg    1961 1996-11-19 22:46 alpha/Makefile
+-rw-r--r-- brygg/brygg   20216 1996-11-19 22:45 alpha/3wish.o
+drwxr-xr-x brygg/brygg       0 2001-09-26 18:52 aux/
+-rw-r--r-- brygg/brygg    2889 1996-11-04 23:27 aux/w3textureobj.cxx
+-rw-r--r-- brygg/brygg    7896 1996-11-04 23:27 aux/w3text.cxx
+-rw-r--r-- brygg/brygg   12529 1996-11-04 23:27 aux/w3term.cxx
+-rw-r--r-- brygg/brygg    1149 1996-11-04 23:27 aux/w3kit.h
+-rw-r--r-- brygg/brygg    3569 1996-11-04 23:27 aux/w3term.h
+-rw-r--r-- brygg/brygg    4632 1996-11-04 23:27 aux/w3kit.cxx
+-rw-r--r-- brygg/brygg    1414 1996-11-14 23:10 base.h
+drwxr-xr-x brygg/brygg       0 2001-09-26 18:52 hp/
+-rw-r--r-- brygg/brygg    1833 1996-11-18 00:32 Makefile
+-rw-r--r-- brygg/brygg    2856 1996-11-18 00:23 Makefile.old
+drwxr-xr-x brygg/brygg       0 2001-09-26 18:52 RCS/
+-r--r--r-- brygg/brygg     761 1996-11-18 00:40 RCS/w3err.cxx,v
+-r--r--r-- brygg/brygg    8700 1996-11-18 00:04 RCS/w3rot.cxx,v
+-r--r--r-- brygg/brygg    3864 1996-11-14 23:18 RCS/w3lego.h,v
+-r--r--r-- brygg/brygg   11014 1996-11-18 00:57 RCS/3wish.cxx,v
+-r--r--r-- brygg/brygg    4025 1996-11-18 00:04 RCS/tkXAppInit.cxx,v
+-r--r--r-- brygg/brygg    3668 1996-11-18 00:30 RCS/Makefile,v
+-r--r--r-- brygg/brygg    1605 1996-11-14 23:18 RCS/base.h,v
+-r--r--r-- brygg/brygg    2371 1996-11-14 23:18 RCS/w3shift.h,v
+-r--r--r-- brygg/brygg    2708 1996-11-18 00:40 RCS/w3core.h,v
+-r--r--r-- brygg/brygg     618 1996-11-18 00:40 RCS/w3err.h,v
+-r--r--r-- brygg/brygg    3328 1996-11-18 00:04 RCS/w3bind.cxx,v
+-r--r--r-- brygg/brygg    1348 1996-11-14 23:18 RCS/w3bind.h,v
+-r--r--r-- brygg/brygg     783 1996-11-14 23:18 RCS/w3math.h,v
+-r--r--r-- brygg/brygg   10276 1996-11-18 00:40 RCS/w3util.cxx,v
+-r--r--r-- brygg/brygg    7172 1996-11-18 00:04 RCS/w3shift.cxx,v
+-r--r--r-- brygg/brygg    3669 1996-11-19 17:57 RCS/3wishPkg.cxx,v
+-r--r--r-- brygg/brygg    7513 1996-11-18 00:40 RCS/w3core.cxx,v
+-r--r--r-- brygg/brygg    3188 1996-11-18 00:04 RCS/w3time.cxx,v
+-r--r--r-- brygg/brygg    3886 1996-11-18 00:04 RCS/w3lego.cxx,v
+-r--r--r-- brygg/brygg    7517 1996-11-18 00:57 RCS/3wish.h,v
+-r--r--r-- brygg/brygg    2041 1996-11-14 23:18 RCS/w3flock.h,v
+-r--r--r-- brygg/brygg    2233 1996-11-18 00:04 RCS/w3math.cxx,v
+-r--r--r-- brygg/brygg    2415 1996-11-18 00:40 RCS/w3util.h,v
+-r--r--r-- brygg/brygg   10128 1996-11-18 00:04 RCS/w3corePkg.cxx,v
+-r--r--r-- brygg/brygg    2713 1996-11-18 00:04 RCS/w3flock.cxx,v
+drwxr-xr-x brygg/brygg       0 2003-06-12 23:44 sgi/
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3shift.cxx -> ../w3shift.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3bind.cxx -> ../w3bind.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3flock.cxx -> ../w3flock.cxx
+-rw-r--r-- brygg/brygg   11312 1996-11-19 22:48 sgi/3wishPkg.o
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3rot.cxx -> ../w3rot.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3util.h -> ../w3util.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/base.h -> ../base.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/3wish.h -> ../3wish.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/3wishPkg.cxx -> ../3wishPkg.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3bind.h -> ../w3bind.h
+-rw-r--r-- brygg/brygg    2108 1996-11-19 18:22 sgi/w3err.o
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3core.cxx -> ../w3core.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3math.cxx -> ../w3math.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3corePkg.cxx -> ../w3corePkg.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/RCS -> ../RCS
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3lego.cxx -> ../w3lego.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3core.h -> ../w3core.h
+-rw-r--r-- brygg/brygg   30916 1996-11-20 01:06 sgi/Iv3wish.so
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3lego.h -> ../w3lego.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3util.cxx -> ../w3util.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3shift.h -> ../w3shift.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/3wish.cxx -> ../3wish.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3math.h -> ../w3math.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3err.h -> ../w3err.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/tkXAppInit.cxx -> ../tkXAppInit.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3time.cxx -> ../w3time.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3err.cxx -> ../w3err.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 sgi/w3flock.h -> ../w3flock.h
+-rw-r--r-- brygg/brygg    2104 1996-11-20 01:06 sgi/Makefile
+-rw-r--r-- brygg/brygg      92 1996-11-20 01:06 sgi/so_locations
+-rw-r--r-- brygg/brygg    3814 1996-11-18 00:40 tkXAppInit.cxx
+-rw-r--r-- brygg/brygg    3115 1996-11-18 00:04 w3bind.cxx
+-rw-r--r-- brygg/brygg    1157 1996-11-14 23:17 w3bind.h
+-rw-r--r-- brygg/brygg    7225 1999-02-19 17:37 #w3core.cxx#
+-rw-r--r-- brygg/brygg    7225 1996-11-18 00:33 w3core.cxx
+-rw-r--r-- brygg/brygg    2118 1996-11-18 00:09 w3core.h
+-rw-r--r-- brygg/brygg    9916 1996-11-18 00:04 w3corePkg.cxx
+-rw-r--r-- brygg/brygg     571 1996-11-18 00:34 w3err.cxx
+-rw-r--r-- brygg/brygg     427 1996-11-18 00:34 w3err.h
+-rw-r--r-- brygg/brygg    2501 1996-11-18 00:04 w3flock.cxx
+-rw-r--r-- brygg/brygg    1850 1996-11-14 23:18 w3flock.h
+-rw-r--r-- brygg/brygg    3675 1996-11-18 00:04 w3lego.cxx
+-rw-r--r-- brygg/brygg    3674 1996-11-14 11:49 w3lego.h
+-rw-r--r-- brygg/brygg    2021 1996-11-18 00:04 w3math.cxx
+-rw-r--r-- brygg/brygg     592 1996-11-14 23:11 w3math.h
+-rw-r--r-- brygg/brygg    8488 1996-11-18 00:04 w3rot.cxx
+-rw-r--r-- brygg/brygg    6960 1996-11-18 00:04 w3shift.cxx
+-rw-r--r-- brygg/brygg    2180 1996-11-14 23:13 w3shift.h
+-rw-r--r-- brygg/brygg    2976 1996-11-18 00:04 w3time.cxx
+-rw-r--r-- brygg/brygg    9455 1996-11-18 00:08 w3util.cxx
+-rw-r--r-- brygg/brygg    2057 1996-11-18 00:09 w3util.h
+drwxr-xr-x brygg/brygg       0 2003-06-12 23:44 wintel/
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3shift.cxx -> ../w3shift.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3bind.cxx -> ../w3bind.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3flock.cxx -> ../w3flock.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3rot.cxx -> ../w3rot.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3util.h -> ../w3util.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/base.h -> ../base.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/3wish.h -> ../3wish.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3bind.h -> ../w3bind.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3core.cxx -> ../w3core.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3math.cxx -> ../w3math.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3corePkg.cxx -> ../w3corePkg.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3lego.cxx -> ../w3lego.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3core.h -> ../w3core.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3lego.h -> ../w3lego.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3util.cxx -> ../w3util.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3shift.h -> ../w3shift.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/3wish.cxx -> ../3wish.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3math.h -> ../w3math.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3err.h -> ../w3err.h
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/tkXAppInit.cxx -> ../tkXAppInit.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3time.cxx -> ../w3time.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3err.cxx -> ../w3err.cxx
+lrwxrwxrwx brygg/brygg       0 2003-06-12 23:44 wintel/w3flock.h -> ../w3flock.h
