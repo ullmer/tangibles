@@ -1,0 +1,312 @@
+#!3wish
+
+#Desk test application code
+#Brygg Ullmer, MIT Media Lab TMG/VLW
+#March 9, 1996
+
+#Load libraries
+
+source libiv.tcl
+source stack.tcl
+source objcode.tcl
+
+#Load data
+source objentries.data
+
+#Register barcode, object data
+
+global bcpairs
+ObjRegistry registry
+registry registerBCPairs $bcpairs
+
+#Start flock
+#initFlock  "/dev/ttyd72"
+initFlock  "/dev/ttyd2"
+
+set WIN 0
+#set WIN 1
+
+set DESK 1
+set LENS 0
+
+if {$WIN} {proc PUTS {arg} {winMessage $arg}} \
+    else  {proc PUTS {arg} {puts $arg}}
+
+### Hot Spot ###
+
+global hotspot hotspot_dim
+set hotspot     {50 7 0}
+set hotspot_dim {10 10}
+
+#Light; needs to be added before objects which will be illuminated
+
+#addNKit Light light {}
+#Light setPart light PointLight
+#Light set {light {location 0 -2 2}}
+
+######################### Test Sequence #######################
+
+if {!$WIN} {
+
+set objlist {}
+
+tiAfter .1 {tweakDrawstyle no_texture}
+
+tiAfter 1 {
+
+  set time {1}
+
+  foreach bc {Art1 Art2 Art3 Video1 Video2} {
+
+    set obj [registry map_bc2obj $bc]
+    set objname [format {%sv%s} $obj [registry get_instance $obj]]
+    set objinfo [lreplace [$obj self] 1 1 $objname]
+
+    tiAfter $time [format {
+      PUTS "%s enters"
+      enterObject {%s}
+
+      PUTS "%s moves"
+      moveObject %s
+    } $objname $objinfo $objname $objname]
+
+    incr time 2
+    
+    lappend objlist $objname
+  }
+}
+
+
+############################## enterObject ############################
+
+proc enterObject {objinfo} {
+  global hotspot
+
+  set objname [lindex $objinfo 1]
+
+  eval $objinfo
+
+  $objname assertLens
+  moveNObj $objname:trans $hotspot
+}
+
+############################## moveObject #############################
+
+proc moveObject {objname} {
+  global hotspot
+
+  set origin $hotspot
+  set destination [$objname get destination]
+
+  #shiftNObj $objname:trans $origin $destination 2 10
+  moveNObj $objname:trans $destination 
+}
+
+############################## exitObject #############################
+
+proc exitObject {objname} {
+
+  delNObj $objname
+  $objname delete
+}
+
+############################## The Desk #############################
+
+
+IvObj desk
+desk addObjs         {{Material -diffuseColor {.5 .5 .5} -transparency {.3}}
+                      {Coordinate3 -point 
+                      {[ 0  61 0,  76.2 61 0,
+                        76.2 0 0,   0    0 0,
+                         0  61 0]}}
+                     {LineSet -numVertices {[5]}}}
+
+#Variant desk coords w/ origin in Center
+#                      {[-38.1  30.48 0,  38.1  30.48 0,
+#                        38.1 -30.48 0, -38.1 -30.48 0,
+#                       -38.1  30.48 0]}}
+
+desk assertIv
+#shiftTo {0 0 -76.0} .1 2 
+
+######################## Quit Button #####################
+
+if {!$WIN} {
+
+button .q -text Quit -command shutdown; pack .q
+proc shutdown {} {
+  global server_handle
+
+  puts "Shutting down"
+
+  closeFlock
+#  close $server_handle
+  w3Die #try this...
+}
+}
+########################
+#
+
+set x_max 76.2
+set y_max 61
+
+set x_offset [expr $x_max/2 + 7]
+set y_offset [expr $y_max + 5]
+set z_offset -10 
+
+#signs
+set xs -1
+set ys -1
+set zs +1
+
+#set h_offset 90
+#set p_offset 0
+#set r_offset 0
+
+#after 4:15 3/10 
+set h_offset 116
+set p_offset 15
+set r_offset 17
+
+#Interactive adjustments
+
+scale .h -label H -from 0 -to 360 -orient horizontal -variable h_offset
+scale .p -label P -from 0 -to 360 -orient horizontal -variable p_offset
+scale .r -label R -from 0 -to 360 -orient horizontal -variable r_offset
+
+scale .x -label X -from -20 -to 100 -orient horizontal -variable x_offset
+scale .y -label Y -from -20 -to 100 -orient horizontal -variable y_offset
+scale .z -label Z -from -50 -to 50 -orient horizontal -variable z_offset
+
+pack .h .p .r .x .y .z -expand 1 -fill both
+
+############ Texture on/off toggle ###############
+
+button .texture -command {toggleTexture on} -text "Enable texture"
+pack   .texture
+
+proc toggleTexture {value} {
+  switch $value {
+
+    on {tweakDrawstyle as_is; .texture configure -text "Disable texture" \
+         -command {toggleTexture off}}
+    off {tweakDrawstyle no_texture; .texture configure -text "Enable texture" \
+	 -command {toggleTexture on}}
+  }
+}
+
+button .savescene -text "Save as out.iv" -command {
+  set f [open {out.iv} w]
+  puts $f [getNObj root]
+  puts [getNObj root]
+  close $f
+}
+
+button .savergb -text "Save as out.rgb" -command {
+   puts "Saving..."
+   saveImage "out.rgb" 640 480
+   puts "Saved!"
+}
+
+pack .savescene .savergb
+
+####################### Map Adjusted Position ######################
+
+proc mapAPos {pos} {
+
+  global x_offset y_offset z_offset
+  global xs ys zs
+
+  set x [lindex $pos 0]
+  set y [lindex $pos 1]
+  set z [lindex $pos 2]
+
+  set xa [expr $x_offset + $xs * $x/10]
+  set ya [expr $y_offset + $ys * $y/10] 
+  set za [expr $z_offset + $zs * $z/10]
+
+  return [list $xa $ya $za] 
+}
+
+####################### Map Adjusted Orientation ######################
+
+proc mapAOrient {orient} {
+
+  global h_offset p_offset r_offset
+
+  set h [lindex $orient 0]
+  set p [lindex $orient 1]
+  set r [lindex $orient 2]
+
+  set ha [expr $p_offset + $p]
+  set pa [expr $r_offset - $r]
+  set ra [expr $h_offset + $h] ;#right
+
+## adjust back to 0..360 degrees
+  foreach el {ha pa ra} {
+
+    if {[expr $$el > 360]} {set $el [expr $$el-360]}
+    if {[expr $$el < 0]} {set $el [expr $$el+360]}
+  }
+
+  return [list $ha $pa $ra] 
+}
+
+####################### Idle Loop ######################
+
+tiIdle { ;# Lens loop
+
+  set pos [getFlockPos 0]
+  set orient [getFlockOrient 0]
+
+
+#cam -6.97653 69.8769 16.2637 84.421524 0.791040 3.713492
+#cam 32.5311 -1.45469 20.6059 -185.035 -78.2882 -16.8096
+
+ #adjust from mm to cm units
+
+  set x [lindex $pos 0]
+  set y [lindex $pos 1]
+  set z [lindex $pos 2]
+
+  set adjpos    [list [expr $x/10] [expr $y/10] [expr $z/10]] 
+
+  set apos    [mapAPos $pos]
+  set aorient [mapAOrient $orient]
+
+ #puts "cam $adjpos $orient // $apos $aorient"
+
+####move camera
+
+  moveTo $apos
+  rotTo  $aorient
+}
+
+addNObj spotcube  {Cone {}}
+
+tiAfter 1 {
+addNInlineObj Light {SpotLight {}} pre
+
+tiIdle {  #Spotlight loop
+
+  set pos [getFlockPos 1]
+  set orient [getFlockOrient 1]
+
+  set apos    [mapAPos $pos]
+  set aorient [mapAOrient $orient]
+
+ #puts "cam $adjpos $orient // $apos $aorient"
+
+####move camera
+
+
+  rotNObj spotcube:rot $aorient
+  moveNObj spotcube:trans $apos
+
+  tweakNObj Light [format {location %s} $apos]
+#  Light set [format {light {location %s}} $apos]
+}
+}
+
+#END
+

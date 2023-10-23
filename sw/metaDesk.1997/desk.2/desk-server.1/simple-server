@@ -1,0 +1,32 @@
+#!/vlw/bin/gddiwish
+
+# Simple server exploration by Ullmer/Lopes, 03/05/96
+
+set port 8050
+set pcookie "you're putting"
+set gcookie "you're getting"
+
+set server_handle [server_create -myport $port]
+
+fileevent $server_handle readable {
+  set lhandle [server_accept $server_handle]
+
+  puts "lhandle $lhandle"
+  set request [gets $lhandle]
+
+#  puts $lhandle $cookie
+
+  if {[regexp {^GET} $request]} {
+    puts $lhandle "<$request> $gcookie"
+  }
+
+  if {[regexp {^PUT} $request]} {
+    puts $lhandle "<$request> $pcookie"
+  }
+
+  close $lhandle
+}
+
+
+
+

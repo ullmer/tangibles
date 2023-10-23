@@ -1,0 +1,203 @@
+#!3wish
+
+#Desk test code
+
+#Brygg Ullmer, MIT Media Lab TMG/VLW
+#March 9, 1996
+
+#Load Callbacks
+
+source libiv.tcl
+source stack.tcl
+
+#initDDE assertBCobj
+
+########################## Barcode Callback #########################
+
+global bcnum
+set bcnum 0
+
+proc assertBCobj {barcode} {
+
+  global bcnum
+  set objname obj[incr bcnum]
+
+#  winMessage "adding $objname"
+  puts "adding $objname"
+
+  SimpleObject $objname -symname $barcode
+  $objname assertDesk
+}
+
+tiAfter 5  {assertBCobj Obj1}
+tiAfter 15 {assertBCobj Obj2}
+
+############################## The Desk #############################
+
+IvObj desk
+desk addObjs         {{Coordinate3 -point 
+                      {[ 0  61 0,  76.2 61 0,
+		        76.2 0 0,   0    0 0,
+			 0  61 0]}}
+                     {LineSet -numVertices {[5]}}}
+
+#Variant desk coords w/ origin in Center
+#                      {[-38.1  30.48 0,  38.1  30.48 0,
+#		         38.1 -30.48 0, -38.1 -30.48 0,
+#			-38.1  30.48 0]}}
+
+desk assertIv
+
+####### Desk Hot Spot
+
+set hotspot     {5 5}
+set hotspot_dim {10 10}
+
+
+IvObj desk:target
+desk:target addObjs {{Translation -translation {%s 0}}}
+ 
+
+############################# Barcode-Object Pairs#############################
+
+# BC pairs asserted as BC, DeskObj
+set bcpairs {
+  {Art1 renga1}
+  {Art2 renga1}
+  {Art3 renga1}
+  {Session1 sboard1}
+  {Session2 sboard1}
+  {Session3 sboard1}
+}
+
+############################## Object Registry #############################
+
+itcl_class ObjRegistry {
+  
+  method registerBCPairs {bcpairs} {
+
+    foreach pair $bcpairs {
+      set bc2obj([lindex $pair 0]) [lindex $pair 1]
+      lappend obj2bc([lindex $pair 1]) [lindex $pair 0] 
+	 #multiple maps are kosher for obj2bc
+    }
+  }
+
+  method map_bc2obj {bc} {
+
+    if {![info exists bc2obj($bc)]} {return {}}
+    return $bc2obj($bc)
+  }
+
+  method map_obj2bc {obj} {
+
+    if {![info exists obj2bc($obj)]} {return {}}
+    return $obj2bc($obj)
+  }
+}
+
+#### Invoke
+
+ObjRegistry registry
+registry registerBCPairs $bcpairs
+
+############################## Desk Object #############################
+
+itcl_class DeskObject {
+
+  inherit IvObj 
+
+  constructor {config} {
+    global hotspot hotspot_dim
+
+    set members [concat $members $local_members]
+
+    set location $hotspot
+    set dim $hotspot_dim
+  }
+
+  method assertDesk {} {}
+  method assertLens {} {}
+
+  public local_members {location dim symname}
+  public location {}
+  public dim      {}
+  public symname  {Unnamed} ;#for shadow, among others
+}
+
+############################## Simple Object #############################
+
+itcl_class StackObject {
+
+  inherit DeskObject
+
+  constructor {config} {
+    set members [concat $members $local_members]
+  }
+
+  method assertDesk {} {
+    
+    addNFrame $this
+    texture_plane $this:plane -texture_size $dim -texture_name $keyframe
+    $this:plane assertIv xy
+
+    #add shadow
+    addNObjs $this:shadow [format {
+      {Translation -translation {0 -2 0}}
+      {SoText3 -text {%s}}} $symname]
+
+    assertIv
+    addNInlineObj $this:tabbox {TabBoxManip {}} pre
+    moveObj $location
+  }
+
+  method assertLens {} {
+
+    addNFrame $this
+    texture_stack $this:stack -texture_size $dim -texture_names $stackframes
+    $this:stack assertIv
+
+    moveObj $location
+  }
+
+  method moveObj {pos} {
+
+    moveNObj $this:trans $pos
+    set location $pos
+  }
+
+  public local_members {keyframe stackframes}
+  public keyframe {}
+  public stackframes {}
+
+}
+
+######################## Object List #####################
+
+StackObject renga1 \
+  -stackframes   { renga/cs01.rgb renga/cs02.rgb renga/cs03.rgb
+                   renga/cs04.rgb renga/cs05.rgb renga/cs06.rgb }\
+  -keyframe {renga/cs05.rgb} -dim {4.8 3.2}
+
+StackObject sboard1 \
+  -stackframes   {softboard/sz06.rgb softboard/sz07.rgb softboard/sz08.rgb} \
+  -keyframe {softboard/sz08.rgb} -dim {4.2 3.2}
+
+######################## Quit Button #####################
+
+button .q -text Quit -command shutdown; pack .q
+proc shutdown {} {
+  global server_handle
+
+  puts "Shutting down"
+
+  closeFlock
+  close $server_handle
+  w3Die #try this...
+}
+
+########################
+
+
+#END
+

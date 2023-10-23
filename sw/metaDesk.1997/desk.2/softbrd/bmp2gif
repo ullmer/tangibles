@@ -1,0 +1,9 @@
+#!/bin/sh
+for i in *.bmp
+do
+echo $i
+bn=`basename $i .bmp`
+gn=$bn.gif
+echo $gn 
+convert $i $gn
+done

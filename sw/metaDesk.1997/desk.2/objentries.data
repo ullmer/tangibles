@@ -1,0 +1,70 @@
+#Desk test data
+#Brygg Ullmer, MIT Media Lab TMG/VLW
+#March 9, 1996
+
+############################# Barcode-Object Pairs#############################
+
+# BC pairs asserted as BC, DeskObj
+
+global bcpairs
+set bcpairs {
+  {Art1 renga1}
+  {Art2 renga3}
+  {Art3 renga2}
+  {Session1 sboard1}
+  {Session2 sboard1}
+  {Session3 sboard1}
+  {Video1 cboard1}
+  {Video2 cboard2}
+}
+
+######################## Object List #####################
+
+##### Renga Objects #####
+
+StackObject renga1 \
+  -stackframes   { renga/cs01.rgb renga/cs02.rgb renga/cs03.rgb
+                   renga/cs04.rgb renga/cs05.rgb renga/cs06.rgb }\
+  -keyframe {renga/cs05.rgb} -dim {7.62 5.08} \
+  -symname "Carefree Sunday" -color {1 1 .8} \
+  -destination {38 44 0} -popout {5}
+
+StackObject renga2 \
+  -stackframes   { renga/or01.rgb renga/or02.rgb renga/or03.rgb
+      renga/or04.rgb renga/or05.rgb renga/or06.rgb renga/or07.rgb
+      renga/or08.rgb renga/or09.rgb }\
+      -keyframe {renga/or07.rgb} -dim {7.62 5.08} \
+      -symname "Dreams of Orlando" -color {.8 1 .8} \
+  -destination {63 45 0} -popout {5}
+                  
+StackObject renga3 \
+  -keyframe {renga/ss09.rgb} -dim {7.62 5.08} \
+  -stackframes {renga/ss01.rgb renga/ss02.rgb renga/ss03.rgb renga/ss04.rgb
+     renga/ss05.rgb renga/ss06.rgb renga/ss07.rgb renga/ss08.rgb
+     renga/ss09.rgb renga/ss10.rgb renga/ss11.rgb renga/ss12.rgb
+     renga/ss13.rgb renga/ss14.rgb renga/ss15.rgb renga/ss16.rgb
+     renga/ss17.rgb renga/ss18.rgb} \
+  -symname "Spring Scroll" -color {1 .8 .6} \
+  -destination {22 45 0} -popout {4}
+
+##### Clearboard Objects #####
+
+StackObject cboard1 \
+  -stackframes   {clearbrd/slide1.rgb clearbrd/slide2.rgb clearbrd/slide4.rgb
+    clearbrd/slide5.rgb clearbrd/slide8.rgb clearbrd/slide9.rgb
+    clearbrd/slide11.rgb clearbrd/slide12.rgb} \
+  -keyframe {softboard/cboard-kids.rgb} -dim {7.62 5.08} \
+  -symname "ClearBoard vision - kids" -color {.6 .8 1} \
+  -destination {50 10 0} -popout {3}
+
+StackObject cboard2 \
+  -stackframes   { clearbrd/slide2-1.rgb clearbrd/slide2-2.rgb
+     clearbrd/slide2-3.rgb clearbrd/slide2-5.rgb clearbrd/slide2-6.rgb
+     clearbrd/slide2-8.rgb clearbrd/slide2-9.rgb clearbrd/slide2-11.rgb} \
+  -keyframe {softboard/cboard-artists.rgb} -dim {7.62 5.08} \
+  -symname "ClearBoard vision - artists" -color {.8 .8 1} \
+  -destination {27 20 0} -popout {3}
+
+##### Softboard Objects #####
+
+

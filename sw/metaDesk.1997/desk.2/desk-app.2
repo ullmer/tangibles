@@ -1,0 +1,126 @@
+#!3wish
+
+#Desk test application code
+#Brygg Ullmer, MIT Media Lab TMG/VLW
+#March 9, 1996
+
+#Load libraries
+
+source libiv.tcl
+source stack.tcl
+source objcode.tcl
+
+#Load data
+source objentries.data
+
+#Register barcode, object data
+
+global bcpairs
+ObjRegistry registry
+registry registerBCPairs $bcpairs
+
+set WIN 0
+#set WIN 1
+
+set DESK 1
+set LENS 0
+
+if {$WIN} {proc PUTS {arg} {winMessage $arg}} \
+    else  {proc PUTS {arg} {puts $arg}}
+
+### Test time-delayed events
+
+if {!$WIN} {
+tiAfter 3  {assertBCobj Art1}
+tiAfter 5 {assertBCobj Session2}
+
+tiAfter 20 {
+puts writing
+  set f [open "out.iv" w]
+  puts $f [getNObj root]
+  close $f
+puts written
+}
+}
+
+####### Desk Hot Spot
+
+global hotspot hotspot_dim
+set hotspot     {50 7}
+set hotspot_dim {10 10}
+
+########################## Barcode Callback #########################
+
+#Start barcode app
+if {$WIN && $DESK} {initDDE assertBCobj}
+
+proc assertBCobj {barcode} {
+
+  set obj [registry map_bc2obj $barcode]
+
+  if {$obj == {}} {
+    PUTS "Object <$barcode> not registered!"
+    return
+  }
+
+  set objname [format {%sv%s} $obj [registry get_instance $obj]]
+
+  set objinfo [$obj self]
+  set objinfo [lreplace $objinfo 1 1 $objname]
+
+  PUTS "$objinfo"
+
+  global hotspot
+  eval [format {%s -location {%s}} $objinfo $hotspot] 
+     ;#eval core obj specs with new name
+
+  $objname assertDesk 
+  bindNObj $objname [format {
+     moveNObj %s %s 2 6
+     bindNObj %s {delNObj %s; %s delete}
+  } $objname [$objname get destination] $objname $objname $objname ]
+}
+
+############################## The Desk #############################
+
+IvObj desk
+desk addObjs         {{Coordinate3 -point 
+                      {[ 0  61 0,  76.2 61 0,
+		        76.2 0 0,   0    0 0,
+			 0  61 0]}}
+                     {LineSet -numVertices {[5]}}}
+
+#Variant desk coords w/ origin in Center
+#                      {[-38.1  30.48 0,  38.1  30.48 0,
+#		         38.1 -30.48 0, -38.1 -30.48 0,
+#			-38.1  30.48 0]}}
+
+desk assertIv
+#shiftTo {0 0 -76.0} .1 2 
+
+
+
+IvObj desk:target
+desk:target addObjs {{Translation -translation {%s 0}}}
+ 
+
+######################## Quit Button #####################
+
+if {!$WIN} {
+
+button .q -text Quit -command shutdown; pack .q
+proc shutdown {} {
+  global server_handle
+
+  puts "Shutting down"
+
+  closeFlock
+  close $server_handle
+  w3Die #try this...
+}
+}
+########################
+
+
+#END
+
