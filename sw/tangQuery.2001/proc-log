@@ -1,0 +1,2 @@
+grep jpatten logs/*
+cat *153 | egrep 'experiment|begin|next|end'

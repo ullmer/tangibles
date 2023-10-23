@@ -1,0 +1,83 @@
+1024935233390	start 2002-06-24 12:13:53
+1024935233609	experiment number: 101
+1024935261890	begin
+1024935261890	result: -1.0 / count: 0 / numRes : 0
+1024935261890	state: 
+1024935262015	result: -1.0 / count: 0 / numRes : 0
+1024935262015	state: 
+1024935262187	result: -1.0 / count: 0 / numRes : 0
+1024935262187	state: 
+1024935262328	result: -1.0 / count: 0 / numRes : 0
+1024935262328	state: 
+1024935262609	result: -1.0 / count: 0 / numRes : 0
+1024935262609	state: 
+1024935262765	result: -1.0 / count: 0 / numRes : 0
+1024935262765	state: 
+1024935262921	result: -1.0 / count: 0 / numRes : 0
+1024935262921	state: 
+1024935263234	result: -1.0 / count: 0 / numRes : 0
+1024935263250	state: 
+1024935263375	result: -1.0 / count: 0 / numRes : 0
+1024935263375	state: 
+1024935263531	result: -1.0 / count: 0 / numRes : 0
+1024935263531	state: 
+1024935263703	result: -1.0 / count: 0 / numRes : 0
+1024935263703	state: 
+1024935264000	result: -1.0 / count: 0 / numRes : 0
+1024935264015	state: 
+1024935264156	result: 0.536 / count: 652 / numRes : 342
+1024935264156	state: {distToA 1 -1 -1.0}
+1024935264343	result: 0.536 / count: 652 / numRes : 342
+1024935264343	state: {distToA 1 -1 -1.0}
+1024935264484	result: 0.536 / count: 652 / numRes : 342
+1024935264484	state: 
+1024935264781	result: 0.536 / count: 652 / numRes : 342
+1024935264781	state: 
+1024935264968	result: 0.536 / count: 652 / numRes : 342
+1024935264968	state: {distToA 2 -1 -1.0}
+1024935265140	result: 0.536 / count: 652 / numRes : 342
+1024935265140	state: {distToA 2 -1 -1.0}
+1024935265265	result: 0.536 / count: 652 / numRes : 342
+1024935265265	state: {distToA 2 -1 -1.0}
+1024935265406	result: 0.536 / count: 652 / numRes : 342
+1024935265406	state: {distToA 2 -1 -1.0}
+1024935265718	result: 0.536 / count: 652 / numRes : 342
+1024935265718	state: {distToA 2 -1 -1.0}
+1024935265859	result: 0.536 / count: 652 / numRes : 342
+1024935265859	state: {distToA 2 -1 -1.0}
+1024935266031	result: 0.536 / count: 652 / numRes : 342
+1024935266031	state: {distToA 2 -1 -1.0}
+1024935266140	result: 0.536 / count: 652 / numRes : 342
+1024935266140	state: {distToA 2 -1 -1.0}
+1024935266312	result: 0.536 / count: 652 / numRes : 342
+1024935266312	state: {distToA 2 -1 -1.0}
+1024935266640	result: 0.536 / count: 652 / numRes : 342
+1024935266640	state: {distToA 2 -1 -1.0}
+1024935266781	result: 0.536 / count: 652 / numRes : 342
+1024935266781	state: {distToA 2 -1 -1.0}
+1024935266890	result: 0.536 / count: 652 / numRes : 342
+1024935266890	state: {distToA 2 -1 -1.0}
+1024935267093	result: 0.246 / count: 49 / numRes : 34
+1024935267093	state: {distToA 2 -1 -1.0} {acreage 1 128 1.51}
+1024935267234	result: 0.246 / count: 49 / numRes : 34
+1024935267234	state: {distToA 2 -1 -1.0} {acreage 1 128 1.51}
+1024935267515	result: 0.246 / count: 49 / numRes : 34
+1024935267515	state: {distToA 2 -1 -1.0} {acreage 1 128 1.51}
+1024935267671	result: 0.246 / count: 49 / numRes : 34
+1024935267671	state: {distToA 2 -1 -1.0} {acreage 1 128 1.51}
+1024935267828	result: 0.234 / count: 42 / numRes : 29
+1024935267828	state: {distToA 2 -1 -1.0} {acreage 1 128 1.51}
+1024935268000	result: 0.182 / count: 23 / numRes : 17
+1024935268000	state: {distToA 2 -1 -1.0} {acreage 1 128 1.51}
+1024935268343	result: 0.026 / count: 1 / numRes : 1
+1024935268343	state: {distToA 2 -1 -1.0} {acreage 1 128 1.51}
+1024935268484	result: 0.026 / count: 1 / numRes : 1
+1024935268500	state: {distToA 2 -1 -1.0} {acreage 1 128 1.51}
+1024935268625	result: 0.026 / count: 1 / numRes : 1
+1024935268625	state: {distToA 2 -1 -1.0} {acreage 1 128 1.51}
+1024935268796	result: 0.026 / count: 1 / numRes : 1
+1024935268796	state: {distToA 2 -1 -1.0} {acreage 1 128 1.51}
+1024935268796	experiment complete
+
+
+annotation {06/24/02 12:14:38} {subject 4}

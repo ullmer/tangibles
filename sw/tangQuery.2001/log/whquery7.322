@@ -1,0 +1,253 @@
+0	start 2002-06-10 16:54:58
+187	experiment set: 301
+312	begin
+312	result: -1.0 / count: 0 / numRes : 0
+312	state: 
+515	result: -1.0 / count: 0 / numRes : 0
+515	state: 
+656	result: -1.0 / count: 0 / numRes : 0
+656	state: 
+1109	result: -1.0 / count: 0 / numRes : 0
+1109	state: 
+1234	result: -1.0 / count: 0 / numRes : 0
+1234	state: 
+1390	result: -1.0 / count: 0 / numRes : 0
+1390	state: 
+1687	result: -1.0 / count: 0 / numRes : 0
+1687	state: 
+1843	result: -1.0 / count: 0 / numRes : 0
+1843	state: 
+2000	result: -1.0 / count: 0 / numRes : 0
+2000	state: 
+2281	result: -1.0 / count: 0 / numRes : 0
+2281	state: 
+2453	result: -1.0 / count: 0 / numRes : 0
+2453	state: 
+2593	result: -1.0 / count: 0 / numRes : 0
+2593	state: 
+2890	result: -1.0 / count: 0 / numRes : 0
+2890	state: 
+3047	result: -1.0 / count: 0 / numRes : 0
+3047	state: 
+3203	result: -1.0 / count: 0 / numRes : 0
+3203	state: 
+3531	result: -1.0 / count: 0 / numRes : 0
+3531	state: 
+3672	result: -1.0 / count: 0 / numRes : 0
+3672	state: 
+3828	result: -1.0 / count: 0 / numRes : 0
+3828	state: 
+4140	result: -1.0 / count: 0 / numRes : 0
+4140	state: 
+4281	result: -1.0 / count: 0 / numRes : 0
+4281	state: 
+4437	result: -1.0 / count: 0 / numRes : 0
+4437	state: 
+4718	result: -1.0 / count: 0 / numRes : 0
+4718	state: 
+4843	result: -1.0 / count: 0 / numRes : 0
+4843	state: 
+5000	result: -1.0 / count: 0 / numRes : 0
+5000	state: 
+5156	result: -1.0 / count: 0 / numRes : 0
+5156	state: 
+5468	result: -1.0 / count: 0 / numRes : 0
+5468	state: 
+5609	result: -1.0 / count: 0 / numRes : 0
+5609	state: 
+5765	result: -1.0 / count: 0 / numRes : 0
+5765	state: 
+5922	result: -1.0 / count: 0 / numRes : 0
+5922	state: 
+6218	result: -1.0 / count: 0 / numRes : 0
+6218	state: 
+6375	result: -1.0 / count: 0 / numRes : 0
+6375	state: 
+6531	result: -1.0 / count: 0 / numRes : 0
+6531	state: 
+6843	result: -1.0 / count: 0 / numRes : 0
+6843	state: 
+7000	result: -1.0 / count: 0 / numRes : 0
+7000	state: 
+7156	result: -1.0 / count: 0 / numRes : 0
+7156	state: 
+7453	result: -1.0 / count: 0 / numRes : 0
+7453	state: 
+7609	result: -1.0 / count: 0 / numRes : 0
+7609	state: 
+7750	result: -1.0 / count: 0 / numRes : 0
+7750	state: 
+8047	result: -1.0 / count: 0 / numRes : 0
+8047	state: 
+8203	result: -1.0 / count: 0 / numRes : 0
+8203	state: 
+8375	result: -1.0 / count: 0 / numRes : 0
+8375	state: 
+8672	result: -1.0 / count: 0 / numRes : 0
+8672	state: 
+8812	result: -1.0 / count: 0 / numRes : 0
+8812	state: 
+8968	result: -1.0 / count: 0 / numRes : 0
+8968	state: 
+9109	result: -1.0 / count: 0 / numRes : 0
+9109	state: 
+9406	result: -1.0 / count: 0 / numRes : 0
+9406	state: 
+9562	result: -1.0 / count: 0 / numRes : 0
+9562	state: 
+9703	result: -1.0 / count: 0 / numRes : 0
+9703	state: 
+9859	result: -1.0 / count: 0 / numRes : 0
+9859	state: 
+10156	result: -1.0 / count: 0 / numRes : 0
+10156	state: 
+10312	result: -1.0 / count: 0 / numRes : 0
+10312	state: 
+10468	result: -1.0 / count: 0 / numRes : 0
+10468	state: 
+10765	result: -1.0 / count: 0 / numRes : 0
+10765	state: 
+10937	result: -1.0 / count: 0 / numRes : 0
+10937	state: 
+11140	result: 0.23 / count: 1013 / numRes : 342
+11140	state: {distToA 0 -1 -1.0}
+11453	result: 0.23 / count: 1013 / numRes : 342
+11468	state: {distToA 0 -1 -1.0}
+11468	complete
+11609	result: 0.23 / count: 1013 / numRes : 342
+11609	state: {distToA 0 -1 -1.0}
+11750	result: 0.23 / count: 1013 / numRes : 342
+11750	state: {distToA 0 -1 -1.0}
+11859	result: 0.23 / count: 1013 / numRes : 342
+11859	state: {distToA 0 -1 -1.0}
+11859	complete
+12156	result: 0.23 / count: 1013 / numRes : 342
+12156	state: {distToA 0 -1 -1.0}
+12312	result: 0.23 / count: 1013 / numRes : 342
+12312	state: {distToA 0 -1 -1.0}
+12468	result: 0.23 / count: 1013 / numRes : 342
+12468	state: {distToA 0 -1 -1.0}
+12468	complete
+12625	result: 0.23 / count: 1013 / numRes : 342
+12625	state: {distToA 0 -1 -1.0}
+12781	result: 0.23 / count: 1013 / numRes : 342
+12781	state: {distToA 0 -1 -1.0}
+12937	result: 0.23 / count: 1013 / numRes : 342
+12937	state: {distToA 0 -1 -1.0}
+12937	complete
+13218	result: 0.23 / count: 1013 / numRes : 342
+13234	state: {distToA 0 -1 -1.0}
+13406	result: 0.23 / count: 1013 / numRes : 342
+13406	state: {distToA 0 -1 -1.0}
+13515	result: 0.23 / count: 1013 / numRes : 342
+13515	state: {distToA 0 -1 -1.0}
+13547	complete
+13703	result: 0.23 / count: 1013 / numRes : 342
+13703	state: {distToA 0 -1 -1.0}
+13859	result: 0.23 / count: 1013 / numRes : 342
+13859	state: {distToA 0 -1 -1.0}
+14015	result: 0.23 / count: 1013 / numRes : 342
+14015	state: {distToA 0 -1 -1.0}
+14015	complete
+14312	result: 0.23 / count: 1013 / numRes : 342
+14312	state: {distToA 0 -1 -1.0}
+14468	result: 0.23 / count: 1013 / numRes : 342
+14468	state: {distToA 0 -1 -1.0}
+14640	result: 0.23 / count: 1013 / numRes : 342
+14640	state: {distToA 0 -1 -1.0}
+14640	complete
+14765	result: 0.23 / count: 1013 / numRes : 342
+14765	state: {distToA 0 -1 -1.0}
+14922	result: 0.23 / count: 1013 / numRes : 342
+14922	state: {distToA 0 -1 -1.0}
+15078	result: 0.23 / count: 1013 / numRes : 342
+15093	state: {distToA 0 -1 -1.0}
+15093	complete
+15359	result: 0.23 / count: 1013 / numRes : 342
+15359	state: {distToA 0 -1 -1.0}
+15515	result: 0.23 / count: 1013 / numRes : 342
+15515	state: {distToA 0 -1 -1.0}
+15672	result: 0.23 / count: 1013 / numRes : 342
+15672	state: {distToA 0 -1 -1.0}
+15672	complete
+15812	result: 0.23 / count: 1013 / numRes : 342
+15812	state: {distToA 0 -1 -1.0}
+15968	result: 0.23 / count: 1013 / numRes : 342
+15968	state: {distToA 0 -1 -1.0}
+16109	result: 0.23 / count: 1013 / numRes : 342
+16109	state: {distToA 0 -1 -1.0}
+16109	complete
+16265	result: 0.23 / count: 1013 / numRes : 342
+16265	state: {distToA 0 -1 -1.0}
+16562	result: 0.23 / count: 1013 / numRes : 342
+16562	state: {distToA 0 -1 -1.0}
+16562	complete
+16718	result: 0.23 / count: 1013 / numRes : 342
+16718	state: {distToA 0 -1 -1.0}
+16859	result: 0.23 / count: 1013 / numRes : 342
+16859	state: {distToA 0 -1 -1.0}
+17015	result: 0.23 / count: 1013 / numRes : 342
+17015	state: {distToA 0 -1 -1.0}
+17015	complete
+17172	result: 0.23 / count: 1013 / numRes : 342
+17172	state: {distToA 0 -1 -1.0}
+17297	result: 0.23 / count: 1013 / numRes : 342
+17297	state: {distToA 0 -1 -1.0}
+17468	result: 0.23 / count: 1013 / numRes : 342
+17468	state: {distToA 0 -1 -1.0}
+17468	complete
+17765	result: 0.23 / count: 1013 / numRes : 342
+17765	state: {distToA 0 -1 -1.0}
+17906	result: 0.23 / count: 1013 / numRes : 342
+17906	state: {distToA 0 -1 -1.0}
+18062	result: 0.23 / count: 1013 / numRes : 342
+18062	state: {distToA 0 -1 -1.0}
+18062	complete
+18218	result: 0.23 / count: 1013 / numRes : 342
+18218	state: {distToA 0 -1 -1.0}
+18359	result: 0.23 / count: 1013 / numRes : 342
+18359	state: {distToA 0 -1 -1.0}
+18531	result: 0.23 / count: 1013 / numRes : 342
+18531	state: {distToA 0 -1 -1.0}
+18531	complete
+18672	result: 0.23 / count: 1013 / numRes : 342
+18672	state: {distToA 0 -1 -1.0}
+18984	result: 0.23 / count: 1013 / numRes : 342
+18984	state: {distToA 0 -1 -1.0}
+18984	complete
+19140	result: 0.23 / count: 1013 / numRes : 342
+19140	state: {distToA 0 -1 -1.0}
+19281	result: 0.23 / count: 1013 / numRes : 342
+19281	state: {distToA 0 -1 -1.0}
+19437	result: 0.23 / count: 1013 / numRes : 342
+19437	state: {distToA 0 -1 -1.0}
+19437	complete
+19593	result: 0.23 / count: 1013 / numRes : 342
+19593	state: {distToA 0 -1 -1.0}
+19750	result: 0.23 / count: 1013 / numRes : 342
+19750	state: {distToA 0 -1 -1.0}
+20062	result: 0.23 / count: 1013 / numRes : 342
+20062	state: {distToA 0 -1 -1.0}
+20062	complete
+20203	result: 0.23 / count: 1013 / numRes : 342
+20203	state: {distToA 0 -1 -1.0}
+20375	result: 0.23 / count: 1013 / numRes : 342
+20375	state: {distToA 0 -1 -1.0}
+20515	result: 0.23 / count: 1013 / numRes : 342
+20515	state: {distToA 0 -1 -1.0}
+20515	complete
+20672	result: 0.23 / count: 1013 / numRes : 342
+20672	state: {distToA 0 -1 -1.0}
+20828	result: 0.23 / count: 1013 / numRes : 342
+20828	state: {distToA 0 -1 -1.0}
+21125	result: 0.23 / count: 1013 / numRes : 342
+21125	state: {distToA 0 -1 -1.0}
+21125	complete
+21281	result: 0.23 / count: 1013 / numRes : 342
+21281	state: {distToA 0 -1 -1.0}
+21422	result: 0.23 / count: 1013 / numRes : 342
+21437	state: {distToA 0 -1 -1.0}
+21578	result: 0.23 / count: 1013 / numRes : 342
+21578	state: {distToA 0 -1 -1.0}
+21578	complete
+21718	res

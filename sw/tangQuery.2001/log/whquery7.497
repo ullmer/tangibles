@@ -1,0 +1,2565 @@
+0	start 2002-06-12 16:14:01
+172	experiment set: 11
+297	begin
+297	result: -1.0 / count: 0 / numRes : 0
+297	state: 
+547	result: -1.0 / count: 0 / numRes : 0
+547	state: 
+703	result: -1.0 / count: 0 / numRes : 0
+703	state: 
+1140	result: -1.0 / count: 0 / numRes : 0
+1140	state: 
+1265	result: -1.0 / count: 0 / numRes : 0
+1265	state: 
+1422	result: -1.0 / count: 0 / numRes : 0
+1422	state: 
+1734	result: -1.0 / count: 0 / numRes : 0
+1734	state: 
+1875	result: -1.0 / count: 0 / numRes : 0
+1875	state: 
+2015	result: -1.0 / count: 0 / numRes : 0
+2015	state: 
+2172	result: -1.0 / count: 0 / numRes : 0
+2172	state: 
+2531	result: -1.0 / count: 0 / numRes : 0
+2531	state: 
+2640	result: -1.0 / count: 0 / numRes : 0
+2640	state: 
+2797	result: -1.0 / count: 0 / numRes : 0
+2797	state: 
+3125	result: -1.0 / count: 0 / numRes : 0
+3125	state: 
+3250	result: -1.0 / count: 0 / numRes : 0
+3250	state: 
+3406	result: -1.0 / count: 0 / numRes : 0
+3406	state: 
+3562	result: -1.0 / count: 0 / numRes : 0
+3562	state: 
+3875	result: -1.0 / count: 0 / numRes : 0
+3875	state: 
+4047	result: -1.0 / count: 0 / numRes : 0
+4047	state: 
+4187	result: -1.0 / count: 0 / numRes : 0
+4187	state: 
+4547	result: -1.0 / count: 0 / numRes : 0
+4547	state: 
+4672	result: -1.0 / count: 0 / numRes : 0
+4672	state: 
+4828	result: -1.0 / count: 0 / numRes : 0
+4828	state: 
+5140	result: -1.0 / count: 0 / numRes : 0
+5140	state: 
+5265	result: -1.0 / count: 0 / numRes : 0
+5265	state: 
+5422	result: -1.0 / count: 0 / numRes : 0
+5422	state: 
+5578	result: -1.0 / count: 0 / numRes : 0
+5578	state: 
+5890	result: -1.0 / count: 0 / numRes : 0
+5890	state: 
+6015	result: -1.0 / count: 0 / numRes : 0
+6015	state: 
+6172	result: -1.0 / count: 0 / numRes : 0
+6172	state: 
+6328	result: -1.0 / count: 0 / numRes : 0
+6328	state: 
+6640	result: -1.0 / count: 0 / numRes : 0
+6640	state: 
+6781	result: -1.0 / count: 0 / numRes : 0
+6781	state: 
+6922	result: -1.0 / count: 0 / numRes : 0
+6922	state: 
+7265	result: -1.0 / count: 0 / numRes : 0
+7265	state: 
+7406	result: -1.0 / count: 0 / numRes : 0
+7406	state: 
+7562	result: -1.0 / count: 0 / numRes : 0
+7562	state: 
+7890	result: -1.0 / count: 0 / numRes : 0
+7890	state: 
+8031	result: -1.0 / count: 0 / numRes : 0
+8031	state: 
+8187	result: -1.0 / count: 0 / numRes : 0
+8187	state: 
+8515	result: -1.0 / count: 0 / numRes : 0
+8515	state: 
+8656	result: -1.0 / count: 0 / numRes : 0
+8656	state: 
+8812	result: -1.0 / count: 0 / numRes : 0
+8812	state: 
+9140	result: -1.0 / count: 0 / numRes : 0
+9140	state: 
+9250	result: -1.0 / count: 0 / numRes : 0
+9250	state: 
+9406	result: -1.0 / count: 0 / numRes : 0
+9406	state: 
+9734	result: -1.0 / count: 0 / numRes : 0
+9734	state: 
+9875	result: -1.0 / count: 0 / numRes : 0
+9875	state: 
+10031	result: -1.0 / count: 0 / numRes : 0
+10031	state: 
+10344	result: -1.0 / count: 0 / numRes : 0
+10344	state: 
+10547	result: 0.311 / count: 656 / numRes : 401
+10547	state: {sqfoot 3 128 2108.24}
+10703	result: 0.311 / count: 656 / numRes : 401
+10703	state: {sqfoot 3 128 2108.24}
+10859	result: 0.311 / count: 656 / numRes : 401
+10859	state: {sqfoot 3 128 2108.24}
+11250	result: 0.311 / count: 656 / numRes : 401
+11250	state: {sqfoot 3 128 2108.24}
+11297	result: 0.311 / count: 656 / numRes : 401
+11297	state: {sqfoot 3 128 2108.24}
+11422	result: 0.311 / count: 656 / numRes : 401
+11422	state: {sqfoot 3 134 2207.06}
+11609	result: 0.295 / count: 574 / numRes : 360
+11609	state: {sqfoot 3 147 2421.18}
+11937	result: 0.309 / count: 638 / numRes : 392
+11953	state: {sqfoot 3 134 2207.06}
+12094	result: 0.261 / count: 370 / numRes : 258
+12094	state: {sqfoot 3 212 3491.76}
+12250	result: 0.243 / count: 180 / numRes : 163
+12250	state: {sqfoot 3 255 4200.0}
+12422	result: 0.365 / count: 919 / numRes : 533
+12422	state: {sqfoot 3 16 263.53}
+12562	result: 0.243 / count: 180 / numRes : 163
+12562	state: {sqfoot 3 255 4200.0}
+12890	result: 0.243 / count: 180 / numRes : 163
+12890	state: {sqfoot 3 255 4200.0}
+13015	result: 0.243 / count: 180 / numRes : 163
+13015	state: {sqfoot 3 255 4200.0}
+13172	result: 0.243 / count: 180 / numRes : 163
+13172	state: {sqfoot 3 255 4200.0}
+13312	result: 0.243 / count: 180 / numRes : 163
+13312	state: {sqfoot 3 255 4200.0}
+13469	result: 0.243 / count: 180 / numRes : 163
+13469	state: {sqfoot 3 255 4200.0}
+13625	result: 0.243 / count: 180 / numRes : 163
+13625	state: {sqfoot 3 255 4200.0}
+13969	result: 0.243 / count: 180 / numRes : 163
+13969	state: {sqfoot 3 255 4200.0}
+14094	result: 0.243 / count: 180 / numRes : 163
+14094	state: {sqfoot 3 255 4200.0}
+14250	result: 0.194 / count: 113 / numRes : 103
+14250	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+14406	result: 0.194 / count: 113 / numRes : 103
+14406	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+14562	result: 0.194 / count: 113 / numRes : 103
+14562	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+14859	result: 0.194 / count: 113 / numRes : 103
+14859	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+15031	result: 0.194 / count: 113 / numRes : 103
+15031	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+15172	result: 0.08 / count: 3 / numRes : 3
+15172	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+15328	result: -1.0 / count: 0 / numRes : 0
+15328	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+15500	result: -1.0 / count: 0 / numRes : 0
+15500	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+15844	result: -1.0 / count: 0 / numRes : 0
+15844	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+15984	result: -1.0 / count: 0 / numRes : 0
+15984	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+16125	result: -1.0 / count: 0 / numRes : 0
+16125	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+16281	result: -1.0 / count: 0 / numRes : 0
+16281	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+16422	result: 0.067 / count: 2 / numRes : 2
+16422	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+16797	result: 0.092 / count: 4 / numRes : 4
+16797	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+16937	result: 0.092 / count: 4 / numRes : 4
+16937	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+17078	result: 0.067 / count: 2 / numRes : 2
+17078	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+17219	result: 0.067 / count: 2 / numRes : 2
+17219	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+17375	result: 0.042 / count: 1 / numRes : 1
+17375	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+17547	result: 0.042 / count: 1 / numRes : 1
+17547	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+17844	result: 0.042 / count: 1 / numRes : 1
+17844	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+17844	complete
+18000	result: 0.042 / count: 1 / numRes : 1
+18000	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+18172	result: 0.042 / count: 1 / numRes : 1
+18172	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+18312	result: 0.042 / count: 1 / numRes : 1
+18312	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+18312	complete
+18469	result: 0.042 / count: 1 / numRes : 1
+18469	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+18625	result: 0.042 / count: 1 / numRes : 1
+18625	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+18781	result: 0.042 / count: 1 / numRes : 1
+18781	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+18781	complete
+18937	result: 0.042 / count: 1 / numRes : 1
+18937	state: {sqfoot 3 255 4200.0} {distToA 2 -1 -1.0}
+19265	result: 0.243 / count: 180 / numRes : 163
+19265	state: {sqfoot 3 255 4200.0}
+19406	result: 0.243 / count: 236 / numRes : 191
+19406	state: 
+19562	result: 0.243 / count: 236 / numRes : 191
+19562	state: 
+19719	result: 0.243 / count: 236 / numRes : 191
+19719	state: 
+19859	result: 0.243 / count: 236 / numRes : 191
+19859	state: 
+20015	result: 0.243 / count: 236 / numRes : 191
+20015	state: 
+20172	result: 0.243 / count: 236 / numRes : 191
+20172	state: 
+20328	result: 0.243 / count: 236 / numRes : 191
+20328	state: 
+20484	result: 0.243 / count: 236 / numRes : 191
+20484	state: 
+20781	result: 0.243 / count: 236 / numRes : 191
+20781	state: 
+20953	result: 0.243 / count: 236 / numRes : 191
+20953	state: 
+21094	result: 0.243 / count: 236 / numRes : 191
+21094	state: 
+21250	result: 0.243 / count: 236 / numRes : 191
+21250	state: 
+21406	result: 0.243 / count: 236 / numRes : 191
+21406	state: 
+21562	result: 0.243 / count: 236 / numRes : 191
+21578	state: 
+21734	result: 0.243 / count: 236 / numRes : 191
+21734	state: 
+21875	result: 0.243 / count: 236 / numRes : 191
+21875	state: 
+22031	result: 0.243 / count: 236 / numRes : 191
+22187	state: 
+22219	result: 0.243 / count: 236 / numRes : 191
+22219	state: 
+22359	result: 0.243 / count: 236 / numRes : 191
+22359	state: 
+22515	result: 0.243 / count: 236 / numRes : 191
+22515	state: 
+22672	result: 0.243 / count: 236 / numRes : 191
+22672	state: 
+22812	result: 0.243 / count: 236 / numRes : 191
+22812	state: 
+22969	result: 0.243 / count: 236 / numRes : 191
+22969	state: 
+23109	result: 0.243 / count: 236 / numRes : 191
+23109	state: 
+23422	result: 0.243 / count: 236 / numRes : 191
+23422	state: 
+23578	result: 0.243 / count: 236 / numRes : 191
+23578	state: 
+23734	result: 0.243 / count: 236 / numRes : 191
+23734	state: 
+23875	result: 0.243 / count: 236 / numRes : 191
+23875	state: 
+24031	result: 0.243 / count: 236 / numRes : 191
+24031	state: 
+24172	result: 0.243 / count: 236 / numRes : 191
+24172	state: 
+24328	result: 0.243 / count: 236 / numRes : 191
+24328	state: 
+24469	result: 0.243 / count: 236 / numRes : 191
+24484	state: 
+24625	result: 0.243 / count: 236 / numRes : 191
+24781	state: 
+24812	result: 0.243 / count: 236 / numRes : 191
+24812	state: 
+24953	result: 0.243 / count: 236 / numRes : 191
+24953	state: 
+25109	result: 0.243 / count: 236 / numRes : 191
+25109	state: 
+25265	result: 0.243 / count: 236 / numRes : 191
+25265	state: 
+25422	result: 0.243 / count: 236 / numRes : 191
+25422	state: 
+25578	result: 0.243 / count: 236 / numRes : 191
+25578	state: 
+25719	result: 0.243 / count: 236 / numRes : 191
+25719	state: 
+26015	result: 0.243 / count: 236 / numRes : 191
+26015	state: 
+26172	result: 0.243 / count: 236 / numRes : 191
+26172	state: 
+26328	result: 0.243 / count: 236 / numRes : 191
+26328	state: 
+26484	result: 0.243 / count: 236 / numRes : 191
+26484	state: 
+26625	result: 0.243 / count: 236 / numRes : 191
+26625	state: 
+26781	result: 0.243 / count: 236 / numRes : 191
+26781	state: 
+26937	result: 0.243 / count: 236 / numRes : 191
+26937	state: 
+27078	result: 0.243 / count: 236 / numRes : 191
+27078	state: 
+27234	result: 0.243 / count: 236 / numRes : 191
+27390	state: 
+27422	result: 0.243 / count: 236 / numRes : 191
+27422	state: 
+27562	result: 0.243 / count: 236 / numRes : 191
+27562	state: 
+27719	result: 0.243 / count: 236 / numRes : 191
+27719	state: 
+27859	result: 0.243 / count: 236 / numRes : 191
+27859	state: 
+28015	result: 0.243 / count: 236 / numRes : 191
+28015	state: 
+28172	result: 0.243 / count: 236 / numRes : 191
+28172	state: 
+28312	result: 0.243 / count: 236 / numRes : 191
+28312	state: 
+28609	result: 0.243 / count: 236 / numRes : 191
+28609	state: 
+28765	result: 0.243 / count: 236 / numRes : 191
+28765	state: 
+28922	result: 0.243 / count: 236 / numRes : 191
+28922	state: 
+29062	result: 0.243 / count: 236 / numRes : 191
+29062	state: 
+29219	result: 0.243 / count: 236 / numRes : 191
+29219	state: 
+29359	result: 0.243 / count: 236 / numRes : 191
+29375	state: 
+29515	result: 0.243 / count: 236 / numRes : 191
+29515	state: 
+29672	result: 0.243 / count: 236 / numRes : 191
+29672	state: 
+29812	result: 0.243 / count: 236 / numRes : 191
+29984	state: 
+30015	result: 0.243 / count: 236 / numRes : 191
+30015	state: 
+30156	result: 0.243 / count: 236 / numRes : 191
+30156	state: 
+30312	result: 0.243 / count: 236 / numRes : 191
+30328	state: 
+30453	result: 0.243 / count: 236 / numRes : 191
+30453	state: 
+30625	result: 0.243 / count: 236 / numRes : 191
+30625	state: 
+30765	result: 0.243 / count: 236 / numRes : 191
+30765	state: 
+30922	result: 0.243 / count: 236 / numRes : 191
+30922	state: 
+31234	result: 0.243 / count: 236 / numRes : 191
+31234	state: 
+31375	result: 0.243 / count: 236 / numRes : 191
+31375	state: 
+31531	result: 0.243 / count: 236 / numRes : 191
+31531	state: 
+31687	result: 0.243 / count: 236 / numRes : 191
+31687	state: 
+31844	result: 0.243 / count: 236 / numRes : 191
+31844	state: 
+31984	result: 0.243 / count: 236 / numRes : 191
+31984	state: 
+32140	result: 0.243 / count: 236 / numRes : 191
+32140	state: 
+32281	result: 0.243 / count: 236 / numRes : 191
+32281	state: 
+32437	result: 0.243 / count: 236 / numRes : 191
+32437	state: 
+32594	result: 0.243 / count: 236 / numRes : 191
+32594	state: 
+32922	result: 0.243 / count: 236 / numRes : 191
+32922	state: 
+33109	result: 0.243 / count: 236 / numRes : 191
+33109	state: 
+33234	result: 0.243 / count: 236 / numRes : 191
+33234	state: 
+33406	result: 0.243 / count: 236 / numRes : 191
+33406	state: 
+33547	result: 0.243 / count: 236 / numRes : 191
+33547	state: 
+33703	result: 0.243 / count: 236 / numRes : 191
+33703	state: 
+33859	result: 0.243 / count: 236 / numRes : 191
+33859	state: 
+34000	result: 0.243 / count: 236 / numRes : 191
+34000	state: 
+34328	result: 0.243 / count: 236 / numRes : 191
+34328	state: 
+34469	result: 0.243 / count: 236 / numRes : 191
+34469	state: 
+34625	result: 0.243 / count: 236 / numRes : 191
+34625	state: 
+34781	result: 0.243 / count: 236 / numRes : 191
+34781	state: 
+34922	result: 0.243 / count: 236 / numRes : 191
+34922	state: 
+35078	result: 0.243 / count: 236 / numRes : 191
+35078	state: 
+35219	result: 0.243 / count: 236 / numRes : 191
+35219	state: 
+35375	result: 0.243 / count: 236 / numRes : 191
+35375	state: 
+35672	result: 0.243 / count: 236 / numRes : 191
+35672	state: 
+35828	result: 0.243 / count: 236 / numRes : 191
+35828	state: 
+35984	result: 0.243 / count: 236 / numRes : 191
+35984	state: 
+36125	result: 0.243 / count: 236 / numRes : 191
+36125	state: 
+36281	result: 0.243 / count: 236 / numRes : 191
+36281	state: 
+36437	result: 0.243 / count: 236 / numRes : 191
+36437	state: 
+36578	result: 0.243 / count: 236 / numRes : 191
+36578	state: 
+36875	result: 0.243 / count: 236 / numRes : 191
+36875	state: 
+37047	result: 0.243 / count: 236 / numRes : 191
+37047	state: 
+37187	result: 0.243 / count: 236 / numRes : 191
+37187	state: 
+37344	result: 0.243 / count: 236 / numRes : 191
+37344	state: 
+37484	result: 0.243 / count: 236 / numRes : 191
+37500	state: 
+37640	result: 0.243 / count: 236 / numRes : 191
+37640	state: 
+37797	result: 0.243 / count: 236 / numRes : 191
+37797	state: 
+37937	result: 0.243 / count: 236 / numRes : 191
+37937	state: 
+38250	result: 0.243 / count: 236 / numRes : 191
+38250	state: 
+38406	result: 0.243 / count: 236 / numRes : 191
+38406	state: 
+38547	result: 0.243 / count: 236 / numRes : 191
+38547	state: 
+38703	result: 0.243 / count: 236 / numRes : 191
+38703	state: 
+38859	result: 0.243 / count: 236 / numRes : 191
+38859	state: 
+39000	result: 0.243 / count: 236 / numRes : 191
+39000	state: 
+39156	result: 0.243 / count: 236 / numRes : 191
+39156	state: 
+39453	result: 0.243 / count: 236 / numRes : 191
+39453	state: 
+39609	result: 0.243 / count: 236 / numRes : 191
+39609	state: 
+39750	result: 0.243 / count: 236 / numRes : 191
+39750	state: 
+39906	result: 0.243 / count: 236 / numRes : 191
+39906	state: 
+40062	result: 0.243 / count: 236 / numRes : 191
+40062	state: 
+40203	result: 0.243 / count: 236 / numRes : 191
+40203	state: 
+40359	result: 0.243 / count: 236 / numRes : 191
+40359	state: 
+40515	result: 0.243 / count: 236 / numRes : 191
+40515	state: 
+40656	result: 0.243 / count: 236 / numRes : 191
+40656	state: 
+40969	result: 0.243 / count: 236 / numRes : 191
+40969	state: 
+41109	result: 0.243 / count: 236 / numRes : 191
+41109	state: 
+41265	result: 0.243 / count: 236 / numRes : 191
+41281	state: 
+41422	result: 0.243 / count: 236 / numRes : 191
+41422	state: 
+41562	result: 0.243 / count: 236 / numRes : 191
+41562	state: 
+41875	result: 0.243 / count: 236 / numRes : 191
+41875	state: 
+41890	result: 0.243 / count: 236 / numRes : 191
+41890	state: 
+42047	result: 0.243 / count: 236 / numRes : 191
+42047	state: 
+42203	result: 0.243 / count: 236 / numRes : 191
+42203	state: 
+42344	result: 0.243 / count: 236 / numRes : 191
+42344	state: 
+42500	result: 0.243 / count: 236 / numRes : 191
+42500	state: 
+42640	result: 0.243 / count: 236 / numRes : 191
+42640	state: 
+42797	result: 0.243 / count: 236 / numRes : 191
+42797	state: 
+42953	result: 0.243 / count: 236 / numRes : 191
+42953	state: 
+43250	result: 0.243 / count: 236 / numRes : 191
+43250	state: 
+43422	result: 0.243 / count: 236 / numRes : 191
+43422	state: 
+43562	result: 0.243 / count: 236 / numRes : 191
+43562	state: 
+43703	result: 0.243 / count: 236 / numRes : 191
+43719	state: 
+43859	result: 0.243 / count: 236 / numRes : 191
+43875	state: 
+44015	result: 0.243 / count: 236 / numRes : 191
+44015	state: 
+44172	result: 0.243 / count: 236 / numRes : 191
+44172	state: 
+44312	result: 0.243 / count: 236 / numRes : 191
+44312	state: 
+44625	result: 0.243 / count: 236 / numRes : 191
+44625	state: 
+44797	result: 0.243 / count: 236 / numRes : 191
+44797	state: 
+44937	result: 0.243 / count: 236 / numRes : 191
+44937	state: 
+45094	result: 0.243 / count: 236 / numRes : 191
+45094	state: 
+45250	result: 0.243 / count: 236 / numRes : 191
+45250	state: 
+45390	result: 0.243 / count: 236 / numRes : 191
+45390	state: 
+45547	result: 0.243 / count: 236 / numRes : 191
+45547	state: 
+45844	result: 0.243 / count: 236 / numRes : 191
+45844	state: 
+46000	result: 0.243 / count: 236 / numRes : 191
+46000	state: 
+46140	result: 0.243 / count: 236 / numRes : 191
+46140	state: 
+46297	result: 0.243 / count: 236 / numRes : 191
+46297	state: 
+46453	result: 0.243 / count: 236 / numRes : 191
+46453	state: 
+46594	result: 0.243 / count: 236 / numRes : 191
+46609	state: 
+46750	result: 0.243 / count: 236 / numRes : 191
+46750	state: 
+46906	result: 0.243 / count: 236 / numRes : 191
+46906	state: 
+47203	result: 0.243 / count: 236 / numRes : 191
+47203	state: 
+47344	result: 0.243 / count: 236 / numRes : 191
+47344	state: 
+47500	result: 0.243 / count: 236 / numRes : 191
+47500	state: 
+47656	result: 0.243 / count: 236 / numRes : 191
+47656	state: 
+47812	result: 0.243 / count: 236 / numRes : 191
+47812	state: 
+47953	result: 0.243 / count: 236 / numRes : 191
+47953	state: 
+48109	result: 0.243 / count: 236 / numRes : 191
+48109	state: 
+48390	result: 0.243 / count: 236 / numRes : 191
+48390	state: 
+48562	result: 0.243 / count: 236 / numRes : 191
+48562	state: 
+48719	result: 0.243 / count: 236 / numRes : 191
+48719	state: 
+48859	result: 0.243 / count: 236 / numRes : 191
+48859	state: 
+49015	result: 0.243 / count: 236 / numRes : 191
+49015	state: 
+49172	result: 0.243 / count: 236 / numRes : 191
+49172	state: 
+49328	result: 0.243 / count: 236 / numRes : 191
+49328	state: 
+49469	result: 0.243 / count: 236 / numRes : 191
+49469	state: 
+49781	result: 0.243 / count: 236 / numRes : 191
+49781	state: 
+49937	result: 0.243 / count: 236 / numRes : 191
+49937	state: 
+50078	result: 0.243 / count: 236 / numRes : 191
+50078	state: 
+50250	result: 0.243 / count: 236 / numRes : 191
+50250	state: 
+50375	result: 0.243 / count: 236 / numRes : 191
+50375	state: 
+50531	result: 0.243 / count: 236 / numRes : 191
+50531	state: 
+50687	result: 0.243 / count: 236 / numRes : 191
+50687	state: 
+50984	result: 0.243 / count: 236 / numRes : 191
+50984	state: 
+51140	result: 0.243 / count: 236 / numRes : 191
+51140	state: 
+51297	result: 0.243 / count: 236 / numRes : 191
+51297	state: 
+51437	result: 0.243 / count: 236 / numRes : 191
+51437	state: 
+51594	result: 0.243 / count: 236 / numRes : 191
+51594	state: 
+51750	result: 0.243 / count: 236 / numRes : 191
+51750	state: 
+51906	result: 0.243 / count: 236 / numRes : 191
+51906	state: 
+52031	result: 0.243 / count: 236 / numRes : 191
+52031	state: 
+52344	result: 0.243 / count: 236 / numRes : 191
+52344	state: 
+52500	result: 0.243 / count: 236 / numRes : 191
+52500	state: 
+52656	result: 0.243 / count: 236 / numRes : 191
+52656	state: 
+52812	result: 0.243 / count: 236 / numRes : 191
+52812	state: 
+52969	result: 0.243 / count: 236 / numRes : 191
+52969	state: 
+53109	result: 0.243 / count: 236 / numRes : 191
+53109	state: 
+53250	result: 0.243 / count: 236 / numRes : 191
+53250	state: 
+53547	result: 0.243 / count: 236 / numRes : 191
+53547	state: 
+53719	result: 0.243 / count: 236 / numRes : 191
+53719	state: 
+53859	result: 0.243 / count: 236 / numRes : 191
+53859	state: 
+54015	result: 0.243 / count: 236 / numRes : 191
+54015	state: 
+54172	result: 0.243 / count: 236 / numRes : 191
+54172	state: 
+54312	result: 0.243 / count: 236 / numRes : 191
+54312	state: 
+54469	result: 0.243 / count: 236 / numRes : 191
+54469	state: 
+54609	result: 0.243 / count: 236 / numRes : 191
+54609	state: 
+54922	result: 0.243 / count: 236 / numRes : 191
+54922	state: 
+55078	result: 0.243 / count: 236 / numRes : 191
+55078	state: 
+55219	result: 0.243 / count: 236 / numRes : 191
+55219	state: 
+55375	result: 0.243 / count: 236 / numRes : 191
+55375	state: 
+55531	result: 0.243 / count: 236 / numRes : 191
+55531	state: 
+55687	result: 0.243 / count: 236 / numRes : 191
+55687	state: 
+55828	result: 0.243 / count: 236 / numRes : 191
+55828	state: 
+56125	result: 0.243 / count: 236 / numRes : 191
+56140	state: 
+56281	result: 0.243 / count: 236 / numRes : 191
+56281	state: 
+56437	result: 0.243 / count: 236 / numRes : 191
+56437	state: 
+56594	result: 0.243 / count: 236 / numRes : 191
+56594	state: 
+56734	result: 0.243 / count: 236 / numRes : 191
+56734	state: 
+56890	result: 0.243 / count: 236 / numRes : 191
+56890	state: 
+57031	result: 0.243 / count: 236 / numRes : 191
+57047	state: 
+57187	result: 0.243 / count: 236 / numRes : 191
+57187	state: 
+57328	result: 0.243 / count: 236 / numRes : 191
+57328	state: 
+57640	result: 0.243 / count: 236 / numRes : 191
+57640	state: 
+57797	result: 0.243 / count: 236 / numRes : 191
+57797	state: 
+57937	result: 0.243 / count: 236 / numRes : 191
+57937	state: 
+58094	result: 0.243 / count: 236 / numRes : 191
+58094	state: 
+58234	result: 0.243 / count: 236 / numRes : 191
+58250	state: 
+58531	result: 0.243 / count: 236 / numRes : 191
+58547	state: 
+58562	result: 0.243 / count: 236 / numRes : 191
+58562	state: 
+58703	result: 0.243 / count: 236 / numRes : 191
+58703	state: 
+58875	result: 0.243 / count: 236 / numRes : 191
+58875	state: 
+59015	result: 0.243 / count: 236 / numRes : 191
+59015	state: 
+59156	result: 0.243 / count: 236 / numRes : 191
+59156	state: 
+59328	result: 0.243 / count: 236 / numRes : 191
+59328	state: 
+59469	result: 0.243 / count: 236 / numRes : 191
+59469	state: 
+59609	result: 0.243 / count: 236 / numRes : 191
+59609	state: 
+59906	result: 0.243 / count: 236 / numRes : 191
+59906	state: 
+60062	result: 0.243 / count: 236 / numRes : 191
+60062	state: 
+60219	result: 0.243 / count: 236 / numRes : 191
+60219	state: 
+60375	result: 0.243 / count: 236 / numRes : 191
+60375	state: 
+60531	result: 0.243 / count: 236 / numRes : 191
+60531	state: 
+60672	result: 0.243 / count: 236 / numRes : 191
+60672	state: 
+60844	result: 0.243 / count: 236 / numRes : 191
+60844	state: 
+60984	result: 0.243 / count: 236 / numRes : 191
+60984	state: 
+61297	result: 0.243 / count: 236 / numRes : 191
+61297	state: 
+61437	result: 0.243 / count: 236 / numRes : 191
+61437	state: 
+61594	result: 0.243 / count: 236 / numRes : 191
+61594	state: 
+61734	result: 0.243 / count: 236 / numRes : 191
+61734	state: 
+61890	result: 0.243 / count: 236 / numRes : 191
+61890	state: 
+62047	result: 0.243 / count: 236 / numRes : 191
+62047	state: 
+62187	result: 0.243 / count: 236 / numRes : 191
+62187	state: 
+62500	result: 0.243 / count: 236 / numRes : 191
+62500	state: 
+62656	result: 0.243 / count: 236 / numRes : 191
+62656	state: 
+62797	result: 0.243 / count: 236 / numRes : 191
+62797	state: 
+62953	result: 0.243 / count: 236 / numRes : 191
+62953	state: 
+63109	result: 0.243 / count: 236 / numRes : 191
+63109	state: 
+63250	result: 0.243 / count: 236 / numRes : 191
+63250	state: 
+63406	result: 0.243 / count: 236 / numRes : 191
+63406	state: 
+63547	result: 0.243 / count: 236 / numRes : 191
+63547	state: 
+63859	result: 0.243 / count: 236 / numRes : 191
+63859	state: 
+64000	result: 0.243 / count: 236 / numRes : 191
+64000	state: 
+64156	result: 0.243 / count: 236 / numRes : 191
+64156	state: 
+64297	result: 0.243 / count: 236 / numRes : 191
+64312	state: 
+64453	result: 0.243 / count: 236 / numRes : 191
+64453	state: 
+64609	result: 0.243 / count: 236 / numRes : 191
+64609	state: 
+64765	result: 0.243 / count: 236 / numRes : 191
+64765	state: 
+65062	result: 0.243 / count: 236 / numRes : 191
+65062	state: 
+65219	result: 0.243 / count: 236 / numRes : 191
+65219	state: 
+65359	result: 0.243 / count: 236 / numRes : 191
+65359	state: 
+65515	result: 0.243 / count: 236 / numRes : 191
+65515	state: 
+65656	result: 0.243 / count: 236 / numRes : 191
+65656	state: 
+65812	result: 0.243 / count: 236 / numRes : 191
+65812	state: 
+65969	result: 0.243 / count: 236 / numRes : 191
+65969	state: 
+66109	result: 0.243 / count: 236 / numRes : 191
+66109	state: 
+66422	result: 0.243 / count: 236 / numRes : 191
+66422	state: 
+66562	result: 0.243 / count: 236 / numRes : 191
+66562	state: 
+66719	result: 0.243 / count: 236 / numRes : 191
+66719	state: 
+66875	result: 0.243 / count: 236 / numRes : 191
+66875	state: 
+67031	result: 0.243 / count: 236 / numRes : 191
+67031	state: 
+67172	result: 0.243 / count: 236 / numRes : 191
+67172	state: 
+67297	result: 0.243 / count: 236 / numRes : 191
+67297	state: 
+67469	result: 0.243 / count: 236 / numRes : 191
+67469	state: 
+67765	result: 0.243 / count: 236 / numRes : 191
+67765	state: 
+67922	result: 0.243 / count: 236 / numRes : 191
+67922	state: 
+68078	result: 0.243 / count: 236 / numRes : 191
+68078	state: 
+68219	result: 0.243 / count: 236 / numRes : 191
+68219	state: 
+68375	result: 0.243 / count: 236 / numRes : 191
+68375	state: 
+68531	result: 0.243 / count: 236 / numRes : 191
+68531	state: 
+68672	result: 0.243 / count: 236 / numRes : 191
+68672	state: 
+68984	result: 0.243 / count: 236 / numRes : 191
+68984	state: 
+69140	result: 0.243 / count: 236 / numRes : 191
+69140	state: 
+69281	result: 0.243 / count: 236 / numRes : 191
+69281	state: 
+69437	result: 0.243 / count: 236 / numRes : 191
+69437	state: 
+69578	result: 0.243 / count: 236 / numRes : 191
+69578	state: 
+69734	result: 0.243 / count: 236 / numRes : 191
+69734	state: 
+69875	result: 0.243 / count: 236 / numRes : 191
+69890	state: 
+70031	result: 0.243 / count: 236 / numRes : 191
+70031	state: 
+70172	result: 0.243 / count: 236 / numRes : 191
+70187	state: 
+70484	result: 0.243 / count: 236 / numRes : 191
+70484	state: 
+70640	result: 0.243 / count: 236 / numRes : 191
+70640	state: 
+70797	result: 0.243 / count: 236 / numRes : 191
+70797	state: 
+70937	result: 0.243 / count: 236 / numRes : 191
+70937	state: 
+71094	result: 0.243 / count: 236 / numRes : 191
+71094	state: 
+71390	result: 0.243 / count: 236 / numRes : 191
+71390	state: 
+71422	result: 0.243 / count: 236 / numRes : 191
+71422	state: 
+71562	result: 0.243 / count: 236 / numRes : 191
+71562	state: 
+71719	result: 0.243 / count: 236 / numRes : 191
+71719	state: 
+71859	result: 0.243 / count: 236 / numRes : 191
+71859	state: 
+72015	result: 0.243 / count: 236 / numRes : 191
+72015	state: 
+72172	result: 0.243 / count: 236 / numRes : 191
+72172	state: 
+72312	result: 0.243 / count: 236 / numRes : 191
+72312	state: 
+72469	result: 0.243 / count: 236 / numRes : 191
+72469	state: 
+72765	result: 0.243 / count: 236 / numRes : 191
+72765	state: 
+72937	result: 0.243 / count: 236 / numRes : 191
+72937	state: 
+73078	result: 0.243 / count: 236 / numRes : 191
+73078	state: 
+73234	result: 0.243 / count: 236 / numRes : 191
+73234	state: 
+73375	result: 0.243 / count: 236 / numRes : 191
+73375	state: 
+73531	result: 0.243 / count: 236 / numRes : 191
+73531	state: 
+73687	result: 0.243 / count: 236 / numRes : 191
+73687	state: 
+73828	result: 0.243 / count: 236 / numRes : 191
+73828	state: 
+74140	result: 0.243 / count: 236 / numRes : 191
+74140	state: 
+74297	result: 0.243 / count: 236 / numRes : 191
+74297	state: 
+74453	result: 0.243 / count: 236 / numRes : 191
+74453	state: 
+74609	result: 0.243 / count: 236 / numRes : 191
+74609	state: 
+74750	result: 0.243 / count: 236 / numRes : 191
+74750	state: 
+74906	result: 0.243 / count: 236 / numRes : 191
+74906	state: 
+75062	result: 0.243 / count: 236 / numRes : 191
+75062	state: 
+75359	result: 0.243 / count: 236 / numRes : 191
+75359	state: 
+75515	result: 0.243 / count: 236 / numRes : 191
+75515	state: 
+75656	result: 0.243 / count: 236 / numRes : 191
+75656	state: 
+75812	result: 0.243 / count: 236 / numRes : 191
+75812	state: 
+75969	result: 0.243 / count: 236 / numRes : 191
+75969	state: 
+76109	result: 0.243 / count: 236 / numRes : 191
+76109	state: 
+76265	result: 0.243 / count: 236 / numRes : 191
+76265	state: 
+76406	result: 0.243 / count: 236 / numRes : 191
+76406	state: 
+76719	result: 0.243 / count: 236 / numRes : 191
+76719	state: 
+76875	result: 0.243 / count: 236 / numRes : 191
+76875	state: 
+77015	result: 0.243 / count: 236 / numRes : 191
+77015	state: 
+77172	result: 0.243 / count: 236 / numRes : 191
+77172	state: 
+77328	result: 0.243 / count: 236 / numRes : 191
+77328	state: 
+77469	result: 0.243 / count: 236 / numRes : 191
+77469	state: 
+77625	result: 0.243 / count: 236 / numRes : 191
+77625	state: 
+77953	result: 0.243 / count: 236 / numRes : 191
+77953	state: 
+78078	result: 0.243 / count: 236 / numRes : 191
+78078	state: 
+78234	result: 0.243 / count: 236 / numRes : 191
+78234	state: 
+78422	result: 0.243 / count: 236 / numRes : 191
+78422	state: 
+78562	result: 0.243 / count: 236 / numRes : 191
+78562	state: 
+78703	result: 0.243 / count: 236 / numRes : 191
+78703	state: 
+78875	result: 0.243 / count: 236 / numRes : 191
+78875	state: 
+79015	result: 0.243 / count: 236 / numRes : 191
+79015	state: 
+79172	result: 0.243 / count: 236 / numRes : 191
+79172	state: 
+79484	result: 0.243 / count: 236 / numRes : 191
+79484	state: 
+79625	result: 0.243 / count: 236 / numRes : 191
+79625	state: 
+79781	result: 0.243 / count: 236 / numRes : 191
+79781	state: 
+79922	result: 0.243 / count: 236 / numRes : 191
+79922	state: 
+80078	result: 0.243 / count: 236 / numRes : 191
+80078	state: 
+80375	result: 0.243 / count: 236 / numRes : 191
+80375	state: 
+80406	result: 0.243 / count: 236 / numRes : 191
+80406	state: 
+80547	result: 0.243 / count: 236 / numRes : 191
+80547	state: 
+80703	result: 0.243 / count: 236 / numRes : 191
+80703	state: 
+80844	result: 0.243 / count: 236 / numRes : 191
+80844	state: 
+81000	result: 0.243 / count: 236 / numRes : 191
+81000	state: 
+81156	result: 0.243 / count: 236 / numRes : 191
+81156	state: 
+81297	result: 0.243 / count: 236 / numRes : 191
+81297	state: 
+81453	result: 0.243 / count: 236 / numRes : 191
+81453	state: 
+81765	result: 0.243 / count: 236 / numRes : 191
+81765	state: 
+81937	result: 0.243 / count: 236 / numRes : 191
+81937	state: 
+82094	result: 0.243 / count: 236 / numRes : 191
+82094	state: 
+82250	result: 0.243 / count: 236 / numRes : 191
+82250	state: 
+82390	result: 0.243 / count: 236 / numRes : 191
+82390	state: 
+82547	result: 0.243 / count: 236 / numRes : 191
+82547	state: 
+82703	result: 0.243 / count: 236 / numRes : 191
+82703	state: 
+82844	result: 0.243 / count: 236 / numRes : 191
+82844	state: 
+83140	result: 0.243 / count: 236 / numRes : 191
+83140	state: 
+83297	result: 0.243 / count: 236 / numRes : 191
+83297	state: 
+83469	result: 0.243 / count: 236 / numRes : 191
+83469	state: 
+83609	result: 0.243 / count: 236 / numRes : 191
+83609	state: 
+83765	result: 0.243 / count: 236 / numRes : 191
+83765	state: 
+83906	result: 0.243 / count: 236 / numRes : 191
+83906	state: 
+84062	result: 0.243 / count: 236 / numRes : 191
+84062	state: 
+84375	result: 0.243 / count: 236 / numRes : 191
+84375	state: 
+84531	result: 0.243 / count: 236 / numRes : 191
+84531	state: 
+84672	result: 0.243 / count: 236 / numRes : 191
+84672	state: 
+84828	result: 0.243 / count: 236 / numRes : 191
+84828	state: 
+84984	result: 0.243 / count: 236 / numRes : 191
+84984	state: 
+85140	result: 0.243 / count: 236 / numRes : 191
+85140	state: 
+85281	result: 0.243 / count: 236 / numRes : 191
+85281	state: 
+85422	result: 0.243 / count: 236 / numRes : 191
+85422	state: 
+85734	result: 0.243 / count: 236 / numRes : 191
+85734	state: 
+85890	result: 0.243 / count: 236 / numRes : 191
+85890	state: 
+86031	result: 0.243 / count: 236 / numRes : 191
+86031	state: 
+86187	result: 0.243 / count: 236 / numRes : 191
+86187	state: 
+86344	result: 0.243 / count: 236 / numRes : 191
+86344	state: 
+86484	result: 0.243 / count: 236 / numRes : 191
+86484	state: 
+86640	result: 0.243 / count: 236 / numRes : 191
+86640	state: 
+86937	result: 0.243 / count: 236 / numRes : 191
+86937	state: 
+87094	result: 0.243 / count: 236 / numRes : 191
+87094	state: 
+87250	result: 0.243 / count: 236 / numRes : 191
+87250	state: 
+87390	result: 0.243 / count: 236 / numRes : 191
+87390	state: 
+87547	result: 0.243 / count: 236 / numRes : 191
+87547	state: 
+87703	result: 0.243 / count: 236 / numRes : 191
+87703	state: 
+87844	result: 0.243 / count: 236 / numRes : 191
+87844	state: 
+88000	result: 0.243 / count: 236 / numRes : 191
+88000	state: 
+88297	result: 0.243 / count: 236 / numRes : 191
+88297	state: 
+88453	result: 0.243 / count: 236 / numRes : 191
+88453	state: 
+88594	result: 0.243 / count: 236 / numRes : 191
+88609	state: 
+88750	result: 0.243 / count: 236 / numRes : 191
+88750	state: 
+88890	result: 0.243 / count: 236 / numRes : 191
+88890	state: 
+89062	result: 0.243 / count: 236 / numRes : 191
+89062	state: 
+89203	result: 0.243 / count: 236 / numRes : 191
+89203	state: 
+89500	result: 0.243 / count: 236 / numRes : 191
+89500	state: 
+89656	result: 0.243 / count: 236 / numRes : 191
+89656	state: 
+89812	result: 0.243 / count: 236 / numRes : 191
+89812	state: 
+89953	result: 0.243 / count: 236 / numRes : 191
+89953	state: 
+90109	result: 0.243 / count: 236 / numRes : 191
+90109	state: 
+90250	result: 0.243 / count: 236 / numRes : 191
+90250	state: 
+90406	result: 0.243 / count: 236 / numRes : 191
+90406	state: 
+90562	result: 0.243 / count: 236 / numRes : 191
+90562	state: 
+90859	result: 0.243 / count: 236 / numRes : 191
+90859	state: 
+91015	result: 0.243 / count: 236 / numRes : 191
+91015	state: 
+91172	result: 0.243 / count: 236 / numRes : 191
+91172	state: 
+91312	result: 0.243 / count: 236 / numRes : 191
+91312	state: 
+91469	result: 0.243 / count: 236 / numRes : 191
+91469	state: 
+91625	result: 0.243 / count: 236 / numRes : 191
+91625	state: 
+91765	result: 0.243 / count: 236 / numRes : 191
+91765	state: 
+92078	result: 0.243 / count: 236 / numRes : 191
+92078	state: 
+92219	result: 0.243 / count: 236 / numRes : 191
+92219	state: 
+92375	result: 0.243 / count: 236 / numRes : 191
+92375	state: 
+92515	result: 0.243 / count: 236 / numRes : 191
+92515	state: 
+92672	result: 0.243 / count: 236 / numRes : 191
+92672	state: 
+92828	result: 0.243 / count: 236 / numRes : 191
+92828	state: 
+92984	result: 0.243 / count: 236 / numRes : 191
+92984	state: 
+93125	result: 0.243 / count: 236 / numRes : 191
+93125	state: 
+93437	result: 0.243 / count: 236 / numRes : 191
+93437	state: 
+93594	result: 0.243 / count: 236 / numRes : 191
+93594	state: 
+93734	result: 0.243 / count: 236 / numRes : 191
+93734	state: 
+93890	result: 0.243 / count: 236 / numRes : 191
+93890	state: 
+94047	result: 0.243 / count: 236 / numRes : 191
+94047	state: 
+94203	result: 0.243 / count: 236 / numRes : 191
+94203	state: 
+94359	result: 0.243 / count: 236 / numRes : 191
+94359	state: 
+94656	result: 0.243 / count: 236 / numRes : 191
+94656	state: 
+94812	result: 0.243 / count: 236 / numRes : 191
+94812	state: 
+94969	result: 0.243 / count: 236 / numRes : 191
+94969	state: 
+95109	result: 0.243 / count: 236 / numRes : 191
+95109	state: 
+95265	result: 0.243 / count: 236 / numRes : 191
+95265	state: 
+95406	result: 0.243 / count: 236 / numRes : 191
+95406	state: 
+95562	result: 0.243 / count: 236 / numRes : 191
+95562	state: 
+95719	result: 0.243 / count: 236 / numRes : 191
+95719	state: 
+96015	result: 0.243 / count: 236 / numRes : 191
+96015	state: 
+96172	result: 0.243 / count: 236 / numRes : 191
+96172	state: 
+96328	result: 0.243 / count: 236 / numRes : 191
+96328	state: 
+96469	result: 0.243 / count: 236 / numRes : 191
+96469	state: 
+96625	result: 0.243 / count: 236 / numRes : 191
+96625	state: 
+96781	result: 0.243 / count: 236 / numRes : 191
+96781	state: 
+96922	result: 0.243 / count: 236 / numRes : 191
+96922	state: 
+97219	result: 0.243 / count: 236 / numRes : 191
+97219	state: 
+97375	result: 0.243 / count: 236 / numRes : 191
+97375	state: 
+97531	result: 0.243 / count: 236 / numRes : 191
+97531	state: 
+97672	result: 0.243 / count: 236 / numRes : 191
+97672	state: 
+97828	result: 0.243 / count: 236 / numRes : 191
+97828	state: 
+97984	result: 0.243 / count: 236 / numRes : 191
+97984	state: 
+98125	result: 0.243 / count: 236 / numRes : 191
+98125	state: 
+98281	result: 0.243 / count: 236 / numRes : 191
+98281	state: 
+98578	result: 0.243 / count: 236 / numRes : 191
+98578	state: 
+98734	result: 0.243 / count: 236 / numRes : 191
+98734	state: 
+98875	result: 0.243 / count: 236 / numRes : 191
+98875	state: 
+99031	result: 0.243 / count: 236 / numRes : 191
+99031	state: 
+99187	result: 0.243 / count: 236 / numRes : 191
+99187	state: 
+99328	result: 0.243 / count: 236 / numRes : 191
+99328	state: 
+99484	result: 0.243 / count: 236 / numRes : 191
+99484	state: 
+99781	result: 0.243 / count: 236 / numRes : 191
+99781	state: 
+99937	result: 0.243 / count: 236 / numRes : 191
+99937	state: 
+100094	result: 0.243 / count: 236 / numRes : 191
+100094	state: 
+100250	result: 0.243 / count: 236 / numRes : 191
+100250	state: 
+100406	result: 0.243 / count: 236 / numRes : 191
+100406	state: 
+100547	result: 0.243 / count: 236 / numRes : 191
+100547	state: 
+100703	result: 0.243 / count: 236 / numRes : 191
+100703	state: 
+100844	result: 0.243 / count: 236 / numRes : 191
+100844	state: 
+101156	result: 0.243 / count: 236 / numRes : 191
+101156	state: 
+101312	result: 0.243 / count: 236 / numRes : 191
+101312	state: 
+101453	result: 0.243 / count: 236 / numRes : 191
+101453	state: 
+101609	result: 0.243 / count: 236 / numRes : 191
+101609	state: 
+101750	result: 0.243 / count: 236 / numRes : 191
+101750	state: 
+101906	result: 0.243 / count: 236 / numRes : 191
+101906	state: 
+102047	result: 0.243 / count: 236 / numRes : 191
+102047	state: 
+102359	result: 0.243 / count: 236 / numRes : 191
+102359	state: 
+102515	result: 0.243 / count: 236 / numRes : 191
+102515	state: 
+102672	result: 0.243 / count: 236 / numRes : 191
+102672	state: 
+102812	result: 0.243 / count: 236 / numRes : 191
+102812	state: 
+102969	result: 0.243 / count: 236 / numRes : 191
+102969	state: 
+103125	result: 0.243 / count: 236 / numRes : 191
+103125	state: 
+103265	result: 0.243 / count: 236 / numRes : 191
+103265	state: 
+103422	result: 0.243 / count: 236 / numRes : 191
+103422	state: 
+103719	result: 0.243 / count: 236 / numRes : 191
+103719	state: 
+103875	result: 0.243 / count: 236 / numRes : 191
+103875	state: 
+104015	result: 0.243 / count: 236 / numRes : 191
+104015	state: 
+104172	result: 0.243 / count: 236 / numRes : 191
+104172	state: 
+104328	result: 0.243 / count: 236 / numRes : 191
+104328	state: 
+104469	result: 0.243 / count: 236 / numRes : 191
+104469	state: 
+104625	result: 0.243 / count: 236 / numRes : 191
+104625	state: 
+104922	result: 0.243 / count: 236 / numRes : 191
+104922	state: 
+105078	result: 0.243 / count: 236 / numRes : 191
+105078	state: 
+105219	result: 0.243 / count: 236 / numRes : 191
+105219	state: 
+105375	result: 0.243 / count: 236 / numRes : 191
+105375	state: 
+105531	result: 0.243 / count: 236 / numRes : 191
+105531	state: 
+105672	result: 0.243 / count: 236 / numRes : 191
+105672	state: 
+105828	result: 0.243 / count: 236 / numRes : 191
+105828	state: 
+105969	result: 0.243 / count: 236 / numRes : 191
+105969	state: 
+106281	result: 0.243 / count: 236 / numRes : 191
+106281	state: 
+106437	result: 0.243 / count: 236 / numRes : 191
+106437	state: 
+106594	result: 0.243 / count: 236 / numRes : 191
+106594	state: 
+106734	result: 0.243 / count: 236 / numRes : 191
+106734	state: 
+106890	result: 0.243 / count: 236 / numRes : 191
+106890	state: 
+107031	result: 0.243 / count: 236 / numRes : 191
+107031	state: 
+107187	result: 0.243 / count: 236 / numRes : 191
+107187	state: 
+107484	result: 0.243 / count: 236 / numRes : 191
+107484	state: 
+107640	result: 0.243 / count: 236 / numRes : 191
+107640	state: 
+107797	result: 0.243 / count: 236 / numRes : 191
+107797	state: 
+107953	result: 0.243 / count: 236 / numRes : 191
+107953	state: 
+108094	result: 0.243 / count: 236 / numRes : 191
+108094	state: 
+108250	result: 0.243 / count: 236 / numRes : 191
+108250	state: 
+108406	result: 0.243 / count: 236 / numRes : 191
+108406	state: 
+108547	result: 0.243 / count: 236 / numRes : 191
+108547	state: 
+108859	result: 0.243 / count: 236 / numRes : 191
+108859	state: 
+109000	result: 0.243 / count: 236 / numRes : 191
+109000	state: 
+109156	result: 0.243 / count: 236 / numRes : 191
+109156	state: 
+109312	result: 0.243 / count: 236 / numRes : 191
+109312	state: 
+109469	result: 0.243 / count: 236 / numRes : 191
+109469	state: 
+109609	result: 0.243 / count: 236 / numRes : 191
+109609	state: 
+109765	result: 0.243 / count: 236 / numRes : 191
+109765	state: 
+110062	result: 0.243 / count: 236 / numRes : 191
+110062	state: 
+110219	result: 0.243 / count: 236 / numRes : 191
+110219	state: 
+110359	result: 0.243 / count: 236 / numRes : 191
+110359	state: 
+110515	result: 0.243 / count: 236 / numRes : 191
+110515	state: 
+110672	result: 0.243 / count: 236 / numRes : 191
+110672	state: 
+110812	result: 0.243 / count: 236 / numRes : 191
+110812	state: 
+110969	result: 0.243 / count: 236 / numRes : 191
+110969	state: 
+111125	result: 0.243 / count: 236 / numRes : 191
+111125	state: 
+111422	result: 0.243 / count: 236 / numRes : 191
+111422	state: 
+111578	result: 0.243 / count: 236 / numRes : 191
+111578	state: 
+111734	result: 0.243 / count: 236 / numRes : 191
+111734	state: 
+111875	result: 0.243 / count: 236 / numRes : 191
+111875	state: 
+112031	result: 0.243 / count: 236 / numRes : 191
+112031	state: 
+112172	result: 0.243 / count: 236 / numRes : 191
+112172	state: 
+112328	result: 0.243 / count: 236 / numRes : 191
+112328	state: 
+112484	result: 0.243 / count: 236 / numRes : 191
+112484	state: 
+112781	result: 0.243 / count: 236 / numRes : 191
+112781	state: 
+112937	result: 0.243 / count: 236 / numRes : 191
+112937	state: 
+113078	result: 0.243 / count: 236 / numRes : 191
+113078	state: 
+113234	result: 0.243 / count: 236 / numRes : 191
+113234	state: 
+113390	result: 0.243 / count: 236 / numRes : 191
+113390	state: 
+113531	result: 0.243 / count: 236 / numRes : 191
+113531	state: 
+113687	result: 0.243 / count: 236 / numRes : 191
+113687	state: 
+113984	result: 0.243 / count: 236 / numRes : 191
+113984	state: 
+114140	result: 0.243 / count: 236 / numRes : 191
+114140	state: 
+114297	result: 0.243 / count: 236 / numRes : 191
+114297	state: 
+114437	result: 0.243 / count: 236 / numRes : 191
+114437	state: 
+114594	result: 0.243 / count: 236 / numRes : 191
+114594	state: 
+114750	result: 0.243 / count: 236 / numRes : 191
+114750	state: 
+114906	result: 0.243 / count: 236 / numRes : 191
+114906	state: 
+115062	result: 0.243 / count: 236 / numRes : 191
+115062	state: 
+115359	result: 0.243 / count: 236 / numRes : 191
+115359	state: 
+115515	result: 0.243 / count: 236 / numRes : 191
+115515	state: 
+115672	result: 0.243 / count: 236 / numRes : 191
+115672	state: 
+115812	result: 0.243 / count: 236 / numRes : 191
+115812	state: 
+115969	result: 0.243 / count: 236 / numRes : 191
+115969	state: 
+116125	result: 0.243 / count: 236 / numRes : 191
+116125	state: 
+116265	result: 0.243 / count: 236 / numRes : 191
+116265	state: 
+116562	result: 0.243 / count: 236 / numRes : 191
+116562	state: 
+116734	result: 0.243 / count: 236 / numRes : 191
+116734	state: 
+116875	result: 0.243 / count: 236 / numRes : 191
+116875	state: 
+117031	result: 0.243 / count: 236 / numRes : 191
+117031	state: 
+117172	result: 0.243 / count: 236 / numRes : 191
+117172	state: 
+117328	result: 0.243 / count: 236 / numRes : 191
+117328	state: 
+117484	result: 0.243 / count: 236 / numRes : 191
+117484	state: 
+117625	result: 0.243 / count: 236 / numRes : 191
+117625	state: 
+117953	result: 0.243 / count: 236 / numRes : 191
+117953	state: 
+118094	result: 0.243 / count: 236 / numRes : 191
+118094	state: 
+118234	result: 0.243 / count: 236 / numRes : 191
+118234	state: 
+118390	result: 0.243 / count: 236 / numRes : 191
+118390	state: 
+118531	result: 0.243 / count: 236 / numRes : 191
+118547	state: 
+118687	result: 0.243 / count: 236 / numRes : 191
+118687	state: 
+118844	result: 0.243 / count: 236 / numRes : 191
+118844	state: 
+119140	result: 0.243 / count: 236 / numRes : 191
+119140	state: 
+119297	result: 0.243 / count: 236 / numRes : 191
+119297	state: 
+119437	result: 0.243 / count: 236 / numRes : 191
+119437	state: 
+119594	result: 0.243 / count: 236 / numRes : 191
+119594	state: 
+119750	result: 0.243 / count: 236 / numRes : 191
+119750	state: 
+119890	result: 0.243 / count: 236 / numRes : 191
+119890	state: 
+120047	result: 0.243 / count: 236 / numRes : 191
+120047	state: 
+120203	result: 0.243 / count: 236 / numRes : 191
+120203	state: 
+120515	result: 0.243 / count: 236 / numRes : 191
+120515	state: 
+120672	result: 0.243 / count: 236 / numRes : 191
+120672	state: 
+120812	result: 0.243 / count: 236 / numRes : 191
+120812	state: 
+120969	result: 0.243 / count: 236 / numRes : 191
+120969	state: 
+121109	result: 0.243 / count: 236 / numRes : 191
+121109	state: 
+121265	result: 0.243 / count: 236 / numRes : 191
+121265	state: 
+121422	result: 0.243 / count: 236 / numRes : 191
+121422	state: 
+121719	result: 0.243 / count: 236 / numRes : 191
+121719	state: 
+121875	result: 0.243 / count: 236 / numRes : 191
+121875	state: 
+122031	result: 0.243 / count: 236 / numRes : 191
+122031	state: 
+122172	result: 0.243 / count: 236 / numRes : 191
+122172	state: 
+122328	result: 0.243 / count: 236 / numRes : 191
+122328	state: 
+122484	result: 0.243 / count: 236 / numRes : 191
+122484	state: 
+122625	result: 0.243 / count: 236 / numRes : 191
+122625	state: 
+122781	result: 0.243 / count: 236 / numRes : 191
+122781	state: 
+123078	result: 0.243 / count: 236 / numRes : 191
+123078	state: 
+123234	result: 0.243 / count: 236 / numRes : 191
+123234	state: 
+123375	result: 0.243 / count: 236 / numRes : 191
+123375	state: 
+123531	result: 0.243 / count: 236 / numRes : 191
+123531	state: 
+123672	result: 0.243 / count: 236 / numRes : 191
+123672	state: 
+123828	result: 0.243 / count: 236 / numRes : 191
+123828	state: 
+123984	result: 0.243 / count: 236 / numRes : 191
+123984	state: 
+124281	result: 0.243 / count: 236 / numRes : 191
+124281	state: 
+124437	result: 0.243 / count: 236 / numRes : 191
+124437	state: 
+124578	result: 0.243 / count: 236 / numRes : 191
+124578	state: 
+124734	result: 0.243 / count: 236 / numRes : 191
+124734	state: 
+124890	result: 0.243 / count: 236 / numRes : 191
+124890	state: 
+125031	result: 0.243 / count: 236 / numRes : 191
+125031	state: 
+125187	result: 0.243 / count: 236 / numRes : 191
+125187	state: 
+125344	result: 0.243 / count: 236 / numRes : 191
+125344	state: 
+125656	result: 0.243 / count: 236 / numRes : 191
+125656	state: 
+125797	result: 0.243 / count: 236 / numRes : 191
+125797	state: 
+125937	result: 0.243 / count: 236 / numRes : 191
+125937	state: 
+126094	result: 0.243 / count: 236 / numRes : 191
+126094	state: 
+126250	result: 0.243 / count: 236 / numRes : 191
+126250	state: 
+126390	result: 0.243 / count: 236 / numRes : 191
+126390	state: 
+126547	result: 0.243 / count: 236 / numRes : 191
+126547	state: 
+126844	result: 0.243 / count: 236 / numRes : 191
+126844	state: 
+127000	result: 0.243 / count: 236 / numRes : 191
+127000	state: 
+127156	result: 0.243 / count: 236 / numRes : 191
+127156	state: 
+127312	result: 0.243 / count: 236 / numRes : 191
+127312	state: 
+127453	result: 0.243 / count: 236 / numRes : 191
+127453	state: 
+127609	result: 0.243 / count: 236 / numRes : 191
+127609	state: 
+127750	result: 0.243 / count: 236 / numRes : 191
+127750	state: 
+127906	result: 0.243 / count: 236 / numRes : 191
+127906	state: 
+128203	result: 0.243 / count: 236 / numRes : 191
+128203	state: 
+128359	result: 0.243 / count: 236 / numRes : 191
+128359	state: 
+128515	result: 0.243 / count: 236 / numRes : 191
+128515	state: 
+128687	result: 0.243 / count: 236 / numRes : 191
+128687	state: 
+128828	result: 0.243 / count: 236 / numRes : 191
+128828	state: 
+128969	result: 0.243 / count: 236 / numRes : 191
+128969	state: 
+129125	result: 0.243 / count: 236 / numRes : 191
+129125	state: 
+129422	result: 0.243 / count: 236 / numRes : 191
+129422	state: 
+129578	result: 0.243 / count: 236 / numRes : 191
+129578	state: 
+129719	result: 0.243 / count: 236 / numRes : 191
+129719	state: 
+129875	result: 0.243 / count: 236 / numRes : 191
+129875	state: 
+130031	result: 0.243 / count: 236 / numRes : 191
+130031	state: 
+130172	result: 0.243 / count: 236 / numRes : 191
+130172	state: 
+130328	result: 0.243 / count: 236 / numRes : 191
+130328	state: 
+130484	result: 0.243 / count: 236 / numRes : 191
+130484	state: 
+130797	result: 0.243 / count: 236 / numRes : 191
+130797	state: 
+130937	result: 0.243 / count: 236 / numRes : 191
+130937	state: 
+131078	result: 0.243 / count: 236 / numRes : 191
+131078	state: 
+131234	result: 0.243 / count: 236 / numRes : 191
+131234	state: 
+131390	result: 0.243 / count: 236 / numRes : 191
+131390	state: 
+131547	result: 0.243 / count: 236 / numRes : 191
+131547	state: 
+131687	result: 0.243 / count: 236 / numRes : 191
+131687	state: 
+131984	result: 0.243 / count: 236 / numRes : 191
+131984	state: 
+132156	result: 0.243 / count: 236 / numRes : 191
+132156	state: 
+132297	result: 0.243 / count: 236 / numRes : 191
+132297	state: 
+132453	result: 0.243 / count: 236 / numRes : 191
+132453	state: 
+132609	result: 0.243 / count: 236 / numRes : 191
+132609	state: 
+132750	result: 0.243 / count: 236 / numRes : 191
+132750	state: 
+132906	result: 0.243 / count: 236 / numRes : 191
+132906	state: 
+133047	result: 0.243 / count: 236 / numRes : 191
+133047	state: 
+133359	result: 0.243 / count: 236 / numRes : 191
+133359	state: 
+133515	result: 0.243 / count: 236 / numRes : 191
+133515	state: 
+133656	result: 0.243 / count: 236 / numRes : 191
+133656	state: 
+133812	result: 0.243 / count: 236 / numRes : 191
+133812	state: 
+133953	result: 0.243 / count: 236 / numRes : 191
+133953	state: 
+134109	result: 0.243 / count: 236 / numRes : 191
+134109	state: 
+134265	result: 0.243 / count: 236 / numRes : 191
+134265	state: 
+134562	result: 0.243 / count: 236 / numRes : 191
+134562	state: 
+134719	result: 0.243 / count: 236 / numRes : 191
+134719	state: 
+134875	result: 0.243 / count: 236 / numRes : 191
+134875	state: 
+135031	result: 0.243 / count: 236 / numRes : 191
+135031	state: 
+135187	result: 0.243 / count: 236 / numRes : 191
+135187	state: 
+135328	result: 0.243 / count: 236 / numRes : 191
+135328	state: 
+135484	result: 0.243 / count: 236 / numRes : 191
+135484	state: 
+135640	result: 0.243 / count: 236 / numRes : 191
+135640	state: 
+135937	result: 0.243 / count: 236 / numRes : 191
+135937	state: 
+136094	result: 0.243 / count: 236 / numRes : 191
+136094	state: 
+136234	result: 0.243 / count: 236 / numRes : 191
+136234	state: 
+136390	result: 0.243 / count: 236 / numRes : 191
+136390	state: 
+136547	result: 0.243 / count: 236 / numRes : 191
+136547	state: 
+136687	result: 0.243 / count: 236 / numRes : 191
+136687	state: 
+136844	result: 0.243 / count: 236 / numRes : 191
+136844	state: 
+137140	result: 0.243 / count: 236 / numRes : 191
+137140	state: 
+137297	result: 0.243 / count: 236 / numRes : 191
+137297	state: 
+137453	result: 0.243 / count: 236 / numRes : 191
+137453	state: 
+137594	result: 0.243 / count: 236 / numRes : 191
+137594	state: 
+137750	result: 0.243 / count: 236 / numRes : 191
+137750	state: 
+137922	result: 0.243 / count: 236 / numRes : 191
+137922	state: 
+138062	result: 0.243 / count: 236 / numRes : 191
+138062	state: 
+138203	result: 0.243 / count: 236 / numRes : 191
+138203	state: 
+138500	result: 0.243 / count: 236 / numRes : 191
+138500	state: 
+138656	result: 0.243 / count: 236 / numRes : 191
+138656	state: 
+138812	result: 0.243 / count: 236 / numRes : 191
+138812	state: 
+138969	result: 0.243 / count: 236 / numRes : 191
+138969	state: 
+139109	result: 0.243 / count: 236 / numRes : 191
+139109	state: 
+139265	result: 0.243 / count: 236 / numRes : 191
+139265	state: 
+139422	result: 0.243 / count: 236 / numRes : 191
+139422	state: 
+139719	result: 0.243 / count: 236 / numRes : 191
+139719	state: 
+139875	result: 0.243 / count: 236 / numRes : 191
+139875	state: 
+140015	result: 0.243 / count: 236 / numRes : 191
+140015	state: 
+140172	result: 0.243 / count: 236 / numRes : 191
+140172	state: 
+140328	result: 0.243 / count: 236 / numRes : 191
+140328	state: 
+140469	result: 0.243 / count: 236 / numRes : 191
+140469	state: 
+140625	result: 0.243 / count: 236 / numRes : 191
+140625	state: 
+140781	result: 0.243 / count: 236 / numRes : 191
+140781	state: 
+141078	result: 0.243 / count: 236 / numRes : 191
+141078	state: 
+141234	result: 0.243 / count: 236 / numRes : 191
+141234	state: 
+141375	result: 0.243 / count: 236 / numRes : 191
+141375	state: 
+141531	result: 0.243 / count: 236 / numRes : 191
+141531	state: 
+141687	result: 0.243 / count: 236 / numRes : 191
+141687	state: 
+141844	result: 0.243 / count: 236 / numRes : 191
+141844	state: 
+141984	result: 0.243 / count: 236 / numRes : 191
+141984	state: 
+142140	result: 0.243 / count: 236 / numRes : 191
+142140	state: 
+142437	result: 0.243 / count: 236 / numRes : 191
+142437	state: 
+142594	result: 0.243 / count: 236 / numRes : 191
+142594	state: 
+142734	result: 0.243 / count: 236 / numRes : 191
+142734	state: 
+142890	result: 0.243 / count: 236 / numRes : 191
+142890	state: 
+143047	result: 0.243 / count: 236 / numRes : 191
+143047	state: 
+143187	result: 0.243 / count: 236 / numRes : 191
+143187	state: 
+143344	result: 0.243 / count: 236 / numRes : 191
+143344	state: 
+143640	result: 0.243 / count: 236 / numRes : 191
+143640	state: 
+143797	result: 0.243 / count: 236 / numRes : 191
+143797	state: 
+143953	result: 0.243 / count: 236 / numRes : 191
+143953	state: 
+144094	result: 0.243 / count: 236 / numRes : 191
+144094	state: 
+144250	result: 0.243 / count: 236 / numRes : 191
+144250	state: 
+144390	result: 0.243 / count: 236 / numRes : 191
+144406	state: 
+144547	result: 0.243 / count: 236 / numRes : 191
+144547	state: 
+144703	result: 0.243 / count: 236 / numRes : 191
+144703	state: 
+145000	result: 0.243 / count: 236 / numRes : 191
+145000	state: 
+145156	result: 0.243 / count: 236 / numRes : 191
+145156	state: 
+145312	result: 0.243 / count: 236 / numRes : 191
+145312	state: 
+145453	result: 0.243 / count: 236 / numRes : 191
+145453	state: 
+145609	result: 0.243 / count: 236 / numRes : 191
+145609	state: 
+145765	result: 0.243 / count: 236 / numRes : 191
+145765	state: 
+145906	result: 0.243 / count: 236 / numRes : 191
+145906	state: 
+146203	result: 0.243 / count: 236 / numRes : 191
+146203	state: 
+146359	result: 0.243 / count: 236 / numRes : 191
+146359	state: 
+146515	result: 0.243 / count: 236 / numRes : 191
+146515	state: 
+146672	result: 0.243 / count: 236 / numRes : 191
+146672	state: 
+146812	result: 0.243 / count: 236 / numRes : 191
+146812	state: 
+146969	result: 0.243 / count: 236 / numRes : 191
+146969	state: 
+147109	result: 0.243 / count: 236 / numRes : 191
+147109	state: 
+147265	result: 0.243 / count: 236 / numRes : 191
+147265	state: 
+147578	result: 0.243 / count: 236 / numRes : 191
+147578	state: 
+147719	result: 0.243 / count: 236 / numRes : 191
+147719	state: 
+147875	result: 0.243 / count: 236 / numRes : 191
+147875	state: 
+148031	result: 0.243 / count: 236 / numRes : 191
+148031	state: 
+148172	result: 0.243 / count: 236 / numRes : 191
+148172	state: 
+148328	result: 0.243 / count: 236 / numRes : 191
+148328	state: 
+148469	result: 0.243 / count: 236 / numRes : 191
+148469	state: 
+148781	result: 0.243 / count: 236 / numRes : 191
+148781	state: 
+148937	result: 0.243 / count: 236 / numRes : 191
+148937	state: 
+149094	result: 0.243 / count: 236 / numRes : 191
+149094	state: 
+149234	result: 0.243 / count: 236 / numRes : 191
+149234	state: 
+149390	result: 0.243 / count: 236 / numRes : 191
+149390	state: 
+149547	result: 0.243 / count: 236 / numRes : 191
+149547	state: 
+149687	result: 0.243 / count: 236 / numRes : 191
+149687	state: 
+149844	result: 0.243 / count: 236 / numRes : 191
+149844	state: 
+150140	result: 0.243 / count: 236 / numRes : 191
+150140	state: 
+150297	result: 0.243 / count: 236 / numRes : 191
+150297	state: 
+150437	result: 0.243 / count: 236 / numRes : 191
+150437	state: 
+150594	result: 0.243 / count: 236 / numRes : 191
+150594	state: 
+150750	result: 0.243 / count: 236 / numRes : 191
+150750	state: 
+150890	result: 0.243 / count: 236 / numRes : 191
+150890	state: 
+151047	result: 0.243 / count: 236 / numRes : 191
+151047	state: 
+151344	result: 0.243 / count: 236 / numRes : 191
+151344	state: 
+151500	result: 0.243 / count: 236 / numRes : 191
+151500	state: 
+151656	result: 0.243 / count: 236 / numRes : 191
+151656	state: 
+151797	result: 0.243 / count: 236 / numRes : 191
+151797	state: 
+151953	result: 0.243 / count: 236 / numRes : 191
+151953	state: 
+152109	result: 0.243 / count: 236 / numRes : 191
+152109	state: 
+152250	result: 0.243 / count: 236 / numRes : 191
+152250	state: 
+152406	result: 0.243 / count: 236 / numRes : 191
+152406	state: 
+152719	result: 0.243 / count: 236 / numRes : 191
+152719	state: 
+152859	result: 0.243 / count: 236 / numRes : 191
+152859	state: 
+153015	result: 0.243 / count: 236 / numRes : 191
+153015	state: 
+153172	result: 0.243 / count: 236 / numRes : 191
+153172	state: 
+153312	result: 0.243 / count: 236 / numRes : 191
+153312	state: 
+153469	result: 0.243 / count: 236 / numRes : 191
+153469	state: 
+153625	result: 0.243 / count: 236 / numRes : 191
+153625	state: 
+153922	result: 0.243 / count: 236 / numRes : 191
+153922	state: 
+154078	result: 0.243 / count: 236 / numRes : 191
+154078	state: 
+154219	result: 0.243 / count: 236 / numRes : 191
+154219	state: 
+154375	result: 0.243 / count: 236 / numRes : 191
+154375	state: 
+154531	result: 0.243 / count: 236 / numRes : 191
+154531	state: 
+154672	result: 0.243 / count: 236 / numRes : 191
+154672	state: 
+154828	result: 0.243 / count: 236 / numRes : 191
+154828	state: 
+154969	result: 0.243 / count: 236 / numRes : 191
+154969	state: 
+155281	result: 0.243 / count: 236 / numRes : 191
+155281	state: 
+155422	result: 0.243 / count: 236 / numRes : 191
+155422	state: 
+155578	result: 0.243 / count: 236 / numRes : 191
+155578	state: 
+155734	result: 0.243 / count: 236 / numRes : 191
+155734	state: 
+155875	result: 0.243 / count: 236 / numRes : 191
+155875	state: 
+156031	result: 0.243 / count: 236 / numRes : 191
+156031	state: 
+156187	result: 0.243 / count: 236 / numRes : 191
+156187	state: 
+156515	result: 0.243 / count: 236 / numRes : 191
+156515	state: 
+156640	result: 0.243 / count: 236 / numRes : 191
+156640	state: 
+156797	result: 0.243 / count: 236 / numRes : 191
+156797	state: 
+156937	result: 0.243 / count: 236 / numRes : 191
+156937	state: 
+157094	result: 0.243 / count: 236 / numRes : 191
+157094	state: 
+157250	result: 0.243 / count: 236 / numRes : 191
+157250	state: 
+157390	result: 0.243 / count: 236 / numRes : 191
+157390	state: 
+157547	result: 0.243 / count: 236 / numRes : 191
+157547	state: 
+157844	result: 0.243 / count: 236 / numRes : 191
+157844	state: 
+158000	result: 0.243 / count: 236 / numRes : 191
+158000	state: 
+158156	result: 0.243 / count: 236 / numRes : 191
+158156	state: 
+158297	result: 0.243 / count: 236 / numRes : 191
+158297	state: 
+158453	result: 0.243 / count: 236 / numRes : 191
+158453	state: 
+158594	result: 0.243 / count: 236 / numRes : 191
+158594	state: 
+158750	result: 0.243 / count: 236 / numRes : 191
+158750	state: 
+159062	result: 0.243 / count: 236 / numRes : 191
+159062	state: 
+159203	result: 0.243 / count: 236 / numRes : 191
+159203	state: 
+159359	result: 0.243 / count: 236 / numRes : 191
+159359	state: 
+159500	result: 0.243 / count: 236 / numRes : 191
+159500	state: 
+159656	result: 0.243 / count: 236 / numRes : 191
+159656	state: 
+159812	result: 0.243 / count: 236 / numRes : 191
+159812	state: 
+159953	result: 0.243 / count: 236 / numRes : 191
+159953	state: 
+160109	result: 0.243 / count: 236 / numRes : 191
+160109	state: 
+160406	result: 0.243 / count: 236 / numRes : 191
+160406	state: 
+160562	result: 0.243 / count: 236 / numRes : 191
+160562	state: 
+160719	result: 0.243 / count: 236 / numRes : 191
+160719	state: 
+160875	result: 0.243 / count: 236 / numRes : 191
+160875	state: 
+161015	result: 0.243 / count: 236 / numRes : 191
+161015	state: 
+161172	result: 0.243 / count: 236 / numRes : 191
+161172	state: 
+161312	result: 0.243 / count: 236 / numRes : 191
+161312	state: 
+161625	result: 0.243 / count: 236 / numRes : 191
+161625	state: 
+161781	result: 0.243 / count: 236 / numRes : 191
+161781	state: 
+161922	result: 0.243 / count: 236 / numRes : 191
+161922	state: 
+162078	result: 0.243 / count: 236 / numRes : 191
+162078	state: 
+162219	result: 0.243 / count: 236 / numRes : 191
+162219	state: 
+162375	result: 0.243 / count: 236 / numRes : 191
+162375	state: 
+162531	result: 0.243 / count: 236 / numRes : 191
+162531	state: 
+162672	result: 0.243 / count: 236 / numRes : 191
+162672	state: 
+162984	result: 0.243 / count: 236 / numRes : 191
+162984	state: 
+163140	result: 0.243 / count: 236 / numRes : 191
+163140	state: 
+163281	result: 0.243 / count: 236 / numRes : 191
+163281	state: 
+163437	result: 0.243 / count: 236 / numRes : 191
+163437	state: 
+163578	result: 0.243 / count: 236 / numRes : 191
+163578	state: 
+163734	result: 0.243 / count: 236 / numRes : 191
+163734	state: 
+163890	result: 0.243 / count: 236 / numRes : 191
+163890	state: 
+164187	result: 0.243 / count: 236 / numRes : 191
+164187	state: 
+164344	result: 0.243 / count: 236 / numRes : 191
+164344	state: 
+164484	result: 0.243 / count: 236 / numRes : 191
+164484	state: 
+164640	result: 0.243 / count: 236 / numRes : 191
+164640	state: 
+164797	result: 0.243 / count: 236 / numRes : 191
+164797	state: 
+164937	result: 0.243 / count: 236 / numRes : 191
+164937	state: 
+165094	result: 0.243 / count: 236 / numRes : 191
+165094	state: 
+165250	result: 0.243 / count: 236 / numRes : 191
+165250	state: 
+165547	result: 0.243 / count: 236 / numRes : 191
+165547	state: 
+165687	result: 0.243 / count: 236 / numRes : 191
+165687	state: 
+165844	result: 0.243 / count: 236 / numRes : 191
+165844	state: 
+166000	result: 0.243 / count: 236 / numRes : 191
+166000	state: 
+166156	result: 0.243 / count: 236 / numRes : 191
+166156	state: 
+166312	result: 0.243 / count: 236 / numRes : 191
+166312	state: 
+166469	result: 0.243 / count: 236 / numRes : 191
+166469	state: 
+166765	result: 0.243 / count: 236 / numRes : 191
+166765	state: 
+166922	result: 0.243 / count: 236 / numRes : 191
+166922	state: 
+167062	result: 0.243 / count: 236 / numRes : 191
+167062	state: 
+167219	result: 0.243 / count: 236 / numRes : 191
+167219	state: 
+167359	result: 0.243 / count: 236 / numRes : 191
+167359	state: 
+167515	result: 0.243 / count: 236 / numRes : 191
+167515	state: 
+167672	result: 0.243 / count: 236 / numRes : 191
+167672	state: 
+167812	result: 0.243 / count: 236 / numRes : 191
+167812	state: 
+168125	result: 0.243 / count: 236 / numRes : 191
+168125	state: 
+168281	result: 0.243 / count: 236 / numRes : 191
+168281	state: 
+168437	result: 0.243 / count: 236 / numRes : 191
+168437	state: 
+168578	result: 0.243 / count: 236 / numRes : 191
+168578	state: 
+168734	result: 0.243 / count: 236 / numRes : 191
+168734	state: 
+168875	result: 0.243 / count: 236 / numRes : 191
+168875	state: 
+169031	result: 0.243 / count: 236 / numRes : 191
+169031	state: 
+169328	result: 0.243 / count: 236 / numRes : 191
+169328	state: 
+169484	result: 0.243 / count: 236 / numRes : 191
+169484	state: 
+169640	result: 0.243 / count: 236 / numRes : 191
+169640	state: 
+169797	result: 0.243 / count: 236 / numRes : 191
+169797	state: 
+169937	result: 0.243 / count: 236 / numRes : 191
+169937	state: 
+170094	result: 0.243 / count: 236 / numRes : 191
+170094	state: 
+170265	result: 0.243 / count: 236 / numRes : 191
+170265	state: 
+170406	result: 0.243 / count: 236 / numRes : 191
+170406	state: 
+170547	result: 0.243 / count: 236 / numRes : 191
+170547	state: 
+170844	result: 0.243 / count: 236 / numRes : 191
+170844	state: 
+171000	result: 0.243 / count: 236 / numRes : 191
+171000	state: 
+171140	result: 0.243 / count: 236 / numRes : 191
+171140	state: 
+171312	result: 0.243 / count: 236 / numRes : 191
+171312	state: 
+171453	result: 0.243 / count: 236 / numRes : 191
+171453	state: 
+171750	result: 0.243 / count: 236 / numRes : 191
+171750	state: 
+171781	result: 0.243 / count: 236 / numRes : 191
+171781	state: 
+171922	result: 0.243 / count: 236 / numRes : 191
+171922	state: 
+172078	result: 0.243 / count: 236 / numRes : 191
+172078	state: 
+172219	result: 0.243 / count: 236 / numRes : 191
+172219	state: 
+172375	result: 0.243 / count: 236 / numRes : 191
+172375	state: 
+172531	result: 0.243 / count: 236 / numRes : 191
+172531	state: 
+172687	result: 0.243 / count: 236 / numRes : 191
+172687	state: 
+172828	result: 0.243 / count: 236 / numRes : 191
+172828	state: 
+173125	result: 0.243 / count: 236 / numRes : 191
+173125	state: 
+173281	result: 0.243 / count: 236 / numRes : 191
+173281	state: 
+173437	result: 0.243 / count: 236 / numRes : 191
+173437	state: 
+173578	result: 0.243 / count: 236 / numRes : 191
+173578	state: 
+173734	result: 0.243 / count: 236 / numRes : 191
+173734	state: 
+173890	result: 0.243 / count: 236 / numRes : 191
+173890	state: 
+174031	result: 0.243 / count: 236 / numRes : 191
+174031	state: 
+174187	result: 0.243 / count: 236 / numRes : 191
+174187	state: 
+174484	result: 0.243 / count: 236 / numRes : 191
+174484	state: 
+174640	result: 0.243 / count: 236 / numRes : 191
+174640	state: 
+174797	result: 0.243 / count: 236 / numRes : 191
+174797	state: 
+174937	result: 0.243 / count: 236 / numRes : 191
+174937	state: 
+175094	result: 0.243 / count: 236 / numRes : 191
+175094	state: 
+175250	result: 0.243 / count: 236 / numRes : 191
+175250	state: 
+175390	result: 0.243 / count: 236 / numRes : 191
+175390	state: 
+175687	result: 0.243 / count: 236 / numRes : 191
+175687	state: 
+175844	result: 0.243 / count: 236 / numRes : 191
+175844	state: 
+176000	result: 0.243 / count: 236 / numRes : 191
+176000	state: 
+176156	result: 0.243 / count: 236 / numRes : 191
+176156	state: 
+176297	result: 0.243 / count: 236 / numRes : 191
+176297	state: 
+176469	result: 0.243 / count: 236 / numRes : 191
+176469	state: 
+176609	result: 0.243 / count: 236 / numRes : 191
+176609	state: 
+176765	result: 0.243 / count: 236 / numRes : 191
+176765	state: 
+177062	result: 0.243 / count: 236 / numRes : 191
+177062	state: 
+177219	result: 0.243 / count: 236 / numRes : 191
+177219	state: 
+177375	result: 0.243 / count: 236 / numRes : 191
+177375	state: 
+177515	result: 0.243 / count: 236 / numRes : 191
+177515	state: 
+177672	result: 0.243 / count: 236 / numRes : 191
+177672	state: 
+177828	result: 0.243 / count: 236 / numRes : 191
+177828	state: 
+177969	result: 0.243 / count: 236 / numRes : 191
+177969	state: 
+178265	result: 0.243 / count: 236 / numRes : 191
+178265	state: 
+178422	result: 0.243 / count: 236 / numRes : 191
+178422	state: 
+178578	result: 0.243 / count: 236 / numRes : 191
+178578	state: 
+178734	result: 0.243 / count: 236 / numRes : 191
+178734	state: 
+178875	result: 0.243 / count: 236 / numRes : 191
+178875	state: 
+179031	result: 0.243 / count: 236 / numRes : 191
+179031	state: 
+179187	result: 0.243 / count: 236 / numRes : 191
+179187	state: 
+179344	result: 0.243 / count: 236 / numRes : 191
+179344	state: 
+179640	result: 0.243 / count: 236 / numRes : 191
+179640	state: 
+179797	result: 0.243 / count: 236 / numRes : 191
+179797	state: 
+179953	result: 0.243 / count: 236 / numRes : 191
+179953	state: 
+180094	result: 0.243 / count: 236 / numRes : 191
+180094	state: 
+180250	result: 0.243 / count: 236 / numRes : 191
+180250	state: 
+180406	result: 0.243 / count: 236 / numRes : 191
+180406	state: 
+180547	result: 0.243 / count: 236 / numRes : 191
+180547	state: 
+180859	result: 0.243 / count: 236 / numRes : 191
+180859	state: 
+181015	result: 0.243 / count: 236 / numRes : 191
+181015	state: 
+181156	result: 0.243 / count: 236 / numRes : 191
+181156	state: 
+181312	result: 0.243 / count: 236 / numRes : 191
+181312	state: 
+181469	result: 0.243 / count: 236 / numRes : 191
+181469	state: 
+181609	result: 0.243 / count: 236 / numRes : 191
+181609	state: 
+181765	result: 0.243 / count: 236 / numRes : 191
+181765	state: 
+181922	result: 0.243 / count: 236 / numRes : 191
+181922	state: 
+182219	result: 0.243 / count: 236 / numRes : 191
+182219	state: 
+182375	result: 0.243 / count: 236 / numRes : 191
+182375	state: 
+182515	result: 0.243 / count: 236 / numRes : 191
+182515	state: 
+182672	result: 0.243 / count: 236 / numRes : 191
+182672	state: 
+182828	result: 0.243 / count: 236 / numRes : 191
+182828	state: 
+182984	result: 0.243 / count: 236 / numRes : 191
+182984	state: 
+183125	result: 0.243 / count: 236 / numRes : 191
+183125	state: 
+183437	result: 0.243 / count: 236 / numRes : 191
+183437	state: 
+183594	result: 0.243 / count: 236 / numRes : 191
+183594	state: 
+183750	result: 0.243 / count: 236 / numRes : 191
+183750	state: 
+183890	result: 0.243 / count: 236 / numRes : 191
+183890	state: 
+184047	result: 0.243 / count: 236 / numRes : 191
+184047	state: 
+184187	result: 0.243 / count: 236 / numRes : 191
+184203	state: 
+184344	result: 0.243 / count: 236 / numRes : 191
+184344	state: 
+184531	result: 0.243 / count: 236 / numRes : 191
+184531	state: 
+184828	result: 0.243 / count: 236 / numRes : 191
+184828	state: 
+184984	result: 0.243 / count: 236 / numRes : 191
+184984	state: 
+185140	result: 0.243 / count: 236 / numRes : 191
+185140	state: 
+185281	result: 0.243 / count: 236 / numRes : 191
+185281	state: 
+185437	result: 0.243 / count: 236 / numRes : 191
+185437	state: 
+185594	result: 0.243 / count: 236 / numRes : 191
+185594	state: 
+185734	result: 0.243 / count: 236 / numRes : 191
+185734	state: 
+186031	result: 0.243 / count: 236 / numRes : 191
+186031	state: 
+186203	result: 0.243 / count: 236 / numRes : 191
+186203	state: 
+186344	result: 0.243 / count: 236 / numRes : 191
+186344	state: 
+186500	result: 0.243 / count: 236 / numRes : 191
+186500	state: 
+186640	result: 0.243 / count: 236 / numRes : 191
+186656	state: 
+186812	result: 0.243 / count: 236 / numRes : 191
+186812	state: 
+186953	result: 0.243 / count: 236 / numRes : 191
+186953	state: 
+187109	result: 0.243 / count: 236 / numRes : 191
+187109	state: 
+187406	result: 0.243 / count: 236 / numRes : 191
+187406	state: 
+187562	result: 0.243 / count: 236 / numRes : 191
+187562	state: 
+187719	result: 0.243 / count: 236 / numRes : 191
+187719	state: 
+187859	result: 0.243 / count: 236 / numRes : 191
+187859	state: 
+188015	result: 0.243 / count: 236 / numRes : 191
+188015	state: 
+188172	result: 0.243 / count: 236 / numRes : 191
+188172	state: 
+188328	result: 0.243 / count: 236 / numRes : 191
+188328	state: 
+188469	result: 0.243 / count: 236 / numRes : 191
+188469	state: 
+188765	result: 0.243 / count: 236 / numRes : 191
+188765	state: 
+188922	result: 0.243 / count: 236 / numRes : 191
+188922	state: 
+189062	result: 0.243 / count: 236 / numRes : 191
+189062	state: 
+189219	result: 0.243 / count: 236 / numRes : 191
+189219	state: 
+189375	result: 0.243 / count: 236 / numRes : 191
+189375	state: 
+189531	result: 0.243 / count: 236 / numRes : 191
+189531	state: 
+189672	result: 0.243 / count: 236 / numRes : 191
+189672	state: 
+189984	result: 0.243 / count: 236 / numRes : 191
+189984	state: 
+190140	result: 0.243 / count: 236 / numRes : 191
+190140	state: 
+190281	result: 0.243 / count: 236 / numRes : 191
+190281	state: 
+190437	result: 0.243 / count: 236 / numRes : 191
+190437	state: 
+190594	result: 0.243 / count: 236 / numRes : 191
+190594	state: 
+190734	result: 0.243 / count: 236 / numRes : 191
+190750	state: 
+190890	result: 0.243 / count: 236 / numRes : 191
+190890	state: 
+191031	result: 0.243 / count: 236 / numRes : 191
+191031	state: 
+191344	result: 0.243 / count: 236 / numRes : 191
+191344	state: 
+191500	result: 0.243 / count: 236 / numRes : 191
+191500	state: 
+191656	result: 0.243 / count: 236 / numRes : 191
+191656	state: 
+191797	result: 0.243 / count: 236 / numRes : 191
+191797	state: 
+191953	result: 0.243 / count: 236 / numRes : 191
+191953	state: 
+192109	result: 0.243 / count: 236 / numRes : 191
+192109	state: 
+192265	result: 0.243 / count: 236 / numRes : 191
+192265	state: 
+192562	result: 0.243 / count: 236 / numRes : 191
+192562	state: 
+192703	result: 0.243 / count: 236 / numRes : 191
+192719	state: 
+192859	result: 0.243 / count: 236 / numRes : 191
+192859	state: 
+193015	result: 0.243 / count: 236 / numRes : 191
+193015	state: 
+193156	result: 0.243 / count: 236 / numRes : 191
+193156	state: 
+193312	result: 0.243 / count: 236 / numRes : 191
+193312	state: 
+193469	result: 0.243 / count: 236 / numRes : 191
+193469	state: 
+193625	result: 0.243 / count: 236 / numRes : 191
+193625	state: 
+193922	result: 0.243 / count: 236 / numRes : 191
+193922	state: 
+194062	result: 0.243 / count: 236 / numRes : 191
+194062	state: 
+194219	result: 0.243 / count: 236 / numRes : 191
+194219	state: 
+194375	result: 0.243 / count: 236 / numRes : 191
+194375	state: 
+194515	result: 0.243 / count: 236 / numRes : 191
+194515	state: 
+194672	result: 0.243 / count: 236 / numRes : 191
+194672	state: 
+194828	result: 0.243 / count: 236 / numRes : 191
+194828	state: 
+194969	result: 0.243 / count: 236 / numRes : 191
+194969	state: 
+195265	result: 0.243 / count: 236 / numRes : 191
+195265	state: 
+195422	result: 0.243 / count: 236 / numRes : 191
+195422	state: 
+195578	result: 0.243 / count: 236 / numRes : 191
+195578	state: 
+195734	result: 0.243 / count: 236 / numRes : 191
+195734	state: 
+195875	result: 0.243 / count: 236 / numRes : 191
+195875	state: 
+196031	result: 0.243 / count: 236 / numRes : 191
+196031	state: 
+196172	result: 0.243 / count: 236 / numRes : 191
+196172	state: 
+196328	result: 0.243 / count: 236 / numRes : 191
+196328	state: 
+196640	result: 0.243 / count: 236 / numRes : 191
+196640	state: 
+196781	result: 0.243 / count: 236 / numRes : 191
+196781	state: 
+196937	result: 0.243 / count: 236 / numRes : 191
+196937	state: 
+197094	result: 0.243 / count: 236 / numRes : 191
+197094	state: 
+197234	result: 0.243 / count: 236 / numRes : 191
+197234	state: 
+197390	result: 0.243 / count: 236 / numRes : 191
+197406	state: 
+197547	result: 0.243 / count: 236 / numRes : 191
+197547	state: 
+197875	result: 0.243 / count: 236 / numRes : 191
+197875	state: 
+198015	result: 0.243 / count: 236 / numRes : 191
+198015	state: 
+198172	result: 0.243 / count: 236 / numRes : 191
+198172	state: 
+198312	result: 0.243 / count: 236 / numRes : 191
+198312	state: 
+198469	result: 0.243 / count: 236 / numRes : 191
+198469	state: 
+198625	result: 0.243 / count: 236 / numRes : 191
+198640	state: 
+198781	result: 0.243 / count: 236 / numRes : 191
+198781	state: 
+198922	result: 0.243 / count: 236 / numRes : 191
+198922	state: 
+199234	result: 0.243 / count: 236 / numRes : 191
+199234	state: 
+199390	result: 0.243 / count: 236 / numRes : 191
+199390	state: 
+199531	result: 0.243 / count: 236 / numRes : 191
+199531	state: 
+199687	result: 0.243 / count: 236 / numRes : 191
+199687	state: 
+199844	result: 0.243 / count: 236 / numRes : 191
+199844	state: 
+199984	result: 0.243 / count: 236 / numRes : 191
+199984	state: 
+200140	result: 0.243 / count: 236 / numRes : 191
+200140	state: 
+200437	result: 0.243 / count: 236 / numRes : 191
+200437	state: 
+200609	result: 0.243 / count: 236 / numRes : 191
+200609	state: 
+200750	result: 0.243 / count: 236 / numRes : 191
+200750	state: 
+200906	result: 0.243 / count: 236 / numRes : 191
+200906	state: 
+201047	result: 0.243 / count: 236 / numRes : 191
+201047	state: 
+201203	result: 0.243 / count: 236 / numRes : 191
+201203	state: 
+201344	result: 0.243 / count: 236 / numRes : 191
+201344	state: 
+201500	result: 0.243 / count: 236 / numRes : 191
+201500	state: 
+201812	result: 0.243 / count: 236 / numRes : 191
+201812	state: 
+201953	result: 0.243 / count: 236 / numRes : 191
+201953	state: 
+202109	result: 0.243 / count: 236 / numRes : 191
+202109	state: 
+202265	result: 0.243 / count: 236 / numRes : 191
+202265	state: 
+202406	result: 0.243 / count: 236 / numRes : 191
+202406	state: 
+202562	result: 0.243 / count: 236 / numRes : 191
+202562	state: 
+202703	result: 0.243 / count: 236 / numRes : 191
+202703	state: 
+202859	result: 0.243 / count: 236 / numRes : 191
+202859	state: 
+203156	result: 0.243 / count: 236 / numRes : 191
+203156	state: 
+203312	result: 0.243 / count: 236 / numRes : 191
+203312	state: 
+203453	result: 0.243 / count: 236 / numRes : 191
+203469	state: 
+203609	result: 0.243 / count: 236 / numRes : 191
+203609	state: 
+203765	result: 0.243 / count: 236 / numRes : 191
+203765	state: 
+203906	result: 0.243 / count: 236 / numRes : 191
+203922	state: 
+204062	result: 0.243 / count: 236 / numRes : 191
+204062	state: 
+204375	result: 0.243 / count: 236 / numRes : 191
+204375	state: 
+204515	result: 0.243 / count: 236 / numRes : 191
+204515	state: 
+204672	result: 0.243 / count: 236 / numRes : 191
+204672	state: 
+204828	result: 0.243 / count: 236 / numRes : 191
+204828	state: 
+204969	result: 0.243 / count: 236 / numRes : 191
+204969	state: 
+205125	result: 0.243 / count: 236 / numRes : 191
+205125	state: 
+205281	result: 0.243 / count: 236 / numRes : 191
+205281	state: 
+205437	result: 0.243 / count: 236 / numRes : 191
+205437	state: 
+205734	result: 0.243 / count: 236 / numRes : 191
+205734	state: 
+205875	result: 0.243 / count: 236 / numRes : 191
+205875	state: 
+206031	result: 0.243 / count: 236 / numRes : 191
+206031	state: 
+206187	result: 0.243 / count: 236 / numRes : 191
+206187	state: 
+206328	result: 0.243 / count: 236 / numRes : 191
+206328	state: 
+206469	result: 0.243 / count: 236 / numRes : 191
+206469	state: 
+206640	result: 0.243 / count: 236 / numRes : 191
+206640	state: 
+206937	result: 0.243 / count: 236 / numRes : 191
+206937	state: 
+207078	result: 0.243 / count: 236 / numRes : 191
+207078	state: 
+207234	result: 0.243 / count: 236 / numRes : 191
+207234	state: 
+207390	result: 0.243 / count: 236 / numRes : 191
+207390	state: 
+207531	result: 0.243 / count: 236 / numRes : 191
+207531	state: 
+207687	result: 0.243 / count: 236 / numRes : 191
+207687	state: 
+207844	result: 0.243 / count: 236 / numRes : 191
+207844	state: 
+208000	result: 0.243 / count: 236 / numRes : 191
+208000	state: 
+208297	result: 0.243 / count: 236 / numRes : 191
+208297	state: 
+208453	result: 0.243 / count: 236 / numRes : 191
+208453	state: 
+208594	result: 0.243 / count: 236 / numRes : 191
+208594	state: 
+208750	result: 0.243 / count: 236 / numRes : 191
+208750	state: 
+208890	result: 0.243 / count: 236 / numRes : 191
+208906	state: 
+209047	result: 0.243 / count: 236 / numRes : 191
+209047	state: 
+209187	result: 0.243 / count: 236 / numRes : 191
+209187	state: 
+209500	result: 0.243 / count: 236 / numRes : 191
+209500	state: 
+209656	result: 0.243 / count: 236 / numRes : 191
+209656	state: 
+209812	result: 0.243 / count: 236 / numRes : 191
+209812	state: 
+209953	result: 0.243 / count: 236 / numRes : 191
+209953	state: 
+210109	result: 0.243 / count: 236 / numRes : 191
+210109	state: 
+210265	result: 0.243 / count: 236 / numRes : 191
+210265	state: 
+210406	result: 0.243 / count: 236 / numRes : 191
+210406	state: 
+210562	result: 0.243 / count: 236 / numRes : 191
+210562	state: 
+210859	result: 0.243 / count: 236 / numRes : 191
+210859	state: 
+211015	result: 0.243 / count: 236 / numRes : 191
+211015	state: 
+211172	result: 0.243 / count: 236 / numRes : 191
+211172	state: 
+211312	result: 0.243 / count: 236 / numRes : 191
+211312	state: 
+211469	result: 0.243 / count: 236 / numRes : 191
+211469	state: 
+211609	result: 0.243 / count: 236 / numRes : 191
+211625	state: 
+211765	result: 0.243 / count: 236 / numRes : 191
+211765	state: 
+212062	result: 0.243 / count: 236 / numRes : 191
+212062	state: 
+212219	result: 0.243 / count: 236 / numRes : 191
+212219	state: 
+212359	result: 0.243 / count: 236 / numRes : 191
+212359	state: 
+212515	result: 0.243 / count: 236 / numRes : 191
+212515	state: 
+212672	result: 0.243 / count: 236 / numRes : 191
+212672	state: 
+212812	result: 0.243 / count: 236 / numRes : 191
+212828	state: 
+212969	result: 0.243 / count: 236 / numRes : 191
+212969	state: 
+213125	result: 0.243 / count: 236 / numRes : 191
+213125	state: 
+213422	result: 0.243 / count: 236 / numRes : 191
+213422	state: 
+213578	result: 0.243 / count: 236 / numRes : 191
+213578	state: 
+213719	result: 0.243 / count: 236 / numRes : 191
+213719	state: 
+213875	result: 0.243 / count: 236 / numRes : 191
+213875	state: 
+214031	result: 0.243 / count: 236 / numRes : 191
+214031	state: 
+214172	result: 0.243 / count: 236 / numRes : 191
+214187	state: 
+214328	result: 0.243 / count: 236 / numRes : 191
+214328	state: 
+214640	result: 0.243 / count: 236 / numRes : 191
+214640	state: 
+214781	result: 0.243 / count: 236 / numRes : 191
+214781	state: 
+214937	result: 0.243 / count: 236 / numRes : 191
+214937	state: 
+215094	result: 0.243 / count: 236 / numRes : 191
+215094	state: 
+215234	result: 0.243 / count: 236 / numRes : 191
+215234	state: 
+215390	result: 0.243 / count: 236 / numRes : 191
+215390	state: 
+215547	result: 0.243 / count: 236 / numRes : 191
+215547	state: 
+215687	result: 0.243 / count: 236 / numRes : 191
+215687	state: 
+216000	result: 0.243 / count: 236 / numRes : 191
+216000	state: 
+216140	result: 0.243 / count: 236 / numRes : 191
+216140	state: 
+216297	result: 0.243 / count: 236 / numRes : 191
+216297	state: 
+216453	result: 0.243 / count: 236 / numRes : 191
+216453	state: 
+216594	result: 0.243 / count: 236 / numRes : 191
+216594	state: 
+216750	result: 0.243 / count: 236 / numRes : 191
+216750	state: 
+216906	result: 0.243 / count: 236 / numRes : 191
+216906	state: 
+217047	result: 0.243 / count: 236 / numRes : 191
+217047	state: 
+217344	result: 0.243 / count: 236 / numRes : 191
+217344	state: 
+217500	result: 0.243 / count: 236 / numRes : 191
+217500	state: 
+217656	result: 0.243 / count: 236 / numRes : 191
+217656	state: 
+217812	result: 0.243 / count: 236 / numRes : 191
+217812	state: 
+217953	result: 0.243 / count: 236 / numRes : 191
+217953	state: 
+218109	result: 0.243 / count: 236 / numRes : 191
+218109	state: 
+218250	result: 0.243 / count: 236 / numRes : 191
+218250	state: 
+218547	result: 0.243 / count: 236 / numRes : 191
+218547	state: 
+218719	result: 0.243 / count: 236 / numRes : 191
+218719	state: 
+218859	result: 0.243 / count: 236 / numRes : 191
+218859	state: 
+219015	result: 0.243 / count: 236 / numRes : 191
+219015	state: 
+219156	result: 0.243 / count: 236 / numRes : 191
+219156	state: 
+219312	result: 0.243 / count: 236 / numRes : 191
+219312	state: 
+219469	result: 0.243 / count: 236 / numRes : 191
+219469	state: 
+219609	result: 0.243 / count: 236 / numRes : 191
+219609	state: 
+219922	result: 0.243 / count: 236 / numRes : 191
+219922	state: 
+220078	result: 0.243 / count: 236 / numRes : 191
+220078	state: 
+220234	result: 0.243 / count: 236 / numRes : 191
+220234	state: 
+220390	result: 0.243 / count: 236 / numRes : 191
+220390	state: 
+220547	result: 0.243 / coun

@@ -1,0 +1,3112 @@
+0	start 2002-06-11 18:58:27
+187	experiment set: 22
+297	begin
+297	result: -1.0 / count: 0 / numRes : 0
+297	state: 
+531	result: -1.0 / count: 0 / numRes : 0
+531	state: 
+656	result: -1.0 / count: 0 / numRes : 0
+656	state: 
+1093	result: -1.0 / count: 0 / numRes : 0
+1093	state: 
+1250	result: -1.0 / count: 0 / numRes : 0
+1250	state: 
+1406	result: -1.0 / count: 0 / numRes : 0
+1406	state: 
+1718	result: -1.0 / count: 0 / numRes : 0
+1718	state: 
+1875	result: -1.0 / count: 0 / numRes : 0
+1875	state: 
+2015	result: -1.0 / count: 0 / numRes : 0
+2015	state: 
+2343	result: -1.0 / count: 0 / numRes : 0
+2343	state: 
+2484	result: -1.0 / count: 0 / numRes : 0
+2484	state: 
+2640	result: -1.0 / count: 0 / numRes : 0
+2640	state: 
+2968	result: -1.0 / count: 0 / numRes : 0
+2968	state: 
+3125	result: -1.0 / count: 0 / numRes : 0
+3125	state: 
+3281	result: -1.0 / count: 0 / numRes : 0
+3281	state: 
+3578	result: -1.0 / count: 0 / numRes : 0
+3578	state: 
+3734	result: -1.0 / count: 0 / numRes : 0
+3734	state: 
+3890	result: -1.0 / count: 0 / numRes : 0
+3890	state: 
+4203	result: -1.0 / count: 0 / numRes : 0
+4203	state: 
+4359	result: -1.0 / count: 0 / numRes : 0
+4359	state: 
+4500	result: -1.0 / count: 0 / numRes : 0
+4500	state: 
+4828	result: -1.0 / count: 0 / numRes : 0
+4828	state: 
+4984	result: -1.0 / count: 0 / numRes : 0
+4984	state: 
+5140	result: -1.0 / count: 0 / numRes : 0
+5140	state: 
+5422	result: -1.0 / count: 0 / numRes : 0
+5422	state: 
+5593	result: -1.0 / count: 0 / numRes : 0
+5593	state: 
+5734	result: -1.0 / count: 0 / numRes : 0
+5734	state: 
+6062	result: -1.0 / count: 0 / numRes : 0
+6062	state: 
+6203	result: -1.0 / count: 0 / numRes : 0
+6203	state: 
+6359	result: -1.0 / count: 0 / numRes : 0
+6359	state: 
+6672	result: -1.0 / count: 0 / numRes : 0
+6672	state: {price 3 -1 -1.0}
+6890	result: 0.281 / count: 1086 / numRes : 373
+6890	state: {price 3 -1 -1.0}
+7031	result: 0.281 / count: 1091 / numRes : 375
+7031	state: {price 3 -1 -1.0}
+7203	result: 0.281 / count: 1091 / numRes : 375
+7203	state: {price 3 -1 -1.0}
+7500	result: 0.281 / count: 1091 / numRes : 375
+7500	state: {price 3 -1 -1.0}
+7640	result: 0.281 / count: 1091 / numRes : 375
+7640	state: {price 3 -1 -1.0}
+7765	result: 0.281 / count: 1091 / numRes : 375
+7765	state: {price 3 -1 -1.0}
+7937	result: 0.281 / count: 1091 / numRes : 375
+7937	state: {price 3 -1 -1.0}
+8218	result: 0.281 / count: 1091 / numRes : 375
+8234	state: {price 3 -1 -1.0}
+8390	result: 0.281 / count: 1091 / numRes : 375
+8390	state: {price 3 -1 -1.0}
+8531	result: 0.281 / count: 1091 / numRes : 375
+8531	state: {price 3 -1 -1.0}
+8687	result: 0.281 / count: 1091 / numRes : 375
+8687	state: {price 3 -1 -1.0} {sqfoot 2 -1 -1.0}
+8859	result: 0.281 / count: 705 / numRes : 246
+8859	state: {price 3 -1 -1.0} {sqfoot 2 128 2108.24}
+9203	result: 0.281 / count: 705 / numRes : 246
+9203	state: {price 3 -1 -1.0} {sqfoot 2 128 2108.24}
+9281	result: 0.281 / count: 705 / numRes : 246
+9281	state: {price 3 -1 -1.0} {sqfoot 2 128 2108.24}
+9453	result: 0.281 / count: 705 / numRes : 246
+9453	state: {price 3 -1 -1.0} {sqfoot 2 128 2108.24}
+9640	result: 0.281 / count: 705 / numRes : 246
+9640	state: {price 3 -1 -1.0} {sqfoot 2 128 2108.24}
+9781	result: 0.245 / count: 463 / numRes : 160
+9781	state: {price 3 -1 -1.0} {sqfoot 2 128 2108.24} {distToA 1 -1 -1.0}
+9937	result: 0.245 / count: 463 / numRes : 160
+9937	state: {price 3 -1 -1.0} {sqfoot 2 128 2108.24} {distToA 1 -1 -1.0}
+10265	result: 0.245 / count: 463 / numRes : 160
+10265	state: {price 3 -1 -1.0} {sqfoot 2 128 2108.24} {distToA 1 -1 -1.0}
+10390	result: 0.245 / count: 463 / numRes : 160
+10390	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+10562	result: 0.245 / count: 463 / numRes : 160
+10562	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+10734	result: 0.245 / count: 463 / numRes : 160
+10734	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+10875	result: 0.251 / count: 403 / numRes : 140
+10875	state: {price 3 -1 -1.0} {sqfoot 2 141 2322.35} {distToA 1 -1 -1.0}
+11047	result: 0.251 / count: 403 / numRes : 140
+11047	state: {price 3 -1 -1.0} {sqfoot 2 144 2371.76} {distToA 1 -1 -1.0}
+11218	result: 0.251 / count: 403 / numRes : 140
+11218	state: {price 3 -1 -1.0} {sqfoot 2 144 2371.76} {distToA 1 -1 -1.0}
+11515	result: 0.252 / count: 370 / numRes : 129
+11515	state: {price 3 -1 -1.0} {sqfoot 2 147 2421.18} {distToA 1 -1 -1.0}
+11703	result: 0.232 / count: 218 / numRes : 76
+11703	state: {price 3 -1 -1.0} {sqfoot 2 147 2421.18} {distToA 1 -1 -1.0}
+11843	result: 0.206 / count: 75 / numRes : 26
+11843	state: {price 3 -1 -1.0} {sqfoot 2 147 2421.18} {distToA 1 -1 -1.0}
+12000	result: 0.206 / count: 75 / numRes : 26
+12000	state: {price 3 -1 -1.0} {sqfoot 2 147 2421.18} {distToA 1 -1 -1.0}
+12312	result: 0.234 / count: 235 / numRes : 82
+12312	state: {price 3 -1 -1.0} {sqfoot 2 147 2421.18} {distToA 1 -1 -1.0}
+12343	result: 0.247 / count: 252 / numRes : 85
+12343	state: {price 3 -1 -1.0} {sqfoot 2 147 2421.18} {distToA 1 -1 -1.0}
+12515	result: 0.242 / count: 302 / numRes : 106
+12515	state: {price 3 -1 -1.0} {sqfoot 2 147 2421.18} {distToA 1 -1 -1.0}
+12687	result: 0.237 / count: 392 / numRes : 136
+12687	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+12797	result: 0.24 / count: 419 / numRes : 145
+12797	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+12968	result: 0.24 / count: 421 / numRes : 146
+12968	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+13297	result: 0.243 / count: 386 / numRes : 133
+13297	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+13468	result: 0.251 / count: 280 / numRes : 94
+13468	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+13593	result: 0.251 / count: 280 / numRes : 94
+13593	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+13797	result: 0.243 / count: 386 / numRes : 133
+13797	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+13953	result: 0.242 / count: 392 / numRes : 135
+13953	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+14125	result: 0.241 / count: 416 / numRes : 144
+14125	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+14437	result: 0.244 / count: 381 / numRes : 131
+14437	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+14562	result: 0.244 / count: 381 / numRes : 131
+14562	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+14718	result: 0.244 / count: 381 / numRes : 131
+14718	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+14890	result: 0.244 / count: 381 / numRes : 131
+14890	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+15047	result: 0.244 / count: 381 / numRes : 131
+15047	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+15172	result: 0.244 / count: 381 / numRes : 131
+15172	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+15343	result: 0.244 / count: 381 / numRes : 131
+15343	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+15656	result: 0.244 / count: 381 / numRes : 131
+15656	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+15828	result: 0.244 / count: 381 / numRes : 131
+15828	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+15984	result: 0.244 / count: 381 / numRes : 131
+15984	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+16140	result: 0.244 / count: 381 / numRes : 131
+16140	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+16468	result: 0.244 / count: 381 / numRes : 131
+16468	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+16593	result: 0.244 / count: 381 / numRes : 131
+16593	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+16734	result: 0.244 / count: 381 / numRes : 131
+16734	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+16890	result: 0.244 / count: 381 / numRes : 131
+16890	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+17047	result: 0.244 / count: 381 / numRes : 131
+17047	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+17375	result: 0.244 / count: 381 / numRes : 131
+17375	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+17422	result: 0.244 / count: 381 / numRes : 131
+17422	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+17531	result: 0.244 / count: 381 / numRes : 131
+17531	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+17687	result: 0.244 / count: 381 / numRes : 131
+17687	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+17828	result: 0.244 / count: 381 / numRes : 131
+17828	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+18000	result: 0.244 / count: 381 / numRes : 131
+18000	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+18156	result: 0.244 / count: 381 / numRes : 131
+18156	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+18312	result: 0.244 / count: 381 / numRes : 131
+18312	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+18484	result: 0.244 / count: 381 / numRes : 131
+18484	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+18781	result: 0.244 / count: 381 / numRes : 131
+18781	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+18953	result: 0.244 / count: 381 / numRes : 131
+18953	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+19109	result: 0.244 / count: 381 / numRes : 131
+19109	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+19281	result: 0.244 / count: 381 / numRes : 131
+19281	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+19453	result: 0.244 / count: 381 / numRes : 131
+19453	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+19625	result: 0.244 / count: 381 / numRes : 131
+19625	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+19765	result: 0.244 / count: 381 / numRes : 131
+19765	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+19953	result: 0.244 / count: 381 / numRes : 131
+19953	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+20234	result: 0.244 / count: 381 / numRes : 131
+20234	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+20406	result: 0.244 / count: 381 / numRes : 131
+20406	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+20547	result: 0.244 / count: 381 / numRes : 131
+20547	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+20703	result: 0.244 / count: 381 / numRes : 131
+20703	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+20859	result: 0.244 / count: 381 / numRes : 131
+20859	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+21031	result: 0.244 / count: 381 / numRes : 131
+21031	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+21203	result: 0.244 / count: 381 / numRes : 131
+21203	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+21359	result: 0.244 / count: 381 / numRes : 131
+21359	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+21718	result: 0.244 / count: 381 / numRes : 131
+21718	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+21859	result: 0.244 / count: 381 / numRes : 131
+21859	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+22000	result: 0.244 / count: 381 / numRes : 131
+22000	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+22140	result: 0.244 / count: 381 / numRes : 131
+22140	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+22297	result: 0.244 / count: 381 / numRes : 131
+22297	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+22453	result: 0.244 / count: 381 / numRes : 131
+22453	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+22609	result: 0.244 / count: 381 / numRes : 131
+22625	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+22781	result: 0.244 / count: 381 / numRes : 131
+22781	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+23093	result: 0.244 / count: 381 / numRes : 131
+23093	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+23281	result: 0.244 / count: 381 / numRes : 131
+23281	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+23422	result: 0.244 / count: 381 / numRes : 131
+23422	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+23593	result: 0.244 / count: 381 / numRes : 131
+23593	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+23750	result: 0.244 / count: 381 / numRes : 131
+23750	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+23906	result: 0.244 / count: 381 / numRes : 131
+23906	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+24062	result: 0.244 / count: 381 / numRes : 131
+24062	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+24234	result: 0.244 / count: 381 / numRes : 131
+24234	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+24531	result: 0.244 / count: 381 / numRes : 131
+24531	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+24687	result: 0.24 / count: 419 / numRes : 145
+24687	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+24875	result: 0.241 / count: 448 / numRes : 156
+24875	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+25015	result: 0.24 / count: 462 / numRes : 162
+25015	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+25187	result: 0.239 / count: 466 / numRes : 164
+25187	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+25390	result: 0.24 / count: 489 / numRes : 173
+25390	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+25515	result: 0.24 / count: 489 / numRes : 173
+25515	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+25656	result: 0.24 / count: 492 / numRes : 174
+25656	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+26015	result: 0.24 / count: 492 / numRes : 174
+26015	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+26172	result: 0.24 / count: 492 / numRes : 174
+26172	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+26312	result: 0.24 / count: 492 / numRes : 174
+26312	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+26484	result: 0.24 / count: 492 / numRes : 174
+26484	state: {price 3 -1 -1.0} {sqfoot 2 131 2157.65} {distToA 1 -1 -1.0}
+26672	result: 0.245 / count: 432 / numRes : 154
+26672	state: {price 3 -1 -1.0} {sqfoot 2 144 2371.76} {distToA 1 -1 -1.0}
+26812	result: 0.249 / count: 312 / numRes : 114
+26812	state: {price 3 -1 -1.0} {sqfoot 2 170 2800.0} {distToA 1 -1 -1.0}
+26968	result: 0.25 / count: 297 / numRes : 109
+26968	state: {price 3 -1 -1.0} {sqfoot 2 186 3063.53} {distToA 1 -1 -1.0}
+27109	result: 0.248 / count: 258 / numRes : 96
+27109	state: {price 3 -1 -1.0} {sqfoot 2 199 3277.65} {distToA 1 -1 -1.0}
+27453	result: 0.248 / count: 345 / numRes : 125
+27453	state: {price 3 -1 -1.0} {sqfoot 2 160 2635.29} {distToA 1 -1 -1.0}
+27578	result: 0.245 / count: 432 / numRes : 154
+27578	state: {price 3 -1 -1.0} {sqfoot 2 141 2322.35} {distToA 1 -1 -1.0}
+27734	result: 0.245 / count: 432 / numRes : 154
+27734	state: {price 3 -1 -1.0} {sqfoot 2 141 2322.35} {distToA 1 -1 -1.0}
+27906	result: 0.243 / count: 468 / numRes : 166
+27906	state: {price 3 -1 -1.0} {sqfoot 2 134 2207.06} {distToA 1 -1 -1.0}
+28078	result: 0.243 / count: 468 / numRes : 166
+28078	state: {price 3 -1 -1.0} {sqfoot 2 134 2207.06} {distToA 1 -1 -1.0}
+28234	result: 0.243 / count: 438 / numRes : 154
+28234	state: {price 3 -1 -1.0} {sqfoot 2 134 2207.06} {distToA 1 -1 -1.0}
+28390	result: 0.243 / count: 438 / numRes : 154
+28390	state: {price 3 -1 -1.0} {sqfoot 2 134 2207.06} {distToA 1 -1 -1.0}
+28562	result: 0.243 / count: 438 / numRes : 154
+28562	state: {price 3 -1 -1.0} {sqfoot 2 134 2207.06} {distToA 1 -1 -1.0}
+28937	result: 0.265 / count: 982 / numRes : 392
+28937	state: {sqfoot 2 134 2207.06}
+29078	result: 0.265 / count: 982 / numRes : 392
+29078	state: {sqfoot 2 134 2207.06}
+29234	result: 0.265 / count: 982 / numRes : 392
+29234	state: {sqfoot 2 134 2207.06}
+29359	result: 0.265 / count: 982 / numRes : 392
+29375	state: {sqfoot 2 134 2207.06}
+29515	result: 0.265 / count: 982 / numRes : 392
+29515	state: {sqfoot 2 134 2207.06}
+29656	result: 0.265 / count: 982 / numRes : 392
+29656	state: {sqfoot 2 134 2207.06}
+29843	result: 0.264 / count: 1009 / numRes : 401
+29843	state: {sqfoot 2 128 2108.24}
+29968	result: 0.264 / count: 1009 / numRes : 401
+29968	state: {sqfoot 2 128 2108.24}
+30297	result: 0.264 / count: 1009 / numRes : 401
+30297	state: {sqfoot 2 128 2108.24}
+30437	result: 0.264 / count: 1009 / numRes : 401
+30437	state: 
+30578	result: 0.264 / count: 1009 / numRes : 401
+30578	state: 
+30734	result: 0.264 / count: 1009 / numRes : 401
+30734	state: 
+30890	result: 0.264 / count: 1009 / numRes : 401
+30890	state: 
+31047	result: 0.264 / count: 1009 / numRes : 401
+31062	state: 
+31218	result: 0.264 / count: 1009 / numRes : 401
+31218	state: 
+31343	result: 0.264 / count: 1009 / numRes : 401
+31343	state: 
+31500	result: 0.264 / count: 1009 / numRes : 401
+31500	state: 
+31843	result: 0.264 / count: 1009 / numRes : 401
+31843	state: 
+31968	result: 0.264 / count: 1009 / numRes : 401
+31968	state: 
+32140	result: 0.264 / count: 1009 / numRes : 401
+32140	state: 
+32281	result: 0.264 / count: 1009 / numRes : 401
+32281	state: 
+32437	result: 0.264 / count: 1009 / numRes : 401
+32437	state: 
+32593	result: 0.264 / count: 1009 / numRes : 401
+32593	state: 
+32734	result: 0.264 / count: 1009 / numRes : 401
+32734	state: 
+32890	result: 0.264 / count: 1009 / numRes : 401
+32890	state: 
+33218	result: 0.264 / count: 1009 / numRes : 401
+33218	state: 
+33359	result: 0.264 / count: 1009 / numRes : 401
+33359	state: 
+33531	result: 0.264 / count: 1009 / numRes : 401
+33531	state: 
+33672	result: 0.264 / count: 1009 / numRes : 401
+33672	state: 
+33812	result: 0.264 / count: 1009 / numRes : 401
+33812	state: 
+33984	result: 0.264 / count: 1009 / numRes : 401
+33984	state: 
+34125	result: 0.264 / count: 1009 / numRes : 401
+34125	state: 
+34453	result: 0.264 / count: 1009 / numRes : 401
+34453	state: 
+34578	result: 0.264 / count: 1009 / numRes : 401
+34578	state: 
+34750	result: 0.264 / count: 1009 / numRes : 401
+34750	state: 
+34890	result: 0.264 / count: 1009 / numRes : 401
+34890	state: 
+35047	result: 0.264 / count: 1009 / numRes : 401
+35047	state: 
+35187	result: 0.264 / count: 1009 / numRes : 401
+35187	state: 
+35343	result: 0.264 / count: 1009 / numRes : 401
+35343	state: 
+35500	result: 0.264 / count: 1009 / numRes : 401
+35500	state: 
+35843	result: 0.264 / count: 1009 / numRes : 401
+35843	state: 
+35984	result: 0.264 / count: 1009 / numRes : 401
+35984	state: 
+36125	result: 0.264 / count: 1009 / numRes : 401
+36125	state: 
+36281	result: 0.264 / count: 1009 / numRes : 401
+36281	state: 
+36422	result: 0.264 / count: 1009 / numRes : 401
+36422	state: 
+36562	result: 0.264 / count: 1009 / numRes : 401
+36562	state: 
+36734	result: 0.264 / count: 1009 / numRes : 401
+36734	state: 
+37047	result: 0.264 / count: 1009 / numRes : 401
+37047	state: 
+37187	result: 0.264 / count: 1009 / numRes : 401
+37187	state: 
+37343	result: 0.264 / count: 1009 / numRes : 401
+37343	state: 
+37500	result: 0.264 / count: 1009 / numRes : 401
+37500	state: 
+37640	result: 0.264 / count: 1009 / numRes : 401
+37640	state: 
+37812	result: 0.264 / count: 1009 / numRes : 401
+37812	state: 
+37953	result: 0.264 / count: 1009 / numRes : 401
+37953	state: 
+38109	result: 0.264 / count: 1009 / numRes : 401
+38109	state: 
+38265	result: 0.264 / count: 1009 / numRes : 401
+38265	state: 
+38547	result: 0.264 / count: 1009 / numRes : 401
+38547	state: 
+38703	result: 0.264 / count: 1009 / numRes : 401
+38703	state: 
+38875	result: 0.264 / count: 1009 / numRes : 401
+38875	state: 
+39015	result: 0.264 / count: 1009 / numRes : 401
+39015	state: 
+39172	result: 0.264 / count: 1009 / numRes : 401
+39172	state: 
+39312	result: 0.264 / count: 1009 / numRes : 401
+39312	state: 
+39515	result: 0.264 / count: 1009 / numRes : 401
+39515	state: 
+39656	result: 0.264 / count: 1009 / numRes : 401
+39656	state: 
+39812	result: 0.264 / count: 1009 / numRes : 401
+39812	state: 
+39968	result: 0.264 / count: 1009 / numRes : 401
+39968	state: 
+40125	result: 0.264 / count: 1009 / numRes : 401
+40125	state: 
+40250	result: 0.264 / count: 1009 / numRes : 401
+40250	state: 
+40422	result: 0.264 / count: 1009 / numRes : 401
+40422	state: 
+40734	result: 0.264 / count: 1009 / numRes : 401
+40734	state: 
+40890	result: 0.264 / count: 1009 / numRes : 401
+40890	state: 
+41047	result: 0.264 / count: 1009 / numRes : 401
+41047	state: 
+41187	result: 0.264 / count: 1009 / numRes : 401
+41187	state: 
+41343	result: 0.264 / count: 1009 / numRes : 401
+41343	state: 
+41500	result: 0.264 / count: 1009 / numRes : 401
+41500	state: 
+41625	result: 0.264 / count: 1009 / numRes : 401
+41625	state: 
+41797	result: 0.264 / count: 1009 / numRes : 401
+41797	state: 
+41953	result: 0.264 / count: 1009 / numRes : 401
+41953	state: 
+42250	result: 0.264 / count: 1009 / numRes : 401
+42265	state: 
+42390	result: 0.264 / count: 1009 / numRes : 401
+42390	state: 
+42547	result: 0.264 / count: 1009 / numRes : 401
+42547	state: 
+42734	result: 0.264 / count: 1009 / numRes : 401
+42734	state: 
+42890	result: 0.264 / count: 1009 / numRes : 401
+42890	state: 
+43031	result: 0.264 / count: 1009 / numRes : 401
+43031	state: 
+43172	result: 0.264 / count: 1009 / numRes : 401
+43172	state: 
+43500	result: 0.264 / count: 1009 / numRes : 401
+43500	state: 
+43656	result: 0.264 / count: 1009 / numRes : 401
+43656	state: 
+43797	result: 0.264 / count: 1009 / numRes : 401
+43797	state: 
+43968	result: 0.264 / count: 1009 / numRes : 401
+43968	state: 
+44093	result: 0.264 / count: 1009 / numRes : 401
+44093	state: 
+44265	result: 0.264 / count: 1009 / numRes : 401
+44265	state: 
+44406	result: 0.264 / count: 1009 / numRes : 401
+44406	state: 
+44547	result: 0.264 / count: 1009 / numRes : 401
+44547	state: 
+44718	result: 0.264 / count: 1009 / numRes : 401
+44734	state: 
+45031	result: 0.264 / count: 1009 / numRes : 401
+45031	state: 
+45062	result: 0.264 / count: 1009 / numRes : 401
+45062	state: 
+45187	result: 0.264 / count: 1009 / numRes : 401
+45187	state: 
+45359	result: 0.264 / count: 1009 / numRes : 401
+45359	state: 
+45500	result: 0.264 / count: 1009 / numRes : 401
+45500	state: 
+45656	result: 0.264 / count: 1009 / numRes : 401
+45656	state: 
+45984	result: 0.264 / count: 1009 / numRes : 401
+45984	state: 
+46015	result: 0.264 / count: 1009 / numRes : 401
+46015	state: 
+46140	result: 0.264 / count: 1009 / numRes : 401
+46140	state: 
+46281	result: 0.264 / count: 1009 / numRes : 401
+46281	state: 
+46437	result: 0.264 / count: 1009 / numRes : 401
+46437	state: 
+46609	result: 0.264 / count: 1009 / numRes : 401
+46609	state: 
+46750	result: 0.264 / count: 1009 / numRes : 401
+46750	state: 
+46890	result: 0.264 / count: 1009 / numRes : 401
+46890	state: 
+47062	result: 0.264 / count: 1009 / numRes : 401
+47062	state: 
+47375	result: 0.264 / count: 1009 / numRes : 401
+47375	state: 
+47515	result: 0.264 / count: 1009 / numRes : 401
+47515	state: 
+47656	result: 0.264 / count: 1009 / numRes : 401
+47656	state: 
+47797	result: 0.264 / count: 1009 / numRes : 401
+47797	state: 
+47953	result: 0.264 / count: 1009 / numRes : 401
+47953	state: 
+48125	result: 0.264 / count: 1009 / numRes : 401
+48125	state: 
+48265	result: 0.264 / count: 1009 / numRes : 401
+48265	state: 
+48422	result: 0.264 / count: 1009 / numRes : 401
+48422	state: 
+48734	result: 0.264 / count: 1009 / numRes : 401
+48734	state: 
+48859	result: 0.264 / count: 1009 / numRes : 401
+48875	state: 
+49031	result: 0.264 / count: 1009 / numRes : 401
+49031	state: 
+49172	result: 0.264 / count: 1009 / numRes : 401
+49172	state: 
+49312	result: 0.264 / count: 1009 / numRes : 401
+49312	state: 
+49468	result: 0.264 / count: 1009 / numRes : 401
+49468	state: 
+49640	result: 0.264 / count: 1009 / numRes : 401
+49640	state: 
+49953	result: 0.264 / count: 1009 / numRes : 401
+49953	state: 
+50093	result: 0.264 / count: 1009 / numRes : 401
+50093	state: 
+50234	result: 0.264 / count: 1009 / numRes : 401
+50234	state: 
+50390	result: 0.264 / count: 1009 / numRes : 401
+50390	state: 
+50547	result: 0.264 / count: 1009 / numRes : 401
+50547	state: 
+50687	result: 0.264 / count: 1009 / numRes : 401
+50687	state: 
+50843	result: 0.264 / count: 1009 / numRes : 401
+50843	state: 
+51000	result: 0.264 / count: 1009 / numRes : 401
+51000	state: 
+51281	result: 0.264 / count: 1009 / numRes : 401
+51297	state: 
+51453	result: 0.264 / count: 1009 / numRes : 401
+51453	state: 
+51593	result: 0.264 / count: 1009 / numRes : 401
+51593	state: 
+51765	result: 0.264 / count: 1009 / numRes : 401
+51765	state: 
+51906	result: 0.264 / count: 1009 / numRes : 401
+51906	state: 
+52047	result: 0.264 / count: 1009 / numRes : 401
+52047	state: 
+52218	result: 0.264 / count: 1009 / numRes : 401
+52218	state: 
+52547	result: 0.264 / count: 1009 / numRes : 401
+52547	state: 
+52672	result: 0.264 / count: 1009 / numRes : 401
+52672	state: 
+52843	result: 0.264 / count: 1009 / numRes : 401
+52843	state: 
+52984	result: 0.264 / count: 1009 / numRes : 401
+52984	state: 
+53125	result: 0.264 / count: 1009 / numRes : 401
+53125	state: 
+53297	result: 0.264 / count: 1009 / numRes : 401
+53297	state: 
+53437	result: 0.264 / count: 1009 / numRes : 401
+53437	state: 
+53593	result: 0.264 / count: 1009 / numRes : 401
+53593	state: 
+53875	result: 0.264 / count: 1009 / numRes : 401
+53875	state: 
+54047	result: 0.264 / count: 1009 / numRes : 401
+54047	state: 
+54203	result: 0.264 / count: 1009 / numRes : 401
+54203	state: 
+54343	result: 0.264 / count: 1009 / numRes : 401
+54343	state: 
+54515	result: 0.264 / count: 1009 / numRes : 401
+54515	state: 
+54656	result: 0.264 / count: 1009 / numRes : 401
+54656	state: 
+54812	result: 0.264 / count: 1009 / numRes : 401
+54812	state: 
+55125	result: 0.264 / count: 1009 / numRes : 401
+55125	state: 
+55265	result: 0.264 / count: 1009 / numRes : 401
+55265	state: 
+55406	result: 0.264 / count: 1009 / numRes : 401
+55406	state: 
+55578	result: 0.264 / count: 1009 / numRes : 401
+55578	state: 
+55703	result: 0.264 / count: 1009 / numRes : 401
+55703	state: 
+55875	result: 0.264 / count: 1009 / numRes : 401
+55875	state: 
+56031	result: 0.264 / count: 1009 / numRes : 401
+56031	state: 
+56172	result: 0.264 / count: 1009 / numRes : 401
+56172	state: 
+56484	result: 0.264 / count: 1009 / numRes : 401
+56484	state: 
+56625	result: 0.264 / count: 1009 / numRes : 401
+56625	state: 
+56781	result: 0.264 / count: 1009 / numRes : 401
+56781	state: 
+56937	result: 0.264 / count: 1009 / numRes : 401
+56937	state: 
+57078	result: 0.264 / count: 1009 / numRes : 401
+57078	state: 
+57218	result: 0.264 / count: 1009 / numRes : 401
+57218	state: 
+57390	result: 0.264 / count: 1009 / numRes : 401
+57390	state: 
+57703	result: 0.264 / count: 1009 / numRes : 401
+57703	state: 
+57843	result: 0.264 / count: 1009 / numRes : 401
+57843	state: 
+57984	result: 0.264 / count: 1009 / numRes : 401
+57984	state: 
+58125	result: 0.264 / count: 1009 / numRes : 401
+58125	state: 
+58281	result: 0.264 / count: 1009 / numRes : 401
+58281	state: 
+58453	result: 0.264 / count: 1009 / numRes : 401
+58453	state: 
+58593	result: 0.264 / count: 1009 / numRes : 401
+58593	state: 
+58734	result: 0.264 / count: 1009 / numRes : 401
+58750	state: 
+59078	result: 0.264 / count: 1009 / numRes : 401
+59078	state: 
+59203	result: 0.264 / count: 1009 / numRes : 401
+59203	state: 
+59375	result: 0.264 / count: 1009 / numRes : 401
+59375	state: 
+59515	result: 0.264 / count: 1009 / numRes : 401
+59515	state: 
+59672	result: 0.264 / count: 1009 / numRes : 401
+59672	state: 
+59812	result: 0.264 / count: 1009 / numRes : 401
+59812	state: 
+59953	result: 0.264 / count: 1009 / numRes : 401
+59953	state: 
+60265	result: 0.264 / count: 1009 / numRes : 401
+60265	state: 
+60422	result: 0.264 / count: 1009 / numRes : 401
+60422	state: 
+60593	result: 0.264 / count: 1009 / numRes : 401
+60593	state: 
+60734	result: 0.264 / count: 1009 / numRes : 401
+60734	state: 
+60890	result: 0.264 / count: 1009 / numRes : 401
+60890	state: 
+61031	result: 0.264 / count: 1009 / numRes : 401
+61031	state: 
+61203	result: 0.264 / count: 1009 / numRes : 401
+61203	state: 
+61343	result: 0.264 / count: 1009 / numRes : 401
+61343	state: 
+61687	result: 0.264 / count: 1009 / numRes : 401
+61687	state: 
+61797	result: 0.264 / count: 1009 / numRes : 401
+61797	state: 
+61937	result: 0.264 / count: 1009 / numRes : 401
+61937	state: 
+62109	result: 0.264 / count: 1009 / numRes : 401
+62109	state: 
+62265	result: 0.264 / count: 1009 / numRes : 401
+62265	state: 
+62406	result: 0.264 / count: 1009 / numRes : 401
+62406	state: 
+62562	result: 0.264 / count: 1009 / numRes : 401
+62562	state: 
+62875	result: 0.264 / count: 1009 / numRes : 401
+62875	state: 
+63031	result: 0.264 / count: 1009 / numRes : 401
+63031	state: 
+63187	result: 0.264 / count: 1009 / numRes : 401
+63187	state: 
+63343	result: 0.264 / count: 1009 / numRes : 401
+63343	state: 
+63484	result: 0.264 / count: 1009 / numRes : 401
+63484	state: 
+63625	result: 0.264 / count: 1009 / numRes : 401
+63625	state: 
+63797	result: 0.264 / count: 1009 / numRes : 401
+63797	state: 
+63937	result: 0.264 / count: 1009 / numRes : 401
+63937	state: 
+64250	result: 0.264 / count: 1009 / numRes : 401
+64250	state: 
+64390	result: 0.264 / count: 1009 / numRes : 401
+64390	state: 
+64547	result: 0.264 / count: 1009 / numRes : 401
+64547	state: 
+64687	result: 0.264 / count: 1009 / numRes : 401
+64687	state: 
+64843	result: 0.264 / count: 1009 / numRes : 401
+64843	state: 
+64984	result: 0.264 / count: 1009 / numRes : 401
+65000	state: 
+65172	result: 0.264 / count: 1009 / numRes : 401
+65172	state: 
+65484	result: 0.264 / count: 1009 / numRes : 401
+65484	state: 
+65625	result: 0.264 / count: 1009 / numRes : 401
+65625	state: 
+65781	result: 0.264 / count: 1009 / numRes : 401
+65781	state: 
+65922	result: 0.264 / count: 1009 / numRes : 401
+65922	state: 
+66062	result: 0.264 / count: 1009 / numRes : 401
+66062	state: 
+66218	result: 0.264 / count: 1009 / numRes : 401
+66218	state: 
+66375	result: 0.264 / count: 1009 / numRes : 401
+66375	state: 
+66531	result: 0.264 / count: 1009 / numRes : 401
+66531	state: 
+66687	result: 0.264 / count: 1009 / numRes : 401
+66687	state: 
+67015	result: 0.264 / count: 1009 / numRes : 401
+67015	state: 
+67140	result: 0.264 / count: 1009 / numRes : 401
+67140	state: 
+67312	result: 0.264 / count: 1009 / numRes : 401
+67312	state: 
+67453	result: 0.264 / count: 1009 / numRes : 401
+67453	state: 
+67593	result: 0.264 / count: 1009 / numRes : 401
+67593	state: 
+67750	result: 0.264 / count: 1009 / numRes : 401
+67750	state: 
+67968	result: 0.264 / count: 1009 / numRes : 401
+67968	state: 
+68093	result: 0.264 / count: 1009 / numRes : 401
+68093	state: 
+68265	result: 0.264 / count: 1009 / numRes : 401
+68265	state: 
+68422	result: 0.264 / count: 1009 / numRes : 401
+68422	state: 
+68562	result: 0.264 / count: 1009 / numRes : 401
+68562	state: 
+68718	result: 0.264 / count: 1009 / numRes : 401
+68718	state: 
+68859	result: 0.264 / count: 1009 / numRes : 401
+68859	state: 
+69187	result: 0.264 / count: 1009 / numRes : 401
+69187	state: 
+69343	result: 0.264 / count: 1009 / numRes : 401
+69343	state: 
+69484	result: 0.264 / count: 1009 / numRes : 401
+69484	state: 
+69656	result: 0.264 / count: 1009 / numRes : 401
+69656	state: 
+69797	result: 0.264 / count: 1009 / numRes : 401
+69797	state: 
+69968	result: 0.264 / count: 1009 / numRes : 401
+69968	state: 
+70109	result: 0.264 / count: 1009 / numRes : 401
+70109	state: 
+70265	result: 0.264 / count: 1009 / numRes : 401
+70265	state: 
+70422	result: 0.264 / count: 1009 / numRes : 401
+70422	state: 
+70734	result: 0.264 / count: 1009 / numRes : 401
+70734	state: 
+70781	result: 0.264 / count: 1009 / numRes : 401
+70781	state: 
+70906	result: 0.264 / count: 1009 / numRes : 401
+70906	state: 
+71062	result: 0.264 / count: 1009 / numRes : 401
+71062	state: 
+71218	result: 0.264 / count: 1009 / numRes : 401
+71218	state: 
+71343	result: 0.264 / count: 1009 / numRes : 401
+71343	state: 
+71687	result: 0.264 / count: 1009 / numRes : 401
+71687	state: 
+71718	result: 0.264 / count: 1009 / numRes : 401
+71718	state: 
+71843	result: 0.264 / count: 1009 / numRes : 401
+71843	state: 
+72000	result: 0.264 / count: 1009 / numRes : 401
+72000	state: 
+72140	result: 0.264 / count: 1009 / numRes : 401
+72140	state: 
+72312	result: 0.264 / count: 1009 / numRes : 401
+72312	state: 
+72453	result: 0.264 / count: 1009 / numRes : 401
+72453	state: 
+72609	result: 0.264 / count: 1009 / numRes : 401
+72625	state: 
+72750	result: 0.264 / count: 1009 / numRes : 401
+72750	state: 
+73062	result: 0.264 / count: 1009 / numRes : 401
+73062	state: 
+73218	result: 0.264 / count: 1009 / numRes : 401
+73218	state: 
+73390	result: 0.264 / count: 1009 / numRes : 401
+73390	state: 
+73531	result: 0.264 / count: 1009 / numRes : 401
+73531	state: 
+73687	result: 0.264 / count: 1009 / numRes : 401
+73687	state: 
+73828	result: 0.264 / count: 1009 / numRes : 401
+73828	state: 
+74000	result: 0.264 / count: 1009 / numRes : 401
+74000	state: 
+74140	result: 0.264 / count: 1009 / numRes : 401
+74140	state: 
+74453	result: 0.264 / count: 1009 / numRes : 401
+74453	state: 
+74578	result: 0.264 / count: 1009 / numRes : 401
+74578	state: 
+74750	result: 0.264 / count: 1009 / numRes : 401
+74750	state: 
+74906	result: 0.264 / count: 1009 / numRes : 401
+74906	state: 
+75047	result: 0.264 / count: 1009 / numRes : 401
+75047	state: 
+75187	result: 0.264 / count: 1009 / numRes : 401
+75187	state: 
+75359	result: 0.264 / count: 1009 / numRes : 401
+75359	state: 
+75500	result: 0.264 / count: 1009 / numRes : 401
+75500	state: 
+75812	result: 0.264 / count: 1009 / numRes : 401
+75812	state: 
+75968	result: 0.264 / count: 1009 / numRes : 401
+75968	state: 
+76109	result: 0.264 / count: 1009 / numRes : 401
+76109	state: 
+76250	result: 0.264 / count: 1009 / numRes : 401
+76250	state: 
+76437	result: 0.264 / count: 1009 / numRes : 401
+76437	state: 
+76562	result: 0.264 / count: 1009 / numRes : 401
+76562	state: 
+76734	result: 0.264 / count: 1009 / numRes : 401
+76734	state: 
+77031	result: 0.264 / count: 1009 / numRes : 401
+77031	state: 
+77203	result: 0.264 / count: 1009 / numRes : 401
+77203	state: 
+77359	result: 0.264 / count: 1009 / numRes : 401
+77359	state: 
+77500	result: 0.264 / count: 1009 / numRes : 401
+77500	state: 
+77656	result: 0.264 / count: 1009 / numRes : 401
+77656	state: 
+77812	result: 0.264 / count: 1009 / numRes : 401
+77812	state: 
+77937	result: 0.264 / count: 1009 / numRes : 401
+77937	state: 
+78093	result: 0.264 / count: 1009 / numRes : 401
+78093	state: 
+78422	result: 0.264 / count: 1009 / numRes : 401
+78422	state: 
+78562	result: 0.264 / count: 1009 / numRes : 401
+78562	state: 
+78718	result: 0.264 / count: 1009 / numRes : 401
+78718	state: 
+78859	result: 0.264 / count: 1009 / numRes : 401
+78859	state: 
+79015	result: 0.264 / count: 1009 / numRes : 401
+79031	state: 
+79187	result: 0.264 / count: 1009 / numRes : 401
+79187	state: 
+79343	result: 0.264 / count: 1009 / numRes : 401
+79343	state: 
+79468	result: 0.264 / count: 1009 / numRes : 401
+79468	state: 
+79765	result: 0.264 / count: 1009 / numRes : 401
+79765	state: 
+79937	result: 0.264 / count: 1009 / numRes : 401
+79937	state: 
+80109	result: 0.264 / count: 1009 / numRes : 401
+80109	state: 
+80250	result: 0.264 / count: 1009 / numRes : 401
+80250	state: 
+80406	result: 0.264 / count: 1009 / numRes : 401
+80406	state: 
+80547	result: 0.264 / count: 1009 / numRes : 401
+80547	state: 
+80703	result: 0.264 / count: 1009 / numRes : 401
+80703	state: 
+80984	result: 0.264 / count: 1009 / numRes : 401
+80984	state: 
+81156	result: 0.264 / count: 1009 / numRes : 401
+81156	state: 
+81328	result: 0.264 / count: 1009 / numRes : 401
+81328	state: 
+81453	result: 0.264 / count: 1009 / numRes : 401
+81453	state: 
+81609	result: 0.264 / count: 1009 / numRes : 401
+81609	state: 
+81781	result: 0.264 / count: 1009 / numRes : 401
+81781	state: 
+81922	result: 0.264 / count: 1009 / numRes : 401
+81922	state: 
+82062	result: 0.264 / count: 1009 / numRes : 401
+82062	state: 
+82375	result: 0.264 / count: 1009 / numRes : 401
+82375	state: 
+82547	result: 0.264 / count: 1009 / numRes : 401
+82547	state: 
+82703	result: 0.264 / count: 1009 / numRes : 401
+82703	state: 
+82843	result: 0.264 / count: 1009 / numRes : 401
+82843	state: 
+83031	result: 0.264 / count: 1009 / numRes : 401
+83031	state: 
+83156	result: 0.264 / count: 1009 / numRes : 401
+83156	state: 
+83312	result: 0.264 / count: 1009 / numRes : 401
+83312	state: 
+83625	result: 0.264 / count: 1009 / numRes : 401
+83625	state: 
+83781	result: 0.264 / count: 1009 / numRes : 401
+83781	state: 
+83922	result: 0.264 / count: 1009 / numRes : 401
+83922	state: 
+84078	result: 0.264 / count: 1009 / numRes : 401
+84078	state: 
+84218	result: 0.264 / count: 1009 / numRes : 401
+84218	state: 
+84375	result: 0.264 / count: 1009 / numRes : 401
+84375	state: 
+84531	result: 0.264 / count: 1009 / numRes : 401
+84531	state: 
+84672	result: 0.264 / count: 1009 / numRes : 401
+84672	state: 
+84984	result: 0.264 / count: 1009 / numRes : 401
+84984	state: 
+85156	result: 0.264 / count: 1009 / numRes : 401
+85156	state: 
+85297	result: 0.264 / count: 1009 / numRes : 401
+85297	state: 
+85453	result: 0.264 / count: 1009 / numRes : 401
+85453	state: 
+85593	result: 0.264 / count: 1009 / numRes : 401
+85593	state: 
+85765	result: 0.264 / count: 1009 / numRes : 401
+85765	state: 
+85906	result: 0.264 / count: 1009 / numRes : 401
+85906	state: 
+86234	result: 0.264 / count: 1009 / numRes : 401
+86234	state: 
+86390	result: 0.264 / count: 1009 / numRes : 401
+86390	state: 
+86562	result: 0.264 / count: 1009 / numRes : 401
+86562	state: 
+86703	result: 0.264 / count: 1009 / numRes : 401
+86703	state: 
+86843	result: 0.264 / count: 1009 / numRes : 401
+86843	state: 
+87000	result: 0.264 / count: 1009 / numRes : 401
+87000	state: 
+87156	result: 0.264 / count: 1009 / numRes : 401
+87156	state: 
+87312	result: 0.264 / count: 1009 / numRes : 401
+87312	state: 
+87640	result: 0.264 / count: 1009 / numRes : 401
+87640	state: 
+87797	result: 0.264 / count: 1009 / numRes : 401
+87797	state: 
+87937	result: 0.264 / count: 1009 / numRes : 401
+87937	state: 
+88078	result: 0.264 / count: 1009 / numRes : 401
+88078	state: 
+88234	result: 0.264 / count: 1009 / numRes : 401
+88234	state: 
+88390	result: 0.264 / count: 1009 / numRes : 401
+88390	state: 
+88547	result: 0.264 / count: 1009 / numRes : 401
+88547	state: 
+88843	result: 0.264 / count: 1009 / numRes : 401
+88843	state: 
+89015	result: 0.264 / count: 1009 / numRes : 401
+89015	state: 
+89172	result: 0.264 / count: 1009 / numRes : 401
+89172	state: 
+89312	result: 0.264 / count: 1009 / numRes : 401
+89312	state: 
+89468	result: 0.264 / count: 1009 / numRes : 401
+89468	state: 
+89625	result: 0.264 / count: 1009 / numRes : 401
+89625	state: 
+89781	result: 0.264 / count: 1009 / numRes : 401
+89781	state: 
+89937	result: 0.264 / count: 1009 / numRes : 401
+89937	state: 
+90250	result: 0.264 / count: 1009 / numRes : 401
+90250	state: 
+90390	result: 0.264 / count: 1009 / numRes : 401
+90390	state: 
+90531	result: 0.264 / count: 1009 / numRes : 401
+90531	state: 
+90687	result: 0.264 / count: 1009 / numRes : 401
+90687	state: 
+90843	result: 0.264 / count: 1009 / numRes : 401
+90843	state: 
+90984	result: 0.264 / count: 1009 / numRes : 401
+90984	state: 
+91156	result: 0.264 / count: 1009 / numRes : 401
+91156	state: 
+91468	result: 0.264 / count: 1009 / numRes : 401
+91468	state: 
+91625	result: 0.264 / count: 1009 / numRes : 401
+91625	state: 
+91765	result: 0.264 / count: 1009 / numRes : 401
+91765	state: 
+91922	result: 0.264 / count: 1009 / numRes : 401
+91922	state: 
+92062	result: 0.264 / count: 1009 / numRes : 401
+92062	state: 
+92234	result: 0.264 / count: 1009 / numRes : 401
+92234	state: 
+92375	result: 0.264 / count: 1009 / numRes : 401
+92375	state: 
+92515	result: 0.264 / count: 1009 / numRes : 401
+92515	state: 
+92828	result: 0.264 / count: 1009 / numRes : 401
+92828	state: 
+93000	result: 0.264 / count: 1009 / numRes : 401
+93000	state: 
+93125	result: 0.264 / count: 1009 / numRes : 401
+93125	state: 
+93281	result: 0.264 / count: 1009 / numRes : 401
+93281	state: 
+93437	result: 0.264 / count: 1009 / numRes : 401
+93437	state: 
+93593	result: 0.264 / count: 1009 / numRes : 401
+93593	state: 
+93750	result: 0.264 / count: 1009 / numRes : 401
+93750	state: 
+94031	result: 0.264 / count: 1009 / numRes : 401
+94031	state: 
+94203	result: 0.264 / count: 1009 / numRes : 401
+94203	state: 
+94375	result: 0.264 / count: 1009 / numRes : 401
+94375	state: 
+94515	result: 0.264 / count: 1009 / numRes : 401
+94515	state: 
+94656	result: 0.264 / count: 1009 / numRes : 401
+94656	state: 
+94812	result: 0.264 / count: 1009 / numRes : 401
+94812	state: 
+94953	result: 0.264 / count: 1009 / numRes : 401
+94953	state: 
+95109	result: 0.264 / count: 1009 / numRes : 401
+95109	state: 
+95437	result: 0.264 / count: 1009 / numRes : 401
+95437	state: 
+95562	result: 0.264 / count: 1009 / numRes : 401
+95562	state: 
+95734	result: 0.264 / count: 1009 / numRes : 401
+95734	state: 
+95890	result: 0.264 / count: 1009 / numRes : 401
+95890	state: 
+96031	result: 0.264 / count: 1009 / numRes : 401
+96031	state: 
+96172	result: 0.264 / count: 1009 / numRes : 401
+96172	state: 
+96312	result: 0.264 / count: 1009 / numRes : 401
+96312	state: 
+96656	result: 0.264 / count: 1009 / numRes : 401
+96656	state: 
+96781	result: 0.264 / count: 1009 / numRes : 401
+96781	state: 
+96953	result: 0.264 / count: 1009 / numRes : 401
+96953	state: 
+97093	result: 0.264 / count: 1009 / numRes : 401
+97093	state: 
+97250	result: 0.264 / count: 1009 / numRes : 401
+97250	state: 
+97406	result: 0.264 / count: 1009 / numRes : 401
+97406	state: 
+97547	result: 0.264 / count: 1009 / numRes : 401
+97547	state: 
+97703	result: 0.264 / count: 1009 / numRes : 401
+97703	state: 
+98000	result: 0.264 / count: 1009 / numRes : 401
+98000	state: 
+98156	result: 0.264 / count: 1009 / numRes : 401
+98156	state: 
+98297	result: 0.264 / count: 1009 / numRes : 401
+98312	state: 
+98453	result: 0.264 / count: 1009 / numRes : 401
+98453	state: 
+98593	result: 0.264 / count: 1009 / numRes : 401
+98593	state: 
+98765	result: 0.264 / count: 1009 / numRes : 401
+98765	state: 
+98906	result: 0.264 / count: 1009 / numRes : 401
+98906	state: 
+99203	result: 0.264 / count: 1009 / numRes : 401
+99203	state: 
+99375	result: 0.264 / count: 1009 / numRes : 401
+99375	state: 
+99531	result: 0.264 / count: 1009 / numRes : 401
+99531	state: 
+99687	result: 0.264 / count: 1009 / numRes : 401
+99687	state: 
+99828	result: 0.264 / count: 1009 / numRes : 401
+99828	state: 
+99968	result: 0.264 / count: 1009 / numRes : 401
+99968	state: 
+100140	result: 0.264 / count: 1009 / numRes : 401
+100140	state: 
+100281	result: 0.264 / count: 1009 / numRes : 401
+100281	state: 
+100625	result: 0.264 / count: 1009 / numRes : 401
+100625	state: 
+100734	result: 0.264 / count: 1009 / numRes : 401
+100765	state: 
+100890	result: 0.264 / count: 1009 / numRes : 401
+100890	state: 
+101047	result: 0.264 / count: 1009 / numRes : 401
+101047	state: 
+101203	result: 0.264 / count: 1009 / numRes : 401
+101203	state: 
+101359	result: 0.264 / count: 1009 / numRes : 401
+101359	state: 
+101500	result: 0.264 / count: 1009 / numRes : 401
+101500	state: 
+101843	result: 0.264 / count: 1009 / numRes : 401
+101843	state: 
+101953	result: 0.264 / count: 1009 / numRes : 401
+101953	state: 
+102109	result: 0.264 / count: 1009 / numRes : 401
+102109	state: 
+102281	result: 0.264 / count: 1009 / numRes : 401
+102281	state: 
+102437	result: 0.264 / count: 1009 / numRes : 401
+102437	state: 
+102562	result: 0.264 / count: 1009 / numRes : 401
+102578	state: 
+102718	result: 0.264 / count: 1009 / numRes : 401
+102718	state: 
+102875	result: 0.264 / count: 1009 / numRes : 401
+102875	state: 
+103172	result: 0.264 / count: 1009 / numRes : 401
+103172	state: 
+103328	result: 0.264 / count: 1009 / numRes : 401
+103328	state: 
+103484	result: 0.264 / count: 1009 / numRes : 401
+103484	state: 
+103640	result: 0.264 / count: 1009 / numRes : 401
+103640	state: 
+103781	result: 0.264 / count: 1009 / numRes : 401
+103781	state: 
+103937	result: 0.264 / count: 1009 / numRes : 401
+103937	state: 
+104078	result: 0.264 / count: 1009 / numRes : 401
+104078	state: 
+104406	result: 0.264 / count: 1009 / numRes : 401
+104406	state: 
+104562	result: 0.264 / count: 1009 / numRes : 401
+104562	state: 
+104703	result: 0.264 / count: 1009 / numRes : 401
+104703	state: 
+104875	result: 0.264 / count: 1009 / numRes : 401
+104875	state: 
+105015	result: 0.264 / count: 1009 / numRes : 401
+105015	state: 
+105172	result: 0.264 / count: 1009 / numRes : 401
+105172	state: 
+105328	result: 0.264 / count: 1009 / numRes : 401
+105328	state: 
+105500	result: 0.264 / count: 1009 / numRes : 401
+105500	state: 
+105797	result: 0.264 / count: 1009 / numRes : 401
+105797	state: 
+105953	result: 0.264 / count: 1009 / numRes : 401
+105953	state: 
+106109	result: 0.264 / count: 1009 / numRes : 401
+106109	state: 
+106265	result: 0.264 / count: 1009 / numRes : 401
+106265	state: 
+106390	result: 0.264 / count: 1009 / numRes : 401
+106390	state: 
+106547	result: 0.264 / count: 1009 / numRes : 401
+106547	state: 
+106703	result: 0.264 / count: 1009 / numRes : 401
+106703	state: 
+107047	result: 0.264 / count: 1009 / numRes : 401
+107047	state: 
+107156	result: 0.264 / count: 1009 / numRes : 401
+107156	state: 
+107312	result: 0.264 / count: 1009 / numRes : 401
+107312	state: 
+107468	result: 0.264 / count: 1009 / numRes : 401
+107468	state: 
+107640	result: 0.264 / count: 1009 / numRes : 401
+107640	state: 
+107781	result: 0.264 / count: 1009 / numRes : 401
+107781	state: 
+107922	result: 0.264 / count: 1009 / numRes : 401
+107922	state: 
+108078	result: 0.264 / count: 1009 / numRes : 401
+108078	state: 
+108390	result: 0.264 / count: 1009 / numRes : 401
+108390	state: 
+108547	result: 0.264 / count: 1009 / numRes : 401
+108547	state: 
+108718	result: 0.264 / count: 1009 / numRes : 401
+108718	state: 
+108859	result: 0.264 / count: 1009 / numRes : 401
+108859	state: 
+109015	result: 0.264 / count: 1009 / numRes : 401
+109015	state: 
+109156	result: 0.264 / count: 1009 / numRes : 401
+109156	state: 
+109297	result: 0.264 / count: 1009 / numRes : 401
+109297	state: 
+109640	result: 0.264 / count: 1009 / numRes : 401
+109640	state: 
+109765	result: 0.264 / count: 1009 / numRes : 401
+109765	state: 
+109922	result: 0.264 / count: 1009 / numRes : 401
+109922	state: 
+110078	result: 0.264 / count: 1009 / numRes : 401
+110078	state: 
+110234	result: 0.264 / count: 1009 / numRes : 401
+110234	state: 
+110390	result: 0.264 / count: 1009 / numRes : 401
+110390	state: 
+110547	result: 0.264 / count: 1009 / numRes : 401
+110547	state: 
+110703	result: 0.264 / count: 1009 / numRes : 401
+110703	state: 
+110843	result: 0.264 / count: 1009 / numRes : 401
+110843	state: 
+111140	result: 0.264 / count: 1009 / numRes : 401
+111156	state: 
+111297	result: 0.264 / count: 1009 / numRes : 401
+111297	state: 
+111468	result: 0.264 / count: 1009 / numRes : 401
+111468	state: 
+111609	result: 0.264 / count: 1009 / numRes : 401
+111609	state: 
+111765	result: 0.264 / count: 1009 / numRes : 401
+111765	state: 
+111906	result: 0.264 / count: 1009 / numRes : 401
+111906	state: 
+112125	result: 0.264 / count: 1009 / numRes : 401
+112125	state: 
+112250	result: 0.264 / count: 1009 / numRes : 401
+112250	state: 
+112406	result: 0.264 / count: 1009 / numRes : 401
+112406	state: 
+112562	result: 0.264 / count: 1009 / numRes : 401
+112562	state: 
+112687	result: 0.264 / count: 1009 / numRes : 401
+112687	state: 
+112843	result: 0.264 / count: 1009 / numRes : 401
+112843	state: 
+113015	result: 0.264 / count: 1009 / numRes : 401
+113015	state: 
+113312	result: 0.264 / count: 1009 / numRes : 401
+113312	state: 
+113468	result: 0.264 / count: 1009 / numRes : 401
+113468	state: 
+113609	result: 0.264 / count: 1009 / numRes : 401
+113609	state: 
+113781	result: 0.264 / count: 1009 / numRes : 401
+113781	state: 
+113922	result: 0.264 / count: 1009 / numRes : 401
+113922	state: 
+114062	result: 0.264 / count: 1009 / numRes : 401
+114062	state: 
+114234	result: 0.264 / count: 1009 / numRes : 401
+114234	state: 
+114375	result: 0.264 / count: 1009 / numRes : 401
+114375	state: 
+114515	result: 0.264 / count: 1009 / numRes : 401
+114515	state: 
+114843	result: 0.264 / count: 1009 / numRes : 401
+114843	state: 
+115000	result: 0.264 / count: 1009 / numRes : 401
+115000	state: 
+115156	result: 0.264 / count: 1009 / numRes : 401
+115156	state: 
+115297	result: 0.264 / count: 1009 / numRes : 401
+115297	state: 
+115437	result: 0.264 / count: 1009 / numRes : 401
+115437	state: 
+115750	result: 0.264 / count: 1009 / numRes : 401
+115750	state: 
+115797	result: 0.264 / count: 1009 / numRes : 401
+115797	state: 
+115906	result: 0.264 / count: 1009 / numRes : 401
+115906	state: 
+116062	result: 0.264 / count: 1009 / numRes : 401
+116062	state: 
+116218	result: 0.264 / count: 1009 / numRes : 401
+116218	state: 
+116359	result: 0.264 / count: 1009 / numRes : 401
+116359	state: 
+116515	result: 0.264 / count: 1009 / numRes : 401
+116515	state: 
+116656	result: 0.264 / count: 1009 / numRes : 401
+116656	state: 
+116797	result: 0.264 / count: 1009 / numRes : 401
+116797	state: 
+117109	result: 0.264 / count: 1009 / numRes : 401
+117109	state: 
+117265	result: 0.264 / count: 1009 / numRes : 401
+117265	state: 
+117437	result: 0.264 / count: 1009 / numRes : 401
+117437	state: 
+117578	result: 0.264 / count: 1009 / numRes : 401
+117578	state: 
+117734	result: 0.264 / count: 1009 / numRes : 401
+117734	state: 
+117890	result: 0.264 / count: 1009 / numRes : 401
+117890	state: 
+118031	result: 0.264 / count: 1009 / numRes : 401
+118031	state: 
+118187	result: 0.264 / count: 1009 / numRes : 401
+118187	state: 
+118531	result: 0.264 / count: 1009 / numRes : 401
+118531	state: 
+118656	result: 0.264 / count: 1009 / numRes : 401
+118656	state: 
+118812	result: 0.264 / count: 1009 / numRes : 401
+118812	state: 
+118937	result: 0.264 / count: 1009 / numRes : 401
+118937	state: 
+119109	result: 0.264 / count: 1009 / numRes : 401
+119109	state: 
+119250	result: 0.264 / count: 1009 / numRes : 401
+119250	state: 
+119406	result: 0.264 / count: 1009 / numRes : 401
+119406	state: 
+119703	result: 0.264 / count: 1009 / numRes : 401
+119703	state: 
+119859	result: 0.264 / count: 1009 / numRes : 401
+119859	state: 
+120015	result: 0.264 / count: 1009 / numRes : 401
+120015	state: 
+120172	result: 0.264 / count: 1009 / numRes : 401
+120172	state: 
+120328	result: 0.264 / count: 1009 / numRes : 401
+120328	state: 
+120484	result: 0.264 / count: 1009 / numRes : 401
+120484	state: 
+120625	result: 0.264 / count: 1009 / numRes : 401
+120625	state: 
+120781	result: 0.264 / count: 1009 / numRes : 401
+120781	state: 
+121078	result: 0.264 / count: 1009 / numRes : 401
+121078	state: 
+121250	result: 0.264 / count: 1009 / numRes : 401
+121250	state: 
+121390	result: 0.264 / count: 1009 / numRes : 401
+121390	state: 
+121547	result: 0.264 / count: 1009 / numRes : 401
+121547	state: 
+121687	result: 0.264 / count: 1009 / numRes : 401
+121687	state: 
+121843	result: 0.264 / count: 1009 / numRes : 401
+121843	state: 
+122000	result: 0.264 / count: 1009 / numRes : 401
+122000	state: 
+122297	result: 0.264 / count: 1009 / numRes : 401
+122297	state: 
+122453	result: 0.264 / count: 1009 / numRes : 401
+122453	state: 
+122609	result: 0.264 / count: 1009 / numRes : 401
+122609	state: 
+122750	result: 0.264 / count: 1009 / numRes : 401
+122750	state: 
+122906	result: 0.264 / count: 1009 / numRes : 401
+122906	state: 
+123078	result: 0.264 / count: 1009 / numRes : 401
+123078	state: 
+123203	result: 0.264 / count: 1009 / numRes : 401
+123203	state: 
+123359	result: 0.264 / count: 1009 / numRes : 401
+123359	state: 
+123687	result: 0.264 / count: 1009 / numRes : 401
+123687	state: 
+123828	result: 0.264 / count: 1009 / numRes : 401
+123828	state: 
+123984	result: 0.264 / count: 1009 / numRes : 401
+123984	state: 
+124125	result: 0.264 / count: 1009 / numRes : 401
+124125	state: 
+124265	result: 0.264 / count: 1009 / numRes : 401
+124265	state: 
+124422	result: 0.264 / count: 1009 / numRes : 401
+124422	state: 
+124578	result: 0.264 / count: 1009 / numRes : 401
+124578	state: 
+124906	result: 0.264 / count: 1009 / numRes : 401
+124906	state: 
+125031	result: 0.264 / count: 1009 / numRes : 401
+125031	state: 
+125187	result: 0.264 / count: 1009 / numRes : 401
+125187	state: 
+125359	result: 0.264 / count: 1009 / numRes : 401
+125359	state: 
+125500	result: 0.264 / count: 1009 / numRes : 401
+125500	state: 
+125640	result: 0.264 / count: 1009 / numRes : 401
+125640	state: 
+125797	result: 0.264 / count: 1009 / numRes : 401
+125797	state: 
+125968	result: 0.264 / count: 1009 / numRes : 401
+125968	state: 
+126125	result: 0.264 / count: 1009 / numRes : 401
+126125	state: 
+126453	result: 0.264 / count: 1009 / numRes : 401
+126453	state: 
+126578	result: 0.264 / count: 1009 / numRes : 401
+126578	state: 
+126734	result: 0.264 / count: 1009 / numRes : 401
+126734	state: 
+126875	result: 0.264 / count: 1009 / numRes : 401
+126875	state: 
+127031	result: 0.264 / count: 1009 / numRes : 401
+127031	state: 
+127172	result: 0.264 / count: 1009 / numRes : 401
+127172	state: 
+127406	result: 0.264 / count: 1009 / numRes : 401
+127406	state: 
+127547	result: 0.264 / count: 1009 / numRes : 401
+127547	state: 
+127687	result: 0.264 / count: 1009 / numRes : 401
+127687	state: 
+127828	result: 0.264 / count: 1009 / numRes : 401
+127828	state: 
+128000	result: 0.264 / count: 1009 / numRes : 401
+128000	state: 
+128156	result: 0.264 / count: 1009 / numRes : 401
+128156	state: 
+128328	result: 0.264 / count: 1009 / numRes : 401
+128328	state: 
+128640	result: 0.264 / count: 1009 / numRes : 401
+128640	state: 
+128765	result: 0.264 / count: 1009 / numRes : 401
+128765	state: 
+128922	result: 0.264 / count: 1009 / numRes : 401
+128922	state: 
+129078	result: 0.264 / count: 1009 / numRes : 401
+129078	state: 
+129218	result: 0.264 / count: 1009 / numRes : 401
+129218	state: 
+129390	result: 0.264 / count: 1009 / numRes : 401
+129390	state: 
+129531	result: 0.264 / count: 1009 / numRes : 401
+129531	state: 
+129687	result: 0.264 / count: 1009 / numRes : 401
+129687	state: 
+129828	result: 0.264 / count: 1009 / numRes : 401
+129828	state: 
+130172	result: 0.264 / count: 1009 / numRes : 401
+130172	state: 
+130297	result: 0.264 / count: 1009 / numRes : 401
+130297	state: 
+130468	result: 0.264 / count: 1009 / numRes : 401
+130468	state: 
+130625	result: 0.264 / count: 1009 / numRes : 401
+130625	state: 
+130781	result: 0.264 / count: 1009 / numRes : 401
+130781	state: 
+130922	result: 0.264 / count: 1009 / numRes : 401
+130922	state: 
+131062	result: 0.264 / count: 1009 / numRes : 401
+131062	state: 
+131390	result: 0.264 / count: 1009 / numRes : 401
+131390	state: 
+131515	result: 0.264 / count: 1009 / numRes : 401
+131515	state: 
+131672	result: 0.264 / count: 1009 / numRes : 401
+131672	state: 
+131828	result: 0.264 / count: 1009 / numRes : 401
+131828	state: 
+131968	result: 0.264 / count: 1009 / numRes : 401
+131968	state: 
+132140	result: 0.264 / count: 1009 / numRes : 401
+132140	state: 
+132281	result: 0.264 / count: 1009 / numRes : 401
+132281	state: 
+132437	result: 0.264 / count: 1009 / numRes : 401
+132437	state: 
+132593	result: 0.264 / count: 1009 / numRes : 401
+132593	state: 
+132922	result: 0.264 / count: 1009 / numRes : 401
+132922	state: 
+132953	result: 0.264 / count: 1009 / numRes : 401
+132953	state: 
+133093	result: 0.264 / count: 1009 / numRes : 401
+133093	state: 
+133234	result: 0.264 / count: 1009 / numRes : 401
+133234	state: 
+133390	result: 0.264 / count: 1009 / numRes : 401
+133390	state: 
+133531	result: 0.264 / count: 1009 / numRes : 401
+133531	state: 
+133875	result: 0.264 / count: 1009 / numRes : 401
+133875	state: 
+133906	result: 0.264 / count: 1009 / numRes : 401
+133906	state: 
+134047	result: 0.264 / count: 1009 / numRes : 401
+134047	state: 
+134187	result: 0.264 / count: 1009 / numRes : 401
+134187	state: 
+134343	result: 0.264 / count: 1009 / numRes : 401
+134343	state: 
+134500	result: 0.264 / count: 1009 / numRes : 401
+134500	state: 
+134656	result: 0.264 / count: 1009 / numRes : 401
+134656	state: 
+134797	result: 0.264 / count: 1009 / numRes : 401
+134797	state: 
+134937	result: 0.264 / count: 1009 / numRes : 401
+134937	state: 
+135265	result: 0.264 / count: 1009 / numRes : 401
+135265	state: 
+135422	result: 0.264 / count: 1009 / numRes : 401
+135422	state: 
+135562	result: 0.264 / count: 1009 / numRes : 401
+135562	state: 
+135718	result: 0.264 / count: 1009 / numRes : 401
+135718	state: 
+135859	result: 0.264 / count: 1009 / numRes : 401
+135859	state: 
+136015	result: 0.264 / count: 1009 / numRes : 401
+136015	state: 
+136156	result: 0.264 / count: 1009 / numRes : 401
+136156	state: 
+136312	result: 0.264 / count: 1009 / numRes : 401
+136312	state: 
+136656	result: 0.264 / count: 1009 / numRes : 401
+136656	state: 
+136781	result: 0.264 / count: 1009 / numRes : 401
+136781	state: 
+136953	result: 0.264 / count: 1009 / numRes : 401
+136953	state: 
+137093	result: 0.264 / count: 1009 / numRes : 401
+137093	state: 
+137234	result: 0.264 / count: 1009 / numRes : 401
+137250	state: 
+137390	result: 0.264 / count: 1009 / numRes : 401
+137390	state: 
+137547	result: 0.264 / count: 1009 / numRes : 401
+137547	state: 
+137859	result: 0.264 / count: 1009 / numRes : 401
+137859	state: 
+138000	result: 0.264 / count: 1009 / numRes : 401
+138000	state: 
+138172	result: 0.264 / count: 1009 / numRes : 401
+138172	state: 
+138328	result: 0.264 / count: 1009 / numRes : 401
+138328	state: 
+138468	result: 0.264 / count: 1009 / numRes : 401
+138468	state: 
+138640	result: 0.264 / count: 1009 / numRes : 401
+138640	state: 
+138781	result: 0.264 / count: 1009 / numRes : 401
+138781	state: 
+138937	result: 0.264 / count: 1009 / numRes : 401
+138937	state: 
+139234	result: 0.264 / count: 1009 / numRes : 401
+139234	state: 
+139390	result: 0.264 / count: 1009 / numRes : 401
+139390	state: 
+139531	result: 0.264 / count: 1009 / numRes : 401
+139531	state: 
+139672	result: 0.264 / count: 1009 / numRes : 401
+139672	state: 
+139828	result: 0.264 / count: 1009 / numRes : 401
+139828	state: 
+140000	result: 0.264 / count: 1009 / numRes : 401
+140000	state: 
+140125	result: 0.264 / count: 1009 / numRes : 401
+140125	state: 
+140297	result: 0.264 / count: 1009 / numRes : 401
+140297	state: 
+140625	result: 0.264 / count: 1009 / numRes : 401
+140625	state: 
+140781	result: 0.264 / count: 1009 / numRes : 401
+140781	state: 
+140937	result: 0.264 / count: 1009 / numRes : 401
+140937	state: 
+141078	result: 0.264 / count: 1009 / numRes : 401
+141078	state: 
+141218	result: 0.264 / count: 1009 / numRes : 401
+141218	state: 
+141390	result: 0.264 / count: 1009 / numRes : 401
+141390	state: 
+141547	result: 0.264 / count: 1009 / numRes : 401
+141547	state: 
+141672	result: 0.264 / count: 1009 / numRes : 401
+141672	state: 
+142015	result: 0.264 / count: 1009 / numRes : 401
+142015	state: 
+142156	result: 0.264 / count: 1009 / numRes : 401
+142156	state: 
+142297	result: 0.264 / count: 1009 / numRes : 401
+142297	state: 
+142453	result: 0.264 / count: 1009 / numRes : 401
+142453	state: 
+142609	result: 0.264 / count: 1009 / numRes : 401
+142609	state: 
+142750	result: 0.264 / count: 1009 / numRes : 401
+142750	state: 
+142906	result: 0.264 / count: 1009 / numRes : 401
+142906	state: 
+143250	result: 0.264 / count: 1009 / numRes : 401
+143250	state: 
+143359	result: 0.264 / count: 1009 / numRes : 401
+143359	state: 
+143531	result: 0.264 / count: 1009 / numRes : 401
+143531	state: 
+143672	result: 0.264 / count: 1009 / numRes : 401
+143672	state: 
+143812	result: 0.264 / count: 1009 / numRes : 401
+143812	state: 
+143968	result: 0.264 / count: 1009 / numRes : 401
+143968	state: 
+144125	result: 0.264 / count: 1009 / numRes : 401
+144125	state: 
+144281	result: 0.264 / count: 1009 / numRes : 401
+144281	state: 
+144625	result: 0.264 / count: 1009 / numRes : 401
+144625	state: 
+144750	result: 0.264 / count: 1009 / numRes : 401
+144750	state: 
+144906	result: 0.264 / count: 1009 / numRes : 401
+144906	state: 
+145062	result: 0.264 / count: 1009 / numRes : 401
+145062	state: 
+145218	result: 0.264 / count: 1009 / numRes : 401
+145218	state: 
+145359	result: 0.264 / count: 1009 / numRes : 401
+145359	state: 
+145500	result: 0.264 / count: 1009 / numRes : 401
+145500	state: 
+145828	result: 0.264 / count: 1009 / numRes : 401
+145828	state: 
+145968	result: 0.264 / count: 1009 / numRes : 401
+145968	state: 
+146125	result: 0.264 / count: 1009 / numRes : 401
+146125	state: 
+146265	result: 0.264 / count: 1009 / numRes : 401
+146265	state: 
+146422	result: 0.264 / count: 1009 / numRes : 401
+146422	state: 
+146593	result: 0.264 / count: 1009 / numRes : 401
+146593	state: 
+146734	result: 0.264 / count: 1009 / numRes : 401
+146734	state: 
+146890	result: 0.264 / count: 1009 / numRes : 401
+146890	state: 
+147203	result: 0.264 / count: 1009 / numRes : 401
+147203	state: 
+147343	result: 0.264 / count: 1009 / numRes : 401
+147343	state: 
+147500	result: 0.264 / count: 1009 / numRes : 401
+147500	state: 
+147656	result: 0.264 / count: 1009 / numRes : 401
+147656	state: 
+147797	result: 0.264 / count: 1009 / numRes : 401
+147797	state: 
+147953	result: 0.264 / count: 1009 / numRes : 401
+147953	state: 
+148109	result: 0.264 / count: 1009 / numRes : 401
+148109	state: 
+148250	result: 0.264 / count: 1009 / numRes : 401
+148250	state: 
+148578	result: 0.264 / count: 1009 / numRes : 401
+148578	state: 
+148703	result: 0.264 / count: 1009 / numRes : 401
+148703	state: 
+148859	result: 0.264 / count: 1009 / numRes : 401
+148859	state: 
+149015	result: 0.264 / count: 1009 / numRes : 401
+149015	state: 
+149156	result: 0.264 / count: 1009 / numRes : 401
+149156	state: 
+149297	result: 0.264 / count: 1009 / numRes : 401
+149297	state: 
+149468	result: 0.264 / count: 1009 / numRes : 401
+149468	state: 
+149781	result: 0.264 / count: 1009 / numRes : 401
+149781	state: 
+149906	result: 0.264 / count: 1009 / numRes : 401
+149906	state: 
+150062	result: 0.264 / count: 1009 / numRes : 401
+150062	state: 
+150218	result: 0.264 / count: 1009 / numRes : 401
+150218	state: 
+150375	result: 0.264 / count: 1009 / numRes : 401
+150375	state: 
+150515	result: 0.264 / count: 1009 / numRes : 401
+150515	state: 
+150672	result: 0.264 / count: 1009 / numRes : 401
+150672	state: 
+150812	result: 0.264 / count: 1009 / numRes : 401
+150812	state: 
+150984	result: 0.264 / count: 1009 / numRes : 401
+150984	state: 
+151312	result: 0.264 / count: 1009 / numRes : 401
+151312	state: 
+151453	result: 0.264 / count: 1009 / numRes : 401
+151453	state: 
+151593	result: 0.264 / count: 1009 / numRes : 401
+151593	state: 
+151765	result: 0.264 / count: 1009 / numRes : 401
+151765	state: 
+151906	result: 0.264 / count: 1009 / numRes : 401
+151906	state: 
+152078	result: 0.264 / count: 1009 / numRes : 401
+152078	state: 
+152297	result: 0.264 / count: 1009 / numRes : 401
+152297	state: 
+152422	result: 0.264 / count: 1009 / numRes : 401
+152422	state: 
+152562	result: 0.264 / count: 1009 / numRes : 401
+152562	state: 
+152734	result: 0.264 / count: 1009 / numRes : 401
+152734	state: 
+152859	result: 0.264 / count: 1009 / numRes : 401
+152859	state: 
+153031	result: 0.264 / count: 1009 / numRes : 401
+153031	state: 
+153187	result: 0.264 / count: 1009 / numRes : 401
+153187	state: 
+153500	result: 0.264 / count: 1009 / numRes : 401
+153500	state: 
+153640	result: 0.264 / count: 1009 / numRes : 401
+153640	state: 
+153781	result: 0.264 / count: 1009 / numRes : 401
+153781	state: 
+153937	result: 0.264 / count: 1009 / numRes : 401
+153937	state: 
+154078	result: 0.264 / count: 1009 / numRes : 401
+154078	state: 
+154250	result: 0.264 / count: 1009 / numRes : 401
+154250	state: 
+154390	result: 0.264 / count: 1009 / numRes : 401
+154390	state: 
+154531	result: 0.264 / count: 1009 / numRes : 401
+154547	state: 
+154687	result: 0.264 / count: 1009 / numRes : 401
+154687	state: 
+155015	result: 0.264 / count: 1009 / numRes : 401
+155015	state: 
+155172	result: 0.264 / count: 1009 / numRes : 401
+155172	state: 
+155328	result: 0.264 / count: 1009 / numRes : 401
+155328	state: 
+155468	result: 0.264 / count: 1009 / numRes : 401
+155468	state: 
+155625	result: 0.264 / count: 1009 / numRes : 401
+155625	state: 
+155781	result: 0.264 / count: 1009 / numRes : 401
+155781	state: 
+155937	result: 0.264 / count: 1009 / numRes : 401
+155937	state: 
+156234	result: 0.264 / count: 1009 / numRes : 401
+156234	state: 
+156390	result: 0.264 / count: 1009 / numRes : 401
+156390	state: 
+156531	result: 0.264 / count: 1009 / numRes : 401
+156531	state: 
+156687	result: 0.264 / count: 1009 / numRes : 401
+156687	state: 
+156859	result: 0.264 / count: 1009 / numRes : 401
+156859	state: 
+156984	result: 0.264 / count: 1009 / numRes : 401
+156984	state: 
+157125	result: 0.264 / count: 1009 / numRes : 401
+157125	state: 
+157297	result: 0.264 / count: 1009 / numRes : 401
+157297	state: 
+157437	result: 0.264 / count: 1009 / numRes : 401
+157437	state: 
+157765	result: 0.264 / count: 1009 / numRes : 401
+157765	state: 
+157922	result: 0.264 / count: 1009 / numRes : 401
+157922	state: 
+158093	result: 0.264 / count: 1009 / numRes : 401
+158093	state: 
+158234	result: 0.264 / count: 1009 / numRes : 401
+158234	state: 
+158375	result: 0.264 / count: 1009 / numRes : 401
+158375	state: 
+158531	result: 0.264 / count: 1009 / numRes : 401
+158531	state: 
+158687	result: 0.264 / count: 1009 / numRes : 401
+158687	state: 
+159031	result: 0.264 / count: 1009 / numRes : 401
+159031	state: 
+159140	result: 0.264 / count: 1009 / numRes : 401
+159140	state: 
+159297	result: 0.264 / count: 1009 / numRes : 401
+159297	state: 
+159453	result: 0.264 / count: 1009 / numRes : 401
+159453	state: 
+159578	result: 0.264 / count: 1009 / numRes : 401
+159578	state: 
+159750	result: 0.264 / count: 1009 / numRes : 401
+159750	state: 
+159890	result: 0.264 / count: 1009 / numRes : 401
+159890	state: 
+160031	result: 0.264 / count: 1009 / numRes : 401
+160031	state: 
+160203	result: 0.264 / count: 1009 / numRes : 401
+160203	state: 
+160515	result: 0.264 / count: 1009 / numRes : 401
+160515	state: 
+160656	result: 0.264 / count: 1009 / numRes : 401
+160656	state: 
+160812	result: 0.264 / count: 1009 / numRes : 401
+160812	state: 
+160968	result: 0.264 / count: 1009 / numRes : 401
+160968	state: 
+161125	result: 0.264 / count: 1009 / numRes : 401
+161140	state: 
+161281	result: 0.264 / count: 1009 / numRes : 401
+161281	state: 
+161453	result: 0.264 / count: 1009 / numRes : 401
+161453	state: 
+161750	result: 0.264 / count: 1009 / numRes : 401
+161750	state: 
+161875	result: 0.264 / count: 1009 / numRes : 401
+161875	state: 
+162047	result: 0.264 / count: 1009 / numRes : 401
+162047	state: 
+162187	result: 0.264 / count: 1009 / numRes : 401
+162187	state: 
+162343	result: 0.264 / count: 1009 / numRes : 401
+162343	state: 
+162500	result: 0.264 / count: 1009 / numRes : 401
+162500	state: 
+162656	result: 0.264 / count: 1009 / numRes : 401
+162656	state: 
+162797	result: 0.264 / count: 1009 / numRes : 401
+162797	state: 
+162953	result: 0.264 / count: 1009 / numRes : 401
+162953	state: 
+163281	result: 0.264 / count: 1009 / numRes : 401
+163281	state: 
+163312	result: 0.264 / count: 1009 / numRes : 401
+163312	state: 
+163453	result: 0.264 / count: 1009 / numRes : 401
+163453	state: 
+163609	result: 0.264 / count: 1009 / numRes : 401
+163609	state: 
+163750	result: 0.264 / count: 1009 / numRes : 401
+163750	state: 
+163906	result: 0.264 / count: 1009 / numRes : 401
+163906	state: 
+164218	result: 0.264 / count: 1009 / numRes : 401
+164218	state: 
+164265	result: 0.264 / count: 1009 / numRes : 401
+164265	state: 
+164390	result: 0.264 / count: 1009 / numRes : 401
+164390	state: 
+164547	result: 0.264 / count: 1009 / numRes : 401
+164547	state: 
+164687	result: 0.264 / count: 1009 / numRes : 401
+164687	state: 
+164843	result: 0.264 / count: 1009 / numRes : 401
+164843	state: 
+165000	result: 0.264 / count: 1009 / numRes : 401
+165000	state: 
+165140	result: 0.264 / count: 1009 / numRes : 401
+165140	state: 
+165297	result: 0.264 / count: 1009 / numRes : 401
+165297	state: 
+165640	result: 0.264 / count: 1009 / numRes : 401
+165640	state: 
+165750	result: 0.264 / count: 1009 / numRes : 401
+165750	state: 
+165906	result: 0.264 / count: 1009 / numRes : 401
+165906	state: 
+166062	result: 0.264 / count: 1009 / numRes : 401
+166062	state: 
+166203	result: 0.264 / count: 1009 / numRes : 401
+166203	state: 
+166359	result: 0.264 / count: 1009 / numRes : 401
+166359	state: 
+166500	result: 0.264 / count: 1009 / numRes : 401
+166500	state: 
+166672	result: 0.264 / count: 1009 / numRes : 401
+166672	state: 
+167015	result: 0.264 / count: 1009 / numRes : 401
+167015	state: 
+167140	result: 0.264 / count: 1009 / numRes : 401
+167140	state: 
+167297	result: 0.264 / count: 1009 / numRes : 401
+167297	state: 
+167453	result: 0.264 / count: 1009 / numRes : 401
+167453	state: 
+167609	result: 0.264 / count: 1009 / numRes : 401
+167609	state: 
+167750	result: 0.264 / count: 1009 / numRes : 401
+167750	state: 
+167890	result: 0.264 / count: 1009 / numRes : 401
+167890	state: 
+168218	result: 0.264 / count: 1009 / numRes : 401
+168218	state: 
+168375	result: 0.264 / count: 1009 / numRes : 401
+168375	state: 
+168515	result: 0.264 / count: 1009 / numRes : 401
+168515	state: 
+168687	result: 0.264 / count: 1009 / numRes : 401
+168687	state: 
+168828	result: 0.264 / count: 1009 / numRes : 401
+168828	state: 
+168968	result: 0.264 / count: 1009 / numRes : 401
+168968	state: 
+169140	result: 0.264 / count: 1009 / numRes : 401
+169140	state: 
+169281	result: 0.264 / count: 1009 / numRes : 401
+169281	state: 
+169437	result: 0.264 / count: 1009 / numRes : 401
+169437	state: 
+169750	result: 0.264 / count: 1009 / numRes : 401
+169750	state: 
+169890	result: 0.264 / count: 1009 / numRes : 401
+169890	state: 
+170047	result: 0.264 / count: 1009 / numRes : 401
+170047	state: 
+170187	result: 0.264 / count: 1009 / numRes : 401
+170187	state: 
+170328	result: 0.264 / count: 1009 / numRes : 401
+170328	state: 
+170500	result: 0.264 / count: 1009 / numRes : 401
+170500	state: 
+170687	result: 0.264 / count: 1009 / numRes : 401
+170687	state: 
+170843	result: 0.264 / count: 1009 / numRes : 401
+170843	state: 
+171000	result: 0.264 / count: 1009 / numRes : 401
+171000	state: 
+171125	result: 0.264 / count: 1009 / numRes : 401
+171125	state: 
+171297	result: 0.264 / count: 1009 / numRes : 401
+171297	state: 
+171468	result: 0.264 / count: 1009 / numRes : 401
+171468	state: 
+171578	result: 0.264 / count: 1009 / numRes : 401
+171578	state: 
+171922	result: 0.264 / count: 1009 / numRes : 401
+171922	state: 
+172062	result: 0.264 / count: 1009 / numRes : 401
+172062	state: 
+172218	result: 0.264 / count: 1009 / numRes : 401
+172218	state: 
+172375	result: 0.264 / count: 1009 / numRes : 401
+172375	state: 
+172515	result: 0.264 / count: 1009 / numRes : 401
+172515	state: 
+172672	result: 0.264 / count: 1009 / numRes : 401
+172672	state: 
+172812	result: 0.264 / count: 1009 / numRes : 401
+172812	state: 
+172968	result: 0.264 / count: 1009 / numRes : 401
+172968	state: 
+173125	result: 0.264 / count: 1009 / numRes : 401
+173125	state: 
+173468	result: 0.264 / count: 1009 / numRes : 401
+173468	state: 
+173500	result: 0.264 / count: 1009 / numRes : 401
+173500	state: 
+173625	result: 0.264 / count: 1009 / numRes : 401
+173625	state: 
+173781	result: 0.264 / count: 1009 / numRes : 401
+173781	state: 
+173922	result: 0.264 / count: 1009 / numRes : 401
+173922	state: 
+174078	result: 0.264 / count: 1009 / numRes : 401
+174078	state: 
+174390	result: 0.264 / count: 1009 / numRes : 401
+174390	state: 
+174437	result: 0.264 / count: 1009 / numRes : 401
+174437	state: 
+174547	result: 0.264 / count: 1009 / numRes : 401
+174547	state: 
+174703	result: 0.264 / count: 1009 / numRes : 401
+174703	state: 
+174859	result: 0.264 / count: 1009 / numRes : 401
+174859	state: 
+175015	result: 0.264 / count: 1009 / numRes : 401
+175015	state: 
+175156	result: 0.264 / count: 1009 / numRes : 401
+175156	state: 
+175312	result: 0.264 / count: 1009 / numRes : 401
+175312	state: 
+175453	result: 0.264 / count: 1009 / numRes : 401
+175453	state: 
+175765	result: 0.264 / count: 1009 / numRes : 401
+175765	state: 
+175922	result: 0.264 / count: 1009 / numRes : 401
+175937	state: 
+176093	result: 0.264 / count: 1009 / numRes : 401
+176093	state: 
+176218	result: 0.264 / count: 1009 / numRes : 401
+176218	state: 
+176375	result: 0.264 / count: 1009 / numRes : 401
+176375	state: 
+176531	result: 0.264 / count: 1009 / numRes : 401
+176531	state: 
+176687	result: 0.264 / count: 1009 / numRes : 401
+176687	state: 
+176843	result: 0.264 / count: 1009 / numRes : 401
+176843	state: 
+177156	result: 0.264 / count: 1009 / numRes : 401
+177156	state: 
+177312	result: 0.264 / count: 1009 / numRes : 401
+177312	state: 
+177453	result: 0.264 / count: 1009 / numRes : 401
+177453	state: 
+177625	result: 0.264 / count: 1009 / numRes : 401
+177625	state: 
+177765	result: 0.264 / count: 1009 / numRes : 401
+177765	state: 
+177906	result: 0.264 / count: 1009 / numRes : 401
+177906	state: 
+178062	result: 0.264 / count: 1009 / numRes : 401
+178062	state: 
+178406	result: 0.264 / count: 1009 / numRes : 401
+178406	state: 
+178547	result: 0.264 / count: 1009 / numRes : 401
+178547	state: 
+178703	result: 0.264 / count: 1009 / numRes : 401
+178703	state: 
+178843	result: 0.264 / count: 1009 / numRes : 401
+178843	state: 
+179000	result: 0.264 / count: 1009 / numRes : 401
+179000	state: 
+179140	result: 0.264 / count: 1009 / numRes : 401
+179140	state: 
+179312	result: 0.264 / count: 1009 / numRes : 401
+179312	state: 
+179453	result: 0.264 / count: 1009 / numRes : 401
+179453	state: 
+179781	result: 0.264 / count: 1009 / numRes : 401
+179781	state: 
+179906	result: 0.264 / count: 1009 / numRes : 401
+179906	state: 
+180062	result: 0.264 / count: 1009 / numRes : 401
+180062	state: 
+180218	result: 0.264 / count: 1009 / numRes : 401
+180218	state: 
+180359	result: 0.264 / count: 1009 / numRes : 401
+180359	state: 
+180531	result: 0.264 / count: 1009 / numRes : 401
+180531	state: 
+180672	result: 0.264 / count: 1009 / numRes : 401
+180672	state: 
+180984	result: 0.264 / count: 1009 / numRes : 401
+180984	state: 
+181125	result: 0.264 / count: 1009 / numRes : 401
+181125	state: 
+181265	result: 0.264 / count: 1009 / numRes : 401
+181265	state: 
+181437	result: 0.264 / count: 1009 / numRes : 401
+181437	state: 
+181578	result: 0.264 / count: 1009 / numRes : 401
+181578	state: 
+181734	result: 0.264 / count: 1009 / numRes : 401
+181750	state: 
+181875	result: 0.264 / count: 1009 / numRes : 401
+181875	state: 
+182031	result: 0.264 / count: 1009 / numRes : 401
+182031	state: 
+182359	result: 0.264 / count: 1009 / numRes : 401
+182359	state: 
+182500	result: 0.264 / count: 1009 / numRes : 401
+182500	state: 
+182640	result: 0.264 / count: 1009 / numRes : 401
+182640	state: 
+182797	result: 0.264 / count: 1009 / numRes : 401
+182797	state: 
+182953	result: 0.264 / count: 1009 / numRes : 401
+182953	state: 
+183109	result: 0.264 / count: 1009 / numRes : 401
+183109	state: 
+183234	result: 0.264 / count: 1009 / numRes : 401
+183234	state: 
+183562	result: 0.264 / count: 1009 / numRes : 401
+183562	state: 
+183703	result: 0.264 / count: 1009 / numRes : 401
+183703	state: 
+183875	result: 0.264 / count: 1009 / numRes : 401
+183875	state: 
+184031	result: 0.264 / count: 1009 / numRes : 401
+184031	state: 
+184156	result: 0.264 / count: 1009 / numRes : 401
+184156	state: 
+184328	result: 0.264 / count: 1009 / numRes : 401
+184328	state: 
+184484	result: 0.264 / count: 1009 / numRes : 401
+184484	state: 
+184625	result: 0.264 / count: 1009 / numRes : 401
+184625	state: 
+184968	result: 0.264 / count: 1009 / numRes : 401
+184968	state: 
+185109	result: 0.264 / count: 1009 / numRes : 401
+185109	state: 
+185265	result: 0.264 / count: 1009 / numRes : 401
+185265	state: 
+185406	result: 0.264 / count: 1009 / numRes : 401
+185406	state: 
+185562	result: 0.264 / count: 1009 / numRes : 401
+185562	state: 
+185718	result: 0.264 / count: 1009 / numRes : 401
+185718	state: 
+185859	result: 0.264 / count: 1009 / numRes : 401
+185859	state: 
+186156	result: 0.264 / count: 1009 / numRes : 401
+186156	state: 
+186312	result: 0.264 / count: 1009 / numRes : 401
+186312	state: 
+186468	result: 0.264 / count: 1009 / numRes : 401
+186468	state: 
+186625	result: 0.264 / count: 1009 / numRes : 401
+186625	state: 
+186781	result: 0.264 / count: 1009 / numRes : 401
+186781	state: 
+186922	result: 0.264 / count: 1009 / numRes : 401
+186922	state: 
+187062	result: 0.264 / count: 1009 / numRes : 401
+187062	state: 
+187218	result: 0.264 / count: 1009 / numRes : 401
+187218	state: 
+187562	result: 0.264 / count: 1009 / numRes : 401
+187562	state: 
+187703	result: 0.264 / count: 1009 / numRes : 401
+187703	state: 
+187859	result: 0.264 / count: 1009 / numRes : 401
+187859	state: 
+187984	result: 0.264 / count: 1009 / numRes : 401
+187984	state: 
+188140	result: 0.264 / count: 1009 / numRes : 401
+188140	state: 
+188281	result: 0.264 / count: 1009 / numRes : 401
+188281	state: 
+188437	result: 0.264 / count: 1009 / numRes : 401
+188437	state: 
+188765	result: 0.264 / count: 1009 / numRes : 401
+188765	state: 
+188922	result: 0.264 / count: 1009 / numRes : 401
+188922	state: 
+189062	result: 0.264 / count: 1009 / numRes : 401
+189062	state: 
+189218	result: 0.264 / count: 1009 / numRes : 401
+189218	state: 
+189375	result: 0.264 / count: 1009 / numRes : 401
+189375	state: 
+189515	result: 0.264 / count: 1009 / numRes : 401
+189515	state: 
+189672	result: 0.264 / count: 1009 / numRes : 401
+189672	state: 
+189828	result: 0.264 / count: 1009 / numRes : 401
+189828	state: 
+190140	result: 0.264 / count: 1009 / numRes : 401
+190140	state: 
+190281	result: 0.264 / count: 1009 / numRes : 401
+190281	state: 
+190453	result: 0.264 / count: 1009 / numRes : 401
+190453	state: 
+190593	result: 0.264 / count: 1009 / numRes : 401
+190593	state: 
+190734	result: 0.264 / count: 1009 / numRes : 401
+190734	state: 
+190906	result: 0.264 / count: 1009 / numRes : 401
+190906	state: 
+191062	result: 0.264 / count: 1009 / numRes : 401
+191062	state: 
+191187	result: 0.264 / count: 1009 / numRes : 401
+191187	state: 
+191500	result: 0.264 / count: 1009 / numRes : 401
+191500	state: 
+191672	result: 0.264 / count: 1009 / numRes : 401
+191672	state: 
+191812	result: 0.264 / count: 1009 / numRes : 401
+191812	state: 
+191984	result: 0.264 / count: 1009 / numRes : 401
+191984	state: 
+192125	result: 0.264 / count: 1009 / numRes : 401
+192125	state: 
+192281	result: 0.264 / count: 1009 / numRes : 401
+192281	state: 
+192422	result: 0.264 / count: 1009 / numRes : 401
+192422	state: 
+192750	result: 0.264 / count: 1009 / numRes : 401
+192750	state: 
+192875	result: 0.264 / count: 1009 / numRes : 401
+192875	state: 
+193015	result: 0.264 / count: 1009 / numRes : 401
+193015	state: 
+193187	result: 0.264 / count: 1009 / numRes : 401
+193187	state: 
+193328	result: 0.264 / count: 1009 / numRes : 401
+193328	state: 
+193484	result: 0.264 / count: 1009 / numRes : 401
+193484	state: 
+193640	result: 0.264 / count: 1009 / numRes : 401
+193640	state: 
+193797	result: 0.264 / count: 1009 / numRes : 401
+193797	state: 
+194078	result: 0.264 / count: 1009 / numRes : 401
+194078	state: 
+194250	result: 0.264 / count: 1009 / numRes : 401
+194250	state: 
+194406	result: 0.264 / count: 1009 / numRes : 401
+194406	state: 
+194562	result: 0.264 / count: 1009 / numRes : 401
+194562	state: 
+194718	result: 0.264 / count: 1009 / numRes : 401
+194718	state: 
+194875	result: 0.264 / count: 1009 / numRes : 401
+194875	state: 
+195015	result: 0.264 / count: 1009 / numRes : 401
+195015	state: 
+195328	result: 0.264 / count: 1009 / numRes : 401
+195328	state: 
+195468	result: 0.264 / count: 1009 / numRes : 401
+195468	state: 
+195640	result: 0.264 / count: 1009 / numRes : 401
+195640	state: 
+195797	result: 0.264 / count: 1009 / numRes : 401
+195797	state: 
+195937	result: 0.264 / count: 1009 / numRes : 401
+195937	state: 
+196093	result: 0.264 / count: 1009 / numRes : 401
+196093	state: 
+196265	result: 0.264 / count: 1009 / numRes : 401
+196265	state: 
+196390	result: 0.264 / count: 1009 / numRes : 401
+196390	state: 
+196547	result: 0.264 / count: 1009 / numRes : 401
+196547	state: 
+196890	result: 0.264 / count: 1009 / numRes : 401
+196890	state: 
+197031	result: 0.264 / count: 1009 / numRes : 401
+197031	state: 
+197172	result: 0.264 / count: 1009 / numRes : 401
+197172	state: 
+197328	result: 0.264 / count: 1009 / numRes : 401
+197328	state: 
+197468	result: 0.264 / count: 1009 / numRes : 401
+197468	state: 
+197625	result: 0.264 / count: 1009 / numRes : 401
+197625	state: 
+197843	result: 0.264 / count: 1009 / numRes : 401
+197843	state: 
+197984	result: 0.264 / count: 1009 / numRes : 401
+197984	state: 
+198140	result: 0.264 / count: 1009 / numRes : 401
+198140	state: 
+198281	result: 0.264 / count: 1009 / numRes : 401
+198281	state: 
+198437	result: 0.264 / count: 1009 / numRes : 401
+198437	state: 
+198578	result: 0.264 / count: 1009 / numRes : 401
+198578	state: 
+198750	result: 0.264 / count: 1009 / numRes : 401
+198750	state: 
+199062	result: 0.264 / count: 1009 / numRes : 401
+199062	state: 
+199187	result: 0.264 / count: 1009 / numRes : 401
+199187	state: 
+199343	result: 0.264 / count: 1009 / numRes : 401
+199343	state: 
+199500	result: 0.264 / count: 1009 / numRes : 401
+199500	state: 
+199640	result: 0.264 / count: 1009 / numRes : 401
+199640	state: 
+199812	result: 0.264 / count: 1009 / numRes : 401
+199812	state: 
+199953	result: 0.264 / count: 1009 / numRes : 401
+199953	state: 
+200093	result: 0.264 / count: 1009 / numRes : 401
+200093	state: 
+200250	result: 0.264 / count: 1009 / numRes : 401
+200250	state: 
+200453	result: 0.264 / count: 1009 / numRes : 401
+200453	state: 
+200593	result: 0.264 / count: 1009 / numRes : 401
+200593	state: 
+200750	result: 0.264 / count: 1009 / numRes : 401
+200750	state: 
+200922	result: 0.264 / count: 1009 / numRes : 401
+200922	state: 
+201062	result: 0.264 / count: 1009 / numRes : 401
+201062	state: 
+201234	result: 0.264 / count: 1009 / numRes : 401
+201234	state: 
+201390	result: 0.264 / count: 1009 / numRes : 401
+201390	state: 
+201672	result: 0.264 / count: 1009 / numRes : 401
+201672	state: 
+201828	result: 0.264 / count: 1009 / numRes : 401
+201828	state: 
+202000	result: 0.264 / count: 1009 / numRes : 401
+202000	state: 
+202140	result: 0.264 / count: 1009 / numRes : 401
+202140	state: 
+202297	result: 0.264 / count: 1009 / numRes : 401
+202297	state: 
+202437	result: 0.264 / count: 1009 / numRes : 401
+202437	state: 
+202578	result: 0.264 / count: 1009 / numRes : 401
+202578	state: 
+202750	result: 0.264 / count: 1009 / numRes : 401
+202750	state: 
+202890	result: 0.264 / count: 1009 / numRes : 401
+202890	state: 
+203109	result: 0.264 / count: 1009 / numRes : 401
+203109	state: 
+203234	result: 0.264 / count: 1009 / numRes : 401
+203234	state: 
+203390	result: 0.264 / count: 1009 / numRes : 401
+203390	state: 
+203547	result: 0.264 / count: 1009 / numRes : 401
+203547	state: 
+203687	result: 0.264 / count: 1009 / numRes : 401
+203687	state: 
+203843	result: 0.264 / count: 1009 / numRes : 401
+203843	state: 
+204000	result: 0.264 / count: 1009 / numRes : 401
+204000	state: 
+204328	result: 0.264 / count: 1009 / numRes : 401
+204328	state: 
+204453	result: 0.264 / count: 1009 / numRes : 401
+204453	state: 
+204609	result: 0.264 / count: 1009 / numRes : 401
+204609	state: 
+204750	result: 0.264 / count: 1009 / numRes : 401
+204750	state: 
+204922	result: 0.264 / count: 1009 / numRes : 401
+204922	state: 
+205062	result: 0.264 / count: 1009 / numRes : 401
+205062	state: 
+205218	result: 0.264 / count: 1009 / numRes : 401
+205218	state: 
+205375	result: 0.264 / count: 1009 / numRes : 401
+205375	state: 
+205515	result: 0.264 / count: 1009 / numRes : 401
+205515	state: 
+205718	result: 0.264 / count: 1009 / numRes : 401
+205718	state: 
+205859	result: 0.264 / count: 1009 / numRes : 401
+205859	state: 
+206015	result: 0.264 / count: 1009 / numRes : 401
+206015	state: 
+206172	result: 0.264 / count: 1009 / numRes : 401
+206172	state: 
+206328	result: 0.264 / count: 1009 / numRes : 401
+206328	state: 
+206484	result: 0.264 / count: 1009 / numRes : 401
+206484	state: 
+206656	result: 0.264 / count: 1009 / numRes : 401
+206656	state: 
+206937	result: 0.264 / count: 1009 / numRes : 401
+206937	state: 
+207093	result: 0.264 / count: 1009 / numRes : 401
+207093	state: 
+207265	result: 0.264 / count: 1009 / numRes : 401
+207265	state: 
+207406	result: 0.264 / count: 1009 / numRes : 401
+207406	state: 
+207562	result: 0.264 / count: 1009 / numRes : 401
+207562	state: 
+207703	result: 0.264 / count: 1009 / numRes : 401
+207703	state: 
+207875	result: 0.264 / count: 1009 / numRes : 401
+207875	state: 
+208015	result: 0.264 / count: 1009 / numRes : 401
+208015	state: 
+208187	result: 0.264 / count: 1009 / numRes : 401
+208187	state: 
+208390	result: 0.264 / count: 1009 / numRes : 401
+208390	state: 
+208500	result: 0.264 / count: 1009 / numRes : 401
+208500	state: 
+208656	result: 0.264 / count: 1009 / numRes : 401
+208656	state: 
+208828	result: 0.264 / count: 1009 / numRes : 401
+208843	state: 
+208984	result: 0.264 / count: 1009 / numRes : 401
+208984	state: 
+209125	result: 0.264 / count: 1009 / numRes : 401
+209125	state: 
+209297	result: 0.264 / count: 1009 / numRes : 401
+209297	state: 
+209578	result: 0.264 / count: 1009 / numRes : 401
+209578	state: 
+209734	result: 0.264 / count: 1009 / numRes : 401
+209734	state: 
+209922	result: 0.264 / count: 1009 / numRes : 401
+209922	state: 
+210047	result: 0.264 / count: 1009 / numRes : 401
+210047	state: 
+210203	result: 0.264 / count: 1009 / numRes : 401
+210203	state: 
+210343	result: 0.264 / count: 1009 / numRes : 401
+210343	state: 
+210500	result: 0.264 / count: 1009 / numRes : 401
+210500	state: 
+210656	result: 0.264 / count: 1009 / numRes : 401
+210656	state: 
+210797	result: 0.264 / count: 1009 / numRes : 401
+210797	state: 
+211031	result: 0.264 / count: 1009 / numRes : 401
+211031	state: 
+211172	result: 0.264 / count: 1009 / numRes : 401
+211172	state: 
+211312	result: 0.264 / count: 1009 / numRes : 401
+211312	state: 
+211468	result: 0.264 / count: 1009 / numRes : 401
+211468	state: 
+211609	result: 0.264 / count: 1009 / numRes : 401
+211609	state: 
+211781	result: 0.264 / count: 1009 / numRes : 401
+211781	state: 
+211937	result: 0.264 / count: 1009 / numRes : 401
+211937	state: 
+212234	result: 0.264 / count: 1009 / numRes : 401
+212234	state: 
+212406	result: 0.264 / count: 1009 / numRes : 401
+212406	state: 
+212562	result: 0.264 / count: 1009 / numRes : 401
+212562	state: 
+212718	result: 0.264 / count: 1009 / numRes : 401
+212718	state: 
+212843	result: 0.264 / count: 1009 / numRes : 401
+212843	state: 
+213015	result: 0.264 / count: 1009 / numRes : 401
+213015	state: 
+213156	result: 0.264 / count: 1009 / numRes : 401
+213156	state: 
+213297	result: 0.264 / count: 1009 / numRes : 401
+213297	state: 
+213468	result: 0.264 / count: 1009 / numRes : 401
+213468	state: 
+213687	result: 0.264 / count: 1009 / numRes : 401
+213687	state: 
+213812	result: 0.264 / count: 1009 / numRes : 401
+213812	state: 
+213984	result: 0.264 / count: 1009 / numRes : 401
+213984	state: 
+214125	result: 0.264 / count: 1009 / numRes : 401
+214125	state: 
+214265	result: 0.264 / count: 1009 / numRes : 401
+214265	state: 
+214437	result: 0.264 / count: 1009 / numRes : 401
+214437	state: 
+214578	result: 0.264 / count: 1009 / numRes : 401
+214578	state: 
+214890	result: 0.264 / count: 1009 / numRes : 401
+214890	state: 
+215015	result: 0.264 / count: 1009 / numRes : 401
+215015	state: 
+215187	result: 0.264 / count: 1009 / numRes : 401
+215187	state: 
+215328	result: 0.264 / count: 1009 / numRes : 401
+215328	state: 
+215468	result: 0.264 / count: 1009 / numRes : 401
+215468	state: 
+215625	result: 0.264 / count: 1009 / numRes : 401
+215625	state: 
+215781	result: 0.264 / count: 1009 / numRes : 401
+215781	state: 
+215922	result: 0.264 / count: 1009 / numRes : 401
+215922	state: 
+216093	result: 0.264 / count: 1009 / numRes : 401
+216093	state: 
+216406	result: 0.264 / count: 1009 / numRes : 401
+216406	state: 
+216562	result: 0.264 / count: 1009 / numRes : 401
+216562	state: 
+216703	result: 0.264 / count: 1009 / numRes : 401
+216703	state: 
+216859	result: 0.264 / count: 1009 / numRes : 401
+216859	state: 
+217000	result: 0.264 / count: 1009 / numRes : 401
+217015	state: 
+217187	result: 0.264 / count: 1009 / numRes : 401
+217187	state: 
+217406	result: 0.264 / count: 1009 / numRes : 401
+217406	state: 
+217531	result: 0.264 / count: 1009 / numRes : 401
+217531	state: 
+217687	result: 0.264 / count: 1009 / numRes : 401
+217687	state: 
+217843	result: 0.264 / count: 1009 / numRes : 401
+217843	state: 
+218000	result: 0.264 / count: 1009 / numRes : 401
+218000	state: 
+218140	result: 0.264 / count: 1009 / numRes : 401
+218140	state: 
+218297	result: 0.264 / count: 1009 / numRes : 401
+218297	state: 
+218625	result: 0.264 / count: 1009 / numRes : 401
+218625	state: 
+218781	result: 0.264 / count: 1009 / numRes : 401
+218781	state: 
+218922	result: 0.264 / count: 1009 / numRes : 401
+218922	state: 
+219078	result: 0.264 / count: 1009 / numRes : 401
+219078	state: 
+219218	result: 0.264 / count: 1009 / numRes : 401
+219218	state: 
+219390	result: 0.264 / count: 1009 / numRes : 401
+219390	state: 
+219547	result: 0.264 / count: 1009 / numRes : 401
+219547	state: 
+219703	result: 0.264 / count: 1009 / numRes : 401
+219703	state: 
+219843	result: 0.264 / count: 1009 / numRes : 401
+219843	state: 
+220078	result: 0.264 / count: 1009 / numRes : 401
+220078	state: 
+220203	result: 0.264 / count: 1009 / numRes : 401
+220203	state: 
+220343	result: 0.264 / count: 1009 / numRes : 401
+220359	state: 
+220500	result: 0.264 / count: 1009 / numRes : 401
+220500	state: 
+220672	result: 0.264 / count: 1009 / numRes : 401
+220672	state: 
+220828	result: 0.264 / count: 1009 / numRes : 401
+220828	state: 
+220968	result: 0.264 / count: 1009 / numRes : 401
+220968	state: 
+221265	result: 0.264 / count: 1009 / numRes : 401
+221265	state: 
+221422	result: 0.264 / count: 1009 / numRes : 401
+221422	state: 
+221578	result: 0.264 / count: 1009 / numRes : 401
+221578	state: 
+221750	result: 0.264 / count: 1009 / numRes : 401
+221750	state: 
+221875	result: 0.264 / count: 1009 / numRes : 401
+221875	state: 
+222031	result: 0.264 / count: 1009 / numRes : 401
+222031	state: 
+222187	result: 0.264 / count: 1009 / numRes : 401
+222187	state: 
+222343	result: 0.264 / count: 1009 / numRes : 401
+222343	state: 
+222484	result: 0.264 / count: 1009 / numRes : 401
+222484	state: 
+222687	result: 0.264 / count: 1009 / numRes : 401
+222687	state: 
+222828	result: 0.264 / count: 1009 / numRes : 401
+222828	state: 
+222984	result: 0.264 / count: 1009 / numRes : 401
+222984	state: 
+223140	result: 0.264 / count: 1009 / numRes : 401
+223140	state: 
+223281	result: 0.264 / count: 1009 / numRes : 401
+223281	state: 
+223437	result: 0.264 / count: 1009 / numRes : 401
+223437	state: 
+223593	result: 0.264 / count: 1009 / numRes : 401
+223593	state: 
+223922	result: 0.264 / count: 1009 / numRes : 401
+223922	state: 
+224047	result: 0.264 / count: 1009 / numRes : 401
+224047	state: 
+224203	result: 0.264 / count: 1009 / numRes : 401
+224203	state: 
+224375	result: 0.264 / count: 1009 / numRes : 401
+224375	state: 
+224500	result: 0.264 / count: 1009 / numRes : 401
+224500	state: 
+224672	result: 0.264 / count: 1009 / numRes : 401
+224672	state: 
+224828	result: 0.264 / count: 1009 / numRes : 401
+224828	state: 
+224953	result: 0.264 / count: 1009 / numRes : 401
+224953	state: 
+225109	result: 0.264 / count: 1009 / numRes : 401
+225109	state: 
+225453	result: 0.264 / count: 1009 / numRes : 401
+225453	state: 
+225578	result: 0.264 / count: 1009 / numRes : 401
+225578	state: 
+225750	result: 0.264 / count: 1009 / numRes : 401
+225750	state: 
+225890	result: 0.264 / count: 1009 / numRes : 401
+225890	state: 
+226031	result: 0.264 / count: 1009 / numRes : 401
+226031	state: 
+226203	result: 0.264 / count: 1009 / numRes : 401
+226203	state: 
+226422	result: 0.264 / count: 1009 / numRes : 401
+226422	state: 
+226562	result: 0.264 / count: 1009 / numRes : 401
+226562	state: 
+226687	result: 0.264 / count: 1009 / numRes : 401
+226687	state: 
+226843	result: 0.264 / count: 1009 / numRes : 401
+226843	state: 
+227000	result: 0.264 / count: 1009 / numRes : 401
+227000	state: 
+227140	result: 0.264 / count: 1009 / numRes : 401
+227140	state: 
+227312	result: 0.264 / count: 1009 / numRes : 401
+227312	state: 
+227625	result: 0.264 / count: 1009 / numRes : 401
+227625	state: 
+227765	result: 0.264 / count: 1009 / numRes : 401
+227765	state: 
+227906	result: 0.264 / count: 1009 / numRes : 401
+227906	state: 
+228078	result: 0.264 / count: 1009 / numRes : 401
+228078	state: 
+228218	result: 0.264 / count: 1009 / numRes : 401
+228218	state: 
+228359	result: 0.264 / count: 1009 / numRes : 401
+228359	state: 
+228515	result: 0.264 / count: 1009 / numRes : 401
+228515	state: 
+228687	result: 0.264 / count: 1009 / numRes : 401
+228687	state: 
+228828	result: 0.264 / count: 1009 / numRes : 401
+228828	state: 
+229047	result: 0.264 / count: 1009 / numRes : 401
+229047	state: 
+229172	result: 0.264 / count: 1009 / numRes : 401
+229172	state: 
+229343	result: 0.264 / count: 1009 / numRes : 401
+229343	state: 
+229484	result: 0.264 / count: 1009 / numRes : 401
+229484	state: 
+229625	result: 0.264 / count: 1009 / numRes : 401
+229625	state: 
+229781	result: 0.264 / count: 1009 / numRes : 401
+229781	state: 
+229953	result: 0.264 / count: 1009 / numRes : 401
+229953	state: 
+230265	result: 0.264 / count: 1009 / numRes : 401
+230265	state: 
+230406	result: 0.264 / count: 1009 / numRes : 401
+230406	state: 
+230547	result: 0.264 / count: 1009 / numRes : 401
+230547	state: 
+230703	result: 0.264 / count: 1009 / numRes : 401
+230703	state: 
+230843	result: 0.264 / count: 1009 / numRes : 401
+230843	state: 
+230984	result: 0.264 / count: 1009 / numRes : 401
+230984	state: 
+231140	result: 0.264 / count: 1009 / numRes : 401
+231140	state: 
+231312	result: 0.264 / count: 1009 / numRes : 401
+231312	state: 
+231453	result: 0.264 / count: 1009 / numRes : 401
+231453	state: 
+231656	result: 0.264 / count: 1009 / numRes : 401
+231656	state: 
+231781	result: 0.264 / count: 1009 / numRes : 401
+231781	state: 
+231937	result: 0.264 / count: 1009 / numRes : 401
+231937	state: 
+232093	result: 0.264 / count: 1009 / numRes : 401
+232093	state: 
+232250	result: 0.264 / count: 1009 / numRes : 401
+232250	state: 
+232390	result: 0.264 / count: 1009 / numRes : 401
+232390	state: 
+232547	result: 0.264 / count: 1009 / numRes : 401
+232547	state: 
+232875	result: 0.264 / count: 1009 / numRes : 401
+232875	state: 
+233015	result: 0.264 / count: 1009 / numRes : 401
+233015	state: 
+233172	result: 0.264 / count: 1009 / numRes : 401
+233172	state: 
+233328	result: 0.264 / count: 1009 / numRes : 401
+233328	state: 
+233484	result: 0.264 / count: 1009 / numRes : 401
+233484	state: 
+233625	result: 0.264 / count: 1009 / numRes : 401
+233625	state: 
+233781	result: 0.264 / count: 1009 / numRes : 401
+233781	state: 
+233937	result: 0.264 / count: 1009 / numRes : 401
+233937	state: 
+234078	result: 0.264 / count: 1009 / numRes : 401
+234078	state: 
+234265	result: 0.264 / count: 1009 / numRes : 401
+234265	state: 
+234437	result: 0.264 / count: 1009 / numRes : 401
+234437	state: 
+234593	result: 0.264 / count: 1009 / numRes : 401
+234593	state: 
+234734	result: 0.264 / count: 1009 / numRes : 401
+234734	state: 
+234890	result: 0.264 / count: 1009 / numRes : 401
+234890	state: 
+235031	result: 0.264 / count: 1009 / numRes : 401
+235031	state: 
+235187	result: 0.264 / count: 1009 / numRes : 401
+235187	state: 
+235500	result: 0.264 / count: 1009 / numRes : 401
+235500	state: 
+235656	result: 0.264 / count: 1009 / numRes : 401
+235656	state: 
+235797	result: 0.264 / count: 1009 / numRes : 401
+235797	state: 
+235953	result: 0.264 / count: 1009 / numRes : 401
+235953	state: 
+236093	result: 0.264 / count: 1009 / numRes : 401
+236093	state: 
+236250	result: 0.264 / count: 1009 / numRes : 401
+236250	state: 
+236390	result: 0.264 / count: 1009 / numRes : 401
+236390	state: 
+236562	result: 0.264 / count: 1009 / numRes : 401
+236562	state: 
+236703	result: 0.264 / count: 1009 / numRes : 401
+236703	state: 
+236922	result: 0.264 / count: 1009 / numRes : 401
+236922	state: 
+237047	result: 0.264 / count: 1009 / numRes : 401
+237047	state: 
+237203	result: 0.264 / count: 1009 / numRes : 401
+237203	state: 
+237359	result: 0.264 / count: 1009 / numRes : 401
+237359	state: 
+237500	result: 0.264 / count: 1009 / numRes : 401
+237500	state: 
+237640	result: 0.264 / count: 1009 / numRes : 401
+237640	state: 
+237812	result: 0.264 / count: 1009 / numRes : 401
+237812	state: 
+238125	result: 0.264 / count: 1009 / numRes : 401
+238125	state: 
+238265	result: 0.264 / count: 1009 / numRes : 401
+238265	state: 
+238406	result: 0.264 / count: 1009 / numRes : 401
+238406	state: 
+238547	result: 0.264 / count: 1009 / numRes : 401
+238547	state: 
+238718	result: 0.264 / count: 1009 / numRes : 401
+238718	state: 
+238875	result: 0.264 / count: 1009 / numRes : 401
+238875	state: 
+239015	result: 0.264 / count: 1009 / numRes : 401
+239015	state: 
+239172	result: 0.264 / count: 1009 / numRes : 401
+239172	state: 
+239297	result: 0.264 / count: 1009 / numRes : 401
+239297	state: 
+239515	result: 0.264 / count: 1009 / numRes : 401
+239515	state: 
+239656	result: 0.264 / count: 1009 / numRes : 401
+239656	state: 
+239812	result: 0.264 / count: 1009 / numRes : 401
+239812	state: 
+239968	result: 0.264 / count: 1009 / numRes : 401
+239968	state: 
+240125	result: 0.264 / count: 1009 / numRes : 401
+240125	state: 
+240265	result: 0.264 / count: 1009 / numRes : 401
+240265	state: 
+240422	result: 0.264 / count: 1009 / numRes : 401
+240422	state: 
+240718	result: 0.264 / count: 1009 / numRes : 401
+240718	state: 
+240890	result: 0.264 / count: 1009 / numRes : 401
+240890	state: 
+241031	result: 0.264 / count: 1009 / numRes : 401
+241031	state: 
+241187	result: 0.264 / count: 1009 / numRes : 401
+241187	state: 
+241328	result: 0.264 / count: 1009 / numRes : 401
+241343	state: 
+241484	result: 0.264 / count: 1009 / numRes : 401
+241484	state: 
+241625	result: 0.264 / count: 1009 / numRes : 401
+241625	state: 
+241781	result: 0.264 / count: 1009 / numRes : 401
+241781	state: 
+241922	result: 0.264 / count: 1009 / numRes : 401
+241922	state: 
+242140	result: 0.264 / count: 1009 / numRes : 401
+242140	state: 
+242281	result: 0.264 / count: 1009 / numRes : 401
+242281	state: 
+242422	result: 0.264 / count: 1009 / numRes : 401
+242422	state: 
+242578	result: 0.264 / count: 1009 / numRes : 401
+242578	state: 
+242734	result: 0.264 / count: 1009 / numRes : 401
+242734	state: 
+242890	result: 0.264 / count: 1009 / numRes : 401
+242890	state: 
+243047	result: 0.264 / count: 1009 / numRes : 401
+243047	state: 
+243359	result: 0.264 / count: 1009 / numRes : 401
+243359	state: 
+243500	result: 0.264 / count: 1009 / numRes : 401
+243500	state: 
+243656	result: 0.264 / count: 1009 / numRes : 401
+243656	state: 
+243797	result: 0.264 / count: 1009 / numRes : 401
+243797	state: 
+243968	result: 0.264 / count: 1009 / numRes : 401
+243968	state: 
+244109	result: 0.264 / count: 1009 / numRes : 401
+244109	state: 
+244250	result: 0.264 / count: 1009 / numRes : 401
+244250	state: 
+244422	result: 0.264 / count: 1009 / numRes : 401
+244422	state: 
+244547	result: 0.264 / count: 1009 / numRes : 401
+244547	state: 
+244781	result: 0.264 / count: 1009 / numRes : 401
+244781	state: 
+244906	result: 0.264 / count: 1009 / numRes : 401
+244906	state: 
+245062	result: 0.264 / count: 1009 / numRes : 401
+245062	state: 
+245218	result: 0.264 / count: 1009 / numRes : 401
+245218	state: 
+245359	result: 0.264 / count: 1009 / numRes : 401
+245359	state: 
+245500	result: 0.264 / count: 1009 / numRes : 401
+245500	state: 
+245672	result: 0.264 / count: 1009 / numRes : 401
+245672	state: 
+245968	result: 0.264 / count: 1009 / numRes : 401
+245968	state: 
+246109	result: 0.264 / count: 1009 / numRes : 401
+246109	state: 
+246281	result: 0.264 / count: 1009 / numRes : 401
+246281	state: 
+246437	result: 0.264 / count: 1009 / numRes : 401
+246437	state: 
+246562	result: 0.264 / count: 1009 / numRes : 401
+246562	state: 
+246734	result: 0.264 / count: 1009 / numRes : 401
+246734	state: 
+246875	result: 0.264 / count: 1009 / numRes : 401
+246875	state: 
+247015	result: 0.264 / count: 1009 / numRes : 401
+247015	state: 
+247187	result: 0.264 / count: 1009 / numRes : 401
+247187	state: 
+247390	result: 0.264 / count: 1009 / numRes : 401
+247390	state: 
+247515	result: 0.264 / count: 1009 / numRes : 401
+247515	state: 
+247672	result: 0.264 / count: 1009 / numRes : 401
+247672	state: 
+247843	result: 0.264 / count: 1009 / numRes : 401
+247843	state: 
+247984	result: 0.264 / count: 1009 / numRes : 401
+247984	state: 
+248140	result: 0.264 / count: 1009 / numRes : 401
+248140	state: 
+248281	result: 0.264 / count: 1009 / numRes : 401
+248281	state: 
+248625	result: 0.264 / count: 1009 / numRes : 401
+248625	state: 
+248750	result: 0.264 / count: 1009 / numRes : 401
+248750	state: 
+248890	result: 0.264 / count: 1009 / numRes : 401
+248890	state: 
+249031	result: 0.264 / count: 1009 / numRes : 401
+249031	state: 
+249203	result: 0.264 / count: 1009 / numRes : 401
+249203	state: 
+249359	result: 0.264 / count: 1009 / numRes : 401
+249359	state: 
+249500	result: 0.264 / count: 1009 / numRes : 401
+249500	state: 
+249672	result: 0.264 / count: 1009 / numRes : 401
+249672	state: 
+249812	result: 0.264 / count: 1009 / numRes : 401
+249812	state: 
+250015	result: 0.264 / count: 1009 / numRes : 401
+250015	state: 
+250156	result: 0.264 / count: 1009 / numRes : 401
+250156	state: 
+250312	result: 0.264 / count: 1009 / numRes : 401
+250312	state: 
+250453	result: 0.264 / count: 1009 / numRes : 401
+250453	state: 
+250609	result: 0.264 / count: 1009 / numRes : 401
+250609	state: 
+250781	result: 0.264 / count: 1009 / numRes : 401
+250781	state: 
+250922	result: 0.264 / count: 1009 / numRes : 401
+250922	state: 
+251218	result: 0.264 / count: 1009 / numRes : 401
+251218	state: 
+251390	result: 0.264 / count: 1009 / numRes : 401
+251390	state: 
+251547	result: 0.264 / count: 1009 / numRes : 401
+251547	state: 
+251703	result: 0.264 / count: 1009 / numRes : 401
+251703	state: 
+251843	result: 0.264 / count: 1009 / numRes : 401
+251843	state: 
+251984	result: 0.264 / count: 1009 / numRes : 401
+251984	state: 
+252140	result: 0.264 / count: 1009 / numRes : 401
+252140	state: 
+252297	result: 0.264 / count: 1009 / numRes : 401
+252297	state: 
+252437	result: 0.264 / count: 1009 / numRes : 401
+252437	state: 
+252656	result: 0.264 / count: 1009 / numRes : 401
+252656	state: 
+252797	result: 0.264 / count: 1009 / numRes : 401
+252797	state: 
+252953	result: 0.264 / count: 1009 / numRes : 401
+252953	state: 
+253093	result: 0.264 / count: 1009 / numRes : 401
+253093	state: 
+253234	result: 0.264 / count: 1009 / numRes : 401
+253234	state: 
+253406	result: 0.264 / count: 1009 / numRes : 401
+253406	state: 
+253547	result: 0.264 / count: 1009 / numRes : 401
+253547	state: 
+253859	result: 0.264 / count: 1009 / numRes : 401
+253859	state: 
+254000	result: 0.264 / count: 1009 / numRes : 401
+254000	state: 
+254156	result: 0.264 / count: 1009 / numRes : 401
+254156	state: 
+254297	result: 0.264 / count: 1009 / numRes : 401
+254297	state: 
+254468	result: 0.264 / count: 1009 / numRes : 401
+254468	state: 
+254609	result: 0.264 / count: 1009 / numRes : 401
+254609	state: 
+254781	result: 0.264 / count: 1009 / numRes : 401
+254781	state: 
+254922	result: 0.264 / count: 1009 / numRes : 401
+254922	state: 
+255062	result: 0.264 / count: 1009 / numRes : 401
+255062	state: 
+255406	result: 0.264 / count: 1009 / numRes : 401
+255406	state: 
+255562	result: 0.264 / count: 1009 / numRes : 401
+255562	state: 
+255703	result: 0.264 / count: 1009 / numRes : 401
+255703	state: 
+255859	result: 0.264 / count: 1009 / numRes : 401
+255859	state: 
+256031	result: 0.264 / count: 1009 / numRes : 401
+256031	state: 
+256172	result: 0.264 / count: 1009 / numRes : 401
+256172	state: 
+256484	result: 0.264 / count: 1009 / numRes : 401
+256484	state: 
+256625	result: 0.264 / count: 1009 / numRes : 401
+256625	state: 
+256781	result: 0.264 / count: 1009 / numRes : 401
+256781	state: 
+256937	result: 0.264 / count: 1009 / numRes : 401
+256937	state: 
+257078	result: 0.264 / count: 1009 / numRes : 401
+257078	state: 
+257250	result: 0.264 / count: 1009 / numRes : 401
+257250	state: 
+257406	result: 0.264 / count: 1009 / numRes : 401
+257406	state: 
+257703	result: 0.264 / count: 1009 / numRes : 401
+257703	state: 
+257859	result: 0.264 / count: 1009 / numRes : 401
+257859	state: 
+257984	result: 0.264 / count: 1009 / numRes : 401
+257984	state: 
+258140	result: 0.264 / count: 1009 / numRes : 401
+258140	state: 
+258312	result: 0.264 / count: 1009 / numRes : 401
+258312	state: 
+258453	result: 0.264 / count: 1009 / numRes : 401
+258453	state: 
+258593	result: 0.264 / count: 1009 / numRes : 401
+258593	state: 
+258750	result: 0.264 / count: 1009 / numRes : 401
+258750	state: 
+258906	result: 0.264 / count: 1009 / numRes : 401
+258906	state: 
+259250	result: 0.264 / count: 1009 / numRes : 401
+259250	state: 
+259390	result: 0.264 / count: 1009 / numRes : 401
+259390	state: 
+259531	result: 0.264 / count: 1009 / numRes : 401
+259531	state: 
+259703	result: 0.264 / count: 1009 / numRes : 401
+259703	state: 
+259859	result: 0.264 / count: 1009 / numRes : 401
+259859	state: 
+259984	result: 0.264 / count: 1009 / numRes : 401
+259984	state: 
+260203	result: 0.264 / count: 1009 / numRes : 401
+260203	state: 
+260343	result: 0.264 / count: 1009 / numRes : 401
+260343	state: 
+260515	result: 0.264 / count: 1009 / numRes : 401
+260515	state: 
+260656	result: 0.264 / count: 1009 / numRes : 401
+260656	state: 
+260797	result: 0.264 / count: 1009 / numRes : 401
+260797	state: 
+260953	result: 0.264 / count: 1009 / numRes : 401
+260968	state: 
+261125	result: 0.264 / count: 1009 / numRes : 401
+261125	state: 
+261406	result: 0.264 / count: 1009 / numRes : 401
+261406	state: 
+261562	result: 0.264 / count: 1009 / numRes : 401
+261562	state: 
+261734	result: 0.264 / count: 1009 / numRes : 401
+261734	state: 
+261890	result: 0.264 / count: 1009 / numRes : 401
+261890	state: 
+262015	result: 0.264 / count: 1009 / numRes : 401
+262031	state: 
+262187	result: 0.264 / count: 1009 / numRes : 401
+262187	state: 
+262328	result: 0.264 / count: 1009 / numRes : 401
+262328	state: 
+262468	result: 0.264 / count: 1009 / numRes : 401
+262468	state: 
+262625	result: 0.264 / count: 1009 / numRes : 401
+262625	state: 
+262859	result: 0.264 / count: 1009 / numRes : 401
+262859	state: 
+263015	result: 0.264 / count: 1009 / numRes : 401
+263015	state: 
+263140	result: 0.264 / count: 1009 / numRes : 401
+263140	state: 
+263297	result: 0.264 / count: 1009 / numRes : 401
+263297	state: 
+263453	result: 0.264 / count: 1009 / numRes : 401
+263453	state: 
+263593	result: 0.264 / count: 1009 / numRes : 401
+263593	state: 
+263750	result: 0.264 / count: 1009 / numRes : 401
+263750	state: 
+264093	result: 0.264 / count: 1009 / numRes : 401
+264093	state: 
+264203	result: 0.264 / count: 1009 / numRes : 401
+264203	state: 
+264375	result: 0.264 / count: 1009 / numRes : 401
+264375	state: 
+264500	result: 0.264 / count: 1009 / numRes : 401
+264500	state: 
+264656	result: 0.264 / count: 1009 / numRes : 401
+264656	state: 
+264812	result: 0.264 / count: 1009 / numRes : 401
+264812	state: 
+264953	result: 0.264 / count: 1009 / numRes : 401
+264953	state: 
+265125	result: 0.264 / count: 1009 / numRes : 401
+265125	state: 
+265265	result: 0.264 / count: 1009 / numRes : 401
+265265	state: 
+265484	result: 0.264 / count: 1009 / numRes : 401
+265484	state: 
+265609	result: 0.264 / count: 1009 / numRes : 401
+265609	state: 
+265765	result: 0.264 / count: 1009 / numRes : 401
+265765	state: 
+265922	result: 0.264 / count: 1009 / numRe

@@ -1,0 +1,1628 @@
+IBase.0: Arg received: nogeo
+DbFuncs.0: Loading PostgreSQL drivers...
+DbThread[0] started
+BldgDbMgr[0] values loaded (533)
+ParamWheel[0] values loaded (6)
+ParamWheelMgr[0] addWheel runs on high school
+ParamWheel[1] values loaded (5)
+ParamWheelMgr[1] addWheel runs on bldg type
+ParamWheel[2] values loaded (6)
+ParamWheelMgr[2] addWheel runs on floors
+ParamWheel[3] values loaded (5)
+ParamWheelMgr[3] addWheel runs on features
+ParamWheel[4] tok sqfoot: loadVals ignored
+ParamWheelMgr[4] addWheel runs on sqfoot
+ParamWheel[5] tok acreage: loadVals ignored
+ParamWheelMgr[5] addWheel runs on acreage
+ParamWheel[6] tok price: loadVals ignored
+ParamWheelMgr[6] addWheel runs on price
+WRClient[0] started
+WRClient[1] running
+WRClient[2] received exit event: 2 190
+WRackModel.0: tokExit: 190
+QRackInterp.0: TOK EXIT: bldg type
+QRackInterp.1: strangeness in processPTokExit: handle doesn't exist!
+PToksActive.0: ptok bldg type exits
+WRClient[3] received entrance event: 3 207
+PToksActive.1: ptok sq_foot enters
+QRackInterp.2: TOK ENTRANCE: sq_foot
+WRackRels.0: printRels: (sq_foot) 
+QRackInterp.3: QUERY: select bldg_id from building where (sq_foot > -1.0);
+
+BldgDbMgr[1] calcIdsInRange: 0 results
+BldgDbMgr[2] calcIdsInRange: 313 results
+QRackInterp.4: QUERY: select bldg_id from building where (sq_foot > 3656.47);
+
+WRClient[4] received entrance event: 2 190
+PToksActive.2: ptok bldg type enters
+QRackInterp.5: TOK ENTRANCE: bldg type
+WRackRels.1: printRels: (bldg type sq_foot) 
+QRackInterp.6: QUERY: select bldg_id from building where ((bldg_type = 'mobile') and (sq_foot > 3656.47));
+
+BldgDbMgr[3] gRD val: mobile
+BldgDbMgr[4] calcIdsInRange: 21 results
+BldgDbMgr[5] gRD val: patio
+BldgDbMgr[6] calcIdsInRange: 17 results
+QRackInterp.7: QUERY: select bldg_id from building where ((bldg_type = 'patio') and (sq_foot > 3656.47));
+
+BldgDbMgr[7] gRD val: patio
+BldgDbMgr[8] calcIdsInRange: 17 results
+BldgDbMgr[9] calcIdsInRange: 332 results
+QRackInterp.8: QUERY: select bldg_id from building where ((bldg_type = 'patio') and (sq_foot > 3821.18));
+
+BldgDbMgr[10] calcIdsInRange: 320 results
+QRackInterp.9: QUERY: select bldg_id from building where ((bldg_type = 'patio') and (sq_foot > 3705.88));
+
+WRClient[5] received entrance event: 1 76
+PToksActive.3: ptok listing_price enters
+QRackInterp.10: TOK ENTRANCE: listing_price
+WRackRels.2: printRels: (listing_price bldg type sq_foot) 
+QRackInterp.11: QUERY: select bldg_id from building where ((listing_price < -1.0) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[11] calcIdsInRange: 0 results
+BldgDbMgr[12] calcIdsInRange: 383 results
+QRackInterp.12: QUERY: select bldg_id from building where ((listing_price < 663.53) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[13] calcIdsInRange: 387 results
+QRackInterp.13: QUERY: select bldg_id from building where ((listing_price < 677.65) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[14] calcIdsInRange: 394 results
+QRackInterp.14: QUERY: select bldg_id from building where ((listing_price < 691.76) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[15] calcIdsInRange: 418 results
+QRackInterp.15: QUERY: select bldg_id from building where ((listing_price < 738.82) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[16] calcIdsInRange: 451 results
+QRackInterp.16: QUERY: select bldg_id from building where ((listing_price < 800.0) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[17] calcIdsInRange: 454 results
+QRackInterp.17: QUERY: select bldg_id from building where ((listing_price < 828.24) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[18] calcIdsInRange: 459 results
+QRackInterp.18: QUERY: select bldg_id from building where ((listing_price < 889.41) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[19] calcIdsInRange: 469 results
+QRackInterp.19: QUERY: select bldg_id from building where ((listing_price < 950.59) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[20] calcIdsInRange: 472 results
+QRackInterp.20: QUERY: select bldg_id from building where ((listing_price < 1016.47) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[21] calcIdsInRange: 474 results
+QRackInterp.21: QUERY: select bldg_id from building where ((listing_price < 1077.65) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[22] calcIdsInRange: 478 results
+QRackInterp.22: QUERY: select bldg_id from building where ((listing_price < 1105.88) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[23] calcIdsInRange: 533 results
+QRackInterp.23: QUERY: select bldg_id from building where ((bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[24] calcIdsInRange: 479 results
+QRackInterp.24: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[25] calcIdsInRange: 476 results
+QRackInterp.25: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[26] calcIdsInRange: 474 results
+QRackInterp.26: QUERY: select bldg_id from building where ((listing_price < 1058.82) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[27] calcIdsInRange: 472 results
+QRackInterp.27: QUERY: select bldg_id from building where ((listing_price < 1016.47) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[28] calcIdsInRange: 468 results
+QRackInterp.28: QUERY: select bldg_id from building where ((listing_price < 936.47) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[29] calcIdsInRange: 459 results
+QRackInterp.29: QUERY: select bldg_id from building where ((listing_price < 889.41) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[30] calcIdsInRange: 454 results
+QRackInterp.30: QUERY: select bldg_id from building where ((listing_price < 828.24) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[31] calcIdsInRange: 440 results
+QRackInterp.31: QUERY: select bldg_id from building where ((listing_price < 785.88) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[32] calcIdsInRange: 413 results
+QRackInterp.32: QUERY: select bldg_id from building where ((listing_price < 724.71) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[33] calcIdsInRange: 383 results
+QRackInterp.33: QUERY: select bldg_id from building where ((listing_price < 663.53) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[34] calcIdsInRange: 373 results
+QRackInterp.34: QUERY: select bldg_id from building where ((listing_price < 616.47) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[35] calcIdsInRange: 343 results
+QRackInterp.35: QUERY: select bldg_id from building where ((listing_price < 536.47) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[36] calcIdsInRange: 338 results
+QRackInterp.36: QUERY: select bldg_id from building where ((listing_price < 508.24) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[37] calcIdsInRange: 373 results
+QRackInterp.37: QUERY: select bldg_id from building where ((listing_price < 616.47) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[38] calcIdsInRange: 411 results
+QRackInterp.38: QUERY: select bldg_id from building where ((listing_price < 705.88) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[39] calcIdsInRange: 454 results
+QRackInterp.39: QUERY: select bldg_id from building where ((listing_price < 828.24) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[40] calcIdsInRange: 468 results
+QRackInterp.40: QUERY: select bldg_id from building where ((listing_price < 936.47) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[41] calcIdsInRange: 474 results
+QRackInterp.41: QUERY: select bldg_id from building where ((listing_price < 1077.65) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[42] calcIdsInRange: 478 results
+QRackInterp.42: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[43] calcIdsInRange: 479 results
+QRackInterp.43: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[44] calcIdsInRange: 533 results
+QRackInterp.44: QUERY: select bldg_id from building where ((bldg_type = 'patio') and (sq_foot > 3705.88));
+
+BldgDbMgr[45] calcIdsInRange: 307 results
+QRackInterp.45: QUERY: select bldg_id from building where ((bldg_type = 'patio') and (sq_foot > 3607.06));
+
+BldgDbMgr[46] calcIdsInRange: 332 results
+QRackInterp.46: QUERY: select bldg_id from building where ((bldg_type = 'patio') and (sq_foot > 3821.18));
+
+BldgDbMgr[47] calcIdsInRange: 313 results
+QRackInterp.47: QUERY: select bldg_id from building where ((bldg_type = 'patio') and (sq_foot > 3656.47));
+
+BldgDbMgr[48] gRD val: patio
+BldgDbMgr[49] calcIdsInRange: 17 results
+BldgDbMgr[50] gRD val: patio
+BldgDbMgr[51] calcIdsInRange: 17 results
+BldgDbMgr[52] gRD val: single fam
+BldgDbMgr[53] calcIdsInRange: 356 results
+QRackInterp.48: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 3656.47));
+
+BldgDbMgr[54] gRD val: single fam
+BldgDbMgr[55] calcIdsInRange: 356 results
+BldgDbMgr[56] gRD val: single fam
+BldgDbMgr[57] calcIdsInRange: 356 results
+BldgDbMgr[58] gRD val: single fam
+BldgDbMgr[59] calcIdsInRange: 356 results
+BldgDbMgr[60] gRD val: single fam
+BldgDbMgr[61] calcIdsInRange: 356 results
+BldgDbMgr[62] calcIdsInRange: 307 results
+QRackInterp.49: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 3607.06));
+
+BldgDbMgr[63] calcIdsInRange: 320 results
+QRackInterp.50: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 3705.88));
+
+BldgDbMgr[64] calcIdsInRange: 324 results
+QRackInterp.51: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 3771.76));
+
+BldgDbMgr[65] calcIdsInRange: 292 results
+QRackInterp.52: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 3491.76));
+
+BldgDbMgr[66] calcIdsInRange: 265 results
+QRackInterp.53: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 3327.06));
+
+BldgDbMgr[67] calcIdsInRange: 233 results
+QRackInterp.54: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 3014.12));
+
+BldgDbMgr[68] calcIdsInRange: 218 results
+QRackInterp.55: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2800.0));
+
+BldgDbMgr[69] calcIdsInRange: 187 results
+QRackInterp.56: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[70] calcIdsInRange: 152 results
+QRackInterp.57: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2256.47));
+
+BldgDbMgr[71] calcIdsInRange: 121 results
+QRackInterp.58: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2042.35));
+
+BldgDbMgr[72] calcIdsInRange: 92 results
+QRackInterp.59: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 1877.65));
+
+BldgDbMgr[73] calcIdsInRange: 60 results
+QRackInterp.60: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 1663.53));
+
+BldgDbMgr[74] calcIdsInRange: 40 results
+QRackInterp.61: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 1564.71));
+
+BldgDbMgr[75] calcIdsInRange: 27 results
+QRackInterp.62: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 1449.41));
+
+BldgDbMgr[76] calcIdsInRange: 20 results
+QRackInterp.63: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 1350.59));
+
+BldgDbMgr[77] calcIdsInRange: 11 results
+QRackInterp.64: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 1235.29));
+
+BldgDbMgr[78] calcIdsInRange: 10 results
+QRackInterp.65: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 1136.47));
+
+BldgDbMgr[79] gRD val: single fam
+BldgDbMgr[80] calcIdsInRange: 356 results
+BldgDbMgr[81] calcIdsInRange: 20 results
+QRackInterp.66: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 1350.59));
+
+BldgDbMgr[82] calcIdsInRange: 11 results
+QRackInterp.67: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 1235.29));
+
+BldgDbMgr[83] calcIdsInRange: 23 results
+QRackInterp.68: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 1400.0));
+
+BldgDbMgr[84] calcIdsInRange: 33 results
+QRackInterp.69: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 1515.29));
+
+BldgDbMgr[85] calcIdsInRange: 60 results
+QRackInterp.70: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 1663.53));
+
+BldgDbMgr[86] calcIdsInRange: 83 results
+QRackInterp.71: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 1828.24));
+
+BldgDbMgr[87] calcIdsInRange: 133 results
+QRackInterp.72: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2108.24));
+
+BldgDbMgr[88] calcIdsInRange: 144 results
+QRackInterp.73: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2207.06));
+
+BldgDbMgr[89] calcIdsInRange: 171 results
+QRackInterp.74: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2371.76));
+
+BldgDbMgr[90] calcIdsInRange: 163 results
+QRackInterp.75: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2322.35));
+
+BldgDbMgr[91] calcIdsInRange: 181 results
+QRackInterp.76: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[92] calcIdsInRange: 187 results
+QRackInterp.77: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[93] calcIdsInRange: 193 results
+QRackInterp.78: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[94] calcIdsInRange: 197 results
+QRackInterp.79: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[95] calcIdsInRange: 476 results
+QRackInterp.80: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[96] calcIdsInRange: 478 results
+QRackInterp.81: QUERY: select bldg_id from building where ((listing_price < 1105.88) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[97] calcIdsInRange: 472 results
+QRackInterp.82: QUERY: select bldg_id from building where ((listing_price < 1030.59) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[98] calcIdsInRange: 471 results
+QRackInterp.83: QUERY: select bldg_id from building where ((listing_price < 997.65) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[99] calcIdsInRange: 199 results
+QRackInterp.84: QUERY: select bldg_id from building where ((listing_price < 997.65) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[100] calcIdsInRange: 469 results
+QRackInterp.85: QUERY: select bldg_id from building where ((listing_price < 969.41) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[101] calcIdsInRange: 468 results
+QRackInterp.86: QUERY: select bldg_id from building where ((listing_price < 922.35) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[102] calcIdsInRange: 468 results
+QRackInterp.87: QUERY: select bldg_id from building where ((listing_price < 908.24) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[103] calcIdsInRange: 457 results
+QRackInterp.88: QUERY: select bldg_id from building where ((listing_price < 861.18) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[104] calcIdsInRange: 451 results
+QRackInterp.89: QUERY: select bldg_id from building where ((listing_price < 814.12) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[105] calcIdsInRange: 440 results
+QRackInterp.90: QUERY: select bldg_id from building where ((listing_price < 785.88) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[106] calcIdsInRange: 429 results
+QRackInterp.91: QUERY: select bldg_id from building where ((listing_price < 752.94) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[107] calcIdsInRange: 413 results
+QRackInterp.92: QUERY: select bldg_id from building where ((listing_price < 724.71) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[108] calcIdsInRange: 394 results
+QRackInterp.93: QUERY: select bldg_id from building where ((listing_price < 691.76) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[109] calcIdsInRange: 383 results
+QRackInterp.94: QUERY: select bldg_id from building where ((listing_price < 663.53) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[110] calcIdsInRange: 373 results
+QRackInterp.95: QUERY: select bldg_id from building where ((listing_price < 602.35) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[111] calcIdsInRange: 373 results
+QRackInterp.96: QUERY: select bldg_id from building where ((listing_price < 616.47) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[112] calcIdsInRange: 343 results
+QRackInterp.97: QUERY: select bldg_id from building where ((listing_price < 536.47) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[113] calcIdsInRange: 350 results
+QRackInterp.98: QUERY: select bldg_id from building where ((listing_price < 555.29) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[114] calcIdsInRange: 319 results
+QRackInterp.99: QUERY: select bldg_id from building where ((listing_price < 475.29) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[115] calcIdsInRange: 315 results
+QRackInterp.100: QUERY: select bldg_id from building where ((listing_price < 461.18) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[116] calcIdsInRange: 280 results
+QRackInterp.101: QUERY: select bldg_id from building where ((listing_price < 414.12) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[117] calcIdsInRange: 274 results
+QRackInterp.102: QUERY: select bldg_id from building where ((listing_price < 400.0) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[118] calcIdsInRange: 233 results
+QRackInterp.103: QUERY: select bldg_id from building where ((listing_price < 352.94) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[119] calcIdsInRange: 220 results
+QRackInterp.104: QUERY: select bldg_id from building where ((listing_price < 338.82) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[120] calcIdsInRange: 177 results
+QRackInterp.105: QUERY: select bldg_id from building where ((listing_price < 277.65) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[121] calcIdsInRange: 207 results
+QRackInterp.106: QUERY: select bldg_id from building where ((listing_price < 310.59) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[122] calcIdsInRange: 181 results
+QRackInterp.107: QUERY: select bldg_id from building where ((listing_price < 310.59) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[123] calcIdsInRange: 213 results
+QRackInterp.108: QUERY: select bldg_id from building where ((listing_price < 324.71) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[124] calcIdsInRange: 233 results
+QRackInterp.109: QUERY: select bldg_id from building where ((listing_price < 352.94) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[125] calcIdsInRange: 245 results
+QRackInterp.110: QUERY: select bldg_id from building where ((listing_price < 371.76) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[126] calcIdsInRange: 258 results
+QRackInterp.111: QUERY: select bldg_id from building where ((listing_price < 385.88) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[127] calcIdsInRange: 295 results
+QRackInterp.112: QUERY: select bldg_id from building where ((listing_price < 432.94) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[128] calcIdsInRange: 280 results
+QRackInterp.113: QUERY: select bldg_id from building where ((listing_price < 414.12) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[129] calcIdsInRange: 304 results
+QRackInterp.114: QUERY: select bldg_id from building where ((listing_price < 447.06) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[130] calcIdsInRange: 295 results
+QRackInterp.115: QUERY: select bldg_id from building where ((listing_price < 432.94) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[131] calcIdsInRange: 315 results
+QRackInterp.116: QUERY: select bldg_id from building where ((listing_price < 461.18) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[132] calcIdsInRange: 327 results
+QRackInterp.117: QUERY: select bldg_id from building where ((listing_price < 494.12) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[133] calcIdsInRange: 341 results
+QRackInterp.118: QUERY: select bldg_id from building where ((listing_price < 522.35) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[134] calcIdsInRange: 343 results
+QRackInterp.119: QUERY: select bldg_id from building where ((listing_price < 536.47) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[135] calcIdsInRange: 350 results
+QRackInterp.120: QUERY: select bldg_id from building where ((listing_price < 555.29) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[136] calcIdsInRange: 357 results
+QRackInterp.121: QUERY: select bldg_id from building where ((listing_price < 569.41) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[137] calcIdsInRange: 193 results
+QRackInterp.122: QUERY: select bldg_id from building where ((listing_price < 569.41) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[138] calcIdsInRange: 373 results
+QRackInterp.123: QUERY: select bldg_id from building where ((listing_price < 616.47) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[139] calcIdsInRange: 364 results
+QRackInterp.124: QUERY: select bldg_id from building where ((listing_price < 583.53) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[140] calcIdsInRange: 197 results
+QRackInterp.125: QUERY: select bldg_id from building where ((listing_price < 583.53) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[141] calcIdsInRange: 343 results
+QRackInterp.126: QUERY: select bldg_id from building where ((listing_price < 536.47) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[142] calcIdsInRange: 373 results
+QRackInterp.127: QUERY: select bldg_id from building where ((listing_price < 602.35) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[143] calcIdsInRange: 364 results
+QRackInterp.128: QUERY: select bldg_id from building where ((listing_price < 583.53) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[144] calcIdsInRange: 373 results
+QRackInterp.129: QUERY: select bldg_id from building where ((listing_price < 616.47) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[145] calcIdsInRange: 373 results
+QRackInterp.130: QUERY: select bldg_id from building where ((listing_price < 602.35) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[146] calcIdsInRange: 350 results
+QRackInterp.131: QUERY: select bldg_id from building where ((listing_price < 555.29) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[147] calcIdsInRange: 373 results
+QRackInterp.132: QUERY: select bldg_id from building where ((listing_price < 616.47) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[148] calcIdsInRange: 364 results
+QRackInterp.133: QUERY: select bldg_id from building where ((listing_price < 583.53) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[149] calcIdsInRange: 199 results
+QRackInterp.134: QUERY: select bldg_id from building where ((listing_price < 583.53) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[150] calcIdsInRange: 350 results
+QRackInterp.135: QUERY: select bldg_id from building where ((listing_price < 555.29) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[151] calcIdsInRange: 373 results
+QRackInterp.136: QUERY: select bldg_id from building where ((listing_price < 616.47) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[152] calcIdsInRange: 364 results
+QRackInterp.137: QUERY: select bldg_id from building where ((listing_price < 583.53) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[153] calcIdsInRange: 343 results
+QRackInterp.138: QUERY: select bldg_id from building where ((listing_price < 536.47) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[154] calcIdsInRange: 373 results
+QRackInterp.139: QUERY: select bldg_id from building where ((listing_price < 602.35) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[155] calcIdsInRange: 364 results
+QRackInterp.140: QUERY: select bldg_id from building where ((listing_price < 583.53) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[156] calcIdsInRange: 373 results
+QRackInterp.141: QUERY: select bldg_id from building where ((listing_price < 616.47) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[157] calcIdsInRange: 373 results
+QRackInterp.142: QUERY: select bldg_id from building where ((listing_price < 602.35) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[158] calcIdsInRange: 181 results
+QRackInterp.143: QUERY: select bldg_id from building where ((listing_price < 602.35) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[159] calcIdsInRange: 193 results
+QRackInterp.144: QUERY: select bldg_id from building where ((listing_price < 602.35) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[160] calcIdsInRange: 350 results
+QRackInterp.145: QUERY: select bldg_id from building where ((listing_price < 555.29) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[161] calcIdsInRange: 373 results
+QRackInterp.146: QUERY: select bldg_id from building where ((listing_price < 616.47) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[162] calcIdsInRange: 373 results
+QRackInterp.147: QUERY: select bldg_id from building where ((listing_price < 602.35) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[163] calcIdsInRange: 343 results
+QRackInterp.148: QUERY: select bldg_id from building where ((listing_price < 536.47) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[164] calcIdsInRange: 327 results
+QRackInterp.149: QUERY: select bldg_id from building where ((listing_price < 494.12) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[165] calcIdsInRange: 304 results
+QRackInterp.150: QUERY: select bldg_id from building where ((listing_price < 447.06) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[166] calcIdsInRange: 274 results
+QRackInterp.151: QUERY: select bldg_id from building where ((listing_price < 400.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[167] calcIdsInRange: 220 results
+QRackInterp.152: QUERY: select bldg_id from building where ((listing_price < 338.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[168] calcIdsInRange: 197 results
+QRackInterp.153: QUERY: select bldg_id from building where ((listing_price < 338.82) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[169] calcIdsInRange: 166 results
+QRackInterp.154: QUERY: select bldg_id from building where ((listing_price < 263.53) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[170] calcIdsInRange: 138 results
+QRackInterp.155: QUERY: select bldg_id from building where ((listing_price < 216.47) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[171] calcIdsInRange: 119 results
+QRackInterp.156: QUERY: select bldg_id from building where ((listing_price < 183.53) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[172] calcIdsInRange: 89 results
+QRackInterp.157: QUERY: select bldg_id from building where ((listing_price < 155.29) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[173] calcIdsInRange: 132 results
+QRackInterp.158: QUERY: select bldg_id from building where ((listing_price < 202.35) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[174] calcIdsInRange: 119 results
+QRackInterp.159: QUERY: select bldg_id from building where ((listing_price < 183.53) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[175] calcIdsInRange: 213 results
+QRackInterp.160: QUERY: select bldg_id from building where ((listing_price < 324.71) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[176] calcIdsInRange: 319 results
+QRackInterp.161: QUERY: select bldg_id from building where ((listing_price < 475.29) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[177] calcIdsInRange: 373 results
+QRackInterp.162: QUERY: select bldg_id from building where ((listing_price < 602.35) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[178] calcIdsInRange: 429 results
+QRackInterp.163: QUERY: select bldg_id from building where ((listing_price < 752.94) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[179] calcIdsInRange: 459 results
+QRackInterp.164: QUERY: select bldg_id from building where ((listing_price < 875.29) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[180] calcIdsInRange: 199 results
+QRackInterp.165: QUERY: select bldg_id from building where ((listing_price < 875.29) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[181] calcIdsInRange: 472 results
+QRackInterp.166: QUERY: select bldg_id from building where ((listing_price < 1030.59) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[182] calcIdsInRange: 476 results
+QRackInterp.167: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[183] calcIdsInRange: 478 results
+QRackInterp.168: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[184] calcIdsInRange: 479 results
+QRackInterp.169: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[185] calcIdsInRange: 533 results
+QRackInterp.170: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[186] gRD val: single fam
+BldgDbMgr[187] calcIdsInRange: 356 results
+BldgDbMgr[188] gRD val: spl level
+BldgDbMgr[189] calcIdsInRange: 39 results
+QRackInterp.171: QUERY: select bldg_id from building where ((bldg_type = 'spl level') and (sq_foot > 2684.71));
+
+BldgDbMgr[190] gRD val: spl level
+BldgDbMgr[191] calcIdsInRange: 39 results
+BldgDbMgr[192] gRD val: spl level
+BldgDbMgr[193] calcIdsInRange: 39 results
+BldgDbMgr[194] gRD val: tri-level
+BldgDbMgr[195] calcIdsInRange: 43 results
+QRackInterp.172: QUERY: select bldg_id from building where ((bldg_type = 'tri-level') and (sq_foot > 2684.71));
+
+BldgDbMgr[196] gRD val: tri-level
+BldgDbMgr[197] calcIdsInRange: 43 results
+BldgDbMgr[198] gRD val: tri-level
+BldgDbMgr[199] calcIdsInRange: 43 results
+BldgDbMgr[200] gRD val: mobile
+BldgDbMgr[201] calcIdsInRange: 21 results
+QRackInterp.173: QUERY: select bldg_id from building where ((bldg_type = 'mobile') and (sq_foot > 2684.71));
+
+BldgDbMgr[202] gRD val: tri-level
+BldgDbMgr[203] calcIdsInRange: 43 results
+QRackInterp.174: QUERY: select bldg_id from building where ((bldg_type = 'tri-level') and (sq_foot > 2684.71));
+
+BldgDbMgr[204] gRD val: mobile
+BldgDbMgr[205] calcIdsInRange: 21 results
+QRackInterp.175: QUERY: select bldg_id from building where ((bldg_type = 'mobile') and (sq_foot > 2684.71));
+
+BldgDbMgr[206] gRD val: tri-level
+BldgDbMgr[207] calcIdsInRange: 43 results
+QRackInterp.176: QUERY: select bldg_id from building where ((bldg_type = 'tri-level') and (sq_foot > 2684.71));
+
+BldgDbMgr[208] gRD val: tri-level
+BldgDbMgr[209] calcIdsInRange: 43 results
+BldgDbMgr[210] gRD val: tri-level
+BldgDbMgr[211] calcIdsInRange: 43 results
+BldgDbMgr[212] gRD val: spl level
+BldgDbMgr[213] calcIdsInRange: 39 results
+QRackInterp.177: QUERY: select bldg_id from building where ((bldg_type = 'spl level') and (sq_foot > 2684.71));
+
+BldgDbMgr[214] gRD val: spl level
+BldgDbMgr[215] calcIdsInRange: 39 results
+BldgDbMgr[216] gRD val: spl level
+BldgDbMgr[217] calcIdsInRange: 39 results
+BldgDbMgr[218] gRD val: single fam
+BldgDbMgr[219] calcIdsInRange: 356 results
+QRackInterp.178: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2684.71));
+
+BldgDbMgr[220] gRD val: single fam
+BldgDbMgr[221] calcIdsInRange: 356 results
+BldgDbMgr[222] gRD val: single fam
+BldgDbMgr[223] calcIdsInRange: 356 results
+BldgDbMgr[224] gRD val: single fam
+BldgDbMgr[225] calcIdsInRange: 356 results
+BldgDbMgr[226] gRD val: single fam
+BldgDbMgr[227] calcIdsInRange: 356 results
+BldgDbMgr[228] gRD val: single fam
+BldgDbMgr[229] calcIdsInRange: 356 results
+BldgDbMgr[230] gRD val: patio
+BldgDbMgr[231] calcIdsInRange: 17 results
+QRackInterp.179: QUERY: select bldg_id from building where ((bldg_type = 'patio') and (sq_foot > 2684.71));
+
+BldgDbMgr[232] gRD val: patio
+BldgDbMgr[233] calcIdsInRange: 17 results
+BldgDbMgr[234] calcIdsInRange: 476 results
+QRackInterp.180: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'patio') and (sq_foot > 2684.71));
+
+BldgDbMgr[235] gRD val: patio
+BldgDbMgr[236] calcIdsInRange: 17 results
+BldgDbMgr[237] calcIdsInRange: 175 results
+QRackInterp.181: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'patio') and (sq_foot > 2421.18));
+
+BldgDbMgr[238] calcIdsInRange: 181 results
+QRackInterp.182: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'patio') and (sq_foot > 2470.59));
+
+BldgDbMgr[239] calcIdsInRange: 187 results
+QRackInterp.183: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'patio') and (sq_foot > 2536.47));
+
+BldgDbMgr[240] gRD val: patio
+BldgDbMgr[241] calcIdsInRange: 17 results
+BldgDbMgr[242] calcIdsInRange: 193 results
+QRackInterp.184: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'patio') and (sq_foot > 2585.88));
+
+BldgDbMgr[243] gRD val: patio
+BldgDbMgr[244] calcIdsInRange: 17 results
+BldgDbMgr[245] gRD val: patio
+BldgDbMgr[246] calcIdsInRange: 17 results
+BldgDbMgr[247] gRD val: patio
+BldgDbMgr[248] calcIdsInRange: 17 results
+BldgDbMgr[249] gRD val: patio
+BldgDbMgr[250] calcIdsInRange: 17 results
+BldgDbMgr[251] gRD val: single fam
+BldgDbMgr[252] calcIdsInRange: 356 results
+QRackInterp.185: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[253] gRD val: single fam
+BldgDbMgr[254] calcIdsInRange: 356 results
+BldgDbMgr[255] gRD val: single fam
+BldgDbMgr[256] calcIdsInRange: 356 results
+BldgDbMgr[257] gRD val: single fam
+BldgDbMgr[258] calcIdsInRange: 356 results
+BldgDbMgr[259] gRD val: single fam
+BldgDbMgr[260] calcIdsInRange: 356 results
+BldgDbMgr[261] gRD val: single fam
+BldgDbMgr[262] calcIdsInRange: 356 results
+BldgDbMgr[263] calcIdsInRange: 479 results
+QRackInterp.186: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+WRClient[6] received exit event: 2 190
+WRackModel.1: tokExit: 190
+QRackInterp.187: TOK EXIT: bldg type
+WRackRels.3: printRels: (listing_price sq_foot) 
+QRackInterp.188: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (sq_foot > 2585.88));
+
+PToksActive.4: ptok bldg type exits
+BldgDbMgr[264] calcIdsInRange: 533 results
+QRackInterp.189: QUERY: select bldg_id from building where ((sq_foot > 2585.88));
+
+WRClient[7] received entrance event: 2 190
+BldgDbMgr[265] gRD val: single fam
+BldgDbMgr[266] calcIdsInRange: 356 results
+WRackRels.4: printRels: (listing_price bldg type sq_foot) 
+QRackInterp.190: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[267] calcIdsInRange: 476 results
+QRackInterp.191: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[268] calcIdsInRange: 479 results
+QRackInterp.192: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[269] calcIdsInRange: 478 results
+QRackInterp.193: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[270] calcIdsInRange: 533 results
+QRackInterp.194: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[271] calcIdsInRange: 479 results
+QRackInterp.195: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[272] calcIdsInRange: 476 results
+QRackInterp.196: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[273] calcIdsInRange: 533 results
+QRackInterp.197: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[274] calcIdsInRange: 479 results
+QRackInterp.198: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[275] calcIdsInRange: 476 results
+QRackInterp.199: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[276] calcIdsInRange: 533 results
+QRackInterp.200: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[277] calcIdsInRange: 479 results
+QRackInterp.201: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[278] calcIdsInRange: 476 results
+QRackInterp.202: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[279] calcIdsInRange: 533 results
+QRackInterp.203: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[280] calcIdsInRange: 479 results
+QRackInterp.204: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[281] calcIdsInRange: 476 results
+QRackInterp.205: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[282] calcIdsInRange: 533 results
+QRackInterp.206: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[283] calcIdsInRange: 478 results
+QRackInterp.207: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[284] calcIdsInRange: 476 results
+QRackInterp.208: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[285] calcIdsInRange: 479 results
+QRackInterp.209: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[286] calcIdsInRange: 478 results
+QRackInterp.210: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[287] calcIdsInRange: 533 results
+QRackInterp.211: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[288] calcIdsInRange: 479 results
+QRackInterp.212: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[289] calcIdsInRange: 476 results
+QRackInterp.213: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[290] calcIdsInRange: 533 results
+QRackInterp.214: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[291] calcIdsInRange: 479 results
+QRackInterp.215: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[292] calcIdsInRange: 476 results
+QRackInterp.216: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[293] calcIdsInRange: 533 results
+QRackInterp.217: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[294] calcIdsInRange: 479 results
+QRackInterp.218: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[295] calcIdsInRange: 476 results
+QRackInterp.219: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[296] calcIdsInRange: 533 results
+QRackInterp.220: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[297] calcIdsInRange: 479 results
+QRackInterp.221: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[298] calcIdsInRange: 476 results
+QRackInterp.222: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[299] calcIdsInRange: 533 results
+QRackInterp.223: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[300] calcIdsInRange: 478 results
+QRackInterp.224: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[301] calcIdsInRange: 476 results
+QRackInterp.225: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[302] calcIdsInRange: 479 results
+QRackInterp.226: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[303] calcIdsInRange: 478 results
+QRackInterp.227: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[304] calcIdsInRange: 533 results
+QRackInterp.228: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[305] calcIdsInRange: 479 results
+QRackInterp.229: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[306] calcIdsInRange: 476 results
+QRackInterp.230: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[307] calcIdsInRange: 533 results
+QRackInterp.231: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[308] calcIdsInRange: 479 results
+QRackInterp.232: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[309] calcIdsInRange: 476 results
+QRackInterp.233: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[310] calcIdsInRange: 533 results
+QRackInterp.234: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[311] calcIdsInRange: 479 results
+QRackInterp.235: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[312] calcIdsInRange: 476 results
+QRackInterp.236: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[313] calcIdsInRange: 533 results
+QRackInterp.237: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[314] calcIdsInRange: 479 results
+QRackInterp.238: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[315] calcIdsInRange: 476 results
+QRackInterp.239: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[316] calcIdsInRange: 533 results
+QRackInterp.240: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[317] calcIdsInRange: 479 results
+QRackInterp.241: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[318] calcIdsInRange: 476 results
+QRackInterp.242: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[319] calcIdsInRange: 533 results
+QRackInterp.243: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[320] calcIdsInRange: 478 results
+QRackInterp.244: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[321] calcIdsInRange: 476 results
+QRackInterp.245: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[322] calcIdsInRange: 479 results
+QRackInterp.246: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[323] calcIdsInRange: 533 results
+QRackInterp.247: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[324] calcIdsInRange: 476 results
+QRackInterp.248: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[325] calcIdsInRange: 478 results
+QRackInterp.249: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[326] calcIdsInRange: 479 results
+QRackInterp.250: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[327] calcIdsInRange: 533 results
+QRackInterp.251: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[328] calcIdsInRange: 476 results
+QRackInterp.252: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[329] calcIdsInRange: 478 results
+QRackInterp.253: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[330] calcIdsInRange: 479 results
+QRackInterp.254: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[331] calcIdsInRange: 533 results
+QRackInterp.255: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[332] calcIdsInRange: 476 results
+QRackInterp.256: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[333] calcIdsInRange: 479 results
+QRackInterp.257: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[334] calcIdsInRange: 478 results
+QRackInterp.258: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[335] calcIdsInRange: 533 results
+QRackInterp.259: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[336] calcIdsInRange: 479 results
+QRackInterp.260: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[337] calcIdsInRange: 476 results
+QRackInterp.261: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[338] calcIdsInRange: 533 results
+QRackInterp.262: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[339] calcIdsInRange: 478 results
+QRackInterp.263: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[340] calcIdsInRange: 476 results
+QRackInterp.264: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[341] calcIdsInRange: 479 results
+QRackInterp.265: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[342] calcIdsInRange: 478 results
+QRackInterp.266: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[343] calcIdsInRange: 533 results
+QRackInterp.267: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[344] calcIdsInRange: 479 results
+QRackInterp.268: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[345] calcIdsInRange: 476 results
+QRackInterp.269: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[346] calcIdsInRange: 533 results
+QRackInterp.270: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[347] calcIdsInRange: 479 results
+QRackInterp.271: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[348] calcIdsInRange: 476 results
+QRackInterp.272: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[349] calcIdsInRange: 533 results
+QRackInterp.273: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[350] calcIdsInRange: 479 results
+QRackInterp.274: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[351] calcIdsInRange: 476 results
+QRackInterp.275: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[352] calcIdsInRange: 533 results
+QRackInterp.276: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[353] calcIdsInRange: 478 results
+QRackInterp.277: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[354] calcIdsInRange: 476 results
+QRackInterp.278: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[355] calcIdsInRange: 533 results
+QRackInterp.279: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[356] calcIdsInRange: 479 results
+QRackInterp.280: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[357] calcIdsInRange: 476 results
+QRackInterp.281: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[358] calcIdsInRange: 533 results
+QRackInterp.282: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[359] calcIdsInRange: 479 results
+QRackInterp.283: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[360] calcIdsInRange: 476 results
+QRackInterp.284: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[361] calcIdsInRange: 533 results
+QRackInterp.285: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[362] calcIdsInRange: 478 results
+QRackInterp.286: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[363] calcIdsInRange: 476 results
+QRackInterp.287: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[364] calcIdsInRange: 479 results
+QRackInterp.288: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[365] calcIdsInRange: 533 results
+QRackInterp.289: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[366] calcIdsInRange: 476 results
+QRackInterp.290: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[367] calcIdsInRange: 479 results
+QRackInterp.291: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[368] calcIdsInRange: 478 results
+QRackInterp.292: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[369] calcIdsInRange: 533 results
+QRackInterp.293: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[370] calcIdsInRange: 479 results
+QRackInterp.294: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[371] calcIdsInRange: 476 results
+QRackInterp.295: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[372] calcIdsInRange: 533 results
+QRackInterp.296: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[373] calcIdsInRange: 479 results
+QRackInterp.297: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[374] calcIdsInRange: 476 results
+QRackInterp.298: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[375] calcIdsInRange: 533 results
+QRackInterp.299: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[376] calcIdsInRange: 478 results
+QRackInterp.300: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[377] gRD val: single fam
+BldgDbMgr[378] calcIdsInRange: 356 results
+BldgDbMgr[379] calcIdsInRange: 476 results
+QRackInterp.301: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[380] calcIdsInRange: 479 results
+QRackInterp.302: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[381] calcIdsInRange: 533 results
+QRackInterp.303: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[382] calcIdsInRange: 476 results
+QRackInterp.304: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[383] calcIdsInRange: 479 results
+QRackInterp.305: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[384] calcIdsInRange: 533 results
+QRackInterp.306: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[385] gRD val: single fam
+BldgDbMgr[386] calcIdsInRange: 356 results
+BldgDbMgr[387] calcIdsInRange: 476 results
+QRackInterp.307: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[388] calcIdsInRange: 478 results
+QRackInterp.308: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[389] calcIdsInRange: 479 results
+QRackInterp.309: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[390] calcIdsInRange: 533 results
+QRackInterp.310: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[391] calcIdsInRange: 476 results
+QRackInterp.311: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[392] calcIdsInRange: 478 results
+QRackInterp.312: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[393] calcIdsInRange: 479 results
+QRackInterp.313: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[394] gRD val: single fam
+BldgDbMgr[395] calcIdsInRange: 356 results
+BldgDbMgr[396] gRD val: single fam
+BldgDbMgr[397] calcIdsInRange: 356 results
+BldgDbMgr[398] gRD val: single fam
+BldgDbMgr[399] calcIdsInRange: 356 results
+BldgDbMgr[400] calcIdsInRange: 533 results
+QRackInterp.314: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[401] calcIdsInRange: 476 results
+QRackInterp.315: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[402] calcIdsInRange: 478 results
+QRackInterp.316: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[403] calcIdsInRange: 479 results
+QRackInterp.317: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[404] calcIdsInRange: 533 results
+QRackInterp.318: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[405] calcIdsInRange: 476 results
+QRackInterp.319: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[406] calcIdsInRange: 479 results
+QRackInterp.320: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[407] calcIdsInRange: 533 results
+QRackInterp.321: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[408] calcIdsInRange: 476 results
+QRackInterp.322: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[409] calcIdsInRange: 479 results
+QRackInterp.323: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[410] calcIdsInRange: 533 results
+QRackInterp.324: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[411] calcIdsInRange: 476 results
+QRackInterp.325: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[412] calcIdsInRange: 479 results
+QRackInterp.326: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[413] calcIdsInRange: 533 results
+QRackInterp.327: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[414] calcIdsInRange: 476 results
+QRackInterp.328: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[415] calcIdsInRange: 478 results
+QRackInterp.329: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[416] calcIdsInRange: 479 results
+QRackInterp.330: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[417] calcIdsInRange: 533 results
+QRackInterp.331: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[418] calcIdsInRange: 476 results
+QRackInterp.332: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[419] calcIdsInRange: 474 results
+QRackInterp.333: QUERY: select bldg_id from building where ((listing_price < 1077.65) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[420] calcIdsInRange: 479 results
+QRackInterp.334: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[421] calcIdsInRange: 533 results
+QRackInterp.335: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[422] calcIdsInRange: 476 results
+QRackInterp.336: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[423] calcIdsInRange: 479 results
+QRackInterp.337: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[424] calcIdsInRange: 478 results
+QRackInterp.338: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[425] calcIdsInRange: 533 results
+QRackInterp.339: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[426] calcIdsInRange: 479 results
+QRackInterp.340: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[427] calcIdsInRange: 476 results
+QRackInterp.341: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[428] calcIdsInRange: 533 results
+QRackInterp.342: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[429] calcIdsInRange: 479 results
+QRackInterp.343: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[430] calcIdsInRange: 476 results
+QRackInterp.344: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[431] calcIdsInRange: 533 results
+QRackInterp.345: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[432] calcIdsInRange: 479 results
+QRackInterp.346: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[433] calcIdsInRange: 476 results
+QRackInterp.347: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[434] calcIdsInRange: 533 results
+QRackInterp.348: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[435] calcIdsInRange: 479 results
+QRackInterp.349: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[436] calcIdsInRange: 197 results
+QRackInterp.350: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[437] calcIdsInRange: 476 results
+QRackInterp.351: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[438] calcIdsInRange: 533 results
+QRackInterp.352: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[439] calcIdsInRange: 479 results
+QRackInterp.353: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[440] calcIdsInRange: 476 results
+QRackInterp.354: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[441] calcIdsInRange: 533 results
+QRackInterp.355: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[442] calcIdsInRange: 479 results
+QRackInterp.356: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[443] calcIdsInRange: 476 results
+QRackInterp.357: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[444] calcIdsInRange: 533 results
+QRackInterp.358: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[445] calcIdsInRange: 478 results
+QRackInterp.359: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[446] calcIdsInRange: 476 results
+QRackInterp.360: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[447] calcIdsInRange: 479 results
+QRackInterp.361: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[448] calcIdsInRange: 533 results
+QRackInterp.362: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[449] calcIdsInRange: 476 results
+QRackInterp.363: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[450] calcIdsInRange: 479 results
+QRackInterp.364: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[451] calcIdsInRange: 533 results
+QRackInterp.365: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[452] calcIdsInRange: 476 results
+QRackInterp.366: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[453] calcIdsInRange: 479 results
+QRackInterp.367: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[454] calcIdsInRange: 478 results
+QRackInterp.368: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[455] calcIdsInRange: 175 results
+QRackInterp.369: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[456] calcIdsInRange: 187 results
+QRackInterp.370: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[457] calcIdsInRange: 181 results
+QRackInterp.371: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[458] calcIdsInRange: 193 results
+QRackInterp.372: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[459] calcIdsInRange: 533 results
+QRackInterp.373: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[460] calcIdsInRange: 479 results
+QRackInterp.374: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[461] calcIdsInRange: 187 results
+QRackInterp.375: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[462] calcIdsInRange: 476 results
+QRackInterp.376: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[463] calcIdsInRange: 533 results
+QRackInterp.377: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[464] calcIdsInRange: 479 results
+QRackInterp.378: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[465] calcIdsInRange: 476 results
+QRackInterp.379: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[466] calcIdsInRange: 533 results
+QRackInterp.380: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[467] calcIdsInRange: 479 results
+QRackInterp.381: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[468] calcIdsInRange: 476 results
+QRackInterp.382: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[469] calcIdsInRange: 479 results
+QRackInterp.383: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[470] gRD val: single fam
+BldgDbMgr[471] calcIdsInRange: 356 results
+BldgDbMgr[472] calcIdsInRange: 476 results
+QRackInterp.384: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[473] calcIdsInRange: 533 results
+QRackInterp.385: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[474] calcIdsInRange: 478 results
+QRackInterp.386: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[475] calcIdsInRange: 476 results
+QRackInterp.387: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[476] calcIdsInRange: 479 results
+QRackInterp.388: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[477] calcIdsInRange: 533 results
+QRackInterp.389: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[478] calcIdsInRange: 476 results
+QRackInterp.390: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[479] calcIdsInRange: 479 results
+QRackInterp.391: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[480] calcIdsInRange: 533 results
+QRackInterp.392: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[481] calcIdsInRange: 476 results
+QRackInterp.393: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[482] calcIdsInRange: 533 results
+QRackInterp.394: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[483] calcIdsInRange: 479 results
+QRackInterp.395: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[484] calcIdsInRange: 476 results
+QRackInterp.396: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[485] calcIdsInRange: 533 results
+QRackInterp.397: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[486] calcIdsInRange: 478 results
+QRackInterp.398: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[487] calcIdsInRange: 476 results
+QRackInterp.399: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[488] calcIdsInRange: 479 results
+QRackInterp.400: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[489] calcIdsInRange: 533 results
+QRackInterp.401: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[490] calcIdsInRange: 197 results
+QRackInterp.402: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[491] calcIdsInRange: 193 results
+QRackInterp.403: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[492] calcIdsInRange: 175 results
+QRackInterp.404: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[493] calcIdsInRange: 476 results
+QRackInterp.405: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[494] calcIdsInRange: 478 results
+QRackInterp.406: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[495] calcIdsInRange: 479 results
+QRackInterp.407: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[496] calcIdsInRange: 533 results
+QRackInterp.408: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[497] calcIdsInRange: 476 results
+QRackInterp.409: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[498] calcIdsInRange: 478 results
+QRackInterp.410: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[499] calcIdsInRange: 479 results
+QRackInterp.411: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[500] calcIdsInRange: 533 results
+QRackInterp.412: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[501] calcIdsInRange: 476 results
+QRackInterp.413: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[502] calcIdsInRange: 478 results
+QRackInterp.414: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[503] calcIdsInRange: 479 results
+QRackInterp.415: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[504] calcIdsInRange: 533 results
+QRackInterp.416: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[505] calcIdsInRange: 476 results
+QRackInterp.417: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[506] calcIdsInRange: 533 results
+QRackInterp.418: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[507] calcIdsInRange: 479 results
+QRackInterp.419: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[508] calcIdsInRange: 476 results
+QRackInterp.420: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[509] calcIdsInRange: 533 results
+QRackInterp.421: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[510] calcIdsInRange: 479 results
+QRackInterp.422: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[511] calcIdsInRange: 476 results
+QRackInterp.423: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[512] calcIdsInRange: 533 results
+QRackInterp.424: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[513] calcIdsInRange: 479 results
+QRackInterp.425: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[514] calcIdsInRange: 476 results
+QRackInterp.426: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[515] calcIdsInRange: 533 results
+QRackInterp.427: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[516] calcIdsInRange: 479 results
+QRackInterp.428: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[517] calcIdsInRange: 476 results
+QRackInterp.429: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[518] calcIdsInRange: 533 results
+QRackInterp.430: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[519] calcIdsInRange: 478 results
+QRackInterp.431: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[520] calcIdsInRange: 476 results
+QRackInterp.432: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[521] calcIdsInRange: 479 results
+QRackInterp.433: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[522] calcIdsInRange: 533 results
+QRackInterp.434: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[523] calcIdsInRange: 476 results
+QRackInterp.435: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[524] calcIdsInRange: 479 results
+QRackInterp.436: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[525] calcIdsInRange: 533 results
+QRackInterp.437: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[526] calcIdsInRange: 476 results
+QRackInterp.438: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[527] calcIdsInRange: 479 results
+QRackInterp.439: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[528] calcIdsInRange: 478 results
+QRackInterp.440: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[529] calcIdsInRange: 533 results
+QRackInterp.441: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[530] calcIdsInRange: 479 results
+QRackInterp.442: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[531] calcIdsInRange: 476 results
+QRackInterp.443: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[532] calcIdsInRange: 533 results
+QRackInterp.444: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[533] calcIdsInRange: 479 results
+QRackInterp.445: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[534] calcIdsInRange: 476 results
+QRackInterp.446: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[535] calcIdsInRange: 533 results
+QRackInterp.447: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[536] calcIdsInRange: 479 results
+QRackInterp.448: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[537] calcIdsInRange: 476 results
+QRackInterp.449: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[538] calcIdsInRange: 533 results
+QRackInterp.450: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[539] calcIdsInRange: 478 results
+QRackInterp.451: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[540] calcIdsInRange: 479 results
+QRackInterp.452: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[541] calcIdsInRange: 533 results
+QRackInterp.453: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[542] calcIdsInRange: 476 results
+QRackInterp.454: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[543] calcIdsInRange: 479 results
+QRackInterp.455: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[544] calcIdsInRange: 533 results
+QRackInterp.456: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[545] calcIdsInRange: 476 results
+QRackInterp.457: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[546] calcIdsInRange: 479 results
+QRackInterp.458: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[547] calcIdsInRange: 478 results
+QRackInterp.459: QUERY: select bldg_id from building where ((listing_price < 1120.0) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[548] calcIdsInRange: 533 results
+QRackInterp.460: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[549] calcIdsInRange: 479 results
+QRackInterp.461: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[550] calcIdsInRange: 476 results
+QRackInterp.462: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[551] calcIdsInRange: 533 results
+QRackInterp.463: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[552] calcIdsInRange: 479 results
+QRackInterp.464: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[553] calcIdsInRange: 476 results
+QRackInterp.465: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[554] calcIdsInRange: 533 results
+QRackInterp.466: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[555] calcIdsInRange: 479 results
+QRackInterp.467: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[556] calcIdsInRange: 476 results
+QRackInterp.468: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[557] calcIdsInRange: 533 results
+QRackInterp.469: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[558] calcIdsInRange: 479 results
+QRackInterp.470: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[559] calcIdsInRange: 476 results
+QRackInterp.471: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[560] calcIdsInRange: 533 results
+QRackInterp.472: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[561] calcIdsInRange: 479 results
+QRackInterp.473: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[562] calcIdsInRange: 476 results
+QRackInterp.474: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[563] calcIdsInRange: 533 results
+QRackInterp.475: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[564] calcIdsInRange: 479 results
+QRackInterp.476: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[565] calcIdsInRange: 476 results
+QRackInterp.477: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[566] calcIdsInRange: 533 results
+QRackInterp.478: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[567] calcIdsInRange: 479 results
+QRackInterp.479: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[568] calcIdsInRange: 197 results
+QRackInterp.480: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[569] calcIdsInRange: 187 results
+QRackInterp.481: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[570] calcIdsInRange: 175 results
+QRackInterp.482: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[571] calcIdsInRange: 193 results
+QRackInterp.483: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[572] calcIdsInRange: 181 results
+QRackInterp.484: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[573] calcIdsInRange: 476 results
+QRackInterp.485: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[574] calcIdsInRange: 533 results
+QRackInterp.486: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[575] calcIdsInRange: 479 results
+QRackInterp.487: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[576] calcIdsInRange: 476 results
+QRackInterp.488: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[577] calcIdsInRange: 533 results
+QRackInterp.489: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[578] calcIdsInRange: 479 results
+QRackInterp.490: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[579] calcIdsInRange: 476 results
+QRackInterp.491: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[580] calcIdsInRange: 533 results
+QRackInterp.492: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[581] calcIdsInRange: 479 results
+QRackInterp.493: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[582] calcIdsInRange: 476 results
+QRackInterp.494: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2470.59));
+
+BldgDbMgr[583] calcIdsInRange: 197 results
+QRackInterp.495: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2635.29));
+
+BldgDbMgr[584] calcIdsInRange: 187 results
+QRackInterp.496: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[585] calcIdsInRange: 175 results
+QRackInterp.497: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[586] calcIdsInRange: 533 results
+QRackInterp.498: QUERY: select bldg_id from building where ((bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[587] calcIdsInRange: 479 results
+QRackInterp.499: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2421.18));
+
+BldgDbMgr[588] calcIdsInRange: 193 results
+QRackInterp.500: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2585.88));
+
+BldgDbMgr[589] calcIdsInRange: 187 results
+QRackInterp.501: QUERY: select bldg_id from building where ((listing_price < 1138.82) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+
+BldgDbMgr[590] calcIdsInRange: 476 results
+QRackInterp.502: QUERY: select bldg_id from building where ((listing_price < 1091.76) and (bldg_type = 'single fam') and (sq_foot > 2536.47));
+

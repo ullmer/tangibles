@@ -1,0 +1,253 @@
+0	start 2002-06-11 12:15:41
+187	experiment set: 107
+328	begin
+328	result: -1.0 / count: 0 / numRes : 0
+328	state: 
+531	result: -1.0 / count: 0 / numRes : 0
+531	state: 
+671	result: -1.0 / count: 0 / numRes : 0
+671	state: 
+1109	result: -1.0 / count: 0 / numRes : 0
+1109	state: 
+1265	result: -1.0 / count: 0 / numRes : 0
+1265	state: 
+1421	result: -1.0 / count: 0 / numRes : 0
+1421	state: 
+1562	result: -1.0 / count: 0 / numRes : 0
+1562	state: 
+1875	result: -1.0 / count: 0 / numRes : 0
+1875	state: 
+2031	result: -1.0 / count: 0 / numRes : 0
+2031	state: 
+2187	result: -1.0 / count: 0 / numRes : 0
+2187	state: 
+2328	result: -1.0 / count: 0 / numRes : 0
+2328	state: 
+2640	result: -1.0 / count: 0 / numRes : 0
+2640	state: 
+2781	result: -1.0 / count: 0 / numRes : 0
+2781	state: 
+2937	result: -1.0 / count: 0 / numRes : 0
+2937	state: 
+3281	result: 0.075 / count: 189 / numRes : 533
+3281	state: {acreage 3 128 1.51}
+3437	result: 0.136 / count: 51 / numRes : 67
+3437	state: {acreage 3 128 1.51}
+3562	result: 0.136 / count: 51 / numRes : 67
+3562	state: {acreage 3 128 1.51}
+3906	result: 0.136 / count: 51 / numRes : 67
+3906	state: {acreage 3 128 1.51}
+4046	result: 0.136 / count: 51 / numRes : 67
+4046	state: {acreage 3 128 1.51}
+4187	result: 0.136 / count: 51 / numRes : 67
+4187	state: {acreage 3 128 1.51}
+4500	result: 0.136 / count: 51 / numRes : 67
+4500	state: 
+4671	result: 0.136 / count: 51 / numRes : 67
+4671	state: 
+4812	result: 0.136 / count: 51 / numRes : 67
+4828	state: 
+5140	result: 0.136 / count: 51 / numRes : 67
+5140	state: 
+5281	result: 0.136 / count: 51 / numRes : 67
+5281	state: 
+5453	result: 0.136 / count: 51 / numRes : 67
+5453	state: 
+5781	result: -1.0 / count: 0 / numRes : 0
+5781	state: {taxes 3 -1 -1.0}
+5953	result: 0.484 / count: 178 / numRes : 96
+5953	state: {taxes 3 -1 -1.0}
+6140	result: 0.412 / count: 634 / numRes : 533
+6140	state: {taxes 3 -1 -1.0}
+6312	result: 0.025 / count: 1 / numRes : 1
+6312	state: {taxes 3 -1 -1.0}
+6609	result: 0.412 / count: 634 / numRes : 533
+6609	state: {taxes 3 -1 -1.0}
+6765	result: 0.025 / count: 1 / numRes : 1
+6765	state: {taxes 3 -1 -1.0}
+6890	result: 0.412 / count: 634 / numRes : 533
+6890	state: {taxes 3 -1 -1.0}
+7031	result: 0.412 / count: 634 / numRes : 533
+7031	state: {taxes 3 -1 -1.0}
+7187	result: 0.412 / count: 634 / numRes : 533
+7187	state: {taxes 3 -1 -1.0}
+7343	result: 0.412 / count: 634 / numRes : 533
+7343	state: {taxes 3 -1 -1.0}
+7671	result: 0.412 / count: 634 / numRes : 533
+7671	state: {taxes 3 -1 -1.0}
+7796	result: 0.025 / count: 1 / numRes : 1
+7796	state: {taxes 3 -1 -1.0}
+7968	result: 0.025 / count: 1 / numRes : 1
+7968	state: {taxes 3 -1 -1.0}
+8125	result: 0.412 / count: 634 / numRes : 533
+8125	state: {taxes 3 -1 -1.0}
+8421	result: 0.412 / count: 634 / numRes : 533
+8421	state: {taxes 3 -1 -1.0}
+8562	result: 0.412 / count: 634 / numRes : 533
+8562	state: {taxes 3 -1 -1.0}
+8734	result: 0.412 / count: 634 / numRes : 533
+8734	state: {taxes 3 -1 -1.0}
+8953	result: 0.412 / count: 634 / numRes : 533
+8953	state: {taxes 3 -1 -1.0}
+9046	result: 0.412 / count: 634 / numRes : 533
+9046	state: {taxes 3 -1 -1.0}
+9218	result: 0.025 / count: 1 / numRes : 1
+9218	state: {taxes 3 -1 -1.0}
+9484	result: 0.025 / count: 1 / numRes : 1
+9484	state: {taxes 3 -1 -1.0}
+9500	complete
+9546	result: 0.025 / count: 1 / numRes : 1
+9546	state: {taxes 3 -1 -1.0}
+9687	result: 0.412 / count: 634 / numRes : 533
+9687	state: {taxes 3 -1 -1.0}
+9859	result: 0.412 / count: 634 / numRes : 533
+9859	state: {taxes 3 -1 -1.0}
+10000	result: 0.412 / count: 634 / numRes : 533
+10000	state: {taxes 3 -1 -1.0}
+10156	result: 0.412 / count: 634 / numRes : 533
+10156	state: {taxes 3 -1 -1.0}
+10312	result: 0.412 / count: 634 / numRes : 533
+10312	state: {taxes 3 -1 -1.0}
+10671	result: 0.527 / count: 251 / numRes : 135
+10671	state: {taxes 3 -1 -1.0}
+10796	result: 0.527 / count: 251 / numRes : 135
+10796	state: {taxes 3 -1 -1.0}
+10937	result: 0.527 / count: 251 / numRes : 135
+10937	state: {taxes 3 -1 -1.0}
+11093	result: 0.527 / count: 251 / numRes : 135
+11093	state: {taxes 3 -1 -1.0}
+11250	result: 0.527 / count: 251 / numRes : 135
+11250	state: 
+11546	result: 0.527 / count: 251 / numRes : 135
+11546	state: 
+11703	result: 0.527 / count: 251 / numRes : 135
+11703	state: 
+11859	result: 0.527 / count: 251 / numRes : 135
+11859	state: 
+12015	result: 0.527 / count: 251 / numRes : 135
+12015	state: 
+12156	result: 0.527 / count: 251 / numRes : 135
+12156	state: 
+12328	result: 0.527 / count: 251 / numRes : 135
+12328	state: 
+12625	result: 0.527 / count: 251 / numRes : 135
+12640	state: 
+12796	result: 0.527 / count: 251 / numRes : 135
+12796	state: 
+12953	result: 0.527 / count: 251 / numRes : 135
+12953	state: 
+13093	result: 0.527 / count: 251 / numRes : 135
+13093	state: 
+13250	result: 0.527 / count: 251 / numRes : 135
+13250	state: 
+13578	result: 0.527 / count: 251 / numRes : 135
+13578	state: 
+13578	result: 0.527 / count: 251 / numRes : 135
+13578	state: 
+13750	result: 0.527 / count: 251 / numRes : 135
+13750	state: 
+13906	result: 0.527 / count: 251 / numRes : 135
+13906	state: 
+14031	result: 0.527 / count: 251 / numRes : 135
+14031	state: 
+14203	result: 0.527 / count: 251 / numRes : 135
+14203	state: 
+14343	result: 0.527 / count: 251 / numRes : 135
+14343	state: 
+14484	result: 0.527 / count: 251 / numRes : 135
+14484	state: 
+14656	result: 0.527 / count: 251 / numRes : 135
+14656	state: 
+14968	result: 0.527 / count: 251 / numRes : 135
+14968	state: 
+15125	result: 0.527 / count: 251 / numRes : 135
+15125	state: 
+15281	result: 0.527 / count: 251 / numRes : 135
+15281	state: 
+15453	result: 0.527 / count: 251 / numRes : 135
+15453	state: 
+15609	result: 0.527 / count: 251 / numRes : 135
+15609	state: 
+15750	result: 0.527 / count: 251 / numRes : 135
+15750	state: 
+15906	result: 0.527 / count: 251 / numRes : 135
+15906	state: 
+16046	result: 0.527 / count: 251 / numRes : 135
+16046	state: 
+16343	result: 0.527 / count: 251 / numRes : 135
+16343	state: 
+16515	result: 0.527 / count: 251 / numRes : 135
+16515	state: 
+16656	result: 0.527 / count: 251 / numRes : 135
+16656	state: 
+16812	result: 0.527 / count: 251 / numRes : 135
+16812	state: 
+16968	result: 0.527 / count: 251 / numRes : 135
+16968	state: 
+17109	result: 0.527 / count: 251 / numRes : 135
+17109	state: 
+17281	result: 0.527 / count: 251 / numRes : 135
+17281	state: 
+17562	result: 0.527 / count: 251 / numRes : 135
+17562	state: 
+17718	result: 0.527 / count: 251 / numRes : 135
+17718	state: 
+17875	result: 0.527 / count: 251 / numRes : 135
+17875	state: 
+18046	result: 0.527 / count: 251 / numRes : 135
+18046	state: 
+18171	result: 0.527 / count: 251 / numRes : 135
+18171	state: 
+18328	result: 0.527 / count: 251 / numRes : 135
+18328	state: 
+18484	result: 0.527 / count: 251 / numRes : 135
+18484	state: 
+18640	result: 0.527 / count: 251 / numRes : 135
+18640	state: 
+18796	result: 0.527 / count: 251 / numRes : 135
+18796	state: 
+19125	result: 0.527 / count: 251 / numRes : 135
+19125	state: 
+19265	result: 0.527 / count: 251 / numRes : 135
+19265	state: 
+19421	result: 0.527 / count: 251 / numRes : 135
+19421	state: 
+19562	result: 0.527 / count: 251 / numRes : 135
+19562	state: 
+19718	result: 0.527 / count: 251 / numRes : 135
+19718	state: 
+20062	result: 0.527 / count: 251 / numRes : 135
+20062	state: 
+20062	result: 0.527 / count: 251 / numRes : 135
+20062	state: 
+20203	result: 0.527 / count: 251 / numRes : 135
+20203	state: 
+20375	result: 0.527 / count: 251 / numRes : 135
+20375	state: 
+20515	result: 0.527 / count: 251 / numRes : 135
+20515	state: 
+20671	result: 0.527 / count: 251 / numRes : 135
+20671	state: 
+20828	result: 0.527 / count: 251 / numRes : 135
+20828	state: 
+20984	result: 0.527 / count: 251 / numRes : 135
+20984	state: 
+21140	result: 0.527 / count: 251 / numRes : 135
+21140	state: 
+21437	result: 0.527 / count: 251 / numRes : 135
+21437	state: 
+21593	result: 0.527 / count: 251 / numRes : 135
+21593	state: 
+21750	result: 0.527 / count: 251 / numRes : 135
+21750	state: 
+21906	result: 0.527 / count: 251 / numRes : 135
+21906	state: 
+22062	result: 0.527 / count: 251 / numRes : 135
+22062	state: 
+22218	result: 0.527 / count: 251 / numRes : 135
+22218	state: 
+22375	result: 0.527 / count: 251 / numRes : 135
+22375	state: 
+22515	result: 0.527 / count: 251 / numRes : 135
+22515	state: 
+22859	result: 0.527 / count: 251 / numRes

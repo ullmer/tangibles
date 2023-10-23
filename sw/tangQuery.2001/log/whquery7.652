@@ -1,0 +1,848 @@
+1024437110062	start 2002-06-18 17:51:49
+1024437110281	experiment number: 309
+1024437123578	begin
+1024437123578	result: -1.0 / count: 0 / numRes : 0
+1024437123593	state: 
+1024437123734	result: -1.0 / count: 0 / numRes : 0
+1024437123734	state: 
+1024437124031	result: -1.0 / count: 0 / numRes : 0
+1024437124031	state: 
+1024437124171	result: -1.0 / count: 0 / numRes : 0
+1024437124171	state: 
+1024437124328	result: -1.0 / count: 0 / numRes : 0
+1024437124328	state: 
+1024437124468	result: -1.0 / count: 0 / numRes : 0
+1024437124468	state: 
+1024437124765	result: -1.0 / count: 0 / numRes : 0
+1024437124781	state: 
+1024437124937	result: -1.0 / count: 0 / numRes : 0
+1024437124937	state: 
+1024437125078	result: -1.0 / count: 0 / numRes : 0
+1024437125093	state: 
+1024437125375	result: -1.0 / count: 0 / numRes : 0
+1024437125375	state: 
+1024437125531	result: -1.0 / count: 0 / numRes : 0
+1024437125531	state: 
+1024437125687	result: -1.0 / count: 0 / numRes : 0
+1024437125703	state: 
+1024437125968	result: -1.0 / count: 0 / numRes : 0
+1024437125968	state: 
+1024437125984	result: -1.0 / count: 0 / numRes : 0
+1024437125984	state: 
+1024437126156	result: -1.0 / count: 0 / numRes : 0
+1024437126156	state: 
+1024437126296	result: -1.0 / count: 0 / numRes : 0
+1024437126296	state: 
+1024437126593	result: -1.0 / count: 0 / numRes : 0
+1024437126593	state: 
+1024437126750	result: -1.0 / count: 0 / numRes : 0
+1024437126750	state: 
+1024437126906	result: -1.0 / count: 0 / numRes : 0
+1024437126906	state: 
+1024437127187	result: -1.0 / count: 0 / numRes : 0
+1024437127187	state: {distToA 1 -1 -1.0}
+1024437127406	result: 0.344 / count: 1015 / numRes : 276
+1024437127406	state: {distToA 1 -1 -1.0}
+1024437127546	result: 0.344 / count: 1015 / numRes : 276
+1024437127546	state: {distToA 1 -1 -1.0}
+1024437127703	result: 0.344 / count: 1015 / numRes : 276
+1024437127703	state: {distToA 1 -1 -1.0}
+1024437127984	result: 0.344 / count: 1015 / numRes : 276
+1024437128000	state: {distToA 1 -1 -1.0}
+1024437128140	result: 0.344 / count: 1015 / numRes : 276
+1024437128140	state: {distToA 1 -1 -1.0}
+1024437128296	result: 0.344 / count: 1015 / numRes : 276
+1024437128296	state: {distToA 1 -1 -1.0}
+1024437128421	result: 0.344 / count: 1015 / numRes : 276
+1024437128421	state: {distToA 1 -1 -1.0}
+1024437128578	result: 0.344 / count: 1015 / numRes : 276
+1024437128593	state: {distToA 1 -1 -1.0}
+1024437128750	result: 0.319 / count: 711 / numRes : 197
+1024437128750	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437129046	result: 0.319 / count: 711 / numRes : 197
+1024437129046	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437129171	result: 0.319 / count: 711 / numRes : 197
+1024437129171	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437129359	result: 0.319 / count: 711 / numRes : 197
+1024437129375	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437129484	result: 0.319 / count: 711 / numRes : 197
+1024437129484	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437129687	result: 0.319 / count: 711 / numRes : 197
+1024437129687	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437129828	result: 0.319 / count: 711 / numRes : 197
+1024437129828	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437130140	result: 0.319 / count: 711 / numRes : 197
+1024437130140	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437130281	result: 0.319 / count: 711 / numRes : 197
+1024437130281	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437130437	result: 0.319 / count: 711 / numRes : 197
+1024437130437	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437130609	result: 0.319 / count: 711 / numRes : 197
+1024437130609	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437130781	result: 0.319 / count: 711 / numRes : 197
+1024437130781	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437131078	result: 0.319 / count: 711 / numRes : 197
+1024437131078	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437131234	result: 0.319 / count: 711 / numRes : 197
+1024437131234	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437131390	result: 0.319 / count: 711 / numRes : 197
+1024437131390	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437131562	result: 0.319 / count: 711 / numRes : 197
+1024437131562	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437131750	result: 0.319 / count: 711 / numRes : 197
+1024437131750	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437131921	result: 0.319 / count: 711 / numRes : 197
+1024437131921	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437132078	result: 0.319 / count: 711 / numRes : 197
+1024437132078	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437132375	result: 0.319 / count: 711 / numRes : 197
+1024437132375	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437132531	result: 0.319 / count: 711 / numRes : 197
+1024437132531	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437132687	result: 0.319 / count: 711 / numRes : 197
+1024437132687	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437132828	result: 0.319 / count: 711 / numRes : 197
+1024437132828	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437133000	result: 0.327 / count: 497 / numRes : 127
+1024437133000	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437133296	result: 0.327 / count: 497 / numRes : 127
+1024437133296	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437133453	result: 0.327 / count: 497 / numRes : 127
+1024437133453	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437133640	result: 0.327 / count: 497 / numRes : 127
+1024437133640	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437133812	result: 0.327 / count: 497 / numRes : 127
+1024437133812	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437133984	result: 0.327 / count: 497 / numRes : 127
+1024437133984	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437134171	result: 0.327 / count: 497 / numRes : 127
+1024437134171	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437134312	result: 0.327 / count: 497 / numRes : 127
+1024437134312	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437134640	result: 0.327 / count: 497 / numRes : 127
+1024437134640	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437134781	result: 0.327 / count: 497 / numRes : 127
+1024437134781	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437134953	result: 0.327 / count: 497 / numRes : 127
+1024437134953	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437135125	result: 0.327 / count: 497 / numRes : 127
+1024437135125	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437135281	result: 0.327 / count: 497 / numRes : 127
+1024437135296	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437135437	result: 0.327 / count: 497 / numRes : 127
+1024437135437	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437135765	result: 0.327 / count: 497 / numRes : 127
+1024437135765	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437135921	result: 0.327 / count: 497 / numRes : 127
+1024437135921	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437136093	result: 0.327 / count: 497 / numRes : 127
+1024437136093	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437136265	result: 0.327 / count: 497 / numRes : 127
+1024437136265	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437136421	result: 0.327 / count: 497 / numRes : 127
+1024437136421	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437136609	result: 0.327 / count: 497 / numRes : 127
+1024437136609	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437136953	result: 0.327 / count: 497 / numRes : 127
+1024437136953	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437137078	result: 0.327 / count: 497 / numRes : 127
+1024437137078	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437137250	result: 0.327 / count: 497 / numRes : 127
+1024437137250	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437137421	result: 0.327 / count: 497 / numRes : 127
+1024437137421	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437137578	result: 0.327 / count: 497 / numRes : 127
+1024437137578	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437137734	result: 0.327 / count: 497 / numRes : 127
+1024437137734	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437137875	result: 0.327 / count: 497 / numRes : 127
+1024437137890	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437138203	result: 0.327 / count: 497 / numRes : 127
+1024437138203	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 2 -1 -1.0}
+1024437138359	result: 0.319 / count: 711 / numRes : 197
+1024437138359	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437138500	result: 0.319 / count: 711 / numRes : 197
+1024437138500	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0}
+1024437138671	result: 0.327 / count: 501 / numRes : 128
+1024437138671	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0}
+1024437138828	result: 0.328 / count: 511 / numRes : 131
+1024437138843	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0}
+1024437139000	result: 0.328 / count: 511 / numRes : 131
+1024437139015	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0}
+1024437139171	result: 0.328 / count: 511 / numRes : 131
+1024437139171	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0}
+1024437139468	result: 0.328 / count: 511 / numRes : 131
+1024437139468	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0}
+1024437139625	result: 0.328 / count: 511 / numRes : 131
+1024437139625	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0}
+1024437139765	result: 0.328 / count: 511 / numRes : 131
+1024437139765	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0}
+1024437139937	result: 0.328 / count: 511 / numRes : 131
+1024437139937	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0}
+1024437140125	result: 0.328 / count: 511 / numRes : 131
+1024437140125	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0}
+1024437140296	result: 0.328 / count: 511 / numRes : 131
+1024437140296	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0}
+1024437140609	result: 0.328 / count: 511 / numRes : 131
+1024437140609	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0}
+1024437140781	result: 0.328 / count: 511 / numRes : 131
+1024437140781	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0}
+1024437140937	result: 0.328 / count: 511 / numRes : 131
+1024437140937	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0}
+1024437141125	result: 0.328 / count: 511 / numRes : 131
+1024437141125	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0}
+1024437141296	result: 0.322 / count: 427 / numRes : 110
+1024437141296	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437141484	result: 0.322 / count: 427 / numRes : 110
+1024437141484	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437141656	result: 0.322 / count: 427 / numRes : 110
+1024437141656	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437141984	result: 0.322 / count: 427 / numRes : 110
+1024437141984	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437142125	result: 0.322 / count: 427 / numRes : 110
+1024437142125	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437142296	result: 0.322 / count: 427 / numRes : 110
+1024437142296	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437142437	result: 0.322 / count: 427 / numRes : 110
+1024437142453	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437142593	result: 0.322 / count: 427 / numRes : 110
+1024437142593	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437142906	result: 0.322 / count: 427 / numRes : 110
+1024437142906	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437143062	result: 0.322 / count: 427 / numRes : 110
+1024437143062	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437143203	result: 0.322 / count: 427 / numRes : 110
+1024437143203	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437143359	result: 0.322 / count: 427 / numRes : 110
+1024437143359	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437143531	result: 0.322 / count: 427 / numRes : 110
+1024437143531	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437143859	result: 0.322 / count: 427 / numRes : 110
+1024437143859	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437144015	result: 0.322 / count: 427 / numRes : 110
+1024437144015	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437144187	result: 0.322 / count: 427 / numRes : 110
+1024437144187	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437144359	result: 0.322 / count: 427 / numRes : 110
+1024437144359	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437144546	result: 0.322 / count: 427 / numRes : 110
+1024437144546	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437144718	result: 0.322 / count: 427 / numRes : 110
+1024437144718	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437144875	result: 0.322 / count: 427 / numRes : 110
+1024437144875	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437145062	result: 0.322 / count: 427 / numRes : 110
+1024437145062	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437145234	result: 0.322 / count: 427 / numRes : 110
+1024437145234	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437145562	result: 0.322 / count: 427 / numRes : 110
+1024437145562	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437145718	result: 0.322 / count: 427 / numRes : 110
+1024437145718	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437145875	result: 0.322 / count: 427 / numRes : 110
+1024437145875	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437146046	result: 0.322 / count: 427 / numRes : 110
+1024437146046	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437146203	result: 0.322 / count: 427 / numRes : 110
+1024437146203	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437146359	result: 0.322 / count: 427 / numRes : 110
+1024437146359	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437146531	result: 0.322 / count: 427 / numRes : 110
+1024437146531	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437146718	result: 0.322 / count: 427 / numRes : 110
+1024437146718	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437147046	result: 0.322 / count: 427 / numRes : 110
+1024437147046	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437147218	result: 0.322 / count: 427 / numRes : 110
+1024437147218	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437147359	result: 0.322 / count: 427 / numRes : 110
+1024437147359	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437147515	result: 0.322 / count: 427 / numRes : 110
+1024437147515	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437147671	result: 0.322 / count: 427 / numRes : 110
+1024437147671	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437147812	result: 0.322 / count: 427 / numRes : 110
+1024437147828	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437147968	result: 0.322 / count: 427 / numRes : 110
+1024437147968	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437148156	result: 0.322 / count: 427 / numRes : 110
+1024437148156	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437148312	result: 0.322 / count: 427 / numRes : 110
+1024437148312	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437148656	result: 0.322 / count: 427 / numRes : 110
+1024437148656	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437148796	result: 0.322 / count: 427 / numRes : 110
+1024437148796	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437148968	result: 0.322 / count: 427 / numRes : 110
+1024437148968	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437149140	result: 0.322 / count: 427 / numRes : 110
+1024437149140	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437149312	result: 0.322 / count: 427 / numRes : 110
+1024437149312	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437149484	result: 0.322 / count: 427 / numRes : 110
+1024437149500	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437149656	result: 0.322 / count: 427 / numRes : 110
+1024437149656	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437149843	result: 0.322 / count: 427 / numRes : 110
+1024437149843	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437150171	result: 0.322 / count: 427 / numRes : 110
+1024437150171	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437150343	result: 0.322 / count: 427 / numRes : 110
+1024437150343	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437150515	result: 0.322 / count: 427 / numRes : 110
+1024437150531	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437150671	result: 0.322 / count: 427 / numRes : 110
+1024437150671	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437150843	result: 0.322 / count: 427 / numRes : 110
+1024437150843	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437151000	result: 0.322 / count: 427 / numRes : 110
+1024437151000	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437151171	result: 0.322 / count: 427 / numRes : 110
+1024437151171	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437151359	result: 0.322 / count: 427 / numRes : 110
+1024437151359	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437151500	result: 0.322 / count: 427 / numRes : 110
+1024437151500	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437151843	result: 0.322 / count: 427 / numRes : 110
+1024437151843	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437152000	result: 0.322 / count: 427 / numRes : 110
+1024437152000	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437152156	result: 0.322 / count: 427 / numRes : 110
+1024437152156	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437152296	result: 0.322 / count: 427 / numRes : 110
+1024437152296	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437152453	result: 0.322 / count: 427 / numRes : 110
+1024437152453	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437152593	result: 0.322 / count: 427 / numRes : 110
+1024437152593	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437152781	result: 0.322 / count: 427 / numRes : 110
+1024437152781	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437152968	result: 0.322 / count: 427 / numRes : 110
+1024437152968	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437153312	result: 0.322 / count: 427 / numRes : 110
+1024437153312	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437153343	result: 0.322 / count: 427 / numRes : 110
+1024437153343	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437153500	result: 0.322 / count: 427 / numRes : 110
+1024437153515	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437153671	result: 0.322 / count: 427 / numRes : 110
+1024437153671	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437153843	result: 0.322 / count: 427 / numRes : 110
+1024437153843	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437154015	result: 0.322 / count: 427 / numRes : 110
+1024437154031	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437154171	result: 0.322 / count: 427 / numRes : 110
+1024437154171	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437154359	result: 0.322 / count: 427 / numRes : 110
+1024437154359	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437154531	result: 0.322 / count: 427 / numRes : 110
+1024437154531	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437154828	result: 0.322 / count: 427 / numRes : 110
+1024437154828	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437154984	result: 0.322 / count: 427 / numRes : 110
+1024437154984	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437155156	result: 0.322 / count: 427 / numRes : 110
+1024437155156	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437155281	result: 0.322 / count: 427 / numRes : 110
+1024437155296	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437155437	result: 0.32 / count: 413 / numRes : 106
+1024437155437	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437155593	result: 0.319 / count: 392 / numRes : 100
+1024437155593	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437155734	result: 0.319 / count: 388 / numRes : 99
+1024437155734	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437155906	result: 0.319 / count: 388 / numRes : 99
+1024437155906	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 118 1943.53}
+1024437156187	result: 0.313 / count: 265 / numRes : 67
+1024437156187	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 141 2322.35}
+1024437156343	result: 0.31 / count: 183 / numRes : 46
+1024437156343	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 150 2470.59}
+1024437156515	result: 0.309 / count: 139 / numRes : 35
+1024437156515	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437156671	result: 0.303 / count: 87 / numRes : 22
+1024437156671	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437156812	result: 0.303 / count: 87 / numRes : 22
+1024437156812	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 163 2684.71}
+1024437156968	result: 0.303 / count: 87 / numRes : 22
+1024437156968	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 163 2684.71}
+1024437157125	result: 0.303 / count: 60 / numRes : 15
+1024437157125	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 163 2684.71}
+1024437157265	result: 0.296 / count: 48 / numRes : 12
+1024437157265	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 167 2750.59}
+1024437157437	result: 0.296 / count: 48 / numRes : 12
+1024437157437	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 167 2750.59}
+1024437157593	result: 0.296 / count: 48 / numRes : 12
+1024437157593	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 167 2750.59}
+1024437157890	result: 0.296 / count: 48 / numRes : 12
+1024437157906	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 167 2750.59}
+1024437158046	result: 0.296 / count: 48 / numRes : 12
+1024437158046	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 167 2750.59}
+1024437158203	result: 0.281 / count: 24 / numRes : 6
+1024437158203	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 173 2849.41}
+1024437158375	result: 0.281 / count: 24 / numRes : 6
+1024437158375	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437158531	result: 0.281 / count: 24 / numRes : 6
+1024437158531	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437158703	result: 0.287 / count: 16 / numRes : 4
+1024437158703	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 180 2964.71}
+1024437158859	result: 0.286 / count: 4 / numRes : 1
+1024437158859	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437159000	result: 0.286 / count: 4 / numRes : 1
+1024437159000	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437159281	result: -1.0 / count: 0 / numRes : 0
+1024437159281	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437159312	result: -1.0 / count: 0 / numRes : 0
+1024437159312	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437159453	result: -1.0 / count: 0 / numRes : 0
+1024437159453	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437159609	result: -1.0 / count: 0 / numRes : 0
+1024437159609	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437159750	result: -1.0 / count: 0 / numRes : 0
+1024437159750	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437159921	result: 0.262 / count: 8 / numRes : 2
+1024437159921	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437160062	result: 0.287 / count: 28 / numRes : 7
+1024437160062	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437160203	result: 0.29 / count: 47 / numRes : 12
+1024437160203	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437160359	result: 0.29 / count: 47 / numRes : 12
+1024437160359	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437160500	result: 0.29 / count: 47 / numRes : 12
+1024437160515	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437160656	result: 0.29 / count: 47 / numRes : 12
+1024437160656	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437160937	result: 0.29 / count: 47 / numRes : 12
+1024437160937	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437160984	result: 0.29 / count: 47 / numRes : 12
+1024437160984	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437161109	result: 0.294 / count: 55 / numRes : 14
+1024437161125	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437161265	result: 0.294 / count: 55 / numRes : 14
+1024437161265	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437161421	result: 0.294 / count: 55 / numRes : 14
+1024437161421	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437161562	result: 0.288 / count: 20 / numRes : 5
+1024437161562	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437161734	result: 0.288 / count: 20 / numRes : 5
+1024437161734	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437161875	result: 0.286 / count: 4 / numRes : 1
+1024437161875	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437162031	result: 0.286 / count: 4 / numRes : 1
+1024437162031	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437162187	result: 0.286 / count: 4 / numRes : 1
+1024437162187	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437162468	result: 0.286 / count: 4 / numRes : 1
+1024437162468	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437162640	result: -1.0 / count: 0 / numRes : 0
+1024437162640	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437162781	result: -1.0 / count: 0 / numRes : 0
+1024437162812	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437162953	result: -1.0 / count: 0 / numRes : 0
+1024437162953	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437163109	result: 0.286 / count: 4 / numRes : 1
+1024437163109	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437163265	result: 0.301 / count: 75 / numRes : 19
+1024437163265	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437163406	result: 0.302 / count: 95 / numRes : 24
+1024437163406	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437163593	result: 0.302 / count: 99 / numRes : 25
+1024437163593	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437163734	result: 0.301 / count: 157 / numRes : 41
+1024437163750	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437163921	result: 0.301 / count: 157 / numRes : 41
+1024437163921	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437164078	result: 0.302 / count: 164 / numRes : 43
+1024437164078	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437164218	result: 0.301 / count: 156 / numRes : 41
+1024437164218	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 180 2964.71}
+1024437164375	result: 0.301 / count: 148 / numRes : 39
+1024437164375	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437164531	result: 0.299 / count: 120 / numRes : 32
+1024437164531	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 199 3277.65}
+1024437164687	result: 0.296 / count: 112 / numRes : 30
+1024437164703	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 206 3392.94}
+1024437164828	result: 0.292 / count: 100 / numRes : 27
+1024437164828	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 209 3442.35}
+1024437165000	result: 0.29 / count: 92 / numRes : 25
+1024437165015	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 216 3557.65}
+1024437165312	result: 0.287 / count: 76 / numRes : 21
+1024437165312	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 232 3821.18}
+1024437165484	result: 0.29 / count: 52 / numRes : 15
+1024437165484	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 238 3920.0}
+1024437165625	result: 0.29 / count: 52 / numRes : 15
+1024437165625	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 242 3985.88}
+1024437165796	result: 0.288 / count: 40 / numRes : 12
+1024437165796	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 248 4084.71}
+1024437165937	result: 0.288 / count: 32 / numRes : 10
+1024437165953	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 251 4134.12}
+1024437166093	result: 0.288 / count: 32 / numRes : 10
+1024437166109	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437166250	result: 0.288 / count: 32 / numRes : 10
+1024437166250	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437166421	result: 0.288 / count: 32 / numRes : 10
+1024437166421	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437166578	result: 0.288 / count: 32 / numRes : 10
+1024437166578	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437166859	result: 0.286 / count: 29 / numRes : 9
+1024437166859	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437166906	result: 0.286 / count: 29 / numRes : 9
+1024437166906	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437167078	result: 0.272 / count: 7 / numRes : 2
+1024437167078	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437167218	result: 0.272 / count: 7 / numRes : 2
+1024437167218	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437167359	result: 0.272 / count: 7 / numRes : 2
+1024437167359	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437167515	result: 0.272 / count: 7 / numRes : 2
+1024437167515	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437167656	result: 0.272 / count: 7 / numRes : 2
+1024437167656	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437167812	result: 0.272 / count: 7 / numRes : 2
+1024437167812	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437167968	result: 0.272 / count: 7 / numRes : 2
+1024437167968	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437168125	result: 0.272 / count: 7 / numRes : 2
+1024437168125	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437168406	result: 0.272 / count: 7 / numRes : 2
+1024437168406	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437168562	result: 0.272 / count: 7 / numRes : 2
+1024437168578	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437168750	result: 0.261 / count: 3 / numRes : 1
+1024437168750	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437168921	result: 0.261 / count: 3 / numRes : 1
+1024437168921	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437169062	result: 0.261 / count: 3 / numRes : 1
+1024437169062	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437169218	result: 0.261 / count: 3 / numRes : 1
+1024437169218	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437169375	result: 0.261 / count: 3 / numRes : 1
+1024437169375	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437169515	result: 0.261 / count: 3 / numRes : 1
+1024437169531	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437169796	result: 0.261 / count: 3 / numRes : 1
+1024437169812	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437169843	result: -1.0 / count: 0 / numRes : 0
+1024437169843	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437169984	result: -1.0 / count: 0 / numRes : 0
+1024437169984	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437170125	result: -1.0 / count: 0 / numRes : 0
+1024437170125	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437170281	result: -1.0 / count: 0 / numRes : 0
+1024437170281	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437170453	result: 0.261 / count: 3 / numRes : 1
+1024437170453	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437170609	result: 0.261 / count: 3 / numRes : 1
+1024437170609	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437170765	result: 0.261 / count: 3 / numRes : 1
+1024437170765	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437170906	result: 0.272 / count: 7 / numRes : 2
+1024437170921	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 255 4200.0}
+1024437171218	result: 0.272 / count: 7 / numRes : 2
+1024437171218	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 242 3985.88}
+1024437171375	result: 0.277 / count: 11 / numRes : 3
+1024437171375	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437171515	result: 0.277 / count: 11 / numRes : 3
+1024437171531	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437171687	result: 0.277 / count: 11 / numRes : 3
+1024437171687	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437171859	result: 0.277 / count: 11 / numRes : 3
+1024437171859	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437171984	result: 0.277 / count: 11 / numRes : 3
+1024437171984	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437172140	result: 0.277 / count: 11 / numRes : 3
+1024437172140	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437172296	result: 0.277 / count: 11 / numRes : 3
+1024437172296	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437172578	result: 0.277 / count: 11 / numRes : 3
+1024437172578	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437172750	result: 0.295 / count: 15 / numRes : 4
+1024437172750	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437172906	result: 0.295 / count: 15 / numRes : 4
+1024437172906	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437173062	result: 0.295 / count: 15 / numRes : 4
+1024437173062	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437173203	result: 0.297 / count: 19 / numRes : 5
+1024437173218	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437173359	result: 0.297 / count: 19 / numRes : 5
+1024437173359	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437173515	result: 0.297 / count: 19 / numRes : 5
+1024437173515	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437173687	result: 0.297 / count: 19 / numRes : 5
+1024437173687	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437173859	result: 0.297 / count: 19 / numRes : 5
+1024437173859	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437174125	result: 0.297 / count: 19 / numRes : 5
+1024437174125	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437174265	result: 0.297 / count: 19 / numRes : 5
+1024437174265	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437174406	result: 0.297 / count: 19 / numRes : 5
+1024437174406	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437174562	result: 0.297 / count: 19 / numRes : 5
+1024437174562	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437174718	result: 0.283 / count: 7 / numRes : 2
+1024437174718	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437174859	result: 0.283 / count: 7 / numRes : 2
+1024437174859	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437175015	result: 0.283 / count: 7 / numRes : 2
+1024437175015	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437175156	result: 0.283 / count: 7 / numRes : 2
+1024437175171	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437175312	result: -1.0 / count: 0 / numRes : 0
+1024437175312	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437175578	result: -1.0 / count: 0 / numRes : 0
+1024437175578	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437175750	result: -1.0 / count: 0 / numRes : 0
+1024437175750	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437175906	result: 0.283 / count: 7 / numRes : 2
+1024437175906	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437176046	result: 0.283 / count: 7 / numRes : 2
+1024437176062	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437176203	result: 0.283 / count: 7 / numRes : 2
+1024437176203	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 245 4035.29}
+1024437176359	result: 0.299 / count: 59 / numRes : 15
+1024437176359	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437176500	result: 0.316 / count: 95 / numRes : 24
+1024437176500	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 193 3178.82}
+1024437176671	result: 0.316 / count: 95 / numRes : 24
+1024437176671	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437176828	result: 0.316 / count: 95 / numRes : 24
+1024437176828	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437177109	result: 0.284 / count: 27 / numRes : 7
+1024437177109	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437177281	result: 0.274 / count: 4 / numRes : 1
+1024437177281	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437177421	result: 0.274 / count: 4 / numRes : 1
+1024437177437	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437177609	result: 0.274 / count: 4 / numRes : 1
+1024437177609	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437177765	result: -1.0 / count: 0 / numRes : 0
+1024437177781	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437177906	result: -1.0 / count: 0 / numRes : 0
+1024437177906	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437178062	result: -1.0 / count: 0 / numRes : 0
+1024437178062	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437178234	result: -1.0 / count: 0 / numRes : 0
+1024437178234	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437178375	result: 0.292 / count: 35 / numRes : 9
+1024437178375	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437178562	result: 0.316 / count: 95 / numRes : 24
+1024437178578	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 189 3112.94}
+1024437178718	result: 0.32 / count: 284 / numRes : 72
+1024437178718	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437178875	result: 0.32 / count: 284 / numRes : 72
+1024437178875	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437179031	result: 0.32 / count: 284 / numRes : 72
+1024437179031	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437179171	result: 0.316 / count: 119 / numRes : 30
+1024437179171	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437179328	result: 0.309 / count: 64 / numRes : 16
+1024437179328	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437179468	result: 0.317 / count: 44 / numRes : 11
+1024437179484	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437179625	result: 0.323 / count: 24 / numRes : 6
+1024437179625	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437179781	result: 0.342 / count: 12 / numRes : 3
+1024437179781	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437179953	result: -1.0 / count: 0 / numRes : 0
+1024437179953	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437180125	result: -1.0 / count: 0 / numRes : 0
+1024437180125	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437180296	result: -1.0 / count: 0 / numRes : 0
+1024437180312	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437180468	result: -1.0 / count: 0 / numRes : 0
+1024437180468	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437180625	result: -1.0 / count: 0 / numRes : 0
+1024437180625	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437180781	result: -1.0 / count: 0 / numRes : 0
+1024437180796	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437180937	result: -1.0 / count: 0 / numRes : 0
+1024437180937	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437181078	result: -1.0 / count: 0 / numRes : 0
+1024437181078	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437181250	result: -1.0 / count: 0 / numRes : 0
+1024437181250	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437181406	result: -1.0 / count: 0 / numRes : 0
+1024437181406	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437181703	result: -1.0 / count: 0 / numRes : 0
+1024437181703	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437181734	result: -1.0 / count: 0 / numRes : 0
+1024437181734	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437181890	result: 0.319 / count: 40 / numRes : 10
+1024437181890	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437182031	result: 0.313 / count: 60 / numRes : 15
+1024437182031	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437182187	result: 0.313 / count: 60 / numRes : 15
+1024437182203	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 160 2635.29}
+1024437182375	result: 0.288 / count: 20 / numRes : 5
+1024437182375	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 176 2898.82}
+1024437182515	result: 0.284 / count: 12 / numRes : 3
+1024437182515	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 183 3014.12}
+1024437182687	result: 0.274 / count: 4 / numRes : 1
+1024437182687	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 193 3178.82}
+1024437182843	result: 0.274 / count: 4 / numRes : 1
+1024437182843	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 193 3178.82}
+1024437183000	result: -1.0 / count: 0 / numRes : 0
+1024437183000	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 199 3277.65}
+1024437183296	result: -1.0 / count: 0 / numRes : 0
+1024437183296	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437183453	result: -1.0 / count: 0 / numRes : 0
+1024437183453	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437183593	result: 0.284 / count: 12 / numRes : 3
+1024437183593	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437183750	result: 0.284 / count: 12 / numRes : 3
+1024437183750	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437183890	result: 0.284 / count: 12 / numRes : 3
+1024437183906	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437184078	result: 0.284 / count: 12 / numRes : 3
+1024437184078	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437184250	result: 0.284 / count: 12 / numRes : 3
+1024437184250	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437184406	result: 0.284 / count: 12 / numRes : 3
+1024437184406	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437184703	result: 0.284 / count: 12 / numRes : 3
+1024437184703	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437184734	result: 0.284 / count: 12 / numRes : 3
+1024437184734	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437184875	result: 0.284 / count: 12 / numRes : 3
+1024437184875	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437185046	result: 0.284 / count: 12 / numRes : 3
+1024437185046	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437185203	result: 0.289 / count: 8 / numRes : 2
+1024437185203	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437185359	result: 0.289 / count: 8 / numRes : 2
+1024437185359	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437185515	result: 0.289 / count: 8 / numRes : 2
+1024437185515	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437185656	result: 0.289 / count: 8 / numRes : 2
+1024437185656	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437185812	result: 0.286 / count: 4 / numRes : 1
+1024437185812	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437186062	result: -1.0 / count: 0 / numRes : 0
+1024437186062	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437186234	result: -1.0 / count: 0 / numRes : 0
+1024437186234	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437186406	result: -1.0 / count: 0 / numRes : 0
+1024437186406	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437186546	result: -1.0 / count: 0 / numRes : 0
+1024437186546	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437186687	result: -1.0 / count: 0 / numRes : 0
+1024437186703	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437186875	result: -1.0 / count: 0 / numRes : 0
+1024437186890	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437187015	result: 0.25 / count: 4 / numRes : 1
+1024437187015	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 186 3063.53}
+1024437187171	result: 0.25 / count: 4 / numRes : 1
+1024437187171	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 193 3178.82}
+1024437187359	result: 0.25 / count: 4 / numRes : 1
+1024437187359	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437187656	result: 0.25 / count: 4 / numRes : 1
+1024437187671	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437187671	experiment complete
+1024437187812	result: 0.25 / count: 4 / numRes : 1
+1024437187812	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437187953	result: 0.25 / count: 4 / numRes : 1
+1024437187953	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437188125	result: 0.25 / count: 4 / numRes : 1
+1024437188140	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437188281	result: 0.25 / count: 4 / numRes : 1
+1024437188296	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437188437	result: 0.25 / count: 4 / numRes : 1
+1024437188453	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437188593	result: 0.25 / count: 4 / numRes : 1
+1024437188593	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437188765	result: 0.25 / count: 4 / numRes : 1
+1024437188765	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437189062	result: 0.25 / count: 4 / numRes : 1
+1024437189062	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437189078	result: 0.25 / count: 4 / numRes : 1
+1024437189078	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437189218	result: 0.25 / count: 4 / numRes : 1
+1024437189234	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437189390	result: 0.25 / count: 4 / numRes : 1
+1024437189390	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437189546	result: 0.25 / count: 4 / numRes : 1
+1024437189546	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437189687	result: 0.25 / count: 4 / numRes : 1
+1024437189687	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437189843	result: 0.25 / count: 4 / numRes : 1
+1024437189859	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437190000	result: 0.25 / count: 4 / numRes : 1
+1024437190000	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437190156	result: 0.25 / count: 4 / numRes : 1
+1024437190156	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437190437	result: 0.25 / count: 4 / numRes : 1
+1024437190437	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437190609	result: 0.25 / count: 4 / numRes : 1
+1024437190609	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437190765	result: 0.25 / count: 4 / numRes : 1
+1024437190765	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437190921	result: 0.25 / count: 4 / numRes : 1
+1024437190921	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437191078	result: 0.25 / count: 4 / numRes : 1
+1024437191078	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437191218	result: 0.25 / count: 4 / numRes : 1
+1024437191218	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437191375	result: 0.25 / count: 4 / numRes : 1
+1024437191390	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437191531	result: 0.25 / count: 4 / numRes : 1
+1024437191531	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437191687	result: 0.25 / count: 4 / numRes : 1
+1024437191687	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437191828	result: 0.25 / count: 4 / numRes : 1
+1024437191843	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437192031	result: 0.25 / count: 4 / numRes : 1
+1024437192031	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437192156	result: 0.25 / count: 4 / numRes : 1
+1024437192171	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437192312	result: 0.25 / count: 4 / numRes : 1
+1024437192312	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437192468	result: 0.25 / count: 4 / numRes : 1
+1024437192468	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437192625	result: 0.25 / count: 4 / numRes : 1
+1024437192625	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437192765	result: 0.25 / count: 4 / numRes : 1
+1024437192765	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437192906	result: 0.25 / count: 4 / numRes : 1
+1024437192921	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437193062	result: 0.25 / count: 4 / numRes : 1
+1024437193062	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437193218	result: 0.25 / count: 4 / numRes : 1
+1024437193218	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437193390	result: 0.25 / count: 4 / numRes : 1
+1024437193390	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437193546	result: 0.25 / count: 4 / numRes : 1
+1024437193546	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437193718	result: 0.25 / count: 4 / numRes : 1
+1024437193734	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437193859	result: 0.25 / count: 4 / numRes : 1
+1024437193875	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437194015	result: 0.25 / count: 4 / numRes : 1
+1024437194015	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437194171	result: 0.25 / count: 4 / numRes : 1
+1024437194171	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437194343	result: 0.25 / count: 4 / numRes : 1
+1024437194343	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437194515	result: 0.25 / count: 4 / numRes : 1
+1024437194515	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437194671	result: 0.25 / count: 4 / numRes : 1
+1024437194671	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437194812	result: 0.25 / count: 4 / numRes : 1
+1024437194828	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437194968	result: 0.25 / count: 4 / numRes : 1
+1024437195125	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437195156	result: 0.25 / count: 4 / numRes : 1
+1024437195156	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437195296	result: 0.25 / count: 4 / numRes : 1
+1024437195296	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437195437	result: 0.25 / count: 4 / numRes : 1
+1024437195437	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437195609	result: 0.25 / count: 4 / numRes : 1
+1024437195609	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437195765	result: 0.25 / count: 4 / numRes : 1
+1024437195765	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437195921	result: 0.25 / count: 4 / numRes : 1
+1024437195921	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437196078	result: 0.25 / count: 4 / numRes : 1
+1024437196078	state: {distToA 1 -1 -1.0} {distToB 0 -1 -1.0} {price 3 -1 -1.0} {sqfoot 2 202 3327.06}
+1024437196234	result: 0.25 / count: 4 / numRes : 1
+1024437196234	state: {distToA 1 

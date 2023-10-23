@@ -1,0 +1,10 @@
+iadd MWatchdog to token entrance/exit
+
+work w/ QRackVis:
+  geo: unpredicable color display w/ hatches (only price-first works)
+       show legend for active toks
+
+  scatter: 3-param disables
+           x-y swapped
+           significant axis discrepancy
+  

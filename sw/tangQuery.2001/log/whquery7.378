@@ -1,0 +1,370 @@
+0	start 2002-06-11 14:43:26
+203	experiment set: 104
+344	begin
+344	result: -1.0 / count: 0 / numRes : 0
+344	state: 
+563	result: -1.0 / count: 0 / numRes : 0
+563	state: 
+719	result: -1.0 / count: 0 / numRes : 0
+719	state: 
+1125	result: -1.0 / count: 0 / numRes : 0
+1125	state: 
+1266	result: -1.0 / count: 0 / numRes : 0
+1266	state: 
+1406	result: -1.0 / count: 0 / numRes : 0
+1406	state: 
+1734	result: -1.0 / count: 0 / numRes : 0
+1734	state: 
+1875	result: -1.0 / count: 0 / numRes : 0
+1875	state: 
+2016	result: -1.0 / count: 0 / numRes : 0
+2016	state: 
+2359	result: -1.0 / count: 0 / numRes : 0
+2359	state: 
+2500	result: -1.0 / count: 0 / numRes : 0
+2500	state: 
+2656	result: -1.0 / count: 0 / numRes : 0
+2656	state: 
+2953	result: -1.0 / count: 0 / numRes : 0
+2953	state: 
+3094	result: -1.0 / count: 0 / numRes : 0
+3094	state: 
+3266	result: -1.0 / count: 0 / numRes : 0
+3266	state: 
+3563	result: -1.0 / count: 0 / numRes : 0
+3563	state: 
+3703	result: -1.0 / count: 0 / numRes : 0
+3703	state: 
+3875	result: -1.0 / count: 0 / numRes : 0
+3875	state: 
+4016	result: -1.0 / count: 0 / numRes : 0
+4016	state: 
+4344	result: -1.0 / count: 0 / numRes : 0
+4344	state: {distToA 3 -1 -1.0}
+4359	result: -1.0 / count: 0 / numRes : 0
+4359	state: {distToA 3 -1 -1.0}
+4563	result: 0.336 / count: 642 / numRes : 342
+4563	state: {distToA 3 -1 -1.0}
+4734	result: 0.336 / count: 642 / numRes : 342
+4734	state: {distToA 3 -1 -1.0}
+5078	result: 0.336 / count: 642 / numRes : 342
+5078	state: {distToA 3 -1 -1.0}
+5219	result: 0.336 / count: 642 / numRes : 342
+5219	state: {distToA 3 -1 -1.0}
+5297	result: 0.336 / count: 642 / numRes : 342
+5297	state: {distToA 3 -1 -1.0}
+5453	result: 0.336 / count: 642 / numRes : 342
+5453	state: {distToA 3 -1 -1.0}
+5594	result: 0.336 / count: 642 / numRes : 342
+5594	state: {distToA 3 -1 -1.0}
+5969	result: 0.336 / count: 642 / numRes : 342
+5969	state: {distToA 3 -1 -1.0}
+6094	result: 0.282 / count: 426 / numRes : 213
+6094	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+6266	result: 0.282 / count: 426 / numRes : 213
+6266	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+6406	result: 0.282 / count: 426 / numRes : 213
+6406	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+6563	result: 0.282 / count: 426 / numRes : 213
+6563	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+6906	result: 0.282 / count: 426 / numRes : 213
+6906	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+7031	result: 0.282 / count: 426 / numRes : 213
+7031	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+7188	result: 0.282 / count: 426 / numRes : 213
+7188	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+7375	result: 0.31 / count: 506 / numRes : 253
+7375	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+7547	result: 0.329 / count: 548 / numRes : 274
+7547	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+7875	result: 0.343 / count: 576 / numRes : 288
+7875	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+8031	result: 0.344 / count: 578 / numRes : 289
+8031	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+8219	result: 0.333 / count: 556 / numRes : 278
+8219	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+8328	result: 0.317 / count: 522 / numRes : 261
+8344	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+8516	result: 0.314 / count: 514 / numRes : 257
+8516	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+8859	result: 0.311 / count: 508 / numRes : 254
+8859	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+8969	result: 0.311 / count: 508 / numRes : 254
+8969	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+9125	result: 0.372 / count: 808 / numRes : 404
+9125	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+9281	result: 0.36 / count: 754 / numRes : 377
+9281	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+9438	result: 0.349 / count: 694 / numRes : 347
+9438	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+9781	result: 0.326 / count: 598 / numRes : 299
+9781	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+9922	result: 0.315 / count: 556 / numRes : 278
+9922	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+10063	result: 0.309 / count: 532 / numRes : 266
+10063	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+10203	result: 0.309 / count: 532 / numRes : 266
+10203	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+10375	result: 0.302 / count: 508 / numRes : 254
+10375	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+10688	result: 0.297 / count: 488 / numRes : 244
+10688	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+10844	result: 0.297 / count: 488 / numRes : 244
+10844	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+11031	result: 0.275 / count: 394 / numRes : 197
+11031	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+11203	result: 0.249 / count: 294 / numRes : 147
+11203	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+11328	result: 0.244 / count: 270 / numRes : 135
+11344	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+11672	result: 0.244 / count: 270 / numRes : 135
+11672	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+11813	result: 0.244 / count: 270 / numRes : 135
+11813	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+11969	result: 0.244 / count: 270 / numRes : 135
+11969	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+12094	result: 0.244 / count: 270 / numRes : 135
+12094	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+12422	result: 0.244 / count: 270 / numRes : 135
+12422	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+12547	result: 0.244 / count: 270 / numRes : 135
+12547	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+12719	result: 0.244 / count: 270 / numRes : 135
+12719	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+12875	result: 0.291 / count: 375 / numRes : 197
+12875	state: {distToA 3 -1 -1.0}
+13000	result: 0.291 / count: 375 / numRes : 197
+13000	state: {distToA 3 -1 -1.0}
+13328	result: 0.244 / count: 270 / numRes : 135
+13328	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+13359	result: 0.244 / count: 270 / numRes : 135
+13359	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+13500	result: 0.244 / count: 270 / numRes : 135
+13500	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+13656	result: 0.244 / count: 270 / numRes : 135
+13656	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+13813	result: 0.244 / count: 270 / numRes : 135
+13813	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+13984	result: 0.244 / count: 270 / numRes : 135
+13984	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+14156	result: 0.244 / count: 270 / numRes : 135
+14156	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+14297	result: 0.244 / count: 270 / numRes : 135
+14297	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+14453	result: 0.244 / count: 270 / numRes : 135
+14453	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+14781	result: 0.244 / count: 270 / numRes : 135
+14781	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+14969	result: 0.244 / count: 270 / numRes : 135
+14969	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+15141	result: 0.244 / count: 270 / numRes : 135
+15141	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+15266	result: 0.244 / count: 270 / numRes : 135
+15266	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+15453	result: 0.291 / count: 375 / numRes : 197
+15453	state: {distToA 3 -1 -1.0}
+15609	result: 0.291 / count: 375 / numRes : 197
+15609	state: {distToA 3 -1 -1.0}
+15766	result: 0.291 / count: 375 / numRes : 197
+15766	state: {distToA 3 -1 -1.0}
+15906	result: 0.291 / count: 375 / numRes : 197
+15906	state: {distToA 3 -1 -1.0}
+16266	result: 0.291 / count: 375 / numRes : 197
+16266	state: {distToA 3 -1 -1.0}
+16406	result: 0.291 / count: 375 / numRes : 197
+16406	state: {distToA 3 -1 -1.0}
+16563	result: 0.291 / count: 375 / numRes : 197
+16563	state: {distToA 3 -1 -1.0}
+16719	result: 0.291 / count: 375 / numRes : 197
+16719	state: {distToA 3 -1 -1.0}
+16875	result: 0.291 / count: 375 / numRes : 197
+16875	state: {distToA 3 -1 -1.0}
+17047	result: 0.291 / count: 375 / numRes : 197
+17047	state: {distToA 3 -1 -1.0}
+17172	result: 0.291 / count: 375 / numRes : 197
+17172	state: {distToA 3 -1 -1.0}
+17344	result: 0.291 / count: 375 / numRes : 197
+17344	state: {distToA 3 -1 -1.0}
+17656	result: 0.244 / count: 270 / numRes : 135
+17656	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+17797	result: 0.244 / count: 270 / numRes : 135
+17797	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+17953	result: 0.244 / count: 270 / numRes : 135
+17953	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+18109	result: 0.226 / count: 236 / numRes : 118
+18109	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+18266	result: 0.226 / count: 236 / numRes : 118
+18266	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+18406	result: 0.212 / count: 227 / numRes : 118
+18406	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+18578	result: 0.213 / count: 198 / numRes : 99
+18578	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+18766	result: 0.197 / count: 160 / numRes : 80
+18766	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+19047	result: 0.185 / count: 134 / numRes : 67
+19047	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+19219	result: 0.185 / count: 134 / numRes : 67
+19219	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+19375	result: 0.185 / count: 134 / numRes : 67
+19375	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+19516	result: 0.185 / count: 134 / numRes : 67
+19516	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+19672	result: 0.185 / count: 134 / numRes : 67
+19672	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+19813	result: 0.185 / count: 134 / numRes : 67
+19813	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+19969	result: 0.185 / count: 134 / numRes : 67
+19969	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+20109	result: 0.193 / count: 152 / numRes : 76
+20109	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+20469	result: 0.203 / count: 176 / numRes : 88
+20469	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+20609	result: 0.208 / count: 186 / numRes : 93
+20609	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+20750	result: 0.189 / count: 144 / numRes : 72
+20750	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+20922	result: 0.189 / count: 144 / numRes : 72
+20922	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+21094	result: 0.189 / count: 144 / numRes : 72
+21094	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+21250	result: 0.189 / count: 144 / numRes : 72
+21250	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+21391	result: 0.189 / count: 144 / numRes : 72
+21391	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+21563	result: 0.189 / count: 144 / numRes : 72
+21563	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+21875	result: 0.189 / count: 144 / numRes : 72
+21875	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+22016	result: 0.189 / count: 144 / numRes : 72
+22031	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+22188	result: 0.189 / count: 144 / numRes : 72
+22188	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+22328	result: 0.189 / count: 144 / numRes : 72
+22328	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+22469	result: 0.189 / count: 144 / numRes : 72
+22469	state: {distToA 3 -1 -1.0} {taxes 2 -1 -1.0}
+22625	result: 0.285 / count: 325 / numRes : 163
+22625	state: {taxes 2 -1 -1.0}
+22797	result: 0.285 / count: 325 / numRes : 163
+22797	state: {taxes 2 -1 -1.0}
+22922	result: 0.285 / count: 325 / numRes : 163
+22922	state: {taxes 2 -1 -1.0}
+23266	result: 0.285 / count: 325 / numRes : 163
+23266	state: {taxes 2 -1 -1.0}
+23406	result: 0.285 / count: 325 / numRes : 163
+23406	state: {taxes 2 -1 -1.0}
+23547	result: 0.285 / count: 325 / numRes : 163
+23547	state: {taxes 2 -1 -1.0}
+23719	result: 0.285 / count: 325 / numRes : 163
+23719	state: {taxes 2 -1 -1.0}
+23859	result: 0.285 / count: 325 / numRes : 163
+23859	state: {taxes 2 -1 -1.0}
+24031	result: 0.285 / count: 325 / numRes : 163
+24031	state: {taxes 2 -1 -1.0}
+24156	result: 0.193 / count: 152 / numRes : 76
+24172	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+24313	result: 0.208 / count: 186 / numRes : 93
+24313	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+24672	result: 0.099 / count: 10 / numRes : 5
+24672	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+24703	result: 0.094 / count: 6 / numRes : 3
+24703	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+24844	result: -1.0 / count: 0 / numRes : 0
+24844	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+25000	result: -1.0 / count: 0 / numRes : 0
+25000	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+25156	result: -1.0 / count: 0 / numRes : 0
+25156	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+25328	result: 0.113 / count: 20 / numRes : 10
+25328	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+25469	result: 0.189 / count: 144 / numRes : 72
+25469	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+25625	result: 0.211 / count: 192 / numRes : 96
+25625	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+25781	result: 0.188 / count: 140 / numRes : 70
+25781	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+26125	result: 0.134 / count: 48 / numRes : 24
+26125	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+26250	result: 0.113 / count: 18 / numRes : 9
+26250	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+26406	result: 0.111 / count: 14 / numRes : 7
+26406	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+26563	result: 0.078 / count: 2 / numRes : 1
+26563	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+26719	result: -1.0 / count: 0 / numRes : 0
+26719	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+26875	result: -1.0 / count: 0 / numRes : 0
+26875	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+27031	result: -1.0 / count: 0 / numRes : 0
+27031	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+27203	result: -1.0 / count: 0 / numRes : 0
+27203	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+27359	result: -1.0 / count: 0 / numRes : 0
+27516	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+27547	result: -1.0 / count: 0 / numRes : 0
+27547	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+27703	result: -1.0 / count: 0 / numRes : 0
+27703	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+27875	result: -1.0 / count: 0 / numRes : 0
+27875	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+28016	result: -1.0 / count: 0 / numRes : 0
+28016	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+28156	result: -1.0 / count: 0 / numRes : 0
+28156	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+28344	result: -1.0 / count: 0 / numRes : 0
+28344	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+28484	result: -1.0 / count: 0 / numRes : 0
+28484	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+28656	result: 0.079 / count: 4 / numRes : 2
+28656	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+28813	result: 0.08 / count: 6 / numRes : 3
+28813	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+29141	result: 0.08 / count: 6 / numRes : 3
+29141	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+29281	result: 0.08 / count: 6 / numRes : 3
+29281	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+29422	result: 0.08 / count: 6 / numRes : 3
+29422	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+29578	result: 0.08 / count: 2 / numRes : 1
+29578	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+29734	result: 0.08 / count: 2 / numRes : 1
+29734	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+29891	result: 0.08 / count: 2 / numRes : 1
+29891	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+30031	result: 0.08 / count: 2 / numRes : 1
+30031	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+30203	result: -1.0 / count: 0 / numRes : 0
+30203	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+30516	result: -1.0 / count: 0 / numRes : 0
+30516	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+30578	result: -1.0 / count: 0 / numRes : 0
+30578	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+30688	result: -1.0 / count: 0 / numRes : 0
+30688	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+30844	result: -1.0 / count: 0 / numRes : 0
+30844	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+31016	result: -1.0 / count: 0 / numRes : 0
+31016	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+31156	result: 0.078 / count: 2 / numRes : 1
+31156	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+31297	result: 0.078 / count: 2 / numRes : 1
+31313	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+31469	result: 0.08 / count: 4 / numRes : 2
+31469	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+31813	result: 0.08 / count: 4 / numRes : 2
+31813	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+31953	result: 0.08 / count: 4 / numRes : 2
+31953	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+32125	result: 0.08 / count: 4 / numRes : 2
+32125	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+32266	result: -1.0 / count: 0 / numRes : 0
+32266	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+32438	result: -1.0 / count: 0 / numRes : 0
+32438	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+32578	result: -1.0 / count: 0 / numRes : 0
+32578	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+32734	result: -1.0 / count: 0 / numRes : 0
+32734	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+32906	result: -1.0 / count: 0 / numRes : 0
+32906	state: {taxes 2 -1 -1.0} {distToA 3 -1 -1.0}
+33047	result

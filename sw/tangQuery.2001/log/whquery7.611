@@ -1,0 +1,2587 @@
+1024419647609	start 2002-06-18 13:00:47
+1024419647812	experiment number: 310
+1024419658937	begin
+1024419658937	result: -1.0 / count: 0 / numRes : 0
+1024419658937	state: 
+1024419659093	result: -1.0 / count: 0 / numRes : 0
+1024419659093	state: 
+1024419659234	result: -1.0 / count: 0 / numRes : 0
+1024419659234	state: 
+1024419659406	result: -1.0 / count: 0 / numRes : 0
+1024419659406	state: 
+1024419659546	result: -1.0 / count: 0 / numRes : 0
+1024419659546	state: 
+1024419659703	result: -1.0 / count: 0 / numRes : 0
+1024419659703	state: 
+1024419659859	result: -1.0 / count: 0 / numRes : 0
+1024419659859	state: 
+1024419660015	result: -1.0 / count: 0 / numRes : 0
+1024419660015	state: 
+1024419660156	result: -1.0 / count: 0 / numRes : 0
+1024419660156	state: 
+1024419660312	result: -1.0 / count: 0 / numRes : 0
+1024419660312	state: 
+1024419660468	result: -1.0 / count: 0 / numRes : 0
+1024419660468	state: 
+1024419660625	result: -1.0 / count: 0 / numRes : 0
+1024419660625	state: 
+1024419660765	result: -1.0 / count: 0 / numRes : 0
+1024419660765	state: 
+1024419660921	result: -1.0 / count: 0 / numRes : 0
+1024419660921	state: 
+1024419661062	result: -1.0 / count: 0 / numRes : 0
+1024419661062	state: 
+1024419661234	result: -1.0 / count: 0 / numRes : 0
+1024419661234	state: 
+1024419661390	result: -1.0 / count: 0 / numRes : 0
+1024419661390	state: {taxes 3 -1 -1.0}
+1024419661562	result: 0.378 / count: 1362 / numRes : 349
+1024419661562	state: {taxes 3 -1 -1.0}
+1024419661718	result: 0.378 / count: 1362 / numRes : 349
+1024419661718	state: {taxes 3 -1 -1.0}
+1024419661953	result: 0.378 / count: 1362 / numRes : 349
+1024419661953	state: {taxes 3 -1 -1.0}
+1024419662062	result: 0.378 / count: 1362 / numRes : 349
+1024419662062	state: {taxes 3 -1 -1.0}
+1024419662218	result: 0.378 / count: 1362 / numRes : 349
+1024419662218	state: {taxes 3 -1 -1.0}
+1024419662359	result: 0.378 / count: 1362 / numRes : 349
+1024419662359	state: {taxes 3 -1 -1.0}
+1024419662515	result: 0.378 / count: 1362 / numRes : 349
+1024419662515	state: {taxes 3 -1 -1.0}
+1024419662703	result: 0.378 / count: 1362 / numRes : 349
+1024419662703	state: {taxes 3 -1 -1.0}
+1024419662828	result: 0.378 / count: 1362 / numRes : 349
+1024419662828	state: {taxes 3 -1 -1.0}
+1024419662968	result: 0.378 / count: 1362 / numRes : 349
+1024419662968	state: {taxes 3 -1 -1.0}
+1024419663125	result: 0.359 / count: 836 / numRes : 213
+1024419663125	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0}
+1024419663265	result: 0.359 / count: 836 / numRes : 213
+1024419663281	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0}
+1024419663421	result: 0.359 / count: 836 / numRes : 213
+1024419663421	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0}
+1024419663750	result: 0.359 / count: 836 / numRes : 213
+1024419663750	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0}
+1024419663890	result: 0.359 / count: 836 / numRes : 213
+1024419663890	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0}
+1024419664046	result: 0.359 / count: 836 / numRes : 213
+1024419664046	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0}
+1024419664187	result: 0.359 / count: 836 / numRes : 213
+1024419664187	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0}
+1024419664375	result: 0.359 / count: 836 / numRes : 213
+1024419664375	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0}
+1024419664562	result: 0.331 / count: 513 / numRes : 131
+1024419664562	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419664703	result: 0.33 / count: 427 / numRes : 109
+1024419664703	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419664921	result: 0.33 / count: 427 / numRes : 109
+1024419664921	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419665093	result: 0.328 / count: 342 / numRes : 87
+1024419665093	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419665234	result: 0.329 / count: 306 / numRes : 78
+1024419665234	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419665390	result: 0.329 / count: 306 / numRes : 78
+1024419665390	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419665609	result: 0.329 / count: 306 / numRes : 78
+1024419665609	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419665765	result: 0.329 / count: 306 / numRes : 78
+1024419665765	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419665937	result: 0.329 / count: 306 / numRes : 78
+1024419665937	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419666093	result: 0.329 / count: 306 / numRes : 78
+1024419666093	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419666437	result: 0.329 / count: 306 / numRes : 78
+1024419666437	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419666593	result: 0.329 / count: 306 / numRes : 78
+1024419666593	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419666781	result: 0.329 / count: 306 / numRes : 78
+1024419666781	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419666953	result: 0.329 / count: 306 / numRes : 78
+1024419666953	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419667109	result: 0.329 / count: 306 / numRes : 78
+1024419667109	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419667250	result: 0.329 / count: 306 / numRes : 78
+1024419667250	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0}
+1024419667609	result: 0.329 / count: 306 / numRes : 78
+1024419667609	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 128 2108.24}
+1024419667718	result: 0.318 / count: 218 / numRes : 56
+1024419667718	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 128 2108.24}
+1024419667859	result: 0.318 / count: 218 / numRes : 56
+1024419667859	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 128 2108.24}
+1024419668015	result: 0.318 / count: 218 / numRes : 56
+1024419668015	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 128 2108.24}
+1024419668156	result: 0.318 / count: 218 / numRes : 56
+1024419668156	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 128 2108.24}
+1024419668343	result: 0.317 / count: 210 / numRes : 54
+1024419668343	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 134 2207.06}
+1024419668484	result: 0.31 / count: 170 / numRes : 44
+1024419668484	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 150 2470.59}
+1024419668671	result: 0.309 / count: 154 / numRes : 40
+1024419668671	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 157 2585.88}
+1024419668843	result: 0.309 / count: 154 / numRes : 40
+1024419668843	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 157 2585.88}
+1024419669000	result: 0.307 / count: 146 / numRes : 38
+1024419669000	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 163 2684.71}
+1024419669281	result: 0.308 / count: 142 / numRes : 37
+1024419669281	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 167 2750.59}
+1024419669437	result: 0.301 / count: 102 / numRes : 27
+1024419669437	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 170 2800.0}
+1024419669593	result: 0.301 / count: 102 / numRes : 27
+1024419669593	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 173 2849.41}
+1024419669796	result: 0.301 / count: 102 / numRes : 27
+1024419669796	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 176 2898.82}
+1024419669937	result: 0.297 / count: 94 / numRes : 25
+1024419669937	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419670078	result: 0.297 / count: 94 / numRes : 25
+1024419670078	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419670250	result: 0.297 / count: 94 / numRes : 25
+1024419670250	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419670437	result: 0.297 / count: 94 / numRes : 25
+1024419670437	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419670593	result: 0.297 / count: 94 / numRes : 25
+1024419670609	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419670781	result: 0.308 / count: 30 / numRes : 8
+1024419670781	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419670921	result: 0.308 / count: 30 / numRes : 8
+1024419670921	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419671093	result: -1.0 / count: 0 / numRes : 0
+1024419671093	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419671265	result: -1.0 / count: 0 / numRes : 0
+1024419671265	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419671437	result: -1.0 / count: 0 / numRes : 0
+1024419671437	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419671578	result: 0.311 / count: 4 / numRes : 1
+1024419671578	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419671750	result: 0.298 / count: 78 / numRes : 21
+1024419671750	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419671921	result: 0.298 / count: 78 / numRes : 21
+1024419671921	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419672078	result: 0.298 / count: 78 / numRes : 21
+1024419672078	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419672250	result: 0.298 / count: 78 / numRes : 21
+1024419672250	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419672421	result: 0.3 / count: 75 / numRes : 20
+1024419672421	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419672593	result: 0.299 / count: 71 / numRes : 19
+1024419672593	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419672750	result: 0.299 / count: 67 / numRes : 18
+1024419672750	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419672921	result: 0.299 / count: 67 / numRes : 18
+1024419672921	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419673156	result: 0.296 / count: 59 / numRes : 16
+1024419673156	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419673296	result: 0.296 / count: 49 / numRes : 13
+1024419673296	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419673453	result: 0.297 / count: 38 / numRes : 10
+1024419673453	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419673625	result: 0.297 / count: 38 / numRes : 10
+1024419673625	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419673765	result: 0.293 / count: 23 / numRes : 6
+1024419673765	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419673937	result: 0.293 / count: 23 / numRes : 6
+1024419673937	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419674125	result: 0.293 / count: 23 / numRes : 6
+1024419674125	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419674281	result: 0.27 / count: 7 / numRes : 2
+1024419674281	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419674453	result: 0.27 / count: 7 / numRes : 2
+1024419674453	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419674609	result: 0.271 / count: 4 / numRes : 1
+1024419674625	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419674812	result: 0.271 / count: 4 / numRes : 1
+1024419674812	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419675140	result: 0.271 / count: 4 / numRes : 1
+1024419675140	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419675265	result: 0.271 / count: 4 / numRes : 1
+1024419675265	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419675421	result: 0.271 / count: 4 / numRes : 1
+1024419675421	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419675593	result: 0.271 / count: 4 / numRes : 1
+1024419675593	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419675734	result: 0.271 / count: 4 / numRes : 1
+1024419675734	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419675890	result: -1.0 / count: 0 / numRes : 0
+1024419675890	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419676031	result: -1.0 / count: 0 / numRes : 0
+1024419676031	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419676203	result: -1.0 / count: 0 / numRes : 0
+1024419676203	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419676390	result: -1.0 / count: 0 / numRes : 0
+1024419676390	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419676515	result: -1.0 / count: 0 / numRes : 0
+1024419676515	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419676671	result: -1.0 / count: 0 / numRes : 0
+1024419676671	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419676953	result: 0.271 / count: 4 / numRes : 1
+1024419676953	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419677109	result: 0.271 / count: 4 / numRes : 1
+1024419677109	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419677265	result: 0.271 / count: 4 / numRes : 1
+1024419677265	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419677406	result: 0.271 / count: 4 / numRes : 1
+1024419677437	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419677562	result: -1.0 / count: 0 / numRes : 0
+1024419677562	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419677734	result: -1.0 / count: 0 / numRes : 0
+1024419677734	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419677875	result: -1.0 / count: 0 / numRes : 0
+1024419677890	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419678046	result: -1.0 / count: 0 / numRes : 0
+1024419678046	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419678187	result: -1.0 / count: 0 / numRes : 0
+1024419678187	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419678375	result: -1.0 / count: 0 / numRes : 0
+1024419678375	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419678531	result: -1.0 / count: 0 / numRes : 0
+1024419678531	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419678671	result: -1.0 / count: 0 / numRes : 0
+1024419678687	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419678828	result: -1.0 / count: 0 / numRes : 0
+1024419678828	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419679000	result: -1.0 / count: 0 / numRes : 0
+1024419679000	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419679171	result: -1.0 / count: 0 / numRes : 0
+1024419679171	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419679312	result: 0.271 / count: 4 / numRes : 1
+1024419679312	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419679484	result: 0.273 / count: 8 / numRes : 2
+1024419679484	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419679640	result: 0.273 / count: 8 / numRes : 2
+1024419679640	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419679812	result: 0.273 / count: 8 / numRes : 2
+1024419679812	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 183 3014.12}
+1024419679953	result: 0.273 / count: 8 / numRes : 2
+1024419679953	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 189 3112.94}
+1024419680109	result: 0.273 / count: 8 / numRes : 2
+1024419680109	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 199 3277.65}
+1024419680296	result: 0.273 / count: 8 / numRes : 2
+1024419680296	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 202 3327.06}
+1024419680437	result: 0.273 / count: 8 / numRes : 2
+1024419680437	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 206 3392.94}
+1024419680640	result: 0.273 / count: 8 / numRes : 2
+1024419680640	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419680781	result: 0.273 / count: 8 / numRes : 2
+1024419680781	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419680953	result: 0.273 / count: 8 / numRes : 2
+1024419680953	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419681093	result: 0.273 / count: 8 / numRes : 2
+1024419681093	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419681281	result: 0.273 / count: 8 / numRes : 2
+1024419681281	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419681406	result: 0.273 / count: 8 / numRes : 2
+1024419681406	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419681562	result: 0.273 / count: 8 / numRes : 2
+1024419681562	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419681718	result: -1.0 / count: 0 / numRes : 0
+1024419681718	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419681875	result: -1.0 / count: 0 / numRes : 0
+1024419681875	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419682031	result: -1.0 / count: 0 / numRes : 0
+1024419682031	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419682187	result: -1.0 / count: 0 / numRes : 0
+1024419682187	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419682343	result: 0.273 / count: 8 / numRes : 2
+1024419682343	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419682546	result: 0.27 / count: 12 / numRes : 3
+1024419682546	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419682703	result: 0.278 / count: 20 / numRes : 5
+1024419682703	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419682843	result: 0.281 / count: 24 / numRes : 6
+1024419682843	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419683031	result: 0.281 / count: 24 / numRes : 6
+1024419683031	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419683187	result: 0.278 / count: 20 / numRes : 5
+1024419683187	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419683359	result: 0.273 / count: 8 / numRes : 2
+1024419683359	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419683531	result: -1.0 / count: 0 / numRes : 0
+1024419683531	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419683703	result: -1.0 / count: 0 / numRes : 0
+1024419683703	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419683875	result: -1.0 / count: 0 / numRes : 0
+1024419683875	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419684031	result: -1.0 / count: 0 / numRes : 0
+1024419684031	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419684187	result: 0.27 / count: 12 / numRes : 3
+1024419684187	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419684343	result: 0.27 / count: 12 / numRes : 3
+1024419684343	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419684531	result: 0.27 / count: 12 / numRes : 3
+1024419684531	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419684671	result: 0.27 / count: 12 / numRes : 3
+1024419684671	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419684843	result: 0.278 / count: 20 / numRes : 5
+1024419684843	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419684968	result: 0.278 / count: 20 / numRes : 5
+1024419684968	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419685156	result: 0.278 / count: 20 / numRes : 5
+1024419685156	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419685328	result: 0.278 / count: 20 / numRes : 5
+1024419685328	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419685484	result: 0.278 / count: 20 / numRes : 5
+1024419685484	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419685640	result: 0.278 / count: 20 / numRes : 5
+1024419685640	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419685812	result: 0.278 / count: 20 / numRes : 5
+1024419685812	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419685968	result: 0.278 / count: 20 / numRes : 5
+1024419685968	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419686140	result: 0.281 / count: 24 / numRes : 6
+1024419686140	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419686406	result: 0.281 / count: 24 / numRes : 6
+1024419686406	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419686562	result: 0.281 / count: 24 / numRes : 6
+1024419686562	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419686718	result: 0.265 / count: 4 / numRes : 1
+1024419686718	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419686875	result: -1.0 / count: 0 / numRes : 0
+1024419686890	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419687046	result: -1.0 / count: 0 / numRes : 0
+1024419687046	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419687203	result: -1.0 / count: 0 / numRes : 0
+1024419687203	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419687390	result: -1.0 / count: 0 / numRes : 0
+1024419687390	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419687531	result: -1.0 / count: 0 / numRes : 0
+1024419687531	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419687687	result: 0.273 / count: 12 / numRes : 3
+1024419687687	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419687859	result: 0.273 / count: 12 / numRes : 3
+1024419687859	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419688031	result: 0.273 / count: 12 / numRes : 3
+1024419688031	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419688171	result: 0.273 / count: 12 / numRes : 3
+1024419688171	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419688343	result: 0.273 / count: 12 / numRes : 3
+1024419688343	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419688500	result: -1.0 / count: 0 / numRes : 0
+1024419688500	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419688640	result: -1.0 / count: 0 / numRes : 0
+1024419688640	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419688796	result: -1.0 / count: 0 / numRes : 0
+1024419688796	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419688984	result: 0.265 / count: 4 / numRes : 1
+1024419688984	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419689140	result: 0.265 / count: 4 / numRes : 1
+1024419689140	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419689312	result: 0.265 / count: 4 / numRes : 1
+1024419689312	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419689453	result: 0.265 / count: 4 / numRes : 1
+1024419689453	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419689453	experiment complete
+1024419689609	result: 0.265 / count: 4 / numRes : 1
+1024419689609	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419689781	result: 0.265 / count: 4 / numRes : 1
+1024419689781	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419689921	result: 0.265 / count: 4 / numRes : 1
+1024419689921	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419690265	result: 0.265 / count: 4 / numRes : 1
+1024419690265	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419690390	result: 0.265 / count: 4 / numRes : 1
+1024419690390	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419690593	result: 0.265 / count: 4 / numRes : 1
+1024419690593	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419690734	result: 0.265 / count: 4 / numRes : 1
+1024419690734	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419690921	result: 0.265 / count: 4 / numRes : 1
+1024419690921	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419691078	result: 0.265 / count: 4 / numRes : 1
+1024419691078	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419691234	result: 0.265 / count: 4 / numRes : 1
+1024419691234	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419691421	result: 0.265 / count: 4 / numRes : 1
+1024419691421	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419691593	result: 0.265 / count: 4 / numRes : 1
+1024419691593	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419691765	result: 0.265 / count: 4 / numRes : 1
+1024419691765	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419692093	result: 0.265 / count: 4 / numRes : 1
+1024419692093	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419692125	result: 0.265 / count: 4 / numRes : 1
+1024419692125	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419692281	result: 0.265 / count: 4 / numRes : 1
+1024419692281	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419692437	result: 0.265 / count: 4 / numRes : 1
+1024419692437	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419692609	result: 0.265 / count: 4 / numRes : 1
+1024419692609	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419692750	result: 0.265 / count: 4 / numRes : 1
+1024419692750	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419692906	result: 0.265 / count: 4 / numRes : 1
+1024419692906	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419693046	result: 0.265 / count: 4 / numRes : 1
+1024419693046	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419693203	result: 0.265 / count: 4 / numRes : 1
+1024419693203	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419693375	result: 0.265 / count: 4 / numRes : 1
+1024419693375	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419693546	result: 0.265 / count: 4 / numRes : 1
+1024419693546	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419693875	result: 0.265 / count: 4 / numRes : 1
+1024419693875	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419694031	result: 0.265 / count: 4 / numRes : 1
+1024419694031	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419694218	result: 0.265 / count: 4 / numRes : 1
+1024419694218	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419694390	result: 0.265 / count: 4 / numRes : 1
+1024419694390	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419694531	result: 0.265 / count: 4 / numRes : 1
+1024419694531	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419694687	result: 0.265 / count: 4 / numRes : 1
+1024419694687	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419694843	result: 0.265 / count: 4 / numRes : 1
+1024419694843	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419694984	result: 0.265 / count: 4 / numRes : 1
+1024419694984	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419695171	result: 0.265 / count: 4 / numRes : 1
+1024419695171	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419695312	result: 0.265 / count: 4 / numRes : 1
+1024419695312	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419695484	result: 0.265 / count: 4 / numRes : 1
+1024419695484	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419695656	result: 0.265 / count: 4 / numRes : 1
+1024419695656	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419695859	result: 0.265 / count: 4 / numRes : 1
+1024419695859	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419696015	result: 0.265 / count: 4 / numRes : 1
+1024419696031	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419696171	result: 0.265 / count: 4 / numRes : 1
+1024419696171	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419696343	result: 0.265 / count: 4 / numRes : 1
+1024419696343	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419696531	result: 0.265 / count: 4 / numRes : 1
+1024419696531	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419696703	result: 0.265 / count: 4 / numRes : 1
+1024419696703	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419696859	result: 0.265 / count: 4 / numRes : 1
+1024419696859	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419697031	result: 0.265 / count: 4 / numRes : 1
+1024419697031	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419697187	result: 0.265 / count: 4 / numRes : 1
+1024419697203	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419697468	result: 0.265 / count: 4 / numRes : 1
+1024419697468	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419697625	result: 0.265 / count: 4 / numRes : 1
+1024419697625	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419697765	result: 0.265 / count: 4 / numRes : 1
+1024419697781	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419697921	result: 0.265 / count: 4 / numRes : 1
+1024419697921	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419698109	result: 0.265 / count: 4 / numRes : 1
+1024419698109	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419698281	result: 0.265 / count: 4 / numRes : 1
+1024419698281	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419698453	result: 0.265 / count: 4 / numRes : 1
+1024419698453	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419698640	result: 0.265 / count: 4 / numRes : 1
+1024419698640	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419698765	result: 0.265 / count: 4 / numRes : 1
+1024419698781	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419698921	result: 0.265 / count: 4 / numRes : 1
+1024419698921	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419699078	result: 0.265 / count: 4 / numRes : 1
+1024419699078	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419699390	result: 0.265 / count: 4 / numRes : 1
+1024419699390	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419699546	result: 0.265 / count: 4 / numRes : 1
+1024419699546	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419699703	result: 0.265 / count: 4 / numRes : 1
+1024419699703	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419699890	result: 0.265 / count: 4 / numRes : 1
+1024419699890	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419700062	result: 0.265 / count: 4 / numRes : 1
+1024419700062	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419700203	result: 0.265 / count: 4 / numRes : 1
+1024419700203	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419700359	result: 0.265 / count: 4 / numRes : 1
+1024419700359	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419700515	result: 0.265 / count: 4 / numRes : 1
+1024419700515	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419700656	result: 0.265 / count: 4 / numRes : 1
+1024419700656	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419700812	result: 0.265 / count: 4 / numRes : 1
+1024419700812	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419700984	result: 0.265 / count: 4 / numRes : 1
+1024419700984	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419701125	result: 0.265 / count: 4 / numRes : 1
+1024419701281	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419701437	result: 0.265 / count: 4 / numRes : 1
+1024419701437	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419701625	result: 0.265 / count: 4 / numRes : 1
+1024419701640	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419701765	result: 0.265 / count: 4 / numRes : 1
+1024419701765	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419701953	result: 0.265 / count: 4 / numRes : 1
+1024419701953	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419702109	result: 0.265 / count: 4 / numRes : 1
+1024419702109	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419702312	result: 0.265 / count: 4 / numRes : 1
+1024419702312	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419702484	result: 0.265 / count: 4 / numRes : 1
+1024419702484	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419702640	result: 0.265 / count: 4 / numRes : 1
+1024419702640	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419702781	result: 0.265 / count: 4 / numRes : 1
+1024419702796	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419702937	result: 0.265 / count: 4 / numRes : 1
+1024419702937	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419703109	result: 0.265 / count: 4 / numRes : 1
+1024419703109	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419703265	result: 0.265 / count: 4 / numRes : 1
+1024419703265	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419703421	result: 0.265 / count: 4 / numRes : 1
+1024419703421	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419703593	result: 0.265 / count: 4 / numRes : 1
+1024419703593	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419703765	result: 0.265 / count: 4 / numRes : 1
+1024419703765	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419703906	result: 0.265 / count: 4 / numRes : 1
+1024419703906	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419704062	result: 0.265 / count: 4 / numRes : 1
+1024419704062	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419704203	result: 0.265 / count: 4 / numRes : 1
+1024419704203	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419704375	result: 0.265 / count: 4 / numRes : 1
+1024419704375	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419704562	result: 0.265 / count: 4 / numRes : 1
+1024419704562	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419704703	result: 0.265 / count: 4 / numRes : 1
+1024419704703	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419705031	result: 0.265 / count: 4 / numRes : 1
+1024419705031	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419705171	result: 0.265 / count: 4 / numRes : 1
+1024419705171	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419705328	result: 0.265 / count: 4 / numRes : 1
+1024419705328	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419705500	result: 0.265 / count: 4 / numRes : 1
+1024419705500	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419705671	result: 0.265 / count: 4 / numRes : 1
+1024419705671	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419705859	result: 0.265 / count: 4 / numRes : 1
+1024419705859	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419706000	result: 0.265 / count: 4 / numRes : 1
+1024419706000	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419706156	result: 0.265 / count: 4 / numRes : 1
+1024419706156	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419706312	result: 0.265 / count: 4 / numRes : 1
+1024419706312	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419706640	result: 0.265 / count: 4 / numRes : 1
+1024419706640	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419706656	result: 0.265 / count: 4 / numRes : 1
+1024419706656	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419706828	result: 0.265 / count: 4 / numRes : 1
+1024419706828	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419707000	result: 0.265 / count: 4 / numRes : 1
+1024419707000	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419707171	result: 0.265 / count: 4 / numRes : 1
+1024419707171	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419707328	result: 0.265 / count: 4 / numRes : 1
+1024419707328	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419707484	result: 0.265 / count: 4 / numRes : 1
+1024419707484	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419707656	result: 0.265 / count: 4 / numRes : 1
+1024419707656	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419707828	result: 0.265 / count: 4 / numRes : 1
+1024419707828	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419707984	result: 0.265 / count: 4 / numRes : 1
+1024419707984	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419708218	result: 0.265 / count: 4 / numRes : 1
+1024419708218	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419708375	result: 0.265 / count: 4 / numRes : 1
+1024419708375	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419708578	result: 0.265 / count: 4 / numRes : 1
+1024419708578	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419708703	result: 0.265 / count: 4 / numRes : 1
+1024419708703	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419708859	result: 0.265 / count: 4 / numRes : 1
+1024419708859	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419709015	result: 0.265 / count: 4 / numRes : 1
+1024419709015	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419709187	result: 0.265 / count: 4 / numRes : 1
+1024419709187	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419709375	result: 0.265 / count: 4 / numRes : 1
+1024419709375	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419709546	result: 0.265 / count: 4 / numRes : 1
+1024419709546	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419709687	result: 0.265 / count: 4 / numRes : 1
+1024419709687	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419709828	result: 0.265 / count: 4 / numRes : 1
+1024419709843	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419709984	result: 0.265 / count: 4 / numRes : 1
+1024419709984	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419710187	result: 0.265 / count: 4 / numRes : 1
+1024419710187	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419710359	result: 0.265 / count: 4 / numRes : 1
+1024419710359	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419710500	result: 0.265 / count: 4 / numRes : 1
+1024419710500	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {distToB 1 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419710656	result: 0.281 / count: 16 / numRes : 4
+1024419710656	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419710828	result: 0.281 / count: 16 / numRes : 4
+1024419710828	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419711015	result: 0.281 / count: 16 / numRes : 4
+1024419711015	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419711156	result: 0.281 / count: 16 / numRes : 4
+1024419711156	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419711312	result: 0.281 / count: 16 / numRes : 4
+1024419711312	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419711484	result: 0.281 / count: 16 / numRes : 4
+1024419711484	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419711625	result: 0.281 / count: 16 / numRes : 4
+1024419711640	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419711953	result: 0.281 / count: 16 / numRes : 4
+1024419711953	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419712093	result: 0.32 / count: 55 / numRes : 14
+1024419712093	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419712265	result: 0.32 / count: 55 / numRes : 14
+1024419712265	state: {taxes 3 -1 -1.0} {distToA 2 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419712437	result: 0.33 / count: 209 / numRes : 57
+1024419712437	state: {taxes 3 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419712593	result: 0.33 / count: 209 / numRes : 57
+1024419712593	state: {taxes 3 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419712734	result: 0.33 / count: 209 / numRes : 57
+1024419712734	state: {taxes 3 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419712890	result: 0.33 / count: 209 / numRes : 57
+1024419712890	state: {taxes 3 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419713046	result: 0.33 / count: 209 / numRes : 57
+1024419713046	state: {taxes 3 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419713203	result: 0.33 / count: 209 / numRes : 57
+1024419713203	state: {taxes 3 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419713343	result: 0.33 / count: 209 / numRes : 57
+1024419713343	state: {taxes 3 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419713671	result: 0.33 / count: 209 / numRes : 57
+1024419713671	state: {taxes 3 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419713812	result: 0.33 / count: 209 / numRes : 57
+1024419713812	state: {taxes 3 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419713968	result: 0.33 / count: 209 / numRes : 57
+1024419713968	state: {taxes 3 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419714171	result: 0.33 / count: 209 / numRes : 57
+1024419714171	state: {taxes 3 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419714296	result: 0.33 / count: 209 / numRes : 57
+1024419714296	state: {taxes 3 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419714484	result: 0.33 / count: 209 / numRes : 57
+1024419714484	state: {taxes 3 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419714609	result: 0.33 / count: 209 / numRes : 57
+1024419714609	state: {taxes 3 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419714765	result: 0.33 / count: 209 / numRes : 57
+1024419714765	state: {taxes 3 -1 -1.0} {sqfoot 0 209 3442.35}
+1024419714953	result: 0.349 / count: 833 / numRes : 258
+1024419714953	state: {sqfoot 0 209 3442.35}
+1024419715078	result: 0.349 / count: 833 / numRes : 258
+1024419715078	state: {sqfoot 0 209 3442.35}
+1024419715234	result: 0.349 / count: 833 / numRes : 258
+1024419715234	state: {sqfoot 0 209 3442.35}
+1024419715421	result: 0.349 / count: 833 / numRes : 258
+1024419715421	state: {sqfoot 0 209 3442.35}
+1024419715562	result: 0.349 / count: 833 / numRes : 258
+1024419715562	state: 
+1024419715718	result: 0.349 / count: 833 / numRes : 258
+1024419715718	state: 
+1024419715859	result: 0.349 / count: 833 / numRes : 258
+1024419715859	state: 
+1024419716015	result: 0.349 / count: 833 / numRes : 258
+1024419716015	state: 
+1024419716156	result: 0.349 / count: 833 / numRes : 258
+1024419716156	state: 
+1024419716312	result: 0.349 / count: 833 / numRes : 258
+1024419716312	state: 
+1024419716468	result: 0.349 / count: 833 / numRes : 258
+1024419716468	state: 
+1024419716625	result: 0.349 / count: 833 / numRes : 258
+1024419716625	state: 
+1024419716781	result: 0.349 / count: 833 / numRes : 258
+1024419716781	state: 
+1024419716921	result: 0.349 / count: 833 / numRes : 258
+1024419716921	state: 
+1024419717078	result: 0.349 / count: 833 / numRes : 258
+1024419717078	state: 
+1024419717250	result: 0.349 / count: 833 / numRes : 258
+1024419717250	state: 
+1024419717390	result: 0.349 / count: 833 / numRes : 258
+1024419717390	state: 
+1024419717546	result: 0.349 / count: 833 / numRes : 258
+1024419717546	state: 
+1024419717703	result: 0.349 / count: 833 / numRes : 258
+1024419717703	state: 
+1024419717843	result: 0.349 / count: 833 / numRes : 258
+1024419717843	state: 
+1024419718000	result: 0.349 / count: 833 / numRes : 258
+1024419718000	state: 
+1024419718140	result: 0.349 / count: 833 / numRes : 258
+1024419718140	state: 
+1024419718296	result: 0.349 / count: 833 / numRes : 258
+1024419718296	state: 
+1024419718453	result: 0.349 / count: 833 / numRes : 258
+1024419718453	state: 
+1024419718593	result: 0.349 / count: 833 / numRes : 258
+1024419718593	state: 
+1024419718781	result: 0.349 / count: 833 / numRes : 258
+1024419718781	state: 
+1024419718906	result: 0.349 / count: 833 / numRes : 258
+1024419718906	state: 
+1024419719062	result: 0.349 / count: 833 / numRes : 258
+1024419719062	state: 
+1024419719218	result: 0.349 / count: 833 / numRes : 258
+1024419719218	state: 
+1024419719359	result: 0.349 / count: 833 / numRes : 258
+1024419719359	state: 
+1024419719515	result: 0.349 / count: 833 / numRes : 258
+1024419719515	state: 
+1024419719687	result: 0.349 / count: 833 / numRes : 258
+1024419719687	state: 
+1024419719828	result: 0.349 / count: 833 / numRes : 258
+1024419719828	state: 
+1024419719968	result: 0.349 / count: 833 / numRes : 258
+1024419719968	state: 
+1024419720125	result: 0.349 / count: 833 / numRes : 258
+1024419720125	state: 
+1024419720296	result: 0.349 / count: 833 / numRes : 258
+1024419720296	state: 
+1024419720437	result: 0.349 / count: 833 / numRes : 258
+1024419720437	state: 
+1024419720593	result: 0.349 / count: 833 / numRes : 258
+1024419720593	state: 
+1024419720750	result: 0.349 / count: 833 / numRes : 258
+1024419720750	state: 
+1024419720906	result: 0.349 / count: 833 / numRes : 258
+1024419720906	state: 
+1024419721062	result: 0.349 / count: 833 / numRes : 258
+1024419721062	state: 
+1024419721203	result: 0.349 / count: 833 / numRes : 258
+1024419721203	state: 
+1024419721359	result: 0.349 / count: 833 / numRes : 258
+1024419721359	state: 
+1024419721515	result: 0.349 / count: 833 / numRes : 258
+1024419721515	state: 
+1024419721656	result: 0.349 / count: 833 / numRes : 258
+1024419721656	state: 
+1024419721843	result: 0.349 / count: 833 / numRes : 258
+1024419721843	state: 
+1024419721968	result: 0.349 / count: 833 / numRes : 258
+1024419721968	state: 
+1024419722125	result: 0.349 / count: 833 / numRes : 258
+1024419722125	state: 
+1024419722265	result: 0.349 / count: 833 / numRes : 258
+1024419722265	state: 
+1024419722421	result: 0.349 / count: 833 / numRes : 258
+1024419722421	state: 
+1024419722562	result: 0.349 / count: 833 / numRes : 258
+1024419722562	state: 
+1024419722718	result: 0.349 / count: 833 / numRes : 258
+1024419722718	state: 
+1024419722875	result: 0.349 / count: 833 / numRes : 258
+1024419722875	state: 
+1024419723015	result: 0.349 / count: 833 / numRes : 258
+1024419723015	state: 
+1024419723171	result: 0.349 / count: 833 / numRes : 258
+1024419723171	state: 
+1024419723343	result: 0.349 / count: 833 / numRes : 258
+1024419723343	state: 
+1024419723484	result: 0.349 / count: 833 / numRes : 258
+1024419723484	state: 
+1024419723625	result: 0.349 / count: 833 / numRes : 258
+1024419723625	state: 
+1024419723781	result: 0.349 / count: 833 / numRes : 258
+1024419723781	state: 
+1024419723937	result: 0.349 / count: 833 / numRes : 258
+1024419723937	state: 
+1024419724078	result: 0.349 / count: 833 / numRes : 258
+1024419724078	state: 
+1024419724234	result: 0.349 / count: 833 / numRes : 258
+1024419724234	state: 
+1024419724390	result: 0.349 / count: 833 / numRes : 258
+1024419724390	state: 
+1024419724531	result: 0.349 / count: 833 / numRes : 258
+1024419724531	state: 
+1024419724687	result: 0.349 / count: 833 / numRes : 258
+1024419724687	state: 
+1024419724859	result: 0.349 / count: 833 / numRes : 258
+1024419724859	state: 
+1024419725000	result: 0.349 / count: 833 / numRes : 258
+1024419725000	state: 
+1024419725140	result: 0.349 / count: 833 / numRes : 258
+1024419725140	state: 
+1024419725296	result: 0.349 / count: 833 / numRes : 258
+1024419725296	state: 
+1024419725453	result: 0.349 / count: 833 / numRes : 258
+1024419725453	state: 
+1024419725609	result: 0.349 / count: 833 / numRes : 258
+1024419725609	state: 
+1024419725765	result: 0.349 / count: 833 / numRes : 258
+1024419725765	state: 
+1024419725921	result: 0.349 / count: 833 / numRes : 258
+1024419725921	state: 
+1024419726062	result: 0.349 / count: 833 / numRes : 258
+1024419726062	state: 
+1024419726218	result: 0.349 / count: 833 / numRes : 258
+1024419726218	state: 
+1024419726390	result: 0.349 / count: 833 / numRes : 258
+1024419726390	state: 
+1024419726531	result: 0.349 / count: 833 / numRes : 258
+1024419726531	state: 
+1024419726671	result: 0.349 / count: 833 / numRes : 258
+1024419726671	state: 
+1024419726828	result: 0.349 / count: 833 / numRes : 258
+1024419726828	state: 
+1024419726984	result: 0.349 / count: 833 / numRes : 258
+1024419726984	state: 
+1024419727125	result: 0.349 / count: 833 / numRes : 258
+1024419727125	state: 
+1024419727281	result: 0.349 / count: 833 / numRes : 258
+1024419727281	state: 
+1024419727437	result: 0.349 / count: 833 / numRes : 258
+1024419727437	state: 
+1024419727578	result: 0.349 / count: 833 / numRes : 258
+1024419727578	state: 
+1024419727734	result: 0.349 / count: 833 / numRes : 258
+1024419727734	state: 
+1024419727906	result: 0.349 / count: 833 / numRes : 258
+1024419727906	state: 
+1024419728046	result: 0.349 / count: 833 / numRes : 258
+1024419728046	state: 
+1024419728203	result: 0.349 / count: 833 / numRes : 258
+1024419728203	state: 
+1024419728343	result: 0.349 / count: 833 / numRes : 258
+1024419728343	state: 
+1024419728500	result: 0.349 / count: 833 / numRes : 258
+1024419728500	state: 
+1024419728656	result: 0.349 / count: 833 / numRes : 258
+1024419728656	state: 
+1024419728812	result: 0.349 / count: 833 / numRes : 258
+1024419728812	state: 
+1024419728968	result: 0.349 / count: 833 / numRes : 258
+1024419728968	state: 
+1024419729125	result: 0.349 / count: 833 / numRes : 258
+1024419729125	state: 
+1024419729281	result: 0.349 / count: 833 / numRes : 258
+1024419729281	state: 
+1024419729453	result: 0.349 / count: 833 / numRes : 258
+1024419729453	state: 
+1024419729593	result: 0.349 / count: 833 / numRes : 258
+1024419729593	state: 
+1024419729750	result: 0.349 / count: 833 / numRes : 258
+1024419729750	state: 
+1024419729890	result: 0.349 / count: 833 / numRes : 258
+1024419729890	state: 
+1024419730046	result: 0.349 / count: 833 / numRes : 258
+1024419730046	state: 
+1024419730187	result: 0.349 / count: 833 / numRes : 258
+1024419730187	state: 
+1024419730343	result: 0.349 / count: 833 / numRes : 258
+1024419730343	state: 
+1024419730500	result: 0.349 / count: 833 / numRes : 258
+1024419730500	state: 
+1024419730656	result: 0.349 / count: 833 / numRes : 258
+1024419730656	state: 
+1024419730796	result: 0.349 / count: 833 / numRes : 258
+1024419730796	state: 
+1024419730968	result: 0.349 / count: 833 / numRes : 258
+1024419730968	state: 
+1024419731109	result: 0.349 / count: 833 / numRes : 258
+1024419731109	state: 
+1024419731265	result: 0.349 / count: 833 / numRes : 258
+1024419731265	state: 
+1024419731406	result: 0.349 / count: 833 / numRes : 258
+1024419731406	state: 
+1024419731562	result: 0.349 / count: 833 / numRes : 258
+1024419731562	state: 
+1024419731718	result: 0.349 / count: 833 / numRes : 258
+1024419731718	state: 
+1024419731875	result: 0.349 / count: 833 / numRes : 258
+1024419731875	state: 
+1024419732015	result: 0.349 / count: 833 / numRes : 258
+1024419732015	state: 
+1024419732171	result: 0.349 / count: 833 / numRes : 258
+1024419732171	state: 
+1024419732312	result: 0.349 / count: 833 / numRes : 258
+1024419732312	state: 
+1024419732484	result: 0.349 / count: 833 / numRes : 258
+1024419732484	state: 
+1024419732625	result: 0.349 / count: 833 / numRes : 258
+1024419732625	state: 
+1024419732781	result: 0.349 / count: 833 / numRes : 258
+1024419732781	state: 
+1024419732937	result: 0.349 / count: 833 / numRes : 258
+1024419732937	state: 
+1024419733078	result: 0.349 / count: 833 / numRes : 258
+1024419733078	state: 
+1024419733234	result: 0.349 / count: 833 / numRes : 258
+1024419733234	state: 
+1024419733375	result: 0.349 / count: 833 / numRes : 258
+1024419733375	state: 
+1024419733531	result: 0.349 / count: 833 / numRes : 258
+1024419733531	state: 
+1024419733687	result: 0.349 / count: 833 / numRes : 258
+1024419733687	state: 
+1024419733828	result: 0.349 / count: 833 / numRes : 258
+1024419733828	state: 
+1024419734015	result: 0.349 / count: 833 / numRes : 258
+1024419734015	state: 
+1024419734140	result: 0.349 / count: 833 / numRes : 258
+1024419734140	state: 
+1024419734296	result: 0.349 / count: 833 / numRes : 258
+1024419734296	state: 
+1024419734437	result: 0.349 / count: 833 / numRes : 258
+1024419734437	state: 
+1024419734593	result: 0.349 / count: 833 / numRes : 258
+1024419734593	state: 
+1024419734750	result: 0.349 / count: 833 / numRes : 258
+1024419734750	state: 
+1024419734890	result: 0.349 / count: 833 / numRes : 258
+1024419734890	state: 
+1024419735046	result: 0.349 / count: 833 / numRes : 258
+1024419735046	state: 
+1024419735203	result: 0.349 / count: 833 / numRes : 258
+1024419735203	state: 
+1024419735343	result: 0.349 / count: 833 / numRes : 258
+1024419735343	state: 
+1024419735531	result: 0.349 / count: 833 / numRes : 258
+1024419735531	state: 
+1024419735656	result: 0.349 / count: 833 / numRes : 258
+1024419735656	state: 
+1024419735812	result: 0.349 / count: 833 / numRes : 258
+1024419735812	state: 
+1024419735953	result: 0.349 / count: 833 / numRes : 258
+1024419735953	state: 
+1024419736109	result: 0.349 / count: 833 / numRes : 258
+1024419736109	state: 
+1024419736265	result: 0.349 / count: 833 / numRes : 258
+1024419736265	state: 
+1024419736406	result: 0.349 / count: 833 / numRes : 258
+1024419736406	state: 
+1024419736562	result: 0.349 / count: 833 / numRes : 258
+1024419736562	state: 
+1024419736718	result: 0.349 / count: 833 / numRes : 258
+1024419736718	state: 
+1024419736859	result: 0.349 / count: 833 / numRes : 258
+1024419736859	state: 
+1024419737046	result: 0.349 / count: 833 / numRes : 258
+1024419737046	state: 
+1024419737187	result: 0.349 / count: 833 / numRes : 258
+1024419737187	state: 
+1024419737328	result: 0.349 / count: 833 / numRes : 258
+1024419737328	state: 
+1024419737484	result: 0.349 / count: 833 / numRes : 258
+1024419737484	state: 
+1024419737640	result: 0.349 / count: 833 / numRes : 258
+1024419737640	state: 
+1024419737781	result: 0.349 / count: 833 / numRes : 258
+1024419737781	state: 
+1024419737937	result: 0.349 / count: 833 / numRes : 258
+1024419737937	state: 
+1024419738109	result: 0.349 / count: 833 / numRes : 258
+1024419738109	state: 
+1024419738250	result: 0.349 / count: 833 / numRes : 258
+1024419738250	state: 
+1024419738406	result: 0.349 / count: 833 / numRes : 258
+1024419738406	state: 
+1024419738578	result: 0.349 / count: 833 / numRes : 258
+1024419738578	state: 
+1024419738718	result: 0.349 / count: 833 / numRes : 258
+1024419738718	state: 
+1024419738859	result: 0.349 / count: 833 / numRes : 258
+1024419738859	state: 
+1024419739015	result: 0.349 / count: 833 / numRes : 258
+1024419739015	state: 
+1024419739171	result: 0.349 / count: 833 / numRes : 258
+1024419739171	state: 
+1024419739312	result: 0.349 / count: 833 / numRes : 258
+1024419739312	state: 
+1024419739468	result: 0.349 / count: 833 / numRes : 258
+1024419739468	state: 
+1024419739625	result: 0.349 / count: 833 / numRes : 258
+1024419739625	state: 
+1024419739765	result: 0.349 / count: 833 / numRes : 258
+1024419739765	state: 
+1024419739921	result: 0.349 / count: 833 / numRes : 258
+1024419739921	state: 
+1024419740093	result: 0.349 / count: 833 / numRes : 258
+1024419740093	state: 
+1024419740234	result: 0.349 / count: 833 / numRes : 258
+1024419740234	state: 
+1024419740375	result: 0.349 / count: 833 / numRes : 258
+1024419740375	state: 
+1024419740531	result: 0.349 / count: 833 / numRes : 258
+1024419740531	state: 
+1024419740671	result: 0.349 / count: 833 / numRes : 258
+1024419740671	state: 
+1024419740828	result: 0.349 / count: 833 / numRes : 258
+1024419740828	state: 
+1024419740984	result: 0.349 / count: 833 / numRes : 258
+1024419740984	state: 
+1024419741140	result: 0.349 / count: 833 / numRes : 258
+1024419741140	state: 
+1024419741281	result: 0.349 / count: 833 / numRes : 258
+1024419741281	state: 
+1024419741437	result: 0.349 / count: 833 / numRes : 258
+1024419741437	state: 
+1024419741609	result: 0.349 / count: 833 / numRes : 258
+1024419741609	state: 
+1024419741750	result: 0.349 / count: 833 / numRes : 258
+1024419741750	state: 
+1024419741906	result: 0.349 / count: 833 / numRes : 258
+1024419741906	state: 
+1024419742046	result: 0.349 / count: 833 / numRes : 258
+1024419742046	state: 
+1024419742203	result: 0.349 / count: 833 / numRes : 258
+1024419742203	state: 
+1024419742359	result: 0.349 / count: 833 / numRes : 258
+1024419742359	state: 
+1024419742500	result: 0.349 / count: 833 / numRes : 258
+1024419742500	state: 
+1024419742656	result: 0.349 / count: 833 / numRes : 258
+1024419742656	state: 
+1024419742796	result: 0.349 / count: 833 / numRes : 258
+1024419742796	state: 
+1024419742953	result: 0.349 / count: 833 / numRes : 258
+1024419742953	state: 
+1024419743125	result: 0.349 / count: 833 / numRes : 258
+1024419743125	state: 
+1024419743265	result: 0.349 / count: 833 / numRes : 258
+1024419743265	state: 
+1024419743421	result: 0.349 / count: 833 / numRes : 258
+1024419743421	state: 
+1024419743562	result: 0.349 / count: 833 / numRes : 258
+1024419743562	state: 
+1024419743718	result: 0.349 / count: 833 / numRes : 258
+1024419743718	state: 
+1024419743875	result: 0.349 / count: 833 / numRes : 258
+1024419743875	state: 
+1024419744015	result: 0.349 / count: 833 / numRes : 258
+1024419744015	state: 
+1024419744171	result: 0.349 / count: 833 / numRes : 258
+1024419744171	state: 
+1024419744312	result: 0.349 / count: 833 / numRes : 258
+1024419744312	state: 
+1024419744468	result: 0.349 / count: 833 / numRes : 258
+1024419744468	state: 
+1024419744640	result: 0.349 / count: 833 / numRes : 258
+1024419744640	state: 
+1024419744781	result: 0.349 / count: 833 / numRes : 258
+1024419744781	state: 
+1024419744921	result: 0.349 / count: 833 / numRes : 258
+1024419744921	state: 
+1024419745078	result: 0.349 / count: 833 / numRes : 258
+1024419745078	state: 
+1024419745234	result: 0.349 / count: 833 / numRes : 258
+1024419745234	state: 
+1024419745375	result: 0.349 / count: 833 / numRes : 258
+1024419745375	state: 
+1024419745531	result: 0.349 / count: 833 / numRes : 258
+1024419745531	state: 
+1024419745687	result: 0.349 / count: 833 / numRes : 258
+1024419745687	state: 
+1024419745828	result: 0.349 / count: 833 / numRes : 258
+1024419745828	state: 
+1024419745984	result: 0.349 / count: 833 / numRes : 258
+1024419745984	state: 
+1024419746156	result: 0.349 / count: 833 / numRes : 258
+1024419746156	state: 
+1024419746296	result: 0.349 / count: 833 / numRes : 258
+1024419746296	state: 
+1024419746437	result: 0.349 / count: 833 / numRes : 258
+1024419746437	state: 
+1024419746609	result: 0.349 / count: 833 / numRes : 258
+1024419746609	state: 
+1024419746750	result: 0.349 / count: 833 / numRes : 258
+1024419746750	state: 
+1024419746890	result: 0.349 / count: 833 / numRes : 258
+1024419746890	state: 
+1024419747046	result: 0.349 / count: 833 / numRes : 258
+1024419747046	state: 
+1024419747187	result: 0.349 / count: 833 / numRes : 258
+1024419747187	state: 
+1024419747343	result: 0.349 / count: 833 / numRes : 258
+1024419747343	state: 
+1024419747500	result: 0.349 / count: 833 / numRes : 258
+1024419747500	state: 
+1024419747671	result: 0.349 / count: 833 / numRes : 258
+1024419747671	state: 
+1024419747812	result: 0.349 / count: 833 / numRes : 258
+1024419747812	state: 
+1024419747953	result: 0.349 / count: 833 / numRes : 258
+1024419747953	state: 
+1024419748109	result: 0.349 / count: 833 / numRes : 258
+1024419748109	state: 
+1024419748265	result: 0.349 / count: 833 / numRes : 258
+1024419748265	state: 
+1024419748406	result: 0.349 / count: 833 / numRes : 258
+1024419748406	state: 
+1024419748562	result: 0.349 / count: 833 / numRes : 258
+1024419748562	state: 
+1024419748718	result: 0.349 / count: 833 / numRes : 258
+1024419748718	state: 
+1024419748859	result: 0.349 / count: 833 / numRes : 258
+1024419748859	state: 
+1024419749015	result: 0.349 / count: 833 / numRes : 258
+1024419749015	state: 
+1024419749187	result: 0.349 / count: 833 / numRes : 258
+1024419749187	state: 
+1024419749328	result: 0.349 / count: 833 / numRes : 258
+1024419749328	state: 
+1024419749468	result: 0.349 / count: 833 / numRes : 258
+1024419749468	state: 
+1024419749625	result: 0.349 / count: 833 / numRes : 258
+1024419749625	state: 
+1024419749781	result: 0.349 / count: 833 / numRes : 258
+1024419749781	state: 
+1024419749921	result: 0.349 / count: 833 / numRes : 258
+1024419749921	state: 
+1024419750078	result: 0.349 / count: 833 / numRes : 258
+1024419750078	state: 
+1024419750234	result: 0.349 / count: 833 / numRes : 258
+1024419750234	state: 
+1024419750375	result: 0.349 / count: 833 / numRes : 258
+1024419750375	state: 
+1024419750531	result: 0.349 / count: 833 / numRes : 258
+1024419750531	state: 
+1024419750703	result: 0.349 / count: 833 / numRes : 258
+1024419750703	state: 
+1024419750843	result: 0.349 / count: 833 / numRes : 258
+1024419750843	state: 
+1024419750984	result: 0.349 / count: 833 / numRes : 258
+1024419750984	state: 
+1024419751140	result: 0.349 / count: 833 / numRes : 258
+1024419751140	state: 
+1024419751296	result: 0.349 / count: 833 / numRes : 258
+1024419751296	state: 
+1024419751437	result: 0.349 / count: 833 / numRes : 258
+1024419751437	state: 
+1024419751593	result: 0.349 / count: 833 / numRes : 258
+1024419751593	state: 
+1024419751750	result: 0.349 / count: 833 / numRes : 258
+1024419751750	state: 
+1024419751890	result: 0.349 / count: 833 / numRes : 258
+1024419751890	state: 
+1024419752046	result: 0.349 / count: 833 / numRes : 258
+1024419752046	state: 
+1024419752218	result: 0.349 / count: 833 / numRes : 258
+1024419752218	state: 
+1024419752359	result: 0.349 / count: 833 / numRes : 258
+1024419752359	state: 
+1024419752500	result: 0.349 / count: 833 / numRes : 258
+1024419752500	state: 
+1024419752656	result: 0.349 / count: 833 / numRes : 258
+1024419752656	state: 
+1024419752812	result: 0.349 / count: 833 / numRes : 258
+1024419752812	state: 
+1024419752953	result: 0.349 / count: 833 / numRes : 258
+1024419752953	state: 
+1024419753109	result: 0.349 / count: 833 / numRes : 258
+1024419753109	state: 
+1024419753265	result: 0.349 / count: 833 / numRes : 258
+1024419753265	state: 
+1024419753406	result: 0.349 / count: 833 / numRes : 258
+1024419753406	state: 
+1024419753562	result: 0.349 / count: 833 / numRes : 258
+1024419753562	state: 
+1024419753734	result: 0.349 / count: 833 / numRes : 258
+1024419753734	state: 
+1024419753859	result: 0.349 / count: 833 / numRes : 258
+1024419753875	state: 
+1024419754015	result: 0.349 / count: 833 / numRes : 258
+1024419754015	state: 
+1024419754171	result: 0.349 / count: 833 / numRes : 258
+1024419754171	state: 
+1024419754312	result: 0.349 / count: 833 / numRes : 258
+1024419754312	state: 
+1024419754468	result: 0.349 / count: 833 / numRes : 258
+1024419754468	state: 
+1024419754625	result: 0.349 / count: 833 / numRes : 258
+1024419754625	state: 
+1024419754781	result: 0.349 / count: 833 / numRes : 258
+1024419754781	state: 
+1024419754921	result: 0.349 / count: 833 / numRes : 258
+1024419754921	state: 
+1024419755078	result: 0.349 / count: 833 / numRes : 258
+1024419755078	state: 
+1024419755250	result: 0.349 / count: 833 / numRes : 258
+1024419755250	state: 
+1024419755375	result: 0.349 / count: 833 / numRes : 258
+1024419755390	state: 
+1024419755531	result: 0.349 / count: 833 / numRes : 258
+1024419755531	state: 
+1024419755687	result: 0.349 / count: 833 / numRes : 258
+1024419755687	state: 
+1024419755828	result: 0.349 / count: 833 / numRes : 258
+1024419755828	state: 
+1024419755984	result: 0.349 / count: 833 / numRes : 258
+1024419755984	state: 
+1024419756140	result: 0.349 / count: 833 / numRes : 258
+1024419756140	state: 
+1024419756296	result: 0.349 / count: 833 / numRes : 258
+1024419756296	state: 
+1024419756437	result: 0.349 / count: 833 / numRes : 258
+1024419756437	state: 
+1024419756578	result: 0.349 / count: 833 / numRes : 258
+1024419756593	state: 
+1024419756765	result: 0.349 / count: 833 / numRes : 258
+1024419756765	state: 
+1024419756906	result: 0.349 / count: 833 / numRes : 258
+1024419756906	state: 
+1024419757046	result: 0.349 / count: 833 / numRes : 258
+1024419757046	state: 
+1024419757203	result: 0.349 / count: 833 / numRes : 258
+1024419757203	state: 
+1024419757343	result: 0.349 / count: 833 / numRes : 258
+1024419757343	state: 
+1024419757500	result: 0.349 / count: 833 / numRes : 258
+1024419757500	state: 
+1024419757656	result: 0.349 / count: 833 / numRes : 258
+1024419757656	state: 
+1024419757812	result: 0.349 / count: 833 / numRes : 258
+1024419757812	state: 
+1024419757953	result: 0.349 / count: 833 / numRes : 258
+1024419757953	state: 
+1024419758109	result: 0.349 / count: 833 / numRes : 258
+1024419758109	state: 
+1024419758281	result: 0.349 / count: 833 / numRes : 258
+1024419758281	state: 
+1024419758406	result: 0.349 / count: 833 / numRes : 258
+1024419758406	state: 
+1024419758562	result: 0.349 / count: 833 / numRes : 258
+1024419758562	state: 
+1024419758718	result: 0.349 / count: 833 / numRes : 258
+1024419758718	state: 
+1024419758859	result: 0.349 / count: 833 / numRes : 258
+1024419758859	state: 
+1024419759015	result: 0.349 / count: 833 / numRes : 258
+1024419759015	state: 
+1024419759171	result: 0.349 / count: 833 / numRes : 258
+1024419759171	state: 
+1024419759312	result: 0.349 / count: 833 / numRes : 258
+1024419759312	state: 
+1024419759468	result: 0.349 / count: 833 / numRes : 258
+1024419759468	state: 
+1024419759781	result: 0.349 / count: 833 / numRes : 258
+1024419759781	state: 
+1024419759921	result: 0.349 / count: 833 / numRes : 258
+1024419759921	state: 
+1024419760078	result: 0.349 / count: 833 / numRes : 258
+1024419760078	state: 
+1024419760218	result: 0.349 / count: 833 / numRes : 258
+1024419760218	state: 
+1024419760375	result: 0.349 / count: 833 / numRes : 258
+1024419760375	state: 
+1024419760515	result: 0.349 / count: 833 / numRes : 258
+1024419760515	state: 
+1024419760671	result: 0.349 / count: 833 / numRes : 258
+1024419760671	state: 
+1024419760828	result: 0.349 / count: 833 / numRes : 258
+1024419760828	state: 
+1024419760968	result: 0.349 / count: 833 / numRes : 258
+1024419760968	state: 
+1024419761125	result: 0.349 / count: 833 / numRes : 258
+1024419761125	state: 
+1024419761281	result: 0.349 / count: 833 / numRes : 258
+1024419761281	state: 
+1024419761453	result: 0.349 / count: 833 / numRes : 258
+1024419761453	state: 
+1024419761593	result: 0.349 / count: 833 / numRes : 258
+1024419761593	state: 
+1024419761734	result: 0.349 / count: 833 / numRes : 258
+1024419761734	state: 
+1024419761890	result: 0.349 / count: 833 / numRes : 258
+1024419761890	state: 
+1024419762031	result: 0.349 / count: 833 / numRes : 258
+1024419762031	state: 
+1024419762187	result: 0.349 / count: 833 / numRes : 258
+1024419762187	state: 
+1024419762343	result: 0.349 / count: 833 / numRes : 258
+1024419762343	state: 
+1024419762500	result: 0.349 / count: 833 / numRes : 258
+1024419762500	state: 
+1024419762640	result: 0.349 / count: 833 / numRes : 258
+1024419762640	state: 
+1024419762812	result: 0.349 / count: 833 / numRes : 258
+1024419762812	state: 
+1024419762953	result: 0.349 / count: 833 / numRes : 258
+1024419762953	state: 
+1024419763109	result: 0.349 / count: 833 / numRes : 258
+1024419763109	state: 
+1024419763250	result: 0.349 / count: 833 / numRes : 258
+1024419763250	state: 
+1024419763406	result: 0.349 / count: 833 / numRes : 258
+1024419763406	state: 
+1024419763562	result: 0.349 / count: 833 / numRes : 258
+1024419763562	state: 
+1024419763703	result: 0.349 / count: 833 / numRes : 258
+1024419763703	state: 
+1024419763859	result: 0.349 / count: 833 / numRes : 258
+1024419763859	state: 
+1024419764015	result: 0.349 / count: 833 / numRes : 258
+1024419764015	state: 
+1024419764156	result: 0.349 / count: 833 / numRes : 258
+1024419764156	state: 
+1024419764312	result: 0.349 / count: 833 / numRes : 258
+1024419764312	state: 
+1024419764500	result: 0.349 / count: 833 / numRes : 258
+1024419764500	state: 
+1024419764625	result: 0.349 / count: 833 / numRes : 258
+1024419764625	state: 
+1024419764781	result: 0.349 / count: 833 / numRes : 258
+1024419764781	state: 
+1024419764937	result: 0.349 / count: 833 / numRes : 258
+1024419764937	state: 
+1024419765078	result: 0.349 / count: 833 / numRes : 258
+1024419765078	state: 
+1024419765234	result: 0.349 / count: 833 / numRes : 258
+1024419765234	state: 
+1024419765390	result: 0.349 / count: 833 / numRes : 258
+1024419765390	state: 
+1024419765546	result: 0.349 / count: 833 / numRes : 258
+1024419765546	state: 
+1024419765687	result: 0.349 / count: 833 / numRes : 258
+1024419765687	state: 
+1024419765859	result: 0.349 / count: 833 / numRes : 258
+1024419765859	state: 
+1024419766000	result: 0.349 / count: 833 / numRes : 258
+1024419766000	state: 
+1024419766156	result: 0.349 / count: 833 / numRes : 258
+1024419766156	state: 
+1024419766312	result: 0.349 / count: 833 / numRes : 258
+1024419766312	state: 
+1024419766453	result: 0.349 / count: 833 / numRes : 258
+1024419766453	state: 
+1024419766609	result: 0.349 / count: 833 / numRes : 258
+1024419766609	state: 
+1024419766750	result: 0.349 / count: 833 / numRes : 258
+1024419766750	state: 
+1024419766906	result: 0.349 / count: 833 / numRes : 258
+1024419766906	state: 
+1024419767062	result: 0.349 / count: 833 / numRes : 258
+1024419767062	state: 
+1024419767203	result: 0.349 / count: 833 / numRes : 258
+1024419767203	state: 
+1024419767359	result: 0.349 / count: 833 / numRes : 258
+1024419767359	state: 
+1024419767531	result: 0.349 / count: 833 / numRes : 258
+1024419767531	state: 
+1024419767671	result: 0.349 / count: 833 / numRes : 258
+1024419767671	state: 
+1024419767828	result: 0.349 / count: 833 / numRes : 258
+1024419767828	state: 
+1024419767968	result: 0.349 / count: 833 / numRes : 258
+1024419767968	state: 
+1024419768125	result: 0.349 / count: 833 / numRes : 258
+1024419768125	state: 
+1024419768281	result: 0.349 / count: 833 / numRes : 258
+1024419768281	state: 
+1024419768421	result: 0.349 / count: 833 / numRes : 258
+1024419768421	state: 
+1024419768578	result: 0.349 / count: 833 / numRes : 258
+1024419768578	state: 
+1024419768734	result: 0.349 / count: 833 / numRes : 258
+1024419768734	state: 
+1024419768906	result: 0.349 / count: 833 / numRes : 258
+1024419768906	state: 
+1024419769046	result: 0.349 / count: 833 / numRes : 258
+1024419769046	state: 
+1024419769187	result: 0.349 / count: 833 / numRes : 258
+1024419769187	state: 
+1024419769343	result: 0.349 / count: 833 / numRes : 258
+1024419769343	state: 
+1024419769484	result: 0.349 / count: 833 / numRes : 258
+1024419769484	state: 
+1024419769640	result: 0.349 / count: 833 / numRes : 258
+1024419769640	state: 
+1024419769796	result: 0.349 / count: 833 / numRes : 258
+1024419769796	state: 
+1024419769953	result: 0.349 / count: 833 / numRes : 258
+1024419769953	state: 
+1024419770093	result: 0.349 / count: 833 / numRes : 258
+1024419770093	state: 
+1024419770250	result: 0.349 / count: 833 / numRes : 258
+1024419770250	state: 
+1024419770390	result: 0.349 / count: 833 / numRes : 258
+1024419770390	state: 
+1024419770578	result: 0.349 / count: 833 / numRes : 258
+1024419770578	state: 
+1024419770703	result: 0.349 / count: 833 / numRes : 258
+1024419770703	state: 
+1024419770859	result: 0.349 / count: 833 / numRes : 258
+1024419770859	state: 
+1024419771015	result: 0.349 / count: 833 / numRes : 258
+1024419771015	state: 
+1024419771171	result: 0.349 / count: 833 / numRes : 258
+1024419771171	state: 
+1024419771312	result: 0.349 / count: 833 / numRes : 258
+1024419771312	state: 
+1024419771468	result: 0.349 / count: 833 / numRes : 258
+1024419771468	state: 
+1024419771625	result: 0.349 / count: 833 / numRes : 258
+1024419771625	state: 
+1024419771765	result: 0.349 / count: 833 / numRes : 258
+1024419771765	state: 
+1024419771937	result: 0.349 / count: 833 / numRes : 258
+1024419771937	state: 
+1024419772078	result: 0.349 / count: 833 / numRes : 258
+1024419772078	state: 
+1024419772234	result: 0.349 / count: 833 / numRes : 258
+1024419772234	state: 
+1024419772390	result: 0.349 / count: 833 / numRes : 258
+1024419772390	state: 
+1024419772531	result: 0.349 / count: 833 / numRes : 258
+1024419772531	state: 
+1024419772687	result: 0.349 / count: 833 / numRes : 258
+1024419772687	state: 
+1024419772843	result: 0.349 / count: 833 / numRes : 258
+1024419772843	state: 
+1024419772984	result: 0.349 / count: 833 / numRes : 258
+1024419772984	state: 
+1024419773140	result: 0.349 / count: 833 / numRes : 258
+1024419773140	state: 
+1024419773281	result: 0.349 / count: 833 / numRes : 258
+1024419773281	state: 
+1024419773437	result: 0.349 / count: 833 / numRes : 258
+1024419773437	state: 
+1024419773625	result: 0.349 / count: 833 / numRes : 258
+1024419773625	state: 
+1024419773750	result: 0.349 / count: 833 / numRes : 258
+1024419773750	state: 
+1024419773921	result: 0.349 / count: 833 / numRes : 258
+1024419773921	state: 
+1024419774062	result: 0.349 / count: 833 / numRes : 258
+1024419774062	state: 
+1024419774218	result: 0.349 / count: 833 / numRes : 258
+1024419774218	state: 
+1024419774359	result: 0.349 / count: 833 / numRes : 258
+1024419774359	state: 
+1024419774515	result: 0.349 / count: 833 / numRes : 258
+1024419774515	state: 
+1024419774671	result: 0.349 / count: 833 / numRes : 258
+1024419774671	state: 
+1024419774812	result: 0.349 / count: 833 / numRes : 258
+1024419774812	state: 
+1024419774984	result: 0.349 / count: 833 / numRes : 258
+1024419774984	state: 
+1024419775125	result: 0.349 / count: 833 / numRes : 258
+1024419775125	state: 
+1024419775265	result: 0.349 / count: 833 / numRes : 258
+1024419775265	state: 
+1024419775421	result: 0.349 / count: 833 / numRes : 258
+1024419775421	state: 
+1024419775578	result: 0.349 / count: 833 / numRes : 258
+1024419775578	state: 
+1024419775734	result: 0.349 / count: 833 / numRes : 258
+1024419775734	state: 
+1024419775890	result: 0.349 / count: 833 / numRes : 258
+1024419775890	state: 
+1024419776046	result: 0.349 / count: 833 / numRes : 258
+1024419776046	state: 
+1024419776187	result: 0.349 / count: 833 / numRes : 258
+1024419776187	state: 
+1024419776343	result: 0.349 / count: 833 / numRes : 258
+1024419776343	state: 
+1024419776484	result: 0.349 / count: 833 / numRes : 258
+1024419776484	state: 
+1024419776671	result: 0.349 / count: 833 / numRes : 258
+1024419776671	state: 
+1024419776796	result: 0.349 / count: 833 / numRes : 258
+1024419776796	state: 
+1024419776953	result: 0.349 / count: 833 / numRes : 258
+1024419776953	state: 
+1024419777109	result: 0.349 / count: 833 / numRes : 258
+1024419777109	state: 
+1024419777250	result: 0.349 / count: 833 / numRes : 258
+1024419777250	state: 
+1024419777406	result: 0.349 / count: 833 / numRes : 258
+1024419777406	state: 
+1024419777562	result: 0.349 / count: 833 / numRes : 258
+1024419777562	state: 
+1024419777703	result: 0.349 / count: 833 / numRes : 258
+1024419777703	state: 
+1024419777859	result: 0.349 / count: 833 / numRes : 258
+1024419777859	state: 
+1024419778031	result: 0.349 / count: 833 / numRes : 258
+1024419778031	state: 
+1024419778171	result: 0.349 / count: 833 / numRes : 258
+1024419778171	state: 
+1024419778312	result: 0.349 / count: 833 / numRes : 258
+1024419778312	state: 
+1024419778468	result: 0.349 / count: 833 / numRes : 258
+1024419778468	state: 
+1024419778625	result: 0.349 / count: 833 / numRes : 258
+1024419778625	state: 
+1024419778765	result: 0.349 / count: 833 / numRes : 258
+1024419778765	state: 
+1024419778921	result: 0.349 / count: 833 / numRes : 258
+1024419778921	state: 
+1024419779078	result: 0.349 / count: 833 / numRes : 258
+1024419779078	state: 
+1024419779218	result: 0.349 / count: 833 / numRes : 258
+1024419779218	state: 
+1024419779375	result: 0.349 / count: 833 / numRes : 258
+1024419779375	state: 
+1024419779515	result: 0.349 / count: 833 / numRes : 258
+1024419779515	state: 
+1024419779703	result: 0.349 / count: 833 / numRes : 258
+1024419779703	state: 
+1024419779828	result: 0.349 / count: 833 / numRes : 258
+1024419779828	state: 
+1024419779984	result: 0.349 / count: 833 / numRes : 258
+1024419779984	state: 
+1024419780140	result: 0.349 / count: 833 / numRes : 258
+1024419780140	state: 
+1024419780281	result: 0.349 / count: 833 / numRes : 258
+1024419780281	state: 
+1024419780437	result: 0.349 / count: 833 / numRes : 258
+1024419780437	state: 
+1024419780593	result: 0.349 / count: 833 / numRes : 258
+1024419780593	state: 
+1024419780750	result: 0.349 / count: 833 / numRes : 258
+1024419780750	state: 
+1024419780890	result: 0.349 / count: 833 / numRes : 258
+1024419780890	state: 
+1024419781062	result: 0.349 / count: 833 / numRes : 258
+1024419781062	state: 
+1024419781187	result: 0.349 / count: 833 / numRes : 258
+1024419781187	state: 
+1024419781343	result: 0.349 / count: 833 / numRes : 258
+1024419781343	state: 
+1024419781500	result: 0.349 / count: 833 / numRes : 258
+1024419781500	state: 
+1024419781640	result: 0.349 / count: 833 / numRes : 258
+1024419781640	state: 
+1024419781796	result: 0.349 / count: 833 / numRes : 258
+1024419781796	state: 
+1024419781953	result: 0.349 / count: 833 / numRes : 258
+1024419781953	state: 
+1024419782109	result: 0.349 / count: 833 / numRes : 258
+1024419782109	state: 
+1024419782250	result: 0.349 / count: 833 / numRes : 258
+1024419782250	state: 
+1024419782390	result: 0.349 / count: 833 / numRes : 258
+1024419782406	state: 
+1024419782546	result: 0.349 / count: 833 / numRes : 258
+1024419782546	state: 
+1024419782734	result: 0.349 / count: 833 / numRes : 258
+1024419782734	state: 
+1024419782859	result: 0.349 / count: 833 / numRes : 258
+1024419782859	state: 
+1024419783015	result: 0.349 / count: 833 / numRes : 258
+1024419783015	state: 
+1024419783156	result: 0.349 / count: 833 / numRes : 258
+1024419783156	state: 
+1024419783312	result: 0.349 / count: 833 / numRes : 258
+1024419783312	state: 
+1024419783468	result: 0.349 / count: 833 / numRes : 258
+1024419783468	state: 
+1024419783609	result: 0.349 / count: 833 / numRes : 258
+1024419783625	state: 
+1024419783765	result: 0.349 / count: 833 / numRes : 258
+1024419783765	state: 
+1024419783921	result: 0.349 / count: 833 / numRes : 258
+1024419783921	state: 
+1024419784093	result: 0.349 / count: 833 / numRes : 258
+1024419784093	state: 
+1024419784218	result: 0.349 / count: 833 / numRes : 258
+1024419784218	state: 
+1024419784375	result: 0.349 / count: 833 / numRes : 258
+1024419784375	state: 
+1024419784515	result: 0.349 / count: 833 / numRes : 258
+1024419784515	state: 
+1024419784671	result: 0.349 / count: 833 / numRes : 258
+1024419784671	state: 
+1024419784828	result: 0.349 / count: 833 / numRes : 258
+1024419784828	state: 
+1024419784968	result: 0.349 / count: 833 / numRes : 258
+1024419784968	state: 
+1024419785125	result: 0.349 / count: 833 / numRes : 258
+1024419785125	state: 
+1024419785281	result: 0.349 / count: 833 / numRes : 258
+1024419785281	state: 
+1024419785421	result: 0.349 / count: 833 / numRes : 258
+1024419785421	state: 
+1024419785578	result: 0.349 / count: 833 / numRes : 258
+1024419785578	state: 
+1024419785750	result: 0.349 / count: 833 / numRes : 258
+1024419785750	state: 
+1024419785890	result: 0.349 / count: 833 / numRes : 258
+1024419785890	state: 
+1024419786046	result: 0.349 / count: 833 / numRes : 258
+1024419786046	state: 
+1024419786187	result: 0.349 / count: 833 / numRes : 258
+1024419786203	state: 
+1024419786343	result: 0.349 / count: 833 / numRes : 258
+1024419786343	state: 
+1024419786500	result: 0.349 / count: 833 / numRes : 258
+1024419786500	state: 
+1024419786640	result: 0.349 / count: 833 / numRes : 258
+1024419786640	state: 
+1024419786796	result: 0.349 / count: 833 / numRes : 258
+1024419786796	state: 
+1024419786953	result: 0.349 / count: 833 / numRes : 258
+1024419786953	state: 
+1024419787125	result: 0.349 / count: 833 / numRes : 258
+1024419787125	state: 
+1024419787250	result: 0.349 / count: 833 / numRes : 258
+1024419787250	state: 
+1024419787406	result: 0.349 / count: 833 / numRes : 258
+1024419787406	state: 
+1024419787546	result: 0.349 / count: 833 / numRes : 258
+1024419787546	state: 
+1024419787703	result: 0.349 / count: 833 / numRes : 258
+1024419787703	state: 
+1024419787859	result: 0.349 / count: 833 / numRes : 258
+1024419787859	state: 
+1024419788000	result: 0.349 / count: 833 / numRes : 258
+1024419788000	state: 
+1024419788156	result: 0.349 / count: 833 / numRes : 258
+1024419788156	state: 
+1024419788312	result: 0.349 / count: 833 / numRes : 258
+1024419788312	state: 
+1024419788453	result: 0.349 / count: 833 / numRes : 258
+1024419788453	state: 
+1024419788609	result: 0.349 / count: 833 / numRes : 258
+1024419788609	state: 
+1024419788781	result: 0.349 / count: 833 / numRes : 258
+1024419788781	state: 
+1024419788921	result: 0.349 / count: 833 / numRes : 258
+1024419788921	state: 
+1024419789078	result: 0.349 / count: 833 / numRes : 258
+1024419789078	state: 
+1024419789218	result: 0.349 / count: 833 / numRes : 258
+1024419789218	state: 
+1024419789375	result: 0.349 / count: 833 / numRes : 258
+1024419789375	state: 
+1024419789531	result: 0.349 / count: 833 / numRes : 258
+1024419789531	state: 
+1024419789671	result: 0.349 / count: 833 / numRes : 258
+1024419789671	state: 
+1024419789828	result: 0.349 / count: 833 / numRes : 258
+1024419789828	state: 
+1024419789984	result: 0.349 / count: 833 / numRes : 258
+1024419789984	state: 
+1024419790156	result: 0.349 / count: 833 / numRes : 258
+1024419790156	state: 
+1024419790296	result: 0.349 / count: 833 / numRes : 258
+1024419790296	state: 
+1024419790453	result: 0.349 / count: 833 / numRes : 258
+1024419790453	state: 
+1024419790593	result: 0.349 / count: 833 / numRes : 258
+1024419790593	state: 
+1024419790750	result: 0.349 / count: 833 / numRes : 258
+1024419790750	state: 
+1024419790890	result: 0.349 / count: 833 / numRes : 258
+1024419790890	state: 
+1024419791046	result: 0.349 / count: 833 / numRes : 258
+1024419791046	state: 
+1024419791203	result: 0.349 / count: 833 / numRes : 258
+1024419791203	state: 
+1024419791343	result: 0.349 / count: 833 / numRes : 258
+1024419791343	state: 
+1024419791500	result: 0.349 / count: 833 / numRes : 258
+1024419791500	state: 
+1024419791656	result: 0.349 / count: 833 / numRes : 258
+1024419791656	state: 
+1024419791828	result: 0.349 / count: 833 / numRes : 258
+1024419791828	state: 
+1024419791968	result: 0.349 / count: 833 / numRes : 258
+1024419791968	state: 
+1024419792109	result: 0.349 / count: 833 / numRes : 258
+1024419792109	state: 
+1024419792265	result: 0.349 / count: 833 / numRes : 258
+1024419792265	state: 
+1024419792406	result: 0.349 / count: 833 / numRes : 258
+1024419792406	state: 
+1024419792562	result: 0.349 / count: 833 / numRes : 258
+1024419792562	state: 
+1024419792718	result: 0.349 / count: 833 / numRes : 258
+1024419792718	state: 
+1024419792875	result: 0.349 / count: 833 / numRes : 258
+1024419792875	state: 
+1024419793187	result: 0.349 / count: 833 / numRes : 258
+1024419793187	state: 
+1024419793328	result: 0.349 / count: 833 / numRes : 258
+1024419793328	state: 
+1024419793468	result: 0.349 / count: 833 / numRes : 258
+1024419793468	state: 
+1024419793640	result: 0.349 / count: 833 / numRes : 258
+1024419793640	state: 
+1024419793781	result: 0.349 / count: 833 / numRes : 258
+1024419793781	state: 
+1024419793937	result: 0.349 / count: 833 / numRes : 258
+1024419793937	state: 
+1024419794093	result: 0.349 / count: 833 / numRes : 258
+1024419794093	state: 
+1024419794250	result: 0.349 / count: 833 / numRes : 258
+1024419794250	state: 
+1024419794390	result: 0.349 / count: 833 / numRes : 258
+1024419794390	state: 
+1024419794546	result: 0.349 / count: 833 / numRes : 258
+1024419794546	state: 
+1024419794687	result: 0.349 / count: 833 / numRes : 258
+1024419794687	state: 
+1024419794875	result: 0.349 / count: 833 / numRes : 258
+1024419794875	state: 
+1024419795000	result: 0.349 / count: 833 / numRes : 258
+1024419795000	state: 
+1024419795156	result: 0.349 / count: 833 / numRes : 258
+1024419795156	state: 
+1024419795312	result: 0.349 / count: 833 / numRes : 258
+1024419795312	state: 
+1024419795468	result: 0.349 / count: 833 / numRes : 258
+1024419795468	state: 
+1024419795625	result: 0.349 / count: 833 / numRes : 258
+1024419795625	state: 
+1024419795765	result: 0.349 / count: 833 / numRes : 258
+1024419795765	state: 
+1024419795921	result: 0.349 / count: 833 / numRes : 258
+1024419795921	state: 
+1024419796062	result: 0.349 / count: 833 / numRes : 258
+1024419796062	state: 
+1024419796250	result: 0.349 / count: 833 / numRes : 258
+1024419796250	state: 
+1024419796390	result: 0.349 / count: 833 / numRes : 258
+1024419796390	state: 
+1024419796531	result: 0.349 / count: 833 / numRes : 258
+1024419796531	state: 
+1024419796687	result: 0.349 / count: 833 / numRes : 258
+1024419796687	state: 
+1024419796843	result: 0.349 / count: 833 / numRes : 258
+1024419796843	state: 
+1024419796984	result: 0.349 / count: 833 / numRes : 258
+1024419796984	state: 
+1024419797140	result: 0.349 / count: 833 / numRes : 258
+1024419797140	state: 
+1024419797296	result: 0.349 / count: 833 / numRes : 258
+1024419797296	state: 
+1024419797437	result: 0.349 / count: 833 / numRes : 258
+1024419797437	state: 
+1024419797593	result: 0.349 / count: 833 / numRes : 258
+1024419797593	state: 
+1024419797734	result: 0.349 / count: 833 / numRes : 258
+1024419797734	state: 
+1024419797921	result: 0.349 / count: 833 / numRes : 258
+1024419797921	state: 
+1024419798046	result: 0.349 / count: 833 / numRes : 258
+1024419798046	state: 
+1024419798203	result: 0.349 / count: 833 / numRes : 258
+1024419798203	state: 
+1024419798359	result: 0.349 / count: 833 / numRes : 258
+1024419798359	state: 
+1024419798500	result: 0.349 / count: 833 / numRes : 258
+1024419798500	state: 
+1024419798656	result: 0.349 / count: 833 / numRes : 258
+1024419798656	state: 
+1024419798812	result: 0.349 / count: 833 / numRes : 258
+1024419798812	state: 
+1024419798953	result: 0.349 / count: 833 / numRes : 258
+1024419798953	state: 
+1024419799109	result: 0.349 / count: 833 / numRes : 258
+1024419799109	state: 
+1024419799281	result: 0.349 / count: 833 / numRes : 258
+1024419799281	state: 
+1024419799421	result: 0.349 / count: 833 / numRes : 258
+1024419799421	state: 
+1024419799562	result: 0.349 / count: 833 / numRes : 258
+1024419799562	state: 
+1024419799718	result: 0.349 / count: 833 / numRes : 258
+1024419799718	state: 
+1024419799859	result: 0.349 / count: 833 / numRes : 258
+1024419799859	state: 
+1024419800015	result: 0.349 / count: 833 / numRes : 258
+1024419800015	state: 
+1024419800171	result: 0.349 / count: 833 / numRes : 258
+1024419800171	state: 
+1024419800328	result: 0.349 / count: 833 / numRes : 258
+1024419800328	state: 
+1024419800468	result: 0.349 / count: 833 / numRes : 258
+1024419800468	state: 
+1024419800625	result: 0.349 / count: 833 / numRes : 258
+1024419800625	state: 
+1024419800765	result: 0.349 / count: 833 / numRes : 258
+1024419800765	state: 
+1024419800953	result: 0.349 / count: 833 / numRes : 258
+1024419800953	state: 
+1024419801078	result: 0.349 / count: 833 / numRes : 258
+1024419801078	state: 
+1024419801234	result: 0.349 / count: 833 / numRes : 258
+1024419801234	state: 
+1024419801390	result: 0.349 / count: 833 / numRes : 258
+1024419801390	state: 
+1024419801546	result: 0.349 / count: 833 / numRes : 258
+1024419801546	state: 
+1024419801687	result: 0.349 / count: 833 / numRes : 258
+1024419801687	state: 
+1024419801843	result: 0.349 / count: 833 / numRes : 258
+1024419801843	state: 
+1024419802000	result: 0.349 / count: 833 / numRes : 258
+1024419802000	state: 
+1024419802140	result: 0.349 / count: 833 / numRes : 258
+1024419802140	state: 
+1024419802312	result: 0.349 / count: 833 / numRes : 258
+1024419802312	state: 
+1024419802453	result: 0.349 / count: 833 / numRes : 258
+1024419802453	state: 
+1024419802609	result: 0.349 / count: 833 / numRes : 258
+1024419802609	state: 
+1024419802765	result: 0.349 / count: 833 / numRes : 258
+1024419802765	state: 
+1024419802906	result: 0.349 / count: 833 / numRes : 258
+1024419802906	state: 
+1024419803062	result: 0.349 / count: 833 / numRes : 258
+1024419803062	state: 
+1024419803218	result: 0.349 / count: 833 / numRes : 258
+1024419803218	state: 
+1024419803359	result: 0.349 / count: 833 / numRes : 258
+1024419803359	state: 
+1024419803515	result: 0.349 / count: 833 / numRes : 258
+1024419803515	state: 
+1024419803671	result: 0.349 / count: 833 / numRes : 258
+1024419803671	state: 
+1024419803828	result: 0.349 / count: 833 / numRes : 258
+1024419803828	state: 
+1024419804000	result: 0.349 / count: 833 / numRes : 258
+1024419804000	state: 
+1024419804140	result: 0.349 / count: 833 / numRes : 258
+1024419804140	state: 
+1024419804281	result: 0.349 / count: 833 / numRes : 258
+1024419804281	state: 
+1024419804437	result: 0.349 / count: 833 / numRes : 258
+1024419804437	state: 
+1024419804593	result: 0.349 / count: 833 / numRes : 258
+1024419804593	state: 
+1024419804734	result: 0.349 / count: 833 / numRes : 258
+1024419804734	state: 
+1024419804890	result: 0.349 / count: 833 / numRes : 258
+1024419804890	state: 
+1024419805046	result: 0.349 / count: 833 / numRes : 258
+1024419805046	state: 
+1024419805187	result: 0.349 / count: 833 / numRes : 258
+1024419805187	state: 
+1024419805359	result: 0.349 / count: 833 / numRes : 258
+1024419805359	state: 
+1024419805500	result: 0.349 / count: 833 / numRes : 258
+1024419805500	state: 
+1024419805656	result: 0.349 / count: 833 / numRes : 258
+1024419805656	state: 
+1024419805796	result: 0.349 / count: 833 / numRes : 258
+1024419805796	state: 
+1024419805953	result: 0.349 / count: 833 / numRes : 258
+1024419805953	state: 
+1024419806109	result: 0.349 / count: 833 / numRes : 258
+1024419806109	state: 
+1024419806250	result: 0.349 / count: 833 / numRes : 258
+1024419806250	state: 
+1024419806406	result: 0.349 / count: 833 / numRes : 258
+1024419806406	state: 
+1024419806562	result: 0.349 / count: 833 / numRes : 258
+1024419806562	state: 
+1024419806703	result: 0.349 / count: 833 / numRes : 258
+1024419806703	state: 
+1024419806859	result: 0.349 / count: 833 / numRes : 258
+1024419806859	state: 
+1024419807031	result: 0.349 / count: 833 / numRes : 258
+1024419807031	state: 
+1024419807171	result: 0.349 / count: 833 / numRes : 258
+1024419807171	state: 
+1024419807328	result: 0.349 / count: 833 / numRes : 258
+1024419807328	state: 
+1024419807468	result: 0.349 / count: 833 / numRes : 258
+1024419807468	state: 
+1024419807625	result: 0.349 / count: 833 / numRes : 258
+1024419807625	state: 
+1024419807765	result: 0.349 / count: 833 / numRes : 258
+1024419807765	state: 
+1024419807921	result: 0.349 / count: 833 / numRes : 258
+1024419807921	state: 
+1024419808078	result: 0.349 / count: 833 / numRes : 258
+1024419808078	state: 
+1024419808218	result: 0.349 / count: 833 / numRes : 258
+1024419808218	state: 
+1024419808390	result: 0.349 / count: 833 / numRes : 258
+1024419808390	state: 
+1024419808531	result: 0.349 / count: 833 / numRes : 258
+1024419808531	state: 
+1024419808687	result: 0.349 / count: 833 / numRes : 258
+1024419808687	state: 
+1024419808843	result: 0.349 / count: 833 / numRes : 258
+1024419808843	state: 
+1024419808984	result: 0.349 / count: 833 / numRes : 258
+1024419808984	state: 
+1024419809140	result: 0.349 / count: 833 / numRes : 258
+1024419809140	state: 
+1024419809296	result: 0.349 / count: 833 / numRes : 258
+1024419809296	state: 
+1024419809453	result: 0.349 / count: 833 / numRes : 258
+1024419809453	state: 
+1024419809593	result: 0.349 / count: 833 / numRes : 258
+1024419809593	state: 
+1024419809750	result: 0.349 / count: 833 / numRes : 258
+1024419809750	state: 
+1024419809890	result: 0.349 / count: 833 / numRes : 258
+1024419809890	state: 
+1024419810078	result: 0.349 / count: 833 / numRes : 258
+1024419810078	state: 
+1024419810218	result: 0.349 / count: 833 / numRes : 258
+1024419810218	state: 
+1024419810359	result: 0.349 / count: 833 / numRes : 258
+1024419810359	state: 
+1024419810515	result: 0.349 / count: 833 / numRes : 258
+1024419810515	state: 
+1024419810656	result: 0.349 / count: 833 / numRes : 258
+1024419810656	state: 
+1024419810812	result: 0.349 / count: 833 / numRes : 258
+1024419810812	state: 
+1024419810968	result: 0.349 / count: 833 / numRes : 258
+1024419810968	state: 
+1024419811125	result: 0.349 / count: 833 / numRes : 258
+1024419811125	state: 
+1024419811265	result: 0.349 / count: 833 / numRes : 258
+1024419811265	state: 
+1024419811437	result: 0.349 / count: 833 / numRes : 258
+1024419811437	state: 
+1024419811578	result: 0.349 / count: 833 / numRes : 258
+1024419811578	state: 
+1024419811734	result: 0.349 / count: 833 / numRes : 258
+1024419811734	state: 
+1024419811890	result: 0.349 / count: 833 / numRes : 258
+1024419811890	state: 
+1024419812031	result: 0.349 / count: 833 / numRes : 258
+1024419812031	state: 
+1024419812171	result: 0.349 / count: 833 / numRes : 258
+1024419812171	state: 
+1024419812328	result: 0.349 / count: 833 / numRes : 258
+1024419812328	state: 
+1024419812484	result: 0.349 / count: 833 / numRes : 258
+1024419812484	state: 
+1024419812625	result: 0.349 / count: 833 / numRes : 258
+1024419812625	state: 
+1024419812781	result: 0.349 / count: 833 / numRes : 258
+1024419812781	state: 
+1024419812937	result: 0.349 / count: 833 / numRes : 258
+1024419812937	state: 
+1024419813109	result: 0.349 / count: 833 / numRes : 258
+1024419813109	state: 
+1024419813250	result: 0.349 / count: 833 / numRes : 258
+1024419813250	state: 
+1024419813406	result: 0.349 / count: 833 / numRes : 258
+1024419813406	state: 
+1024419813546	result: 0.349 / count: 833 / numRes : 258
+1024419813546	state: 
+1024419813703	result: 0.349 / count: 833 / numRes : 258
+1024419813703	state: 
+1024419813859	result: 0.349 / count: 833 / numRes : 258
+1024419813859	state: 
+1024419814000	result: 0.349 / count: 833 / numRes : 258
+1024419814000	state: 
+1024419814156	result: 0.349 / count: 833 / numRes : 258
+1024419814156	state: 
+1024419814296	result: 0.349 / count: 833 / numRes : 258
+1024419814312	state: 
+1024419814484	result: 0.349 / count: 833 / numRes : 258
+1024419814484	state: 
+1024419814625	result: 0.349 / count: 833 / numRes : 258
+1024419814625	state: 
+1024419814765	result: 0.349 / count: 833 / numRes : 258
+1024419814765	state: 
+1024419814921	result: 0.349 / count: 833 / numRes : 258
+1024419814921	state: 
+1024419815078	result: 0.349 / count: 833 / numRes : 258
+1024419815078	state: 
+1024419815218	result: 0.349 / count: 833 / numRes : 258
+1024419815218	state: 
+1024419815375	result: 0.349 / count: 833 / numRes : 258
+1024419815375	state: 
+1024419815531	result: 0.349 / count: 833 / numRes : 258
+1024419815531	state: 
+1024419815671	result: 0.349 / count: 833 / numRes : 258
+1024419815671	state: 
+1024419815828	result: 0.349 / count: 833 / numRes : 258
+1024419815828	state: 
+1024419815984	result: 0.349 / count: 833 / numRes : 258
+1024419815984	state: 
+1024419816156	result: 0.349 / count: 833 / numRes : 258
+1024419816156	state: 
+1024419816296	result: 0.349 / count: 833 / numRes : 258
+1024419816296	state: 
+1024419816453	result: 0.349 / count: 833 / numRes : 258
+1024419816453	state: 
+1024419816609	result: 0.349 / count: 833 / numRes : 258
+1024419816609	state: 
+1024419816750	result: 0.349 / count: 833 / numRes : 258
+1024419816750	state: 
+1024419816906	result: 0.349 / count: 833 / numRes : 258
+1024419816906	state: 
+1024419817062	result: 0.349 / count: 833 / numRes : 258
+1024419817062	state: 
+1024419817218	result: 0.349 / count: 833 / numRes : 258
+1024419817218	state: 
+1024419817359	result: 0.349 / count: 833 / numRes : 258
+1024419817359	state: 
+1024419817531	result: 0.349 / count: 833 / numRes : 258
+1024419817531	state: 
+1024419817671	result: 0.349 / count: 833 / numRes : 258
+1024419817671	state: 
+1024419817828	result: 0.349 / count: 833 / numRes : 258
+1024419817828	state: 
+1024419817968	result: 0.349 / count: 833 / numRes : 258
+1024419817968	state: 
+1024419818140	result: 0.349 / count: 833 / numRes : 258
+1024419818140	state: 
+1024419818281	result: 0.349 / count: 833 / numRes : 258
+1024419818281	state: 
+1024419818421	result: 0.349 / count: 833 / numRes : 258
+1024419818421	state: 
+1024419818578	result: 0.349 / count: 833 / numRes : 258
+1024419818578	state: 
+1024419818734	result: 0.349 / count: 833 / numRes : 258
+1024419818734	state: 
+1024419818890	result: 0.349 / count: 833 / numRes : 258
+1024419818890	state: 
+1024419819031	result: 0.349 / count: 833 / numRes : 258
+1024419819031	state: 
+1024419819218	result: 0.349 / count: 833 / numRes : 258
+1024419819218	state: 
+1024419819359	result: 0.349 / count: 833 / numRes : 258
+1024419819359	state: 
+1024419819500	result: 0.349 / count: 833 / numRes : 258
+1024419819500	state: 
+1024419819656	result: 0.349 / count: 833 / numRes : 258
+1024419819656	state: 
+1024419819796	result: 0.349 / count: 833 / numRes : 258
+1024419819796	state: 
+1024419819953	result: 0.349 / count: 833 / numRes : 258
+1024419819953	state: 
+1024419820109	result: 0.349 / count: 833 / numRes : 258
+1024419820109	state: 
+1024419820265	result: 0.349 / count: 833 / numRes : 258
+1024419820265	state: 
+1024419820406	result: 0.349 / count: 833 / numRes : 258
+1024419820406	state: 
+1024419820578	result: 0.349 / count: 833 / numRes : 258
+1024419820578	state: 
+1024419820734	result: 0.349 / count: 833 / numRes : 258
+1024419820734	state: 
+1024419820875	result: 0.349 / count: 833 / numRes : 258
+1024419820875	state: 
+1024419821015	result: 0.349 / count: 833 / numRes : 258
+1024419821015	state: 
+1024419821171	result: 0.349 / count: 833 / numRes : 258
+1024419821171	state: 
+1024419821328	result: 0.349 / count: 833 / numRes : 258
+1024419821328	state: 
+1024419821468	result: 0.349 / count: 833 / numRes : 258
+1024419821468	state: 
+1024419821625	result: 0.349 / count: 833 / numRes : 258
+1024419821625	state: 
+1024419821781	result: 0.349 / count: 833 / numRes : 258
+1024419821781	state: 
+1024419821921	result: 0.349 / count: 833 / numRes : 258
+1024419821937	state: 
+1024419822078	result: 0.349 / count: 833 / numRes : 258
+1024419822078	state: 
+1024419822265	result: 0.349 / count: 833 / numRes : 258
+1024419822265	state: 
+1024419822390	result: 0.349 / count: 833 / numRes : 258
+1024419822390	state: 
+1024419822546	result: 0.349 / count: 833 / numRes : 258
+1024419822546	state: 
+1024419822703	result: 0.349 / count: 833 / numRes : 258
+1024419822703	state: 
+1024419822859	result: 0.349 / count: 833 / numRes : 258
+1024419822859	state: 
+1024419823000	result: 0.349 / count: 833 / numRes : 258
+1024419823000	state: 
+1024419823156	result: 0.349 / count: 833 / numRes : 258
+1024419823156	state: 
+1024419823312	result: 0.349 / count: 833 / numRes : 258
+1024419823312	state: 
+1024419823453	result: 0.349 / count: 833 / numRes : 258
+1024419823468	state: 
+1024419823640	result: 0.349 / count: 833 / numRes : 258
+1024419823640	state: 
+1024419823765	result: 0.349 / count: 833 / numRes : 258
+1024419823765	state: 
+1024419823921	result: 0.349 / count: 833 / numRes : 258
+1024419823921	state: 
+1024419824078	result: 0.349 / count: 833 / numRes : 258
+1024419824078	state: 
+1024419824234	result: 0.349 / count: 833 / numRes : 258
+1024419824234	state: 
+1024419824375	result: 0.349 / count: 833 / numRes : 258
+1024419824375	state: 
+1024419824531	result: 0.349 / count: 833 / numRes : 258
+1024419824531	state: 
+1024419824703	result: 0.349 / count: 833 / numRes : 258
+1024419824703	state: 
+1024419824843	result: 0.349 / count: 833 / numRes : 258
+1024419824843	state: 
+1024419824984	result: 0.349 / count: 833 / numRes : 258
+1024419824984	state: 
+1024419825140	result: 0.349 / count: 833 / numRes : 258
+1024419825140	state: 
+1024419825328	result: 0.349 / count: 833 / numRes : 258
+1024419825328	state: 
+1024419825453	result: 0.349 / count: 833 / numRes : 258
+1024419825453	state: 
+1024419825609	result: 0.349 / count: 833 / numRes : 258
+1024419825609	state: 
+1024419825765	result: 0.349 / count: 833 / numRes : 258
+1024419825765	state: 
+1024419825906	result: 0.349 / count: 833 / numRes : 258
+1024419825906	state: 
+1024419826062	result: 0.349 / count: 833 / numRes : 258
+1024419826062	state: 
+1024419826218	result: 0.349 / count: 833 / numRes : 258
+1024419826218	state: 
+1024419826359	result: 0.349 / count: 833 / numRes : 258
+1024419826359	state: 
+1024419826515	result: 0.349 / count: 833 / numRes : 258
+1024419826515	state: 
+1024419826687	result: 0.349 / count: 833 / numRes : 258
+1024419826687	state: 
+1024419826828	result: 0.349 / count: 833 / numRes : 258
+1024419826828	state: 
+1024419826984	result: 0.349 / count: 833 / numRes : 258
+1024419826984	state: 
+1024419827125	result: 0.349 / count: 833 / numRes : 258
+1024419827125	state: 
+1024419827281	result: 0.349 / count: 833 / numRes : 258
+1024419827281	state: 
+1024419827437	result: 0.349 / count: 833 / numRes : 258
+1024419827437	state: 
+1024419827578	result: 0.349 / count: 833 / numRes : 258
+1024419827578	state: 
+1024419827734	result: 0.349 / count: 833 / numRes : 258
+1024419827734	state: 
+1024419827890	result: 0.349 / count: 833 / numRes : 258
+1024419827890	state: 
+1024419828031	result: 0.349 / count: 833 / numRes : 258
+1024419828031	state: 
+1024419828187	result: 0.349 / count: 833 / numRes : 258
+1024419828187	state: 
+1024419828375	result: 0.349 / count: 833 / numRes : 258
+1024419828375	state: 
+1024419828515	result: 0.349 / count: 833 / numRes : 258
+1024419828515	state: 
+1024419828656	result: 0.349 / count: 833 / numRes : 258
+1024419828656	state: 
+1024419828828	result: 0.349 / count: 833 / numRes : 258
+1024419828828	state: 
+1024419828984	result: 0.349 / count: 833 / numRes : 258
+1024419828984	state: 
+1024419829125	result: 0.349 / count: 833 / numRes : 258
+1024419829125	state: 
+1024419829281	result: 0.349 / count: 833 / numRes : 258
+1024419829281	state: 
+1024419829421	result: 0.349 / count: 833 / numRes : 258
+1024419829437	state: 
+1024419829578	result: 0.349 / count: 833 / numRes : 258
+1024419829578	state: 
+1024419829750	result: 0.349 / count: 833 / numRes : 258
+1024419829750	state: 
+1024419829890	result: 0.349 / count: 833 / numRes : 258
+1024419829890	state: 
+1024419830046	result: 0.349 / count: 833 / numRes : 258
+1024419830046	state: 
+1024419830187	result: 0.349 / count: 833 / numRes : 258
+1024419830187	state: 
+1024419830343	result: 0.349 / count: 833 / numRes : 258
+1024419830343	state: 
+1024419830484	result: 0.349 / count: 833 / numRes : 258
+1024419830484	state: 
+1024419830640	result: 0.349 / count: 833 / numRes : 258
+1024419830640	state: 
+1024419830796	result: 0.349 / count: 833 / numRes : 258
+1024419830796	state: 
+1024419830953	result: 0.349 / count: 833 / numRes : 258
+1024419830953	state: 
+1024419831093	result: 0.349 / count: 833 / numRes : 258
+1024419831093	state: 
+1024419831250	result: 0.349 / count: 833 / numRes : 258
+1024419831250	state: 
+1024419831437	result: 0.349 / count: 833 / numRes : 258
+1024419831437	state: 
+1024419831562	result: 0.349 / count: 833 / numRes : 258
+1024419831562	state: 
+1024419831718	result: 0.349 / count: 833 / numRes : 258
+1024419831718	state: 
+1024419831859	result: 0.349 / count: 833 / numRes : 258
+1024419831859	state: 
+1024419832015	result: 0.349 / count: 833 / numRes : 258
+1024419832015	state: 
+1024419832171	result: 0.349 / count: 833 / numRes : 258
+1024419832171	state: 
+1024419832312	result: 0.349 / count: 833 / numRes : 258
+1024419832312	state: 
+1024419832468	result: 0.349 / count: 833 / numRes : 258
+1024419832468	state: 
+1024419832625	result: 0.349 / count: 833 / numRes : 258
+1024419832625	state: 
+1024419832796	result: 0.349 / count: 833 / numRes : 258
+1024419832796	state: 
+1024419832937	result: 0.349 / count: 833 / numRes : 258
+1024419832937	state: 
+1024419833078	result: 0.349 / count: 833 / numRes : 258
+1024419833078	state: 
+1024419833234	result: 0.349 / count: 833 / numRes : 258
+1024419833234	state: 
+1024419833375	result: 0.349 / count: 833 / numRes : 258
+1024419833375	state: 
+1024419833531	result: 0.349 / count: 833 / numRes : 258
+1024419833531	state: 
+1024419833687	result: 0.349 / count: 833 / numRes : 258
+1024419833687	state: 
+1024419833843	result: 0.349 / count: 833 / numRes : 258
+1024419833843	state: 
+1024419833984	result: 0.349 / count: 833 / numRes : 258
+1024419833984	state: 
+1024419834140	result: 0.349 / count: 833 / numRes : 258
+1024419834140	state: 
+1024419834296	result: 0.349 / count: 833 / numRes : 258
+1024419834296	state: 
+1024419834484	result: 0.349 / count: 833 / numRes : 258
+1024419834484	state: 
+1024419834625	result: 0.349 / count: 833 / numRes : 258
+1024419834625	state: 
+1024419834765	result: 0.349 / count: 833 / numRes : 258
+1024419834765	state: 
+1024419834921	result: 0.349 / count: 833 / numRes : 258
+1024419834921	state: 
+1024419835078	result: 0.349 / count: 833 / numRes : 258
+1024419835078	state: 
+1024419835218	result: 0.349 / count: 833 / numRes : 258
+1024419835218	state: 
+1024419835375	result: 0.349 / count: 833 / numRes : 258
+1024419835375	state: 
+1024419835531	result: 0.349 / count: 833 / numRes : 258
+1024419835531	state: 
+1024419835671	result: 0.349 / count: 833 / numRes : 258
+1024419835671	state: 
+1024419835843	result: 0.349 / count: 833 / numRes : 258
+1024419835843	state: 
+1024419835984	result: 0.349 / count: 833 / numRes : 258
+1024419835984	state: 
+1024419836140	result: 0.349 / count: 833 / numRes : 258
+1024419836140	state: 
+1024419836296	result: 0.349 / count: 833 / numRes : 258
+1024419836296	state: 
+1024419836437	result: 0.349 / count: 833 / numRes : 258
+1024419836437	state: 
+1024419836593	result: 0.349 / count: 833 / numRes : 258
+1024419836593	state: 
+1024419836734	result: 0.349 / count: 833 / numRes : 258
+1024419836734	state: 
+1024419836890	result: 0.349 / count: 833 / numRes : 258
+1024419836890	state: 
+1024419837046	result: 0.349 / count: 833 / numRes : 258
+1024419837046	state: 
+1024419837203	result: 0.349 / count: 833 / numRes : 258
+1024419837203	state: 
+1024419837343	result: 0.349 / count: 833 / numRes : 258
+1024419837343	state: 
+1024419837531	result: 0.349 / count: 833 / numRes : 258
+1024419837531	state: 
+1024419837656	result: 0.349 / count: 833 / numRes : 258
+1024419837656	state: 
+1024419837812	result: 0.349 / count: 833 / numRes : 258
+1024419837812	state: 
+1024419837968	result: 0.349 / count: 833 / numRes : 258
+1024419837968	state: 
+1024419838109	result: 0.349 / count: 833 / numRes : 258
+1024419838109	state: 
+1024419838265	result: 0.349 / count: 833 / numRes : 258
+1024419838265	state: 
+1024419838421	result: 0.349 / count: 833 / numRes : 258
+1024419838421	state: 
+1024419838562	result: 0.349 / count: 833 / numRes : 258
+1024419838562	state: 
+1024419838718	result: 0.349 / count: 833 / numRes : 258
+1024419838718	state: 
+1024419838906	result: 0.349 / count: 833 / numRes : 258
+1024419838906	state: 
+1024419839031	result: 0.349 / count: 833 / numRes : 258
+1024419839031	state: 
+1024419839171	result: 0.349 / count: 833 / numRes : 258
+1024419839171	state: 
+1024419839328	result: 0.349 / count: 833 / numRes : 258
+1024419839328	state: 
+1024419839484	result: 0.349 / count: 833 / numRes : 258
+1024419839484	state: 
+1024419839625	result: 0.349 / count: 833 / numRes : 258
+1024419839625	state: 
+1024419839781	result: 0.349 / count: 833 / numRes : 258
+1024419839781	state: 
+1024419839937	result: 0.349 / count: 833 / numRes : 258
+1024419839937	state: 
+1024419840078	result: 0.349 / count: 833 / numRes : 258
+1024419840078	state: 
+1024419840234	result: 0.349 / count: 833 / numRes : 258
+1024419840234	state: 
+1024419840406	result: 0.349 / count: 833 / numRes : 258
+1024419840421	state: 
+1024419840546	result: 0.349 / count: 833 / numRes : 258
+1024419840546	state: 
+1024419840703	result: 0.349 / count: 833 / numRes : 258
+1024419840703	state: 
+1024419840843	result: 0.349 / count: 833 / numRes : 258
+1024419840843	state: 
+1024419841000	result: 0.349 / count: 833 / numRes : 258
+1024419841000	state: 
+1024419841156	result: 0.349 / count: 833 / numRes : 258
+1024419841156	state: 
+1024419841296	result: 0.349 / count: 833 / numRes : 258
+1024419841296	state: 
+1024419841453	result: 0.349 / count: 833 / numRes : 258
+1024419841453	state: 
+1024419841609	result: 0.349 / count: 833 / numRes : 258
+1024419841609	state: 
+1024419841781	result: 0.349 / count: 833 / numRes : 258
+1024419841781	state: 
+1024419841921	result: 0.349 / count: 833 / numRes : 258
+1024419841921	state: 
+1024419842062	result: 0.349 / count: 833 / numRes : 258
+1024419842062	state: 
+1024419842218	result: 0.349 / count: 833 / numRes : 258
+1024419842218	state: 
+1024419842375	result: 0.349 / count: 833 / numRes : 258
+1024419842375	state: 
+1024419842515	result: 0.349 / count: 833 / numRes : 258
+1024419842515	state: 
+1024419842671	result: 0.349 / count: 833 / numRes : 258
+1024419842671	state: 
+1024419842828	result: 0.349 / count: 833 / numRes : 258
+1024419842828	state: 
+1024419842968	result: 0.349 / count: 833 / numRes : 258
+1024419842968	state: 
+1024419843125	result: 0.349 / count: 833 / numRes : 258
+1024419843125	state: 
+1024419843296	result: 0.349 / count: 833 / numRes : 258
+1024419843296	state: 
+1024419843437	result: 0.349 / count: 833 / numRes : 258
+1024419843437	state: 
+1024419843593	result: 0.349 / count: 833 / numRes : 258
+1024419843593	state: 
+1024419843750	result: 0.349 / count: 833 / numRes : 258
+1024419843750	state: 
+1024419843890	result: 0.349 / count: 833 / numRes : 258
+1024419843890	state: 
+1024419844046	result: 0.349 / count: 833 / numRes : 258
+1024419844046	state: 
+1024419844203	result: 0.349 / count: 833 / numRes : 258
+1024419844203	state: 
+1024419844343	result: 0.349 / count: 833 / numRes : 258
+1024419844343	state: 
+1024419844500	result: 0.349 / count: 833 / numRes : 258
+1024419844500	state: 
+1024419844687	result: 0.349 / count: 833 / numRes : 258
+1024419844687	state: 
+1024419844812	result: 0.349 / count: 833 / numRes : 258
+1024419844812	state: 
+1024419844968	result: 0.349 / count: 833 / numRes : 258
+1024419844968	state: 
+1024419845109	result: 0.349 / count: 833 / numRes : 258
+1024419845109	state: 
+1024419845265	result: 0.349 / count: 833 / numRes : 258
+1024419845265	state: 
+1024419845421	result: 0.349 / count: 833 / numRes : 258
+1024419845421	state: 
+1024419845562	result: 0.349 / count: 833 / numRes : 258
+1024419845562	state: 
+1024419845718	result: 0.349 / count: 833 / numRes : 258
+1024419845718	state: 
+1024419845859	result: 0.349 / count: 833 / numRes : 258
+1024419845875	state: 
+1024419846015	result: 0.349 / count: 833 / numRes : 258
+1024419846015	state: 
+1024419846203	result: 0.349 / count: 833 / numRes : 258
+1024419846203	state: 
+1024419846328	result: 0.349 / count: 833 / numRes : 258
+1024419846328	state: 
+1024419846484	result: 0.349 / count: 833 / numRes : 258
+1024419846484	state: 
+1024419846640	result: 0.349 / count: 833 / numRes : 258
+1024419846640	state: 
+1024419846781	result: 0.349 / count: 833 / numRes : 258
+1024419846781	state: 
+1024419846937	result: 0.349 / count: 833 / numRes : 258
+1024419846937	state: 
+1024419847078	result: 0.349 / count: 833 / numRes : 258
+1024419847078	state: 
+1024419847234	result: 0.349 / count: 833 / numRes : 258
+1024419847234	state: 
+1024419847390	result: 0.349 / count: 833 / numRes : 258
+1024419847390	state: 
+1024419847562	result: 0.349 / count: 833 / numRes : 258
+1024419847562	state: 
+1024419847703	result: 0.349 / count: 833 / numRes : 258
+1024419847703	state: 
+1024419847859	result: 0.349 / count: 833 / numRes : 258
+1024419847859	state: 
+1024419848000	result: 0.349 / count: 833 / numRes : 258
+1024419848000	state: 
+1024419848156	result: 0.349 / count: 833 / numRes : 258
+1024419848156	state: 
+1024419848312	result: 0.349 / count: 833 / numRes : 258
+1024419848312	state: 
+1024419848453	result: 0.349 / count: 833 / numRes : 258
+1024419848453	state: 
+1024419848609	result: 0.349 / count: 833 / numRes : 258
+1024419848609	state: 
+1024419848750	result: 0.349 / count: 833 / numRes : 258
+1024419848765	state: 
+1024419848906	result: 0.349 / count: 833 / numRes : 258
+1024419848906	state: 
+1024419849093	result: 0.349 / count: 833 / numRes : 258
+1024419849093	state: 
+1024419849218	result: 0.349 / count: 833 / numRes : 258
+1024419849218	state: 
+1024419849375	result: 0.349 / count: 833 / numRes : 258
+1024419849375	state: 
+1024419849531	result: 0.349 / count: 833 / numRes : 258
+1024419849531	state: 
+1024419849671	result: 0.349 / count: 833 / numRes : 258
+1024419849671	state: 
+1024419849828	result: 0.349 / count: 833 / numRes : 258
+1024419849828	state: 
+1024419849968	result: 0.349 / count: 833 / numRes : 258
+1024419849968	state: 
+1024419850125	result: 0.349 / count: 833 / numRes : 258
+1024419850125	state: 
+1024419850281	result: 0.349 / count: 833 / numRes : 258
+1024419850281	state: 
+1024419850453	result: 0.349 / count: 833 / numRes : 258
+1024419850453	state: 
+1024419850593	result: 0.349 / count: 833 / numRes : 258
+1024419850593	state: 
+1024419850750	result: 0.349 / count: 833 / numRes : 258
+1024419850750	state: 
+1024419850906	result: 0.349 / count: 833 / numRes : 258
+1024419850906	state: 
+1024419851046	result: 0.349 / count: 833 / numRes : 258
+1024419851046	state: 
+1024419851203	result: 0.349 / count: 833 / numRes : 258
+1024419851203	state: 
+1024419851343	result: 0.349 / count: 833 / numRes : 258
+1024419851359	state: 
+1024419851500	result: 0.349 / count: 833 / numRes : 258
+1024419851500	state: 
+1024419851656	result: 0.349 / count: 833 / numRes : 258
+1024419851656	state: 
+1024419851796	result: 0.349 / count: 833 / numRes : 258
+1024419851796	state: 
+1024419851984	result: 0.349 / count: 833 / numRes : 258
+1024419851984	state: 
+1024419852125	result: 0.349 / count: 833 / numRes : 258
+1024419852125	state: 
+1024419852281	result: 0.349 / count: 833 / numRes : 258
+1024419852281	state: 
+1024419852421	result: 0.349 / count: 833 / numRes : 258
+1024419852421	state: 
+1024419852578	result: 0.349 / count: 833 / numRes : 258
+1024419852578	state: 
+1024419852734	result: 0.349 / count: 833 / numRes : 258
+1024419852734	state: 
+1024419852875	result: 0.349 / count: 833 / numRes : 258
+1024419852875	state: 
+1024419853031	result: 0.349 / count: 833 / numRes : 258
+1024419853031	state: 
+1024419853187	result: 0.349 / count: 833 / numRes : 258
+1024419853187	state: 
+1024419853359	result: 0.349 / count: 833 / numRes : 258
+1024419853359	state: 
+1024419853500	result: 0.349 / count: 833 / numRes : 258
+1024419853500	state: 
+1024419853656	result: 0.349 / count: 833 / numRes : 258
+1024419853656	state: 
+1024419853796	result: 0.349 / count: 833 / numRes : 258
+1024419853796	state: 
+1024419853953	result: 0.349 / count: 833 / numRes : 258
+1024419853953	state: 
+1024419854109	result: 0.349 / count: 833 / numRes : 258
+1024419854109	state: 
+1024419854265	result: 0.349 / count: 833 / numRes : 258
+1024419854265	state: 
+1024419854406	result: 0.349 / count: 833 / numRes : 258
+1024419854406	state: 
+1024419854562	result: 0.349 / count: 833 / numRes : 258
+1024419854562	state: 
+1024419854703	result: 0.349 / count: 833 / numRes : 258
+1024419854703	state: 
+1024419854890	result: 0.349 / count: 833 / numRes : 258
+1024419854890	state: 
+1024419855031	result: 0.349 / count: 833 / numRes : 258
+1024419855031	state: 
+1024419855171	result: 0.349 / count: 833 / numRes : 258
+1024419855171	state: 
+1024419855328	result: 0.349 / count: 833 / numRes : 258
+1024419855328	state: 
+1024419855468	result: 0.349 / count: 833 / numRes : 258
+1024419855484	state: 
+1024419855625	result: 0.349 / count: 833 / numRes : 258
+1024419855625	state: 
+1024419855781	result: 0.349 / count: 833 / numRes : 258
+1024419855781	state: 
+1024419855921	result: 0.349 / count: 833 / numRes : 258
+1024419855921	state: 
+1024419856078	result: 0.349 / count: 833 / numRes : 258
+1024419856078	state: 
+1024419856250	result: 0.349 / count: 833 / numRes : 258
+1024419856250	state: 
+1024419856406	result: 0.349 / count: 833 / numRes : 258
+1024419856406	state: 
+1024419856546	result: 0.349 / count: 833 / numRes : 258
+1024419856546	state: 
+1024419856703	result: 0.349 / count: 833 / numRes : 258
+1024419856703	state: 
+1024419856843	result: 0.349 / count: 833 / numRes : 258
+1024419856843	state: 
+1024419857000	result: 0.349 / count: 833 / numRes : 258
+1024419857000	state: 
+1024419857171	result: 0.349 / count: 833 / numRes : 258
+1024419857171	state: 
+1024419857296	result: 0.349 / count: 833 / numRes : 258
+1024419857296	state: 
+1024419857453	result: 0.349 / count: 833 / numRes : 258
+1024419857453	state: 
+1024419857593	result: 0.349 / count: 833 / numRes : 258
+1024419857593	state: 
+1024419857781	result: 0.349 / count: 833 / numRes : 258
+1024419857781	state: 
+1024419857921	result: 0.349 / count: 833 / numRes : 258
+1024419857921	state: 
+1024419858062	result: 0.349 / count: 833 / numRes : 258
+1024419858062	state: 
+1024419858218	result: 0.349 / count: 833 / numRes : 258
+1024419858218	state: 
+1024419858359	result: 0.349 / count: 833 / numRes : 258
+1024419858359	state: 
+1024419858515	result: 0.349 / count: 833 / numRes : 258
+1024419858515	state: 
+1024419858671	result: 0.349 / count: 833 / numRes : 258
+1024419858671	state: 
+1024419858812	result: 0.349 / count: 833 / numRes : 258
+1024419858812	state: 
+1024419858968	result: 0.349 / count: 833 / numRes : 258
+1024419858968	state: 
+1024419859125	result: 0.349 / count: 833 / numRes : 258
+1024419859125	state: 
+1024419859296	result: 0.349 / count: 833 / numRes : 258
+1024419859296	state: 
+1024419859437	result: 0.349 / count: 833 / numRes : 258
+1024419859437	state: 
+1024419859578	result: 0.349 / count: 833 / numRes : 258
+1024419859578	state: 
+1024419859734	result: 0.349 / count: 833 / numRes : 258
+1024419859734	state: 
+1024419859890	result: 0.349 / count: 833 / numRes : 258
+1024419859890	state: 
+1024419860031	result: 0.349 / count: 833 / numRes : 258
+1024419860031	state: 
+1024419860187	result: 0.349 / count: 833 / numRes : 258
+1024419860187	state: 
+1024419860343	result: 0.349 / count: 833 / numRes : 258
+1024419860343	state: 
+1024419860500	result: 0.349 / count: 833 / numRes : 258
+1024419860500	state: 
+1024419860671	result: 0.349 / count: 833 / numRes : 258
+1024419860671	state: 
+1024419860812	result: 0.349 / count: 833 / numRes : 258
+1024419860812	state: 
+
+
+annotation {06/18/02 13:04:23} {brygg&anna, take 2}

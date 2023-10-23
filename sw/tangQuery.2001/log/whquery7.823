@@ -1,0 +1,595 @@
+1025109756093	start 2002-06-26 12:42:35
+1025109756296	experiment number: 314
+1025109761062	begin
+1025109761062	result: -1.0 / count: 0 / numRes : 0
+1025109761062	state: 
+1025109761359	result: -1.0 / count: 0 / numRes : 0
+1025109761359	state: 
+1025109761515	result: -1.0 / count: 0 / numRes : 0
+1025109761515	state: 
+1025109761687	result: -1.0 / count: 0 / numRes : 0
+1025109761687	state: 
+1025109761984	result: -1.0 / count: 0 / numRes : 0
+1025109761984	state: 
+1025109762125	result: -1.0 / count: 0 / numRes : 0
+1025109762125	state: 
+1025109762265	result: -1.0 / count: 0 / numRes : 0
+1025109762265	state: 
+1025109762593	result: -1.0 / count: 0 / numRes : 0
+1025109762593	state: 
+1025109762734	result: -1.0 / count: 0 / numRes : 0
+1025109762734	state: 
+1025109762890	result: -1.0 / count: 0 / numRes : 0
+1025109762890	state: 
+1025109763218	result: -1.0 / count: 0 / numRes : 0
+1025109763218	state: 
+1025109763359	result: -1.0 / count: 0 / numRes : 0
+1025109763359	state: 
+1025109763515	result: -1.0 / count: 0 / numRes : 0
+1025109763515	state: 
+1025109763812	result: -1.0 / count: 0 / numRes : 0
+1025109763812	state: 
+1025109764046	result: 0.439 / count: 1325 / numRes : 349
+1025109764046	state: {taxes 0 -1 -1.0}
+1025109764203	result: 0.439 / count: 1325 / numRes : 349
+1025109764203	state: {taxes 0 -1 -1.0}
+1025109764500	result: 0.439 / count: 1325 / numRes : 349
+1025109764500	state: {taxes 0 -1 -1.0}
+1025109764687	result: 0.439 / count: 1325 / numRes : 349
+1025109764687	state: {taxes 0 -1 -1.0}
+1025109764796	result: 0.439 / count: 1325 / numRes : 349
+1025109764796	state: {taxes 0 -1 -1.0}
+1025109764937	result: 0.439 / count: 1325 / numRes : 349
+1025109764937	state: {taxes 0 -1 -1.0}
+1025109765078	result: 0.439 / count: 1325 / numRes : 349
+1025109765078	state: {taxes 0 -1 -1.0}
+1025109765406	result: 0.439 / count: 1325 / numRes : 349
+1025109765406	state: {taxes 0 -1 -1.0}
+1025109765531	result: 0.439 / count: 1325 / numRes : 349
+1025109765531	state: {taxes 0 -1 -1.0}
+1025109765703	result: 0.439 / count: 1325 / numRes : 349
+1025109765703	state: {taxes 0 -1 -1.0}
+1025109765875	result: 0.439 / count: 1325 / numRes : 349
+1025109765875	state: {taxes 0 -1 -1.0}
+1025109766015	result: 0.439 / count: 1325 / numRes : 349
+1025109766015	state: {taxes 0 -1 -1.0}
+1025109766328	result: 0.439 / count: 1325 / numRes : 349
+1025109766328	state: {taxes 0 -1 -1.0}
+1025109766484	result: 0.439 / count: 1325 / numRes : 349
+1025109766484	state: {taxes 0 -1 -1.0}
+1025109766625	result: 0.439 / count: 1325 / numRes : 349
+1025109766625	state: {taxes 0 -1 -1.0}
+1025109766796	result: 0.32 / count: 127 / numRes : 38
+1025109766796	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51}
+1025109766921	result: 0.32 / count: 127 / numRes : 38
+1025109766921	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51}
+1025109767203	result: 0.32 / count: 127 / numRes : 38
+1025109767203	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51}
+1025109767359	result: 0.32 / count: 127 / numRes : 38
+1025109767359	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51}
+1025109767515	result: 0.32 / count: 127 / numRes : 38
+1025109767515	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51}
+1025109767671	result: 0.32 / count: 127 / numRes : 38
+1025109767671	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51}
+1025109767984	result: 0.32 / count: 127 / numRes : 38
+1025109767984	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51}
+1025109768125	result: 0.32 / count: 127 / numRes : 38
+1025109768125	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51}
+1025109768281	result: 0.32 / count: 127 / numRes : 38
+1025109768281	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51}
+1025109768437	result: 0.32 / count: 127 / numRes : 38
+1025109768437	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51}
+1025109768750	result: 0.32 / count: 127 / numRes : 38
+1025109768750	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51}
+1025109768890	result: 0.32 / count: 127 / numRes : 38
+1025109768890	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51}
+1025109769046	result: 0.32 / count: 127 / numRes : 38
+1025109769046	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51}
+1025109769203	result: 0.32 / count: 127 / numRes : 38
+1025109769203	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51}
+1025109769375	result: 0.3 / count: 77 / numRes : 23
+1025109769375	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 128 2108.24}
+1025109769515	result: 0.3 / count: 77 / numRes : 23
+1025109769515	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 128 2108.24}
+1025109769718	result: 0.316 / count: 87 / numRes : 26
+1025109769718	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65}
+1025109769875	result: 0.316 / count: 87 / numRes : 26
+1025109769875	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65}
+1025109770156	result: 0.316 / count: 87 / numRes : 26
+1025109770156	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65}
+1025109770187	result: 0.316 / count: 87 / numRes : 26
+1025109770187	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65}
+1025109770312	result: 0.316 / count: 87 / numRes : 26
+1025109770312	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65}
+1025109770453	result: 0.316 / count: 87 / numRes : 26
+1025109770453	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65}
+1025109770625	result: 0.316 / count: 87 / numRes : 26
+1025109770625	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65}
+1025109770781	result: 0.316 / count: 87 / numRes : 26
+1025109770796	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65}
+1025109770937	result: 0.316 / count: 87 / numRes : 26
+1025109770937	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65}
+1025109771078	result: 0.316 / count: 87 / numRes : 26
+1025109771078	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65}
+1025109771234	result: 0.316 / count: 87 / numRes : 26
+1025109771234	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65}
+1025109771515	result: 0.316 / count: 87 / numRes : 26
+1025109771515	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65}
+1025109771546	result: 0.316 / count: 87 / numRes : 26
+1025109771546	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65}
+1025109771718	result: 0.264 / count: 34 / numRes : 10
+1025109771718	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109771890	result: 0.264 / count: 34 / numRes : 10
+1025109771890	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109772046	result: 0.264 / count: 34 / numRes : 10
+1025109772046	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109772187	result: 0.264 / count: 34 / numRes : 10
+1025109772187	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109772359	result: 0.264 / count: 34 / numRes : 10
+1025109772359	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109772484	result: 0.264 / count: 34 / numRes : 10
+1025109772484	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109772656	result: 0.274 / count: 52 / numRes : 15
+1025109772656	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109772781	result: 0.294 / count: 73 / numRes : 22
+1025109772781	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109772984	result: 0.294 / count: 73 / numRes : 22
+1025109772984	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109773125	result: 0.294 / count: 68 / numRes : 20
+1025109773125	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109773265	result: 0.294 / count: 68 / numRes : 20
+1025109773265	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109773421	result: 0.294 / count: 68 / numRes : 20
+1025109773421	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109773593	result: 0.264 / count: 34 / numRes : 10
+1025109773593	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109773734	result: 0.206 / count: 12 / numRes : 4
+1025109773750	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109773890	result: 0.206 / count: 12 / numRes : 4
+1025109773890	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109774078	result: 0.206 / count: 12 / numRes : 4
+1025109774078	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109774218	result: 0.206 / count: 12 / numRes : 4
+1025109774218	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109774375	result: 0.206 / count: 12 / numRes : 4
+1025109774375	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109774656	result: 0.206 / count: 12 / numRes : 4
+1025109774656	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109774828	result: 0.206 / count: 12 / numRes : 4
+1025109774828	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109774984	result: 0.206 / count: 12 / numRes : 4
+1025109774984	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109775140	result: 0.206 / count: 12 / numRes : 4
+1025109775140	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109775296	result: 0.206 / count: 12 / numRes : 4
+1025109775296	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109775437	result: 0.206 / count: 12 / numRes : 4
+1025109775437	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 114 1877.65} {distToB 3 -1 -1.0}
+1025109775609	result: 0.206 / count: 12 / numRes : 4
+1025109775609	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 101 1663.53} {distToB 3 -1 -1.0}
+1025109775750	result: 0.228 / count: 16 / numRes : 5
+1025109775750	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 79 1301.18} {distToB 3 -1 -1.0}
+1025109775890	result: 0.228 / count: 16 / numRes : 5
+1025109775906	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 79 1301.18} {distToB 3 -1 -1.0}
+1025109776156	result: 0.228 / count: 16 / numRes : 5
+1025109776156	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 66 1087.06} {distToB 3 -1 -1.0}
+1025109776281	result: 0.228 / count: 16 / numRes : 5
+1025109776281	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 49 807.06} {distToB 3 -1 -1.0}
+1025109776421	result: 0.228 / count: 16 / numRes : 5
+1025109776421	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 43 708.24} {distToB 3 -1 -1.0}
+1025109776609	result: 0.228 / count: 16 / numRes : 5
+1025109776609	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 56 922.35} {distToB 3 -1 -1.0}
+1025109776734	result: 0.228 / count: 16 / numRes : 5
+1025109776734	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 69 1136.47} {distToB 3 -1 -1.0}
+1025109776906	result: 0.228 / count: 16 / numRes : 5
+1025109776906	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 69 1136.47} {distToB 3 -1 -1.0}
+1025109777046	result: 0.228 / count: 16 / numRes : 5
+1025109777046	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 49 807.06} {distToB 3 -1 -1.0}
+1025109777218	result: 0.228 / count: 16 / numRes : 5
+1025109777218	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 43 708.24} {distToB 3 -1 -1.0}
+1025109777375	result: 0.228 / count: 16 / numRes : 5
+1025109777375	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 53 872.94} {distToB 3 -1 -1.0}
+1025109777531	result: 0.228 / count: 16 / numRes : 5
+1025109777531	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 88 1449.41} {distToB 3 -1 -1.0}
+1025109777734	result: 0.228 / count: 16 / numRes : 5
+1025109777734	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 98 1614.12} {distToB 3 -1 -1.0}
+1025109777890	result: 0.228 / count: 16 / numRes : 5
+1025109777890	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 98 1614.12} {distToB 3 -1 -1.0}
+1025109778046	result: 0.206 / count: 12 / numRes : 4
+1025109778046	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 118 1943.53} {distToB 3 -1 -1.0}
+1025109778187	result: 0.206 / count: 12 / numRes : 4
+1025109778187	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 147 2421.18} {distToB 3 -1 -1.0}
+1025109778359	result: 0.178 / count: 8 / numRes : 3
+1025109778359	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 180 2964.71} {distToB 3 -1 -1.0}
+1025109778500	result: 0.178 / count: 8 / numRes : 3
+1025109778500	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109778656	result: 0.178 / count: 8 / numRes : 3
+1025109778656	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109778812	result: 0.178 / count: 8 / numRes : 3
+1025109778812	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109778968	result: 0.178 / count: 8 / numRes : 3
+1025109778968	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109779140	result: 0.178 / count: 8 / numRes : 3
+1025109779156	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109779437	result: 0.178 / count: 8 / numRes : 3
+1025109779437	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109779593	result: 0.178 / count: 8 / numRes : 3
+1025109779593	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109779750	result: 0.178 / count: 8 / numRes : 3
+1025109779750	state: {taxes 0 -1 -1.0} {acreage 1 131 1.54} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109779890	result: 0.178 / count: 8 / numRes : 3
+1025109779890	state: {taxes 0 -1 -1.0} {acreage 1 131 1.54} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109780031	result: 0.178 / count: 8 / numRes : 3
+1025109780031	state: {taxes 0 -1 -1.0} {acreage 1 134 1.58} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109780203	result: 0.178 / count: 8 / numRes : 3
+1025109780203	state: {taxes 0 -1 -1.0} {acreage 1 121 1.42} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109780343	result: 0.215 / count: 11 / numRes : 4
+1025109780343	state: {taxes 0 -1 -1.0} {acreage 1 118 1.39} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109780484	result: 0.215 / count: 11 / numRes : 4
+1025109780484	state: {taxes 0 -1 -1.0} {acreage 1 118 1.39} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109780656	result: 0.215 / count: 11 / numRes : 4
+1025109780656	state: {taxes 0 -1 -1.0} {acreage 1 118 1.39} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109780937	result: 0.215 / count: 11 / numRes : 4
+1025109780937	state: {taxes 0 -1 -1.0} {acreage 1 118 1.39} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109781093	result: 0.178 / count: 8 / numRes : 3
+1025109781093	state: {taxes 0 -1 -1.0} {acreage 1 124 1.46} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109781250	result: 0.178 / count: 8 / numRes : 3
+1025109781250	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109781406	result: 0.178 / count: 8 / numRes : 3
+1025109781406	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109781546	result: 0.178 / count: 8 / numRes : 3
+1025109781546	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109781703	result: 0.178 / count: 8 / numRes : 3
+1025109781703	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109781859	result: 0.178 / count: 8 / numRes : 3
+1025109781859	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109782000	result: 0.178 / count: 8 / numRes : 3
+1025109782000	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109782312	result: 0.178 / count: 8 / numRes : 3
+1025109782312	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109782453	result: 0.178 / count: 8 / numRes : 3
+1025109782453	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109782609	result: 0.178 / count: 8 / numRes : 3
+1025109782609	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109782765	result: 0.178 / count: 8 / numRes : 3
+1025109782765	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109782921	result: 0.178 / count: 8 / numRes : 3
+1025109782921	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109783062	result: 0.178 / count: 8 / numRes : 3
+1025109783062	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109783203	result: 0.207 / count: 11 / numRes : 4
+1025109783203	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109783359	result: 0.207 / count: 11 / numRes : 4
+1025109783359	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109783687	result: 0.207 / count: 11 / numRes : 4
+1025109783687	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109783734	result: 0.207 / count: 11 / numRes : 4
+1025109783734	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109783859	result: 0.207 / count: 11 / numRes : 4
+1025109783859	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109784000	result: 0.207 / count: 11 / numRes : 4
+1025109784000	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109784156	result: 0.207 / count: 11 / numRes : 4
+1025109784156	state: {taxes 0 -1 -1.0} {acreage 1 128 1.51} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109784296	result: 0.231 / count: 14 / numRes : 5
+1025109784296	state: {taxes 0 -1 -1.0} {acreage 1 111 1.31} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109784453	result: 0.285 / count: 25 / numRes : 8
+1025109784453	state: {taxes 0 -1 -1.0} {acreage 1 82 0.96} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109784609	result: 0.312 / count: 56 / numRes : 16
+1025109784609	state: {taxes 0 -1 -1.0} {acreage 1 56 0.66} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109784781	result: 0.313 / count: 59 / numRes : 17
+1025109784781	state: {taxes 0 -1 -1.0} {acreage 1 46 0.54} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109784921	result: 0.285 / count: 25 / numRes : 8
+1025109784921	state: {taxes 0 -1 -1.0} {acreage 1 79 0.93} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109785218	result: 0.231 / count: 14 / numRes : 5
+1025109785218	state: {taxes 0 -1 -1.0} {acreage 1 131 1.54} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109785234	result: 0.207 / count: 11 / numRes : 4
+1025109785234	state: {taxes 0 -1 -1.0} {acreage 1 137 1.61} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109785390	result: 0.178 / count: 8 / numRes : 3
+1025109785390	state: {taxes 0 -1 -1.0} {acreage 1 160 1.88} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109785531	result: 0.178 / count: 8 / numRes : 3
+1025109785531	state: {taxes 0 -1 -1.0} {acreage 1 170 2.0} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109785687	result: 0.178 / count: 8 / numRes : 3
+1025109785703	state: {taxes 0 -1 -1.0} {acreage 1 170 2.0} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109785843	result: 0.178 / count: 8 / numRes : 3
+1025109785843	state: {taxes 0 -1 -1.0} {acreage 1 170 2.0} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109786000	result: 0.178 / count: 8 / numRes : 3
+1025109786000	state: {taxes 0 -1 -1.0} {acreage 1 183 2.15} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109786140	result: 0.133 / count: 4 / numRes : 2
+1025109786140	state: {taxes 0 -1 -1.0} {acreage 1 212 2.49} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109786312	result: 0.133 / count: 4 / numRes : 2
+1025109786312	state: {taxes 0 -1 -1.0} {acreage 1 222 2.61} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109786468	result: 0.133 / count: 4 / numRes : 2
+1025109786468	state: {taxes 0 -1 -1.0} {acreage 1 222 2.61} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109786781	result: 0.133 / count: 4 / numRes : 2
+1025109786781	state: {taxes 0 -1 -1.0} {acreage 1 225 2.65} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109786937	result: 0.133 / count: 4 / numRes : 2
+1025109786937	state: {taxes 0 -1 -1.0} {acreage 1 225 2.65} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109787078	result: 0.133 / count: 4 / numRes : 2
+1025109787078	state: {taxes 0 -1 -1.0} {acreage 1 225 2.65} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109787265	result: 0.133 / count: 4 / numRes : 2
+1025109787265	state: {taxes 0 -1 -1.0} {acreage 1 225 2.65} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109787390	result: 0.133 / count: 4 / numRes : 2
+1025109787390	state: {taxes 0 -1 -1.0} {acreage 1 225 2.65} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109787562	result: 0.133 / count: 4 / numRes : 2
+1025109787562	state: {taxes 0 -1 -1.0} {acreage 1 225 2.65} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109787718	result: 0.133 / count: 4 / numRes : 2
+1025109787718	state: {taxes 0 -1 -1.0} {acreage 1 225 2.65} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109787875	result: 0.133 / count: 4 / numRes : 2
+1025109787875	state: {taxes 0 -1 -1.0} {acreage 1 225 2.65} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109788031	result: 0.133 / count: 4 / numRes : 2
+1025109788031	state: {taxes 0 -1 -1.0} {acreage 1 225 2.65} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109788218	result: 0.133 / count: 4 / numRes : 2
+1025109788218	state: {taxes 0 -1 -1.0} {acreage 1 225 2.65} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109788390	result: 0.133 / count: 4 / numRes : 2
+1025109788390	state: {taxes 0 -1 -1.0} {acreage 1 209 2.46} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109788531	result: 0.133 / count: 4 / numRes : 2
+1025109788531	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109788687	result: 0.133 / count: 4 / numRes : 2
+1025109788687	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109788828	result: 0.133 / count: 4 / numRes : 2
+1025109788828	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109789000	result: 0.133 / count: 4 / numRes : 2
+1025109789000	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 193 3178.82} {distToB 3 -1 -1.0}
+1025109789140	result: 0.133 / count: 4 / numRes : 2
+1025109789140	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 180 2964.71} {distToB 3 -1 -1.0}
+1025109789296	result: 0.133 / count: 4 / numRes : 2
+1025109789296	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 150 2470.59} {distToB 3 -1 -1.0}
+1025109789453	result: 0.133 / count: 4 / numRes : 2
+1025109789453	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 131 2157.65} {distToB 3 -1 -1.0}
+1025109789671	result: 0.133 / count: 4 / numRes : 2
+1025109789671	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 105 1729.41} {distToB 3 -1 -1.0}
+1025109789812	result: 0.244 / count: 14 / numRes : 5
+1025109789812	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 92 1515.29} {distToB 3 -1 -1.0}
+1025109789984	result: 0.244 / count: 14 / numRes : 5
+1025109789984	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 92 1515.29} {distToB 3 -1 -1.0}
+1025109790125	result: 0.244 / count: 14 / numRes : 5
+1025109790125	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 92 1515.29} {distToB 3 -1 -1.0}
+1025109790312	result: 0.133 / count: 4 / numRes : 2
+1025109790312	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 92 1515.29} {distToB 3 -1 -1.0}
+1025109790453	result: 0.243 / count: 18 / numRes : 6
+1025109790453	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 79 1301.18} {distToB 3 -1 -1.0}
+1025109790593	result: 0.244 / count: 14 / numRes : 5
+1025109790593	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 79 1301.18} {distToB 3 -1 -1.0}
+1025109790765	result: 0.262 / count: 28 / numRes : 9
+1025109790765	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 79 1301.18} {distToB 3 -1 -1.0}
+1025109790937	result: 0.279 / count: 43 / numRes : 14
+1025109790937	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 79 1301.18} {distToB 3 -1 -1.0}
+1025109791093	result: 0.288 / count: 53 / numRes : 17
+1025109791093	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 79 1301.18} {distToB 3 -1 -1.0}
+1025109791312	result: 0.288 / count: 53 / numRes : 17
+1025109791312	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 79 1301.18} {distToB 3 -1 -1.0}
+1025109791453	result: 0.295 / count: 67 / numRes : 22
+1025109791453	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 79 1301.18} {distToB 3 -1 -1.0}
+1025109791609	result: 0.295 / count: 67 / numRes : 22
+1025109791609	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 79 1301.18} {distToB 3 -1 -1.0}
+1025109791750	result: 0.283 / count: 61 / numRes : 20
+1025109791750	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 88 1449.41} {distToB 3 -1 -1.0}
+1025109791890	result: 0.265 / count: 42 / numRes : 14
+1025109791890	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 121 1992.94} {distToB 3 -1 -1.0}
+1025109792062	result: 0.258 / count: 39 / numRes : 13
+1025109792062	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 160 2635.29} {distToB 3 -1 -1.0}
+1025109792234	result: 0.235 / count: 22 / numRes : 8
+1025109792234	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 183 3014.12} {distToB 3 -1 -1.0}
+1025109792390	result: 0.235 / count: 22 / numRes : 8
+1025109792390	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 183 3014.12} {distToB 3 -1 -1.0}
+1025109792546	result: 0.235 / count: 22 / numRes : 8
+1025109792546	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 199 3277.65} {distToB 3 -1 -1.0}
+1025109792718	result: 0.233 / count: 15 / numRes : 6
+1025109792718	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 229 3771.76} {distToB 3 -1 -1.0}
+1025109792906	result: 0.233 / count: 15 / numRes : 6
+1025109792906	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 235 3870.59} {distToB 3 -1 -1.0}
+1025109793062	result: 0.233 / count: 15 / numRes : 6
+1025109793062	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 235 3870.59} {distToB 3 -1 -1.0}
+1025109793234	result: 0.233 / count: 15 / numRes : 6
+1025109793234	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 235 3870.59} {distToB 3 -1 -1.0}
+1025109793375	result: 0.233 / count: 15 / numRes : 6
+1025109793375	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 235 3870.59} {distToB 3 -1 -1.0}
+1025109793546	result: 0.233 / count: 15 / numRes : 6
+1025109793546	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 235 3870.59} {distToB 3 -1 -1.0}
+1025109793734	result: 0.234 / count: 19 / numRes : 7
+1025109793734	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 212 3491.76} {distToB 3 -1 -1.0}
+1025109793890	result: 0.235 / count: 22 / numRes : 8
+1025109793890	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 186 3063.53} {distToB 3 -1 -1.0}
+1025109794031	result: 0.235 / count: 22 / numRes : 8
+1025109794031	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 173 2849.41} {distToB 3 -1 -1.0}
+1025109794187	result: 0.235 / count: 22 / numRes : 8
+1025109794187	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 173 2849.41} {distToB 3 -1 -1.0}
+1025109794343	result: 0.235 / count: 22 / numRes : 8
+1025109794343	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 173 2849.41} {distToB 3 -1 -1.0}
+1025109794609	result: 0.235 / count: 22 / numRes : 8
+1025109794609	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 173 2849.41} {distToB 3 -1 -1.0}
+1025109794640	result: 0.235 / count: 22 / numRes : 8
+1025109794640	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 173 2849.41} {distToB 3 -1 -1.0}
+1025109794796	result: 0.241 / count: 24 / numRes : 9
+1025109794796	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 173 2849.41} {distToB 3 -1 -1.0}
+1025109794953	result: 0.241 / count: 24 / numRes : 9
+1025109794953	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 186 3063.53} {distToB 3 -1 -1.0}
+1025109795093	result: 0.241 / count: 24 / numRes : 9
+1025109795093	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 186 3063.53} {distToB 3 -1 -1.0}
+1025109795250	result: 0.241 / count: 24 / numRes : 9
+1025109795250	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 186 3063.53} {distToB 3 -1 -1.0}
+1025109795421	result: 0.241 / count: 24 / numRes : 9
+1025109795421	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 186 3063.53} {distToB 3 -1 -1.0}
+1025109795578	result: 0.241 / count: 24 / numRes : 9
+1025109795578	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 186 3063.53} {distToB 3 -1 -1.0}
+1025109795718	result: 0.249 / count: 27 / numRes : 10
+1025109795734	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 186 3063.53} {distToB 3 -1 -1.0}
+1025109795875	result: 0.249 / count: 27 / numRes : 10
+1025109795875	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 186 3063.53} {distToB 3 -1 -1.0}
+1025109796125	result: 0.249 / count: 27 / numRes : 10
+1025109796125	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 186 3063.53} {distToB 3 -1 -1.0}
+1025109796250	result: 0.249 / count: 27 / numRes : 10
+1025109796250	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 186 3063.53} {distToB 3 -1 -1.0}
+1025109796406	result: 0.226 / count: 16 / numRes : 6
+1025109796406	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 186 3063.53} {distToB 3 -1 -1.0}
+1025109796593	result: 0.214 / count: 14 / numRes : 5
+1025109796593	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 186 3063.53} {distToB 3 -1 -1.0}
+1025109796734	result: 0.214 / count: 14 / numRes : 5
+1025109796734	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 186 3063.53} {distToB 3 -1 -1.0}
+1025109796921	result: 0.187 / count: 11 / numRes : 4
+1025109796921	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 186 3063.53} {distToB 3 -1 -1.0}
+1025109797046	result: 0.17 / count: 7 / numRes : 3
+1025109797046	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109797203	result: 0.182 / count: 5 / numRes : 2
+1025109797203	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109797359	result: 0.182 / count: 5 / numRes : 2
+1025109797359	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109797671	result: 0.182 / count: 5 / numRes : 2
+1025109797671	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109797843	result: 0.182 / count: 5 / numRes : 2
+1025109797859	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109798015	result: 0.182 / count: 5 / numRes : 2
+1025109798015	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109798187	result: -1.0 / count: 0 / numRes : 0
+1025109798187	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109798343	result: -1.0 / count: 0 / numRes : 0
+1025109798343	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109798515	result: -1.0 / count: 0 / numRes : 0
+1025109798515	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109798703	result: -1.0 / count: 0 / numRes : 0
+1025109798703	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109798843	result: 0.182 / count: 5 / numRes : 2
+1025109798843	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109798984	result: 0.182 / count: 5 / numRes : 2
+1025109798984	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109799140	result: 0.182 / count: 5 / numRes : 2
+1025109799140	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109799437	result: 0.182 / count: 5 / numRes : 2
+1025109799437	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109799593	result: 0.182 / count: 5 / numRes : 2
+1025109799593	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109799750	result: 0.182 / count: 5 / numRes : 2
+1025109799750	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109799890	result: 0.182 / count: 5 / numRes : 2
+1025109799890	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109800046	result: 0.182 / count: 5 / numRes : 2
+1025109800046	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109800203	result: 0.182 / count: 5 / numRes : 2
+1025109800203	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109800343	result: 0.182 / count: 5 / numRes : 2
+1025109800343	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109800500	result: 0.182 / count: 5 / numRes : 2
+1025109800500	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109800656	result: 0.182 / count: 5 / numRes : 2
+1025109800656	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109800968	result: 0.182 / count: 5 / numRes : 2
+1025109800968	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109801125	result: 0.182 / count: 5 / numRes : 2
+1025109801125	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109801281	result: 0.182 / count: 5 / numRes : 2
+1025109801281	state: {taxes 0 -1 -1.0} {acreage 1 222 2.61} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109801406	result: 0.182 / count: 5 / numRes : 2
+1025109801406	state: {taxes 0 -1 -1.0} {acreage 1 232 2.73} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109801578	result: 0.182 / count: 5 / numRes : 2
+1025109801578	state: {taxes 0 -1 -1.0} {acreage 1 216 2.54} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109801718	result: 0.182 / count: 5 / numRes : 2
+1025109801718	state: {taxes 0 -1 -1.0} {acreage 1 216 2.54} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109801890	result: 0.182 / count: 5 / numRes : 2
+1025109801890	state: {taxes 0 -1 -1.0} {acreage 1 216 2.54} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109802046	result: 0.182 / count: 5 / numRes : 2
+1025109802046	state: {taxes 0 -1 -1.0} {acreage 1 219 2.58} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109802203	result: 0.182 / count: 5 / numRes : 2
+1025109802203	state: {taxes 0 -1 -1.0} {acreage 1 219 2.58} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109802406	result: 0.182 / count: 5 / numRes : 2
+1025109802406	state: {taxes 0 -1 -1.0} {acreage 1 219 2.58} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109802562	result: 0.182 / count: 5 / numRes : 2
+1025109802562	state: {taxes 0 -1 -1.0} {acreage 1 225 2.65} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109802703	result: 0.182 / count: 5 / numRes : 2
+1025109802703	state: {taxes 0 -1 -1.0} {acreage 1 229 2.69} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109802859	result: 0.182 / count: 5 / numRes : 2
+1025109802859	state: {taxes 0 -1 -1.0} {acreage 1 242 2.85} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109803015	result: 0.366 / count: 105 / numRes : 28
+1025109803015	state: {taxes 0 -1 -1.0} {acreage 1 255 3.0} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109803156	result: 0.182 / count: 5 / numRes : 2
+1025109803156	state: {taxes 0 -1 -1.0} {acreage 1 255 3.0} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109803312	result: 0.182 / count: 5 / numRes : 2
+1025109803312	state: {taxes 0 -1 -1.0} {acreage 1 238 2.8} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109803468	result: 0.182 / count: 5 / numRes : 2
+1025109803468	state: {taxes 0 -1 -1.0} {acreage 1 216 2.54} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109803640	result: 0.182 / count: 5 / numRes : 2
+1025109803640	state: {taxes 0 -1 -1.0} {acreage 1 216 2.54} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109803812	result: 0.182 / count: 5 / numRes : 2
+1025109803812	state: {taxes 0 -1 -1.0} {acreage 1 216 2.54} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109804109	result: 0.182 / count: 5 / numRes : 2
+1025109804109	state: {taxes 0 -1 -1.0} {acreage 1 229 2.69} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109804234	result: 0.182 / count: 5 / numRes : 2
+1025109804234	state: {taxes 0 -1 -1.0} {acreage 1 235 2.76} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109804390	result: 0.182 / count: 5 / numRes : 2
+1025109804390	state: {taxes 0 -1 -1.0} {acreage 1 222 2.61} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109804546	result: 0.182 / count: 5 / numRes : 2
+1025109804546	state: {taxes 0 -1 -1.0} {acreage 1 222 2.61} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109804718	result: 0.182 / count: 5 / numRes : 2
+1025109804718	state: {taxes 0 -1 -1.0} {acreage 1 222 2.61} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109804890	result: 0.182 / count: 5 / numRes : 2
+1025109804890	state: {taxes 0 -1 -1.0} {acreage 1 222 2.61} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109805031	result: 0.182 / count: 5 / numRes : 2
+1025109805031	state: {taxes 0 -1 -1.0} {acreage 1 222 2.61} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109805203	result: 0.182 / count: 5 / numRes : 2
+1025109805203	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109805359	result: 0.182 / count: 5 / numRes : 2
+1025109805375	state: {taxes 0 -1 -1.0} {acreage 1 189 2.22} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109805531	result: 0.182 / count: 5 / numRes : 2
+1025109805531	state: {taxes 0 -1 -1.0} {acreage 1 173 2.04} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109805812	result: 0.182 / count: 5 / numRes : 2
+1025109805812	state: {taxes 0 -1 -1.0} {acreage 1 173 2.04} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109805843	result: 0.182 / count: 5 / numRes : 2
+1025109805843	state: {taxes 0 -1 -1.0} {acreage 1 173 2.04} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109806015	result: 0.182 / count: 5 / numRes : 2
+1025109806015	state: {taxes 0 -1 -1.0} {acreage 1 173 2.04} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109806171	result: 0.182 / count: 5 / numRes : 2
+1025109806171	state: {taxes 0 -1 -1.0} {acreage 1 173 2.04} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109806328	result: 0.182 / count: 5 / numRes : 2
+1025109806328	state: {taxes 0 -1 -1.0} {acreage 1 173 2.04} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109806468	result: 0.182 / count: 5 / numRes : 2
+1025109806468	state: {taxes 0 -1 -1.0} {acreage 1 180 2.12} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109806625	result: 0.182 / count: 5 / numRes : 2
+1025109806625	state: {taxes 0 -1 -1.0} {acreage 1 196 2.31} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109806765	result: 0.182 / count: 5 / numRes : 2
+1025109806765	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109806906	result: 0.182 / count: 5 / numRes : 2
+1025109806906	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109807062	result: 0.182 / count: 5 / numRes : 2
+1025109807062	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109807359	result: 0.182 / count: 5 / numRes : 2
+1025109807359	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109807531	result: 0.182 / count: 5 / numRes : 2
+1025109807531	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109807703	result: 0.182 / count: 5 / numRes : 2
+1025109807703	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109807843	result: 0.182 / count: 5 / numRes : 2
+1025109807843	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109808000	result: 0.182 / count: 5 / numRes : 2
+1025109808000	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109808156	result: 0.182 / count: 5 / numRes : 2
+1025109808156	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109808312	result: 0.182 / count: 5 / numRes : 2
+1025109808312	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109808468	result: 0.182 / count: 5 / numRes : 2
+1025109808468	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109808625	result: 0.182 / count: 5 / numRes : 2
+1025109808625	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109808796	result: 0.182 / count: 5 / numRes : 2
+1025109808796	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109808968	result: 0.182 / count: 5 / numRes : 2
+1025109808968	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 189 3112.94} {distToB 3 -1 -1.0}
+1025109809109	result: 0.182 / count: 5 / numRes : 2
+1025109809109	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 170 2800.0} {distToB 3 -1 -1.0}
+1025109809265	result: 0.182 / count: 5 / numRes : 2
+1025109809265	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 170 2800.0} {distToB 3 -1 -1.0}
+1025109809421	result: 0.182 / count: 5 / numRes : 2
+1025109809421	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 170 2800.0} {distToB 3 -1 -1.0}
+1025109809578	result: 0.182 / count: 5 / numRes : 2
+1025109809578	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 180 2964.71} {distToB 3 -1 -1.0}
+1025109809734	result: 0.12 / count: 2 / numRes : 1
+1025109809734	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 199 3277.65} {distToB 3 -1 -1.0}
+1025109809875	result: 0.12 / count: 2 / numRes : 1
+1025109809875	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 202 3327.06} {distToB 3 -1 -1.0}
+1025109810046	result: 0.12 / count: 2 / numRes : 1
+1025109810046	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 202 3327.06} {distToB 3 -1 -1.0}
+1025109810203	result: 0.12 / count: 2 / numRes : 1
+1025109810203	state: {taxes 0 -1 -1.0} {acreage 1 206 2.42} {sqfoot 2 202 3327.06} {distToB 3 -1 -1.0}
+1025109810203	experiment complete
+
+
+annotation {06/26/02 12:43:34} {subject 10}

@@ -1,0 +1,101 @@
+1025123292843	start 2002-06-26 16:28:12
+1025123293093	experiment number: 10
+1025123305468	begin
+1025123305468	result: -1.0 / count: 0 / numRes : 0
+1025123305468	state: 
+1025123305609	result: -1.0 / count: 0 / numRes : 0
+1025123305609	state: 
+1025123305765	result: -1.0 / count: 0 / numRes : 0
+1025123305765	state: 
+1025123305906	result: -1.0 / count: 0 / numRes : 0
+1025123305906	state: 
+1025123306062	result: -1.0 / count: 0 / numRes : 0
+1025123306062	state: 
+1025123306218	result: -1.0 / count: 0 / numRes : 0
+1025123306218	state: 
+1025123306390	result: -1.0 / count: 0 / numRes : 0
+1025123306390	state: 
+1025123306531	result: -1.0 / count: 0 / numRes : 0
+1025123306531	state: 
+1025123306703	result: -1.0 / count: 0 / numRes : 0
+1025123306703	state: 
+1025123306843	result: -1.0 / count: 0 / numRes : 0
+1025123306843	state: 
+1025123307015	result: -1.0 / count: 0 / numRes : 0
+1025123307015	state: 
+1025123307312	result: -1.0 / count: 0 / numRes : 0
+1025123307312	state: 
+1025123307437	result: -1.0 / count: 0 / numRes : 0
+1025123307437	state: 
+1025123307593	result: -1.0 / count: 0 / numRes : 0
+1025123307593	state: 
+1025123307765	result: -1.0 / count: 0 / numRes : 0
+1025123307765	state: {price 3 -1 -1.0}
+1025123307921	result: 0.467 / count: 698 / numRes : 373
+1025123307921	state: {price 3 -1 -1.0}
+1025123308140	result: 0.467 / count: 698 / numRes : 373
+1025123308156	state: {price 3 -1 -1.0}
+1025123308234	result: 0.467 / count: 698 / numRes : 373
+1025123308234	state: {price 3 -1 -1.0}
+1025123308421	result: 0.467 / count: 698 / numRes : 373
+1025123308421	state: {price 3 -1 -1.0}
+1025123308546	result: 0.467 / count: 698 / numRes : 373
+1025123308546	state: {price 3 -1 -1.0}
+1025123308765	result: 0.467 / count: 698 / numRes : 373
+1025123308765	state: {price 3 -1 -1.0}
+1025123308859	result: 0.467 / count: 698 / numRes : 373
+1025123308859	state: {price 3 -1 -1.0}
+1025123309015	result: 0.467 / count: 698 / numRes : 373
+1025123309015	state: {price 3 -1 -1.0}
+1025123309187	result: 0.467 / count: 698 / numRes : 373
+1025123309187	state: {price 3 -1 -1.0}
+1025123309328	result: 0.467 / count: 698 / numRes : 373
+1025123309328	state: {price 3 -1 -1.0}
+1025123309484	result: 0.467 / count: 698 / numRes : 373
+1025123309484	state: {price 3 -1 -1.0}
+1025123309609	result: 0.467 / count: 698 / numRes : 373
+1025123309609	state: {price 3 -1 -1.0}
+1025123309765	result: 0.467 / count: 698 / numRes : 373
+1025123309765	state: {price 3 -1 -1.0}
+1025123309921	result: 0.21 / count: 64 / numRes : 46
+1025123309921	state: {price 3 -1 -1.0} {acreage 2 128 1.51}
+1025123310125	result: 0.265 / count: 96 / numRes : 62
+1025123310125	state: {price 3 -1 -1.0} {acreage 2 105 1.24}
+1025123310265	result: 0.231 / count: 76 / numRes : 52
+1025123310265	state: {price 3 -1 -1.0} {acreage 2 114 1.34}
+1025123310406	result: 0.231 / count: 76 / numRes : 52
+1025123310406	state: {price 3 -1 -1.0} {acreage 2 114 1.34}
+1025123310593	result: 0.231 / count: 76 / numRes : 52
+1025123310593	state: {price 3 -1 -1.0} {acreage 2 114 1.34}
+1025123310765	result: 0.186 / count: 53 / numRes : 39
+1025123310765	state: {price 3 -1 -1.0} {acreage 2 150 1.76}
+1025123310906	result: 0.158 / count: 35 / numRes : 24
+1025123310906	state: {price 3 -1 -1.0} {acreage 2 173 2.04}
+1025123311109	result: 0.116 / count: 20 / numRes : 15
+1025123311109	state: {price 3 -1 -1.0} {acreage 2 183 2.15}
+1025123311421	result: 0.11 / count: 16 / numRes : 12
+1025123311421	state: {price 3 -1 -1.0} {acreage 2 186 2.19}
+1025123311546	result: 0.1 / count: 14 / numRes : 11
+1025123311546	state: {price 3 -1 -1.0} {acreage 2 189 2.22}
+1025123311718	result: 0.074 / count: 9 / numRes : 7
+1025123311718	state: {price 3 -1 -1.0} {acreage 2 193 2.27}
+1025123311906	result: 0.074 / count: 9 / numRes : 7
+1025123311906	state: {price 3 -1 -1.0} {acreage 2 193 2.27}
+1025123312046	result: 0.07 / count: 8 / numRes : 6
+1025123312062	state: {price 3 -1 -1.0} {acreage 2 196 2.31}
+1025123312390	result: 0.07 / count: 8 / numRes : 6
+1025123312390	state: {price 3 -1 -1.0} {acreage 2 206 2.42}
+1025123312515	result: 0.079 / count: 3 / numRes : 2
+1025123312515	state: {price 3 -1 -1.0} {acreage 2 212 2.49}
+1025123312687	result: 0.034 / count: 1 / numRes : 1
+1025123312687	state: {price 3 -1 -1.0} {acreage 2 216 2.54}
+1025123312843	result: 0.034 / count: 1 / numRes : 1
+1025123312843	state: {price 3 -1 -1.0} {acreage 2 219 2.58}
+1025123313015	result: 0.034 / count: 1 / numRes : 1
+1025123313015	state: {price 3 -1 -1.0} {acreage 2 219 2.58}
+1025123313187	result: 0.034 / count: 1 / numRes : 1
+1025123313187	state: {price 3 -1 -1.0} {acreage 2 219 2.58}
+1025123313187	experiment complete
+
+
+annotation {06/26/02 16:28:35} {subject 12}
