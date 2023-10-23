@@ -16,8 +16,8 @@ view, doc, sg, root = genViewDocSgRoot()
 wedge1 = doc.addObject("Part::Wedge", "myWedge") #https://wiki.freecad.org/Part_Wedge#Scripting
 wedge2 = doc.addObject("Part::Wedge", "myWedge") #https://wiki.freecad.org/Part_Wedge#Scripting
 
-wedge1.Placement = App.Placement(App.Vector(0,  0, 0), App.Rotation(0, 0,  0))
-wedge2.Placement = App.Placement(App.Vector(0, 20, 0), App.Rotation(0, 0, 15))
+wedge1.Placement = App.Placement(App.Vector( 0, 0, 0), App.Rotation( 0, 0, 0))
+wedge2.Placement = App.Placement(App.Vector(20, 0, 0), App.Rotation(15, 0, 0))
 
 doc.recompute()
 
