@@ -7,17 +7,17 @@ import FreeCADGui as Gui
 import pivy.coin as coin
 import sys
 
-sys.path.append('c:/git/designThinking/2023/hccFundamentals/3wish')
+sys.path.append('c:/git/tangibles/sw/3wish.02')
 from w3core  import *
 from w3shift import *
 
 view, doc, sg, root = genViewDocSgRoot()
 
 wedge1 = doc.addObject("Part::Wedge", "myWedge") #https://wiki.freecad.org/Part_Wedge#Scripting
-wedge1.Placement = App.Placement(App.Vector(0, 0, 1), App.Rotation(0, 0, 0))
-
 wedge2 = doc.addObject("Part::Wedge", "myWedge") #https://wiki.freecad.org/Part_Wedge#Scripting
-wedge2.Placement = App.Placement(App.Vector(0, 3, 1), App.Rotation(0, 0, 15))
+
+wedge1.Placement = App.Placement(App.Vector(0,  0, 0), App.Rotation(0, 0,  0))
+wedge2.Placement = App.Placement(App.Vector(0, 20, 0), App.Rotation(0, 0, 15))
 
 doc.recompute()
 
