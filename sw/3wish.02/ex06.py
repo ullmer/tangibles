@@ -21,14 +21,17 @@ wedge2 = doc.addObject("Part::Wedge", "wedge2") #https://wiki.freecad.org/Part_W
 bldg1a  = doc.addObject("Part::Box",   "bldg1a")
 bldg1b  = doc.addObject("Part::Box",   "bldg1b")
 
-
 stage.Length     = stage.Width  = 100.
-bldg1a.Length    = bldg1a.Width =  50.; bldg1a.Height = 2.
-bldg1b.Length    = bldg1b.Width =  46.; bldg1b.Height = 2.
+bldg1a.Length    = bldg1a.Width =  50.; bldg1a.Height = 8.
+bldg1b.Length    = bldg1b.Width =  46.; bldg1b.Height = 8.
 wedge1.Placement = App.Placement(App.Vector( 0, 0, 0), App.Rotation( 0, 0, 0))
 wedge2.Placement = App.Placement(App.Vector(20, 0, 0), App.Rotation(15, 0, 0))
 bldg1a.Placement  = App.Placement(App.Vector( 0, 0, 0), App.Rotation( 0, 0, 0))
 bldg1b.Placement  = App.Placement(App.Vector( 2, 2, 1), App.Rotation( 0, 0, 0))
+
+bldgCut1   = App.activeDocument().addObject("Part::Cut", "Bldg central void")
+bldgCut1.Base = bldg1a
+bldgCut1.Tool = bldg1b
 
 doc.recompute()
 
