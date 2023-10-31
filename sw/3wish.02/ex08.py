@@ -47,7 +47,19 @@ Gui.runCommand('Std_ViewZoomOut',0)
 Gui.SendMsgToActiveView("ViewFit")
 
 pygame.midi.init()
-i = pygame.midi.Input(1)
-e = i.read(100); print(e)
+
+############ update midi ############
+
+def updateMidi(arg1, arg2):
+  global midiIn
+  e = midiIn.read(100); print(e)
+
+global midiIn
+midiIn = pygame.midi.Input(1)
+
+e = midiIn.read(100); print(e)
+
+ts = coin.SoTimerSensor(updateMidi, 0)
+ts.schedule()
 
 ### end ###
