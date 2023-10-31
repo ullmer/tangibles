@@ -6,6 +6,8 @@ import FreeCAD as App
 import FreeCADGui as Gui
 import pivy.coin as coin
 import sys
+import pygame as pg
+import pygame.midi
 
 sys.path.append('c:/git/tangibles/sw/3wish.02')
 from w3core  import *
@@ -43,5 +45,9 @@ doc.recompute()
 
 Gui.runCommand('Std_ViewZoomOut',0)
 Gui.SendMsgToActiveView("ViewFit")
+
+pygame.midi.init()
+i = pygame.midi.Input(1)
+e = i.read(100); print(e)
 
 ### end ###
