@@ -10,19 +10,27 @@ import pyyaml
 #####################  Enodia 
 ##################### 
 
-class enofreecad:
+class enoFreecad:
+  yamlFn = None
+  yamlD  = None
 
   ############# constructor #############
 
-  def __init__(self, yamlFn, **kwargs):
+  def __init__(self, yamlFn=None, **kwargs):
     #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
-    self.loadYaml(yamlFn)
 
+    if yamlFn is not None: self.loadYaml(yamlFn)
+
+  ################# Add Object ################# 
+
+  def parseYaml(self, yamlFn):
+    try:
+      f = 
 
   ################# Enodia FreeCAD Add Object ################# 
 
-  def enoFcParseYaml(doc, yamlFn):
+  def addObject(self, yamlFn):
 
   ################# Enodia FreeCAD Add Object ################# 
 
