@@ -9,33 +9,15 @@ import sys
 import pygame as pg
 import pygame.midi
 
-sys.path.append('c:/git/tangibles/sw/3wish.02')
-from w3core  import *
-from w3shift import *
+basedir = 'c:/git/tangibles/sw/3wish.02'
+sys.path.append(basedir)
+from w3core     import *
+from enoFreecad import *
 
 view, doc, sg, root = genViewDocSgRoot()
 
-#Heider & Simmel 1944 variant; https://www.youtube.com/watch?v=VTNmLt7QX8E
-stage  = doc.addObject("Part::Plane", "floor")  #https://wiki.freecad.org/Part_Plane
-bldg1a = doc.addObject("Part::Box",   "bldg1a")
-bldg1b = doc.addObject("Part::Box",   "bldg1b")
-
-screen1 = doc.addObject("Part::Plane", "screen1") 
-screen2 = doc.addObject("Part::Plane", "screen2") 
-
-stage.Length     = stage.Width  = 32.
-bldg1a.Length    = bldg1a.Width = 28.; bldg1a.Height = 3.
-bldg1b.Length    = bldg1b.Width = 26.; bldg1b.Height = 3.
-screen1.Width    = 8
-screen1.Length   = 8. / 1.77 # 1920/1080 ~= 1.77
-screen2.Width    = screen1.Width
-screen2.Length   = screen1.Length
-
-stage.Placement   = App.Placement(App.Vector(-1,   -1, 0), App.Rotation( 0, 0, 0))
-bldg1a.Placement  = App.Placement(App.Vector( 0,    0, 0), App.Rotation( 0, 0, 0))
-bldg1b.Placement  = App.Placement(App.Vector( 1,    1, 1), App.Rotation( 0, 0, 0))
-screen1.Placement = App.Placement(App.Vector( 3,    3, 5), App.Rotation( 0, 90, 0))
-screen2.Placement = App.Placement(App.Vector( 11.5, 3, 5), App.Rotation( 0, 90, 0))
+yamlFn = basedir + '/scene01.yaml'
+efc    = enoFreecad(yamlFn, doc)
 
 bldgCut1   = App.activeDocument().addObject("Part::Cut", "Bldg central void")
 bldgCut1.Base = bldg1a
