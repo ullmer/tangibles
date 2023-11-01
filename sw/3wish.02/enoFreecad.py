@@ -45,6 +45,10 @@ class enoFreecad:
 
   ################# Add Object by parsed YAML description ################# 
 
+  # parse entries like:
+  #- {name: bldg1a,  type: box,   dimensions: [28, 28, 3], placement: [[ 0,  0,   0], [0,  0, 0]]}
+  #- {name: floor,   type: plane, dimensions: [32, 32],    placement: [[-1, -1,   0], [0,  0, 0]]}
+
   def addObjectY(self, objY):
     try:
       for field in ['name', 'type', 'dimensions']:
@@ -66,56 +70,13 @@ class enoFreecad:
 
       if 'placement' in objY:
         objTrans, objRot = objY['placement']
+        tx, ty, tz = objTrans
+        rx, ry, rz = objRot
 
-        obj.Placement = Appl.Placement(App.Vector(
+        obj.Placement = Appl.Placement(App.Vector(tx, ty, tz), App.Rotation(rx, ry, rz))
       
     except:
       print("enoFreecad addObjectY exception:"); traceback.print_exc(); return None
-
- #- {name: bldg1a,  type: box,   dimensions: [28, 28, 3], placement: [[ 0,  0,   0], [0,  0, 0]]}
- #- {name: floor,   type: plane, dimensions: [32, 32],    placement: [[-1, -1,   0], [0,  0, 0]]}
-
-
-stage  = doc.addObject("Part::Plane", "floor")  #https://wiki.freecad.org/Part_Plane
-stage.Length     = stage.Width  = 32.
-stage.Placement   = App.Placement(App.Vector(-1,   -1, 0), App.Rotation( 0, 0, 0))
-
-scene:
- - {name: bldg1a,  type: box,   dimensions: [28, 28, 3], placement: [[ 0,  0,   0], [0,  0, 0]]}
- - {name: floor,   type: plane, dimensions: [32, 32],    placement: [[-1, -1,   0], [0,  0, 0]]}
-
-booleanOps:
- - {name: bldgCut1, op: cut, descr: building central void, base: bldg1a, tool: bldg1b}
-
-#Heider & Simmel 1944 variant; https://www.youtube.com/watch?v=VTNmLt7QX8E
-
-
-bldg1a = doc.addObject("Part::Box",   "bldg1a")
-bldg1b = doc.addObject("Part::Box",   "bldg1b")
-
-screen1 = doc.addObject("Part::Plane", "screen1") 
-screen2 = doc.addObject("Part::Plane", "screen2") 
-
-bldg1a.Length    = bldg1a.Width = 28.; bldg1a.Height = 3.
-bldg1b.Length    = bldg1b.Width = 26.; bldg1b.Height = 3.
-screen1.Width    = 8
-screen1.Length   = 8. / 1.77 # 1920/1080 ~= 1.77
-screen2.Width    = screen1.Width
-screen2.Length   = screen1.Length
-
-bldg1a.Placement  = App.Placement(App.Vector( 0,    0, 0), App.Rotation( 0, 0, 0))
-bldg1b.Placement  = App.Placement(App.Vector( 1,    1, 1), App.Rotation( 0, 0, 0))
-screen1.Placement = App.Placement(App.Vector( 3,    3, 5), App.Rotation( 0, 90, 0))
-screen2.Placement = App.Placement(App.Vector( 11.5, 3, 5), App.Rotation( 0, 90, 0))
-
-bldgCut1   = App.activeDocument().addObject("Part::Cut", "Bldg central void")
-bldgCut1.Base = bldg1a
-bldgCut1.Tool = bldg1b
-
-doc.recompute()
-
-Gui.runCommand('Std_ViewZoomOut',0)
-Gui.SendMsgToActiveView("ViewFit")
 
 ### end ###
 
