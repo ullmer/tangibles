@@ -95,5 +95,25 @@ class enoFreecad:
     except:
       print("enoFreecad addObjectY exception:"); traceback.print_exc(); return None
 
+  ################# get camera config ################# 
+  def getCameraConfig(self, cameraConfigName):
+    try:
+      if self.yamlD is None:
+        print("enoFreecad getCameraConfig: yaml data not populated"); return None
+
+      if 'camera' not in self.yamlD:
+        print("enoFreecad getCameraConfig: camera object not in yaml data"); return None
+
+      cameraConfigs = self.yamlD['camera']
+      if cameraConfigName not in cameraConfigs:
+        print("enoFreecad getCameraConfig: camera config %s not in camera configs" % cameraConfigName); return None
+
+      cc = cameraConfigs[cameraConfigName]
+      return cc
+    except:
+      print("enoFreecad getCameraConfig exception:"); traceback.print_exc(); return None
+
+
+
 ### end ###
 

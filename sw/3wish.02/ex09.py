@@ -25,8 +25,7 @@ bldgCut1.Tool = efc.getObj("bldg1b")
 
 doc.recompute()
 
-Gui.runCommand('Std_ViewZoomOut',0)
-Gui.SendMsgToActiveView("ViewFit")
+setCameraconfig(efc.getCameraConfig("cam1"))
 
 pygame.midi.init()
 
@@ -40,7 +39,6 @@ def updateMidi(arg1, arg2):
      #print(e)
      print(len(events), events)
      #for event in e[1]
- 
 
 global midiIn
 midiIn = pygame.midi.Input(1)
