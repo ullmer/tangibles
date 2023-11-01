@@ -10,19 +10,22 @@ import yaml
 ##################### Enodia FreeCAD support objects ##################### 
 
 class enoFreecad:
-
   yamlFn    = None
   yamlD     = None
   yamlScene = None
+  fcDoc     = None
 
   partTypeMap  = {'box': 'Part::Box', 'plane': 'Part::Plane'}
   fcObjHandles = {}
 
   ############# constructor #############
 
-  def __init__(self, yamlFn=None, **kwargs):
+  def __init__(self, yamlFn=None, fcDoc=None, **kwargs):
     #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+
+    self.yamlFn = yamlFn
+    self.fcDoc  = fcDoc
 
     if yamlFn is not None: self.loadYaml(yamlFn)
 
@@ -60,7 +63,7 @@ class enoFreecad:
       if ptype in self.partTypeMap: fcPtype = self.partTypeMap[pttype]
       else: print("enoFreecad addObjectY: part type %s is presently unknown" % ptype); return None
 
-      obj in doc.addObject(fcPtype, pname)
+      obj = self.doc.addObject(fcPtype, pname)
 
       obj.Length = dimensions[0]
       obj.Width  = dimensions[1]
@@ -75,6 +78,8 @@ class enoFreecad:
 
         obj.Placement = Appl.Placement(App.Vector(tx, ty, tz), App.Rotation(rx, ry, rz))
       
+      self.fcObjHandles[pname] = obj
+
     except:
       print("enoFreecad addObjectY exception:"); traceback.print_exc(); return None
 
