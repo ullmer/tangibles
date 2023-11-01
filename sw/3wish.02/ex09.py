@@ -52,7 +52,13 @@ pygame.midi.init()
 
 def updateMidi(arg1, arg2):
   global midiIn
-  e = midiIn.read(100); print(e)
+  e = midiIn.read(100); 
+  if len(e) > 2: 
+     events = e[1:]
+     #print(e)
+     print(len(events), events)
+     #for event in e[1]
+ 
 
 global midiIn
 midiIn = pygame.midi.Input(1)
