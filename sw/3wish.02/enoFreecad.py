@@ -56,12 +56,19 @@ class enoFreecad:
       if ptype in self.partTypeMap: fcPtype = self.partTypeMap[pttype]
       else: print("enoFreecad addObjectY: part type %s is presently unknown" % ptype); return None
 
+      obj in doc.addObject(fcPtype, pname)
 
-  partTypeMap  = {'box': 'Part::Box', 'plane': 'Part::Plane'}
+      obj.Length = dimensions[0]
+      obj.Width  = dimensions[1]
 
-      obj in doc.addObject(fcPtype, pname
+      if len(dimensions) == 3:
+        obj.Height = dimensions[2]
 
+      if 'placement' in objY:
+        objTrans, objRot = objY['placement']
 
+        obj.Placement = Appl.Placement(App.Vector(
+      
     except:
       print("enoFreecad addObjectY exception:"); traceback.print_exc(); return None
 
