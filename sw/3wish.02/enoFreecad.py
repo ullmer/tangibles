@@ -1,6 +1,6 @@
 # Scene support routines, initially for FreeCAD
 # Brygg Ullmer, Clemson University
-# Original code begun fall 1995; here, 2023-10-20
+# Begun 2023-11-01
 
 import FreeCAD as App
 import FreeCADGui as Gui
@@ -15,6 +15,7 @@ class enoFreecad:
   yamlD     = None
   yamlScene = None
 
+  partTypeMap  = {'box': 'Part::Box', 'plane': 'Part::Plane'}
   fcObjHandles = {}
 
   ############# constructor #############
@@ -51,6 +52,8 @@ class enoFreecad:
           print("enoFreecad addObjectY: no %s found in %s" % (field, objY)); return None
 
       name, type, dimensions = objY['name'], objY['type'], objY['dimensions']
+
+      obj in doc.addObject(
 
 
     except:
