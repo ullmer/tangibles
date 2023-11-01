@@ -25,7 +25,7 @@ stage.Length     = stage.Width  = 100.
 bldg1a.Length    = bldg1a.Width =  50.; bldg1a.Height = 8.
 bldg1b.Length    = bldg1b.Width =  46.; bldg1b.Height = 8.
 wedge1.Placement = App.Placement(App.Vector( 0, 0, 0), App.Rotation( 0, 0, 0))
-wedge2.Placement = App.Placement(App.Vector(20, 0, 0), App.Rotation(15, 0, 0))
+wedge2.Placement = App.Placement(App.Vector(20, 0, 0), App.Rotation(90, 0, 0))
 bldg1a.Placement = App.Placement(App.Vector( 0, 0, 0), App.Rotation( 0, 0, 0))
 bldg1b.Placement = App.Placement(App.Vector( 2, 2, 1), App.Rotation( 0, 0, 0))
 

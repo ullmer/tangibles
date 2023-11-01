@@ -3,11 +3,35 @@
 # Originally disaggregated from tcl_examp3 1995-11-24
 # Python port begun 2023-10-20
 
+import FreeCAD as App
+import FreeCADGui as Gui
 import pivy.coin as coin
 import traceback
 
 global HIERSEP_CHAR 
 HIERSEP_CHAR = ':'
+
+################ gen view sg root ################ 
+
+def genViewDocSgRoot(): 
+
+  if Gui.ActiveDocument is None:
+    doc  = App.newDocument()
+    #doc.recompute()
+    viewer = Gui.createViewer()
+    view   = viewer.getViewer()
+  else:
+    doc  = Gui.ActiveDocument
+    view = Gui.ActiveDocument.ActiveView
+
+  Gui.activeDocument().activeView().setCameraType("Perspective")
+
+  sg      = view.getSceneGraph()
+  root    = coin.SoSeparator()
+  sg.addChild(root)
+
+  result = [view, doc, sg, root]
+  return result
 
 ################ Add Obj ################ 
 # Initially, push passed text Iv Obj onto space
