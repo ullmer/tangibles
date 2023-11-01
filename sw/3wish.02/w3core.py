@@ -70,9 +70,9 @@ def getCameraConfig():
   for cfield in cfields:
     fieldObj = cam.getField(cfield)
     fieldVal = fieldObj.getValue() 
-    if isinstance(fieldVal, SbVec3f): #one more level of indirection necessary
+    if isinstance(fieldVal, coin.SbVec3f) or isinstance(fieldVal, coin.SbRotation): #one more level of indirection necessary
       fieldVal = fieldVal.getValue()
-    cdict[cfield] = fieldStr
+    cdict[cfield] = fieldVal
 
   return cdict
 
