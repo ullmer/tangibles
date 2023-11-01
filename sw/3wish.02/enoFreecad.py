@@ -7,10 +7,10 @@ import FreeCADGui as Gui
 import pivy.coin as coin
 import yaml
 
-#####################  Enodia 
-##################### 
+##################### Enodia FreeCAD support objects ##################### 
 
 class enoFreecad:
+
   yamlFn    = None
   yamlD     = None
   yamlScene = None
