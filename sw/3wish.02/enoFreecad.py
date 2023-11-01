@@ -7,13 +7,31 @@ import FreeCADGui as Gui
 import pivy.coin as coin
 import pyyaml
 
-################# Enodia FreeCAD Add Object ################# 
+#####################  Enodia 
+##################### 
 
-def enoFcParseYaml(doc, yamlFn):
+class enofreecad:
 
-################# Enodia FreeCAD Add Object ################# 
+  ############# constructor #############
 
-def enoFcAddObjectY(doc, yamlDescr):
+  def __init__(self, yamlFn, **kwargs):
+    #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    self.loadYaml(yamlFn)
+
+
+  ################# Enodia FreeCAD Add Object ################# 
+
+  def enoFcParseYaml(doc, yamlFn):
+
+  ################# Enodia FreeCAD Add Object ################# 
+
+  def enoFcAddObjectY(doc, yamlDescr):
+
+
+stage  = doc.addObject("Part::Plane", "floor")  #https://wiki.freecad.org/Part_Plane
+stage.Length     = stage.Width  = 32.
+stage.Placement   = App.Placement(App.Vector(-1,   -1, 0), App.Rotation( 0, 0, 0))
 
 scene:
  - {name: bldg1a,  type: box,   dimensions: [28, 28, 3], placement: [[ 0,  0,   0], [0,  0, 0]]}
@@ -26,14 +44,14 @@ booleanOps:
  - {name: bldgCut1, op: cut, descr: building central void, base: bldg1a, tool: bldg1b}
 
 #Heider & Simmel 1944 variant; https://www.youtube.com/watch?v=VTNmLt7QX8E
-stage  = doc.addObject("Part::Plane", "floor")  #https://wiki.freecad.org/Part_Plane
+
+
 bldg1a = doc.addObject("Part::Box",   "bldg1a")
 bldg1b = doc.addObject("Part::Box",   "bldg1b")
 
 screen1 = doc.addObject("Part::Plane", "screen1") 
 screen2 = doc.addObject("Part::Plane", "screen2") 
 
-stage.Length     = stage.Width  = 32.
 bldg1a.Length    = bldg1a.Width = 28.; bldg1a.Height = 3.
 bldg1b.Length    = bldg1b.Width = 26.; bldg1b.Height = 3.
 screen1.Width    = 8
@@ -41,7 +59,6 @@ screen1.Length   = 8. / 1.77 # 1920/1080 ~= 1.77
 screen2.Width    = screen1.Width
 screen2.Length   = screen1.Length
 
-stage.Placement   = App.Placement(App.Vector(-1,   -1, 0), App.Rotation( 0, 0, 0))
 bldg1a.Placement  = App.Placement(App.Vector( 0,    0, 0), App.Rotation( 0, 0, 0))
 bldg1b.Placement  = App.Placement(App.Vector( 1,    1, 1), App.Rotation( 0, 0, 0))
 screen1.Placement = App.Placement(App.Vector( 3,    3, 5), App.Rotation( 0, 90, 0))
