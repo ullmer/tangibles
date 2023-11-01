@@ -5,14 +5,17 @@
 import FreeCAD as App
 import FreeCADGui as Gui
 import pivy.coin as coin
-import pyyaml
+import yaml
 
 #####################  Enodia 
 ##################### 
 
 class enoFreecad:
-  yamlFn = None
-  yamlD  = None
+  yamlFn    = None
+  yamlD     = None
+  yamlScene = None
+
+  fcObjHandles = {}
 
   ############# constructor #############
 
@@ -26,15 +29,25 @@ class enoFreecad:
 
   def parseYaml(self, yamlFn):
     try:
-      f = 
+      self.yamlFn = yamlFn
+      f           = open(yamlFn, 'rt')
+      self.yamlD  = yaml.safe_load(f)
 
-  ################# Enodia FreeCAD Add Object ################# 
+      if 'scene' in self.yamlD:
+        self.yamlScene = self.yamlD['scene']
+        if not isinstance(self.yamlScene, list):
+           print("enoFreecad parseYaml error: scene found, but does not contain a list"); return None
+        
+        for el in self.yamlScene: self.addObjectY(el)
+    except:
+      print("enoFreecad parseYaml exception:"); traceback.print_exc(); return None
 
-  def addObject(self, yamlFn):
+  ################# Add Object by parsed YAML description ################# 
 
-  ################# Enodia FreeCAD Add Object ################# 
+  def addObjectY(self, objY):
 
-  def enoFcAddObjectY(doc, yamlDescr):
+ #- {name: bldg1a,  type: box,   dimensions: [28, 28, 3], placement: [[ 0,  0,   0], [0,  0, 0]]}
+ #- {name: floor,   type: plane, dimensions: [32, 32],    placement: [[-1, -1,   0], [0,  0, 0]]}
 
 
 stage  = doc.addObject("Part::Plane", "floor")  #https://wiki.freecad.org/Part_Plane
@@ -43,10 +56,7 @@ stage.Placement   = App.Placement(App.Vector(-1,   -1, 0), App.Rotation( 0, 0, 0
 
 scene:
  - {name: bldg1a,  type: box,   dimensions: [28, 28, 3], placement: [[ 0,  0,   0], [0,  0, 0]]}
- - {name: bldg1b,  type: box,   dimensions: [26, 26, 3], placement: [[ 0,  0,   0], [0,  0, 0]]}
  - {name: floor,   type: plane, dimensions: [32, 32],    placement: [[-1, -1,   0], [0,  0, 0]]}
- - {name: screen1, type: plane, dimensions: [ 8,  4.5],  placement: [[ 3,  3,   5], [0, 90, 0]]}
- - {name: screen2, type: plane, dimensions: [ 8,  4.5],  placement: [[ 3, 11.5, 5], [0, 90, 0]]}
 
 booleanOps:
  - {name: bldgCut1, op: cut, descr: building central void, base: bldg1a, tool: bldg1b}
