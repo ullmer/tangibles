@@ -51,9 +51,15 @@ class enoFreecad:
         if field not in objY :
           print("enoFreecad addObjectY: no %s found in %s" % (field, objY)); return None
 
-      name, type, dimensions = objY['name'], objY['type'], objY['dimensions']
+      pname, ptype, dimensions = objY['name'], objY['type'], objY['dimensions']
 
-      obj in doc.addObject(
+      if ptype in self.partTypeMap: fcPtype = self.partTypeMap[pttype]
+      else: print("enoFreecad addObjectY: part type %s is presently unknown" % ptype); return None
+
+
+  partTypeMap  = {'box': 'Part::Box', 'plane': 'Part::Plane'}
+
+      obj in doc.addObject(fcPtype, pname
 
 
     except:
