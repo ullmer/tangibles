@@ -20,8 +20,8 @@ yamlFn = basedir + '/scene01.yaml'
 efc    = enoFreecad(yamlFn, doc)
 
 bldgCut1   = App.activeDocument().addObject("Part::Cut", "Bldg central void")
-bldgCut1.Base = bldg1a
-bldgCut1.Tool = bldg1b
+bldgCut1.Base = efc.getObj("bldg1a")
+bldgCut1.Tool = efc.getObj("bldg1b")
 
 doc.recompute()
 

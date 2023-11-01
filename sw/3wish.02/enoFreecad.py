@@ -38,7 +38,7 @@ class enoFreecad:
     if objName not in self.fcObjHandles:
       print("enoFreecad getObj error: object %s not in fcObjHandles" % objName); return None
 
-    result = self.fcObjHandles(objName)
+    result = self.fcObjHandles[objName]
     return result
 
   ################# Add Object ################# 
@@ -72,10 +72,10 @@ class enoFreecad:
 
       pname, ptype, dimensions = objY['name'], objY['type'], objY['dimensions']
 
-      if ptype in self.partTypeMap: fcPtype = self.partTypeMap[pttype]
+      if ptype in self.partTypeMap: fcPtype = self.partTypeMap[ptype]
       else: print("enoFreecad addObjectY: part type %s is presently unknown" % ptype); return None
 
-      obj = self.doc.addObject(fcPtype, pname)
+      obj = self.fcDoc.addObject(fcPtype, pname)
 
       obj.Length = dimensions[0]
       obj.Width  = dimensions[1]
@@ -88,7 +88,7 @@ class enoFreecad:
         tx, ty, tz = objTrans
         rx, ry, rz = objRot
 
-        obj.Placement = Appl.Placement(App.Vector(tx, ty, tz), App.Rotation(rx, ry, rz))
+        obj.Placement = App.Placement(App.Vector(tx, ty, tz), App.Rotation(rx, ry, rz))
       
       self.fcObjHandles[pname] = obj
 
