@@ -45,6 +45,37 @@ def addObj(parent, obj):
 
    return True
 
+################ Get camera, node fields ################ 
+
+#The above two code excerpts are from here:
+#https://forum.freecad.org/viewtopic.php?f=22&t=13198
+
+def getCamera():
+  cam=Gui.ActiveDocument.ActiveView.getCameraNode()
+  return cam
+
+def getNodeFields(node):
+  d=node.getFieldData()
+  result = []
+  for iField in range(0,d.getNumFields()):
+    result.append(d.getFieldName(iField))
+  return result
+
+################ Get camera configuration ################ 
+
+def getCameraConfig():
+  cfields = "viewportMapping position orientation nearDistance farDistance aspectRatio focalDistance heightAngle".split(' ')
+  cdict   = {}
+  cam     = getCamera()
+  for cfield in cfields:
+    fieldObj = cam.getField(cfield)
+    fieldVal = fieldObj.getValue() 
+    if isinstance(fieldVal, SbVec3f): #one more level of indirection necessary
+      fieldVal = fieldVal.getValue()
+    cdict[cfield] = fieldStr
+
+  return cdict
+
 ################ Get Named  Node ################ 
 
 def getNamedNode(parent, name):
