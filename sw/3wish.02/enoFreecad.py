@@ -45,6 +45,16 @@ class enoFreecad:
   ################# Add Object by parsed YAML description ################# 
 
   def addObjectY(self, objY):
+    try:
+      for field in ['name', 'type', 'dimensions']:
+        if field not in objY :
+          print("enoFreecad addObjectY: no %s found in %s" % (field, objY)); return None
+
+      name, type, dimensions = objY['name'], objY['type'], objY['dimensions']
+
+
+    except:
+      print("enoFreecad addObjectY exception:"); traceback.print_exc(); return None
 
  #- {name: bldg1a,  type: box,   dimensions: [28, 28, 3], placement: [[ 0,  0,   0], [0,  0, 0]]}
  #- {name: floor,   type: plane, dimensions: [32, 32],    placement: [[-1, -1,   0], [0,  0, 0]]}
