@@ -1,0 +1,872 @@
+/// Query UI code 
+/// By Brygg Ullmer, MIT Media Lab
+/// Begun April 20, 2001
+///
+/// Based on threading template by Ben Fry (fry@media.mit.edu),
+/// 4/18/2001, and WinHelp Java Tutorial: AnimatorApplication.java,
+/// Arthur van Hoff
+
+import java.util.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.geom.*;
+import javax.swing.*;
+import java.io.*;
+
+///////////////////////////////////////////////////////////
+////////////////////  WRack /////////////////////////////
+///////////////////////////////////////////////////////////
+
+public class WRack extends JComponent
+		     implements Runnable, WRackListener, RfidListener {
+
+/////////////  METHODS ///////////////
+
+// static void main(String args[])
+// public WRack()
+// public run()
+
+//  public void potUpdateOccurred(int whichPot, int whichVal); 
+//  public void switchUpdateOccurred(); 
+//  public int mapTag2Idx (int whichTagVal) 
+
+//  public void updateVenn(int whichCircle, int r, int g, int b)
+//  public void updateVennLabel(int whichCircle, String label) 
+//  public void updateVennTag(int whichCircle, int tagId) 
+
+/////////////  MEMBERS ///////////////
+
+  static JFrame     rootFrame;
+  static JComponent rootComponent;
+
+  Thread animationThread;
+  long startTime, lastTime, currentTime;
+  int  elapsedInterval = 0;
+  double updateRate    = 0.;
+
+  int frameNumber = -1;
+  boolean frozen  = false;
+  boolean damage  = true;
+
+// Text elements
+
+  Font labelFont, label2Font;
+
+  int    labelFontSize    = 16;
+  Color  labelFontColor   = Color.white;
+  String labelFontName    = "Verdana";
+
+  int    label2FontSize    = 12;
+  Color  label2FontColor   = Color.white;
+  String label2FontName    = "Arial Narrow";
+  //String labelFontName    = "Arial Narrow";
+
+// Sample circle element
+
+  //int circDiam       = 40;
+  //int circDiam       = 12;
+  int dotDiam        = 2;
+
+//  int centerCircDiam = 70;
+//  int centerCircDiam = 13;
+  int centerCircDiam = 65;
+
+  int pathRadius = 55;
+  double circAngle  = 0;
+  double dthetaPerSec = 200;
+  int cx = 80, cy = 60;
+
+//  static int winXOrig = 1175, winYOrig = 75;
+  static int winXOrig = 155, winYOrig = 1140;
+
+//  static int panelWidth = 180, panelHeight = 165;
+//  static int panelWidth = 144, panelHeight = 120;
+  static int panelWidth = 154, panelHeight = 129;
+  static int winWidth = 1024, winHeight = 200;
+
+  //Color circColor = new Color(110,50,60);
+  Color circColor = Color.gray;
+
+  RenderingHints qualityHints;
+  boolean antialiasingActive = true; 
+    //Use antialiased text, by default
+
+// State and handles on readers
+
+  int currentCell[] = new int[4];
+  int lastCell[]    = new int[4];
+  //int cellInc = 36;
+  //int cellInc = 36;
+  int cellInc = 39;
+  //int cellOffset = 90;
+  int cellOffset = 110;
+
+
+  double radsPerInc = .02; // .03 is perhaps overly sensitive
+  double lastTagRot[] = new double[10];
+
+  double rotVals[] = new double[4];
+  double rotStartSpin[] = new double[4];
+
+//  double minRot  = -Math.PI/3.;
+//  double maxRot  =  Math.PI/3.;
+
+  double minRot  = -Math.PI/4.;
+  double maxRot  =  Math.PI/4.;
+
+  int potVals[] = new int[4];
+  int potStartSpin[] = new int[4];
+
+  int switchVals[] = new int[16];
+
+  boolean rfPresence[] = new boolean[4];
+  int     rfVals[]     = new int[4];
+  int     lastRfVals[] = new int[4];
+  double  levels[]     = new double[10];
+
+  WRackReader ps_reader = null;
+  RfidReader  rf_reader = null;
+
+  WRServer   wrack_server = null;
+  ParamWheelMgr paramMgr = null;
+
+  DbThread dbthread = null;
+
+  int Venn[][]       = new int[4][3];
+  String VennLabel[] = new String[4];
+
+  int          VennTag[] = new int[4];
+  int          VennSel[] = new int[4];
+  int  currentSelected[] = new int[4];
+
+  String adjacencies = "";
+
+///////////////////////////////////////////////////////////
+////////////////////  BODIES  /////////////////////////////
+///////////////////////////////////////////////////////////
+
+/////////////////  map Tag 2 Idx //////////////////////
+
+  public int mapTag2Idx (int whichTagVal) {
+    if (whichTagVal == 190) {return 1;}
+    if (whichTagVal == 207) {return 2;}
+    if (whichTagVal == 65533) {return 3;}
+    if (whichTagVal == 172) {return 4;}
+    if (whichTagVal == 76) {return 5;}
+    return 0;
+  }
+
+/////////////////  potUpdateOccurred //////////////////////
+
+  public void potUpdateOccurred(int whichPot, int whichVal) {
+
+    potVals[whichPot] = whichVal;
+
+    if (potStartSpin[whichPot] == -1) {
+      potStartSpin[whichPot] = whichVal;
+    }
+
+/*
+    dbg("potUpdateOccurred: " + 
+         whichPot + " pot, " + 
+         whichVal + " val");
+*/
+  }
+
+////////////////// updateAdjacencies //////////////////////
+
+  public void updateAdjacencies(String nadjacencies) {
+
+    if (adjacencies.compareTo(nadjacencies) == 0) { // no change
+      return;
+    }
+
+    adjacencies = nadjacencies;
+
+    wrack_server.setAdjacencies(adjacencies);
+  }
+
+////////////////// updateVenn //////////////////////
+
+  public void updateVenn(int whichCircle, int r, int g, int b) {
+
+    int i = whichCircle;
+
+    if (Venn[i][0] == r && 
+        Venn[i][1] == g &&
+        Venn[i][2] == b) { // everything's up-to-date; nothing to do
+      return;
+    }
+
+    // Cache vals, and dispatch string;
+
+    wrack_server.setCircle(whichCircle, r, g, b);
+
+    Venn[i][0] = r;
+    Venn[i][1] = g;
+    Venn[i][2] = b;
+  }
+
+////////////////// updateVennLabel //////////////////////
+
+  public void updateVennLabel(int whichCircle, String label) {
+
+    int i = whichCircle;
+
+    //dbg("updateVennLabel " + whichCircle + " " + label);
+
+    if (VennLabel[i] == null || label == null) {
+      if (VennLabel[i] == label) {return;} //if they're both null, ignore
+
+    } else if (VennLabel[i].compareTo(label) == 0) { // again, if they're the same, ignore
+      return;
+    }
+
+    // Cache vals, and dispatch string;
+
+    dbg("venn messaeg: " + label);
+
+    wrack_server.setText(whichCircle, label);
+
+    VennLabel[i] = label;
+  }
+
+////////////////// updateVennTag //////////////////////
+
+  public void updateVennTag(int whichCircle, int tagId) {
+
+    int i = whichCircle;
+
+    if (tagId == VennTag[whichCircle]) {
+      return;
+    } 
+
+    wrack_server.setTag(whichCircle, tagId);
+
+    VennTag[i] = tagId;
+  }
+
+////////////////// updateSelVal //////////////////////
+
+  public void updateVennSel(int whichCircle, int selVal) {
+
+    int i = whichCircle;
+
+    if (selVal == VennSel[whichCircle]) {
+      return;
+    } 
+
+    wrack_server.setVal(whichCircle, selVal);
+
+    VennSel[i] = selVal;
+  }
+
+////////////////// switchUpdateOccurred //////////////////////
+
+  int last_sw5_state = 1;
+
+  public void switchUpdateOccurred() {
+
+    dbg("switchUpdateOccurred: switchState " + Integer.toBinaryString(ps_reader.switchState));
+
+//    for (int i=0; i<8; i++) {
+//      dbg("switch " + i + ": " + ps_reader.getSwitchVal(i));
+//    }
+
+    currentCell[3] = 16 - ps_reader.padPos[0]; 
+    currentCell[2] = 16 - ps_reader.padPos[1]; 
+    currentCell[1] = 16 - ps_reader.padPos[2];
+    currentCell[0] = 16 - ps_reader.padPos[3];
+
+//    dbg("actual pos: " + currentCell[0] + " " + currentCell[1]);
+  }
+
+////////////////// rfidUpdateOccurred //////////////////////
+
+  public void rfidUpdateOccurred(int whichCell, 
+     boolean whatState, int whatVal) {
+
+    rfPresence[whichCell] = whatState;
+    lastRfVals[whichCell] = rfVals[whichCell];
+    rfVals[whichCell] = whatVal;
+
+    // Make rotation values "persistent"
+
+
+//INTERESTING JUXTAPOSITION OF IFS, HUH?  (2:45am 5/19)
+
+   if (whatState == true) {
+     updateVennTag(whichCell, whatVal);
+   } else {
+
+     wrack_server.clearCircle(whichCell);
+     updateVennSel(whichCell, 0);
+     updateVennTag(whichCell, 0);
+   }
+
+    if (whatState == false) {
+      int lastVal = lastRfVals[whichCell];
+      int idx     = mapTag2Idx(lastVal);
+      lastTagRot[idx] = rotVals[whichCell];
+
+
+    } else {
+
+      int idx     = mapTag2Idx(whatVal);
+      rotStartSpin[whichCell] = lastTagRot[idx];
+    }
+
+    dbg("rfidUpdateOccurred: " + 
+         whichCell + " cell, " + 
+         whatState + " state, " + 
+         whatVal   + " val");
+  }
+
+////////////////////  QRack /////////////////////////////
+
+  public WRack() {
+
+    // do your app setup stuff here...
+
+    ps_reader = new QRackReader();
+    rf_reader = new RfidReader();
+
+    dbthread = new DbThread("pldb", "tmg-internal.media.mit.edu");
+
+    paramMgr  = new ParamWheelMgr();
+    paramMgr.loadDefaultWheels(dbthread);
+
+    ps_reader.setListener(this);
+    rf_reader.setListener(this);
+
+    wrack_server = new QRackServer();
+    wrack_server.startServer();
+
+    // zero the state
+
+    for (int i=0; i<4; i++) {
+      rotVals[i] = 0.;
+      potStartSpin[i] = -1; 
+      rotStartSpin[i] = 0;
+
+      VennTag[i] = 0;
+      VennSel[i] = -1;
+      currentSelected[i] = -1;
+      rfVals[i] = -1;
+    }
+
+    currentCell[0] = 1; //2
+    lastCell[0]    = 1;
+
+    currentCell[1] = 5; //7
+    lastCell[1]    = 5;
+
+    currentCell[2] = 10; //11 //10 //12
+    lastCell[2]    = 10;
+
+    currentCell[3] = 15; //15 //16
+    lastCell[3]    = 15;
+
+    for (int i=0; i<10; i++) {
+      lastTagRot[i] = 0.;   // rotations associated with tags
+      levels[i] = 0.5;      // levels associated with tags
+    } 
+
+    for (int i=0; i<4; i++) {
+      for (int j=0; j<3; j++) {
+        Venn[i][j] = -1;
+      }
+    }
+
+    // Set crosshair cursor
+    setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
+    labelFont  = new Font(labelFontName, Font.PLAIN, labelFontSize);
+    label2Font = new Font(label2FontName, Font.PLAIN, label2FontSize);
+
+    // ...then start the thread
+    // (make sure you do this after setup, seems obvious,
+    // until you forget and get really confusing inconsistent
+    // problems as your app starts up in stochastically half-
+    // initialized states)
+
+    // Moved the following Fry code to startAnimation
+    //  thread = new Thread(this);
+    //  thread.start();
+  }
+  
+////////////////////  startAnimation /////////////////////////////
+  
+  public void startAnimation() {
+    if (frozen) {
+      //Do nothing.  The user has requested that we
+      //stop changing the image.
+
+    } else {
+      //Start animating!
+      if (animationThread == null) {
+        animationThread = new Thread(this);
+      }
+      animationThread.start();
+    }
+  }
+
+////////////////////  paint /////////////////////////////
+
+  public void paint(Graphics g) {
+
+    // Update timing info
+
+    frameNumber++;
+    lastTime    = currentTime;
+    currentTime = System.currentTimeMillis();
+    elapsedInterval = (int) (currentTime - lastTime);
+
+    if (elapsedInterval != 0) {
+      updateRate = 1000. / (double) elapsedInterval;
+    }
+
+    //Activate antialiasing (in particular, of text)
+
+    Graphics2D h = (Graphics2D) g;
+
+    if (qualityHints != null) {
+       h.setRenderingHints(qualityHints);
+    }
+
+    h.translate(-14,0);
+
+    AffineTransform baseTransform = h.getTransform();
+
+  // Erase screen
+  
+    g.setColor(Color.black);
+    g.clearRect(0, 0, winWidth, winHeight);
+
+  // Paint Boxes
+
+    for (int i=0; i<4; i++) {
+      int x1 = currentCell[i] * cellInc + cellOffset;
+      int y1 = 15;
+
+      int tagnum = -1;
+
+      if (rfVals[i] == -1) { // no one here
+        g.setColor(Color.gray);
+        g.drawRect(x1, y1, panelWidth, panelHeight);
+	continue;
+      } 
+
+      int idx      = mapTag2Idx(rfVals[i]);
+      double level = levels[idx];
+      int c = (int) (256 * level);
+      if (c > 255) {c=255;}
+      if (c < 0)   {c = 0;}
+
+      int tagId = rfVals[i];
+
+      ParamWheel wheel = paramMgr.getId(tagId);
+
+      if (wheel == null) {
+        continue;
+      } 
+
+//      dbg("found tag: " + wheel.paramName);
+
+      int  color[] = wheel.getColor();
+      int nc[] = new int[3];
+
+      for (int j=0; j < 3; j++) {
+        nc[j] = (int) (color[j] * level);
+
+	if (nc[j] < 0)   {nc[j] = 0;}
+	if (nc[j] > 255) {nc[j] = 255;}
+
+      }
+
+      g.setColor(new Color(nc[0], nc[1], nc[2]));
+      updateVenn(i, nc[0], nc[1], nc[2]);
+//      updateVennLabel(i, wheel.paramName);
+//      updateVennTag(i, tagId);
+
+       g.fillRect(x1, y1, panelWidth, panelHeight);
+    }
+    
+
+  // Determine change in theta
+
+    //circAngle += dthetaPerSec * (double) elapsedInterval / 1000.;
+
+  // Draw selectors
+
+    for (int i=0; i < 4; i++) {
+
+      if (rfVals[i] == -1) {continue;}
+      
+      int x1 = (currentCell[i] + 2) * cellInc + cellOffset;
+      int y1 = 50;
+
+      // draw bounding lines
+
+      h.setStroke(new BasicStroke(3));
+
+      h.setTransform(baseTransform);
+      h.translate(x1, y1);
+
+      AffineTransform cellTransform = h.getTransform();
+
+      // calc pointer location
+
+      int dPot = potVals[i] - potStartSpin[i];
+//    rotVals[i] = rotStartSpin[i] + dPot * radsPerInc;
+      rotVals[i] = dPot * radsPerInc;
+
+      int idx      = mapTag2Idx(rfVals[i]);
+      double level = (rotVals[i] * 3 / Math.PI / 2.) + .5;
+      levels[idx] = level;
+
+// back-solve:  minRot = (potVals[i] - potStartSpin[i]) * radsPerInc
+
+      if (rotVals[i] < minRot) {
+        rotVals[i] = minRot;
+	potStartSpin[i] = potVals[i] - (int) (minRot / radsPerInc);
+
+      } else if (rotVals[i] > maxRot) {
+
+        rotVals[i] = maxRot;
+	potStartSpin[i] = potVals[i] - (int) (maxRot / radsPerInc);
+      }
+
+/// discrete routines
+
+     if (rfVals[i] == 172 || rfVals[i] == 76) {
+       paintWheelContinuous(h, i, cellTransform, baseTransform);
+     } else {
+       paintWheelDiscrete(h, i, cellTransform, baseTransform);
+     }
+
+     h.setTransform(cellTransform);
+     h.setColor(Color.white);
+     h.fillOval(-centerCircDiam/2, -centerCircDiam/2 + 6, 
+                 centerCircDiam, centerCircDiam);
+
+   }
+  
+  // Look for "ands"
+    h.setTransform(baseTransform);
+
+    String nadjacencies = "";
+
+    for (int i=0; i<3; i++) {
+      int x1 = (currentCell[i] + 4) * cellInc + cellOffset - 6;
+      if (rfVals[i] == -1 || rfVals[i+1] == -1) {continue;}
+
+      int diff = currentCell[i+1] - currentCell[i];
+
+      if (diff == 4) { // we have an "and"
+        h.setColor(Color.white);
+        g.fillRect(x1, 50, 12, 60);
+
+	nadjacencies += "1";
+      } else {
+	nadjacencies += "0";
+      }
+    }
+
+  //  updateAdjacencies(nadjacencies);
+
+  // Draw framerate
+
+    //g.drawString((int)updateRate + " fps", 5, 450);
+
+  }
+
+////////////////////  paint wheel -- discrete vals /////////////////////////
+
+private void paintWheelDiscrete(Graphics2D h, int wheelNum, 
+          AffineTransform cellTransform, AffineTransform baseTransform) {
+
+      h.rotate(rotVals[wheelNum]); 
+
+      h.setStroke(new BasicStroke(4));
+      h.setColor(new Color(50, 50, 50));
+      h.drawLine(0, -10, 0, 80);
+
+      h.setTransform(cellTransform);
+
+    // bounding lines
+      h.setStroke(new BasicStroke(3));
+
+      h.rotate(minRot); 
+
+      h.setColor(Color.gray);
+      h.drawLine(0, 70, 0, 80);
+
+      h.rotate(maxRot * 2.);
+      h.drawLine(0, 70, 0, 80);
+
+      h.rotate(minRot);
+
+      h.setColor(new Color(50, 50, 50));
+
+      // draw selector dots
+
+      h.rotate(minRot);
+
+      int tagId = rfVals[wheelNum];
+      ParamWheel wheel = paramMgr.getId(tagId);
+
+      double range = (maxRot - minRot);
+
+      if (wheel == null) {
+        dbg("wheel of null size");
+	return;
+      }
+
+      int numDots = wheel.size();
+      double rotInc = range / numDots;
+
+      h.rotate(rotInc/2.);
+      double currentRot = minRot + rotInc/2.;
+
+      for (int j=0; j<numDots; j++) {
+
+        if (Math.abs(rotVals[wheelNum] - currentRot) < (rotInc/2.)) {
+          h.setColor(Color.yellow); 
+          updateVennSel(wheelNum, j);
+
+	  currentSelected[wheelNum] = j;
+	} else {
+          h.setColor(Color.gray); 
+	}
+
+        h.fillOval(-dotDiam/2, -dotDiam/2 + 60, dotDiam, dotDiam);  
+
+           //these will become selectors
+        h.rotate(rotInc);
+	currentRot += rotInc;
+      }
+
+
+  // DRAW TEXT
+
+      h.setFont(labelFont);
+      h.setTransform(baseTransform);
+
+      int x1 = (currentCell[wheelNum] + 4) * cellInc + cellOffset - 15;
+      int y1 = 120;
+
+      h.translate(x1, y1);
+      h.rotate(Math.PI); //rotate by 180 degres
+
+      //String label = wheel.paramName + " (" + wheel.size() + ")";
+      String label = wheel.paramName;
+
+      h.setColor(Color.white);
+      h.drawString(label, -8, +3);
+
+      // SHOW PARAM VAL
+
+      String value = wheel.getVal(currentSelected[wheelNum]);
+
+      if (value.length() > 20) {
+        value = value.substring(0, 14);
+      }
+
+      h.setFont(label2Font);
+      int width =  h.getFontMetrics().stringWidth(value);
+
+      h.drawString(value, 140 - width, 3);
+
+    }
+
+////////////////////  paint wheel -- continuous vals /////////////////////////
+
+private void paintWheelContinuous(Graphics2D h, int wheelNum, 
+          AffineTransform cellTransform, AffineTransform baseTransform) {
+
+      int tagId = rfVals[wheelNum];
+      ParamWheel wheel = paramMgr.getId(tagId);
+
+      h.rotate(rotVals[wheelNum]); 
+
+      h.setStroke(new BasicStroke(4));
+      h.setColor(new Color(50, 50, 50));
+      h.drawLine(0, -10, 0, 80);
+
+      h.setTransform(cellTransform);
+
+  // bounding lines
+
+      h.setStroke(new BasicStroke(3));
+
+      h.rotate(minRot); 
+
+      h.setColor(Color.gray);
+      h.drawLine(0, 70, 0, 80);
+
+      h.rotate(maxRot * 2.);
+      h.drawLine(0, 70, 0, 80);
+
+      h.rotate(minRot);
+
+      h.setColor(new Color(50, 50, 50));
+
+  // baseArc
+
+      h.setTransform(cellTransform);
+
+      h.setStroke(new BasicStroke(2));
+      h.setColor(new Color(90, 90, 90));
+
+      int diam = centerCircDiam + 55;
+
+      int arcBegin = (int) (minRot * 180. / Math.PI) - 90 - 3;
+      int arcFull  = (int) ((maxRot - minRot) * 180. / Math.PI) + 6;
+
+      h.drawArc (-diam/2, -diam/2+6, diam, diam, arcBegin, arcFull);
+
+  // selected arc
+
+      h.setStroke(new BasicStroke(3));
+      h.setColor(Color.yellow);
+
+      double ratio = (rotVals[wheelNum] - minRot) / (maxRot - minRot);
+	 
+
+      int selectedArc = (int) (ratio * arcFull * -1);	 
+	     
+      h.drawArc (-diam/2, -diam/2+6, diam, diam, 
+                  arcBegin + arcFull, selectedArc);
+
+  // DRAW TEXT
+
+      h.setFont(labelFont);
+      h.setTransform(baseTransform);
+
+      int x1 = (currentCell[wheelNum] + 4) * cellInc + cellOffset - 15;
+      int y1 = 120;
+
+      h.translate(x1, y1);
+      h.rotate(Math.PI); //rotate by 180 degres
+
+      //String label = wheel.paramName + " (" + wheel.size() + ")";
+
+      String label = "";
+
+      if (wheel != null) {
+        label = wheel.paramName;
+      } 
+
+      h.setColor(Color.white);
+      h.drawString(label, -8, +3);
+
+      // SHOW PARAM VAL
+
+//      String value = wheel.getVal(currentSelected[wheelNum]);
+
+      String value = Double.toString(Math.round(ratio * 100)/100.) + "  ";
+
+      if (value.length() > 20) {
+        value = value.substring(0, 14);
+      }
+
+      h.setFont(label2Font);
+      int width =  h.getFontMetrics().stringWidth(value);
+
+      h.drawString(value, 140 - width, 3);
+
+    }
+
+////////////////////  Run /////////////////////////////
+
+  // this gets kicked on by start()
+  public void run() {
+
+    //Remember the starting time.
+    startTime   = System.currentTimeMillis();
+    lastTime    = startTime;
+    currentTime = startTime;
+
+    if (antialiasingActive) {
+       qualityHints = new RenderingHints(
+          RenderingHints.KEY_ANTIALIASING, 
+	  RenderingHints.VALUE_ANTIALIAS_ON);
+
+       qualityHints.put(RenderingHints.KEY_RENDERING,
+                        RenderingHints.VALUE_RENDER_QUALITY);
+    }
+
+    // loop until app death
+    while (Thread.currentThread() == animationThread) {
+
+
+      // do some fancy animation stuff...
+
+         repaint(); //Reconsider in favor of BufferedImage?
+
+      // ...then blit it to the screen
+      // using BufferedImage or whatever
+
+      try {  // let the OS and the GC do their things
+	Thread.sleep(5);
+      } catch (InterruptedException e) { }
+
+      // the exception isn't important, it's only called if
+      // the thread is awakened by some other process
+    }
+  }
+
+////////////////////  Main /////////////////////////////
+
+  static public void main(String args[]) {
+
+  // start up rack monitor
+
+    // QRackTest rackTest = new QRackTest();
+    // RfidTest  rfidTest = new RfidTest();
+
+  // light it up
+
+    QRack queryUI = null;
+    queryUI = new QRack();
+
+    rootFrame = new JFrame("Query UI");
+    rootComponent = queryUI;
+
+    //queryUI.setSize(panelWidth, panelHeight);
+    queryUI.setSize(winWidth, winHeight);
+
+    rootFrame.setContentPane(rootComponent);
+
+    rootFrame.addWindowListener(new WindowAdapter() {
+      public void windowClosing(WindowEvent e) {
+        System.exit(0);
+      }
+    });
+
+    rootFrame.pack();
+    rootFrame.setSize(winWidth, winHeight);
+
+    rootFrame.setBounds(winXOrig, winYOrig, winWidth, winHeight);
+
+
+    rootFrame.setVisible(true);
+
+    rootFrame.setBackground(Color.black);
+    rootFrame.setForeground(Color.gray);
+
+    queryUI.startAnimation();
+  }
+
+ ///////////////////// Debug ///////////////////////
+
+  public static int dcnt;
+
+  public void dbg(String s) {
+
+    System.out.println("QRack." + (dcnt++) + ": " + s);
+  } 
+}
+
+//// END ////
+
