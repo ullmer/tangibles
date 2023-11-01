@@ -76,6 +76,24 @@ def getCameraConfig():
 
   return cdict
 
+#camera: {viewportMapping: 3,  position: [28.4, 12.3,  12.8], focalDistance: 31.1, heightAngle: 0.785,
+#         aspectRatio: 1.0, orientation: [0.335, 0.316, 0.628, 0.627], nearDistance: 2.1, farDistance: 33.6}
+
+#camera: {'viewportMapping': 3,  'position': [28.4, 12.3,  12.8], 'focalDistance': 31.1, 'heightAngle': 0.785,
+#         'aspectRatio': 1.0, 'orientation': [0.335, 0.316, 0.628, 0.627], 'nearDistance': 2.1, 'farDistance': 33.6}
+
+################ set camera configuration ################ 
+
+def setCameraConfig(cameraDict):
+  try:
+    cam = getCamera()
+    for cfield in cameraDict:
+      val      = cameraDict[cfield]
+      fieldObj = cam.getField(cfield)
+      fieldObj.setValue(val)
+  except:
+    print("setCameraConfig exception:"); traceback.print_exc(); return None
+
 ################ Get Named  Node ################ 
 
 def getNamedNode(parent, name):
