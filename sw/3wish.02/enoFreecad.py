@@ -5,7 +5,7 @@
 import FreeCAD as App
 import FreeCADGui as Gui
 import pivy.coin as coin
-import yaml
+import yaml, traceback
 
 ##################### Enodia FreeCAD support objects ##################### 
 
@@ -29,9 +29,21 @@ class enoFreecad:
 
     if yamlFn is not None: self.loadYaml(yamlFn)
 
+  ############# getObj #############
+
+  def getObj(self, objName):
+    if self.fcObjHandles is None:
+      print("enoFreecad getObj error: fcObjHandles is None"); return None
+
+    if objName not in self.fcObjHandles:
+      print("enoFreecad getObj error: object %s not in fcObjHandles" % objName); return None
+
+    result = self.fcObjHandles(objName)
+    return result
+
   ################# Add Object ################# 
 
-  def parseYaml(self, yamlFn):
+  def loadYaml(self, yamlFn):
     try:
       self.yamlFn = yamlFn
       f           = open(yamlFn, 'rt')
