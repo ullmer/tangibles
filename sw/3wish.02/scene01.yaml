@@ -12,5 +12,8 @@ scene:
 booleanOps:
  - {name: bldgCut1, op: cut, descr: building central void, base: bldg1a, tool: bldg1b}
 
+camera: {viewportMapping: 3,  position: [28.4, 12.3, 12.8], focalDistance: 31.1, heightAngle: 0.785,
+         aspectRatio: 1.0, orientation: [0.335, 0.316, 0.628, 0.627], nearDistance: 2.1, farDistance: 33.6}
+
 ### end ###
 
