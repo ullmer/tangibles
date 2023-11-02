@@ -221,6 +221,17 @@ def getNObj(root, name):
   node = getNamedNode(root, name)
   return node
 
+################ Get Named Obj ################ 
+# Get Inventor scene graph contents associated with a name
+
+def writeObj(node, fn):
+  out = coin.SoOutput()
+  out.openFile(fn) #output.setBuffer( #still deciphering SWIG mapping
+  wa = coin.SoWriteAction(out)
+  wa.apply(node)
+  wa.getOutput().closeFile()
+  #out.close()
+
 ################# Get Parent Frame ################ 
 ## Used by addNFrame and addNObj to get parent node
 

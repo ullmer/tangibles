@@ -36,9 +36,19 @@ s1Node = s1.ViewObject.RootNode
 s1NodeChildren = s1Node.getChildren()
 s1ncLen = s1NodeChildren.getLength()
 print(s1ncLen)
-n0 = s1NodeChildren.get(0)
+#n0 = s1NodeChildren.get(0)
+nodeSwitch = s1NodeChildren.get(2)
+
+outFn = basedir + "/test.iv"
+writeObj(nodeSwitch, outFn)
+print("saved", outFn)
+
+#nsChildren = nodeSwitch.getChildren()
+#nss1 = nsChildren.get(0)
+#nct = nss1.getClassTypeId().getName()
+#print(nct)
 #print(dir(n0))
-print(n0.getClassTypeId().getName())
+#print(n0.getClassTypeId().getName())
 
 pygame.midi.init()
 
