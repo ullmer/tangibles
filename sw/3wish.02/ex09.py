@@ -5,9 +5,7 @@
 import FreeCAD as App
 import FreeCADGui as Gui
 import pivy.coin as coin
-import sys
-import pygame as pg
-import pygame.midi
+import sys, traceback
 
 basedir = 'c:/git/tangibles/sw/3wish.02'
 sys.path.append(basedir)
@@ -50,25 +48,31 @@ print("saved", outFn)
 #print(dir(n0))
 #print(n0.getClassTypeId().getName())
 
-pygame.midi.init()
-
-############ update midi ############
-
-def updateMidi(arg1, arg2):
+try:
+  import pygame as pg
+  import pygame.midi
+  pygame.midi.init()
+  
+  ############ update midi ############
+  
+  def updateMidi(arg1, arg2):
+    global midiIn
+    e = midiIn.read(100); 
+    if len(e) > 2: 
+       events = e[1:]
+       #print(e)
+       print(len(events), events)
+       for event in e[1]: print("event:", event)
+  
   global midiIn
-  e = midiIn.read(100); 
-  if len(e) > 2: 
-     events = e[1:]
-     #print(e)
-     print(len(events), events)
-     #for event in e[1]
-
-global midiIn
-midiIn = pygame.midi.Input(1)
-
-e = midiIn.read(100); print(e)
-
-ts = coin.SoTimerSensor(updateMidi, 0)
-ts.schedule()
-
+  midiIn = pygame.midi.Input(1)
+  
+  e = midiIn.read(100); print(e)
+  
+  ts = coin.SoTimerSensor(updateMidi, 0)
+  ts.schedule()
+except:
+  print("error with pygame/midi functionality:")
+  traceback.print_exc()
+  
 ### end ###
