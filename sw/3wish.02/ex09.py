@@ -24,6 +24,7 @@ bldgCut1.Base = efc.getObj("bldg1a")
 bldgCut1.Tool = efc.getObj("bldg1b")
 
 doc.recompute()
+Gui.runCommand('Std_CloseActiveWindow',0) #no idea why currently necessary; will later remove
 
 cc = efc.getCameraConfig("pos1")
 setCameraConfig(cc)
