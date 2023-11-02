@@ -25,7 +25,8 @@ bldgCut1.Tool = efc.getObj("bldg1b")
 
 doc.recompute()
 
-setCameraconfig(efc.getCameraConfig("cam1"))
+cc = efc.getCameraConfig("cam1")
+setCameraConfig(cc)
 
 pygame.midi.init()
 
