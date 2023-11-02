@@ -29,6 +29,11 @@ Gui.runCommand('Std_CloseActiveWindow',0) #no idea why currently necessary; will
 cc = efc.getCameraConfig("pos1")
 setCameraConfig(cc)
 
+s1 = efc.getObj("screen1")
+print(dir(s1))
+print("FOO")
+print(dir(s1.ViewObject.RootNode))
+
 pygame.midi.init()
 
 ############ update midi ############
