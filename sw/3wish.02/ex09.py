@@ -32,7 +32,13 @@ setCameraConfig(cc)
 s1 = efc.getObj("screen1")
 print(dir(s1))
 print("FOO")
-print(dir(s1.ViewObject.RootNode))
+s1Node = s1.ViewObject.RootNode
+s1NodeChildren = s1Node.getChildren()
+s1ncLen = s1NodeChildren.getLength()
+print(s1ncLen)
+n0 = s1NodeChildren.get(0)
+#print(dir(n0))
+print(n0.getClassTypeId().getName())
 
 pygame.midi.init()
 
