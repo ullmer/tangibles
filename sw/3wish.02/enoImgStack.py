@@ -3,9 +3,18 @@
 # Originally written March 4, 1996
 # Python port begun 2023-11-02
 
+import FreeCAD as App
+import FreeCADGui as Gui
+import pivy.coin as coin
+import traceback
+
 ########################## Texture Plane ###########################
 
 class enoTexturePlane:
+
+  textureName = None
+  textureSize = None
+  coords      = None
 
   ############# constructor #############
 
@@ -13,14 +22,19 @@ class enoTexturePlane:
     #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
+  ############# assert Iv #############
 
+  def assertIv(self, orient='xz'):
+    if self.textureName is None: print("enoTexturePlane assertIv: textureName is empty"); return None
 
-  method assertIv {{orient xz}} {
-    if {$texture_name == {}} {return} ;#default args don't work
+    hx, hy = textureSize[0]/2., textureSize[1]/2.
 
-    set hx [expr [lindex $texture_size 0] / 2.] ;#half x dim
-    set hy [expr [lindex $texture_size 1] / 2.] ;#half y dim
-
+    match orient:
+      case 'xz':
+        self.coords = coin.Coordinate3()
+        self.coords.point = [[-hx, 0, hy]
+      case 'xy':
+    
     switch $orient {
 
       xz { set coords [format {
