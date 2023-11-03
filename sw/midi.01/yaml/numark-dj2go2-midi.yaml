@@ -1,0 +1,103 @@
+#MixxxMIDIPreset:
+mmpController:
+  info:
+    name:   Numark DJ2Go2
+    author: initial by Alimantado, mod by Coval, reinterp for dj2go2 by Ullmer
+    description: 11-Sep-2012. Made to be close as possible to how DJ2Go works with VDJ.
+    forums: >-
+      http://www.mixxx.org/forums/viewtopic.php?f=7&amp;t=2732&amp;start=140&amp;sid=da4226f3f9a11932881d0e609ee7f2cc
+    manual: numark_dj2go2
+    source: https://github.com/mixxxdj/mixxx/blob/main/res/controllers/Numark%20DJ2Go.midi.xml
+  controller:
+    scriptfiles: {file: ''}
+    controls:
+      control:
+        - {group: '[]',  key: shift1,        status: 176, midino:  9}
+        - {group: '[]',  key: sync1Press,    status: 144, midino:  2}
+        - {group: '[]',  key: sync1Release,  status: 128, midino:  2}
+        - {group: '[]',  key: cue1Press,     status: 144, midino:  1}
+        - {group: '[]',  key: cue1Release,   status: 128, midino:  1} 
+        - {group: '[]',  key: play1Press,    status: 144, midino:  0}
+        - {group: '[]',  key: play1Release,  status: 128, midino:  0}
+        - {group: '[]',  key: wheel1,        status: 176, midino:  6}
+        - {group: '[]',  key: wheel1Touch,   status: 144, midino:  6}
+        - {group: '[]',  key: wheel2Release, status: 128, midino:  6}
+        - {group: '[]',  key: shift2,        status: 177, midino:  9} 
+        - {group: '[]',  key: volume0,       status: 191, midino: 10}
+        - {group: '[]',  key: volume1,       status: 176, midino: 22}
+        - {group: '[]',  key: volume2,       status: 177, midino: 22}
+        - {group: '[]',  key: volume4,       status: 191, midino: 12}
+        - {group: '[]',  key: sync2Press,    status: 145, midino:  2}
+        - {group: '[]',  key: sync2Release,  status: 129, midino:  2}
+        - {group: '[]',  key: cue2Press,     status: 145, midino:  1}
+        - {group: '[]',  key: cue2Release,   status: 129, midino:  1}
+        - {group: '[]',  key: play2Press,    status: 145, midino:  0}
+        - {group: '[]',  key: play2Release,  status: 129, midino:  0}
+        - {group: '[]',  key: wheel2,        status: 177, midino:  6}
+        - {group: '[]',  key: wheel2Touch,   status: 145, midino:  6}
+        - {group: '[]',  key: wheel2Release, status: 129, midino:  6}
+        - {group: '[]',  key: fade,          status: 191, midino:  8}
+        - {group: '[]',  key: browseWheel,   status: 191, midino:  0}
+
+        - {group: '[]',  key: padLA1Press,   status: 148, midino:  1}
+        - {group: '[]',  key: padLA1Release, status: 132, midino:  1}
+        - {group: '[]',  key: padLA2Press,   status: 148, midino:  2}
+        - {group: '[]',  key: padLA2Release, status: 132, midino:  2}
+        - {group: '[]',  key: padLA3Press,   status: 148, midino:  3}
+        - {group: '[]',  key: padLA3Release, status: 132, midino:  3}
+        - {group: '[]',  key: padLA4Press,   status: 148, midino:  4}
+        - {group: '[]',  key: padLA4Release, status: 132, midino:  4}
+
+        - {group: '[]',  key: padRA1Press,   status: 149, midino:  1}
+        - {group: '[]',  key: padRA1Release, status: 133, midino:  1}
+        - {group: '[]',  key: padRA2Press,   status: 149, midino:  2}
+        - {group: '[]',  key: padRA2Release, status: 133, midino:  2}
+        - {group: '[]',  key: padRA3Press,   status: 149, midino:  3}
+        - {group: '[]',  key: padRA3Release, status: 133, midino:  3}
+        - {group: '[]',  key: padRA4Press,   status: 149, midino:  4}
+        - {group: '[]',  key: padRA4Release, status: 133, midino:  4}
+
+        - {group: '[]',  key: load1Press,    status: 159, midino:  2}
+        - {group: '[]',  key: load1Release,  status: 143, midino:  2}
+        - {group: '[]',  key: load2Press,    status: 159, midino:  3}
+        - {group: '[]',  key: load2Release,  status: 143, midino:  3}
+
+        - {group: '[]',  key: padmodePress,     status: 148, midino:  0}
+        - {group: '[]',  key: padmodeRelease,   status: 149, midino:  0}
+        - {group: '[]',  key: padmode0Press,    status: 132, midino:  0}
+        - {group: '[]',  key: padmode0Release,  status: 133, midino:  0}
+
+        - {group: '[]',  key: headphLToggleOn,  status: 144, midino: 27}
+        - {group: '[]',  key: headphLToggleOff, status: 128, midino: 27}
+        - {group: '[]',  key: headphRToggleOn,  status: 145, midino: 27}
+        - {group: '[]',  key: headphRToggleOff, status: 129, midino: 27}
+
+    interactors:
+      aliased: 
+        buttons: [bBL1, bBL2, bBL3,  bL1, bL2, bL_A1, bL_A2, bL_A3, bL_A4, 
+                  bBR1, bBR2, bBR3,  bR1, bR2, bR_A1, bR_A2, bR_A3, bR_A4, 
+                  bC]
+
+        sliders:    [ sL,  sR, sM]
+        wheels:     [ wL,  wR, wM]
+        wheelTouch: [twL, twR] 
+        knobs:      [kL1, KL2, 
+                     kR1, kR2]
+
+      aliases: {bBL1: [sync1Press, sync1Release],        bBL2: [cue1Press,   cue1Release], bBL3: [play1Press, play1Release],
+                bBR1: [sync2Press, sync1Release],        bBR2: [cue2Press,   cue2Release], bBR3: [play2Press, play2Release],
+                bL1: [headphLToggleOn, headphLToggleOff], bL2: [load1Press, load1Release],
+                bR1: [headphRToggleOn, headphRToggleOff], bR2: [load2Press, load2Release],
+
+                bL_A1: [padLA1Press, padLA1Release], bL_A2: [padLA2Press, padLA2Release],
+                bL_A3: [padLA3Press, padLA3Release], bL_A2: [padLA4Press, padLA4Release],
+                bR_A1: [padRA1Press, padRA1Release], bR_A2: [padRA2Press, padRA2Release],
+                bR_A3: [padRA3Press, padRA3Release], bR_A2: [padRA4Press, padRA4Release],
+
+                sL: shift1, sR, shift2, sM: fade,
+                wL: wheel1, wR: wheel2, wM: browseWheel,
+                twL: [wheel1Touch, wheel1Release], twR: [wheel2Touch, wheel2Release]}
+
+    outputs: ''
+
+### end ###
