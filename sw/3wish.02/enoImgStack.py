@@ -1,21 +1,10 @@
-#!3wish
 # Stack of Image objects
-# Brygg Ullmer, MIT Media Lab VLW/TMG
-# March 4, 1996
-
-#Change to net-sources off of true names (through proxy-structures)
-
-global __STACK__
-if {[info exists __STACK_]} {return}
-set __STACK__ 1
-
-
-#set host "~ullmer/pb/code/desk.1"
-set host "."
+# Brygg Ullmer: initially MIT Media Lab VLW/TMG, presently Clemson University
+# Originally written March 4, 1996
+# Python port begun 2023-11-02
 
 source "$host/base.tcl"
 source "$host/libiv.tcl"
-#source "$host/text.tcl"
 
 ########################## Texture Plane ###########################
 
