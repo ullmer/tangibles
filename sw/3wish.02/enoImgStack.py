@@ -3,18 +3,17 @@
 # Originally written March 4, 1996
 # Python port begun 2023-11-02
 
-source "$host/base.tcl"
-source "$host/libiv.tcl"
-
 ########################## Texture Plane ###########################
 
-itcl_class texture_plane {
+class enoTexturePlane:
 
-  inherit IvObj
+  ############# constructor #############
 
-  constructor {config} {
-    set members [concat $members $local_members]
-  }
+  def __init__(self, **kwargs):
+    #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+
+
 
   method assertIv {{orient xz}} {
     if {$texture_name == {}} {return} ;#default args don't work
