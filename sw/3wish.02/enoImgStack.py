@@ -38,10 +38,8 @@ class enoTexturePlane:
       tcv = self.vertexProperty.vertex
 
       case 'xz':
-        tcv.set1Value(0, coin.SbVec3f(-hx, 0, hy))
-        tcv.set1Value(1, coin.SbVec3f( hx, 0, hy))
-        tcv.set1Value(2, coin.SbVec3f( hx, 0,-hy))
-        tcv.set1Value(3, coin.SbVec3f(-hx, 0,-hy))
+        tcv.set1Value(0, coin.SbVec3f(-hx, 0, hy)); tcv.set1Value(1, coin.SbVec3f( hx, 0, hy))
+        tcv.set1Value(2, coin.SbVec3f( hx, 0,-hy)); tcv.set1Value(3, coin.SbVec3f(-hx, 0,-hy))
         self.vertexProperty.normal.set1Value(0, coin.SbVec3f(0,1,0))
 
         #contemplated below, but opted back for above
@@ -49,10 +47,8 @@ class enoTexturePlane:
         #  x,y,z = coord; tcv.set1Value(idx, coin.SbVec3f(x,y,z)); idx += 1
 
       case 'xy':
-        tcv.set1Value(0, coin.SbVec3f(-hx, hy, 0))
-        tcv.set1Value(1, coin.SbVec3f( hx, hy, 0))
-        tcv.set1Value(2, coin.SbVec3f( hx,-hy, 0))
-        tcv.set1Value(3, coin.SbVec3f(-hx,-hy, 0))
+        tcv.set1Value(0, coin.SbVec3f(-hx, hy, 0)); tcv.set1Value(1, coin.SbVec3f( hx, hy, 0))
+        tcv.set1Value(2, coin.SbVec3f( hx,-hy, 0)); tcv.set1Value(3, coin.SbVec3f(-hx,-hy, 0))
         self.vertexProperty.normal.set1Value(0, coin.SbVec3f(0,0,1))
 
     tpn = self.texturedPlaneNode = coin.SoSeparator()
