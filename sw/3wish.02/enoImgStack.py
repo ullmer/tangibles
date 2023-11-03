@@ -12,9 +12,9 @@ import traceback
 
 class enoTexturePlane:
 
-  textureName = None
-  textureSize = None
-  coords      = None
+  textureName   = None
+  textureSize   = None
+  textureCoords = None
 
   ############# constructor #############
 
@@ -29,20 +29,21 @@ class enoTexturePlane:
 
     hx, hy = textureSize[0]/2., textureSize[1]/2.
 
-    match orient:
-      case 'xz':
-        self.coords = coin.Coordinate3()
-        self.coords.point = [[-hx, 0, hy]
-      case 'xy':
-    
-    switch $orient {
+    #see https://github.com/coin3d/pivy/blob/master/examples/Mentor/07.2.TextureCoordinates.py
 
-      xz { set coords [format {
-	     Coordinate3 -point {[-%s 0  %s,  %s 0  %s, 
-				   %s 0 -%s, -%s 0 -%s, -%s 0 %s]}
-	     } $hx $hy $hx $hy $hx $hy $hx $hy $hx $hy]
-	   set normal {0 1 0}
-	 }
+    match orient:
+      self.textureCoords = coin.SoVertexProperty() 
+      tcv = self.textureCoords.vertex
+
+      case 'xz':
+        tcv.set1Value(0, coin.SbVec3f(-hx, 0, hy))
+        tcv.set1Value(1, coin.SbVec3f( hx, 0, hy))
+        tcv.set1Value(2, coin.SbVec3f( hx, 0,-hy))
+        tcv.set1Value(3, coin.SbVec3f(-hx, 0,-hy))
+        self.textureCoords.normal.set1Value(0, coin.SbVec3f(0,1,0))
+
+      case 'xy':
+        tcv.set1Value(0, coin.SbVec3f(-hx, 0, hy))
 
       xy { set coords [format {
 	     Coordinate3 -point {[-%s  %s 0,  %s  %s 0, 
