@@ -26,7 +26,7 @@ class enoTexturePlane:
 
   ############# assert Iv #############
 
-  def assertIv(self, orient='xz'):
+  def assertTexturePlaneIv(self, textureImgFn, orient='xz'):
     if self.textureName is None: print("enoTexturePlane assertIv: textureName is empty"); return None
 
     hx, hy = textureSize[0]/2., textureSize[1]/2.
@@ -55,9 +55,15 @@ class enoTexturePlane:
         tcv.set1Value(3, coin.SbVec3f(-hx,-hy, 0))
         self.vertexProperty.normal.set1Value(0, coin.SbVec3f(0,0,1))
 
-    self.texturedPlaneNode = coin.SoSeparator()
-    tc = self.textureCoord = coin.TextureCoordinate2()
-    tc.set1Value(0, coin.SbVec2f(1, 1))
+    tpn = self.texturedPlaneNode = coin.SoSeparator()
+    tc  = self.textureCoord      = coin.TextureCoordinate2()
+    tc.set1Value(0, coin.SbVec2f(1, 1)); tc.set1Value(1, coin.SbVec2f(0, 1))
+    tc.set1Value(2, coin.SbVec2f(0, 0)); tc.set1Value(3, coin.SbVec2f(1, 0))
+
+    t2  = self.texture2 = coin.SoTexture2(); 
+    t2.filename.setValue(textureImgFn); t2.model.setValue('DECAL')
+
+    for el in [tc, t2, nb, n, coords, faceset]: tpn.addChild(el)
 
     # generate a textured plane of the right size in the XZ plane
     addObjs [format {
