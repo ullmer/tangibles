@@ -43,16 +43,13 @@ class enoTexturePlane:
         self.textureCoords.normal.set1Value(0, coin.SbVec3f(0,1,0))
 
       case 'xy':
-        tcv.set1Value(0, coin.SbVec3f(-hx, 0, hy))
+        tcv.set1Value(0, coin.SbVec3f(-hx, hy, 0))
+        tcv.set1Value(1, coin.SbVec3f( hx, hy, 0))
+        tcv.set1Value(2, coin.SbVec3f( hx,-hy, 0))
+        tcv.set1Value(3, coin.SbVec3f(-hx,-hy, 0))
+        self.textureCoords.normal.set1Value(0, coin.SbVec3f(0,0,1))
 
-      xy { set coords [format {
-	     Coordinate3 -point {[-%s  %s 0,  %s  %s 0, 
-				   %s -%s 0, -%s -%s 0, -%s %s 0]}
-	     } $hx $hy $hx $hy $hx $hy $hx $hy $hx $hy]
-	   set normal {0 0 1}
-	 }
-    }
-    # spit out a textured plane of the right size in the x-z plane
+    # generate a textured plane of the right size in the XZ plane
     addObjs [format {
 	     {TextureCoordinate2 -point {[1 1, 0 1, 0 0, 1 0]}}
 	     {Texture2 -filename %s -model DECAL}
