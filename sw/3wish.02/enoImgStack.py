@@ -12,9 +12,11 @@ import traceback
 
 class enoTexturePlane:
 
-  textureName   = None
-  textureSize   = None
-  textureCoords = None
+  textureName       = None
+  textureSize       = None
+  textureCoord      = None
+  vertexProperty    = None
+  texturedPlaneNode = None
 
   ############# constructor #############
 
@@ -32,25 +34,35 @@ class enoTexturePlane:
     #see https://github.com/coin3d/pivy/blob/master/examples/Mentor/07.2.TextureCoordinates.py
 
     match orient:
-      self.textureCoords = coin.SoVertexProperty() 
-      tcv = self.textureCoords.vertex
+      self.vertexProperty = coin.SoVertexProperty() 
+      tcv = self.vertexProperty.vertex
 
       case 'xz':
         tcv.set1Value(0, coin.SbVec3f(-hx, 0, hy))
         tcv.set1Value(1, coin.SbVec3f( hx, 0, hy))
         tcv.set1Value(2, coin.SbVec3f( hx, 0,-hy))
         tcv.set1Value(3, coin.SbVec3f(-hx, 0,-hy))
-        self.textureCoords.normal.set1Value(0, coin.SbVec3f(0,1,0))
+        self.vertexProperty.normal.set1Value(0, coin.SbVec3f(0,1,0))
+
+        #contemplated below, but opted back for above
+        #for coord in [[-hx, 0, hy], [hx, 0, hy] [hx, 0, -hy], [-hx, 0, -hy]]:
+        #  x,y,z = coord; tcv.set1Value(idx, coin.SbVec3f(x,y,z)); idx += 1
 
       case 'xy':
         tcv.set1Value(0, coin.SbVec3f(-hx, hy, 0))
         tcv.set1Value(1, coin.SbVec3f( hx, hy, 0))
         tcv.set1Value(2, coin.SbVec3f( hx,-hy, 0))
         tcv.set1Value(3, coin.SbVec3f(-hx,-hy, 0))
-        self.textureCoords.normal.set1Value(0, coin.SbVec3f(0,0,1))
+        self.vertexProperty.normal.set1Value(0, coin.SbVec3f(0,0,1))
+
+    self.texturedPlaneNode = coin.SoSeparator()
+    tc = self.textureCoord = coin.TextureCoordinate2()
+    tc.set1Value(0, coin.SbVec2f(1, 1))
 
     # generate a textured plane of the right size in the XZ plane
     addObjs [format {
+
+    
 	     {TextureCoordinate2 -point {[1 1, 0 1, 0 0, 1 0]}}
 	     {Texture2 -filename %s -model DECAL}
 	     {NormalBinding -value PER_FACE}
