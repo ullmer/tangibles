@@ -11,9 +11,6 @@ import traceback
 ########################## Texture Plane ###########################
 
 class enoTexturePlane:
-        self.setValues3(tcv, [-hx,0,hy], [hx,0,hy], [hx,0,-hy], [-hx,0,-hy])
-        tcv.set1Value(0, coin.SbVec3f(-hx, 0, hy)); tcv.set1Value(1, coin.SbVec3f( hx, 0, hy))
-
   textureName       = None
   textureSize       = None
   textureCoord      = None
@@ -110,13 +107,16 @@ class enoTexturePlane:
 
 ########################## Texture Stack ###########################
 
-itcl_class texture_stack {
+class enoTextureStack:
 
-  inherit IvObj
+  textureNames  = None
+  textureSize   = [0,0]
+  img_offset    = [0,2,0]
+  diffuseColor  = (1,1,1)
+  lastHighlight = None
+  highlights    = [.7, .2]
+  popout        = 1
 
-  constructor {config} {
-    set members [concat $members $local_members]
-  }
 
   method assertIv {{orient xz}} {
     if {$texture_names == {}} {return} ;#default args don't work
@@ -161,13 +161,4 @@ itcl_class texture_stack {
   public local_members {texture_names texture_size img_offset 
       last_highlighted highlights color popout}
 
-  public texture_names {}
-  public texture_size {0 0}
-  public img_offset {0 2 0}
-  public color {1 1 1}
-
-  public last_highlighted {}
-  public highlights {.7 .2}
-  public popout {1}
-}
 
