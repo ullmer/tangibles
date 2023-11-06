@@ -11,6 +11,8 @@ import traceback
 ########################## Texture Plane ###########################
 
 class enoTexturePlane:
+        self.setValues3(tcv, [-hx,0,hy], [hx,0,hy], [hx,0,-hy], [-hx,0,-hy])
+        tcv.set1Value(0, coin.SbVec3f(-hx, 0, hy)); tcv.set1Value(1, coin.SbVec3f( hx, 0, hy))
 
   textureName       = None
   textureSize       = None
@@ -23,6 +25,30 @@ class enoTexturePlane:
   def __init__(self, **kwargs):
     #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+
+  ############# setValues3 #############
+
+  def setValues3(self, target, values):  #likely migrate to a parent class
+    try:
+      idx = 0
+      for value in values:
+        x,y,z=value
+        target.set1Value(idx, coin.SbVec3f(x,y,z))
+	idx += 1
+    except:
+      print("setvalues3 exception:"); traceback.print_exc()
+  
+  ############# setValues2 #############
+
+  def setValues2(self, target, values):  #likely migrate to a parent class
+    try:
+      idx = 0
+      for value in values:
+        x,y=value
+        target.set1Value(idx, coin.SbVec2f(x,y))
+	idx += 1
+    except:
+      print("setvalues2 exception:"); traceback.print_exc()
 
   ############# assert Iv #############
 
@@ -38,23 +64,16 @@ class enoTexturePlane:
       tcv = self.vertexProperty.vertex
 
       case 'xz':
-        tcv.set1Value(0, coin.SbVec3f(-hx, 0, hy)); tcv.set1Value(1, coin.SbVec3f( hx, 0, hy))
-        tcv.set1Value(2, coin.SbVec3f( hx, 0,-hy)); tcv.set1Value(3, coin.SbVec3f(-hx, 0,-hy))
+        self.setValues3(tcv, [-hx,0,hy], [hx,0,hy], [hx,0,-hy], [-hx,0,-hy])
         self.vertexProperty.normal.set1Value(0, coin.SbVec3f(0,1,0))
 
-        #contemplated below, but opted back for above
-        #for coord in [[-hx, 0, hy], [hx, 0, hy] [hx, 0, -hy], [-hx, 0, -hy]]:
-        #  x,y,z = coord; tcv.set1Value(idx, coin.SbVec3f(x,y,z)); idx += 1
-
       case 'xy':
-        tcv.set1Value(0, coin.SbVec3f(-hx, hy, 0)); tcv.set1Value(1, coin.SbVec3f( hx, hy, 0))
-        tcv.set1Value(2, coin.SbVec3f( hx,-hy, 0)); tcv.set1Value(3, coin.SbVec3f(-hx,-hy, 0))
+        self.setValues3(tcv, [-hx,hy,0], [hx,hy,0], [hx,-hy,0], [-hx,-hy,0])
         self.vertexProperty.normal.set1Value(0, coin.SbVec3f(0,0,1))
 
     tpn = self.texturedPlaneNode = coin.SoSeparator()
     tc  = self.textureCoord      = coin.TextureCoordinate2()
-    tc.set1Value(0, coin.SbVec2f(1, 1)); tc.set1Value(1, coin.SbVec2f(0, 1))
-    tc.set1Value(2, coin.SbVec2f(0, 0)); tc.set1Value(3, coin.SbVec2f(1, 0))
+    self.setValues2(tc, [[1,1], [0,1], [0,0], [1,0])
 
     t2  = self.texture2 = coin.SoTexture2(); 
     t2.filename.setValue(textureImgFn); t2.model.setValue('DECAL')
