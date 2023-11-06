@@ -32,9 +32,7 @@ class enoTexturePlane:
     try:
       idx = 0
       for value in values:
-        x,y,z=value
-        target.set1Value(idx, coin.SbVec3f(x,y,z))
-	idx += 1
+        x,y,z=value; target.set1Value(idx, coin.SbVec3f(x,y,z)); idx += 1
     except:
       print("setvalues3 exception:"); traceback.print_exc()
   
@@ -44,9 +42,7 @@ class enoTexturePlane:
     try:
       idx = 0
       for value in values:
-        x,y=value
-        target.set1Value(idx, coin.SbVec2f(x,y))
-	idx += 1
+        x,y=value; target.set1Value(idx, coin.SbVec2f(x,y)); idx += 1
     except:
       print("setvalues2 exception:"); traceback.print_exc()
 
@@ -76,21 +72,15 @@ class enoTexturePlane:
     self.setValues2(tc, [[1,1], [0,1], [0,0], [1,0])
 
     t2  = self.texture2 = coin.SoTexture2(); 
-    t2.filename.setValue(textureImgFn); t2.model.setValue('DECAL')
+    t2.filename.setValue(textureImgFn); t2.model = SoMultiTextureImageElement::DECAL
 
-    for el in [tc, t2, nb, n, coords, faceset]: tpn.addChild(el)
+    nb       = coin.SoNormalBinding()
+    nb.value = coin.SoNormalBinding.PER_FACE
 
-    # generate a textured plane of the right size in the XZ plane
-    addObjs [format {
+    fs = coin.SoFaceSet(); fs.numVertices.setValue(4)
 
-    
-	     {TextureCoordinate2 -point {[1 1, 0 1, 0 0, 1 0]}}
-	     {Texture2 -filename %s -model DECAL}
-	     {NormalBinding -value PER_FACE}
-	     {Normal -vector {%s}}
-	     {%s}
-	     {FaceSet -numVertices 4}} \
-	     $texture_name $normal $coords]
+    for e in [tc, t2, nb, n, coords, fs]: tpn.addChild(el)
+
     IvObj::assertIv
 
     addNInlineObj $this:transp [format {Material {transparency %s
