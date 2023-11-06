@@ -146,9 +146,16 @@ class enoTextureStack:
     highlight $popout
   }
 
-  method highlight {layer} {
-    if {$layer > [llength $texture_names] || $layer < 1}  {return} 
-      ;#illegal layer number
+  def highlight(self, whichLayer):
+    tnLen = length(self.textureNames)
+    if whichLayer > tnLen or whichLayer < 1:
+      print("enoImgStack enoTextureStack highlight error: bad layer specifier %i (%i)" % (whichLayer, tnLen)); return None
+ 
+    if self.lastHighlighted is not None: self.lastHighlighted.changeTransp(
+
+    else:
+     self.lastHighlighted = 
+  
 
     if {$last_highlighted != {}} {
       $last_highlighted changeTransp [lindex $highlights 0]
@@ -158,7 +165,4 @@ class enoTextureStack:
     $last_highlighted changeTransp [lindex $highlights 1]
   }
 
-  public local_members {texture_names texture_size img_offset 
-      last_highlighted highlights color popout}
-
-
+### end ###
