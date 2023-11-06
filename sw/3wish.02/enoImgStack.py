@@ -19,6 +19,10 @@ class enoTexturePlane:
   textureCoord      = None
   vertexProperty    = None
   texturedPlaneNode = None
+  transparencyMaterialNode  = None
+
+  diffuseColor = (1,1,1)
+  transparency = 0.7
 
   ############# constructor #############
 
@@ -88,21 +92,21 @@ class enoTexturePlane:
 
   }
 
-  method changeTransp {newval} {
+  ############# change transparency #############
 
-    set transp $newval
-    delNObj $this:transp
-    addNInlineObj $this:transp [format {Material {transparency %s
-	 diffuseColor %s}} $transp $color] pre
-  }
+  def changeTransp(self, newVal):
+    if self.texturePlaneNode is None:
+      print("enoImgStack changeTransp error: texturePlaneNode unassigned"); return None
 
-  public local_members {texture_name texture_size transp color}
-
-  public color {1 1 1}
-  public texture_name {}
-  public texture_size {0 0}
-  public transp {0.7}
-}
+    if self.transparencyMaterialNode is None:
+      m = coin.SoMaterial()
+      m.transparency = self.transparency = newVal
+      m.diffuseColor = self.diffuseColor
+      self.transparencyMaterialNode = m
+      self.texturePlaneNode.insertChild(m, 0) #prepend 
+    else: 
+      self.transparencyMaterialNode.transparency = newVal
+      self.transparency = newVal
 
 ########################## Texture Stack ###########################
 
