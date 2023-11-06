@@ -66,7 +66,7 @@ class enoTexturePlane:
 
       case 'xy':
         self.setValues3(tcv, [-hx,hy,0], [hx,hy,0], [hx,-hy,0], [-hx,-hy,0])
-        self.vertexProperty.normal.set1Value(0, coin.SbVec3f(0,0,1))
+        self.setValues3(self.vertexProperty.normal, [[0,0,1]])
 
     tpn = self.texturedPlaneNode = coin.SoSeparator()
     tc  = self.textureCoord      = coin.TextureCoordinate2()
