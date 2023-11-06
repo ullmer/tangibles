@@ -38,7 +38,7 @@ class enoTexturePlane:
       for value in values:
         x,y,z=value; target.set1Value(idx, coin.SbVec3f(x,y,z)); idx += 1
     except:
-      print("setvalues3 exception:"); traceback.print_exc()
+      print("setValues3 exception:"); traceback.print_exc()
   
   ############# setValues2 #############
 
@@ -48,7 +48,7 @@ class enoTexturePlane:
       for value in values:
         x,y=value; target.set1Value(idx, coin.SbVec2f(x,y)); idx += 1
     except:
-      print("setvalues2 exception:"); traceback.print_exc()
+      print("setValues2 exception:"); traceback.print_exc()
 
   ############# assert Iv #############
 
