@@ -2,8 +2,11 @@
 
 *Circuit board:*
 
-hextokWings03h-pcb.png
-hextokWings03h-sch.png
+.. image:: hextokWings03h-pcb.png
+   :width: 600
+
+.. image:: hextokWings03h-sch.png
+   :width: 600
 
 `PDF <hextokWings03h.pdf>`_,
 `sch <hextokWings03h.sch>`_,
