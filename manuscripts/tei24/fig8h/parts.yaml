@@ -1,13 +1,20 @@
-modelName:   hexPlinth-09g
+modelName:   hexPlinth62a
 modelAuthor: Brygg Ullmer
 authorOrg:   Clemson University
 
 
 parts:
-  - {partNum: 8164A625, metaFamily: , familyDescr: , detailDescr: , quantPerUnit: , 
-                        pricePerUnit: threadSize:  length:, diameter:}
+  - {partNum: 7113K552, metaFamily: terminal, familyDescr: ring terminal, 
+     detailDescr: 'Noninsulated, for 22-18 Wire Gauge and 1/4" Screw', 
+     quantPerPackage: 100, pricePerUnit: 0.18, threadSize: '1/4"'}
+
   - {partNum: 2949A106, metaFamily: , familyDescr: , detailDescr: , quantPerUnit: , 
                         pricePerUnit: threadSize:  length:, diameter:}
+
+
+id|PartNumber|Metafamily|FamilyDescr|DetailDescr|quantPerUnit|pricePerUnit|ThreadSize|text|length|originalFields|diameter|WebAddr
+312|7113K11|terminal|Ring Terminals|Noninsulated, for 22-18 Wire Gauge and Number 6 Screw|Pack of 100|$11.58||||||
+
 
 7113K552_Ring Terminals.dae
 91844A410_Zinc-Plated Steel Curved Washer.dae
