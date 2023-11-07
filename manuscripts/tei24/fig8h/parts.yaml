@@ -6,10 +6,11 @@ authorOrg:   Clemson University
 parts:
   - {partNum: 7113K552, metaFamily: terminal, familyDescr: ring terminal, 
      detailDescr: 'Noninsulated, for 22-18 Wire Gauge and 1/4" Screw', 
-     quantPerPackage: 100, pricePerUnit: 0.18, threadSize: '1/4"'}
+     quantPerPkg: 100, pricePerUnit: 0.18, matchedScrew: '.25"'}
 
-  - {partNum: 2949A106, metaFamily: , familyDescr: , detailDescr: , quantPerUnit: , 
-                        pricePerUnit: threadSize:  length:, diameter:}
+  - {partNum: 91844A410, metaFamily: washer, familyDescr: saddle washer, 
+     detailDescr: 'Zinc-Plated Steel Curved Washer for 1" Tube OD, 1/4" Screw Size, 0.28" ID, 1" OD', 
+     quantPerPkg: 25, pricePerUnit: 1.00, id: .280, od: 1., matchedScrew: '.25"'}
 
 
 id|PartNumber|Metafamily|FamilyDescr|DetailDescr|quantPerUnit|pricePerUnit|ThreadSize|text|length|originalFields|diameter|WebAddr
