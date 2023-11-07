@@ -24,8 +24,8 @@
 
    * - `adafruit <https://adafruit.com>`_
      - 1
-     - 4022
-     - `Wide-range triple-axis magnetometer <https://www.adafruit.com/product/4022>`_
+     - `4022 <https://www.adafruit.com/product/4022>`_
+     - Wide-range triple-axis magnetometer
      - $9.95
      - $9.95
 
@@ -38,15 +38,15 @@
 
    * - `pololu <https://pololu.com>`_
      - 1
-     - 2820
-     - `Micro Continuous Rotation Servo <https://www.pololu.com/product/2820>`_
+     - `2820 <https://www.pololu.com/product/2820>`_
+     - Micro Continuous Rotation Servo
      - $5.95
      - $5.95
 
    * - `amazon <https://amazon.com>`_
      - 1
-     - Qunqi RC522
-     - `NFC reader <https://www.amazon.com/gp/product/B07QBPGYBF/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1>`_
+     - `Qunqi RC522 <https://www.amazon.com/gp/product/B07QBPGYBF/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1>`_
+     - NFC reader 
      - $2.80
      - $2.80
 
