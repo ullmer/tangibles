@@ -1,7 +1,7 @@
 - *modelName:*   hexPlinth62a
 - *modelAuthor:* Brygg Ullmer
 - *authorOrg:*   Clemson University
-- *details:*     [parts.yaml]
+- *details:*     [[parts.yaml]]
 
 .. list-table:: Constituent parts
    :widths: 25 25 50
@@ -13,17 +13,16 @@
      - short description
      - cost per item
      - total cost
-   * - Row 1, column 1
-     -
-     - Row 1, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
-
+   * - *adafruit*
+     - 1
+     - 4022
+     - Wide-range triple-axis magnetometer
+     - $9.95
+     - $9.95
 
 vendors:
-  mcmaster: [7113k552, 91844A410, 92165A029, 92174A029, 93140A239, 96169A468]
   adafruit: [4022, 5544]
+  mcmaster: [7113k552, 91844A410, 92165A029, 92174A029, 93140A239, 96169A468]
   pololu:   []
   oshpark:  [pcb]
 
