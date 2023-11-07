@@ -1,4 +1,4 @@
-.. list-table:: Headers
+.. list-table:: **Model information**
    :widths: 30 70
    :header-rows: 0
 
@@ -8,10 +8,12 @@
      - Brygg Ullmer
    * - *author org*   
      - Clemson University
-   * - *details*     
+   * - *materials*     
      - `YAML description <parts.yaml>`_
+   * - *model*     
+     - `Blender <../model/hexPlinth62a.blend.gz>`_, `FreeCAD   <../model/hexPlinth62a.FCStd>`_, `printable <../model/hexPlinth38n.stl>`_
 
-.. list-table:: Constituent parts / bill of materials
+.. list-table:: **Constituent parts / bill of materials**
    :widths: 10 10 10 60 10 10
    :header-rows: 1
 
