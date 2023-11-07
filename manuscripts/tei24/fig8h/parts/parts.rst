@@ -52,7 +52,7 @@
 
    * - `mcmaster <https://mcmaster.com>`_
      - 6
-     - `91844A410 <https://www.mcmaster.com/91844A410/>`_
+     - `91844A410 <https://www.mcmaster.com/91844A410>`_
      - Zinc-plated steel saddle washer
      - $1.00
      - $6.00
