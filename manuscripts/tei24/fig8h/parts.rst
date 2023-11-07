@@ -1,7 +1,7 @@
 - *modelName:*   hexPlinth62a
 - *modelAuthor:* Brygg Ullmer
 - *authorOrg:*   Clemson University
-- *details:*     `YAML description <parts.yaml>`
+- *details:*     'YAML description <parts.yaml>'
 
 .. list-table:: Constituent parts
    :widths: 25 25 50
