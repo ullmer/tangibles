@@ -36,40 +36,26 @@
      - $7.00
      - $7.00
 
-   * - `pololu <https://pololu.com>`_
+   * - `pololu <https://pololu.com/>`_
      - 1
      - 2820
      - `Micro Continuous Rotation Servo <https://www.pololu.com/product/2820>`_
      - $5.95
      - $5.95
 
-   * - `amazon <https://amazon.com>`_
+   * - `amazon <https://amazon.com/>`_
      - 1
-     - 
+     - Qunqi RC522
      - `NFC reader <https://www.amazon.com/gp/product/B07QBPGYBF/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1>`_
      - $2.80
      - $2.80
 
-
-
-vendors:
-  adafruit: [4022, 5544]
-  mcmaster: [7113k552, 91844A410, 92165A029, 92174A029, 93140A239, 96169A468]
-  pololu:   []
-  oshpark:  [pcb]
-
-parts:
-  4022: {metafamily: sensor,   familyDescr: magnetometer,
-     detailDescr: 'Adafruit Wide-Range Triple-axis Magnetometer - MLX90393 - STEMMA QT',
-     quantRequired: 1, pricePerUnit: 9.95}
-
-  5544: {metafamily: processor, familyDescr: rpi pico,
-     detailDescr: 'Raspberry Pi Pico WH - Pico Wireless with Headers Soldered',
-     quantRequired: 1, price: 7.00}
-
-  7113K552:  {metafamily: terminal, familyDescr: ring terminal, 
-     detailDescr: 'Noninsulated, for 22-18 Wire Gauge and 1/4" Screw', 
-     quantPerPkg: 100, quantRequired: 6, pricePerUnit: 0.18, matchedScrew: '.25"'}
+   * - `mcmaster <https://mcmaster.com/>`_
+     - 6
+     - `91844A410 <https://www.mcmaster.com/91844A410/>`_
+     - Zinc-plated steel saddle washer
+     - $1.00
+     - $6.00
 
   91844A410: {metafamily: washer, familyDescr: saddle washer, 
      detailDescr: ['Zinc-Plated Steel Curved Washer for 1" Tube OD', 
@@ -81,6 +67,11 @@ parts:
      detailDescr: ['Impact-Resistant Polycarbonate Screws',
                    'Pan Head Phillips, 1/4"-20 Thread, 3/4" Long'],
      quantPerPkg: 10, quantRequired: 6, pricePerUnit: 0.53, screwThread: '1/4"-20'}
+
+  7113K552:  {metafamily: terminal, familyDescr: ring terminal, 
+     detailDescr: 'Noninsulated, for 22-18 Wire Gauge and 1/4" Screw', 
+     quantPerPkg: 100, quantRequired: 6, pricePerUnit: 0.18, matchedScrew: '.25"'}
+
 
   92165A029: {metafamily: washer, familyDescr: lock washer,
      detailDescr: ['Bronze Internal-Tooth Lock Washer',
