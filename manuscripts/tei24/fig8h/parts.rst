@@ -2,11 +2,11 @@
    :widths: 30 70
    :header-rows: 0
 
-   * - *modelName*   
+   * - *model name*   
      - hexPlinth62a
-   * - *modelAuthor* 
+   * - *model author* 
      - Brygg Ullmer
-   * - *authorOrg*   
+   * - *author org*   
      - Clemson University
    * - *details*     
      - `YAML description <parts.yaml>`_
@@ -21,12 +21,21 @@
      - short description
      - cost per item
      - total cost
+
    * - *adafruit*
      - 1
      - 4022
      - Wide-range triple-axis magnetometer
      - $9.95
      - $9.95
+
+   * - adafruit
+     - 1
+     - 5544
+     - Raspberry Pi Pico WH
+     - $7.00
+     - $7.00
+
 
 vendors:
   adafruit: [4022, 5544]
