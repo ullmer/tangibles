@@ -22,7 +22,7 @@
      - cost per item
      - total cost
 
-   * - adafruit
+   * - `adafruit <https://adafruit.com>`_
      - 1
      - 4022
      - Wide-range triple-axis magnetometer
