@@ -2,26 +2,23 @@ modelName:   hexPlinth62a
 modelAuthor: Brygg Ullmer
 authorOrg:   Clemson University
 
+vendor:
+  mcmaster: [7113k552, 91844A410, 92165A029, 92174A029, 93140A239, 96169A468]
+  adafruit: []
 
 parts:
-  - {partNum: 7113K552, metaFamily: terminal, familyDescr: ring terminal, 
+  7113K552:  {metaFamily: terminal, familyDescr: ring terminal, 
      detailDescr: 'Noninsulated, for 22-18 Wire Gauge and 1/4" Screw', 
      quantPerPkg: 100, pricePerUnit: 0.18, matchedScrew: '.25"'}
 
-  - {partNum: 91844A410, metaFamily: washer, familyDescr: saddle washer, 
+  91844A410: {metaFamily: washer, familyDescr: saddle washer, 
      detailDescr: 'Zinc-Plated Steel Curved Washer for 1" Tube OD, 1/4" Screw Size, 0.28" ID, 1" OD', 
      quantPerPkg: 25, pricePerUnit: 1.00, id: .280, od: 1., matchedScrew: '.25"'}
 
 
-id|PartNumber|Metafamily|FamilyDescr|DetailDescr|quantPerUnit|pricePerUnit|ThreadSize|text|length|originalFields|diameter|WebAddr
-312|7113K11|terminal|Ring Terminals|Noninsulated, for 22-18 Wire Gauge and Number 6 Screw|Pack of 100|$11.58||||||
 
-
-7113K552_Ring Terminals.dae
-91844A410_Zinc-Plated Steel Curved Washer.dae
 92165A029_Bronze Internal-Tooth Lock Washer.dae
 92174A029_Brass Thin Hex Nut.dae
-93140A169_Impact-Resistant Polycarbonate Screws.dae
 93140A239_Impact-Resistant Polycarbonate Screws.dae
 96169A468_Chemical-Resistant Polypropylene Hex Nut.dae
 
