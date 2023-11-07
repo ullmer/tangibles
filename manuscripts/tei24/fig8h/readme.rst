@@ -1,3 +1,15 @@
+.. image:: exPlinth61c3.png
+   :width: 600
+
+.. image:: hexPcb01.png
+   :width: 600
+
+.. image:: hexPlinth70d2b.png
+   :width: 600
+
+.. image:: hexPlinth70e6b2.png
+   :width: 600
+
 *Bill of materials/constituent parts:* `parts.rst  <parts.rst>`_ | `parts.yaml <parts.yaml>`_ 
 
 *Circuit board:*
