@@ -11,7 +11,7 @@
    * - *details*     
      - `YAML description <parts.yaml>`_
 
-.. list-table:: Constituent parts
+.. list-table:: Constituent parts / bill of materials
    :widths: 10 10 10 60 10 10
    :header-rows: 1
 
@@ -25,7 +25,7 @@
    * - `adafruit <https://adafruit.com>`_
      - 1
      - 4022
-     - Wide-range triple-axis magnetometer
+     - `Wide-range triple-axis magnetometer <https://www.adafruit.com/product/4022>`_
      - $9.95
      - $9.95
 
@@ -35,6 +35,13 @@
      - Raspberry Pi Pico WH
      - $7.00
      - $7.00
+
+   * - `pololu <https://pololu.com>`_
+     - 1
+     - 2820
+     - `Micro Continuous Rotation Servo <https://www.pololu.com/product/2820>`_
+     - $5.95
+     - $5.95
 
 
 vendors:
