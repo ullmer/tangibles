@@ -50,6 +50,15 @@
      - $2.80
      - $2.80
 
+   * - `oshpark <https://oshpark.com>`_
+     - 1
+     - `hextokWings03h.brd <../pcb/hextokWings03h.brd>`_
+     - NFC reader -> RP2040 circuit board
+     - $7.12
+     - $7.12
+
+
+
    * - `mcmaster <https://mcmaster.com>`_
      - 6
      - `91844A410 <https://www.mcmaster.com/91844A410>`_
@@ -97,6 +106,6 @@
      - 
      - 
      - 
-     - US$39.11
+     - US$46.23 
 
 ### end ###
