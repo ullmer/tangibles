@@ -57,32 +57,31 @@
      - $1.00
      - $6.00
 
-  91844A410: {metafamily: washer, familyDescr: saddle washer, 
-     detailDescr: ['Zinc-Plated Steel Curved Washer for 1" Tube OD', 
-                   '1/4" Screw Size, 0.28" ID, 1" OD'],
-     quantPerPkg: 25, quantRequired: 6, pricePerUnit: 1.00, id: .280, od: 1., 
-     matchedScrew: '.25"'}
-
-  93140A239: {metafamily: screw, familyDescr: polycarbonate screw, color: clear,
-     detailDescr: ['Impact-Resistant Polycarbonate Screws',
-                   'Pan Head Phillips, 1/4"-20 Thread, 3/4" Long'],
-     quantPerPkg: 10, quantRequired: 6, pricePerUnit: 0.53, screwThread: '1/4"-20'}
-
-  7113K552:  {metafamily: terminal, familyDescr: ring terminal, 
-     detailDescr: 'Noninsulated, for 22-18 Wire Gauge and 1/4" Screw', 
-     quantPerPkg: 100, quantRequired: 6, pricePerUnit: 0.18, matchedScrew: '.25"'}
-
-
-  92165A029: {metafamily: washer, familyDescr: lock washer,
-     detailDescr: ['Bronze Internal-Tooth Lock Washer',
-                   'for 1/4" Screw Size, 0.256" ID, 0.478" OD'],
-     quantPerPkg: 100, quantRequired: 6, pricePerUnit: .128, id: .256, od: .478,
-     matchedScrew: '.25"'}
-
-  92174A029: {metafamily: nut, familyDescr: hex nut,
-     detailDescr: 'Brass Thin Hex Nut, 1/4"-20 Thread Size',
-     quantPerPkg: 50, quantRequired: 6, pricePerUnit: .229, screwThread: '1/4"-20'}
-
-96169A468_Chemical-Resistant Polypropylene Hex Nut.dae
-
-### end ###
+..   91844A410: {metafamily: washer, familyDescr: saddle washer, 
+..      detailDescr: ['Zinc-Plated Steel Curved Washer for 1" Tube OD', 
+..                    '1/4" Screw Size, 0.28" ID, 1" OD'],
+..      quantPerPkg: 25, quantRequired: 6, pricePerUnit: 1.00, id: .280, od: 1., 
+..      matchedScrew: '.25"'}
+.. 
+..   93140A239: {metafamily: screw, familyDescr: polycarbonate screw, color: clear,
+..      detailDescr: ['Impact-Resistant Polycarbonate Screws',
+..                    'Pan Head Phillips, 1/4"-20 Thread, 3/4" Long'],
+..      quantPerPkg: 10, quantRequired: 6, pricePerUnit: 0.53, screwThread: '1/4"-20'}
+.. 
+..   7113K552:  {metafamily: terminal, familyDescr: ring terminal, 
+..      detailDescr: 'Noninsulated, for 22-18 Wire Gauge and 1/4" Screw', 
+..      quantPerPkg: 100, quantRequired: 6, pricePerUnit: 0.18, matchedScrew: '.25"'}
+.. 
+.. 
+..   92165A029: {metafamily: washer, familyDescr: lock washer,
+..      detailDescr: ['Bronze Internal-Tooth Lock Washer',
+..                    'for 1/4" Screw Size, 0.256" ID, 0.478" OD'],
+..      quantPerPkg: 100, quantRequired: 6, pricePerUnit: .128, id: .256, od: .478,
+..      matchedScrew: '.25"'}
+.. 
+..   92174A029: {metafamily: nut, familyDescr: hex nut,
+..      detailDescr: 'Brass Thin Hex Nut, 1/4"-20 Thread Size',
+..      quantPerPkg: 50, quantRequired: 6, pricePerUnit: .229, screwThread: '1/4"-20'}
+.. 
+.. 
+.. ### end ###
