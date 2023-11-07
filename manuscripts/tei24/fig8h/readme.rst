@@ -1,9 +1,9 @@
 .. raw:: html
 
- <img src=images/exPlinth61c3.png    height=100>
- <img src=images/hexPlinth70d2b.png  height=100>
- <img src=images/hexPlinth70e6b2.png height=100>
- <img src=images/hexPcb01.png        height=100>
+<img src=images/exPlinth61c3.png    height=200>
+<img src=images/hexPlinth70d2b.png  height=200>
+<img src=images/hexPlinth70e6b2.png height=200>
+<img src=images/hexPcb01.png        height=200>
 
 *Model:* `Blender <model/hexPlinth62a.blend.gz>`_, `FreeCAD   <model/hexPlinth62a.FCStd>`_, `printable <model/hexPlinth38n.stl>`_
 
