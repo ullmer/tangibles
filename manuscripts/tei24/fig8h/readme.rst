@@ -1,27 +1,27 @@
-.. image:: exPlinth61c3.png
-   :width: 600
+.. image:: images/exPlinth61c3.png
+   :width: 400
 
-.. image:: hexPcb01.png
-   :width: 600
+.. image:: images/hexPcb01.png
+   :width: 400
 
-.. image:: hexPlinth70d2b.png
-   :width: 600
+.. image:: images/hexPlinth70d2b.png
+   :width: 400
 
-.. image:: hexPlinth70e6b2.png
-   :width: 600
+.. image:: images/hexPlinth70e6b2.png
+   :width: 400
 
 *Bill of materials/constituent parts:* `parts.rst  <parts.rst>`_ | `parts.yaml <parts.yaml>`_ 
 
 *Circuit board:*
 
-.. image:: hextokWings03h-pcb.png
-   :width: 600
+.. image:: pcb/hextokWings03h-pcb.png
+   :width: 400
 
-.. image:: hextokWings03h-sch.png
-   :width: 600
+.. image:: pcb/hextokWings03h-sch.png
+   :width: 400
 
-`PDF <hextokWings03h.pdf>`_,
-`sch <hextokWings03h.sch>`_,
-`brd <hextokWings03h.brd>`_
+`PDF <pcb/hextokWings03h.pdf>`_,
+`sch <pcb/hextokWings03h.sch>`_,
+`brd <pcb/hextokWings03h.brd>`_
 
 ### end ###
