@@ -43,6 +43,14 @@
      - $5.95
      - $5.95
 
+   * - `amazon <https://amazon.com>`_
+     - 1
+     - 
+     - `NFC reader <https://www.amazon.com/gp/product/B07QBPGYBF/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1>
+     - $2.80
+     - $2.80
+
+
 
 vendors:
   adafruit: [4022, 5544]
