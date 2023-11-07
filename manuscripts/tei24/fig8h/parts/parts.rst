@@ -59,28 +59,28 @@
 
    * - 
      - 6
-     - `93140A239<https://www.mcmaster.com/93140A239>`_
+     - `93140A239 <https://www.mcmaster.com/93140A239>`_
      - Clear polycarbonate bolt (1/4"-20)
      - $0.53
      - $3.18
 
    * - 
      - 6
-     - `7113K552<https://www.mcmaster.com/7113K552>`_
+     - `7113K552 <https://www.mcmaster.com/7113K552>`_
      - Ring terminals 
      - $0.18
      - $1.08
 
    * - 
      - 6
-     - `92165A029<https://www.mcmaster.com/92165A029>`_
+     - `92165A029 <https://www.mcmaster.com/92165A029>`_
      - Lock washers
      - $0.13
      - $0.77
 
    * - 
      - 6
-     - `92174A029<https://www.mcmaster.com/92174A029>`_
+     - `92174A029 <https://www.mcmaster.com/92174A029>`_
      - Thin brass hex nuts
      - $0.23
      - $1.38
