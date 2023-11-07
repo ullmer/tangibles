@@ -12,7 +12,7 @@
      - `YAML description <parts.yaml>`_
 
 .. list-table:: Constituent parts
-   :widths: 10 10 10 50 10 10
+   :widths: 10 10 10 60 10 10
    :header-rows: 1
 
    * - vendor
@@ -22,14 +22,14 @@
      - cost per item
      - total cost
 
-   * - *adafruit*
+   * - adafruit
      - 1
      - 4022
      - Wide-range triple-axis magnetometer
      - $9.95
      - $9.95
 
-   * - adafruit
+   * - 
      - 1
      - 5544
      - Raspberry Pi Pico WH
