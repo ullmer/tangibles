@@ -1,6 +1,6 @@
 .. list-table:: Headers
    :widths: 30 70
-   :headers-rows: 0
+   :header-rows: 0
 
    * - *modelName*   
      - hexPlinth62a
