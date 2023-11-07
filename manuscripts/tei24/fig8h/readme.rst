@@ -7,7 +7,7 @@
 
 *Model:* `Blender <model/hexPlinth62a.blend.gz>`_, `FreeCAD   <model/hexPlinth62a.FCStd>`_, `printable <model/hexPlinth38n.stl>`_
 
-*Bill of materials/constituent parts:* `parts.rst  <parts.rst>`_ | `parts.yaml <parts.yaml>`_ 
+*Bill of materials/constituent parts:* `parts.rst  <parts/parts.rst>`_ | `parts.yaml <parts/parts.yaml>`_ 
 
 *Circuit board:*
 
