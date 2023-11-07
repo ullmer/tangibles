@@ -36,21 +36,21 @@
      - $7.00
      - $7.00
 
-   * - `pololu <https://pololu.com/>`_
+   * - `pololu <https://pololu.com>`_
      - 1
      - 2820
      - `Micro Continuous Rotation Servo <https://www.pololu.com/product/2820>`_
      - $5.95
      - $5.95
 
-   * - `amazon <https://amazon.com/>`_
+   * - `amazon <https://amazon.com>`_
      - 1
      - Qunqi RC522
      - `NFC reader <https://www.amazon.com/gp/product/B07QBPGYBF/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1>`_
      - $2.80
      - $2.80
 
-   * - `mcmaster <https://mcmaster.com/>`_
+   * - `mcmaster <https://mcmaster.com>`_
      - 6
      - `91844A410 <https://www.mcmaster.com/91844A410/>`_
      - Zinc-plated steel saddle washer
