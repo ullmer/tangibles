@@ -1,10 +1,18 @@
-- *modelName:*   hexPlinth62a
-- *modelAuthor:* Brygg Ullmer
-- *authorOrg:*   Clemson University
-- *details:*     `YAML description <parts.yaml>`_
+.. list-table:: Headers
+   :widths: 30 70
+   :headers-rows: 0
+
+   * - *modelName*   
+     - hexPlinth62a
+   * - *modelAuthor* 
+     - Brygg Ullmer
+   * - *authorOrg*   
+     - Clemson University
+   * - *details*     
+     - `YAML description <parts.yaml>`_
 
 .. list-table:: Constituent parts
-   :widths: 25 25 50
+   :widths: 10 10 10 50 10 10
    :header-rows: 1
 
    * - vendor
