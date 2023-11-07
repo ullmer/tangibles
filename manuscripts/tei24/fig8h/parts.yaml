@@ -1,0 +1,20 @@
+modelName:   hexPlinth-09g
+modelAuthor: Brygg Ullmer
+authorOrg:   Clemson University
+
+
+parts:
+  - {partNum: 8164A625, metaFamily: , familyDescr: , detailDescr: , quantPerUnit: , 
+                        pricePerUnit: threadSize:  length:, diameter:}
+  - {partNum: 2949A106, metaFamily: , familyDescr: , detailDescr: , quantPerUnit: , 
+                        pricePerUnit: threadSize:  length:, diameter:}
+
+7113K552_Ring Terminals.dae
+91844A410_Zinc-Plated Steel Curved Washer.dae
+92165A029_Bronze Internal-Tooth Lock Washer.dae
+92174A029_Brass Thin Hex Nut.dae
+93140A169_Impact-Resistant Polycarbonate Screws.dae
+93140A239_Impact-Resistant Polycarbonate Screws.dae
+96169A468_Chemical-Resistant Polypropylene Hex Nut.dae
+
+### end ###
