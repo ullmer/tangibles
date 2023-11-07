@@ -39,7 +39,7 @@
    * - `pololu <https://pololu.com>`_
      - 1
      - `2820 <https://www.pololu.com/product/2820>`_
-     - Micro Continuous Rotation Servo
+     - Micro continuous rotation servo
      - $5.95
      - $5.95
 
