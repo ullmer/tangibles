@@ -1,11 +1,8 @@
-.. image:: images/exPlinth61c3.png
-   :height: 50
-.. image:: images/hexPlinth70d2b.png
-   :height: 50
-.. image:: images/hexPlinth70e6b2.png
-   :height: 50
-.. image:: images/hexPcb01.png
-   :height: 50
+.. raw:: html
+ <img src=images/exPlinth61c3.png    height=100>
+ <img src=images/hexPlinth70d2b.png  height=100>
+ <img src=images/hexPlinth70e6b2.png height=100>
+ <img src=images/hexPcb01.png        height=100>
 
 *Model:* `Blender <model/hexPlinth62a.blend.gz>`_, 
  `FreeCAD   <model/hexPlinth62a.FCStd>`_,
