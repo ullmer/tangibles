@@ -1,3 +1,8 @@
+== Figure 8h : hextok plinth ==
+
+*Bill of materials/constituent parts:* `parts.rst  <parts/parts.rst>`_ | `parts.yaml <parts/parts.yaml>`_ 
+
+= Illustrative images =
 .. raw:: html
 
  <img src=images/exPlinth61c3.png    height=200>
@@ -7,7 +12,6 @@
 
 *Model:* `Blender <model/hexPlinth62a.blend.gz>`_, `FreeCAD   <model/hexPlinth62a.FCStd>`_, `printable <model/hexPlinth38n.stl>`_
 
-*Bill of materials/constituent parts:* `parts.rst  <parts/parts.rst>`_ | `parts.yaml <parts/parts.yaml>`_ 
 
 *Circuit board:*
 
