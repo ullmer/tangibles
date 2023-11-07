@@ -2,7 +2,7 @@ modelName:   hexPlinth62a
 modelAuthor: Brygg Ullmer
 authorOrg:   Clemson University
 
-vendor:
+vendors:
   mcmaster: [7113k552, 91844A410, 92165A029, 92174A029, 93140A239, 96169A468]
   adafruit: []
 
@@ -12,8 +12,14 @@ parts:
      quantPerPkg: 100, pricePerUnit: 0.18, matchedScrew: '.25"'}
 
   91844A410: {metaFamily: washer, familyDescr: saddle washer, 
-     detailDescr: 'Zinc-Plated Steel Curved Washer for 1" Tube OD, 1/4" Screw Size, 0.28" ID, 1" OD', 
+     detailDescr: ['Zinc-Plated Steel Curved Washer for 1" Tube OD', 
+                   '1/4" Screw Size, 0.28" ID, 1" OD'],
      quantPerPkg: 25, pricePerUnit: 1.00, id: .280, od: 1., matchedScrew: '.25"'}
+
+  93140A239: {metaFamily: screw, familyDescr: polycarbonate screw, color: clear,
+     detailDescr: ['Impact-Resistant Polycarbonate Screws',
+                   'Pan Head Phillips, 1/4"-20 Thread, 3/4" Long'],
+     quantPerPkg: 10, pricePerUnit: 0.53, screwThread: '1/4"-20'}
 
 
 
