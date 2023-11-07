@@ -66,6 +66,13 @@
 
    * - 
      - 6
+     - `92949A814 <https://www.mcmaster.com/92949A814/>`_
+     - Stainless steel button cap hex drive bolt, #4-40
+     - $0.16
+     - $1.00
+
+   * - 
+     - 6
      - `7113K552 <https://www.mcmaster.com/7113K552>`_
      - Ring terminals 
      - $0.18
