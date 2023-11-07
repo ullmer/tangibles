@@ -31,7 +31,7 @@
 
    * - 
      - 1
-     - 5544
+     - `5544 <https://www.adafruit.com/product/5544>`_
      - Raspberry Pi Pico WH
      - $7.00
      - $7.00
