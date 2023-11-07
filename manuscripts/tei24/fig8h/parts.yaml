@@ -4,9 +4,14 @@ authorOrg:   Clemson University
 
 vendors:
   mcmaster: [7113k552, 91844A410, 92165A029, 92174A029, 93140A239, 96169A468]
-  adafruit: []
+  adafruit: [4022]
+  pololu:   []
 
 parts:
+  4022:      {metafamily: sensor,   familyDescr: magnetometer,
+     detailDescr: 'Adafruit Wide-Range Triple-axis Magnetometer - MLX90393 - STEMMA QT',
+     quantRequired: 1, pricePerUnit: 9.95}
+
   7113K552:  {metafamily: terminal, familyDescr: ring terminal, 
      detailDescr: 'Noninsulated, for 22-18 Wire Gauge and 1/4" Screw', 
      quantPerPkg: 100, quantRequired: 6, pricePerUnit: 0.18, matchedScrew: '.25"'}
