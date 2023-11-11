@@ -54,6 +54,9 @@ class enoFcTkMidi:
   idleSensor     = None
   timerSensor    = None
 
+  showButtonGrid2D  = True
+  showSliders2D     = True
+
   tkRoot            = None
   tkWinName         = 'slider controller'
   tkSliders         = None
@@ -210,11 +213,23 @@ class enoFcTkMidi:
       self.tkActive = False
       self.reportError('buildTkUi', 'Initial invocation of Tkinter unsuccessful.')
 
+    if self.showSliders2D:    self.buildSliders(self.tkRoot)
+    if self.showButtonGrid2D: self.buildButtonGrid(self.tkRoot)
+
+  ############ build button grid user interface ############
+
+  def buildButtonGrid(self, rootFrame):
+    self.reportError('buildButtonGrid', 'not yet implemented')
+
+  ############ build sliders user interface ############
+
+  def buildSliders(self, rootFrame):
+
     self.tkSliders    = {}
 
     for i in range(self.numSliders):
       
-      f = tk.Frame(self.tkRoot)
+      f = tk.Frame(rootFrame)
       l = tk.Label(f, text=str(i))
 
       if self.tkSliderOrient == 'vert': orient = tk.VERTICAL
@@ -234,7 +249,7 @@ class enoFcTkMidi:
         s.pack(side=tk.LEFT) #with slider on right
         f.pack(side=tk.TOP)  #and pack to the top
 
-    buttonFrame = tk.Frame(self.tkRoot)
+    buttonFrame = tk.Frame(rootFrame)
 
     getCb = partial(self.getTkSliderValsCb, self)
     getButton = tk.Button(buttonFrame, text='get slider vals', command=getCb)
