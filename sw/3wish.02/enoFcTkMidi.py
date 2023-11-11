@@ -43,6 +43,7 @@ class enoFcTkMidi:
   tkRoot         = None
   tkSliders      = None
   tkSliderVals   = None
+  tkSliderOrient = None
 
   tkSliderMinVal = 0
   tkSliderMaxVal = 10
@@ -84,7 +85,7 @@ class enoFcTkMidi:
   def activateTk(self):
     try:    
       global tk #sad, but this appears ~necessary with this loading approach
-      import tk 
+      import tkinter as tk 
       self.tkLoaded = True #let's initially assume that successful import 
                            #indicates "working." Later with embedded devices
                            #in particular, this may wish to become more nuanced.
@@ -101,8 +102,10 @@ class enoFcTkMidi:
       self.reportError('activateTk', 'functools import (for callback "partials") unsuccessful.')
 
     try: 
-      self.tkRoot   = tk.Tk() # Create the root (base) window
-      self.tkActive = True
+      self.tkRoot    = tk.Tk() # Create the root (base) window
+      self.tkActive  = True
+      self.tkSliderOrient = tk.HORIZONTAL #tk.VERTICAL
+
     except: 
       self.tkActive = False
       self.reportError('activateTk', 'Initial invocation of Tkinter unsuccessful.')
@@ -175,8 +178,8 @@ class enoFcTkMidi:
 
     for i in range(self.numSliders):
       self.tkSliderVals[i] = 0
-      s = self.tkSliders[i] = tk.Scale(self.tkRoot, variable=self.tkSliderVals[i], \
-            length=self.tkSliderWidth, \
+      s = self.tkSliders[i] = tk.Scale(self.tkRoot, variable=self.tkSliderVals[i], 
+            length=self.tkSliderWidth, orient=self.tkSliderOrient,
             from_ = self.tkSliderMinVal, to=self.tkSliderMaxVal)
       s.pack(side=tk.TOP)
 
