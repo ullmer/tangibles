@@ -14,7 +14,7 @@ basedir = 'c:/git/tangibles/sw/3wish.02' #update to location of source if manual
 class enoFcTkMidi:
 
   numSliders    = 9
-  tkSliderWidth = 300
+  tkSliderWidth = 150
   tkSliderNames = None
 
   useTk      = True 
@@ -57,11 +57,14 @@ class enoFcTkMidi:
   tkRoot            = None
   tkWinName         = 'slider controller'
   tkSliders         = None
-  tkSliderOrient    = None
+  tkSliderOrient    = 'vert' # or 'horiz'
   tkSliderShowValue = 0
 
-  tkSliderMinVal = 0
-  tkSliderMaxVal = 127
+  #tkSliderMinVal = 0
+  #tkSliderMaxVal = 127
+
+  tkSliderMinVal = 127
+  tkSliderMaxVal = 0
 
   ############# constructor #############
 
@@ -203,7 +206,6 @@ class enoFcTkMidi:
       self.tkRoot    = tk.Tk() # Create the root (base) window
       self.tkRoot.winfo_toplevel().title(self.tkWinName)
       self.tkActive  = True
-      self.tkSliderOrient = tk.HORIZONTAL #tk.VERTICAL
     except: 
       self.tkActive = False
       self.reportError('buildTkUi', 'Initial invocation of Tkinter unsuccessful.')
@@ -211,17 +213,26 @@ class enoFcTkMidi:
     self.tkSliders    = {}
 
     for i in range(self.numSliders):
+      
       f = tk.Frame(self.tkRoot)
       l = tk.Label(f, text=str(i))
 
+      if self.tkSliderOrient == 'vert': orient = tk.VERTICAL
+      else:                             orient = tk.HORIZONTAL
+
       s = self.tkSliders[i] = tk.Scale(f, 
-            length=self.tkSliderWidth, orient=self.tkSliderOrient, 
+            length=self.tkSliderWidth, orient=orient,
             from_ = self.tkSliderMinVal, to=self.tkSliderMaxVal,
             showvalue=self.tkSliderShowValue)
 
-      l.pack(side=tk.LEFT) #textual label on left
-      s.pack(side=tk.LEFT) #with slider on right
-      f.pack(side=tk.TOP)  #and pack to the top
+      if self.tkSliderOrient == 'vert':
+        l.pack(side=tk.BOTTOM) #textual label on left
+        s.pack(side=tk.BOTTOM) #with slider on right
+        f.pack(side=tk.LEFT)  #and pack to the top
+      else:
+        l.pack(side=tk.LEFT) #textual label on left
+        s.pack(side=tk.LEFT) #with slider on right
+        f.pack(side=tk.TOP)  #and pack to the top
 
     buttonFrame = tk.Frame(self.tkRoot)
 
@@ -231,9 +242,14 @@ class enoFcTkMidi:
     setCb = partial(self.setTkSliderValsCb, self)
     setButton = tk.Button(buttonFrame, text='reset slider vals', command=setCb)
 
-    getButton.pack(side=tk.LEFT)
-    setButton.pack(side=tk.LEFT)
-    buttonFrame.pack(side=tk.TOP)
+    if self.tkSliderOrient == 'vert':
+      getButton.pack(side=tk.TOP)
+      setButton.pack(side=tk.TOP)
+      buttonFrame.pack(side=tk.RIGHT, expand=True, fill=tk.BOTH)
+    else:
+      getButton.pack(side=tk.LEFT)
+      setButton.pack(side=tk.LEFT)
+      buttonFrame.pack(side=tk.TOP)
 
   ############ tk slider button callbacks ############
 

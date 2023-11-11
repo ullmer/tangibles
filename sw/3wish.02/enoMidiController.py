@@ -25,6 +25,8 @@ class enoMidiController:
   midiCtrlOutputId    = 3
   numMidiReadsPerPoll = 50
 
+  displayPollChar     = False
+
   activateInput     = None
   activateOutput    = None
   activateLaunchpad = None # integrates input and output
@@ -365,7 +367,9 @@ class enoMidiController:
   ############# pollMidi #############
 
   def pollMidi(self):
-    print(".", end=''); sys.stdout.flush()
+    if self.displayPollChar:
+      print(".", end=''); sys.stdout.flush()
+
     if self.isActiveDevice('nov_launchpad'): 
       bstate = self.lp.ButtonStateRaw()
       if bstate != []:
