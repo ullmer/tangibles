@@ -19,7 +19,7 @@ class enoTexturePlane:
   textureOrient     = 1
   vertexProperty    = None
   texturedPlaneNode = None
-  transparencyMaterialNode  = None
+  materialNode      = None
 
   diffuseColor = (1,1,1)
   transparency = 0.7
@@ -39,7 +39,8 @@ class enoTexturePlane:
     try:
       idx = 0
       for value in values:
-        x,y,z=value; target.set1Value(idx, coin.SbVec3f(x,y,z)); idx += 1
+        x,y,z=value
+        target.set1Value(idx, coin.SbVec3f(x,y,z)); idx += 1
     except:
       print("setValues3 exception:"); traceback.print_exc()
   
@@ -75,13 +76,16 @@ class enoTexturePlane:
 
     if orient == 'xz':
       self.setValues3(c3.point, [[-hx,0,hy], [hx,0,hy], [hx,0,-hy], [-hx,0,-hy]])
-      self.setValues3(n, [[0,1,0]])
+      n.vector = [0,1,0]
 
     if orient == 'xy':
       self.setValues3(c3.point, [[-hx,hy,0], [hx,hy,0], [hx,-hy,0], [-hx,-hy,0]])
-      self.setValues3(n, [[0,0,1]])
+      n.vector = [0,0,1]
 
     tpn = self.texturedPlaneNode = coin.SoSeparator()
+    material = self.materialNode = coin.SoMaterial()
+    material.transparency = self.transparency
+    tpn.addChild(material)
 
     if self.translationVal is not None:
       self.translationNode = coin.SoTranslation()
