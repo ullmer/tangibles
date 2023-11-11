@@ -171,8 +171,6 @@ class enoFcTkMidi:
   ############ update all ############
 
   def updateAll(self, arg1, arg2):
-    print(">", end=''); sys.stdout.flush()
-
     if not self.tkHoldsMainloop and self.useTk and self.tkLoaded   and self.tkActive:   
       self.updateTk(arg1, arg2) #if tk holds mainloop, it will manage Tk updates
 
@@ -297,7 +295,6 @@ class enoFcTkMidi:
 ############# freecad-free tkinter environment ##############
 
 def afterIdleCb(eftm): 
-  print("!", end=''); sys.stdout.flush()
   eftm.updateAll(0,0)
   tkUpdate = partial(afterIdleCb, eftm)
   tkUpdate.__name__ = 'ourTkUpdate' # trying to debug weird tkinter "after" issue
