@@ -110,9 +110,7 @@ class enoFcTkiMidi:
 
   ############ update midi ############
 
-  def updateTki(self, arg1, arg2):
-    e = self.midiIn.read(100);
-    if len(e) > 2:
+  def updateTki(self, arg1, arg2): self.tkiRoot.update()
 
   ############ update all ############
 
