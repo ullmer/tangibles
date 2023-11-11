@@ -2,9 +2,14 @@
 # Brygg Ullmer, Clemson University
 # Begun 2023-11-11
 
+import traceback # for assisting error debugging (without code failing)
+
+basedir = 'c:/git/tangibles/sw/3wish.02' #update to location of source if manually installed, or None otherwise
+
 ################### Enodia FreeCAD Tkinter Midi controls ###################
 
 class enoFcTkMidi:
+
   numSliders    = 9
   tkSliderWidth = 300
   tkSliderNames = None
@@ -14,6 +19,8 @@ class enoFcTkMidi:
   useMidi    = False
   useFreecad = False
   autolaunch = True  #autostart all core behaviors (including scheduled callbacks)
+
+  swBasePath     = None
 
   tkActive       = None
   midiActive     = None
@@ -136,13 +143,15 @@ class enoFcTkMidi:
       global enoMidiController
       import enoMidiController
 
-      profile = self.enoMidiControllerProfile 
+      profile    = self.enoMidiControllerProfile 
+      ourYamlDir = self.swBasePath + '/yaml'
 
-      self.enoMidiCtlr = enoMidiController.enoMidiController(profile)
+      self.enoMidiCtlr = enoMidiController.enoMidiController(profile, yamlDir=ourYamlDir)
       self.enoMidiLoaded = True
     except:    
       self.enoMidiLoaded = False
       self.reportError('activateMidi', 'midi import and initiation unsuccessful')
+      traceback.print_exc()
 
   ############ update midi ############
 
@@ -282,7 +291,8 @@ class enoFcTkMidi:
 ############# freecad-free tkinter environment ##############
 
 def tkMain():
-  eftm = enoFcTkMidi(useFreecad = False, useMidi = False)
+  global basedir #base directory filename (at least originally) declared at beginning of this file
+  eftm = enoFcTkMidi(useFreecad = False, useMidi = False, swBasePath=basedir)
   eftm.tkRoot.mainloop()
 
 ############################################
