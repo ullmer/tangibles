@@ -5,6 +5,7 @@
 import sys, traceback # for assisting error debugging (without code failing)
 
 from time import sleep
+from functools import partial
 
 basedir = 'c:/git/tangibles/sw/3wish.02' #update to location of source if manually installed, or None otherwise
 
@@ -31,11 +32,10 @@ class enoFcTkMidi:
   freecadHoldsMainloop = False
   tkMainloop           = True
 
-  functoolsLoaded = None  #Many (etc.) FreeCAD users may not have all 
-  tkLoaded        = None  # relevant Python packages or (for MIDI)
-  pilLoaded       = None  # devices installed.  This shouldn't cause
-  pygameLoaded    = None  # things to break
-  midiLoaded      = None  
+  tkLoaded        = None  #Many (etc.) FreeCAD users may not have all 
+  pilLoaded       = None  # relevant Python packages or (for MIDI)
+  pygameLoaded    = None  # devices installed.  This shouldn't cause
+  midiLoaded      = None  # things to break
   enoMidiLoaded   = None  
   freecadLoaded   = None  
 
@@ -108,14 +108,6 @@ class enoFcTkMidi:
     except: 
       self.tkLoaded = False
       self.reportError('activateTk', 'tk import unsuccessful.')
-
-    try: 
-      global partial
-      from functools import partial
-      self.functoolsLoaded = True
-    except: 
-      self.functoolsLoaded = False
-      self.reportError('activateTk', 'functools import (for callback "partials") unsuccessful.')
 
     #later: import PIL.Image, PIL.ImageTk #image manipulation package
 
@@ -317,9 +309,9 @@ def tkMain():
   global basedir #base directory filename (at least originally) declared at beginning of this file
   eftm = enoFcTkMidi(useFreecad = False, useMidi = False, swBasePath=basedir)
 
-  tkUpdate = partial(afterIdleCb, eftm)
+  ourTkUpdate = partial(afterIdleCb, eftm)
 
-  eftm.tkRoot.after(100, tkUpdate)
+  eftm.tkRoot.after(100, ourTkUpdate)
   eftm.tkRoot.mainloop()
 
 ############################################
