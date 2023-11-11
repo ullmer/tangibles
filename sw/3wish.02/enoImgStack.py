@@ -16,6 +16,7 @@ class enoTexturePlane:
   textureImgFn      = None
   textureSize       = (1,1)
   textureCoord      = None
+  textureOrient     = 1
   vertexProperty    = None
   texturedPlaneNode = None
   transparencyMaterialNode  = None
@@ -88,7 +89,12 @@ class enoTexturePlane:
       tpn.addChild(self.translationNode)
 
     tc  = self.textureCoord      = coin.SoTextureCoordinate2()
-    self.setValues2(tc.point, [[1,1], [0,1], [0,0], [1,0]])
+
+    if self.textureOrient == 0:
+      self.setValues2(tc.point, [[1,1], [0,1], [0,0], [1,0]])
+
+    if self.textureOrient == 1:
+      self.setValues2(tc.point, [[0,0], [1,0], [1,1], [0,1]])
 
     t2  = self.texture2 = coin.SoTexture2(); 
     t2.filename.setValue(self.textureImgFn)
