@@ -305,7 +305,10 @@ class enoFcTkMidi:
 def tkMain():
   global basedir #base directory filename (at least originally) declared at beginning of this file
   eftm = enoFcTkMidi(useFreecad = False, useMidi = False, swBasePath=basedir)
-  eftm.tkRoot.after_idle(eftm.updateAll)
+
+  tkUpdateWrapper = partial(eftm.updateAll, eftm, 0, 0) #FreeCAD callbacks pass more arguments than Tk
+
+  eftm.tkRoot.after_idle(tkUpdateWrapper)
   eftm.tkRoot.mainloop()
 
 ############################################
