@@ -16,6 +16,9 @@ class enoCube:
   materialNode   = None
   cubeNode       = None
 
+  translation     = (0,0,0)
+  translationNode = None
+
   ############# constructor #############
 
   def __init__(self, **kwargs):
@@ -31,15 +34,18 @@ class enoCube:
   ############# buildCube #############
 
   def buildTexturePlaneIv(self):
-    self.node         = coin.SoSeparator()
-    self.materialNode = coin.SoMaterial()
-    self.cubeNode     = coin.SoCube()
+    self.node            = coin.SoSeparator()
+    self.translationNode = coin.SoTranslation()
+    self.materialNode    = coin.SoMaterial()
+    self.cubeNode        = coin.SoCube()
 
+    self.node.addChild(self.translationNode)
     self.node.addChild(self.materialNode)
     self.node.addChild(self.cubeNode)
 
-    self.materialNode.diffuseColor  = self.diffuseColor
-    self.materialNode.emissiveColor = self.emissiveColor
-    self.materialNode.transparency  = self.transparency
+    self.translationNode.translation = self.translation
+    self.materialNode.diffuseColor   = self.diffuseColor
+    self.materialNode.emissiveColor  = self.emissiveColor
+    self.materialNode.transparency   = self.transparency
 
 ### end ###
