@@ -7,9 +7,9 @@ import sys
 ################### Enodia FreeCAD Tkinter Midi controls ###################
 
 class enoFcTkMidi:
-  numSliders     = 8
-  tkiSliderWidth = 300
-  tkiSliderNames = None
+  numSliders    = 8
+  tkSliderWidth = 300
+  tkSliderNames = None
 
   useTk      = True 
   useMidi    = True
@@ -37,15 +37,15 @@ class enoFcTkMidi:
                            #  responsive to system load, but it doesn't
                            #  appear to be properly working in FreeCAD ~0.21
 
-  idleSensor      = None
-  timerSensor     = None
+  idleSensor     = None
+  timerSensor    = None
 
-  tkiRoot         = None
-  tkiSliders      = None
-  tkiSliderVals   = None
+  tkRoot         = None
+  tkSliders      = None
+  tkSliderVals   = None
 
-  tkiSliderMinVal = 0
-  tkiSliderMaxVal = 10
+  tkSliderMinVal = 0
+  tkSliderMaxVal = 10
 
   ############# constructor #############
 
@@ -85,12 +85,12 @@ class enoFcTkMidi:
     try:    
       global tk #sad, but this appears ~necessary with this loading approach
       import tk as tk
-      self.tkiLoaded = True #let's initially assume that successful import 
-                             #indicates "working." Later with embedded devices
-			     #in particular, this may wish to become more nuanced.
+      self.tkLoaded = True #let's initially assume that successful import 
+                           #indicates "working." Later with embedded devices
+                           #in particular, this may wish to become more nuanced.
     except: 
-      self.tkiLoaded = False
-      self.reportError('activateTki', 'tk import unsuccessful.')
+      self.tkLoaded = False
+      self.reportError('activateTk', 'tk import unsuccessful.')
 
     try: 
       global partial
@@ -98,14 +98,14 @@ class enoFcTkMidi:
       self.functoolsLoaded = True
     except: 
       self.functoolsLoaded = False
-      self.reportError('activateTki', 'functools import (for callback "partials") unsuccessful.')
+      self.reportError('activateTk', 'functools import (for callback "partials") unsuccessful.')
 
     try: 
-      self.tkiRoot   = tk.Tk() # Create the root (base) window
-      self.tkiActive = True
+      self.tkRoot   = tk.Tk() # Create the root (base) window
+      self.tkActive = True
     except: 
-      self.tkiActive = False
-      self.reportError('activateTki', 'Initial invocation of Tkinter unsuccessful.')
+      self.tkActive = False
+      self.reportError('activateTk', 'Initial invocation of Tkinter unsuccessful.')
 
     #later: import PIL.Image, PIL.ImageTk #image manipulation package
 
@@ -142,12 +142,12 @@ class enoFcTkMidi:
 
   ############ update midi ############
 
-  def updateTki(self, arg1, arg2): self.tkiRoot.update()
+  def updateTk(self, arg1, arg2): self.tkRoot.update()
 
   ############ update all ############
 
   def updateAll(self, arg1, arg2):
-    if self.useTki  and self.tkiLoaded  and self.tkiActive:  self.updateTki(arg1, arg2)
+    if self.useTk  and self.tkLoaded  and self.tkActive:  self.updateTk(arg1, arg2)
     if self.useMidi and self.midiLoaded and self.midiActive: self.updateMidi(arg1, arg2)
 
   ############ schedule Timer Sensor updates ############
@@ -169,15 +169,15 @@ class enoFcTkMidi:
 
   ############ build tk user interface ############
 
-  def buildTkiUi(self):
-    self.tkiSliders    = {}
-    self.tkiSliderVals = {}
+  def buildTkUi(self):
+    self.tkSliders    = {}
+    self.tkSliderVals = {}
 
     for i in range(self.numSliders):
-      self.tkiSliderVals[i] = 0
-      s = self.tkiSliders[i] = tk.Scale(self.tkiRoot, variable=self.tkiSliderVals[i], \
-            length=self.tkiSliderWidth, \
-            from_ = self.tkiSliderMinVal, to=self.tkiSliderMaxVal)
+      self.tkSliderVals[i] = 0
+      s = self.tkSliders[i] = tk.Scale(self.tkRoot, variable=self.tkSliderVals[i], \
+            length=self.tkSliderWidth, \
+            from_ = self.tkSliderMinVal, to=self.tkSliderMaxVal)
       s.pack(side=tk.TOP)
 
     #tkiSliderNames = None
@@ -185,7 +185,7 @@ class enoFcTkMidi:
   ############ run autolaunch ############
 
   def runAutolaunch(self):
-    if self.useTki: self.buildTkiUi()
+    if self.useTk: self.buildTkUi()
 
     if self.useFreecad and self.useIdleCallback:  self.scheduleIdleSensor()
     if self.useFreecad and self.useTimerCallback: self.scheduleTimerSensor()
@@ -193,14 +193,14 @@ class enoFcTkMidi:
 #############################################################
 ############# freecad-free tkinter environment ##############
 
-def tkiMain():
-  eftm = enoFcTkiMidi(useFreecad = False, useMidi = False)
+def tkMain():
+  eftm = enoFcTkMidi(useFreecad = False, useMidi = False)
   eftm.tkRoot.mainloop()
 
 ############################################
 ################### main ###################
 
 if __name__ == '__main__':
-  tkiMain()
+  tkMain()
 
 ### end ###
