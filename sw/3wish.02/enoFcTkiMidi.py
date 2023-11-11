@@ -174,4 +174,17 @@ class enoFcTkiMidi:
     if self.useIdleCallback:  self.scheduleIdleSensor()
     if self.useTimerCallback: self.scheduleTimerSensor()
 
+
+#############################################################
+############# freecad-free tkinter environment ##############
+
+def tkiMain():
+  eftm = enoFcTkiMidi(useFreecad = False, useMidi = False)
+
+############################################
+################### main ###################
+
+if __name__ == '__main__':
+  tkiMain()
+
 ### end ###
