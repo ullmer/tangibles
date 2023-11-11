@@ -101,15 +101,6 @@ class enoFcTkMidi:
       self.functoolsLoaded = False
       self.reportError('activateTk', 'functools import (for callback "partials") unsuccessful.')
 
-    try: 
-      self.tkRoot    = tk.Tk() # Create the root (base) window
-      self.tkActive  = True
-      self.tkSliderOrient = tk.HORIZONTAL #tk.VERTICAL
-
-    except: 
-      self.tkActive = False
-      self.reportError('activateTk', 'Initial invocation of Tkinter unsuccessful.')
-
     #later: import PIL.Image, PIL.ImageTk #image manipulation package
 
   ############# activate Midi #############
@@ -173,15 +164,28 @@ class enoFcTkMidi:
   ############ build tk user interface ############
 
   def buildTkUi(self):
+    if self.tkRoot is not None: return # don't rebuild multiple times
+
+    try: 
+      self.tkRoot    = tk.Tk() # Create the root (base) window
+      self.tkActive  = True
+      self.tkSliderOrient = tk.HORIZONTAL #tk.VERTICAL
+    except: 
+      self.tkActive = False
+      self.reportError('buildTkUi', 'Initial invocation of Tkinter unsuccessful.')
+
     self.tkSliders    = {}
     self.tkSliderVals = {}
 
+    print("num sliders:", self.numSliders)
+
     for i in range(self.numSliders):
       self.tkSliderVals[i] = 0
-      s = self.tkSliders[i] = tk.Scale(self.tkRoot, variable=self.tkSliderVals[i], 
+      self.tkSliders[i] = tk.Scale(self.tkRoot, variable=self.tkSliderVals[i], 
             length=self.tkSliderWidth, orient=self.tkSliderOrient,
             from_ = self.tkSliderMinVal, to=self.tkSliderMaxVal)
-      s.pack(side=tk.TOP)
+
+      self.tkSliders[i].pack(side=tk.TOP)
 
     #tkiSliderNames = None
 
