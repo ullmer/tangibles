@@ -146,7 +146,8 @@ class enoFcTkMidi:
       profile    = self.enoMidiControllerProfile 
       ourYamlDir = self.swBasePath + '/yaml'
 
-      self.enoMidiCtlr = enoMidiController.enoMidiController(profile, yamlDir=ourYamlDir)
+      self.enoMidiCtlr = enoMidiController.enoMidiController(profile, 
+                           yamlDir=ourYamlDir, midiCtrlOutputId=4)
       self.enoMidiLoaded = True
     except:    
       self.enoMidiLoaded = False
