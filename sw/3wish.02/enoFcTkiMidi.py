@@ -17,16 +17,17 @@ class enoFcTkiMidi:
   tkiSliderWidth = 300
   tkiSliderNames = None
 
-  useTki  = True 
-  useMidi = True
+  useTki     = True 
+  useMidi    = True
 
-  tkiActive      = None
-  midiActive     = None
+  tkiActive  = None
+  midiActive = None
 
   functoolsWorking = None  #Many (etc.) FreeCAD users may not have all 
   tkiWorking       = None  # relevant Python packages or (for MIDI)
   pilWorking       = None  # devices installed.  This shouldn't cause
-  midiWorking      = None  # things to break
+  pygameWorking    = None  # things to break
+  midiWorking      = None  
 
   ############# constructor #############
 
@@ -60,6 +61,45 @@ class enoFcTkiMidi:
 
 
   ############# activate Midi #############
+
+  def activateMidi(self):
+    try:    
+      import pygame as pg
+      self.pygameWorking = True
+    except:    
+      self.pygameWorking = False
+      self.reportError('activateMidi', 'pygame import unsuccessful')
+
+    try:    
+      import pygame.midi
+      pygame.midi.init()
+      self.midiWorking = True
+    except:    
+      self.midiWorking = False
+      self.reportError('activateMidi', 'midi import and initiation unsuccessful')
+
+  ############ update midi ############
+
+  def updateMidi(arg1, arg2):
+    global midiIn
+    e = midiIn.read(100);
+    if len(e) > 2:
+       events = e[1:]
+       print(e)
+       #print(len(events), events)
+       #for event in e[1]: print("event:", event)
+
+  global midiIn
+  midiIn = pygame.midi.Input(1)
+
+  e = midiIn.read(100); print(e)
+
+  ts = coin.SoTimerSensor(updateMidi, 0)
+  ts.schedule()
+except:
+  print("error with pygame/midi functionality:")
+  traceback.print_exc()
+
 
 view, doc, sg, root = genViewDocSgRoot()
 
