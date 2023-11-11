@@ -122,8 +122,8 @@ class enoFcTkiMidi:
 
   def scheduleTimerSensorUpdates(self):
     if self.timerSensor is None:  #avoid relaunch
-      self.timerSensor = coin.SoTimerSensor(self.updateAll, 0) 
-      self.timerSensor.schedule()  # by default, appears ~30 updates per second
+       self.timerSensor = coin.SoTimerSensor(self.updateAll, 0) 
+       self.timerSensor.schedule()  # by default, appears ~30 updates per second
 
   ############ schedule Idle Sensor updates ############
 
