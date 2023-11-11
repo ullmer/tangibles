@@ -2,13 +2,7 @@
 # Brygg Ullmer, Clemson University
 # Begun 2023-11-11
 
-import FreeCAD as App
-import FreeCADGui as Gui
-import pivy.coin as coin
 import sys
-
-from w3core  import *
-from w3shift import *
 
 ################### Enodia FreeCAD Tkinter Midi controls ###################
 
@@ -19,16 +13,19 @@ class enoFcTkiMidi:
 
   useTki     = True 
   useMidi    = True
+  useFreecad = True
   autolaunch = True  #autostart all core behaviors (including scheduled callbacks)
 
-  tkiActive  = None
-  midiActive = None
+  tkiActive      = None
+  midiActive     = None
+  freecadActive  = None
 
   functoolsLoaded = None  #Many (etc.) FreeCAD users may not have all 
   tkiLoaded       = None  # relevant Python packages or (for MIDI)
   pilLoaded       = None  # devices installed.  This shouldn't cause
   pygameLoaded    = None  # things to break
   midiLoaded      = None  
+  freecadLoaded   = None  
   
   midiIn  = None  #initially singular variable; eventually multi-device
   midiOut = None
@@ -52,9 +49,25 @@ class enoFcTkiMidi:
     #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-    if self.useTki:     self.activateTki();  self.buildTki()
-    if self.useMidi:    self.activateMidi(); self.buildMidi()
+    if self.useFreecad: self.activateFreecad() 
+    if self.useTki:     self.activateTki();     self.buildTkiUi()
+    if self.useMidi:    self.activateMidi();    self.buildMidi()
     if self.autolaunch: self.runAutolaunch() #naming of these two may benefit from revisiting
+
+  ############# activate Freecad #############
+
+  def activateFreecad(self):
+    try:    
+      import FreeCAD as App
+      import FreeCADGui as Gui
+      import pivy.coin as coin
+      self.freecadLoaded = True
+    except:    
+      self.freecadLoaded = False
+      self.reportError('activateFreecad', 'FreeCAD imports unsuccessful.')
+
+    #from w3core  import *
+    #from w3shift import *
 
   ############# activate Tkinter #############
 
