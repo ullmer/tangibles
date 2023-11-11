@@ -40,14 +40,23 @@ class enoFcTkiMidi:
   ############# activate Tkinter #############
 
   def activateTki(self):
-    try:    from tkinter   import *
+    try:    
+      from tkinter   import *
+      self.tkiWorking = True #let's initially assume that successful import 
+                             #indicates "working." Later with embedded devices
+			     #in particular, this may wish to become more nuanced.
     except: 
+      self.tkiWorking = False
+      self.reportError('activateTki', 'tkinter import unsuccessful.')
 
-    try: from functools import partial
+    try: 
+      from functools import partial
+      self.functoolsWorking = True
+    else: 
+      self.functoolsWorking = False
+      self.reportError('activateTki', 'functools import (for callback "partials") unsuccessful.')
 
-     import PIL.Image, PIL.ImageTk #image manipulation package
-
-
+    #import PIL.Image, PIL.ImageTk #image manipulation package
 
 
   ############# activate Midi #############
