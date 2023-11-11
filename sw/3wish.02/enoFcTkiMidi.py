@@ -40,6 +40,11 @@ class enoFcTkiMidi:
 
   timerSensor = None
   tkiRoot     = None
+  tkiSliders      = None
+  tkiSliderVals   = None
+
+  tkiSliderMinVal = 0
+  tkiSliderMaxVal = 10
 
   ############# constructor #############
 
@@ -138,6 +143,16 @@ class enoFcTkiMidi:
   ############ build tkinter user interface ############
 
   def buildTkiUi(self):
+    self.tkiSliders    = {}
+    self.tkiSliderVals = {}
+
+    for i in range(self.numSliders):
+      s = self.tkiSliders[i] = Scale(self.tkiRoot, self.skiSliderVals[i], 
+            length=self.tkiSliderWidth, 
+            from_ = self.tkiSliderMinVal, to=self.tkiSliderMaxVal)
+      s.pack(side=TOP)
+
+    #tkiSliderNames = None
 
   ############ run autolaunch ############
 
