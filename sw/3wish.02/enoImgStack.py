@@ -97,6 +97,7 @@ class enoTexturePlane:
     #n        = coin.SoNormal()
 
     fs = coin.SoFaceSet(); fs.numVertices.setValue(4)
+    fs.coordIndex.setValues(tcv)
 
     for el in [tc, t2, nb, fs]: tpn.addChild(el)
     #for e in [tc, t2, nb, n, coords, fs]: tpn.addChild(el)
