@@ -43,8 +43,14 @@ class enoCube:
     self.node.addChild(self.cubeNode)
 
     self.translationNode.translation = self.translation
+
     self.materialNode.diffuseColor   = self.diffuseColor
     self.materialNode.emissiveColor  = self.emissiveColor
     self.materialNode.transparency   = self.transparency
+
+    w, d, h = self.size
+    self.cubeNode.width  = w
+    self.cubeNode.height = h
+    self.cubeNode.depth  = d
 
 ### end ###
