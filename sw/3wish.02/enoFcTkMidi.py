@@ -10,8 +10,9 @@ class enoFcTkMidi:
   tkSliderNames = None
 
   useTk      = True 
-  useMidi    = True
-  useFreecad = True
+  useEnoMidi = True # Enodia MIDI controller class
+  useMidi    = False
+  useFreecad = False
   autolaunch = True  #autostart all core behaviors (including scheduled callbacks)
 
   tkActive       = None
@@ -23,12 +24,15 @@ class enoFcTkMidi:
   pilLoaded       = None  # devices installed.  This shouldn't cause
   pygameLoaded    = None  # things to break
   midiLoaded      = None  
+  enoMidiLoaded   = None  
   freecadLoaded   = None  
 
   reportErrorAsStdout = True  # use print statement
   
-  midiIn  = None  #initially singular variable; eventually multi-device
-  midiOut = None
+  midiIn      = None  #initially singular variable; eventually multi-device
+  midiOut     = None
+  enoMidiCtlr = None  #hopefully will migrate to auto-identify, but not there yet
+  enoMidiControllerProfile = 'akai-apcmini-mk2-midi'
   
   useTimerCallback = True
   useIdleCallback  = False # I view SoIdle callback as much more 
@@ -56,6 +60,7 @@ class enoFcTkMidi:
     if self.useFreecad: self.activateFreecad() 
     if self.useTk:      self.activateTk();     self.buildTkUi()
     if self.useMidi:    self.activateMidi();    self.buildMidi()
+    if self.useEnoMidi: self.activateEnoMidi()
     if self.autolaunch: self.runAutolaunch() #naming of these two may benefit from revisiting
 
   ############# report error#############
@@ -121,6 +126,22 @@ class enoFcTkMidi:
       self.midiIn = pygame.midi.Input(1) #initially hardcoded
     except:    
       self.midiLoaded = False
+      self.reportError('activateMidi', 'midi import and initiation unsuccessful')
+
+
+  ############# activate Enodia Midi controller #############
+
+  def activateEnoMidi(self):
+    try:    
+      global enoMidiController
+      import enoMidiController
+
+      profile = self.enoMidiControllerProfile 
+
+      self.enoMidiCtlr = enoMidiController.enoMidiController(profile)
+      self.enoMidiLoaded = True
+    except:    
+      self.enoMidiLoaded = False
       self.reportError('activateMidi', 'midi import and initiation unsuccessful')
 
   ############ update midi ############
