@@ -291,6 +291,19 @@ class enoFcTkMidi:
     if self.useFreecad and self.useIdleCallback:  self.scheduleIdleSensor()
     if self.useFreecad and self.useTimerCallback: self.scheduleTimerSensor()
 
+  ############ midi event callback############
+
+  def midiEventCb(self, control, arg):
+    try:
+      ctrlType = control[0]
+      ctrlId   = control[1]
+      ctrlVal  = int(arg)
+ 
+      if ctrlType == 's': print(ctrlId, ctrlVal)
+ 
+    except:
+      reportError(self, 'midiEventCb', "error parsing midi event information")
+
 #############################################################
 ############# freecad-free tkinter environment ##############
 
@@ -314,12 +327,12 @@ def tkMain():
   eftm.tkRoot.after(100, tkUpdate)
 
   emc = eftm.enoMidiCtlr
-  emc.registerControls(emc.debugCallback)
+  #emc.registerControls(emc.debugCallback)
+  emc.registerControls(eftm.midiEventCb)
 
   print("cnd:", emc.controllerNumDict)
 
   eftm.tkRoot.mainloop()
-
 
 ############################################
 ################### main ###################
