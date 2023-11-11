@@ -41,6 +41,7 @@ class enoFcTkMidi:
   timerSensor    = None
 
   tkRoot            = None
+  tkWinName         = 'slider controller'
   tkSliders         = None
   tkSliderVals      = None
   tkSliderOrient    = None
@@ -169,6 +170,7 @@ class enoFcTkMidi:
 
     try: 
       self.tkRoot    = tk.Tk() # Create the root (base) window
+      self.tkRoot.winfo_toplevel().title(self.tkWinName)
       self.tkActive  = True
       self.tkSliderOrient = tk.HORIZONTAL #tk.VERTICAL
     except: 
