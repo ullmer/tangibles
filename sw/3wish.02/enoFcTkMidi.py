@@ -195,7 +195,7 @@ class enoFcTkMidi:
     getButton = tk.Button(buttonFrame, text='get slider vals', command=getCb)
 
     setCb = partial(self.setTkSliderValsCb, self)
-    setButton = tk.Button(buttonFrame, text='set slider vals', command=setCb)
+    setButton = tk.Button(buttonFrame, text='reset slider vals', command=setCb)
 
     getButton.pack(side=tk.LEFT)
     setButton.pack(side=tk.LEFT)
@@ -203,11 +203,11 @@ class enoFcTkMidi:
 
   ############ tk slider button callbacks ############
 
-  def getTkSliderValsCb(self): print(self.getTkSliderVals())
+  def getTkSliderValsCb(self, arg): print(self.getTkSliderVals())
 
-  def setTkSliderValsCb(self):
+  def setTkSliderValsCb(self, arg):
     vals = []
-    for i in range(self.numSliders): vals.append(5)
+    for i in range(self.numSliders): vals.append(0)
     self.setTkSliderVals(vals)
 
   ############ get tk slider val ############
@@ -242,7 +242,7 @@ class enoFcTkMidi:
   ############ get tk slider vals ############
 
   def setTkSliderVals(self, vals):
-    if len(vals) != len(self.numSliders):
+    if len(vals) != self.numSliders:
       self.reportError('setTkSliderVals', 'number of vals does not equal number of sliders')
       return None
 
