@@ -11,7 +11,7 @@ import traceback
 ########################## Texture Plane ###########################
 
 class enoTexturePlane:
-  textureName       = None
+  textureImgFn      = None
   textureSize       = None
   textureCoord      = None
   vertexProperty    = None
@@ -26,6 +26,11 @@ class enoTexturePlane:
   def __init__(self, **kwargs):
     #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+
+    if self.textureImgFn is not None:
+      self.buildTexturePlaneIv()
+      result = self.getNode()
+      return result
 
   ############# setValues3 #############
 
@@ -49,8 +54,14 @@ class enoTexturePlane:
 
   ############# assert Iv #############
 
-  def assertTexturePlaneIv(self, textureImgFn, orient='xz'):
-    if self.textureName is None: print("enoTexturePlane assertIv: textureName is empty"); return None
+  def getNode(self):
+    result = self.texturedPlaneNode 
+    return result
+
+  ############# assert Iv #############
+
+  def buildTexturePlaneIv(self, orient='xz'):
+    self.textureImgFn is None: print("enoTexturePlane assertIv: textureImgFn is empty"); return None
 
     hx, hy = textureSize[0]/2., textureSize[1]/2.
 
@@ -82,11 +93,9 @@ class enoTexturePlane:
 
     for e in [tc, t2, nb, n, coords, fs]: tpn.addChild(el)
 
-    IvObj::assertIv
-
-    addNInlineObj $this:transp [format {Material {transparency %s
-	 diffuseColor %s}} $transp $color] pre
-
+    #IvObj::assertIv
+    #addNInlineObj $this:transp [format {Material {transparency %s
+    #	 diffuseColor %s}} $transp $color] pre
   }
 
   ############# change transparency #############
@@ -109,7 +118,7 @@ class enoTexturePlane:
 
 class enoTextureStack:
 
-  textureNames  = None
+  textureImgFns  = None
   textureSize   = [0,0]
   img_offset    = [0,2,0]
   diffuseColor  = (1,1,1)
@@ -118,51 +127,51 @@ class enoTextureStack:
   popout        = 1
 
 
-  method assertIv {{orient xz}} {
-    if {$texture_names == {}} {return} ;#default args don't work
-    set imnum 1
-
-    puts "asserting $this"
-    addNFrame $this
-
-    foreach texture_name $texture_names {
-
-      set name [format {%s:texture%s} $this $imnum]
-      set name_trans [format {%s:trans%s} $this $imnum]
-
-      texture_plane $name -texture_name $texture_name \
-	-texture_size $texture_size -color $color
-
-      $name assertIv $orient
-      addNInlineObj $name_trans \
-	[format {Translation {translation %s}} $img_offset]
-
-      bindNObj $name [format {%s highlight %s} $this $imnum]
-      $name changeTransp [lindex $highlights 0]
-
-      incr imnum
-    }
-
-    highlight $popout
-  }
-
-  def highlight(self, whichLayer):
-    tnLen = length(self.textureNames)
-    if whichLayer > tnLen or whichLayer < 1:
-      print("enoImgStack enoTextureStack highlight error: bad layer specifier %i (%i)" % (whichLayer, tnLen)); return None
- 
-    if self.lastHighlighted is not None: self.lastHighlighted.changeTransp(
-
-    else:
-     self.lastHighlighted = 
-  
-
-    if {$last_highlighted != {}} {
-      $last_highlighted changeTransp [lindex $highlights 0]
-    }
-
-    set last_highlighted $this:texture$layer
-    $last_highlighted changeTransp [lindex $highlights 1]
-  }
-
-### end ###
+#  method assertIv {{orient xz}} {
+#    if {$texture_names == {}} {return} ;#default args don't work
+#    set imnum 1
+#
+#    puts "asserting $this"
+#    addNFrame $this
+#
+#    foreach texture_name $texture_names {
+#
+#      set name [format {%s:texture%s} $this $imnum]
+#      set name_trans [format {%s:trans%s} $this $imnum]
+#
+#      texture_plane $name -texture_name $texture_name \
+#	-texture_size $texture_size -color $color
+#
+#      $name assertIv $orient
+#      addNInlineObj $name_trans \
+#	[format {Translation {translation %s}} $img_offset]
+#
+#      bindNObj $name [format {%s highlight %s} $this $imnum]
+#      $name changeTransp [lindex $highlights 0]
+#
+#      incr imnum
+#    }
+#
+#    highlight $popout
+#  }
+#
+#  def highlight(self, whichLayer):
+#    tnLen = length(self.textureImgFns)
+#    if whichLayer > tnLen or whichLayer < 1:
+#      print("enoImgStack enoTextureStack highlight error: bad layer specifier %i (%i)" % (whichLayer, tnLen)); return None
+# 
+#    if self.lastHighlighted is not None: self.lastHighlighted.changeTransp(
+#
+#    else:
+#     self.lastHighlighted = 
+#  
+#
+#    if {$last_highlighted != {}} {
+#      $last_highlighted changeTransp [lindex $highlights 0]
+#    }
+#
+#    set last_highlighted $this:texture$layer
+#    $last_highlighted changeTransp [lindex $highlights 1]
+#  }
+#
+#### end ###
