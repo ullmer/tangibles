@@ -249,7 +249,7 @@ class enoMidiController:
         #self.registerCallback(ctrlName, self.debugCallback)
         self.registerCallback(ctrlName, callbackFunc)
     except:
-      print("enoMidiController registerControls exception:")
+      print("enoMidiController registerControls exception:", controlsList)
       traceback.print_exc(); return None
 
   ############# register external callback #############

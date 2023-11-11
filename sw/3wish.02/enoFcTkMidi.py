@@ -312,7 +312,14 @@ def tkMain():
   tkUpdate.__name__ = 'ourTkUpdate' # This is necessary because of a ~bug on line ~821 of tkinter __init__
 
   eftm.tkRoot.after(100, tkUpdate)
+
+  emc = eftm.enoMidiCtlr
+  emc.registerControls(emc.debugCallback)
+
+  print("cnd:", emc.controllerNumDict)
+
   eftm.tkRoot.mainloop()
+
 
 ############################################
 ################### main ###################
