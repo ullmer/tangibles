@@ -189,7 +189,26 @@ class enoFcTkMidi:
       s.pack(side=tk.LEFT) #with slider on right
       f.pack(side=tk.TOP)  #and pack to the top
 
-    #tkiSliderNames = None
+    buttonFrame = tk.Frame(self.tkRoot)
+
+    getCb = partial(self.getTkSliderValsCb, self)
+    getButton = tk.Button(buttonFrame, text='get slider vals', command=getCb)
+
+    setCb = partial(self.setTkSliderValsCb, self)
+    setButton = tk.Button(buttonFrame, text='set slider vals', command=setCb)
+
+    getButton.pack(side=tk.LEFT)
+    setButton.pack(side=tk.LEFT)
+    buttonFrame.pack(side=tk.TOP)
+
+  ############ tk slider button callbacks ############
+
+  def getTkSliderValsCb(self): print(self.getTkSliderVals())
+
+  def setTkSliderVals(self):
+    vals = []
+    for i in range(self.numSliders): vals.append(5)
+    self.
 
   ############ get tk slider val ############
 
@@ -199,6 +218,16 @@ class enoFcTkMidi:
 
     s = self.tkSliders[whichSlider]
     result = s.get()
+    return result
+
+  ############ get tk slider vals ############
+
+  def getTkSliderVals(self):
+    result = []
+    for i in range(self.numSliders):
+      val = self.getTkSliderVal(i)
+      result.append(val)
+    
     return result
 
   ############ set tk slider val ############
