@@ -11,6 +11,8 @@ import traceback
 ########################## Texture Plane ###########################
 
 class enoTexturePlane:
+  translationVal    = None
+  translationNode   = None
   textureImgFn      = None
   textureSize       = (1,1)
   textureCoord      = None
@@ -59,7 +61,6 @@ class enoTexturePlane:
   ############# assert Iv #############
 
   def buildTexturePlaneIv(self, orient='xz'):
-    print('0')
     if self.textureImgFn is None: print("enoTexturePlane assertIv: textureImgFn is empty"); return None
 
     hx, hy = self.textureSize[0]/2., self.textureSize[1]/2.
@@ -67,7 +68,6 @@ class enoTexturePlane:
     #see https://github.com/coin3d/pivy/blob/master/examples/Mentor/07.2.TextureCoordinates.py
     #self.vertexProperty = coin.SoVertexProperty() 
 
-    print('a')
     c3 = coin.SoCoordinate3()
     n  = coin.SoNormal()
     #tcv = self.vertexProperty.vertex
@@ -80,13 +80,15 @@ class enoTexturePlane:
       self.setValues3(c3.point, [[-hx,hy,0], [hx,hy,0], [hx,-hy,0], [-hx,-hy,0]])
       self.setValues3(n, [[0,0,1]])
 
-    print('b')
-
     tpn = self.texturedPlaneNode = coin.SoSeparator()
+
+    if self.translationVal is not None:
+      self.translationNode = coin.SoTranslation()
+      self.translationNode.translation = self.translationVal
+      tpn.addChild(self.translationNode)
+
     tc  = self.textureCoord      = coin.SoTextureCoordinate2()
     self.setValues2(tc.point, [[1,1], [0,1], [0,0], [1,0]])
-
-    print('c')
 
     t2  = self.texture2 = coin.SoTexture2(); 
     t2.filename.setValue(self.textureImgFn)
