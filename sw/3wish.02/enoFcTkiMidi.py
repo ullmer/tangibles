@@ -7,9 +7,13 @@ import FreeCADGui as Gui
 import pivy.coin as coin
 import sys
 
-sys.path.append('c:/git/tangibles/sw/3wish.02')
 from w3core  import *
 from w3shift import *
+
+################### Enodia FreeCAD Tkinter Midi controls ###################
+
+class enoFcTkiMidi:
+
 
 view, doc, sg, root = genViewDocSgRoot()
 
