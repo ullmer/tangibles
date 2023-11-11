@@ -28,6 +28,11 @@ class enoFcTkiMidi:
   pilWorking       = None  # devices installed.  This shouldn't cause
   pygameWorking    = None  # things to break
   midiWorking      = None  
+  
+  useTimerCallback = True
+  useIdleCallback  = False # I view SoIdle callback as much more 
+                           #  responsive to system load, but it doesn't
+                           #  appear to be properly working in FreeCAD ~0.21
 
   ############# constructor #############
 
