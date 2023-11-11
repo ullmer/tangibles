@@ -133,42 +133,44 @@ class enoTexturePlane:
 class enoTextureStack:
 
   textureImgFns  = None
-  textureSize   = [0,0]
-  img_offset    = [0,2,0]
-  diffuseColor  = (1,1,1)
-  lastHighlight = None
-  highlights    = [.7, .2]
-  popout        = 1
+  textureSize    = [0,0]
+  imgOffset      = [0,2,0]
+  diffuseColor   = (1,1,1)
+  lastHighlight  = None
+  highlights     = [.7, .2]
+  popout         = 1
 
+  enoTexturePlanes = None
+  transNode        = None
 
-#  method assertIv {{orient xz}} {
-#    if {$texture_names == {}} {return} ;#default args don't work
-#    set imnum 1
-#
-#    puts "asserting $this"
-#    addNFrame $this
-#
-#    foreach texture_name $texture_names {
-#
-#      set name [format {%s:texture%s} $this $imnum]
-#      set name_trans [format {%s:trans%s} $this $imnum]
-#
-#      texture_plane $name -texture_name $texture_name \
-#	-texture_size $texture_size -color $color
-#
-#      $name assertIv $orient
-#      addNInlineObj $name_trans \
-#	[format {Translation {translation %s}} $img_offset]
-#
-#      bindNObj $name [format {%s highlight %s} $this $imnum]
-#      $name changeTransp [lindex $highlights 0]
-#
-#      incr imnum
-#    }
-#
-#    highlight $popout
-#  }
-#
+  node           = None
+  orient         = 'xz'
+  popoutIdx      = 1
+
+  ############# constructor #############
+
+  def __init__(self, **kwargs):
+    #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+
+  ############# constructor #############
+  def buildNode(self):
+    if self.textureImgFns is None: return
+
+    imNum=1
+    self.enoTexturePlanes = []
+    self.node             = coin.SoSeparator()
+    self.transNode        = coin.SoTranslation()
+    self.transNode.translation = self.imgOffset
+
+    for textureImgFn in self.textureImgFns:
+      ti = enoTexturePlane(textureImgFn)
+      self.enoTexturePlanes.append(ti)
+      self.node.addChidl(ti.getNode())
+      self.node.addChild(self.transNode)
+
+      self.highlight(popoutIdx)
+
 #  def highlight(self, whichLayer):
 #    tnLen = length(self.textureImgFns)
 #    if whichLayer > tnLen or whichLayer < 1:
