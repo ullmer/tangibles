@@ -1,8 +1,6 @@
-# Initial weaving of weaving of FreeCAD and kin, Tkinter, and midi controls
+# Initial weaving of FreeCAD and kin, Tkinter, and midi controls
 # Brygg Ullmer, Clemson University
 # Begun 2023-11-11
-
-import sys
 
 ################### Enodia FreeCAD Tkinter Midi controls ###################
 
