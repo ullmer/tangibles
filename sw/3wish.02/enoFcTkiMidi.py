@@ -1,6 +1,6 @@
-# First validation of Python port of 1995 3wish code
+# Initial weaving of weaving of FreeCAD and kin, Tkinter, and midi controls
 # Brygg Ullmer, Clemson University
-# Original code begun fall 1995; here, 2023-10-20
+# Begun 2023-11-11
 
 import FreeCAD as App
 import FreeCADGui as Gui
@@ -13,6 +13,28 @@ from w3shift import *
 ################### Enodia FreeCAD Tkinter Midi controls ###################
 
 class enoFcTkiMidi:
+  numSliders     = 8
+  tkiSliderWidth = 300
+  tkiSliderNames = None
+
+  useTki  = True 
+  useMidi = True
+
+  tkiActive      = None
+  midiActive     = None
+
+  ############# constructor #############
+
+  def __init__(self, **kwargs):
+    #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+
+    if self.useTki:  self.activateTki();  self.buildTki()
+    if self.useMidi: self.activateMidi(); self.buildMidi()
+
+    if self.textureImgFn is not None:
+      self.buildTexturePlaneIv()
+
 
 
 view, doc, sg, root = genViewDocSgRoot()
