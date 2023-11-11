@@ -353,7 +353,7 @@ class enoMidiController:
   ############# pollMidi #############
 
   def pollMidi(self):
-    print(".", endline=''); sys.stdout.flush()
+    print(".", end=''); sys.stdout.flush()
     if self.isActiveDevice('nov_launchpad'): 
       bstate = self.lp.ButtonStateRaw()
       if bstate != []:

@@ -30,7 +30,7 @@ class enoFcTkMidi:
   freecadActive  = None
 
   freecadHoldsMainloop = False
-  tkMainloop           = True
+  tkHoldsMainloop      = True
 
   tkLoaded        = None  #Many (etc.) FreeCAD users may not have all 
   pilLoaded       = None  # relevant Python packages or (for MIDI)
@@ -171,7 +171,7 @@ class enoFcTkMidi:
   ############ update all ############
 
   def updateAll(self, arg1, arg2):
-    print(">", endline=''); sys.stdout.flush()
+    print(">", end=''); sys.stdout.flush()
 
     if not self.tkHoldsMainloop and self.useTk and self.tkLoaded   and self.tkActive:   
       self.updateTk(arg1, arg2) #if tk holds mainloop, it will manage Tk updates
@@ -297,9 +297,11 @@ class enoFcTkMidi:
 ############# freecad-free tkinter environment ##############
 
 def afterIdleCb(eftm): 
-  print("!", endline=''); sys.stdout.flush()
-  eftm.updateAll()
+  print("!", end=''); sys.stdout.flush()
+  eftm.updateAll(0,0)
   tkUpdate = partial(afterIdleCb, eftm)
+  tkUpdate.__name__ = 'ourTkUpdate' # trying to debug weird tkinter "after" issue
+
   eftm.tkRoot.update()
   eftm.tkRoot.after(100, tkUpdate)
 
@@ -309,9 +311,10 @@ def tkMain():
   global basedir #base directory filename (at least originally) declared at beginning of this file
   eftm = enoFcTkMidi(useFreecad = False, useMidi = False, swBasePath=basedir)
 
-  ourTkUpdate = partial(afterIdleCb, eftm)
+  tkUpdate = partial(afterIdleCb, eftm)
+  tkUpdate.__name__ = 'ourTkUpdate' # trying to debug weird tkinter "after" issue
 
-  eftm.tkRoot.after(100, ourTkUpdate)
+  eftm.tkRoot.after(100, tkUpdate)
   eftm.tkRoot.mainloop()
 
 ############################################
