@@ -23,6 +23,11 @@ class enoFcTkiMidi:
   tkiActive      = None
   midiActive     = None
 
+  functoolsWorking = None  #Many (etc.) FreeCAD users may not have all 
+  tkiWorking       = None  # relevant Python packages or (for MIDI)
+  pilWorking       = None  # devices installed.  This shouldn't cause
+  midiWorking      = None  # things to break
+
   ############# constructor #############
 
   def __init__(self, **kwargs):
@@ -32,9 +37,20 @@ class enoFcTkiMidi:
     if self.useTki:  self.activateTki();  self.buildTki()
     if self.useMidi: self.activateMidi(); self.buildMidi()
 
-    if self.textureImgFn is not None:
-      self.buildTexturePlaneIv()
+  ############# activate Tkinter #############
 
+  def activateTki(self):
+    try:    from tkinter   import *
+    except: 
+
+    try: from functools import partial
+
+     import PIL.Image, PIL.ImageTk #image manipulation package
+
+
+
+
+  ############# activate Midi #############
 
 
 view, doc, sg, root = genViewDocSgRoot()
