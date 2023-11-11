@@ -26,6 +26,8 @@ class enoFcTkiMidi:
   pygameLoaded    = None  # things to break
   midiLoaded      = None  
   freecadLoaded   = None  
+
+  reportErrorAsStdout = True  # use print statement
   
   midiIn  = None  #initially singular variable; eventually multi-device
   midiOut = None
@@ -54,6 +56,12 @@ class enoFcTkiMidi:
     if self.useMidi:    self.activateMidi();    self.buildMidi()
     if self.autolaunch: self.runAutolaunch() #naming of these two may benefit from revisiting
 
+  ############# report error#############
+
+  def reportError(self, methodCalled, errorMsg): #with an eye toward VR, etc.
+    if self.reportErrorAsStdout:
+      print("error: enoFcTkiMidi %s: %s" % (methodCalled, errorMsg))
+
   ############# activate Freecad #############
 
   def activateFreecad(self):
@@ -73,7 +81,7 @@ class enoFcTkiMidi:
 
   def activateTki(self):
     try:    
-      from tkinter   import *
+      import tkinter 
       self.tkiLoaded = True #let's initially assume that successful import 
                              #indicates "working." Later with embedded devices
 			     #in particular, this may wish to become more nuanced.
@@ -84,7 +92,7 @@ class enoFcTkiMidi:
     try: 
       from functools import partial
       self.functoolsLoaded = True
-    else: 
+    except: 
       self.functoolsLoaded = False
       self.reportError('activateTki', 'functools import (for callback "partials") unsuccessful.')
 
@@ -147,9 +155,9 @@ class enoFcTkiMidi:
 
   def scheduleIdleSensorUpdates(self):
     self.reportError('scheduleIdleSensorUpdates', 
-       'Ullmer views SoIdle callback as much more responsive to system load,\n' +
-       'but SoIdle doesn't appear to be properly working in FreeCAD ~0.21.\n' +
-       'Launching TimerSensor as alternative')
+       "Ullmer views SoIdle callback as much more responsive to system load,\n" +
+       "but SoIdle doesn't appear to be properly working in FreeCAD ~0.21.\n" +
+       "Launching TimerSensor as alternative")
 
     self.scheduleTimerSensorUpdates() #unsure of this choice, but initially...
 
@@ -160,7 +168,7 @@ class enoFcTkiMidi:
     self.tkiSliderVals = {}
 
     for i in range(self.numSliders):
-      s = self.tkiSliders[i] = Scale(self.tkiRoot, self.skiSliderVals[i], 
+      s = self.tkiSliders[i] = tkinter.Scale(self.tkiRoot, self.skiSliderVals[i], 
             length=self.tkiSliderWidth, 
             from_ = self.tkiSliderMinVal, to=self.tkiSliderMaxVal)
       s.pack(side=TOP)
