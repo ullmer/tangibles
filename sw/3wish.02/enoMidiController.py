@@ -242,15 +242,26 @@ class enoMidiController:
 
     try:
       for c in controlsList:
-        ctrlName, midiStatus, midiNum = c['key'], c['status'], c['midino']
-        midiStatNumKey = self.midiStatusNumKey(midiStatus, midiNum)
-        self.controllerStatusNumDict[midiStatNumKey] = ctrlName
-        self.controllerNumDict[midiNum]              = ctrlName
-        #self.registerCallback(ctrlName, self.debugCallback)
-        self.registerCallback(ctrlName, callbackFunc)
+        if 'status' in c:
+          ctrlName, midiStatus, midiNum = c['key'], c['status'], c['midino']
+          self.registerControlsHelper(ctrlName, midiStatus, midiNum, callbackFunc)
+        else: 
+          if 'status_press' in c:
+            ctrlName, midiStatus, midiNum = c['key'], c['status_press'], c['midino']
+            self.registerControlsHelper(ctrlName, midiStatus, midiNum, callbackFunc)
+
+          if 'status_release' in c:
+            ctrlName, midiStatus, midiNum = c['key'], c['status_release'], c['midino']
+            self.registerControlsHelper(ctrlName, midiStatus, midiNum, callbackFunc)
     except:
       print("enoMidiController registerControls exception:", controlsList)
       traceback.print_exc(); return None
+
+  def registerControlsHelper(self, ctrlName, midiStatus, midiNum, callbackFunc):
+    midiStatNumKey = self.midiStatusNumKey(midiStatus, midiNum)
+    self.controllerStatusNumDict[midiStatNumKey] = ctrlName
+    self.controllerNumDict[midiNum]              = ctrlName
+    self.registerCallback(ctrlName, callbackFunc)
 
   ############# register external callback #############
 
