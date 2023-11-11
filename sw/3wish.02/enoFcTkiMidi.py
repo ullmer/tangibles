@@ -38,6 +38,8 @@ class enoFcTkiMidi:
                            #  responsive to system load, but it doesn't
                            #  appear to be properly working in FreeCAD ~0.21
 
+  timerSensor = None
+
   ############# constructor #############
 
   def __init__(self, **kwargs):
@@ -98,15 +100,16 @@ class enoFcTkiMidi:
        #print(len(events), events)
        #for event in e[1]: print("event:", event)
 
+  ############ update all ############
 
-  ts = coin.SoTimerSensor(updateMidi, 0)
-  ts.schedule()
-except:
-  print("error with pygame/midi functionality:")
-  traceback.print_exc()
+  def updateAll(self, arg1, arg2):
+    if self.useTki  and self.tkiWorking  and self.tkiActive:  self.updateTki(arg1, arg2)
+    if self.useMidi and self.midiWorking and self.midiActive: self.updateMidi(arg1, arg2)
 
+  ############ schedule Timer Sensor updates ############
 
-view, doc, sg, root = genViewDocSgRoot()
-
+  def scheduleTimerSensorUpdates(self):
+    self.timerSensor = coin.SoTimerSensor(self.updateAll, 0) 
+    self.timerSensor.schedule()  # by default, appears ~30 updates per second
 
 ### end ###
