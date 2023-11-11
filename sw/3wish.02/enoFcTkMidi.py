@@ -4,6 +4,8 @@
 
 import sys, traceback # for assisting error debugging (without code failing)
 
+from time import sleep
+
 basedir = 'c:/git/tangibles/sw/3wish.02' #update to location of source if manually installed, or None otherwise
 
 ################### Enodia FreeCAD Tkinter Midi controls ###################
@@ -302,13 +304,22 @@ class enoFcTkMidi:
 #############################################################
 ############# freecad-free tkinter environment ##############
 
+def afterIdleCb(eftm): 
+  print("!", endline=''); sys.stdout.flush()
+  eftm.updateAll()
+  tkUpdate = partial(afterIdleCb, eftm)
+  eftm.tkRoot.update()
+  eftm.tkRoot.after(100, tkUpdate)
+
 def tkMain():
+  global afterIdleCb, partial
+
   global basedir #base directory filename (at least originally) declared at beginning of this file
   eftm = enoFcTkMidi(useFreecad = False, useMidi = False, swBasePath=basedir)
 
-  tkUpdateWrapper = partial(eftm.updateAll, eftm, 0, 0) #FreeCAD callbacks pass more arguments than Tk
+  tkUpdate = partial(afterIdleCb, eftm)
 
-  eftm.tkRoot.after_idle(tkUpdateWrapper)
+  eftm.tkRoot.after(100, tkUpdate)
   eftm.tkRoot.mainloop()
 
 ############################################
