@@ -96,12 +96,8 @@ class enoTexturePlane:
     nb.value = coin.SoNormalBinding.PER_FACE
 
     fs = coin.SoFaceSet(); fs.numVertices.setValue(4)
-    fs.coordIndex.setValues(tc)
-    #fs.coordIndex.setValues(tcv)
 
-    #for el in [tc, t2, nb, fs]: tpn.addChild(el)
-    #for e in [tc, t2, nb, n, coords, fs]: tpn.addChild(el)
-    for el in [tc, t2, nb, n, coords, fs]: tpn.addChild(el)
+    for el in [tc, t2, nb, n, c3, fs]: tpn.addChild(el)
     return tpn
 
   ############# change transparency #############
