@@ -39,7 +39,7 @@ class enoFcTkMidi:
   midiIn      = None  #initially singular variable; eventually multi-device
   midiOut     = None
   enoMidiCtlr = None  #hopefully will migrate to auto-identify, but not there yet
-  enoMidiControllerProfile = 'akai-apcmini-mk2-midi'
+  enoMidiControllerProfile = 'aka_apcmini2'
   
   useTimerCallback = True
   useIdleCallback  = False # I view SoIdle callback as much more 

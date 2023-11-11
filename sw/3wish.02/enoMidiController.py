@@ -61,6 +61,11 @@ class enoMidiController:
 
     self.controllerName = controllerName
     yamlFn = self.controller2yamlFnActivations(controllerName)
+
+    if not os.path.exists(yamlFn):
+      print("enoMidiController constructor failure: yaml filename %s doesn't exist" % yamlFn)
+      return None
+
     self.loadYaml(yamlFn)
     self.startMidi() # shaped partly by activations assigned within controller2yamlFnActivations; may benefit from refactoring
 
