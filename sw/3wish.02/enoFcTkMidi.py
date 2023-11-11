@@ -41,7 +41,6 @@ class enoFcTkMidi:
   tkRoot            = None
   tkWinName         = 'slider controller'
   tkSliders         = None
-  tkSliderVals      = None
   tkSliderOrient    = None
   tkSliderShowValue = 0
 
@@ -176,15 +175,12 @@ class enoFcTkMidi:
       self.reportError('buildTkUi', 'Initial invocation of Tkinter unsuccessful.')
 
     self.tkSliders    = {}
-    self.tkSliderVals = {}
 
     for i in range(self.numSliders):
-      self.tkSliderVals[i] = 0
-
       f = tk.Frame(self.tkRoot)
       l = tk.Label(f, text=str(i))
 
-      s = self.tkSliders[i] = tk.Scale(f, variable=self.tkSliderVals[i], 
+      s = self.tkSliders[i] = tk.Scale(f, 
             length=self.tkSliderWidth, orient=self.tkSliderOrient, 
             from_ = self.tkSliderMinVal, to=self.tkSliderMaxVal,
             showvalue=self.tkSliderShowValue)
@@ -194,6 +190,25 @@ class enoFcTkMidi:
       f.pack(side=tk.TOP)  #and pack to the top
 
     #tkiSliderNames = None
+
+  ############ get tk slider val ############
+
+  def getTkSliderVal(self, whichSlider):
+    if whichSlider not in self.tkSliders:
+      self.reportError('getTkSliderVal', 'invalid whichSlider val used'); return None
+
+    s = self.tkSliders[whichSlider]
+    result = s.get()
+    return result
+
+  ############ set tk slider val ############
+
+  def setTkSliderVal(self, whichSlider, whichVal):
+    if whichSlider not in self.tkSliders:
+      self.reportError('setTkSliderVal', 'invalid whichSlider val used'); return None
+
+    s = self.tkSliders[whichSlider]
+    result = s.set(whichVal)
 
   ############ run autolaunch ############
 
