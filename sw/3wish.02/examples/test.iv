@@ -1,0 +1,122 @@
+#Inventor V2.1 ascii
+
+
+Switch {
+  whichChild 0
+
+  Separator {
+    renderCaching OFF
+    boundingBoxCaching OFF
+
+    DEF _+0 Separator {
+      renderCaching OFF
+      boundingBoxCaching OFF
+
+      MaterialBinding {
+        value OVERALL
+
+      }
+      Material {
+        ambientColor 0.2 0.2 0.2
+        diffuseColor 0.098039217 0.098039217 0.098039217
+        specularColor 0 0 0
+        emissiveColor 0 0 0
+        shininess 1
+        transparency 0
+
+      }
+      DrawStyle {
+        style POINTS
+        pointSize 2
+
+      }
+      SoBrepPointSet {
+        fields [ SFNode vertexProperty, SFInt32 startIndex, SFInt32 numPoints ]
+        startIndex 4
+
+      }
+    }
+    DEF Edge Separator {
+      renderCaching OFF
+      boundingBoxCaching OFF
+
+      MaterialBinding {
+        value OVERALL
+
+      }
+      Material {
+        ambientColor 0.2 0.2 0.2
+        diffuseColor 0.098039217 0.098039217 0.098039217
+        specularColor 0 0 0
+        emissiveColor 0 0 0
+        shininess 1
+        transparency 0
+
+      }
+      DrawStyle {
+        style LINES
+        lineWidth 2
+        linePattern 0xffff
+
+      }
+      SoBrepEdgeSet {
+        fields [ SFNode vertexProperty, MFInt32 coordIndex, MFInt32 materialIndex, MFInt32 normalIndex, MFInt32 textureCoordIndex ]
+        coordIndex [ 0, 1, -1, 0, 2, -1, 2, 3,
+            -1, 1, 3, -1 ]
+
+      }
+    }
+    PolygonOffset {
+
+    }
+    DEF _+1 Separator {
+      renderCaching OFF
+      boundingBoxCaching OFF
+
+      ShapeHints {
+        vertexOrdering COUNTERCLOCKWISE
+        shapeType UNKNOWN_SHAPE_TYPE
+
+      }
+      MaterialBinding {
+        value OVERALL
+
+      }
+      Material {
+        diffuseColor 0.80000001 0.80000001 0.80000001
+        transparency 0
+
+      }
+      DrawStyle {
+        style FILLED
+
+      }
+      Normal {
+        vector [ 0 0 1,
+            0 0 1,
+            0 0 1,
+            0 0 1 ]
+
+      }
+      NormalBinding {
+        value PER_VERTEX_INDEXED
+
+      }
+      SoBrepFaceSet {
+        fields [ SFNode vertexProperty, MFInt32 coordIndex, MFInt32 materialIndex, MFInt32 normalIndex, MFInt32 textureCoordIndex, MFInt32 partIndex ]
+        coordIndex [ 3, 1, 0, -1, 3, 0, 2, -1 ]
+        partIndex 2
+
+      }
+    }
+  }
+  USE _+1
+  Separator {
+    renderCaching OFF
+    boundingBoxCaching OFF
+
+    USE Edge
+    USE _+0
+  }
+  USE _+0
+}
