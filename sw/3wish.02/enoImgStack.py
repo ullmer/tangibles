@@ -29,8 +29,6 @@ class enoTexturePlane:
 
     if self.textureImgFn is not None:
       self.buildTexturePlaneIv()
-      result = self.getNode()
-      return result
 
   ############# setValues3 #############
 
@@ -92,10 +90,7 @@ class enoTexturePlane:
     fs = coin.SoFaceSet(); fs.numVertices.setValue(4)
 
     for e in [tc, t2, nb, n, coords, fs]: tpn.addChild(el)
-
-    #IvObj::assertIv
-    #addNInlineObj $this:transp [format {Material {transparency %s
-    #	 diffuseColor %s}} $transp $color] pre
+    return tpn
 
   ############# change transparency #############
 
