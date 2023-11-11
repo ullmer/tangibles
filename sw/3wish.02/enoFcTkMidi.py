@@ -205,10 +205,10 @@ class enoFcTkMidi:
 
   def getTkSliderValsCb(self): print(self.getTkSliderVals())
 
-  def setTkSliderVals(self):
+  def setTkSliderValsCb(self):
     vals = []
     for i in range(self.numSliders): vals.append(5)
-    self.
+    self.setTkSliderVals(vals)
 
   ############ get tk slider val ############
 
@@ -238,6 +238,16 @@ class enoFcTkMidi:
 
     s = self.tkSliders[whichSlider]
     result = s.set(whichVal)
+
+  ############ get tk slider vals ############
+
+  def setTkSliderVals(self, vals):
+    if len(vals) != len(self.numSliders):
+      self.reportError('setTkSliderVals', 'number of vals does not equal number of sliders')
+      return None
+
+    i=0
+    for val in vals: val = self.setTkSliderVal(i, val); i += 1
 
   ############ run autolaunch ############
 
