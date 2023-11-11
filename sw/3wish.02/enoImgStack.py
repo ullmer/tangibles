@@ -61,7 +61,7 @@ class enoTexturePlane:
   ############# assert Iv #############
 
   def buildTexturePlaneIv(self, orient='xz'):
-    self.textureImgFn is None: print("enoTexturePlane assertIv: textureImgFn is empty"); return None
+    if self.textureImgFn is None: print("enoTexturePlane assertIv: textureImgFn is empty"); return None
 
     hx, hy = textureSize[0]/2., textureSize[1]/2.
 
