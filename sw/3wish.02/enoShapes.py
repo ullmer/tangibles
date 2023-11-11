@@ -10,8 +10,8 @@ import traceback
 class enoCube:
   diffuseColor   = (1,1,1)
   emmissiveColor = (1,1,1)
-  transparency   = 0.7
   size           = (1,1,1)
+  transparency   = 0.7
   node           = None
   materialNode   = None
   cubeNode       = None
@@ -24,7 +24,6 @@ class enoCube:
   def __init__(self, **kwargs):
     #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
-
     self.buildCube()
 
   ############# get node #############
@@ -33,7 +32,7 @@ class enoCube:
 
   ############# buildCube #############
 
-  def buildTexturePlaneIv(self):
+  def buildCube(self):
     self.node            = coin.SoSeparator()
     self.translationNode = coin.SoTranslation()
     self.materialNode    = coin.SoMaterial()
