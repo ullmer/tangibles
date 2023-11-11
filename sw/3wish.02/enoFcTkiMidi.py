@@ -135,6 +135,10 @@ class enoFcTkiMidi:
 
     self.scheduleTimerSensorUpdates() #unsure of this choice, but initially...
 
+  ############ build tkinter user interface ############
+
+  def buildTkiUi(self):
+
   ############ run autolaunch ############
 
   def runAutolaunch(self):
