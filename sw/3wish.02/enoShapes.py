@@ -70,5 +70,31 @@ class enoCube(enoShape):
     self.cubeNode.height = h
     self.cubeNode.depth  = d
 
+####################### enodia cylinder ########################
+
+class enoCylinder(enoShape):
+  cylinderNode       = None
+
+  ############# constructor #############
+
+  def __init__(self, **kwargs):
+    #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+
+    if len(self.size) > 2: self.size = self.size[0:2] # (e.g.) 3-part dimensionality would cause issues
+    self.buildShape()
+
+  ############# buildShape #############
+
+  def buildShape(self):
+    super(enoCylinder, self).buildShape()
+
+    self.cylinderNode = coin.SoCylinder()
+    self.node.addChild(self.cylinderNode)
+
+    r, h = self.size
+    self.cylinderNode.radius = r
+    self.cylinderNode.height = h
+
 ### end ###
 
