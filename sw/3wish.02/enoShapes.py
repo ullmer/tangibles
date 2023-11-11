@@ -38,7 +38,6 @@ class enoShape:
 
     self.node.addChild(self.translationNode)
     self.node.addChild(self.materialNode)
-    self.node.addChild(self.cubeNode)
 
     self.translationNode.translation = self.translation
 
@@ -61,12 +60,10 @@ class enoCube(enoShape):
   ############# buildShape #############
 
   def buildShape(self):
-    print("foo")
     super(enoCube, self).buildShape()
 
-    print("bar")
-    cubeNode = coin.SoCube()
-    self.node.addChild(cubeNode)
+    self.cubeNode = coin.SoCube()
+    self.node.addChild(self.cubeNode)
 
     w, d, h = self.size
     self.cubeNode.width  = w
