@@ -61,7 +61,7 @@ class enoFcTkMidi:
   tkSliderShowValue = 0
 
   tkSliderMinVal = 0
-  tkSliderMaxVal = 10
+  tkSliderMaxVal = 127
 
   ############# constructor #############
 
@@ -296,16 +296,18 @@ class enoFcTkMidi:
   def midiEventCb(self, control, arg):
     try:
       ctrlType = control[0]
-      ctrlId   = control[1]
+      ctrlId   = int(control[1])
       ctrlVal  = int(arg)
  
-      if ctrlType == 's': print(ctrlId, ctrlVal)
+      if ctrlType == 's': 
+        #print(ctrlId, ctrlVal)
+        self.setTkSliderVal(ctrlId-1, ctrlVal)
  
     except:
       reportError(self, 'midiEventCb', "error parsing midi event information")
 
-#############################################################
-############# freecad-free tkinter environment ##############
+##############################################
+############# update midi, etc. ##############
 
 def afterIdleCb(eftm): 
   eftm.updateAll(0,0)
@@ -313,24 +315,22 @@ def afterIdleCb(eftm):
   tkUpdate.__name__ = 'ourTkUpdate' # This is necessary because of a ~bug on line ~821 of tkinter __init__
 
   eftm.tkRoot.update()
-  eftm.tkRoot.after(100, tkUpdate)
+  eftm.tkRoot.after(50, tkUpdate)
+
+############# freecad-free tkinter environment ##############
 
 def tkMain():
-  global afterIdleCb, partial
+  global basedir, afterIdleCb
 
-  global basedir #base directory filename (at least originally) declared at beginning of this file
   eftm = enoFcTkMidi(useFreecad = False, useMidi = False, swBasePath=basedir)
 
   tkUpdate = partial(afterIdleCb, eftm)
   tkUpdate.__name__ = 'ourTkUpdate' # This is necessary because of a ~bug on line ~821 of tkinter __init__
-
-  eftm.tkRoot.after(100, tkUpdate)
+  eftm.tkRoot.after(50, tkUpdate)
 
   emc = eftm.enoMidiCtlr
   #emc.registerControls(emc.debugCallback)
   emc.registerControls(eftm.midiEventCb)
-
-  print("cnd:", emc.controllerNumDict)
 
   eftm.tkRoot.mainloop()
 
