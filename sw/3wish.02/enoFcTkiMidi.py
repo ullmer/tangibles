@@ -121,7 +121,25 @@ class enoFcTkiMidi:
   ############ schedule Timer Sensor updates ############
 
   def scheduleTimerSensorUpdates(self):
-    self.timerSensor = coin.SoTimerSensor(self.updateAll, 0) 
-    self.timerSensor.schedule()  # by default, appears ~30 updates per second
+    if self.timerSensor is None:  #avoid relaunch
+      self.timerSensor = coin.SoTimerSensor(self.updateAll, 0) 
+      self.timerSensor.schedule()  # by default, appears ~30 updates per second
+
+  ############ schedule Idle Sensor updates ############
+
+  def scheduleIdleSensorUpdates(self):
+    self.reportError('scheduleIdleSensorUpdates', 
+       'Ullmer views SoIdle callback as much more responsive to system load,\n' +
+       'but SoIdle doesn't appear to be properly working in FreeCAD ~0.21.\n' +
+       'Launching TimerSensor as alternative')
+
+    self.scheduleTimerSensorUpdates() #unsure of this choice, but initially...
+
+  ############ run autolaunch ############
+
+  def runAutolaunch(self):
+    self.buildTkiUi()
+    if self.useIdleCallback:  self.scheduleIdleSensor()
+    if self.useTimerCallback: self.scheduleTimerSensor()
 
 ### end ###
