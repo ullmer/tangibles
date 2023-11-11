@@ -163,6 +163,9 @@ class enoFcTkMidi:
        #print(len(events), events)
        #for event in e[1]: print("event:", event)
 
+  def updateEnoMidi(self, arg1, arg2):
+    self.enoMidiCtlr.pollMidi()
+
   ############ update midi ############
 
   def updateTk(self, arg1, arg2): self.tkRoot.update()
@@ -170,8 +173,9 @@ class enoFcTkMidi:
   ############ update all ############
 
   def updateAll(self, arg1, arg2):
-    if self.useTk   and self.tkLoaded   and self.tkActive:   self.updateTk(arg1, arg2)
-    if self.useMidi and self.midiLoaded and self.midiActive: self.updateMidi(arg1, arg2)
+    if self.useTk      and self.tkLoaded   and self.tkActive:   self.updateTk(arg1, arg2)
+    if self.useMidi    and self.midiLoaded and self.midiActive: self.updateMidi(arg1, arg2)
+    if self.useEnoMidi and self.enoMidiLoaded:                  self.updateEnoMidi(arg1, arg2)  
 
   ############ schedule Timer Sensor updates ############
 
