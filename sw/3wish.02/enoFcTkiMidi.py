@@ -24,11 +24,11 @@ class enoFcTkiMidi:
   tkiActive  = None
   midiActive = None
 
-  functoolsWorking = None  #Many (etc.) FreeCAD users may not have all 
-  tkiWorking       = None  # relevant Python packages or (for MIDI)
-  pilWorking       = None  # devices installed.  This shouldn't cause
-  pygameWorking    = None  # things to break
-  midiWorking      = None  
+  functoolsLoaded = None  #Many (etc.) FreeCAD users may not have all 
+  tkiLoaded       = None  # relevant Python packages or (for MIDI)
+  pilLoaded       = None  # devices installed.  This shouldn't cause
+  pygameLoaded    = None  # things to break
+  midiLoaded      = None  
   
   midiIn  = None  #initially singular variable; eventually multi-device
   midiOut = None
@@ -39,6 +39,7 @@ class enoFcTkiMidi:
                            #  appear to be properly working in FreeCAD ~0.21
 
   timerSensor = None
+  tkiRoot     = None
 
   ############# constructor #############
 
@@ -55,19 +56,26 @@ class enoFcTkiMidi:
   def activateTki(self):
     try:    
       from tkinter   import *
-      self.tkiWorking = True #let's initially assume that successful import 
+      self.tkiLoaded = True #let's initially assume that successful import 
                              #indicates "working." Later with embedded devices
 			     #in particular, this may wish to become more nuanced.
     except: 
-      self.tkiWorking = False
+      self.tkiLoaded = False
       self.reportError('activateTki', 'tkinter import unsuccessful.')
 
     try: 
       from functools import partial
-      self.functoolsWorking = True
+      self.functoolsLoaded = True
     else: 
-      self.functoolsWorking = False
+      self.functoolsLoaded = False
       self.reportError('activateTki', 'functools import (for callback "partials") unsuccessful.')
+
+    try: 
+      self.tkiRoot   = Tk() # Create the root (base) window
+      self.tkiActive = True
+    except: 
+      self.tkiActive = False
+      self.reportError('activateTki', 'Initial invocation of Tkinter unsuccessful.')
 
     #later: import PIL.Image, PIL.ImageTk #image manipulation package
 
@@ -76,18 +84,18 @@ class enoFcTkiMidi:
   def activateMidi(self):
     try:    
       import pygame as pg
-      self.pygameWorking = True
+      self.pygameLoaded = True
     except:    
-      self.pygameWorking = False
+      self.pygameLoaded = False
       self.reportError('activateMidi', 'pygame import unsuccessful')
 
     try:    
       import pygame.midi
       pygame.midi.init()
-      self.midiWorking = True
+      self.midiLoaded = True
       self.midiIn = pygame.midi.Input(1) #initially hardcoded
     except:    
-      self.midiWorking = False
+      self.midiLoaded = False
       self.reportError('activateMidi', 'midi import and initiation unsuccessful')
 
   ############ update midi ############
@@ -100,11 +108,17 @@ class enoFcTkiMidi:
        #print(len(events), events)
        #for event in e[1]: print("event:", event)
 
+  ############ update midi ############
+
+  def updateTki(self, arg1, arg2):
+    e = self.midiIn.read(100);
+    if len(e) > 2:
+
   ############ update all ############
 
   def updateAll(self, arg1, arg2):
-    if self.useTki  and self.tkiWorking  and self.tkiActive:  self.updateTki(arg1, arg2)
-    if self.useMidi and self.midiWorking and self.midiActive: self.updateMidi(arg1, arg2)
+    if self.useTki  and self.tkiLoaded  and self.tkiActive:  self.updateTki(arg1, arg2)
+    if self.useMidi and self.midiLoaded and self.midiActive: self.updateMidi(arg1, arg2)
 
   ############ schedule Timer Sensor updates ############
 
