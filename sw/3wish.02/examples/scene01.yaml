@@ -1,0 +1,20 @@
+### Example scene (initially, for FreeCAD engagement)
+# Brygg Ullmer, Clemson University
+# Begun 2023-11-01
+
+scene:
+ - {name: bldg1a,  type: box,   dimensions: [28, 28, 3], placement: [[ 0,  0,   0  ], [ 0, 0, 0]]}
+ - {name: bldg1b,  type: box,   dimensions: [26, 26, 3], placement: [[ 1,  1,   1  ], [ 0, 0, 0]]}
+ - {name: floor,   type: plane, dimensions: [32, 32],    placement: [[-1, -1,   0  ], [ 0, 0, 0]]}
+ - {name: screen1, type: plane, dimensions: [ 8,  4.5],  placement: [[ 3,  3,   2.5], [90, 0,90]]}
+ - {name: screen2, type: plane, dimensions: [ 8,  4.5],  placement: [[ 3, 11.5, 2.5], [90, 0,90]]}
+
+booleanOps:
+ - {name: bldgCut1, op: cut, descr: building central void, base: bldg1a, tool: bldg1b}
+
+camera: 
+  pos1: {viewportMapping: 3,  position: [28.4, 12.3,  12.8], focalDistance: 31.1, heightAngle: 0.785,
+         aspectRatio: 1.0, orientation: [0.335, 0.316, 0.628, 0.627], nearDistance: 2.1, farDistance: 33.6}
+
+### end ###
+
