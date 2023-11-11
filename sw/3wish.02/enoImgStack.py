@@ -65,19 +65,20 @@ class enoTexturePlane:
     hx, hy = self.textureSize[0]/2., self.textureSize[1]/2.
 
     #see https://github.com/coin3d/pivy/blob/master/examples/Mentor/07.2.TextureCoordinates.py
-
-    self.vertexProperty = coin.SoVertexProperty() 
-    tcv = self.vertexProperty.vertex
+    #self.vertexProperty = coin.SoVertexProperty() 
 
     print('a')
+    c3 = coin.SoCoordinate3()
+    n  = coin.SoNormal()
+    #tcv = self.vertexProperty.vertex
 
     if orient == 'xz':
-        self.setValues3(tcv, [[-hx,0,hy], [hx,0,hy], [hx,0,-hy], [-hx,0,-hy]])
-        self.vertexProperty.normal.set1Value(0, coin.SbVec3f(0,1,0))
+      self.setValues3(c3.point, [[-hx,0,hy], [hx,0,hy], [hx,0,-hy], [-hx,0,-hy]])
+      self.setValues3(n, [[0,1,0]])
 
     if orient == 'xy':
-        self.setValues3(tcv, [[-hx,hy,0], [hx,hy,0], [hx,-hy,0], [-hx,-hy,0]])
-        self.setValues3(self.vertexProperty.normal, [[0,0,1]])
+      self.setValues3(c3.point, [[-hx,hy,0], [hx,hy,0], [hx,-hy,0], [-hx,-hy,0]])
+      self.setValues3(n, [[0,0,1]])
 
     print('b')
 
@@ -94,13 +95,13 @@ class enoTexturePlane:
     nb       = coin.SoNormalBinding()
     nb.value = coin.SoNormalBinding.PER_FACE
 
-    #n        = coin.SoNormal()
-
     fs = coin.SoFaceSet(); fs.numVertices.setValue(4)
-    fs.coordIndex.setValues(tcv)
+    fs.coordIndex.setValues(tc)
+    #fs.coordIndex.setValues(tcv)
 
-    for el in [tc, t2, nb, fs]: tpn.addChild(el)
+    #for el in [tc, t2, nb, fs]: tpn.addChild(el)
     #for e in [tc, t2, nb, n, coords, fs]: tpn.addChild(el)
+    for el in [tc, t2, nb, n, coords, fs]: tpn.addChild(el)
     return tpn
 
   ############# change transparency #############
