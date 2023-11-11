@@ -30,6 +30,9 @@ class enoFcTkiMidi:
   pygameWorking    = None  # things to break
   midiWorking      = None  
   
+  midiIn  = None  #initially singular variable; eventually multi-device
+  midiOut = None
+  
   useTimerCallback = True
   useIdleCallback  = False # I view SoIdle callback as much more 
                            #  responsive to system load, but it doesn't
@@ -87,9 +90,8 @@ class enoFcTkiMidi:
 
   ############ update midi ############
 
-  def updateMidi(arg1, arg2):
-    global midiIn
-    e = midiIn.read(100);
+  def updateMidi(self, arg1, arg2):
+    e = self.midiIn.read(100);
     if len(e) > 2:
        events = e[1:]
        print(e)
