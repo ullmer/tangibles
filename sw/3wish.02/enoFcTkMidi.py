@@ -6,22 +6,22 @@ import sys
 
 ################### Enodia FreeCAD Tkinter Midi controls ###################
 
-class enoFcTkiMidi:
+class enoFcTkMidi:
   numSliders     = 8
   tkiSliderWidth = 300
   tkiSliderNames = None
 
-  useTki     = True 
+  useTk      = True 
   useMidi    = True
   useFreecad = True
   autolaunch = True  #autostart all core behaviors (including scheduled callbacks)
 
-  tkiActive      = None
+  tkActive       = None
   midiActive     = None
   freecadActive  = None
 
   functoolsLoaded = None  #Many (etc.) FreeCAD users may not have all 
-  tkiLoaded       = None  # relevant Python packages or (for MIDI)
+  tkLoaded        = None  # relevant Python packages or (for MIDI)
   pilLoaded       = None  # devices installed.  This shouldn't cause
   pygameLoaded    = None  # things to break
   midiLoaded      = None  
@@ -83,14 +83,14 @@ class enoFcTkiMidi:
 
   def activateTki(self):
     try:    
-      global tkinter #sad, but this appears ~necessary with this loading approach
-      import tkinter 
+      global tk #sad, but this appears ~necessary with this loading approach
+      import tk as tk
       self.tkiLoaded = True #let's initially assume that successful import 
                              #indicates "working." Later with embedded devices
 			     #in particular, this may wish to become more nuanced.
     except: 
       self.tkiLoaded = False
-      self.reportError('activateTki', 'tkinter import unsuccessful.')
+      self.reportError('activateTki', 'tk import unsuccessful.')
 
     try: 
       global partial
@@ -101,7 +101,7 @@ class enoFcTkiMidi:
       self.reportError('activateTki', 'functools import (for callback "partials") unsuccessful.')
 
     try: 
-      self.tkiRoot   = tkinter.Tk() # Create the root (base) window
+      self.tkiRoot   = tk.Tk() # Create the root (base) window
       self.tkiActive = True
     except: 
       self.tkiActive = False
@@ -167,7 +167,7 @@ class enoFcTkiMidi:
 
     self.scheduleTimerSensorUpdates() #unsure of this choice, but initially...
 
-  ############ build tkinter user interface ############
+  ############ build tk user interface ############
 
   def buildTkiUi(self):
     self.tkiSliders    = {}
@@ -175,10 +175,10 @@ class enoFcTkiMidi:
 
     for i in range(self.numSliders):
       self.tkiSliderVals[i] = 0
-      s = self.tkiSliders[i] = tkinter.Scale(self.tkiRoot, variable=self.tkiSliderVals[i], \
+      s = self.tkiSliders[i] = tk.Scale(self.tkiRoot, variable=self.tkiSliderVals[i], \
             length=self.tkiSliderWidth, \
             from_ = self.tkiSliderMinVal, to=self.tkiSliderMaxVal)
-      s.pack(side=tkinter.TOP)
+      s.pack(side=tk.TOP)
 
     #tkiSliderNames = None
 
@@ -195,7 +195,7 @@ class enoFcTkiMidi:
 
 def tkiMain():
   eftm = enoFcTkiMidi(useFreecad = False, useMidi = False)
-  eftm.tkiRoot.mainloop()
+  eftm.tkRoot.mainloop()
 
 ############################################
 ################### main ###################
