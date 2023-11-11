@@ -67,8 +67,7 @@ class enoFcTkiMidi:
       self.functoolsWorking = False
       self.reportError('activateTki', 'functools import (for callback "partials") unsuccessful.')
 
-    #import PIL.Image, PIL.ImageTk #image manipulation package
-
+    #later: import PIL.Image, PIL.ImageTk #image manipulation package
 
   ############# activate Midi #############
 
@@ -84,6 +83,7 @@ class enoFcTkiMidi:
       import pygame.midi
       pygame.midi.init()
       self.midiWorking = True
+      self.midiIn = pygame.midi.Input(1) #initially hardcoded
     except:    
       self.midiWorking = False
       self.reportError('activateMidi', 'midi import and initiation unsuccessful')
@@ -98,10 +98,6 @@ class enoFcTkiMidi:
        #print(len(events), events)
        #for event in e[1]: print("event:", event)
 
-  global midiIn
-  midiIn = pygame.midi.Input(1)
-
-  e = midiIn.read(100); print(e)
 
   ts = coin.SoTimerSensor(updateMidi, 0)
   ts.schedule()
