@@ -54,7 +54,7 @@ class enoFcTkMidi:
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
     if self.useFreecad: self.activateFreecad() 
-    if self.useTki:     self.activateTki();     self.buildTkiUi()
+    if self.useTk:      self.activateTk();     self.buildTkUi()
     if self.useMidi:    self.activateMidi();    self.buildMidi()
     if self.autolaunch: self.runAutolaunch() #naming of these two may benefit from revisiting
 
@@ -81,10 +81,10 @@ class enoFcTkMidi:
 
   ############# activate Tkinter #############
 
-  def activateTki(self):
+  def activateTk(self):
     try:    
       global tk #sad, but this appears ~necessary with this loading approach
-      import tk as tk
+      import tk 
       self.tkLoaded = True #let's initially assume that successful import 
                            #indicates "working." Later with embedded devices
                            #in particular, this may wish to become more nuanced.
