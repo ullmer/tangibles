@@ -26,6 +26,9 @@ class enoFcTkMidi:
   midiActive     = None
   freecadActive  = None
 
+  freecadHoldsMainloop = False
+  tkMainloop           = True
+
   functoolsLoaded = None  #Many (etc.) FreeCAD users may not have all 
   tkLoaded        = None  # relevant Python packages or (for MIDI)
   pilLoaded       = None  # devices installed.  This shouldn't cause
@@ -176,7 +179,9 @@ class enoFcTkMidi:
   def updateAll(self, arg1, arg2):
     print(">", endline=''); sys.stdout.flush()
 
-    if self.useTk      and self.tkLoaded   and self.tkActive:   self.updateTk(arg1, arg2)
+    if not self.tkHoldsMainloop and self.useTk and self.tkLoaded   and self.tkActive:   
+      self.updateTk(arg1, arg2) #if tk holds mainloop, it will manage Tk updates
+
     if self.useMidi    and self.midiLoaded and self.midiActive: self.updateMidi(arg1, arg2)
     if self.useEnoMidi and self.enoMidiLoaded:                  self.updateEnoMidi(arg1, arg2)  
 
@@ -300,6 +305,7 @@ class enoFcTkMidi:
 def tkMain():
   global basedir #base directory filename (at least originally) declared at beginning of this file
   eftm = enoFcTkMidi(useFreecad = False, useMidi = False, swBasePath=basedir)
+  eftm.tkRoot.after_idle(eftm.updateAll)
   eftm.tkRoot.mainloop()
 
 ############################################
