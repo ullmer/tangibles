@@ -2,7 +2,7 @@
 # Brygg Ullmer, Clemson University
 # Begun 2023-11-11
 
-import traceback # for assisting error debugging (without code failing)
+import sys, traceback # for assisting error debugging (without code failing)
 
 basedir = 'c:/git/tangibles/sw/3wish.02' #update to location of source if manually installed, or None otherwise
 
@@ -174,6 +174,8 @@ class enoFcTkMidi:
   ############ update all ############
 
   def updateAll(self, arg1, arg2):
+    print(">", endline=''); sys.stdout.flush()
+
     if self.useTk      and self.tkLoaded   and self.tkActive:   self.updateTk(arg1, arg2)
     if self.useMidi    and self.midiLoaded and self.midiActive: self.updateMidi(arg1, arg2)
     if self.useEnoMidi and self.enoMidiLoaded:                  self.updateEnoMidi(arg1, arg2)  
