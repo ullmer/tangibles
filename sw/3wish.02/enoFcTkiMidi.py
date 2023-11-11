@@ -81,6 +81,7 @@ class enoFcTkiMidi:
 
   def activateTki(self):
     try:    
+      global tkinter
       import tkinter 
       self.tkiLoaded = True #let's initially assume that successful import 
                              #indicates "working." Later with embedded devices
@@ -97,7 +98,7 @@ class enoFcTkiMidi:
       self.reportError('activateTki', 'functools import (for callback "partials") unsuccessful.')
 
     try: 
-      self.tkiRoot   = Tk() # Create the root (base) window
+      self.tkiRoot   = tkinter.Tk() # Create the root (base) window
       self.tkiActive = True
     except: 
       self.tkiActive = False
@@ -168,7 +169,8 @@ class enoFcTkiMidi:
     self.tkiSliderVals = {}
 
     for i in range(self.numSliders):
-      s = self.tkiSliders[i] = tkinter.Scale(self.tkiRoot, self.skiSliderVals[i], 
+      self.tkiSliderVals[i] = 0
+      s = self.tkiSliders[i] = tkinter.Scale(self.tkiRoot, self.tkiSliderVals[i], 
             length=self.tkiSliderWidth, 
             from_ = self.tkiSliderMinVal, to=self.tkiSliderMaxVal)
       s.pack(side=TOP)
