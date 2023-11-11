@@ -19,6 +19,7 @@ class enoFcTkiMidi:
 
   useTki     = True 
   useMidi    = True
+  autolaunch = True  #autostart all core behaviors (including scheduled callbacks)
 
   tkiActive  = None
   midiActive = None
@@ -40,8 +41,9 @@ class enoFcTkiMidi:
     #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-    if self.useTki:  self.activateTki();  self.buildTki()
-    if self.useMidi: self.activateMidi(); self.buildMidi()
+    if self.useTki:     self.activateTki();  self.buildTki()
+    if self.useMidi:    self.activateMidi(); self.buildMidi()
+    if self.autolaunch: self.runAutolaunch() #naming of these two may benefit from revisiting
 
   ############# activate Tkinter #############
 
