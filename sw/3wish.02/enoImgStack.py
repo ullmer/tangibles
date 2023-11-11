@@ -67,24 +67,24 @@ class enoTexturePlane:
 
     #see https://github.com/coin3d/pivy/blob/master/examples/Mentor/07.2.TextureCoordinates.py
 
-    match orient:
-      self.vertexProperty = coin.SoVertexProperty() 
-      tcv = self.vertexProperty.vertex
+    self.vertexProperty = coin.SoVertexProperty() 
+    tcv = self.vertexProperty.vertex
 
-      case 'xz':
+    if orient == 'xz':
         self.setValues3(tcv, [-hx,0,hy], [hx,0,hy], [hx,0,-hy], [-hx,0,-hy])
         self.vertexProperty.normal.set1Value(0, coin.SbVec3f(0,1,0))
 
-      case 'xy':
+    if orient == 'xy':
         self.setValues3(tcv, [-hx,hy,0], [hx,hy,0], [hx,-hy,0], [-hx,-hy,0])
         self.setValues3(self.vertexProperty.normal, [[0,0,1]])
 
     tpn = self.texturedPlaneNode = coin.SoSeparator()
     tc  = self.textureCoord      = coin.TextureCoordinate2()
-    self.setValues2(tc, [[1,1], [0,1], [0,0], [1,0])
+    self.setValues2(tc, [[1,1], [0,1], [0,0], [1,0]])
 
     t2  = self.texture2 = coin.SoTexture2(); 
-    t2.filename.setValue(textureImgFn); t2.model = SoMultiTextureImageElement::DECAL
+    t2.filename.setValue(textureImgFn)
+    t2.model = coin.SoMultiTextureImageElement.DECAL
 
     nb       = coin.SoNormalBinding()
     nb.value = coin.SoNormalBinding.PER_FACE
@@ -96,7 +96,6 @@ class enoTexturePlane:
     #IvObj::assertIv
     #addNInlineObj $this:transp [format {Material {transparency %s
     #	 diffuseColor %s}} $transp $color] pre
-  }
 
   ############# change transparency #############
 
