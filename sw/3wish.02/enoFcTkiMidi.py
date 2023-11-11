@@ -170,10 +170,10 @@ class enoFcTkiMidi:
   ############ run autolaunch ############
 
   def runAutolaunch(self):
-    self.buildTkiUi()
-    if self.useIdleCallback:  self.scheduleIdleSensor()
-    if self.useTimerCallback: self.scheduleTimerSensor()
+    if self.useTki: self.buildTkiUi()
 
+    if self.useFreecad and self.useIdleCallback:  self.scheduleIdleSensor()
+    if self.useFreecad and self.useTimerCallback: self.scheduleTimerSensor()
 
 #############################################################
 ############# freecad-free tkinter environment ##############
