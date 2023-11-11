@@ -297,7 +297,7 @@ class enoFcTkMidi:
 def afterIdleCb(eftm): 
   eftm.updateAll(0,0)
   tkUpdate = partial(afterIdleCb, eftm)
-  tkUpdate.__name__ = 'ourTkUpdate' # trying to debug weird tkinter "after" issue
+  tkUpdate.__name__ = 'ourTkUpdate' # This is necessary because of a ~bug on line ~821 of tkinter __init__
 
   eftm.tkRoot.update()
   eftm.tkRoot.after(100, tkUpdate)
@@ -309,7 +309,7 @@ def tkMain():
   eftm = enoFcTkMidi(useFreecad = False, useMidi = False, swBasePath=basedir)
 
   tkUpdate = partial(afterIdleCb, eftm)
-  tkUpdate.__name__ = 'ourTkUpdate' # trying to debug weird tkinter "after" issue
+  tkUpdate.__name__ = 'ourTkUpdate' # This is necessary because of a ~bug on line ~821 of tkinter __init__
 
   eftm.tkRoot.after(100, tkUpdate)
   eftm.tkRoot.mainloop()
