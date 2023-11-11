@@ -37,8 +37,10 @@ class enoFcTkiMidi:
                            #  responsive to system load, but it doesn't
                            #  appear to be properly working in FreeCAD ~0.21
 
-  timerSensor = None
-  tkiRoot     = None
+  idleSensor      = None
+  timerSensor     = None
+
+  tkiRoot         = None
   tkiSliders      = None
   tkiSliderVals   = None
 
@@ -81,7 +83,7 @@ class enoFcTkiMidi:
 
   def activateTki(self):
     try:    
-      global tkinter
+      global tkinter #sad, but this appears ~necessary with this loading approach
       import tkinter 
       self.tkiLoaded = True #let's initially assume that successful import 
                              #indicates "working." Later with embedded devices
@@ -91,6 +93,7 @@ class enoFcTkiMidi:
       self.reportError('activateTki', 'tkinter import unsuccessful.')
 
     try: 
+      global partial
       from functools import partial
       self.functoolsLoaded = True
     except: 
@@ -110,6 +113,7 @@ class enoFcTkiMidi:
 
   def activateMidi(self):
     try:    
+      global pg
       import pygame as pg
       self.pygameLoaded = True
     except:    
@@ -117,6 +121,7 @@ class enoFcTkiMidi:
       self.reportError('activateMidi', 'pygame import unsuccessful')
 
     try:    
+      global pygame
       import pygame.midi
       pygame.midi.init()
       self.midiLoaded = True
@@ -170,10 +175,10 @@ class enoFcTkiMidi:
 
     for i in range(self.numSliders):
       self.tkiSliderVals[i] = 0
-      s = self.tkiSliders[i] = tkinter.Scale(self.tkiRoot, self.tkiSliderVals[i], 
-            length=self.tkiSliderWidth, 
+      s = self.tkiSliders[i] = tkinter.Scale(self.tkiRoot, variable=self.tkiSliderVals[i], \
+            length=self.tkiSliderWidth, \
             from_ = self.tkiSliderMinVal, to=self.tkiSliderMaxVal)
-      s.pack(side=TOP)
+      s.pack(side=tkinter.TOP)
 
     #tkiSliderNames = None
 
@@ -190,6 +195,7 @@ class enoFcTkiMidi:
 
 def tkiMain():
   eftm = enoFcTkiMidi(useFreecad = False, useMidi = False)
+  eftm.tkiRoot.mainloop()
 
 ############################################
 ################### main ###################
