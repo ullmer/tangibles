@@ -339,7 +339,8 @@ class enoMidiController:
 
   def processMidiUpdate(self, midiStatus, midiNum, val=None):
     if self.controllerNumDict == None: 
-      print("enoMidiController: processMidiUpdate called, but no registered data")
+      #print("enoMidiController: processMidiUpdate called, but no registered data")
+      print("?", midiStatus, midiNum, end=''); sys.stdout.flush()
       return None
 
     midiStatNumKey = self.midiStatusNumKey(midiStatus, midiNum)
