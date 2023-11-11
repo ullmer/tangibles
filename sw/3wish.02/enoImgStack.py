@@ -132,13 +132,13 @@ class enoTexturePlane:
 
 class enoTextureStack:
 
-  textureImgFns  = None
-  textureSize    = [0,0]
-  imgOffset      = [0,2,0]
-  diffuseColor   = (1,1,1)
-  lastHighlight  = None
-  highlights     = [.7, .2]
-  popout         = 1
+  textureImgFns    = None
+  textureSize      = [0,0]
+  imgOffset        = [0,2,0]
+  diffuseColor     = (1,1,1)
+  lastHighlight    = None
+  highlightTransps = [.7, .2]
+  popout           = 1
 
   enoTexturePlanes = None
   transNode        = None
@@ -153,7 +153,8 @@ class enoTextureStack:
     #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-  ############# constructor #############
+  ############# build node #############
+
   def buildNode(self):
     if self.textureImgFns is None: return
 
@@ -169,25 +170,18 @@ class enoTextureStack:
       self.node.addChidl(ti.getNode())
       self.node.addChild(self.transNode)
 
-      self.highlight(popoutIdx)
+      self.highlightLayer(popoutIdx)
 
-#  def highlight(self, whichLayer):
-#    tnLen = length(self.textureImgFns)
-#    if whichLayer > tnLen or whichLayer < 1:
-#      print("enoImgStack enoTextureStack highlight error: bad layer specifier %i (%i)" % (whichLayer, tnLen)); return None
-# 
-#    if self.lastHighlighted is not None: self.lastHighlighted.changeTransp(
-#
-#    else:
-#     self.lastHighlighted = 
-#  
-#
-#    if {$last_highlighted != {}} {
-#      $last_highlighted changeTransp [lindex $highlights 0]
-#    }
-#
-#    set last_highlighted $this:texture$layer
-#    $last_highlighted changeTransp [lindex $highlights 1]
-#  }
-#
+  ############# highlightLayer #############
+
+  def highlightLayer(self, whichLayer):
+
+    tnLen = length(self.textureImgFns)
+    if whichLayer > tnLen or whichLayer < 1:
+      print("enoImgStack enoTextureStack highlight error: bad layer specifier %i (%i)" % (whichLayer, tnLen)); return None
+ 
+    self.lastHighlighted.changeTransp(
+
+      self.lastHighlighted = 
+
 #### end ###
