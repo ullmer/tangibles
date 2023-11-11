@@ -72,31 +72,34 @@ class enoTexturePlane:
     print('a')
 
     if orient == 'xz':
-        self.setValues3(tcv, [-hx,0,hy], [hx,0,hy], [hx,0,-hy], [-hx,0,-hy])
+        self.setValues3(tcv, [[-hx,0,hy], [hx,0,hy], [hx,0,-hy], [-hx,0,-hy]])
         self.vertexProperty.normal.set1Value(0, coin.SbVec3f(0,1,0))
 
     if orient == 'xy':
-        self.setValues3(tcv, [-hx,hy,0], [hx,hy,0], [hx,-hy,0], [-hx,-hy,0])
+        self.setValues3(tcv, [[-hx,hy,0], [hx,hy,0], [hx,-hy,0], [-hx,-hy,0]])
         self.setValues3(self.vertexProperty.normal, [[0,0,1]])
 
     print('b')
 
     tpn = self.texturedPlaneNode = coin.SoSeparator()
-    tc  = self.textureCoord      = coin.TextureCoordinate2()
+    tc  = self.textureCoord      = coin.SoTextureCoordinate2()
     self.setValues2(tc.point, [[1,1], [0,1], [0,0], [1,0]])
 
     print('c')
 
     t2  = self.texture2 = coin.SoTexture2(); 
-    t2.filename.setValue(textureImgFn)
+    t2.filename.setValue(self.textureImgFn)
     t2.model = coin.SoMultiTextureImageElement.DECAL
 
     nb       = coin.SoNormalBinding()
     nb.value = coin.SoNormalBinding.PER_FACE
 
+    #n        = coin.SoNormal()
+
     fs = coin.SoFaceSet(); fs.numVertices.setValue(4)
 
-    for e in [tc, t2, nb, n, coords, fs]: tpn.addChild(el)
+    for el in [tc, t2, nb, fs]: tpn.addChild(el)
+    #for e in [tc, t2, nb, n, coords, fs]: tpn.addChild(el)
     return tpn
 
   ############# change transparency #############
