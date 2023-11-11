@@ -40,10 +40,11 @@ class enoFcTkMidi:
   idleSensor     = None
   timerSensor    = None
 
-  tkRoot         = None
-  tkSliders      = None
-  tkSliderVals   = None
-  tkSliderOrient = None
+  tkRoot            = None
+  tkSliders         = None
+  tkSliderVals      = None
+  tkSliderOrient    = None
+  tkSliderShowValue = 0
 
   tkSliderMinVal = 0
   tkSliderMaxVal = 10
@@ -177,15 +178,20 @@ class enoFcTkMidi:
     self.tkSliders    = {}
     self.tkSliderVals = {}
 
-    print("num sliders:", self.numSliders)
-
     for i in range(self.numSliders):
       self.tkSliderVals[i] = 0
-      self.tkSliders[i] = tk.Scale(self.tkRoot, variable=self.tkSliderVals[i], 
-            length=self.tkSliderWidth, orient=self.tkSliderOrient,
-            from_ = self.tkSliderMinVal, to=self.tkSliderMaxVal)
 
-      self.tkSliders[i].pack(side=tk.TOP)
+      f = tk.Frame(self.tkRoot)
+      l = tk.Label(f, text=str(i))
+
+      s = self.tkSliders[i] = tk.Scale(f, variable=self.tkSliderVals[i], 
+            length=self.tkSliderWidth, orient=self.tkSliderOrient, 
+            from_ = self.tkSliderMinVal, to=self.tkSliderMaxVal,
+            showvalue=self.tkSliderShowValue)
+
+      l.pack(side=tk.LEFT) #textual label on left
+      s.pack(side=tk.LEFT) #with slider on right
+      f.pack(side=tk.TOP)  #and pack to the top
 
     #tkiSliderNames = None
 
