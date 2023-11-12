@@ -9,4 +9,20 @@ yfn = 'cuColleges01.yaml'
 yf  = open(yfn, 'rt')
 yd  = yaml.safe_load(yf)
 
+print(yd)
+
+im  = yd['imageMatrix']
+mm  = im['matrixMap']
+mmk = mm.keys()
+
+for key in mmk:
+  mmkEl  = mmk[key]
+  mmkEl0 = mmkEl[0]
+  print(key, mmkEl0)
+
+#imageMatrix:
+#  matrixMap:
+#    A: [CAAC,     Art, CDP, Arch,   LA,  HP, RUD, SoA]
+#    a: [CAH,  
+
 ### end ###
