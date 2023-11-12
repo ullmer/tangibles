@@ -3,20 +3,19 @@
 # Begun 2023-11-11
 
 import yaml
-from enoFcTkMidi import *
+#from enoFcTkMidi import *
 
 yfn = 'cuColleges01.yaml'
 yf  = open(yfn, 'rt')
 yd  = yaml.safe_load(yf)
 
-print(yd)
+#print(yd)
 
 im  = yd['imageMatrix']
 mm  = im['matrixMap']
-mmk = mm.keys()
 
-for key in mmk:
-  mmkEl  = mmk[key]
+for key in mm:
+  mmkEl  = mm[key]
   mmkEl0 = mmkEl[0]
   print(key, mmkEl0)
 
