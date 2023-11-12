@@ -260,10 +260,10 @@ class enoFcTkMidi:
       if self.tkSliderOrient == 'vert': sOrient = tk.VERTICAL
       else:                             sOrient = tk.HORIZONTAL
 
-      s = self.tkSliders[i] = tk.Scale(f, bg=bgCol,
-            length = self.tkSliderWidth,  orient       = sOrient,
-            from_  = self.tkSliderMinVal, showvalue    = self.tkSliderShowValue, 
-            to     = self.tkSliderMaxVal, sliderlength = self.tkSliderLength)
+      s = self.tkSliders[i] = tk.Scale(f, bg=bgCol, relief= tk.FLAT,
+            length = self.tkSliderWidth,  orient          = sOrient,
+            from_  = self.tkSliderMinVal, showvalue       = self.tkSliderShowValue, 
+            to     = self.tkSliderMaxVal, sliderlength    = self.tkSliderLength)
 
       if self.tkSliderOrient == 'vert':
         l.pack(side=tk.BOTTOM) #textual label on left
