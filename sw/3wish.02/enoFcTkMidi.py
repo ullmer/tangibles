@@ -24,6 +24,7 @@ class enoFcTkMidi:
   autolaunch = True  #autostart all core behaviors (including scheduled callbacks)
 
   swBasePath     = None
+  swIconFn       = '/images/enodiaTkTitlebar01g.png'
 
   tkActive       = None
   midiActive     = None
@@ -220,6 +221,11 @@ class enoFcTkMidi:
     except: 
       self.tkActive = False
       self.reportError('buildTkUi', 'Initial invocation of Tkinter unsuccessful.')
+
+    iconFn = self.swBasePath + self.swIconFn
+    iconPh = tk.PhotoImage(file = iconFn)
+
+    self.tkRoot.iconphoto(False, iconPh)
 
     r,g,b = self.tkBgRgb
     bgCol = self.rgb2tk(r,g,b)
