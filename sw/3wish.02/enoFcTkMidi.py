@@ -304,11 +304,11 @@ class enoFcTkMidi:
     buttonFrame = tk.Frame(rootFrame, bg=bbgCol)
 
     getCb = partial(self.getTkSliderValsCb, self)
-    getButton = tk.Button(buttonFrame, text='get slider vals',  
+    getButton = tk.Button(buttonFrame, text='get\nvals',  
                           justify=tk.RIGHT, command=getCb)
 
     setCb = partial(self.setTkSliderValsCb, self)
-    setButton = tk.Button(buttonFrame, text='reset slider vals', 
+    setButton = tk.Button(buttonFrame, text='reset\nvals', 
                           justify=tk.RIGHT, command=setCb)
 
     if self.tkSliderOrient == 'vert':

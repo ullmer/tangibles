@@ -28,9 +28,10 @@ class enoTkColorGrid:
   buttonTk       = None
   imagesDict     = None
   imgPrefix      = None
-  padX           = 1
-  padY           = 1
+  padX           = .5
+  padY           = .5
   bgImgFn        = None
+  butBgRgb       = [100, 50, 0]
 
   autostartMainloop = False
 
@@ -58,12 +59,20 @@ class enoTkColorGrid:
 
     if self.autostartMainloop: self.root.mainloop()   
 
-  #################### build image grid ####################
+  ############ build sliders user interface ############
+
+  def rgb2tk(self, r, g, b):
+    return "#%02x%02x%02x" % (r,g,b)
+
+  ############ build button grid user interface ############
 
   def buildColorGrid(self):
 
     # images need to be held an a data structure, or else they will be garbage collected
     self.imagesDict = {}
+
+    r,g,b  = self.butBgRgb
+    bbgCol = self.rgb2tk(r,g,b)
 
     #background image, per 
     # https://stackoverflow.com/questions/62430477/how-to-set-a-background-image-in-tkinter-using-grid-only
@@ -72,7 +81,7 @@ class enoTkColorGrid:
       for j in range(self.columns):
         coord  = (i, j)
         cb     = partial(self.toggleCB, coord) #e.g., https://www.blog.pythonlibrary.org/2016/02/11/python-partials/
-        button = tk.Button(self.root, text='', command=cb) 
+        button = tk.Button(self.root, text='', command=cb, bg=bbgCol, width=2)
         self.buttonState[coord] = False
         self.buttonTk[coord]    = button
         button.grid(row=i, column=j, padx=self.padX, pady=self.padY)
