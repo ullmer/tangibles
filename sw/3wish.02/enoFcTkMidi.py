@@ -62,6 +62,9 @@ class enoFcTkMidi:
   tkSliders         = None
   tkSliderOrient    = 'vert' # or 'horiz'
   tkSliderShowValue = 0
+  tkSliderLength    = 17
+  tkBgRgb           = [10]  * 3
+  tkFgRgb           = [170] * 3
 
   #tkSliderMinVal = 0
   #tkSliderMaxVal = 127
@@ -77,7 +80,7 @@ class enoFcTkMidi:
 
     if self.useFreecad: self.activateFreecad() 
     if self.useTk:      self.activateTk();     self.buildTkUi()
-    if self.useMidi:    self.activateMidi();    self.buildMidi()
+    if self.useMidi:    self.activateMidi();   self.buildMidi()
     if self.useEnoMidi: self.activateEnoMidi()
     if self.autolaunch: self.runAutolaunch() #naming of these two may benefit from revisiting
 
@@ -213,32 +216,54 @@ class enoFcTkMidi:
       self.tkActive = False
       self.reportError('buildTkUi', 'Initial invocation of Tkinter unsuccessful.')
 
-    if self.showSliders2D:    self.buildSliders(self.tkRoot)
-    if self.showButtonGrid2D: self.buildButtonGrid(self.tkRoot)
+    r,g,b = self.tkBgRgb
+    bgCol = self.rgb2tk(r,g,b)
+
+    sliderFrame = tk.Frame(self.tkRoot, bg=bgCol)
+    bGridFrame  = tk.Frame(self.tkRoot, bg=bgCol)
+
+    if self.showSliders2D:    self.buildSliders(sliderFrame)
+    if self.showButtonGrid2D: self.buildButtonGrid(bGridFrame)
+
+    for el in [sliderFrame, bGridFrame]: el.pack(side=tk.LEFT)
 
   ############ build button grid user interface ############
 
   def buildButtonGrid(self, rootFrame):
     self.reportError('buildButtonGrid', 'not yet implemented')
 
+  #https://stackoverflow.com/questions/51591456/can-i-use-rgb-in-tkinter
+  #translates rgb values of type int to a tkinter friendly color code
+
+  ############ build sliders user interface ############
+
+  def rgb2tk(self, r, g, b):
+    return "#%02x%02x%02x" % (r,g,b)
+
   ############ build sliders user interface ############
 
   def buildSliders(self, rootFrame):
+    r,g,b = self.tkBgRgb
+    bgCol = self.rgb2tk(r,g,b)
+    rootFrame.bg = bgCol
+
+    r,g,b = self.tkFgRgb
+    fgCol = self.rgb2tk(r,g,b)
 
     self.tkSliders    = {}
 
     for i in range(self.numSliders):
       
-      f = tk.Frame(rootFrame)
-      l = tk.Label(f, text=str(i))
+      f = tk.Frame(rootFrame, bg=bgCol)
+      l = tk.Label(f, text=str(i), bg=bgCol, fg=fgCol)
 
-      if self.tkSliderOrient == 'vert': orient = tk.VERTICAL
-      else:                             orient = tk.HORIZONTAL
+      if self.tkSliderOrient == 'vert': sOrient = tk.VERTICAL
+      else:                             sOrient = tk.HORIZONTAL
 
-      s = self.tkSliders[i] = tk.Scale(f, 
-            length=self.tkSliderWidth, orient=orient,
-            from_ = self.tkSliderMinVal, to=self.tkSliderMaxVal,
-            showvalue=self.tkSliderShowValue)
+      s = self.tkSliders[i] = tk.Scale(f, bg=bgCol,
+            length = self.tkSliderWidth,  orient       = sOrient,
+            from_  = self.tkSliderMinVal, showvalue    = self.tkSliderShowValue, 
+            to     = self.tkSliderMaxVal, sliderlength = self.tkSliderLength)
 
       if self.tkSliderOrient == 'vert':
         l.pack(side=tk.BOTTOM) #textual label on left
