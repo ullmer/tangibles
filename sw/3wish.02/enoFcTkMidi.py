@@ -41,10 +41,12 @@ class enoFcTkMidi:
 
   reportErrorAsStdout = True  # use print statement
   
-  midiIn      = None  #initially singular variable; eventually multi-device
-  midiOut     = None
-  enoMidiCtlr = None  #hopefully will migrate to auto-identify, but not there yet
+  midiIn       = None  #initially singular variable; eventually multi-device
+  midiOut      = None
+  enoMidiCtlr  = None  #hopefully will migrate to auto-identify, but not there yet
   enoMidiControllerProfile = 'aka_apcmini2'
+
+  etkColorGrid = None
   
   useTimerCallback = True
   useIdleCallback  = False # I view SoIdle callback as much more 
@@ -113,6 +115,7 @@ class enoFcTkMidi:
     try:    
       global tk #sad, but this appears ~necessary with this loading approach
       import tkinter as tk 
+
       self.tkLoaded = True #let's initially assume that successful import 
                            #indicates "working." Later with embedded devices
                            #in particular, this may wish to become more nuanced.
@@ -229,18 +232,26 @@ class enoFcTkMidi:
 
     for el in [sliderFrame, bGridFrame]: el.pack(side=tk.LEFT, expand=True, fill=tk.BOTH)
 
-  ############ build button grid user interface ############
-
-  def buildButtonGrid(self, rootFrame):
-    self.reportError('buildButtonGrid', 'not yet implemented')
-
-  #https://stackoverflow.com/questions/51591456/can-i-use-rgb-in-tkinter
-  #translates rgb values of type int to a tkinter friendly color code
-
   ############ build sliders user interface ############
 
   def rgb2tk(self, r, g, b):
     return "#%02x%02x%02x" % (r,g,b)
+
+  ############ build button grid user interface ############
+
+  def buildButtonGrid(self, rootFrame):
+    try:
+      global enoTkColorGrid
+      import enoTkColorGrid
+
+      self.etkColorGrid = enoTkColorGrid()
+
+    except:
+      self.reportError('buildButtonGrid', 'error:')
+      traceback.print_exc()
+
+  #https://stackoverflow.com/questions/51591456/can-i-use-rgb-in-tkinter
+  #translates rgb values of type int to a tkinter friendly color code
 
   ############ build sliders user interface ############
 
