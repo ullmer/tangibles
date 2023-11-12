@@ -26,6 +26,7 @@ class enoMidiController:
   numMidiReadsPerPoll = 50
 
   displayPollChar     = False
+  midiOutState        = None
 
   activateInput     = None
   activateOutput    = None
@@ -60,6 +61,8 @@ class enoMidiController:
 
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
+
+    self.midiOutState = {}
 
     self.controllerName = controllerName
     yamlFn = self.controller2yamlFnActivations(controllerName)
@@ -366,23 +369,39 @@ class enoMidiController:
 
   ############# simple illuminate #############
 
+  def sendMidi(self, a,b,c):
+    self.midiOut.note_on(a,b,c)
+    self.registerMidiOutState(a,b,c)
+
+  ############# register midi output state #############
+
+  def registerMidiOutState(self, a,b,c):
+    self.midiOutState[a] = (b,c)
+
+  ############# simple illuminate #############
+
   def simpleIlluminate(self, lightstate):
 
     if lightstate == 0:
-      for i in range(63): self.midiOut.note_on(i, i, 3)
+      for i in range(63): self.sendMidi(i, i, 3)
     
     if lightstate == 1:
-      for i in range(63): self.midiOut.note_on(i, 63+i, 3)
+      for i in range(63): self.sendMidi(i, 63+i, 3)
     
     if lightstate == 2:
-      for i in range(63): self.midiOut.note_on(i, 0, 3)
+      for i in range(63): self.sendMidi(i, 0, 3)
+
+  ############# simple illuminate #############
+
+  def button2note(self, row, col):
+    noteId = 63 - (row * 9) + col + (row-7) #could simplify, but would scramble semantics
+    return noteId
 
   ############# simple illuminate #############
 
   def illumButton(self, row, col):
-   noteId = 63 - (row * 9) + col + (row-7) #could simplify, but would scramble semantics
- 
-   self.midiOut.note_on(noteId, 10, 2)
+    noteId = self.button2note(row, col)
+    self.midiOut.note_on(noteId, 10, 2)
     
   ############# pollMidi #############
 
