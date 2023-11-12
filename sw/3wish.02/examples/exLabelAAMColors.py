@@ -2,7 +2,11 @@
 # Brygg Ullmer, Clemson University
 # Begun 2023-11-11
 
-cuColleges01.yaml
-enoFcTkMidi.py
+import yaml
+from enoFcTkMidi import *
+
+yfn = 'cuColleges01.yaml'
+yf  = open(yfn, 'rt')
+yd  = yaml.safe_load(yf)
 
 ### end ###
