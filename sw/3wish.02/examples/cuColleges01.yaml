@@ -18,10 +18,12 @@ imageMatrix:
     e: [EDU,      EHD,EOLD, TL]
     S: [SCIENCE,  BS,  C,   GB,    MSS,  PA]
 
-  colorMap: {A: [562E19, AA968C], a: [685C53, B3ADA9], 
-             B: [373435, FBB39A], b: [53307F, A997BF],
-             F: [57612B, ABB095], S: [189CBF, 8FBFD5],
-             E: [3C4A59, D3D4D8], e: [A0511C, D0A88D]}
+  colorMapRGB: {A: [562E19, AA968C], a: [685C53, B3ADA9], 
+                B: [373435, FBB39A], b: [53307F, A997BF],
+                F: [57612B, ABB095], S: [189CBF, 8FBFD5],
+                E: [3C4A59, D3D4D8], e: [A0511C, D0A88D]}
+
+  colorMapAAM: {A: 0, b: 2}
     
   matrix: |-
     FFFFeeee
