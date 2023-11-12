@@ -14,7 +14,7 @@ basedir = 'c:/git/tangibles/sw/3wish.02' #update to location of source if manual
 class enoFcTkMidi:
 
   numSliders    = 9
-  tkSliderWidth = 150
+  tkSliderWidth = 75
   tkSliderNames = None
 
   useTk      = True 
@@ -225,7 +225,7 @@ class enoFcTkMidi:
     if self.showSliders2D:    self.buildSliders(sliderFrame)
     if self.showButtonGrid2D: self.buildButtonGrid(bGridFrame)
 
-    for el in [sliderFrame, bGridFrame]: el.pack(side=tk.LEFT)
+    for el in [sliderFrame, bGridFrame]: el.pack(side=tk.LEFT, expand=True, fill=tk.BOTH)
 
   ############ build button grid user interface ############
 
