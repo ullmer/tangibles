@@ -161,9 +161,15 @@ class enoFcTkMidi:
       self.enoMidiCtlr = enoMidiController.enoMidiController(profile, 
                            yamlDir=ourYamlDir, midiCtrlOutputId=4)
       self.enoMidiLoaded = True
+
     except:    
       self.enoMidiLoaded = False
       self.reportError('activateMidi', 'midi import and initiation unsuccessful')
+
+      #i = self.enoMidiCtlr.midiCtrlInputId
+      #o = self.enoMidiCtlr.midiCtrlOutputId
+      #print("input channel: %s, output channel: %s" % (i, o))
+
       traceback.print_exc()
 
   ############ update midi ############
