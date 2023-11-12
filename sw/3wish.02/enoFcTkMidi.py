@@ -64,6 +64,7 @@ class enoFcTkMidi:
   tkSliderShowValue = 0
   tkSliderLength    = 17
   tkBgRgb           = [10]  * 3
+  tkSTroughRgb      = [130] * 3 #slider trough
   tkFgRgb           = [170] * 3
 
   #tkSliderMinVal = 0
@@ -250,6 +251,9 @@ class enoFcTkMidi:
     r,g,b = self.tkFgRgb
     fgCol = self.rgb2tk(r,g,b)
 
+    r,g,b = self.tkSTroughRgb
+    trCol = self.rgb2tk(r,g,b)
+
     self.tkSliders    = {}
 
     for i in range(self.numSliders):
@@ -263,7 +267,8 @@ class enoFcTkMidi:
       s = self.tkSliders[i] = tk.Scale(f, bg=bgCol, relief= tk.FLAT,
             length = self.tkSliderWidth,  orient          = sOrient,
             from_  = self.tkSliderMinVal, showvalue       = self.tkSliderShowValue, 
-            to     = self.tkSliderMaxVal, sliderlength    = self.tkSliderLength)
+            to     = self.tkSliderMaxVal, sliderlength    = self.tkSliderLength,
+            troughcolor = trCol)
 
       if self.tkSliderOrient == 'vert':
         l.pack(side=tk.BOTTOM) #textual label on left
