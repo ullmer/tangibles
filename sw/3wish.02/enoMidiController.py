@@ -380,8 +380,9 @@ class enoMidiController:
   ############# simple illuminate #############
 
   def illumButton(self, row, col):
-   noteId = row * 9 + col
-   self.midiOut.note_on(noteId, 25, 3)
+   noteId = 63 - (row * 9) + col + (row-7) #could simplify, but would scramble semantics
+ 
+   self.midiOut.note_on(noteId, 10, 2)
     
   ############# pollMidi #############
 
