@@ -66,7 +66,7 @@ class enoFcTkMidi:
   tkBgRgb           = [10]  * 3
   tkSTroughRgb      = [130] * 3 #slider trough
   tkFgRgb           = [170] * 3
-  tkButBgRgb        = [75]  * 3 #background near buttons
+  tkButBgRgb        = [50]  * 3 #background near buttons
 
   #tkSliderMinVal = 0
   #tkSliderMaxVal = 127
@@ -286,10 +286,12 @@ class enoFcTkMidi:
     buttonFrame = tk.Frame(rootFrame, bg=bbgCol)
 
     getCb = partial(self.getTkSliderValsCb, self)
-    getButton = tk.Button(buttonFrame, text='get slider vals', command=getCb)
+    getButton = tk.Button(buttonFrame, text='get slider vals',  
+                          justify=tk.RIGHT, command=getCb)
 
     setCb = partial(self.setTkSliderValsCb, self)
-    setButton = tk.Button(buttonFrame, text='reset slider vals', command=setCb)
+    setButton = tk.Button(buttonFrame, text='reset slider vals', 
+                          justify=tk.RIGHT, command=setCb)
 
     if self.tkSliderOrient == 'vert':
       for el in [getButton, setButton]: el.pack(side=tk.TOP, fill=tk.X)
