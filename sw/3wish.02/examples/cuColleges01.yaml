@@ -1,0 +1,70 @@
+# Example interaction panel descriptor for Clemson University Colleges 
+# By Brygg Ullmer, Clemson University
+# Begun 2023-09-25 
+
+imageMatrix: 
+  name:      "Clemson University : Colleges" #quoted because of colon within 
+  addr:      https://enodia.computing.clemson.edu/spreads/edu.clemson/colleges/
+  imgPrefix: images/cc77g/125/                 
+  bgImg:     images/clemson-colleges-77g2-core125.png
+  matrixMap:  
+    A: [CAAC,     Art, CDP, Arch,   LA,  HP, RUD, SoA]
+    a: [CAH,      E,   H,   L,      PA,  PR]  
+    B: [Business, A,   AS,  E,      FM,  GC, Man, Mar, ML, BA] 
+    b: [CBSHS,    C,   N,   PRTM,   PS,   P, PHS, SACJ]
+    F: [CAFLS,    AS, AVPS, ESPS, FNPS, FEC, PES]
+    E: [CECAS,    AE, BioE, ChBE,   CE, ECE, ESE, EEES, ME, IE,
+                  CS, HCC,  VC,    FoI, SoC, GE,  ES,  ESE]
+    e: [EDU,      EHD,EOLD, TL]
+    S: [SCIENCE,  BS,  C,   GB,    MSS,  PA]
+
+  colorMap: {A: [562E19, AA968C], a: [685C53, B3ADA9], 
+             B: [373435, FBB39A], b: [53307F, A997BF],
+             F: [57612B, ABB095], S: [189CBF, 8FBFD5],
+             E: [3C4A59, D3D4D8], e: [A0511C, D0A88D]}
+    
+  matrix: |-
+    FFFFeeee
+    FFF aaaaa
+    bbbbAAAa
+    BBbbAAAAA
+    BBbbEEEE
+    BBSSEEEE
+    BBSSEEEEE
+    BBSSEEEE
+
+  mapExpansion:  
+    CECAS: {CECAS: ["College of Engineering, Computing, & Applied Sciences", https://clemson.edu/cecas/],
+               AE: ["Automotive Engineering",              https://clemson.edu/cecas/departments/automotive-engineering/],
+             BioE: ["Bioengineering",                      https://clemson.edu/cecas/departments/bioe/],
+             ChBE: ["Chemical & Biomolecular Engineering", https://clemson.edu/cecas/departments/chbe/],
+               CE: ["Civil Engineering",                   https://clemson.edu/cecas/departments/ce/],
+              ECE: ["Electrical & Computer Engineering",   https://clemson.edu/cecas/departments/ece/],
+              ESE: ["Engineering Science Education",       https://clemson.edu/cecas/departments/ese/],
+               CS: ["Computer Science",                    
+                           https://clemson.edu/cecas/departments/computing/people/faculty/cs_faculty.html],
+              HCC: ["Human-Centered Computing", 
+                           https://clemson.edu/cecas/departments/computing/people/faculty/hcc_faculty.html],
+               VC: ["Visual Computing",
+                           https://clemson.edu/cecas/departments/computing/people/faculty/vc_faculty.html],
+              FoI: ["Faculty of Instruction", 
+                           https://clemson.edu/cecas/departments/computing/people/faculty/faculty_instruction.html],
+              SoC: ["School of Computing",                 https://computing.clemson.edu],
+               GE: ["General Engineering",                 https://clemson.edu/cecas/departments/ge/],
+               IE: ["Industrial Engineering",              https://clemson.edu/cecas/departments/ie/],
+               ME: ["Mechanical Engineering",              https://clemson.edu/cecas/departments/me/],
+              MSE: ["Material Science & Engineering",      https://clemson.edu/cecas/departments/mse/],
+             EEES: ["Environmental Engineering & Earth Sciences", 
+                                                           https://clemson.edu/cecas/departments/eees/]}
+
+    CAAC:  {CAAC: ["College of Architecture, Art, & Construction", https://clemson.edu/caac/],
+             SoA: ["School of Architecture",                       https://clemson.edu/caac/academics/architecture/],
+            Arch: ["Architecture",          https://clemson.edu/caac/academics/architecture/programs/architecture/],
+              HP: ["Historic Preservation", https://clemson.edu/caac/academics/architecture/programs/historic-preservation/],
+              LA: ["Landscape Architecture",https://clemson.edu/caac/academics/architecture/programs/landscape-architecture/],
+             RUD: ["Resilient Urban Design",https://clemson.edu/caac/academics/architecture/programs/resilient-urban-design/],
+            PDBE: ["Planning, Design, & Built Environment",https://clemson.edu/caac/academics/architecture/programs/pdbe/],
+             Art: ["Art",                                  https://clemson.edu/caac/academics/art/],
+             CDP: ["Construction, Development & Planning", https://clemson.edu/caac/academics/ncdp/]}
+
+### end ###
