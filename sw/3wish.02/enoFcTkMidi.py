@@ -147,7 +147,6 @@ class enoFcTkMidi:
       self.midiLoaded = False
       self.reportError('activateMidi', 'midi import and initiation unsuccessful')
 
-
   ############# activate Enodia Midi controller #############
 
   def activateEnoMidi(self):
@@ -236,7 +235,7 @@ class enoFcTkMidi:
     if self.showSliders2D:    self.buildSliders(sliderFrame)
     if self.showButtonGrid2D: self.buildButtonGrid(bGridFrame)
 
-    for el in [sliderFrame, bGridFrame]: el.pack(side=tk.LEFT, expand=True, fill=tk.BOTH)
+    for el in [bGridFrame, sliderFrame]: el.pack(side=tk.TOP, expand=True, fill=tk.BOTH)
 
   ############ build sliders user interface ############
 
@@ -246,11 +245,13 @@ class enoFcTkMidi:
   ############ build button grid user interface ############
 
   def buildButtonGrid(self, rootFrame):
+
+    print("building button grid")
     try:
       global enoTkColorGrid
       import enoTkColorGrid
 
-      self.etkColorGrid = enoTkColorGrid()
+      self.etkColorGrid = enoTkColorGrid.enoTkColorGrid(rootFrame)
 
     except:
       self.reportError('buildButtonGrid', 'error:')

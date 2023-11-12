@@ -12,10 +12,10 @@ import PIL.Image, PIL.ImageTk #image manipulation package
 from functools    import partial
   
 ##################################################### 
-############# enodia Tkinter image grid #############
+############# enodia Tkinter color grid #############
 ##################################################### 
 
-class enoTkImgGrid:
+class enoTkColorGrid:
 
   rows, columns  = 8, 9    #initially, hardcode a series of defaults
   w, h           = 94, 94
@@ -28,30 +28,28 @@ class enoTkImgGrid:
   buttonTk       = None
   imagesDict     = None
   imgPrefix      = None
-  padX           = 15
-  padY           = 15
+  padX           = 1
+  padY           = 1
   bgImgFn        = None
 
   autostartMainloop = False
 
   ############# constructor #############
 
-  def __init__(self, imgPrefix, **kwargs):
+  def __init__(self, rootFrame, **kwargs):
 
     #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-    self.imgPrefix = imgPrefix 
+    self.root      = rootFrame
     self.buildUI()
 
   #################### build user interface ####################
 
   def buildUI(self):
   
-    self.root = tk.Tk()
-    self.root.title("Interactive grid example")
-    self.root.geometry(self.windowGeometry)
-    if self.hideTitlebar: self.root.overrideredirect(1) #hide window decorations ~= titlebar
+    #self.root.geometry(self.windowGeometry)
+    #if self.hideTitlebar: self.root.overrideredirect(1) #hide window decorations ~= titlebar
   
     self.buttonState = {}
     self.buttonTk    = {}
