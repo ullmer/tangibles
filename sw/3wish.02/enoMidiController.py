@@ -376,6 +376,12 @@ class enoMidiController:
     
     if lightstate == 2:
       for i in range(63): self.midiOut.note_on(i, 0, 3)
+
+  ############# simple illuminate #############
+
+  def illumButton(self, row, col):
+   noteId = row * 9 + col
+   self.midiOut.note_on(noteId, 25, 3)
     
   ############# pollMidi #############
 

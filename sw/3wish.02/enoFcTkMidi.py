@@ -400,6 +400,7 @@ class enoFcTkMidi:
       if ctrlType >= 'a' and ctrlType <= 'i' and ctrlVal == 127:
         row = ord(ctrlType) - ord('a')
         col = ctrlId - 1
+        self.enoMidiCtlr.illumButton(row, col)
         print(row, col); return
  
       if ctrlType == 's': 
