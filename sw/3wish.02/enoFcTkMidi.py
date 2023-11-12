@@ -66,7 +66,7 @@ class enoFcTkMidi:
   tkBgRgb           = [10]  * 3
   tkSTroughRgb      = [130] * 3 #slider trough
   tkFgRgb           = [170] * 3
-  tkButBgRgb        = [100] * 3 #slider trough
+  tkButBgRgb        = [75]  * 3 #background near buttons
 
   #tkSliderMinVal = 0
   #tkSliderMaxVal = 127
