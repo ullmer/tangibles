@@ -3,7 +3,7 @@
 # Begun 2023-11-11
 
 import yaml
-#from enoFcTkMidi import *
+import enoFcTkMidi 
 
 yfn = 'cuColleges01.yaml'
 yf  = open(yfn, 'rt')
@@ -13,6 +13,11 @@ yd  = yaml.safe_load(yf)
 
 im  = yd['imageMatrix']
 mm  = im['matrixMap']
+
+basedir = enoFcTkMidi.basedir
+eftm = enoFcTkMidi.enoFcTkMidi(swBasePath=basedir)
+
+enoFcTkMidi.tkMain()
 
 for key in mm:
   mmkEl  = mm[key]
