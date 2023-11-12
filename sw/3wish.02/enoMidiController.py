@@ -363,6 +363,19 @@ class enoMidiController:
       self.invokeCallback(control, val)
     else:
       print("midiNum %s not in scnd list" % str(midiNum))
+
+  ############# simple illuminate #############
+
+  def simpleIlluminate(self, lightstate):
+
+    if lightstate == 0:
+      for i in range(63): self.midiOut.note_on(i, i, 3)
+    
+    if lightstate == 1:
+      for i in range(63): self.midiOut.note_on(i, 63+i, 3)
+    
+    if lightstate == 2:
+      for i in range(63): self.midiOut.note_on(i, 0, 3)
     
   ############# pollMidi #############
 

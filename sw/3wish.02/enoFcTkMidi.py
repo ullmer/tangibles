@@ -76,6 +76,7 @@ class enoFcTkMidi:
 
   tkSliderMinVal = 127
   tkSliderMaxVal = 0
+  lightState     = 0
 
   ############# constructor #############
 
@@ -311,13 +312,22 @@ class enoFcTkMidi:
     setButton = tk.Button(buttonFrame, text='reset\nvals', 
                           justify=tk.RIGHT, command=setCb)
 
+    lightButton = tk.Button(buttonFrame, text='light',
+                            justify=tk.RIGHT, command=self.midiIlluminate)
+
     if self.tkSliderOrient == 'vert':
-      for el in [getButton, setButton]: el.pack(side=tk.TOP, fill=tk.X)
+      for el in [getButton, setButton, lightButton]: el.pack(side=tk.TOP, fill=tk.X)
       buttonFrame.pack(side=tk.RIGHT, expand=True, fill=tk.BOTH)
     else:
       getButton.pack(side=tk.LEFT)
       setButton.pack(side=tk.LEFT)
       buttonFrame.pack(side=tk.TOP)
+
+  ############ midiIlluminate ############
+
+  def midiIlluminate(self):
+    self.enoMidiCtlr.simpleIlluminate(self.lightState)
+    self.lightState += 1
 
   ############ tk slider button callbacks ############
 
