@@ -31,7 +31,8 @@ class enoTkColorGrid:
   padX           = .5
   padY           = .5
   bgImgFn        = None
-  butBgRgb       = [100, 50, 0]
+  #butBgRgb       = [100, 50, 0]
+  butBgRgb       = [75] * 3
 
   autostartMainloop = False
 
@@ -81,7 +82,7 @@ class enoTkColorGrid:
       for j in range(self.columns):
         coord  = (i, j)
         cb     = partial(self.toggleCB, coord) #e.g., https://www.blog.pythonlibrary.org/2016/02/11/python-partials/
-        button = tk.Button(self.root, text='', command=cb, bg=bbgCol, width=2)
+        button = tk.Button(self.root, text='', command=cb, bg=bbgCol, width=2, relief=tk.FLAT)
         self.buttonState[coord] = False
         self.buttonTk[coord]    = button
         button.grid(row=i, column=j, padx=self.padX, pady=self.padY)
