@@ -391,11 +391,16 @@ class enoFcTkMidi:
   def midiEventCb(self, control, arg):
     try:
 
-      if control=="i9" and int(arg)==127: self.midiIlluminate()
+      if control=="i9" and int(arg)==127: self.midiIlluminate(); return
 
       ctrlType = control[0]
       ctrlId   = int(control[1])
       ctrlVal  = int(arg)
+
+      if ctrlType >= 'a' and ctrlType <= 'i' and ctrlVal == 127:
+        row = ord(ctrlType) - ord('a')
+        col = ctrlId - 1
+        print(row, col); return
  
       if ctrlType == 's': 
         #print(ctrlId, ctrlVal)
