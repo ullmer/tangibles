@@ -222,10 +222,13 @@ class enoFcTkMidi:
       self.tkActive = False
       self.reportError('buildTkUi', 'Initial invocation of Tkinter unsuccessful.')
 
-    iconFn = self.swBasePath + self.swIconFn
-    iconPh = tk.PhotoImage(file = iconFn)
-
-    self.tkRoot.iconphoto(False, iconPh)
+    try:
+      iconFn = self.swBasePath + self.swIconFn
+      iconPh = tk.PhotoImage(file = iconFn)
+      self.tkRoot.iconphoto(False, iconPh)
+    except: 
+      self.reportError('buildTkUi', 'issues registering titlebar icon image; details:')
+      traceback.print_exc()
 
     r,g,b = self.tkBgRgb
     bgCol = self.rgb2tk(r,g,b)
