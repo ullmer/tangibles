@@ -328,6 +328,7 @@ class enoFcTkMidi:
   def midiIlluminate(self):
     self.enoMidiCtlr.simpleIlluminate(self.lightState)
     self.lightState += 1
+    if self.lightState > 2: self.lightState = 0
 
   ############ tk slider button callbacks ############
 
