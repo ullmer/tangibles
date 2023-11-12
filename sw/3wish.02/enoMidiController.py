@@ -262,6 +262,8 @@ class enoMidiController:
       print("enoMidiController registerControls exception:", controlsList)
       traceback.print_exc(); return None
 
+  ############# register controls helper #############
+
   def registerControlsHelper(self, ctrlName, midiStatus, midiNum, callbackFunc):
     midiStatNumKey = self.midiStatusNumKey(midiStatus, midiNum)
     self.controllerStatusNumDict[midiStatNumKey] = ctrlName
@@ -377,6 +379,12 @@ class enoMidiController:
 
   def registerMidiOutState(self, a,b,c):
     self.midiOutState[a] = (b,c)
+
+  ############# lookup midi output state #############
+
+  def lookupMidiOutState(self, a):
+    if a not in self.midiOutState: return None
+    return self.midiOutState[a]
 
   ############# simple illuminate #############
 
