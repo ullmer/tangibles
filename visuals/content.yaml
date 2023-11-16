@@ -402,41 +402,33 @@ Using Personal Objects as Tangible Interfaces for Memory Recollection and Sharin
       mkm:
         title:   Siftables: Towards Sensor Network User Interfaces
         authors: [David Merrill, Jeevan Kalanithi, Pattie Maes]
- 	A Malleable Control Structure for Softwired User Interfaces
-        title:
-        authors:
-Nicolas Villar, Hans Gellersen
-        title:
-        authors:
- 	Using Magnets in Physical Blocks That Behave As Programming Objects
-Andrew Smith
-        title:
-        authors:
- 	Collaborative Ambient Systems by Blow Displays
-Mitsuru Minakuchi, Satoshi Nakamura
-        title:
-        authors:
- 	Brand consciousness as a driving design force
-Peter Shultz
-        title:
-        authors:
- 	TagTiles: optimal challenge in educational electronics
-Janneke Verhaegh, Willem Fontijn, Jettie Hoonhout
-        title:
-        authors:
- 	Smart Blocks: A Tangible Mathematical Manipulative
-Audrey Girouard, Erin Treacy Solovey, Leanne Hirshfield, Stacey Ecott, Orit Shaer, Robert Jacob
-        title:
-        authors:
- 	CabBoots – Shoes with integrated Guidance System
-Martin Frey
-        title:
-        authors:
- 	When is Role Playing really experiential? Case studies
-Stella Boess, Daniel Saakes, Caroline Hummels
-        title:
-        authors:
- 	Context-Aware Kitchen Utilities
-Matthias Kranz, Alexis Maldonado, Benedikt Hörnler, Radu Rusu, Michael Beetz, Gerhard Rigoll, Albrecht Schmidt
+      vg:
+        title:   A Malleable Control Structure for Softwired User Interfaces
+        authors: [Nicolas Villar, Hans Gellersen]
+      s:
+        title:   Using Magnets in Physical Blocks That Behave As Programming Objects
+        authors: Andrew Smith
+      mn:
+        title:   Collaborative Ambient Systems by Blow Displays
+        authors: [Mitsuru Minakuchi, Satoshi Nakamura]
+      s:
+        title: Brand consciousness as a driving design force
+        authors: Peter Shultz
+      s:
+        title:   TagTiles: optimal challenge in educational electronics
+        authors: [Janneke Verhaegh, Willem Fontijn, Jettie Hoonhout]
+      gshesj:
+        title:   Smart Blocks: A Tangible Mathematical Manipulative
+        authors: [Audrey Girouard, Erin Treacy Solovey, Leanne Hirshfield, Stacey Ecott, Orit Shaer, Robert Jacob]
+      f:
+        title:   CabBoots – Shoes with integrated Guidance System
+        authors: [Martin Frey]
+      bsh:
+        title: When is Role Playing really experiential? Case studies
+        authors: [Stella Boess, Daniel Saakes, Caroline Hummels]
+      kmhrbrs:
+        title: Context-Aware Kitchen Utilities
+        authors: [Matthias Kranz, Alexis Maldonado, Benedikt Hörnler, Radu Rusu, Michael Beetz, 
+                  Gerhard Rigoll, Albrecht Schmidt]
 
 ### end ###
