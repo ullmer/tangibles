@@ -17,11 +17,11 @@ addresses:
     Body Movements:                              {papers: [paw, rhkcl, lre, m],      chair: Thecla Schiphorst}
     Context Dependency and Physical Adaptability:{papers: [scb, mrgk, pno, b],       chair: Nicolas Villar}
 
-    Two Minute Madness (1): 
+    Two Minute Madness, 1): 
       papers: [ehl, lkm, db, lcgs, bvhhb, r, jgak, hj, dh, daw, ss, j]
       chair: Matthias Kranz
     
-    Two Minute Madness (2): 
+    Two Minute Madness, 2): 
       papers: [rtsi, kb, mkm, vg, s, mn, s, vfh, gshesj, f, bsh, kmhrbrs]
       chair: Matthias Kranz
 
@@ -30,339 +30,339 @@ addresses:
       title: A Handle on What's Going On\: Combining Tangible Interfaces and Ambient Displays >
              for Collaborative Groups
       authors:
-        - Johanna Brewer (University of California, Irvine, US)
-        - Amanda Williams (University of California, Irvine, US)
-        - Paul Dourish (University of California, Irvine, US)
+        - Johanna Brewer,  University of California, Irvine, US]
+        - Amanda Williams, University of California, Irvine, US]
+        - Paul Dourish,    University of California, Irvine, US]
     kmhrbrs: 
       title: A Knife and a Cutting Board as Implicit User Interface - Towards Context-Aware Kitchen Utilities
       authors: 
-        - Matthias Kranz (University of Munich, Germany)
-        - Alexis Maldonado (Technische Universität München, Germany)
-        - Benedikt Hörnler (Technische Universität München, Germany)
-        - Radu Rusu (Technische Universität München, Germany)
-        - Michael Beetz (Technische Universität München, Germany)
-        - Gerhard Rigoll (Technische Universität München, Germany)
-        - Albrecht Schmidt (University of Munich, Germany)
+        - Matthias Kranz,   University of Munich,           Germany]
+        - Alexis Maldonado, Technische Universität München, Germany]
+        - Benedikt Hörnler, Technische Universität München, Germany]
+        - Radu Rusu,        Technische Universität München, Germany]
+        - Michael Beetz,    Technische Universität München, Germany]
+        - Gerhard Rigoll,   Technische Universität München, Germany]
+        - Albrecht Schmidt, University of Munich,           Germany]
     vg:
       title: A Malleable Control Structure for Softwired User Interfaces
       authors:
-        - Nicolas Villar (Lancaster University, UK)
-        - Hans Gellersen (Lancaster University, UK)
+        - Nicolas Villar, Lancaster University, UK]
+        - Hans Gellersen, Lancaster University, UK]
     j:
       title: A Physical Approach to Tangible Interaction Design
       authors:
-        - Mads Jensen (University of Southern Denmark, Denmark)
+        - Mads Jensen, University of Southern Denmark, Denmark]
     er:
       title: A Tangible User Interface for Multi-User Awareness Systems
       authors: 
-        - Richard Etter (Fraunhofer IPSI, Germany)
-        - Carsten Röcker (Fraunhofer IPSI, Germany)
+        - Richard Etter,  Fraunhofer IPSI, Germany]
+        - Carsten Röcker, Fraunhofer IPSI, Germany]
     pno: 
       title: Actuation and Tangible User Interfaces: Vaucanson duck, Robots and Shape Displays
       authors:
-        - Ivan Poupyrev (Sony CSL, Japan)
-        - Tatsushi Nashida (Sony Design Center, Japan)
-        - Makoto Okabe (Tokyo University, Japan)
+        - Ivan Poupyrev,    Sony CSL,           Japan]
+        - Tatsushi Nashida, Sony Design Center, Japan]
+        - Makoto Okabe,     Tokyo University,   Japan]
     s: 
       title: Beyond video – choosing the right medium for a media rich interaction
       authors: 
-        - Peter Shultz (Art Center College of Design, US)
+        - Peter Shultz, Art Center College of Design, US]
     f:
       title: CabBoots- Shoes with integrated Guidance System
       authors: 
-        - Martin Frey (UdK Berlin, Germany)
+        - Martin Frey, UdK Berlin, Germany]
     mn:
       title: Collaborative Ambient Systems by Blow Displays
       authors: 
-        - Mitsuru Minakuchi (National Institute of Information and Communications Technology, Japan)
-        - Satoshi Nakamura (National Institute of Information and Communications Technology, Japan)
+        - Mitsuru Minakuchi, National Institute of Information and Communications Technology, Japan]
+        - Satoshi Nakamura, National Institute of Information and Communications Technology, Japan]
     hfamop:
       title: Design Research & Tangible Interaction 
       authors:
-        - Elise van den Hoven (Eindhoven University of Technology, Netherlands)
-        - Joep Frens (Eindhoven University of Technology, Netherlands)
-        - Dima Aliakseyeu (Eindhoven University of Technology, Netherlands)
-        - Jean-Bernard Martens (Eindhoven University of Technology, Netherlands)
-        - Kees Overbeeke (Eindhoven University of Technology, Netherlands)
-        - Peter Peters (Eindhoven University of Technology, Netherlands)
+        - Elise van den Hoven, Eindhoven University of Technology, Netherlands]
+        - Joep Frens, Eindhoven University of Technology, Netherlands]
+        - Dima Aliakseyeu, Eindhoven University of Technology, Netherlands]
+        - Jean-Bernard Martens, Eindhoven University of Technology, Netherlands]
+        - Kees Overbeeke, Eindhoven University of Technology, Netherlands]
+        - Peter Peters, Eindhoven University of Technology, Netherlands]
       slides: https://tei.acm.org/2007/program/EliseVanDenHoven_DesignResearchAndTangibleInteraction.pdf
     hhv:
       title: Designing for Diversity: Developing Complex Adaptive Tangible Products
       authors:
-        - Bart Hengeveld (University of Technology Delft, Netherlands)
-        - Caroline Hummels (Delft University of Technology (TU Delft), Netherlands)
-        - Riny Voort (Viataal-Research, Development & Support (RDS), Netherlands)
+        - Bart Hengeveld, University of Technology Delft, Netherlands]
+        - Caroline Hummels, Delft University of Technology, TU Delft), Netherlands]
+        - Riny Voort, Viataal-Research, Development & Support, RDS), Netherlands]
     hr:
       title: Designing Tangible Programming Languages for Classroom Use
       authors:
-        - Michael Horn (Tufts University, US)
-        - Robert Jacob (Tufts University, US)
+        - Michael Horn, Tufts University, US]
+        - Robert Jacob, Tufts University, US]
 Distributed Physical Interfaces With Shared Phidgets
         - 
-Nicolai Marquardt (Bauhaus-University Weimar, Germany)
+Nicolai Marquardt, Bauhaus-University Weimar, Germany]
         - 
-Saul Greenberg (University of Calgary, Canada)
-Do tangible interfaces enhance learning? (slides)
+Saul Greenberg, University of Calgary, Canada]
+Do tangible interfaces enhance learning?, slides]
         - 
-Paul Marshall (Open University, UK)
+Paul Marshall, Open University, UK]
 Explicit interaction for surgical rehabilitation
         - 
-Tomas Sokoler (K3, Malmö University, Sweden)
+Tomas Sokoler, K3, Malmö University, Sweden]
         - 
-Jonas Löwgren (Malmö University, Sweden)
+Jonas Löwgren, Malmö University, Sweden]
         - 
-Mette Agger Eriksen (Malmö University, Sweden)
+Mette Agger Eriksen, Malmö University, Sweden]
         - 
-Per Linde (Malmö University, Sweden)
+Per Linde, Malmö University, Sweden]
         - 
-Stefan Olofsson (Malmö University, Sweden)
+Stefan Olofsson, Malmö University, Sweden]
 Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children
         - 
-Milena Droumeva (Simon Fraser Unversity, Canada)
+Milena Droumeva, Simon Fraser Unversity, Canada]
         - 
-Alissa Antle (Simon Fraser University, Canada)
+Alissa Antle, Simon Fraser University, Canada]
         - 
-Ron Wakkary (Simon Fraser University, Canada)
-Freequent Traveller (sushu.de/free, slides)
+Ron Wakkary, Simon Fraser University, Canada]
+Freequent Traveller, sushu.de/free, slides]
         - 
-Susanne Schuricht (University of the Arts Berlin, Germany)
+Susanne Schuricht, University of the Arts Berlin, Germany]
         - 
-Tobias Schmidt (University of the Arts Berlin, Germany)
-Co-writer of the paper: Michael Hohl (Sheffield Hallam University, UK)
-Co-writer of the paper: Mirjam Struppek (Interactionfield - Urban Media Research Berlin, Germany)
-From Hand-Held to Body-Worn: Embodied Experiences of the Design and Use of a Wearable Movement-Based Interaction Concept (slides 6MB)
+Tobias Schmidt, University of the Arts Berlin, Germany]
+Co-writer of the paper: Michael Hohl, Sheffield Hallam University, UK]
+Co-writer of the paper: Mirjam Struppek, Interactionfield - Urban Media Research Berlin, Germany]
+From Hand-Held to Body-Worn: Embodied Experiences of the Design and Use of a Wearable Movement-Based Interaction Concept, slides 6MB]
         - 
-Jin Moen (Interactive Institute; Moement R&D, Sweden)
+Jin Moen, Interactive Institute; Moement R&D, Sweden]
 Gesture Connect: Facilitating Tangible Interaction With a Flick Of The Wrist
         - 
-Trevor Pering (Intel Research, US)
+Trevor Pering, Intel Research, US]
         - 
-Roy Want (Intel Research, US)
+Roy Want, Intel Research, US]
         - 
-Yaw Anokwa (University of Washington, US)
+Yaw Anokwa, University of Washington, US]
 Giving Materials a Voice
         - 
-Hannah Regier (Art Center College of Design, US)
+Hannah Regier, Art Center College of Design, US]
 Image Schemas and Their Metaphorical Extensions – Intuitive Patterns for Tangible Interaction
         - 
-Joern Hurtienne (Technische Universität Berlin, Germany)
+Joern Hurtienne, Technische Universität Berlin, Germany]
         - 
-Johann Habakuk Israel (Fraunhofer-Institute for Production Systems and Design Technology IPK, Germany)
+Johann Habakuk Israel, Fraunhofer-Institute for Production Systems and Design Technology IPK, Germany]
 Keep in Touch: A Tactile-Vision Intimate Interface
         - 
-Nima Motamedi (Simon Fraser University, Canada)
+Nima Motamedi, Simon Fraser University, Canada]
 Lessons from an AR Book study
         - 
-Andreas Dünser (HIT Lab NZ, University of Canterbury, New Zealand)
+Andreas Dünser, HIT Lab NZ, University of Canterbury, New Zealand]
         - 
-Eva Hornecker (HIT Lab NZ, University of Canterbury, New Zealand)
+Eva Hornecker, HIT Lab NZ, University of Canterbury, New Zealand]
 PaperPoint: A Paper-Based Presentation and Interactive Paper Prototyping Toolkit
         - 
-Beat Signer (ETH Zurich, Switzerland)
+Beat Signer, ETH Zurich, Switzerland]
         - 
-Moira Norrie (ETH Zurich, Switzerland)
+Moira Norrie, ETH Zurich, Switzerland]
 Physical Interventions in a Location Based Cultural Narrative: A Case Study of Embedded Media in Public Space Installations
         - 
-Amanda Parkes (MIT Media Lab, US)
+Amanda Parkes, MIT Media Lab, US]
         - 
-Jussi Angesleva (University of Arts Berlin, Germany)
+Jussi Angesleva, University of Arts Berlin, Germany]
 PillowTalk: Can We Afford Intimacy?
         - 
-Thecla Schiphorst (Simon Fraser University, Canada)
+Thecla Schiphorst, Simon Fraser University, Canada]
         - 
-Frank Nack (V2_ Institute for the Unstable Media, Netherlands)
+Frank Nack, V2_ Institute for the Unstable Media, Netherlands]
         - 
-Michiel Kauwatjoe (V2_ Institute for the Unstable Media, Netherlands)
+Michiel Kauwatjoe, V2_ Institute for the Unstable Media, Netherlands]
         - 
-Simon de Bakker (V2_ Institute for the Unstable Media, Canada)
+Simon de Bakker, V2_ Institute for the Unstable Media, Canada]
         - 
-Stock Stock (V2_ Institute for the Unstable Media, Netherlands)
+Stock Stock, V2_ Institute for the Unstable Media, Netherlands]
         - 
-Hielke Schut (Eindhoven University of Technology, Netherlands)
+Hielke Schut, Eindhoven University of Technology, Netherlands]
         - 
-Lora Aroyo (Eindhoven University of Technology, Netherlands)
+Lora Aroyo, Eindhoven University of Technology, Netherlands]
         - 
-Angel Perez (Eindhoven University of Technology, Netherlands)
+Angel Perez, Eindhoven University of Technology, Netherlands]
 reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction
         - 
-Martin Kaltenbrunner (Universitat Pompeu Fabra, Spain)
+Martin Kaltenbrunner, Universitat Pompeu Fabra, Spain]
         - 
-Ross Bencina (Sonic Fritter Pty Ltd, Australia)
+Ross Bencina, Sonic Fritter Pty Ltd, Australia]
 Reclaiming Public Space - Designing for Public Interaction with Private Devices
         - 
-Eva Eriksson (Chalmers University of Technology, Sweden)
+Eva Eriksson, Chalmers University of Technology, Sweden]
         - 
-Thomas Riisgaard Hansen (University of Aarhus, Denmark)
+Thomas Riisgaard Hansen, University of Aarhus, Denmark]
         - 
-Andreas Lykke-Olesen (Aarhus School of Architecture, Denmark)
-Remote Active Tangible Interactions (slides)
+Andreas Lykke-Olesen, Aarhus School of Architecture, Denmark]
+Remote Active Tangible Interactions, slides]
         - 
-Jan Richter (University of South Australia, Australia)
+Jan Richter, University of South Australia, Australia]
         - 
-Bruce Thomas (University of South Australia - Wearable Computer Lab, Australia)
+Bruce Thomas, University of South Australia - Wearable Computer Lab, Australia]
         - 
-Maki Sugimoto (The University of Electro-Communications, Japan)
+Maki Sugimoto, The University of Electro-Communications, Japan]
         - 
-Masahiko Inami (University of Electro-Communications, Japan)
+Masahiko Inami, University of Electro-Communications, Japan]
 Simplicity in Interaction Design
         - 
-Angela Chang (MIT, US)
+Angela Chang, MIT, US]
         - 
-James Gouldstone (MIT Media Lab, US)
+James Gouldstone, MIT Media Lab, US]
         - 
-Jamie Zigelbaum (MIT Media Lab, US)
+Jamie Zigelbaum, MIT Media Lab, US]
 Smart Blocks: A Tangible Mathematical Manipulative
         - 
-Audrey Girouard (Tufts University, US)
+Audrey Girouard, Tufts University, US]
         - 
-Erin Treacy (Tufts University, US)
+Erin Treacy, Tufts University, US]
         - 
-Leanne Hirshfield (Tufts University, US)
+Leanne Hirshfield, Tufts University, US]
         - 
-Stacey Ecott (Tufts University, US)
+Stacey Ecott, Tufts University, US]
         - 
-Orit Shaer (Tufts University, US)
+Orit Shaer, Tufts University, US]
         - 
-Robert Jacob (Tufts University, US)
+Robert Jacob, Tufts University, US]
 Spatializing Real Time Interactive Environments
         - 
-Nimish Biloria (TU Delft, Netherlands)
+Nimish Biloria, TU Delft, Netherlands]
 StickySpots: Using Location to Embed Technology in the Social Practices of the Home
         - 
-Kathryn Elliot (University of Calgary, Canada)
+Kathryn Elliot, University of Calgary, Canada]
         - 
-Carman Neustaedter (University of Calgary, Canada)
+Carman Neustaedter, University of Calgary, Canada]
         - 
-Saul Greenberg (University of Calgary, Canada)
+Saul Greenberg, University of Calgary, Canada]
 TagTiles: optimal challenge in educational electronics
         - 
-Janneke Verhaegh (Philips Research Europe, Netherlands)
+Janneke Verhaegh, Philips Research Europe, Netherlands]
         - 
-Willem Fontijn (Philips Research, Netherlands)
+Willem Fontijn, Philips Research, Netherlands]
         - 
-Jettie Hoonhout (Philips Research, Netherlands)
+Jettie Hoonhout, Philips Research, Netherlands]
 Tangible Image Studio: Augmented Reality Based Tangible Interface Tool for Digital Imaging
         - 
-Jung-ah Hwang (KAIST, South Korea)
+Jung-ah Hwang, KAIST, South Korea]
         - 
-Tek-jin Nam (KAIST, South Korea)
+Tek-jin Nam, KAIST, South Korea]
 Tangible interaction in tabletop games: comparing iconic and symbolic play pieces
         - 
-Saskia Bakker (Eindhoven University of Technology, Netherlands)
+Saskia Bakker, Eindhoven University of Technology, Netherlands]
         - 
-Debby Vorstenbosch (Eindhoven University of Technology, Netherlands)
+Debby Vorstenbosch, Eindhoven University of Technology, Netherlands]
         - 
-Elise van den Hoven (Eindhoven University of Technology, Netherlands)
+Elise van den Hoven, Eindhoven University of Technology, Netherlands]
         - 
-Gerard Hollemans (Philips Research Laboratories Eindhoven, Netherlands)
+Gerard Hollemans, Philips Research Laboratories Eindhoven, Netherlands]
         - 
-Tom Bergman (Philips Research Laboratories Eindhoven, Netherlands)
+Tom Bergman, Philips Research Laboratories Eindhoven, Netherlands]
 Tangible user interfaces for configuration practices
         - 
-Larisa Sitorus (University of Southern Denmark, Denmark)
+Larisa Sitorus, University of Southern Denmark, Denmark]
         - 
-Shan Shan Cao (University of Southern Denmark, Denmark)
+Shan Shan Cao, University of Southern Denmark, Denmark]
         - 
-Jacob Buur (University of Southern Denmark, Denmark)
-Tap Input as an Embedded Interaction Method for Mobile Devices (slides)
+Jacob Buur, University of Southern Denmark, Denmark]
+Tap Input as an Embedded Interaction Method for Mobile Devices, slides]
         - 
-Sami Ronkainen (Nokia, Finland)
+Sami Ronkainen, Nokia, Finland]
         - 
-Jonna Hakkila (Nokia, Finland)
+Jonna Hakkila, Nokia, Finland]
         - 
-Jukka Linjama (Nokia, Finland)
+Jukka Linjama, Nokia, Finland]
         - 
-Ashley Colley (Nokia, Finland)
+Ashley Colley, Nokia, Finland]
         - 
-Saana Kaleva (Nokia, Finland)
-Teaching Table: A tangible mentor for pre-K math education (slides)
+Saana Kaleva, Nokia, Finland]
+Teaching Table: A tangible mentor for pre-K math education, slides]
         - 
-Madhur Khandelwal (Georgia Institute of Technology, US)
+Madhur Khandelwal, Georgia Institute of Technology, US]
         - 
-Ali Mazalek (Georgia Institute of Technology, US)
+Ali Mazalek, Georgia Institute of Technology, US]
 The card box at hand
         - 
-Tanja Döring (University of Hamburg, Germany)
+Tanja Döring, University of Hamburg, Germany]
         - 
-Steffi Beckhaus (University of Hamburg, Germany)
-The CTI Framework: Informing the Design of Tangible and Spatial Interactive Systems for Children (slides)
+Steffi Beckhaus, University of Hamburg, Germany]
+The CTI Framework: Informing the Design of Tangible and Spatial Interactive Systems for Children, slides]
         - 
-Alissa Antle (Simon Fraser University, Canada)
+Alissa Antle, Simon Fraser University, Canada]
 The Feel Dimension of Technology Interaction: Exploring Tangibles through Movement and Touch
         - 
-Astrid Larssen (University of Technology Sydney, Australia)
+Astrid Larssen, University of Technology Sydney, Australia]
         - 
-Toni Robertson (University of Technology Sydney, Australia)
+Toni Robertson, University of Technology Sydney, Australia]
         - 
-Jenny Edwards (University of Technology Sydney, Australia)
+Jenny Edwards, University of Technology Sydney, Australia]
         - 
 The Meatbook: Tangible and Visceral Interaction
         - 
-Aaron Levisohn (Simon Fraser University, Canada)
+Aaron Levisohn, Simon Fraser University, Canada]
         - 
-Jayme Cochrane (Simon Fraser University, Canada)
+Jayme Cochrane, Simon Fraser University, Canada]
         - 
-Diane Gromala (Simon Fraser University, Canada)
+Diane Gromala, Simon Fraser University, Canada]
         - 
-Jinsil Seo (Simon Fraser University, Canada)
+Jinsil Seo, Simon Fraser University, Canada]
 The reacTable: Exploring the Synergy between Live Music Performance and Tabletop Tangible Interfaces
         - 
-Sergi Jorda (Pompeu Fabra University, Spain)
+Sergi Jorda, Pompeu Fabra University, Spain]
         - 
-Günter Geiger (Pompeu Fabra University, Spain)
+Günter Geiger, Pompeu Fabra University, Spain]
         - 
-Martin Kaltenbrunner (Pompeu Fabra University, Spain)
+Martin Kaltenbrunner, Pompeu Fabra University, Spain]
         - 
-Marcos Alonso (Pompeu Fabra University, Spain)
+Marcos Alonso, Pompeu Fabra University, Spain]
 The Tangible Video Editor: Collaborative Video Editing with Active Tokens
         - 
-Jamie Zigelbaum (MIT Media Lab, US)
+Jamie Zigelbaum, MIT Media Lab, US]
         - 
-Michael Horn (Tufts University, US)
+Michael Horn, Tufts University, US]
         - 
-Orit Shaer (Tufts University, US)
+Orit Shaer, Tufts University, US]
         - 
-Robert Jacob (Tufts University, US)
+Robert Jacob, Tufts University, US]
 Tilting Table: A Movable Screen
         - 
-Hyun-Jean Lee (Georgia Institute of Technology, US)
+Hyun-Jean Lee, Georgia Institute of Technology, US]
         - 
-Ali Mazalek (Georgia Institute of Technology, US)
+Ali Mazalek, Georgia Institute of Technology, US]
         - 
-Madhur Khandelwal (Georgia Institute of Technology, US)
+Madhur Khandelwal, Georgia Institute of Technology, US]
 Towards Sensor Network User Interfaces
         - 
-David Merrill (MIT Media Laboratory, US)
+David Merrill, MIT Media Laboratory, US]
         - 
-Jeevan Kalanithi (Massachusetts Institute of Technology, US)
+Jeevan Kalanithi, Massachusetts Institute of Technology, US]
 Using Magnets in Physical Blocks That Behave As Programming Objects
         - 
-Andrew Smith (African Advanced Institute for Information & Communications Technology, South Africa)
+Andrew Smith, African Advanced Institute for Information & Communications Technology, South Africa]
 Using Personal Objects as Tangible Interfaces for Memory Recollection and Sharing
         - 
-Elena Mugellini (University of Applied Sciences of Western Switzerland, Fribourg, Switzerland)
+Elena Mugellini, University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
         - 
-Elisa Rubegni (University of Siena, Italy)
+Elisa Rubegni, University of Siena, Italy]
         - 
-Sandro Gerardi (University of Applied Sciences of Western Switzerland, Fribourg, Switzerland)
+Sandro Gerardi, University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
         - 
-Omar Abou Khaled (University of Applied Sciences of Western Switzerland, Fribourg, Switzerland)
+Omar Abou Khaled, University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
 VoodooFlash: Authoring across Physical and Digital Form
         - 
-Wolfgang Spiessl (Research Group Embedded Interaction, University of Munich, Germany)
+Wolfgang Spiessl, Research Group Embedded Interaction, University of Munich, Germany]
         - 
-Nicolas Villar (Lancaster University, UK)
+Nicolas Villar, Lancaster University, UK]
         - 
-Hans Gellersen (Lancaster University, UK)
+Hans Gellersen, Lancaster University, UK]
         - 
-Albrecht Schmidt (University of Munich, Germany)
+Albrecht Schmidt, University of Munich, Germany]
 When is Role Playing really experiential? Case studies.
         - 
-Stella Boess (Delft University of Technology, Netherlands)
+Stella Boess, Delft University of Technology, Netherlands]
         - 
-Daniel Saakes (Delft University of Technology, Netherlands)
+Daniel Saakes, Delft University of Technology, Netherlands]
         - 
-Caroline Hummels (Delft University of Technology (TU Delft), Netherlands)
+Caroline Hummels, Delft University of Technology, TU Delft), Netherlands]
     
  
     twoMinuteMadness1: 
@@ -400,7 +400,7 @@ Caroline Hummels (Delft University of Technology (TU Delft), Netherlands)
         title:   Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children
         authors: [Milena Droumeva, Alissa Antle, Ron Wakkary]
       s:
-        title:   Freequent Traveller (sushu.de/free, slides)
+        title:   Freequent Traveller 
         authors: [Susanne Schuricht, Tobias Schmidt]
         media:   [http://sushu.de/free/, https://tei.acm.org/2007/program/SusanneSchuricht_FrequentTraveller.pdf]
       j:
