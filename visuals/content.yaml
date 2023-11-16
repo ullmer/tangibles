@@ -3,7 +3,41 @@
 
 addresses:
   program:          https://tei.acm.org/2007/program.html
-  twoMinuteMadness: https://tei.acm.org/2007/program/TwoMinuteMadness_1.pdf
+  twoMinuteMadness: 
+    [https://tei.acm.org/2007/program/TwoMinuteMadness_1.pdf,
+     https://tei.acm.org/2007/program/TwoMinuteMadness_2.pdf]
+
+  dayOne:
+     eho: 
+       title: Reclaiming Public Space - Designing for Public Interaction with Private Devices
+       authors: [Eva Eriksson, Thomas Riisgaard Hansen, Andreas Lykke-Olesen]
+     lka:  
+       title:   Tilting Table: A Movable Screen
+       authors: [Hyun-Jean Lee, Madhur Khandelwal, Ali Mazalek]
+     db:
+       title: The Card Box at Hand: Exploring the Potentials of a Paper-Based Tangible Interface 
+              for Education and Research in Art History
+       authors: [Tanja Döring, Steffi Beckhaus]
+     lcgs:
+       title: The Meatbook: Tangible and Visceral Interaction
+       authors: [Aaron Levisohn, Jayme Cochrane, Diane Gromala, Jinsil Seo]
+ 	Weathergods: tangible interaction in a digital tabletop game
+Saskia Bakker, Debby Vorstenbosch, Elise van den Hoven, Gerard Hollemans, Tom Bergman
+ 	Giving Materials a Voice
+Hannah Regier
+ 	The reacTable: Exploring the Synergy between Live Music Performance and Tabletop Tangible Interfaces (movie wmv, 12MB)
+Sergi Jorda, Günter Geiger, Marcos Alonso, Martin Kaltenbrunner
+ 	Designing Tangible Programming Languages for Classroom Use
+Michael Horn, Robert Jacob
+ 	Lessons from an AR Book study
+Andreas Dünser, Eva Hornecker
+ 	Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children
+Milena Droumeva, Alissa Antle, Ron Wakkary
+ 	Freequent Traveller (sushu.de/free, slides)
+Susanne Schuricht (University of the Arts Berlin, Germany)
+Tobias Schmidt (University of the Arts Berlin, Germany)
+ 	A Physical Approach to Tangible Interaction Design
+Mads Jensen
 
 
 ### end ###
