@@ -109,24 +109,24 @@ addresses:
     slelo:
       title: Explicit interaction for surgical rehabilitation
       authors:
-        - [Tomas Sokoler, K3, Malmö University, Sweden]
-        - [Jonas Löwgren, Malmö University, Sweden]
+        - [Tomas Sokoler, K3,   Malmö University, Sweden]
+        - [Jonas Löwgren,       Malmö University, Sweden]
         - [Mette Agger Eriksen, Malmö University, Sweden]
-        - [Per Linde, Malmö University, Sweden]
-        - [Stefan Olofsson, Malmö University, Sweden]
+        - [Per Linde,           Malmö University, Sweden]
+        - [Stefan Olofsson,     Malmö University, Sweden]
     daw:
       title: Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children
       authors:
         - [Milena Droumeva, Simon Fraser Unversity, Canada]
-        - [Alissa Antle, Simon Fraser University, Canada]
-        - [Ron Wakkary, Simon Fraser University, Canada]
+        - [Alissa Antle,    Simon Fraser University, Canada]
+        - [Ron Wakkary,     Simon Fraser University, Canada]
     ss:
       title: Freequent Traveller, sushu.de/free, slides]
       authors:
         - [Susanne Schuricht, University of the Arts Berlin, Germany]
-        - [Tobias Schmidt, University of the Arts Berlin, Germany]
+        - [Tobias Schmidt,    University of the Arts Berlin, Germany]
        cowriters:
-        - [Michael Hohl, Sheffield Hallam University, UK]
+        - [Michael Hohl,    Sheffield Hallam University, UK]
         - [Mirjam Struppek, Interactionfield, Urban Media Research Berlin, Germany]
     m:
       title: From Hand-Held to Body-Worn: Embodied Experiences of the Design and Use >
@@ -136,9 +136,9 @@ addresses:
     pwa:
       title: Gesture Connect: Facilitating Tangible Interaction With a Flick Of The Wrist
       authors:
-        - [Trevor Pering, Intel Research, US]
-        - [Roy Want, Intel Research, US]
-        - [Yaw Anokwa, University of Washington, US]
+        - [Trevor Pering,  Intel Research,           US]
+        - [Roy Want,       Intel Research,           US]
+        - [Yaw Anokwa,     University of Washington, US]
     r:
       title: Giving Materials a Voice
       authors:
@@ -146,7 +146,7 @@ addresses:
     hi:
       title: Image Schemas and Their Metaphorical Extensions – Intuitive Patterns for Tangible Interaction
       authors:
-        - [Joern Hurtienne, Technische Universität Berlin, Germany]
+        - [Joern Hurtienne,       Technische Universität Berlin,                                         Germany]
         - [Johann Habakuk Israel, Fraunhofer-Institute for Production Systems and Design Technology IPK, Germany]
     m:
       title: Keep in Touch: A Tactile-Vision Intimate Interface
@@ -156,12 +156,12 @@ addresses:
       title: Lessons from an AR Book study
       authors:
         - [Andreas Dünser, HIT Lab NZ, University of Canterbury, New Zealand]
-        - [Eva Hornecker, HIT Lab NZ, University of Canterbury, New Zealand]
+        - [Eva Hornecker,  HIT Lab NZ, University of Canterbury, New Zealand]
 
     sn:
       title: PaperPoint: A Paper-Based Presentation and Interactive Paper Prototyping Toolkit
       authors:
-        - [Beat Signer, ETH Zurich, Switzerland]
+        - [Beat Signer,  ETH Zurich, Switzerland]
         - [Moira Norrie, ETH Zurich, Switzerland]
 
     pa:
