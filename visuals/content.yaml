@@ -149,32 +149,31 @@ addresses:
         - [Joern Hurtienne, Technische Universität Berlin, Germany]
         - [Johann Habakuk Israel, Fraunhofer-Institute for Production Systems and Design Technology IPK, Germany]
     m:
-      title:
+      title: Keep in Touch: A Tactile-Vision Intimate Interface
       authors:
-Keep in Touch: A Tactile-Vision Intimate Interface
         - [Nima Motamedi, Simon Fraser University, Canada]
-    m:
-      title:
+    dh:
+      title: Lessons from an AR Book study
       authors:
-Lessons from an AR Book study
         - [Andreas Dünser, HIT Lab NZ, University of Canterbury, New Zealand]
         - [Eva Hornecker, HIT Lab NZ, University of Canterbury, New Zealand]
-    m:
-      title:
+
+    sn:
+      title: PaperPoint: A Paper-Based Presentation and Interactive Paper Prototyping Toolkit
       authors:
-PaperPoint: A Paper-Based Presentation and Interactive Paper Prototyping Toolkit
         - [Beat Signer, ETH Zurich, Switzerland]
         - [Moira Norrie, ETH Zurich, Switzerland]
-    m:
-      title:
+
+    pa:
+      title: Physical Interventions in a Location Based Cultural Narrative: >
+             A Case Study of Embedded Media in Public Space Installations
       authors:
-Physical Interventions in a Location Based Cultural Narrative: A Case Study of Embedded Media in Public Space Installations
         - [Amanda Parkes, MIT Media Lab, US]
         - [Jussi Angesleva, University of Arts Berlin, Germany]
-    m:
-      title:
+
+    snkbssap:
+      title: PillowTalk: Can We Afford Intimacy?
       authors:
-PillowTalk: Can We Afford Intimacy?
         - [Thecla Schiphorst, Simon Fraser University, Canada]
         - [Frank Nack, V2_ Institute for the Unstable Media, Netherlands]
         - [Michiel Kauwatjoe, V2_ Institute for the Unstable Media, Netherlands]
@@ -183,69 +182,63 @@ PillowTalk: Can We Afford Intimacy?
         - [Hielke Schut, Eindhoven University of Technology, Netherlands]
         - [Lora Aroyo, Eindhoven University of Technology, Netherlands]
         - [Angel Perez, Eindhoven University of Technology, Netherlands]
-    m:
-      title:
+    kb:
+      title: reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction
       authors:
-reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction
         - [Martin Kaltenbrunner, Universitat Pompeu Fabra, Spain]
         - [Ross Bencina, Sonic Fritter Pty Ltd, Australia]
-    m:
-      title:
+    ehl:
+      title: Reclaiming Public Space - [Designing for Public Interaction with Private Devices
       authors:
-Reclaiming Public Space - [Designing for Public Interaction with Private Devices
         - [Eva Eriksson, Chalmers University of Technology, Sweden]
         - [Thomas Riisgaard Hansen, University of Aarhus, Denmark]
         - [Andreas Lykke-Olesen, Aarhus School of Architecture, Denmark]
-    m:
-      title:
+
+    rtsi:
+      title: Remote Active Tangible Interactions, slides]
       authors:
-Remote Active Tangible Interactions, slides]
         - [Jan Richter, University of South Australia, Australia]
         - [Bruce Thomas, University of South Australia - [Wearable Computer Lab, Australia]
         - [Maki Sugimoto, The University of Electro-Communications, Japan]
         - [Masahiko Inami, University of Electro-Communications, Japan]
-    m:
-      title:
+
+    cgz:
+      title: Simplicity in Interaction Design
       authors:
-Simplicity in Interaction Design
         - [Angela Chang, MIT, US]
         - [James Gouldstone, MIT Media Lab, US]
         - [Jamie Zigelbaum, MIT Media Lab, US]
-    m:
-      title:
+
+    gthesj:
+      title: Smart Blocks: A Tangible Mathematical Manipulative
       authors:
-Smart Blocks: A Tangible Mathematical Manipulative
-        - [Audrey Girouard, Tufts University, US]
-        - [Erin Treacy, Tufts University, US]
+        - [Audrey Girouard,   Tufts University, US]
+        - [Erin Treacy,       Tufts University, US]
         - [Leanne Hirshfield, Tufts University, US]
-        - [Stacey Ecott, Tufts University, US]
-        - [Orit Shaer, Tufts University, US]
-        - [Robert Jacob, Tufts University, US]
-    m:
-      title:
+        - [Stacey Ecott,      Tufts University, US]
+        - [Orit Shaer,        Tufts University, US]
+        - [Robert Jacob,      Tufts University, US]
+    b:
+      title: Spatializing Real Time Interactive Environments
       authors:
-Spatializing Real Time Interactive Environments
         - [Nimish Biloria, TU Delft, Netherlands]
-    m:
-      title:
+    eng:
+      title: StickySpots: Using Location to Embed Technology in the Social Practices of the Home
       authors:
-StickySpots: Using Location to Embed Technology in the Social Practices of the Home
-        - [Kathryn Elliot, University of Calgary, Canada]
+        - [Kathryn Elliot,     University of Calgary, Canada]
         - [Carman Neustaedter, University of Calgary, Canada]
-        - [Saul Greenberg, University of Calgary, Canada]
+        - [Saul Greenberg,     University of Calgary, Canada]
     m:
-      title:
+      title: TagTiles: optimal challenge in educational electronics
       authors:
-TagTiles: optimal challenge in educational electronics
         - [Janneke Verhaegh, Philips Research Europe, Netherlands]
-        - [Willem Fontijn, Philips Research, Netherlands]
-        - [Jettie Hoonhout, Philips Research, Netherlands]
-    m:
-      title:
+        - [Willem Fontijn,   Philips Research, Netherlands]
+        - [Jettie Hoonhout,  Philips Research, Netherlands]
+    hn:
+      title: Tangible Image Studio: Augmented Reality Based Tangible Interface Tool for Digital Imaging 
       authors:
-Tangible Image Studio: Augmented Reality Based Tangible Interface Tool for Digital Imaging 
         - [Jung-ah Hwang, KAIST, South Korea]
-        - [Tek-jin Nam, KAIST, South Korea]
+        - [Tek-jin Nam,   KAIST, South Korea]
     m:
       title:
       authors:
