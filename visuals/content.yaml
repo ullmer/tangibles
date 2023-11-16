@@ -1,50 +1,51 @@
 # References to ACM TEI 2007 content
 # Brygg Ullmer, Clemson University
+# Begun 2023-11-16
 
 addresses:
-  program:          https://tei.acm.org/2007/program.html
-  twoMinuteMadness: 
-    [https://tei.acm.org/2007/program/TwoMinuteMadness_1.pdf,
-     https://tei.acm.org/2007/program/TwoMinuteMadness_2.pdf]
-
-  dayOne: 
-     eho: 
-       title:   Reclaiming Public Space - Designing for Public Interaction with Private Devices
-       authors: [Eva Eriksson, Thomas Riisgaard Hansen, Andreas Lykke-Olesen]
-     lka:  
-       title:   Tilting Table: A Movable Screen
-       authors: [Hyun-Jean Lee, Madhur Khandelwal, Ali Mazalek]
-     db:
-       title:   The Card Box at Hand: Exploring the Potentials of a Paper-Based Tangible Interface 
-                for Education and Research in Art History
-       authors: [Tanja Döring, Steffi Beckhaus]
-     lcgs:
-       title:   The Meatbook: Tangible and Visceral Interaction
-       authors: [Aaron Levisohn, Jayme Cochrane, Diane Gromala, Jinsil Seo]
-     bvhhb: 
-       title:   Weathergods: tangible interaction in a digital tabletop game
-       authors: [Saskia Bakker, Debby Vorstenbosch, Elise van den Hoven, Gerard Hollemans, Tom Bergman]
-     r:
-       title:   Giving Materials a Voice
-       authors: [Hannah Regier]
-     jgak:
-       title:   The reacTable: Exploring the Synergy between Live Music Performance and 
-                Tabletop Tangible Interfaces
-       authors: [Sergi Jorda, Günter Geiger, Marcos Alonso, Martin Kaltenbrunner]
-       media:   [https://tei.acm.org/2007/program/JordaEtAl_Reactable.wmv]
-     hj:
-       title:   Designing Tangible Programming Languages for Classroom Use
-       authors: [Michael Horn, Robert Jacob]
-     dh:
-       title:   Lessons from an AR Book study
-       authors: [Andreas Dünser, Eva Hornecker]
- 	Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children
-Milena Droumeva, Alissa Antle, Ron Wakkary
- 	Freequent Traveller (sushu.de/free, slides)
-Susanne Schuricht (University of the Arts Berlin, Germany)
-Tobias Schmidt (University of the Arts Berlin, Germany)
- 	A Physical Approach to Tangible Interaction Design
-Mads Jensen
-
-
+  program:     https://tei.acm.org/2007/program.html
+  overview: 
+    addresses: [https://tei.acm.org/2007/program/TwoMinuteMadness_1.pdf,
+                https://tei.acm.org/2007/program/TwoMinuteMadness_2.pdf]
+    dayOne: 
+      eho: 
+        title:   Reclaiming Public Space - Designing for Public Interaction with Private Devices
+        authors: [Eva Eriksson, Thomas Riisgaard Hansen, Andreas Lykke-Olesen]
+      lka:  
+        title:   Tilting Table: A Movable Screen
+        authors: [Hyun-Jean Lee, Madhur Khandelwal, Ali Mazalek]
+      db:
+        title:   The Card Box at Hand: Exploring the Potentials of a Paper-Based Tangible Interface 
+                 for Education and Research in Art History
+        authors: [Tanja Döring, Steffi Beckhaus]
+      lcgs:
+        title:   The Meatbook: Tangible and Visceral Interaction
+        authors: [Aaron Levisohn, Jayme Cochrane, Diane Gromala, Jinsil Seo]
+      bvhhb: 
+        title:   Weathergods: tangible interaction in a digital tabletop game
+        authors: [Saskia Bakker, Debby Vorstenbosch, Elise van den Hoven, Gerard Hollemans, Tom Bergman]
+      r:
+        title:   Giving Materials a Voice
+        authors: [Hannah Regier]
+      jgak:
+        title:   The reacTable: Exploring the Synergy between Live Music Performance and 
+                 Tabletop Tangible Interfaces
+        authors: [Sergi Jorda, Günter Geiger, Marcos Alonso, Martin Kaltenbrunner]
+        media:   [https://tei.acm.org/2007/program/JordaEtAl_Reactable.wmv]
+      hj:
+        title:   Designing Tangible Programming Languages for Classroom Use
+        authors: [Michael Horn, Robert Jacob]
+      dh:
+        title:   Lessons from an AR Book study
+        authors: [Andreas Dünser, Eva Hornecker]
+      daw:
+        title:   Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children
+        authors: [Milena Droumeva, Alissa Antle, Ron Wakkary]
+      s:
+        title:   Freequent Traveller (sushu.de/free, slides)
+        authors: [Susanne Schuricht, Tobias Schmidt]
+      j:
+        title:   A Physical Approach to Tangible Interaction Design
+        authors: [Mads Jensen]
+ 
 ### end ###
