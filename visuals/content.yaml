@@ -121,7 +121,7 @@ addresses:
         - [Alissa Antle,    Simon Fraser University, Canada]
         - [Ron Wakkary,     Simon Fraser University, Canada]
     ss:
-      title: Freequent Traveller, sushu.de/free, slides]
+      title: Freequent Traveller
       authors:
         - [Susanne Schuricht, University of the Arts Berlin, Germany]
         - [Tobias Schmidt,    University of the Arts Berlin, Germany]
@@ -239,60 +239,58 @@ addresses:
       authors:
         - [Jung-ah Hwang, KAIST, South Korea]
         - [Tek-jin Nam,   KAIST, South Korea]
-    m:
-      title:
+    bvhhb:
+      title: Tangible interaction in tabletop games: comparing iconic and symbolic play pieces
       authors:
-Tangible interaction in tabletop games: comparing iconic and symbolic play pieces
-        - [Saskia Bakker, Eindhoven University of Technology, Netherlands]
-        - [Debby Vorstenbosch, Eindhoven University of Technology, Netherlands]
-        - [Elise van den Hoven, Eindhoven University of Technology, Netherlands]
-        - [Gerard Hollemans, Philips Research Laboratories Eindhoven, Netherlands]
-        - [Tom Bergman, Philips Research Laboratories Eindhoven, Netherlands]
-    m:
-      title:
+        - [Saskia Bakker,       Eindhoven University of Technology,      Netherlands]
+        - [Debby Vorstenbosch,  Eindhoven University of Technology,      Netherlands]
+        - [Elise van den Hoven, Eindhoven University of Technology,      Netherlands]
+        - [Gerard Hollemans,    Philips Research Laboratories Eindhoven, Netherlands]
+        - [Tom Bergman,         Philips Research Laboratories Eindhoven, Netherlands]
+    scb:
+      title: Tangible user interfaces for configuration practices
       authors:
-Tangible user interfaces for configuration practices
         - [Larisa Sitorus, University of Southern Denmark, Denmark]
         - [Shan Shan Cao, University of Southern Denmark, Denmark]
         - [Jacob Buur, University of Southern Denmark, Denmark]
-    m:
-      title:
+    rhlck:
+      title: Tap Input as an Embedded Interaction Method for Mobile Devices, slides]
       authors:
-Tap Input as an Embedded Interaction Method for Mobile Devices, slides]
         - [Sami Ronkainen, Nokia, Finland]
-        - [Jonna Hakkila, Nokia, Finland]
-        - [Jukka Linjama, Nokia, Finland]
-        - [Ashley Colley, Nokia, Finland]
-        - [Saana Kaleva, Nokia, Finland]
-    m:
-      title:
+        - [Jonna Hakkila,  Nokia, Finland]
+        - [Jukka Linjama,  Nokia, Finland]
+        - [Ashley Colley,  Nokia, Finland]
+        - [Saana Kaleva,   Nokia, Finland]
+    km:
+      title: Teaching Table: A tangible mentor for pre-K math education, slides]
       authors:
-Teaching Table: A tangible mentor for pre-K math education, slides]
         - [Madhur Khandelwal, Georgia Institute of Technology, US]
-        - [Ali Mazalek, Georgia Institute of Technology, US]
-    m:
-      title:
+        - [Ali Mazalek,       Georgia Institute of Technology, US]
+    db:
+      title: The card box at hand
       authors:
-The card box at hand
-        - [Tanja Döring, University of Hamburg, Germany]
+        - [Tanja Döring,    University of Hamburg, Germany]
         - [Steffi Beckhaus, University of Hamburg, Germany]
-    m:
-      title:
+    a:
+      title: The CTI Framework: Informing the Design of Tangible and Spatial Interactive >
+             Systems for Children, slides]
       authors:
-The CTI Framework: Informing the Design of Tangible and Spatial Interactive Systems for Children, slides]
         - [Alissa Antle, Simon Fraser University, Canada]
-    m:
-      title:
+
+    lre:
+      title: The Feel Dimension of Technology Interaction: Exploring Tangibles through Movement and Touch
       authors:
-The Feel Dimension of Technology Interaction: Exploring Tangibles through Movement and Touch
         - [Astrid Larssen, University of Technology Sydney, Australia]
         - [Toni Robertson, University of Technology Sydney, Australia]
         - [Jenny Edwards, University of Technology Sydney, Australia]
-        - [The Meatbook: Tangible and Visceral Interaction
+
+    lcgs:
+      title: The Meatbook: Tangible and Visceral Interaction
+      authors:
         - [Aaron Levisohn, Simon Fraser University, Canada]
         - [Jayme Cochrane, Simon Fraser University, Canada]
-        - [Diane Gromala, Simon Fraser University, Canada]
-        - [Jinsil Seo, Simon Fraser University, Canada]
+        - [Diane Gromala,  Simon Fraser University, Canada]
+        - [Jinsil Seo,     Simon Fraser University, Canada]
     m:
       title:
       authors:
