@@ -349,10 +349,9 @@ Using Personal Objects as Tangible Interfaces for Memory Recollection and Sharin
         - [Daniel Saakes, Delft University of Technology, Netherlands]
         - [Caroline Hummels, Delft University of Technology, TU Delft), Netherlands]
     
- 
     twoMinuteMadness1: 
       eho: 
-        title:   Reclaiming Public Space - [Designing for Public Interaction with Private Devices
+        title:   Reclaiming Public Space - Designing for Public Interaction with Private Devices
         authors: [Eva Eriksson, Thomas Riisgaard Hansen, Andreas Lykke-Olesen]
       lka:  
         title:   Tilting Table: A Movable Screen
@@ -391,5 +390,53 @@ Using Personal Objects as Tangible Interfaces for Memory Recollection and Sharin
       j:
         title:   A Physical Approach to Tangible Interaction Design
         authors: [Mads Jensen]
+
+    twoMinuteMadness2:
+      rtsi: 
+        title:   Remote Active Tangible Interactions 
+        authors: [Jan Richter, Bruce Thomas, Maki Sugimoto, Masahiko Inami]
+        media:   [https://tei.acm.org/2007/program/RemoteActiveTangibleInteractions.pdf]
+      kb:
+        title:   reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction
+        authors: [Martin Kaltenbrunner, Ross Bencina]
+      mkm:
+        title:   Siftables: Towards Sensor Network User Interfaces
+        authors: [David Merrill, Jeevan Kalanithi, Pattie Maes]
+ 	A Malleable Control Structure for Softwired User Interfaces
+        title:
+        authors:
+Nicolas Villar, Hans Gellersen
+        title:
+        authors:
+ 	Using Magnets in Physical Blocks That Behave As Programming Objects
+Andrew Smith
+        title:
+        authors:
+ 	Collaborative Ambient Systems by Blow Displays
+Mitsuru Minakuchi, Satoshi Nakamura
+        title:
+        authors:
+ 	Brand consciousness as a driving design force
+Peter Shultz
+        title:
+        authors:
+ 	TagTiles: optimal challenge in educational electronics
+Janneke Verhaegh, Willem Fontijn, Jettie Hoonhout
+        title:
+        authors:
+ 	Smart Blocks: A Tangible Mathematical Manipulative
+Audrey Girouard, Erin Treacy Solovey, Leanne Hirshfield, Stacey Ecott, Orit Shaer, Robert Jacob
+        title:
+        authors:
+ 	CabBoots – Shoes with integrated Guidance System
+Martin Frey
+        title:
+        authors:
+ 	When is Role Playing really experiential? Case studies
+Stella Boess, Daniel Saakes, Caroline Hummels
+        title:
+        authors:
+ 	Context-Aware Kitchen Utilities
+Matthias Kranz, Alexis Maldonado, Benedikt Hörnler, Radu Rusu, Michael Beetz, Gerhard Rigoll, Albrecht Schmidt
 
 ### end ###
