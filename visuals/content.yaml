@@ -174,40 +174,42 @@ addresses:
     snkbssap:
       title: PillowTalk: Can We Afford Intimacy?
       authors:
-        - [Thecla Schiphorst, Simon Fraser University, Canada]
-        - [Frank Nack, V2_ Institute for the Unstable Media, Netherlands]
+        - [Thecla Schiphorst, Simon Fraser University,              Canada]
+        - [Frank Nack,        V2_ Institute for the Unstable Media, Netherlands]
         - [Michiel Kauwatjoe, V2_ Institute for the Unstable Media, Netherlands]
-        - [Simon de Bakker, V2_ Institute for the Unstable Media, Canada]
-        - [Stock Stock, V2_ Institute for the Unstable Media, Netherlands]
-        - [Hielke Schut, Eindhoven University of Technology, Netherlands]
-        - [Lora Aroyo, Eindhoven University of Technology, Netherlands]
-        - [Angel Perez, Eindhoven University of Technology, Netherlands]
+        - [Simon de Bakker,   V2_ Institute for the Unstable Media, Canada]
+        - [Stock Stock,       V2_ Institute for the Unstable Media, Netherlands]
+        - [Hielke Schut,      Eindhoven University of Technology,   Netherlands]
+        - [Lora Aroyo,        Eindhoven University of Technology,   Netherlands]
+        - [Angel Perez,       Eindhoven University of Technology,   Netherlands]
     kb:
       title: reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction
       authors:
         - [Martin Kaltenbrunner, Universitat Pompeu Fabra, Spain]
-        - [Ross Bencina, Sonic Fritter Pty Ltd, Australia]
+        - [Ross Bencina,         Sonic Fritter Pty Ltd,    Australia]
+
     ehl:
       title: Reclaiming Public Space - [Designing for Public Interaction with Private Devices
       authors:
-        - [Eva Eriksson, Chalmers University of Technology, Sweden]
-        - [Thomas Riisgaard Hansen, University of Aarhus, Denmark]
-        - [Andreas Lykke-Olesen, Aarhus School of Architecture, Denmark]
+        - [Eva Eriksson,            Chalmers University of Technology, Sweden]
+        - [Thomas Riisgaard Hansen, University of Aarhus,              Denmark]
+        - [Andreas Lykke-Olesen,    Aarhus School of Architecture,     Denmark]
 
     rtsi:
-      title: Remote Active Tangible Interactions, slides]
+      title: Remote Active Tangible Interactions
       authors:
         - [Jan Richter, University of South Australia, Australia]
         - [Bruce Thomas, University of South Australia - [Wearable Computer Lab, Australia]
         - [Maki Sugimoto, The University of Electro-Communications, Japan]
         - [Masahiko Inami, University of Electro-Communications, Japan]
+      slides: https://tei.acm.org/2007/program/RemoteActiveTangibleInteractions.pdf
 
     cgz:
       title: Simplicity in Interaction Design
       authors:
-        - [Angela Chang, MIT, US]
+        - [Angela Chang,     MIT Media Lab, US]
         - [James Gouldstone, MIT Media Lab, US]
-        - [Jamie Zigelbaum, MIT Media Lab, US]
+        - [Jamie Zigelbaum,  MIT Media Lab, US]
 
     gthesj:
       title: Smart Blocks: A Tangible Mathematical Manipulative
