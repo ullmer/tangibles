@@ -44,14 +44,18 @@ addresses:
       s:
         title:   Freequent Traveller (sushu.de/free, slides)
         authors: [Susanne Schuricht, Tobias Schmidt]
+        media:   [http://sushu.de/free/, https://tei.acm.org/2007/program/SusanneSchuricht_FrequentTraveller.pdf]
       j:
         title:   A Physical Approach to Tangible Interaction Design
         authors: [Mads Jensen]
 
   sessions: 
-    Connectedness:                            {papers: [er, m],             chair: Ali Mazalek}
-    Integrating the Virtual and the Physical: {papers: [pa, svgs, sn, eng], chair: Trevor Pering}
-    The Expressive Character of Interaction:  {papers: [
+    Connectedness:                            {papers: [er, m],                  chair: Ali Mazalek}
+    Integrating the Virtual and the Physical: {papers: [pa, svgs, sn, eng],      chair: Trevor Pering} 
+    The Expressive Character of Interaction:  {papers: [hamop, slelo, cgzi, hi], chair: Peter Gall Krogh}
+    Learning through Physical Interaction:    {papers: [m, km, hhv, a],          chair: Orit Shaer}
+
+    Two Minute Madness (1):  {papers: [ehl, lkm, db, lcgs, bvhhb, r, jgak, hj, dh, 
     
  
 ### end ###
