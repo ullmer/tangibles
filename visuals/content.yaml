@@ -103,55 +103,49 @@ addresses:
         - [Nicolai Marquardt, Bauhaus-University Weimar, Germany]
         - [Saul Greenberg,    University of Calgary,     Canada]
     m:
-      title:
+      title: Do tangible interfaces enhance learning?, slides]
       authors:
-Do tangible interfaces enhance learning?, slides]
         - [Paul Marshall, Open University, UK]
-    m:
-      title:
+    slelo:
+      title: Explicit interaction for surgical rehabilitation
       authors:
-Explicit interaction for surgical rehabilitation
         - [Tomas Sokoler, K3, Malmö University, Sweden]
         - [Jonas Löwgren, Malmö University, Sweden]
         - [Mette Agger Eriksen, Malmö University, Sweden]
         - [Per Linde, Malmö University, Sweden]
         - [Stefan Olofsson, Malmö University, Sweden]
-    m:
-      title:
+    daw:
+      title: Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children
       authors:
-Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children
         - [Milena Droumeva, Simon Fraser Unversity, Canada]
         - [Alissa Antle, Simon Fraser University, Canada]
         - [Ron Wakkary, Simon Fraser University, Canada]
-    m:
-      title:
+    ss:
+      title: Freequent Traveller, sushu.de/free, slides]
       authors:
-Freequent Traveller, sushu.de/free, slides]
         - [Susanne Schuricht, University of the Arts Berlin, Germany]
         - [Tobias Schmidt, University of the Arts Berlin, Germany]
-Co-writer of the paper: Michael Hohl, Sheffield Hallam University, UK]
-Co-writer of the paper: Mirjam Struppek, Interactionfield - [Urban Media Research Berlin, Germany]
+       cowriters:
+        - [Michael Hohl, Sheffield Hallam University, UK]
+        - [Mirjam Struppek, Interactionfield, Urban Media Research Berlin, Germany]
     m:
-      title:
+      title: From Hand-Held to Body-Worn: Embodied Experiences of the Design and Use >
+             of a Wearable Movement-Based Interaction Concept, slides 6MB]
       authors:
-From Hand-Held to Body-Worn: Embodied Experiences of the Design and Use of a Wearable Movement-Based Interaction Concept, slides 6MB]
         - [Jin Moen, Interactive Institute; Moement R&D, Sweden]
-    m:
-      title:
+    pwa:
+      title: Gesture Connect: Facilitating Tangible Interaction With a Flick Of The Wrist
       authors:
-Gesture Connect: Facilitating Tangible Interaction With a Flick Of The Wrist
         - [Trevor Pering, Intel Research, US]
         - [Roy Want, Intel Research, US]
         - [Yaw Anokwa, University of Washington, US]
-    m:
-      title:
+    r:
+      title: Giving Materials a Voice
       authors:
-Giving Materials a Voice
         - [Hannah Regier, Art Center College of Design, US]
-    m:
-      title:
+    hi:
+      title: Image Schemas and Their Metaphorical Extensions – Intuitive Patterns for Tangible Interaction
       authors:
-Image Schemas and Their Metaphorical Extensions – Intuitive Patterns for Tangible Interaction
         - [Joern Hurtienne, Technische Universität Berlin, Germany]
         - [Johann Habakuk Israel, Fraunhofer-Institute for Production Systems and Design Technology IPK, Germany]
     m:
