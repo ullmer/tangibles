@@ -79,32 +79,24 @@ addresses:
     hfamop:
       title: Design Research & Tangible Interaction 
       authors:
-        - 
-Elise van den Hoven (Eindhoven University of Technology, Netherlands)
-        - 
-Joep Frens (Eindhoven University of Technology, Netherlands)
-        - 
-Dima Aliakseyeu (Eindhoven University of Technology, Netherlands)
-        - 
-Jean-Bernard Martens (Eindhoven University of Technology, Netherlands)
-        - 
-Kees Overbeeke (Eindhoven University of Technology, Netherlands)
-        - 
-Peter Peters (Eindhoven University of Technology, Netherlands)
-(slides)
-
-Designing for Diversity: Developing Complex Adaptive Tangible Products
-        - 
-Bart Hengeveld (University of Technology Delft, Netherlands)
-        - 
-Caroline Hummels (Delft University of Technology (TU Delft), Netherlands)
-        - 
-Riny Voort (Viataal-Research, Development & Support (RDS), Netherlands)
-Designing Tangible Programming Languages for Classroom Use
-        - 
-Michael Horn (Tufts University, US)
-        - 
-Robert Jacob (Tufts University, US)
+        - Elise van den Hoven (Eindhoven University of Technology, Netherlands)
+        - Joep Frens (Eindhoven University of Technology, Netherlands)
+        - Dima Aliakseyeu (Eindhoven University of Technology, Netherlands)
+        - Jean-Bernard Martens (Eindhoven University of Technology, Netherlands)
+        - Kees Overbeeke (Eindhoven University of Technology, Netherlands)
+        - Peter Peters (Eindhoven University of Technology, Netherlands)
+      slides: https://tei.acm.org/2007/program/EliseVanDenHoven_DesignResearchAndTangibleInteraction.pdf
+    hhv:
+      title: Designing for Diversity: Developing Complex Adaptive Tangible Products
+      authors:
+        - Bart Hengeveld (University of Technology Delft, Netherlands)
+        - Caroline Hummels (Delft University of Technology (TU Delft), Netherlands)
+        - Riny Voort (Viataal-Research, Development & Support (RDS), Netherlands)
+    hr:
+      title: Designing Tangible Programming Languages for Classroom Use
+      authors:
+        - Michael Horn (Tufts University, US)
+        - Robert Jacob (Tufts University, US)
 Distributed Physical Interfaces With Shared Phidgets
         - 
 Nicolai Marquardt (Bauhaus-University Weimar, Germany)
