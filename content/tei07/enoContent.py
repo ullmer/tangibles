@@ -54,13 +54,14 @@ class enoContent:
   
     for content in mainSection:
       try:
-        authors   = content['authors']
+        authors   = mainSection[content]['authors']
         countries = []
         for author in authors:
-          country = authors[-1]
+          country = author[-1]
           countries.append(country)
         result.append(countries)
       except: print("enoContent getCountries glitch, ignoring")
+      #except: print("enoContent getCountries glitch:", content)
 
     return result
 
