@@ -10,8 +10,9 @@ import yaml
 
 class enoContent:
 
-  yamlFn   = 'index.yaml'
-  yamlD    = None
+  yamlFn    = 'index.yaml'
+  yamlD     = None
+  countries = None
 
   primaryC = 'content' #name would benefit from evolution
   sections = ['contributions']
@@ -49,8 +50,9 @@ class enoContent:
   ############# getCountries#############
 
   def getCountries(self):
-    mainSection = self.getSection()
-    result      = []
+    self.countries = {}
+    mainSection    = self.getSection()
+    result         = []
   
     for content in mainSection:
       try:
@@ -59,11 +61,14 @@ class enoContent:
         for author in authors:
           country = author[-1]
           countries.append(country)
+          if country not in self.countries: self.countries[country]  = 1
+          else:                             self.countries[country] += 1 
         result.append(countries)
-      except: print("enoContent getCountries glitch, ignoring")
-      #except: print("enoContent getCountries glitch:", content)
+      #except: print("enoContent getCountries glitch, ignoring")
+      except: print("enoContent getCountries glitch:", content)
 
-    return result
+    #return result
+    return self.countries
 
 ################### main ###################
 
