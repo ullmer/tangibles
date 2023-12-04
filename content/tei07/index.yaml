@@ -2,7 +2,7 @@
 # Brygg Ullmer, Clemson University
 # Begun 2023-11-16
 
-addresses:
+content:
   program:     https://tei.acm.org/2007/program.html
   overview: 
     addresses: [https://tei.acm.org/2007/program/TwoMinuteMadness_1.pdf,
@@ -27,15 +27,16 @@ addresses:
 
   contributions: 
     bwd: 
-      title: "A Handle on What's Going On: Combining Tangible Interfaces and Ambient Displays " >
-             "for Collaborative Groups"
+      title: >
+        .. "A Handle on What's Going On: Combining Tangible Interfaces and Ambient Displays " 
+        .. "for Collaborative Groups"
       authors:
         - [Johanna Brewer,  University of California, Irvine, US]
         - [Amanda Williams, University of California, Irvine, US]
         - [Paul Dourish,    University of California, Irvine, US]
 
     kmhrbrs: 
-      title: A Knife and a Cutting Board as Implicit User Interface - [Towards Context-Aware Kitchen Utilities
+      title: "A Knife and a Cutting Board as Implicit User Interface: Towards Context-Aware Kitchen Utilities"
       authors: 
         - [Matthias Kranz,   University of Munich,           Germany]
         - [Alexis Maldonado, Technische Universität München, Germany]
@@ -63,19 +64,19 @@ addresses:
         - [Carsten Röcker, Fraunhofer IPSI, Germany]
 
     pno: 
-      title: Actuation and Tangible User Interfaces: Vaucanson duck, Robots and Shape Displays
+      title: "Actuation and Tangible User Interfaces: Vaucanson duck, Robots and Shape Displays"
       authors:
         - [Ivan Poupyrev,    Sony CSL,           Japan]
         - [Tatsushi Nashida, Sony Design Center, Japan]
         - [Makoto Okabe,     Tokyo University,   Japan]
 
     s: 
-      title: Beyond video – choosing the right medium for a media rich interaction
+      title: "Beyond video: choosing the right medium for a media rich interaction"
       authors: 
         - [Peter Shultz, Art Center College of Design, US]
 
     f:
-      title: CabBoots- Shoes with integrated Guidance System
+      title: "CabBoots: Shoes with integrated Guidance System"
       authors: 
         - [Martin Frey, UdK Berlin, Germany]
 
@@ -97,7 +98,7 @@ addresses:
       slides: https://tei.acm.org/2007/program/EliseVanDenHoven_DesignResearchAndTangibleInteraction.pdf
 
     hhv:
-      title: Designing for Diversity: Developing Complex Adaptive Tangible Products
+      title: "Designing for Diversity: Developing Complex Adaptive Tangible Products"
       authors:
         - [Bart Hengeveld,   University of Technology Delft,               Netherlands]
         - [Caroline Hummels, Delft University of Technology, TU Delft,     Netherlands]
@@ -141,13 +142,14 @@ addresses:
       authors:
         - [Susanne Schuricht, University of the Arts Berlin, Germany]
         - [Tobias Schmidt,    University of the Arts Berlin, Germany]
-       cowriters:
+      cowriters:
         - [Michael Hohl,    Sheffield Hallam University, UK]
         - [Mirjam Struppek, Interactionfield, Urban Media Research Berlin, Germany]
 
     m:
-      title: From Hand-Held to Body-Worn: Embodied Experiences of the Design and Use >
-             of a Wearable Movement-Based Interaction Concept, slides 6MB]
+      title: >
+        .. From Hand-Held to Body-Worn: Embodied Experiences of the Design and Use 
+        ..   of a Wearable Movement-Based Interaction Concept, slides 6MB]
       authors:
         - [Jin Moen, Interactive Institute; Moement R&D, Sweden]
 
@@ -164,7 +166,7 @@ addresses:
         - [Hannah Regier, Art Center College of Design, US]
 
     hi:
-      title: Image Schemas and Their Metaphorical Extensions – Intuitive Patterns for Tangible Interaction
+      title: "Image Schemas and Their Metaphorical Extensions: Intuitive Patterns for Tangible Interaction"
       authors:
         - [Joern Hurtienne,       Technische Universität Berlin,                                         Germany]
         - [Johann Habakuk Israel, Fraunhofer-Institute for Production Systems and Design Technology IPK, Germany]
@@ -187,8 +189,9 @@ addresses:
         - [Moira Norrie, ETH Zurich, Switzerland]
 
     pa:
-      title: Physical Interventions in a Location Based Cultural Narrative: >
-             A Case Study of Embedded Media in Public Space Installations
+      title: >
+        .. "Physical Interventions in a Location Based Cultural Narrative: "
+        ..   "A Case Study of Embedded Media in Public Space Installations"
       authors:
         - [Amanda Parkes, MIT Media Lab, US]
         - [Jussi Angesleva, University of Arts Berlin, Germany]
@@ -305,20 +308,21 @@ addresses:
         - [Steffi Beckhaus, University of Hamburg, Germany]
 
     a:
-      title: The CTI Framework: Informing the Design of Tangible and Spatial Interactive >
-             Systems for Children, slides]
+      title: >
+        .."The CTI Framework: Informing the Design of Tangible and Spatial Interactive "
+        ..  "Systems for Children"
       authors:
         - [Alissa Antle, Simon Fraser University, Canada]
 
     lre:
-      title: The Feel Dimension of Technology Interaction: Exploring Tangibles through Movement and Touch
+      title: "The Feel Dimension of Technology Interaction: Exploring Tangibles through Movement and Touch"
       authors:
         - [Astrid Larssen, University of Technology Sydney, Australia]
         - [Toni Robertson, University of Technology Sydney, Australia]
         - [Jenny Edwards, University of Technology Sydney, Australia]
 
     lcgs:
-      title: The Meatbook: Tangible and Visceral Interaction
+      title: "The Meatbook: Tangible and Visceral Interaction"
       authors:
         - [Aaron Levisohn, Simon Fraser University, Canada]
         - [Jayme Cochrane, Simon Fraser University, Canada]
@@ -327,47 +331,42 @@ addresses:
 
     jgka:
       title:
+        "The reacTable: Exploring the Synergy between Live Music Performance and Tabletop Tangible Interfaces"
       authors:
-The reacTable: Exploring the Synergy between Live Music Performance and Tabletop Tangible Interfaces
         - [Sergi Jorda, Pompeu Fabra University, Spain]
         - [Günter Geiger, Pompeu Fabra University, Spain]
         - [Martin Kaltenbrunner, Pompeu Fabra University, Spain]
         - [Marcos Alonso, Pompeu Fabra University, Spain]
 
     zhsj:
-      title:
+      title: "The Tangible Video Editor: Collaborative Video Editing with Active Tokens"
       authors:
-The Tangible Video Editor: Collaborative Video Editing with Active Tokens
         - [Jamie Zigelbaum, MIT Media Lab, US]
         - [Michael Horn, Tufts University, US]
         - [Orit Shaer, Tufts University, US]
         - [Robert Jacob, Tufts University, US]
 
     lmk:
-      title:
+      title: "Tilting Table: A Movable Screen"
       authors:
-Tilting Table: A Movable Screen
         - [Hyun-Jean Lee, Georgia Institute of Technology, US]
         - [Ali Mazalek, Georgia Institute of Technology, US]
         - [Madhur Khandelwal, Georgia Institute of Technology, US]
 
     mk:
-      title:
+      title: Towards Sensor Network User Interfaces
       authors:
-Towards Sensor Network User Interfaces
         - [David Merrill, MIT Media Laboratory, US]
         - [Jeevan Kalanithi, Massachusetts Institute of Technology, US]
 
     s:
-      title:
+      title: Using Magnets in Physical Blocks That Behave As Programming Objects
       authors:
-Using Magnets in Physical Blocks That Behave As Programming Objects
         - [Andrew Smith, African Advanced Institute for Information & Communications Technology, South Africa]
 
     mrgk:
-      title:
+      title: Using Personal Objects as Tangible Interfaces for Memory Recollection and Sharing
       authors:
-Using Personal Objects as Tangible Interfaces for Memory Recollection and Sharing
         - [Elena Mugellini, University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
         - [Elisa Rubegni, University of Siena, Italy]
         - [Sandro Gerardi, University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
