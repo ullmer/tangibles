@@ -25,6 +25,14 @@ content:
       papers: [rtsi, kb, mkm, vg, s, mn, s, vfh, gshesj, f, bsh, kmhrbrs]
       chair: Matthias Kranz
 
+  continents: 
+    europe:   abbrev: E, instances: [Germany, UK, Denmark, Netherlands, Sweden, Switzerland, Spain, Finland, Italy]
+    asia:     abbrev: I, instances: [Japan]
+    africa:   abbrev: F, instances: [South Africa]
+    oceania:  abbrev: O, instances: [New Zealand, Australia]
+    namerica: abbrev: N, instances: [USA, Canada]
+    samerica: abbrev: S, instances: [Colombia]
+
   contributions: 
     bwd: 
       title: >
