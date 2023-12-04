@@ -12,6 +12,8 @@ class enoContent:
 
   yamlFn   = 'index.yaml'
   yamlD    = None
+
+  primaryC = 'content' #name would benefit from evolution
   sections = ['contributions']
 
   ############# constructor #############
@@ -37,13 +39,39 @@ class enoContent:
 
   def getSection(self, whichSection=None):
     if whichSection is None:       whichSection = self.sections[0]
-    if whichSection in self.yamlD: return self.yamlD[whichSection]
+    pc = self.primaryC
+
+    if pc not in self.yamlD: return None
+
+    if whichSection in self.yamlD[pc]: return self.yamlD[pc][whichSection]
     return None
+
+  ############# getCountries#############
+
+  def getCountries(self):
+    mainSection = self.getSection()
+    result      = []
+  
+    for content in mainSection:
+      try:
+        authors   = content['authors']
+        countries = []
+        for author in authors:
+          country = authors[-1]
+          countries.append(country)
+        result.append(countries)
+      except: print("enoContent getCountries glitch, ignoring")
+
+    return result
 
 ################### main ###################
 
 def main():
   ec = enoContent()
+
+  content = ec.getSection()
+  print(len(content))
+  print(ec.getCountries())
 
 if __name__ == '__main__': main()
 
