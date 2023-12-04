@@ -27,7 +27,7 @@ content:
 
   continents: 
     europe:   {abbrev: E, instances: [Germany, UK, Denmark, Netherlands, Sweden, Switzerland, Spain, Finland, Italy]}
-    asia:     {abbrev: I, instances: [Japan]}
+    asia:     {abbrev: I, instances: [Japan, South Korea]}
     africa:   {abbrev: F, instances: [South Africa]}
     oceania:  {abbrev: O, instances: [New Zealand, Australia]}
     namerica: {abbrev: N, instances: [USA, Canada]}

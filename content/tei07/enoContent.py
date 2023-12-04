@@ -2,6 +2,7 @@
 # Brygg Ullmer, Clemson University
 # Begun 2023-12-04
 
+import traceback
 import yaml
 
 ################################################################
@@ -56,15 +57,21 @@ class enoContent:
   ############# populateContinentMappings #############
 
   def populateContinentMappings(self):
+    pc = self.primaryC
     if 'continents' in self.yamlD[pc]: self.continents = self.yamlD[pc]['continents']
 
     self.country2continentAbbrev = {}
+    #print("continents:", self.continents)
 
     for continent in self.continents:
-      abbrev  = continents[continent].abbrev
-      country = continents[continent].instances
-      for instance in instances:
-        self.country2continentAbbrev[country] = abbrev
+      try:
+        abbrev    = self.continents[continent]['abbrev']
+        instances = self.continents[continent]['instances']
+        for country in instances:
+          self.country2continentAbbrev[country] = abbrev
+      except: print("enoContent populateContinentMappings: error on", continent); traceback.print_exc()
+
+    #print(self.country2continentAbbrev)
 
   ############# country 2 continentAbbrev #############
   
@@ -80,16 +87,21 @@ class enoContent:
   
   def collapseCountryContinentAbbrev(self, countryList):
     continentAbbrevs = {}
+    result           = ""
+
     for country in countryList: 
-      continentAbbrevs.append(self.getCountryContinentAbbrev(country))
-    
+      continentAbbrev = self.getCountryContinentAbbrev(country)
+      continentAbbrevs[continentAbbrev] = True
+
+    for continentAbbrev in continentAbbrevs: result += continentAbbrev
+    return result
 
   ############# getCountries#############
 
   def getCountries(self):
     self.countries = {}
     mainSection    = self.getSection()
-    result         = []
+    result         = {}
   
     for content in mainSection:
       try:
@@ -101,12 +113,17 @@ class enoContent:
           if country not in self.countries: self.countries[country]  = 1
           else:                             self.countries[country] += 1 
 
-        result.append(countries)
+        #result.append(countries)
+        cca = self.collapseCountryContinentAbbrev(countries)
+
+        if cca in result: result[cca] += 1
+        else            : result[cca]  = 1
+
       #except: print("enoContent getCountries glitch, ignoring")
       except: print("enoContent getCountries glitch:", content)
 
-    #return result
-    return self.countries
+    #return self.countries
+    return result
 
 ################### main ###################
 
