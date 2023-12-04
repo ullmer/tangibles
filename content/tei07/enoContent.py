@@ -10,8 +10,9 @@ import yaml
 
 class enoContent:
 
-  yamlFn = 'index.yaml'
-  yamlD  = None
+  yamlFn   = 'index.yaml'
+  yamlD    = None
+  sections = ['contributions']
 
   ############# constructor #############
 
@@ -30,6 +31,20 @@ class enoContent:
     yf         = open(self.yamlFn, 'rt')
     self.yamlD = yaml.safe_load(yf)
 
-    print(self.yamlD)
+    #print(self.yamlD)
+
+  ############# getSection #############
+
+  def getSection(self, whichSection=None):
+    if whichSection is None:       whichSection = self.sections[0]
+    if whichSection in self.yamlD: return self.yamlD[whichSection]
+    return None
+
+################### main ###################
+
+def main():
+  ec = enoContent()
+
+if __name__ == '__main__': main()
 
 ### end ###
