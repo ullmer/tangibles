@@ -33,6 +33,7 @@ addresses:
         - [Johanna Brewer,  University of California, Irvine, US]
         - [Amanda Williams, University of California, Irvine, US]
         - [Paul Dourish,    University of California, Irvine, US]
+
     kmhrbrs: 
       title: A Knife and a Cutting Board as Implicit User Interface - [Towards Context-Aware Kitchen Utilities
       authors: 
@@ -43,39 +44,47 @@ addresses:
         - [Michael Beetz,    Technische Universität München, Germany]
         - [Gerhard Rigoll,   Technische Universität München, Germany]
         - [Albrecht Schmidt, University of Munich,           Germany]
+
     vg:
       title: A Malleable Control Structure for Softwired User Interfaces
       authors:
         - [Nicolas Villar, Lancaster University, UK]
         - [Hans Gellersen, Lancaster University, UK]
+
     j:
       title: A Physical Approach to Tangible Interaction Design
       authors:
         - [Mads Jensen, University of Southern Denmark, Denmark]
+
     er:
       title: A Tangible User Interface for Multi-User Awareness Systems
       authors: 
         - [Richard Etter,  Fraunhofer IPSI, Germany]
         - [Carsten Röcker, Fraunhofer IPSI, Germany]
+
     pno: 
       title: Actuation and Tangible User Interfaces: Vaucanson duck, Robots and Shape Displays
       authors:
         - [Ivan Poupyrev,    Sony CSL,           Japan]
         - [Tatsushi Nashida, Sony Design Center, Japan]
         - [Makoto Okabe,     Tokyo University,   Japan]
+
     s: 
       title: Beyond video – choosing the right medium for a media rich interaction
       authors: 
         - [Peter Shultz, Art Center College of Design, US]
+
     f:
       title: CabBoots- Shoes with integrated Guidance System
       authors: 
         - [Martin Frey, UdK Berlin, Germany]
+
     mn:
       title: Collaborative Ambient Systems by Blow Displays
       authors: 
         - [Mitsuru Minakuchi, National Institute of Information and Communications Technology, Japan]
         - [Satoshi Nakamura,  National Institute of Information and Communications Technology, Japan]
+
     hfamop:
       title: Design Research & Tangible Interaction 
       authors:
@@ -86,26 +95,31 @@ addresses:
         - [Kees Overbeeke,       Eindhoven University of Technology, Netherlands]
         - [Peter Peters,         Eindhoven University of Technology, Netherlands]
       slides: https://tei.acm.org/2007/program/EliseVanDenHoven_DesignResearchAndTangibleInteraction.pdf
+
     hhv:
       title: Designing for Diversity: Developing Complex Adaptive Tangible Products
       authors:
         - [Bart Hengeveld,   University of Technology Delft,               Netherlands]
         - [Caroline Hummels, Delft University of Technology, TU Delft,     Netherlands]
         - [Riny Voort,       Viataal-Research, Development & Support, RDS, Netherlands]
+
     hr:
       title: Designing Tangible Programming Languages for Classroom Use
       authors:
         - [Michael Horn, Tufts University, US]
         - [Robert Jacob, Tufts University, US]
+
     ms:
       title: Distributed Physical Interfaces With Shared Phidgets
       authors:
         - [Nicolai Marquardt, Bauhaus-University Weimar, Germany]
         - [Saul Greenberg,    University of Calgary,     Canada]
+
     m:
       title: Do tangible interfaces enhance learning?, slides]
       authors:
         - [Paul Marshall, Open University, UK]
+
     slelo:
       title: Explicit interaction for surgical rehabilitation
       authors:
@@ -114,12 +128,14 @@ addresses:
         - [Mette Agger Eriksen, Malmö University, Sweden]
         - [Per Linde,           Malmö University, Sweden]
         - [Stefan Olofsson,     Malmö University, Sweden]
+
     daw:
       title: Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children
       authors:
         - [Milena Droumeva, Simon Fraser Unversity, Canada]
         - [Alissa Antle,    Simon Fraser University, Canada]
         - [Ron Wakkary,     Simon Fraser University, Canada]
+
     ss:
       title: Freequent Traveller
       authors:
@@ -128,30 +144,36 @@ addresses:
        cowriters:
         - [Michael Hohl,    Sheffield Hallam University, UK]
         - [Mirjam Struppek, Interactionfield, Urban Media Research Berlin, Germany]
+
     m:
       title: From Hand-Held to Body-Worn: Embodied Experiences of the Design and Use >
              of a Wearable Movement-Based Interaction Concept, slides 6MB]
       authors:
         - [Jin Moen, Interactive Institute; Moement R&D, Sweden]
+
     pwa:
       title: Gesture Connect: Facilitating Tangible Interaction With a Flick Of The Wrist
       authors:
         - [Trevor Pering,  Intel Research,           US]
         - [Roy Want,       Intel Research,           US]
         - [Yaw Anokwa,     University of Washington, US]
+
     r:
       title: Giving Materials a Voice
       authors:
         - [Hannah Regier, Art Center College of Design, US]
+
     hi:
       title: Image Schemas and Their Metaphorical Extensions – Intuitive Patterns for Tangible Interaction
       authors:
         - [Joern Hurtienne,       Technische Universität Berlin,                                         Germany]
         - [Johann Habakuk Israel, Fraunhofer-Institute for Production Systems and Design Technology IPK, Germany]
+
     m:
       title: Keep in Touch: A Tactile-Vision Intimate Interface
       authors:
         - [Nima Motamedi, Simon Fraser University, Canada]
+
     dh:
       title: Lessons from an AR Book study
       authors:
@@ -182,6 +204,7 @@ addresses:
         - [Hielke Schut,      Eindhoven University of Technology,   Netherlands]
         - [Lora Aroyo,        Eindhoven University of Technology,   Netherlands]
         - [Angel Perez,       Eindhoven University of Technology,   Netherlands]
+
     kb:
       title: reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction
       authors:
@@ -230,17 +253,20 @@ addresses:
         - [Kathryn Elliot,     University of Calgary, Canada]
         - [Carman Neustaedter, University of Calgary, Canada]
         - [Saul Greenberg,     University of Calgary, Canada]
+
     m:
       title: TagTiles: optimal challenge in educational electronics
       authors:
         - [Janneke Verhaegh, Philips Research Europe, Netherlands]
         - [Willem Fontijn,   Philips Research, Netherlands]
         - [Jettie Hoonhout,  Philips Research, Netherlands]
+
     hn:
       title: Tangible Image Studio: Augmented Reality Based Tangible Interface Tool for Digital Imaging 
       authors:
         - [Jung-ah Hwang, KAIST, South Korea]
         - [Tek-jin Nam,   KAIST, South Korea]
+
     bvhhb:
       title: Tangible interaction in tabletop games: comparing iconic and symbolic play pieces
       authors:
@@ -249,12 +275,14 @@ addresses:
         - [Elise van den Hoven, Eindhoven University of Technology,      Netherlands]
         - [Gerard Hollemans,    Philips Research Laboratories Eindhoven, Netherlands]
         - [Tom Bergman,         Philips Research Laboratories Eindhoven, Netherlands]
+
     scb:
       title: Tangible user interfaces for configuration practices
       authors:
         - [Larisa Sitorus, University of Southern Denmark, Denmark]
         - [Shan Shan Cao, University of Southern Denmark, Denmark]
         - [Jacob Buur, University of Southern Denmark, Denmark]
+
     rhlck:
       title: Tap Input as an Embedded Interaction Method for Mobile Devices, slides]
       authors:
@@ -263,16 +291,19 @@ addresses:
         - [Jukka Linjama,  Nokia, Finland]
         - [Ashley Colley,  Nokia, Finland]
         - [Saana Kaleva,   Nokia, Finland]
+
     km:
       title: Teaching Table: A tangible mentor for pre-K math education, slides]
       authors:
         - [Madhur Khandelwal, Georgia Institute of Technology, US]
         - [Ali Mazalek,       Georgia Institute of Technology, US]
+
     db:
       title: The card box at hand
       authors:
         - [Tanja Döring,    University of Hamburg, Germany]
         - [Steffi Beckhaus, University of Hamburg, Germany]
+
     a:
       title: The CTI Framework: Informing the Design of Tangible and Spatial Interactive >
              Systems for Children, slides]
@@ -293,6 +324,7 @@ addresses:
         - [Jayme Cochrane, Simon Fraser University, Canada]
         - [Diane Gromala,  Simon Fraser University, Canada]
         - [Jinsil Seo,     Simon Fraser University, Canada]
+
     m:
       title:
       authors:
@@ -301,6 +333,7 @@ The reacTable: Exploring the Synergy between Live Music Performance and Tabletop
         - [Günter Geiger, Pompeu Fabra University, Spain]
         - [Martin Kaltenbrunner, Pompeu Fabra University, Spain]
         - [Marcos Alonso, Pompeu Fabra University, Spain]
+
     m:
       title:
       authors:
@@ -309,6 +342,7 @@ The Tangible Video Editor: Collaborative Video Editing with Active Tokens
         - [Michael Horn, Tufts University, US]
         - [Orit Shaer, Tufts University, US]
         - [Robert Jacob, Tufts University, US]
+
     m:
       title:
       authors:
@@ -316,17 +350,20 @@ Tilting Table: A Movable Screen
         - [Hyun-Jean Lee, Georgia Institute of Technology, US]
         - [Ali Mazalek, Georgia Institute of Technology, US]
         - [Madhur Khandelwal, Georgia Institute of Technology, US]
+
     m:
       title:
       authors:
 Towards Sensor Network User Interfaces
         - [David Merrill, MIT Media Laboratory, US]
         - [Jeevan Kalanithi, Massachusetts Institute of Technology, US]
+
     m:
       title:
       authors:
 Using Magnets in Physical Blocks That Behave As Programming Objects
         - [Andrew Smith, African Advanced Institute for Information & Communications Technology, South Africa]
+
     m:
       title:
       authors:
@@ -335,6 +372,7 @@ Using Personal Objects as Tangible Interfaces for Memory Recollection and Sharin
         - [Elisa Rubegni, University of Siena, Italy]
         - [Sandro Gerardi, University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
         - [Omar Abou Khaled, University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
+
     svgs:
       title: VoodooFlash: Authoring across Physical and Digital Form
       authors:
@@ -342,6 +380,7 @@ Using Personal Objects as Tangible Interfaces for Memory Recollection and Sharin
         - [Nicolas Villar, Lancaster University, UK]
         - [Hans Gellersen, Lancaster University, UK]
         - [Albrecht Schmidt, University of Munich, Germany]
+
     bsh:
       title: When is Role Playing really experiential? Case studies.
       authors:
@@ -353,40 +392,51 @@ Using Personal Objects as Tangible Interfaces for Memory Recollection and Sharin
       eho: 
         title:   Reclaiming Public Space - Designing for Public Interaction with Private Devices
         authors: [Eva Eriksson, Thomas Riisgaard Hansen, Andreas Lykke-Olesen]
+
       lka:  
         title:   Tilting Table: A Movable Screen
         authors: [Hyun-Jean Lee, Madhur Khandelwal, Ali Mazalek]
+
       db:
         title:   The Card Box at Hand: Exploring the Potentials of a Paper-Based Tangible Interface 
                  for Education and Research in Art History
         authors: [Tanja Döring, Steffi Beckhaus]
+
       lcgs:
         title:   The Meatbook: Tangible and Visceral Interaction
         authors: [Aaron Levisohn, Jayme Cochrane, Diane Gromala, Jinsil Seo]
+
       bvhhb: 
         title:   Weathergods: tangible interaction in a digital tabletop game
         authors: [Saskia Bakker, Debby Vorstenbosch, Elise van den Hoven, Gerard Hollemans, Tom Bergman]
+
       r:
         title:   Giving Materials a Voice
         authors: [Hannah Regier]
+
       jgak:
         title:   The reacTable: Exploring the Synergy between Live Music Performance and 
                  Tabletop Tangible Interfaces
         authors: [Sergi Jorda, Günter Geiger, Marcos Alonso, Martin Kaltenbrunner]
         media:   [https://tei.acm.org/2007/program/JordaEtAl_Reactable.wmv]
+
       hj:
         title:   Designing Tangible Programming Languages for Classroom Use
         authors: [Michael Horn, Robert Jacob]
+
       dh:
         title:   Lessons from an AR Book study
         authors: [Andreas Dünser, Eva Hornecker]
+
       daw:
         title:   Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children
         authors: [Milena Droumeva, Alissa Antle, Ron Wakkary]
+
       s:
         title:   Freequent Traveller 
         authors: [Susanne Schuricht, Tobias Schmidt]
         media:   [http://sushu.de/free/, https://tei.acm.org/2007/program/SusanneSchuricht_FrequentTraveller.pdf]
+
       j:
         title:   A Physical Approach to Tangible Interaction Design
         authors: [Mads Jensen]
@@ -396,36 +446,47 @@ Using Personal Objects as Tangible Interfaces for Memory Recollection and Sharin
         title:   Remote Active Tangible Interactions 
         authors: [Jan Richter, Bruce Thomas, Maki Sugimoto, Masahiko Inami]
         media:   [https://tei.acm.org/2007/program/RemoteActiveTangibleInteractions.pdf]
+
       kb:
         title:   reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction
         authors: [Martin Kaltenbrunner, Ross Bencina]
+
       mkm:
         title:   Siftables: Towards Sensor Network User Interfaces
         authors: [David Merrill, Jeevan Kalanithi, Pattie Maes]
+
       vg:
         title:   A Malleable Control Structure for Softwired User Interfaces
         authors: [Nicolas Villar, Hans Gellersen]
+
       s:
         title:   Using Magnets in Physical Blocks That Behave As Programming Objects
         authors: Andrew Smith
+
       mn:
         title:   Collaborative Ambient Systems by Blow Displays
         authors: [Mitsuru Minakuchi, Satoshi Nakamura]
+
       s:
         title: Brand consciousness as a driving design force
         authors: Peter Shultz
+
       s:
         title:   TagTiles: optimal challenge in educational electronics
         authors: [Janneke Verhaegh, Willem Fontijn, Jettie Hoonhout]
+
       gshesj:
         title:   Smart Blocks: A Tangible Mathematical Manipulative
         authors: [Audrey Girouard, Erin Treacy Solovey, Leanne Hirshfield, Stacey Ecott, Orit Shaer, Robert Jacob]
+
       f:
         title:   CabBoots – Shoes with integrated Guidance System
         authors: [Martin Frey]
+
       bsh:
         title: When is Role Playing really experiential? Case studies
         authors: [Stella Boess, Daniel Saakes, Caroline Hummels]
+
       kmhrbrs:
         title: Context-Aware Kitchen Utilities
         authors: [Matthias Kranz, Alexis Maldonado, Benedikt Hörnler, Radu Rusu, Michael Beetz, 
