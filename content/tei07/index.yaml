@@ -154,7 +154,7 @@ content:
         - [Jin Moen, Interactive Institute; Moement R&D, Sweden]
 
     pwa:
-      title: Gesture Connect: Facilitating Tangible Interaction With a Flick Of The Wrist
+      title: "Gesture Connect: Facilitating Tangible Interaction With a Flick Of The Wrist"
       authors:
         - [Trevor Pering,  Intel Research,           US]
         - [Roy Want,       Intel Research,           US]
@@ -172,7 +172,7 @@ content:
         - [Johann Habakuk Israel, Fraunhofer-Institute for Production Systems and Design Technology IPK, Germany]
 
     m:
-      title: Keep in Touch: A Tactile-Vision Intimate Interface
+      title: "Keep in Touch: A Tactile-Vision Intimate Interface"
       authors:
         - [Nima Motamedi, Simon Fraser University, Canada]
 
@@ -183,7 +183,7 @@ content:
         - [Eva Hornecker,  HIT Lab NZ, University of Canterbury, New Zealand]
 
     sn:
-      title: PaperPoint: A Paper-Based Presentation and Interactive Paper Prototyping Toolkit
+      title: "PaperPoint: A Paper-Based Presentation and Interactive Paper Prototyping Toolkit"
       authors:
         - [Beat Signer,  ETH Zurich, Switzerland]
         - [Moira Norrie, ETH Zurich, Switzerland]
@@ -197,7 +197,7 @@ content:
         - [Jussi Angesleva, University of Arts Berlin, Germany]
 
     snkbssap:
-      title: PillowTalk: Can We Afford Intimacy?
+      title: "PillowTalk: Can We Afford Intimacy?"
       authors:
         - [Thecla Schiphorst, Simon Fraser University,              Canada]
         - [Frank Nack,        V2_ Institute for the Unstable Media, Netherlands]
@@ -209,7 +209,7 @@ content:
         - [Angel Perez,       Eindhoven University of Technology,   Netherlands]
 
     kb:
-      title: reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction
+      title: "reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction"
       authors:
         - [Martin Kaltenbrunner, Universitat Pompeu Fabra, Spain]
         - [Ross Bencina,         Sonic Fritter Pty Ltd,    Australia]
@@ -224,10 +224,10 @@ content:
     rtsi:
       title: Remote Active Tangible Interactions
       authors:
-        - [Jan Richter, University of South Australia, Australia]
-        - [Bruce Thomas, University of South Australia - [Wearable Computer Lab, Australia]
-        - [Maki Sugimoto, The University of Electro-Communications, Japan]
-        - [Masahiko Inami, University of Electro-Communications, Japan]
+        - [Jan Richter,  University of South Australia, Australia]
+        - [Bruce Thomas, University of South Australia, Australia]
+        - [Maki Sugimoto,  The University of Electro-Communications, Japan]
+        - [Masahiko Inami, University of Electro-Communications,     Japan]
       slides: https://tei.acm.org/2007/program/RemoteActiveTangibleInteractions.pdf
 
     cgz:
@@ -238,7 +238,7 @@ content:
         - [Jamie Zigelbaum,  MIT Media Lab, US]
 
     gthesj:
-      title: Smart Blocks: A Tangible Mathematical Manipulative
+      title: "Smart Blocks: A Tangible Mathematical Manipulative"
       authors:
         - [Audrey Girouard,   Tufts University, US]
         - [Erin Treacy,       Tufts University, US]
@@ -251,27 +251,27 @@ content:
       authors:
         - [Nimish Biloria, TU Delft, Netherlands]
     eng:
-      title: StickySpots: Using Location to Embed Technology in the Social Practices of the Home
+      title: "StickySpots: Using Location to Embed Technology in the Social Practices of the Home"
       authors:
         - [Kathryn Elliot,     University of Calgary, Canada]
         - [Carman Neustaedter, University of Calgary, Canada]
         - [Saul Greenberg,     University of Calgary, Canada]
 
-    m:
-      title: TagTiles: optimal challenge in educational electronics
+    vfh:
+      title: "TagTiles: optimal challenge in educational electronics"
       authors:
         - [Janneke Verhaegh, Philips Research Europe, Netherlands]
         - [Willem Fontijn,   Philips Research, Netherlands]
         - [Jettie Hoonhout,  Philips Research, Netherlands]
 
     hn:
-      title: Tangible Image Studio: Augmented Reality Based Tangible Interface Tool for Digital Imaging 
+      title: "Tangible Image Studio: Augmented Reality Based Tangible Interface Tool for Digital Imaging"
       authors:
         - [Jung-ah Hwang, KAIST, South Korea]
         - [Tek-jin Nam,   KAIST, South Korea]
 
     bvhhb:
-      title: Tangible interaction in tabletop games: comparing iconic and symbolic play pieces
+      title: "Tangible interaction in tabletop games: comparing iconic and symbolic play pieces"
       authors:
         - [Saskia Bakker,       Eindhoven University of Technology,      Netherlands]
         - [Debby Vorstenbosch,  Eindhoven University of Technology,      Netherlands]
@@ -296,7 +296,7 @@ content:
         - [Saana Kaleva,   Nokia, Finland]
 
     km:
-      title: Teaching Table: A tangible mentor for pre-K math education, slides]
+      title: "Teaching Table: A tangible mentor for pre-K math education, slides"
       authors:
         - [Madhur Khandelwal, Georgia Institute of Technology, US]
         - [Ali Mazalek,       Georgia Institute of Technology, US]
@@ -373,7 +373,7 @@ content:
         - [Omar Abou Khaled, University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
 
     svgs:
-      title: VoodooFlash: Authoring across Physical and Digital Form
+      title: "VoodooFlash: Authoring across Physical and Digital Form"
       authors:
         - [Wolfgang Spiessl, Research Group Embedded Interaction, University of Munich, Germany]
         - [Nicolas Villar, Lancaster University, UK]
@@ -389,24 +389,25 @@ content:
     
     twoMinuteMadness1: 
       eho: 
-        title:   Reclaiming Public Space - Designing for Public Interaction with Private Devices
+        title:   "Reclaiming Public Space: Designing for Public Interaction with Private Devices"
         authors: [Eva Eriksson, Thomas Riisgaard Hansen, Andreas Lykke-Olesen]
 
       lka:  
-        title:   Tilting Table: A Movable Screen
+        title:   "Tilting Table: A Movable Screen"
         authors: [Hyun-Jean Lee, Madhur Khandelwal, Ali Mazalek]
 
       db:
-        title:   The Card Box at Hand: Exploring the Potentials of a Paper-Based Tangible Interface 
-                 for Education and Research in Art History
+        title:   >
+           .."The Card Box at Hand: Exploring the Potentials of a Paper-Based Tangible Interface "
+           .. "for Education and Research in Art History"
         authors: [Tanja Döring, Steffi Beckhaus]
 
       lcgs:
-        title:   The Meatbook: Tangible and Visceral Interaction
+        title:   "The Meatbook: Tangible and Visceral Interaction"
         authors: [Aaron Levisohn, Jayme Cochrane, Diane Gromala, Jinsil Seo]
 
       bvhhb: 
-        title:   Weathergods: tangible interaction in a digital tabletop game
+        title:   "Weathergods: tangible interaction in a digital tabletop game"
         authors: [Saskia Bakker, Debby Vorstenbosch, Elise van den Hoven, Gerard Hollemans, Tom Bergman]
 
       r:
@@ -414,8 +415,7 @@ content:
         authors: [Hannah Regier]
 
       jgak:
-        title:   The reacTable: Exploring the Synergy between Live Music Performance and 
-                 Tabletop Tangible Interfaces
+        title: "The reacTable: Exploring the Synergy between Live Music Performance and Tabletop Tangible Interfaces"
         authors: [Sergi Jorda, Günter Geiger, Marcos Alonso, Martin Kaltenbrunner]
         media:   [https://tei.acm.org/2007/program/JordaEtAl_Reactable.wmv]
 
@@ -447,11 +447,11 @@ content:
         media:   [https://tei.acm.org/2007/program/RemoteActiveTangibleInteractions.pdf]
 
       kb:
-        title:   reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction
+        title:   "reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction"
         authors: [Martin Kaltenbrunner, Ross Bencina]
 
       mkm:
-        title:   Siftables: Towards Sensor Network User Interfaces
+        title:   "Siftables: Towards Sensor Network User Interfaces"
         authors: [David Merrill, Jeevan Kalanithi, Pattie Maes]
 
       vg:
@@ -471,15 +471,15 @@ content:
         authors: Peter Shultz
 
       s:
-        title:   TagTiles: optimal challenge in educational electronics
+        title:   "TagTiles: optimal challenge in educational electronics"
         authors: [Janneke Verhaegh, Willem Fontijn, Jettie Hoonhout]
 
       gshesj:
-        title:   Smart Blocks: A Tangible Mathematical Manipulative
+        title:   "Smart Blocks: A Tangible Mathematical Manipulative"
         authors: [Audrey Girouard, Erin Treacy Solovey, Leanne Hirshfield, Stacey Ecott, Orit Shaer, Robert Jacob]
 
       f:
-        title:   CabBoots – Shoes with integrated Guidance System
+        title:   "CabBoots: Shoes with integrated Guidance System"
         authors: [Martin Frey]
 
       bsh:
