@@ -16,6 +16,7 @@ class enoContent:
 
   countries  = None
   continents = None
+  keywords   = None
 
   country2continentAbbrev = None
 
@@ -96,6 +97,7 @@ class enoContent:
     for continentAbbrev in continentAbbrevs: result += continentAbbrev
     return result
 
+
   ############# getCountries#############
 
   def getCountries(self):
@@ -124,6 +126,24 @@ class enoContent:
 
     #return self.countries
     return result
+
+  ############# getKeywords #############
+
+  def getKeywords(self):
+    self.keywords  = {}
+    mainSection    = self.getSection()
+    result         = {}
+
+    for content in mainSection:
+      try:
+        keywords = mainSection[content]['keywords']
+        for keyword in authors:
+          if keyword not in self.keywords: self.keywords[keyword]  = 1
+          else:                            self.keywords[keyword] += 1
+
+      except: print("enoContent getKeywords glitch:", content)
+
+    return self.keywords
 
 ################### main ###################
 
