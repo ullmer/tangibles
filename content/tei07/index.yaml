@@ -85,6 +85,7 @@ content:
         - [Ivan Poupyrev,    Sony CSL,           Japan]
         - [Tatsushi Nashida, Sony Design Center, Japan]
         - [Makoto Okabe,     Tokyo University,   Japan]
+      keywords: [haptics, shape displays, interaction, collaboration]
 
     s: 
       title: "Beyond video: choosing the right medium for a media rich interaction"
@@ -122,12 +123,15 @@ content:
         - [Bart Hengeveld,   University of Technology Delft,               Netherlands]
         - [Caroline Hummels, Delft University of Technology, TU Delft,     Netherlands]
         - [Riny Voort,       Viataal-Research, Development & Support, RDS, Netherlands]
+      keywords: [interactive toys, adaptability, tangible interaction, 
+                 multihandicapped children, complex products, edutainment]
 
     hr:
       title: Designing Tangible Programming Languages for Classroom Use
       authors:
         - [Michael Horn, Tufts University, USA]
         - [Robert Jacob, Tufts University, USA]
+      keywords: [tangible UIs, education, children, programming languages] 
 
     ms:
       title: Distributed Physical Interfaces With Shared Phidgets
@@ -140,6 +144,7 @@ content:
       title: Do tangible interfaces enhance learning?, slides]
       authors:
         - [Paul Marshall, Open University, UK]
+      keywords: [tangible interface, TUI, frameworks, learning]
 
     slelo:
       title: Explicit interaction for surgical rehabilitation
@@ -157,6 +162,8 @@ content:
         - [Milena Droumeva, Simon Fraser Unversity, Canada]
         - [Alissa Antle,    Simon Fraser University, Canada]
         - [Ron Wakkary,     Simon Fraser University, Canada]
+      keywords: [children, sound feedback, interaction, responsive environments, 
+                 participatory design, collaboration]
 
     ss:
       title: Freequent Traveller
@@ -205,6 +212,7 @@ content:
       authors:
         - [Andreas Dünser, HIT Lab NZ, University of Canterbury, New Zealand]
         - [Eva Hornecker,  HIT Lab NZ, University of Canterbury, New Zealand]
+      keywords: [reading, augmented reality, interactive book, children]
 
     sn:
       title: "PaperPoint: A Paper-Based Presentation and Interactive Paper Prototyping Toolkit"
@@ -279,6 +287,7 @@ content:
         - [Stacey Ecott,      Tufts University, USA]
         - [Orit Shaer,        Tufts University, USA]
         - [Robert Jacob,      Tufts University, USA]
+      keywords: [tangible user interface, education, mathematics, manipulatives]
 
     b:
       title: Spatializing Real Time Interactive Environments
@@ -299,6 +308,7 @@ content:
         - [Janneke Verhaegh, Philips Research Europe, Netherlands]
         - [Willem Fontijn,   Philips Research, Netherlands]
         - [Jettie Hoonhout,  Philips Research, Netherlands]
+      keywords: [educational game, tangible interface, game heuristics]
 
     hn:
       title: "Tangible Image Studio: Augmented Reality Based Tangible Interface Tool for Digital Imaging"
@@ -336,6 +346,7 @@ content:
       authors:
         - [Madhur Khandelwal, Georgia Institute of Technology, USA]
         - [Ali Mazalek,       Georgia Institute of Technology, USA]
+      keywords: [tangible computing, education, tabletop sensing, physical manipulatives, learning toys]
 
     db:
       title: The card box at hand
@@ -349,6 +360,8 @@ content:
         ..  "Systems for Children"
       authors:
         - [Alissa Antle, Simon Fraser University, Canada]
+      keywords: [tangible interfaces, spatial interaction, embodied cognition, 
+                 cognitive development, interaction design, children]
 
     lre:
       title: "The Feel Dimension of Technology Interaction: Exploring Tangibles through Movement and Touch"
@@ -408,6 +421,7 @@ content:
       title: Using Magnets in Physical Blocks That Behave As Programming Objects
       authors:
         - [Andrew Smith, African Advanced Institute for Information & Communications Technology, South Africa]
+      keywords: [TUI, digital manipulatives, Montessori-inspired manipulatives, illiterate programmer]
 
     mrgk:
       title: Using Personal Objects as Tangible Interfaces for Memory Recollection and Sharing
@@ -456,8 +470,10 @@ content:
         keywords: [Tangible interfaces for artworks, organic-inorganic interfaces]
 
       bvhhb: 
-        title:   "Weathergods: tangible interaction in a digital tabletop game"
-        authors: [Saskia Bakker, Debby Vorstenbosch, Elise van den Hoven, Gerard Hollemans, Tom Bergman]
+        title:    "Weathergods: tangible interaction in a digital tabletop game" 
+        authors:  [Saskia Bakker, Debby Vorstenbosch, Elise van den Hoven, Gerard Hollemans, Tom Bergman]
+        keywords: [interaction design, digital tabletop gaming, tangible user interfaces, 
+                   pervasive games, tangible interaction]
 
       r:
         title:   Giving Materials a Voice
