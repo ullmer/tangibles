@@ -136,12 +136,13 @@ class enoContent:
 
     for content in mainSection:
       try:
-        keywords = mainSection[content]['keywords']
-        for keyword in authors:
-          if keyword not in self.keywords: self.keywords[keyword]  = 1
-          else:                            self.keywords[keyword] += 1
+        if 'keywords' in mainSection[content]:
+          keywords = mainSection[content]['keywords']
+          for keyword in keywords:
+            if keyword not in self.keywords: self.keywords[keyword]  = 1
+            else:                            self.keywords[keyword] += 1
 
-      except: print("enoContent getKeywords glitch:", content)
+      except: print("enoContent getKeywords glitch:", content); traceback.print_exc()
 
     return self.keywords
 
@@ -152,7 +153,19 @@ def main():
 
   content = ec.getSection()
   print(len(content))
-  print(ec.getCountries())
+  #print(ec.getCountries())
+  #print(ec.getKeywords())
+
+  keywordsDict = ec.getKeywords()
+  kws = []
+  for keyword in keywordsDict:
+    count = keywordsDict[keyword]
+    kws.append("%s: %i" % (keyword, count))
+
+  kws.sort()
+
+  for el in kws:
+    print(el)
 
 if __name__ == '__main__': main()
 
