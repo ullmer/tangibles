@@ -171,8 +171,10 @@ content:
         - [Susanne Schuricht, University of the Arts Berlin, Germany]
         - [Tobias Schmidt,    University of the Arts Berlin, Germany]
       cowriters:
-        - [Michael Hohl,    Sheffield Hallam University, UK]
-        - [Mirjam Struppek, Interactionfield, Urban Media Research Berlin, Germany]
+        - [Michael Hohl,      Sheffield Hallam University,                   UK]
+        - [Mirjam Struppek,   Interactionfield, Urban Media Research Berlin, Germany]
+      keywords: [interactive installation, mobility, home, identity, embodied experience, 
+                 biofeedback, communication, digitalisation, travel, contemplation]
 
     mo:
       title: >
@@ -180,6 +182,8 @@ content:
         ..   of a Wearable Movement-Based Interaction Concept, slides 6MB]
       authors:
         - [Jin Moen, Interactive Institute; Moement R&D, Sweden]
+      keywords: [movement quality, movement-based interaction, kinesthetics, 
+                 wearable artifacts, embodied interaction, social context of use]
 
     pwa:
       title: "Gesture Connect: Facilitating Tangible Interaction With a Flick Of The Wrist"
@@ -187,6 +191,7 @@ content:
         - [Trevor Pering,  Intel Research,           USA]
         - [Roy Want,       Intel Research,           USA]
         - [Yaw Anokwa,     University of Washington, USA]
+      keywords: [NFC, physical gestures, mobile phones, tangible interaction]
 
     re:
       title: Giving Materials a Voice
@@ -330,8 +335,10 @@ content:
       title: Tangible user interfaces for configuration practices
       authors:
         - [Larisa Sitorus, University of Southern Denmark, Denmark]
-        - [Shan Shan Cao, University of Southern Denmark, Denmark]
-        - [Jacob Buur, University of Southern Denmark, Denmark]
+        - [Shan Shan Cao,  University of Southern Denmark, Denmark]
+        - [Jacob Buur,     University of Southern Denmark, Denmark]
+      keywords: [refrigeration technicians, industrial configuration, 
+                 tangible user interface, user supportive, work practice, system maintenance]
 
     rhlck:
       title: Tap Input as an Embedded Interaction Method for Mobile Devices, slides]
@@ -341,6 +348,7 @@ content:
         - [Jukka Linjama,  Nokia, Finland]
         - [Ashley Colley,  Nokia, Finland]
         - [Saana Kaleva,   Nokia, Finland]
+      keywords: [gesture input, haptic user interfaces, mobile devices, user studies
 
     km:
       title: "Teaching Table: A tangible mentor for pre-K math education, slides"
@@ -370,6 +378,8 @@ content:
         - [Astrid Larssen, University of Technology Sydney, Australia]
         - [Toni Robertson, University of Technology Sydney, Australia]
         - [Jenny Edwards, University of Technology Sydney, Australia]
+      keywords: [body, embodiment, interaction, interaction design, kinesthetic sense, movement, 
+                 phenomenology, tangibility, touch]
 
     lcgs:
       title: "The Meatbook: Tangible and Visceral Interaction"
@@ -431,6 +441,7 @@ content:
         - [Elisa Rubegni,    University of Siena, Italy]
         - [Sandro Gerardi,   University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
         - [Omar Abou Khaled, University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
+      keywords: [HCI, tangible user interface, personal objects, user-oriented framework, model, markup language]
 
     svgs:
       title: "VoodooFlash: Authoring across Physical and Digital Form"
@@ -503,8 +514,9 @@ content:
         media:   [http://sushu.de/free/, https://tei.acm.org/2007/program/SusanneSchuricht_FrequentTraveller.pdf]
 
       je:
-        title:   A Physical Approach to Tangible Interaction Design
-        authors: [Mads Jensen]
+        title:    A Physical Approach to Tangible Interaction Design
+        authors:  [Mads Jensen]
+        keywords: [tangible interaction, physicality, interaction qualities, physical metaphor, video action wall]
 
     twoMinuteMadness2:
       rtsi: 
@@ -546,8 +558,10 @@ content:
         authors: [Audrey Girouard, Erin Treacy Solovey, Leanne Hirshfield, Stacey Ecott, Orit Shaer, Robert Jacob]
 
       fr:
-        title:   "CabBoots: Shoes with integrated Guidance System"
-        authors: [Martin Frey]
+        title:    "CabBoots: Shoes with integrated Guidance System"
+        authors:  [Martin Frey]
+        keywords: [human-machine interface, haptic interface, tangible interface,
+                   tactile feedback, guidance system, augmented reality]
 
       bsh:
         title: When is Role Playing really experiential? Case studies
