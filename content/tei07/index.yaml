@@ -34,7 +34,7 @@ content:
     samerica: {abbrev: S, instances: [Colombia]}
 
   contributions: 
-    r: 
+    ro: 
       title: Keynote
       authors:
         - [Tom Rodden, University of Nottingham, UK]
@@ -66,7 +66,7 @@ content:
         - [Nicolas Villar, Lancaster University, UK]
         - [Hans Gellersen, Lancaster University, UK]
 
-    j:
+    je:
       title: A Physical Approach to Tangible Interaction Design
       authors:
         - [Mads Jensen, University of Southern Denmark, Denmark]
@@ -87,12 +87,12 @@ content:
         - [Makoto Okabe,     Tokyo University,   Japan]
       keywords: [haptics, shape displays, interaction, collaboration]
 
-    s: 
+    sh: 
       title: "Beyond video: choosing the right medium for a media rich interaction"
       authors: 
         - [Peter Shultz, Art Center College of Design, USA]
 
-    f:
+    fr:
       title: "CabBoots: Shoes with integrated Guidance System"
       authors: 
         - [Martin Frey, UdK Berlin, Germany]
@@ -140,7 +140,7 @@ content:
         - [Saul Greenberg,    University of Calgary,     Canada]
       keywords: [distributed physical user interfaces,   phidgets]
 
-    m:
+    ma:
       title: Do tangible interfaces enhance learning?, slides]
       authors:
         - [Paul Marshall, Open University, UK]
@@ -174,7 +174,7 @@ content:
         - [Michael Hohl,    Sheffield Hallam University, UK]
         - [Mirjam Struppek, Interactionfield, Urban Media Research Berlin, Germany]
 
-    m:
+    mo:
       title: >
         .. From Hand-Held to Body-Worn: Embodied Experiences of the Design and Use 
         ..   of a Wearable Movement-Based Interaction Concept, slides 6MB]
@@ -188,7 +188,7 @@ content:
         - [Roy Want,       Intel Research,           USA]
         - [Yaw Anokwa,     University of Washington, USA]
 
-    r:
+    re:
       title: Giving Materials a Voice
       authors:
         - [Hannah Regier, Art Center College of Design, USA]
@@ -201,7 +201,7 @@ content:
         - [Johann Habakuk Israel, Fraunhofer-Institute for Production Systems and Design Technology IPK, Germany]
       keywords: [tangible user interfaces, intuitivity, image schemas, metaphor, embodiment]
 
-    m:
+    mo:
       title: "Keep in Touch: A Tactile-Vision Intimate Interface"
       authors:
         - [Nima Motamedi, Simon Fraser University, Canada]
@@ -289,10 +289,11 @@ content:
         - [Robert Jacob,      Tufts University, USA]
       keywords: [tangible user interface, education, mathematics, manipulatives]
 
-    b:
+    bi:
       title: Spatializing Real Time Interactive Environments
       authors:
         - [Nimish Biloria, TU Delft, Netherlands]
+      keywords: [real-time behavior, multi-disciplinary, control system, interaction, pneumatics]
 
     eng:
       title: "StickySpots: Using Location to Embed Technology in the Social Practices of the Home"
@@ -354,7 +355,7 @@ content:
         - [Tanja Döring,    University of Hamburg, Germany]
         - [Steffi Beckhaus, University of Hamburg, Germany]
 
-    a:
+    an:
       title: >
         .."The CTI Framework: Informing the Design of Tangible and Spatial Interactive "
         ..  "Systems for Children"
@@ -417,7 +418,7 @@ content:
       keywords: [sensor network user interface (SNUI), tangible user interface (TUI), 
                  sensor network, siftable computing interface]
 
-    s:
+    sm:
       title: Using Magnets in Physical Blocks That Behave As Programming Objects
       authors:
         - [Andrew Smith, African Advanced Institute for Information & Communications Technology, South Africa]
@@ -475,7 +476,7 @@ content:
         keywords: [interaction design, digital tabletop gaming, tangible user interfaces, 
                    pervasive games, tangible interaction]
 
-      r:
+      re:
         title:   Giving Materials a Voice
         authors: [Hannah Regier]
 
@@ -496,12 +497,12 @@ content:
         title:   Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children
         authors: [Milena Droumeva, Alissa Antle, Ron Wakkary]
 
-      s:
+      sc:
         title:   Freequent Traveller 
         authors: [Susanne Schuricht, Tobias Schmidt]
         media:   [http://sushu.de/free/, https://tei.acm.org/2007/program/SusanneSchuricht_FrequentTraveller.pdf]
 
-      j:
+      je:
         title:   A Physical Approach to Tangible Interaction Design
         authors: [Mads Jensen]
 
@@ -523,7 +524,7 @@ content:
         title:   A Malleable Control Structure for Softwired User Interfaces
         authors: [Nicolas Villar, Hans Gellersen]
 
-      s:
+      sm:
         title:   Using Magnets in Physical Blocks That Behave As Programming Objects
         authors: Andrew Smith
 
@@ -531,12 +532,12 @@ content:
         title:   Collaborative Ambient Systems by Blow Displays
         authors: [Mitsuru Minakuchi, Satoshi Nakamura]
 
-      s:
+      sh:
         title:    Brand consciousness as a driving design force
         authors:  Peter Shultz
         keywords: [branding, slide projectors, medium selection]
 
-      s:
+      vfh:
         title:   "TagTiles: optimal challenge in educational electronics"
         authors: [Janneke Verhaegh, Willem Fontijn, Jettie Hoonhout]
 
@@ -544,7 +545,7 @@ content:
         title:   "Smart Blocks: A Tangible Mathematical Manipulative"
         authors: [Audrey Girouard, Erin Treacy Solovey, Leanne Hirshfield, Stacey Ecott, Orit Shaer, Robert Jacob]
 
-      f:
+      fr:
         title:   "CabBoots: Shoes with integrated Guidance System"
         authors: [Martin Frey]
 
