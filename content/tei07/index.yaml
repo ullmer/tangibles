@@ -52,7 +52,7 @@ content:
     haptics:       [haptic interface, haptic user interfaces, haptics, tactile interface, tactile, touch
     paradigms:     [augmented reality, distributed physical user interfaces, 
                     paper user interface, ubiquitous computing, responsive environments, spatial interaction, 
-                    siftable computing interface, tabletop sensing, 
+                    siftable computing interface, tabletop sensing, tabletop interaction, tabletop interfaces]
 
     ambience:      [ambient display, ambient environment
 
@@ -64,9 +64,9 @@ content:
     tei: [TUI, tangibility, tangible UIs, tangible computing, tangible interaction, tangible interface, tangible interfaces, 
           tangible user interface (TUI), tangible user interface, tangible user interfaces]
 
-    embodiment:    [body, gesture input, embodied experience, embodied interaction, embodiment
+    embodiment:    [body, gesture input, embodied experience, embodied interaction, embodiment, sensory mapping
     consciousness: [biofeedback, emotional awareness, empathy, identity, intuitivity, simplicity
-    cognition:     [cognitive development, distributed cognition, image schemas, embodied cognition
+    cognition:     [cognitive development, distributed cognition, image schemas, embodied cognition, passive awareness
     philosophy:    [action research, adaptability, contemplation, phenomenology,
 
     place:    [home, domestic technology, location-based design, location-based narrative, public space,
@@ -89,34 +89,33 @@ control system: 1
 digital video editing: 1
 digitalisation: 1
 frameworks: 1
+
+multihandicapped children: 1
 illiterate programmer: 1
-industrial configuration: 1
+programming languages: 1
+phidgets: 1
+thermochromic displays: 1
 markup language: 1
+pneumatics: 1
+
+smart artifacts: 1
+
+industrial configuration: 1
+system maintenance: 1
 mathematics: 1
 messaging: 1
 metaphor: 1
 model: 1
 multi-disciplinary: 1
-multihandicapped children: 1
 navigable information space: 1
-passive awareness: 1
-phidgets: 1
-pneumatics: 1
 presentation tool: 1
-programming languages: 1
 real-time behavior: 1
 refrigeration technicians: 1
 remote interfaces: 1
 role playing: 1
-sensory mapping: 1
 shape displays: 1
-smart artifacts: 1
 social interaction: 1
 somatics: 1
-system maintenance: 1
-tabletop interaction: 1
-tabletop interfaces: 1
-thermochromic displays: 1
 tilting table: 1
 travel: 1
 visual displays: 1
