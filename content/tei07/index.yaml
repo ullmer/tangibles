@@ -34,56 +34,57 @@ content:
     samerica: {abbrev: S, instances: [Colombia]}
 
   keywords: 
-    collaboration: [CSCW, collaboration, group awareness
+    collaboration: [CSCW, collaboration, group awareness, social interaction]
     education:     [Montessori-inspired manipulatives, children, digital manipulatives, manipulatives,
-                    learning toys, learning,
-                    education, educational game, edutainment
-    arts:          [Laban effort-shape, aesthetics artifacts, art/design installation, choreography of interaction, expressiveness,
-    music:         [music, musical instrument, musical performance, sound feedback
+                    learning toys, learning, education, educational game, edutainment]
+    arts:          [Laban effort-shape, aesthetics artifacts, art/design installation, choreography of interaction, expressiveness]
+    music:         [music, musical instrument, musical performance, sound feedback]
 
     design:        [design process, design research, design, interaction design, product design, communication design, 
-                    complex products
+                    complex products]
 
     tech:          [Flash, NFC, active tokens, application development framework, authoring tools, 
-                    computer vision
+                    computer vision]
     evaluation:    [case studies, evaluation, participatory design, experience, usability, use qualities, user experience,
-                    user studies, user supportive, user-oriented framework,
+                    user studies, user supportive, user-oriented framework, role playing]
 
-    haptics:       [haptic interface, haptic user interfaces, haptics, tactile interface, tactile, touch
+    haptics:       [haptic interface, haptic user interfaces, haptics, tactile interface, tactile, touch]
     paradigms:     [augmented reality, distributed physical user interfaces, 
                     paper user interface, ubiquitous computing, responsive environments, spatial interaction, 
                     siftable computing interface, tabletop sensing, tabletop interaction, tabletop interfaces]
 
-    ambience:      [ambient display, ambient environment
+    ambience:      [ambient display, ambient environment]
 
-    hci: [HCI, interface design, 
+    hci: [HCI, interface design]
 
     interaction: [interaction techniques, interaction, interactive book, interactive installation, interactive toys,
-                  interactive video and sound installation, embedded interaction, explicit interaction
+                  interactive video and sound installation, embedded interaction, explicit interaction]
 
     tei: [TUI, tangibility, tangible UIs, tangible computing, tangible interaction, tangible interface, tangible interfaces, 
           tangible user interface (TUI), tangible user interface, tangible user interfaces]
 
-    embodiment:    [body, gesture input, embodied experience, embodied interaction, embodiment, sensory mapping
-    consciousness: [biofeedback, emotional awareness, empathy, identity, intuitivity, simplicity
-    cognition:     [cognitive development, distributed cognition, image schemas, embodied cognition, passive awareness
-    philosophy:    [action research, adaptability, contemplation, phenomenology,
+    embodiment:    [body, gesture input, embodied experience, embodied interaction, embodiment, sensory mapping, somatics]
+    consciousness: [biofeedback, emotional awareness, empathy, identity, intuitivity, simplicity]
+    cognition:     [cognitive development, distributed cognition, image schemas, embodied cognition, passive awareness]
+    philosophy:    [action research, adaptability, contemplation, phenomenology]
 
-    place:    [home, domestic technology, location-based design, location-based narrative, public space,
+    place:    [home, domestic technology, location-based design, location-based narrative, public space]
     mobility: [mobile devices, mobile phones, mobile technology, movement analysis, movement, kinesthetic sense,
-               mobility,
-    narrative: [material narratives, location-based narrative, reading
+               mobility]
+    narrative: [material narratives, location-based narrative, reading]
  
     physicality: [physical gestures, physical interaction, physical interfaces, physical manipulatives, material narratives,
-                  personal objects,
+                  personal objects]
+
+    intimacy: [intimacy, intimate group communication, social intimacy]
+
 rapid prototyping: 1
 
-  intimacy: [intimacy, intimate group communication, social intimacy,
 play, game heuristics,
 
   sensing: [sensor network user interface (SNUI), sensor network, sensorial interfaces, pen-based input,
 
-communication, multi-user communication
+communication, multi-user communication, messaging
 
 control system: 1
 digital video editing: 1
@@ -101,27 +102,21 @@ pneumatics: 1
 smart artifacts: 1
 
 industrial configuration: 1
+refrigeration technicians
+work practice: 1
 system maintenance: 1
 mathematics: 1
-messaging: 1
-metaphor: 1
-model: 1
-multi-disciplinary: 1
-navigable information space: 1
-presentation tool: 1
-real-time behavior: 1
-refrigeration technicians: 1
-remote interfaces: 1
-role playing: 1
+metaphor
+model
+multi-disciplinary
+navigable information space
+remote interfaces
+presentation tool
+real-time behavior
 shape displays: 1
-social interaction: 1
-somatics: 1
 tilting table: 1
 travel: 1
 visual displays: 1
-work practice: 1
-
-
 
   contributions: 
     ro: 
