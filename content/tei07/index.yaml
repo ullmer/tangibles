@@ -55,34 +55,37 @@ content:
 
     ambience:      [ambient display, ambient environment]
 
-    hci: [HCI, interface design]
 
-    interaction: [interaction techniques, interaction, interactive book, interactive installation, interactive toys,
-                  interactive video and sound installation, embedded interaction, explicit interaction]
-
-    tei: [TUI, tangibility, tangible UIs, tangible computing, tangible interaction, tangible interface, tangible interfaces, 
-          tangible user interface (TUI), tangible user interface, tangible user interfaces]
+    interaction:   [interaction techniques, interaction, interactive book, interactive installation, interactive toys,
+                    interactive video and sound installation, embedded interaction, explicit interaction]
 
     embodiment:    [body, gesture input, embodied experience, embodied interaction, embodiment, sensory mapping, somatics]
     consciousness: [biofeedback, emotional awareness, empathy, identity, intuitivity, simplicity]
     cognition:     [cognitive development, distributed cognition, image schemas, embodied cognition, passive awareness]
     philosophy:    [action research, adaptability, contemplation, phenomenology]
 
-    place:    [home, domestic technology, location-based design, location-based narrative, public space]
-    mobility: [mobile devices, mobile phones, mobile technology, movement analysis, movement, kinesthetic sense,
-               mobility]
+    place:     [home, domestic technology, location-based design, location-based narrative, public space]
+    mobility:  [mobile devices, mobile phones, mobile technology, movement analysis, movement, kinesthetic sense,
+                mobility]
     narrative: [material narratives, location-based narrative, reading]
- 
+
     physicality: [physical gestures, physical interaction, physical interfaces, physical manipulatives, material narratives,
                   personal objects]
 
-    intimacy: [intimacy, intimate group communication, social intimacy]
+    intimacy:    [intimacy, intimate group communication, social intimacy]
 
+    sensing: [sensor network user interface (SNUI), sensor network, sensorial interfaces, pen-based input,
+
+    hci: [HCI, interface design]
+
+    tei: [TUI, tangibility, tangible UIs, tangible computing, tangible interaction, tangible interface, tangible interfaces, 
+          tangible user interface (TUI), tangible user interface, tangible user interfaces]
+
+ 
 rapid prototyping: 1
 
 play, game heuristics,
 
-  sensing: [sensor network user interface (SNUI), sensor network, sensorial interfaces, pen-based input,
 
 communication, multi-user communication, messaging
 
