@@ -37,6 +37,7 @@ content:
     collaboration: [CSCW, collaboration, group awareness, social interaction]
     education:     [Montessori-inspired manipulatives, children, digital manipulatives, manipulatives,
                     learning toys, learning, education, educational game, edutainment]
+    play:          [play, game heuristics, edutainment]
     arts:          [Laban effort-shape, aesthetics artifacts, art/design installation, choreography of interaction, expressiveness]
     music:         [music, musical instrument, musical performance, sound feedback]
 
@@ -57,6 +58,7 @@ content:
 
     ambience:      [ambient display, ambient environment]
 
+    fabrication:   [rapid prototyping
 
     interaction:   [interaction techniques, interaction, interactive book, interactive installation, interactive toys,
                     interactive video and sound installation, embedded interaction, explicit interaction]
@@ -65,10 +67,11 @@ content:
     consciousness: [biofeedback, emotional awareness, empathy, identity, intuitivity, simplicity]
     cognition:     [cognitive development, distributed cognition, image schemas, embodied cognition, passive awareness]
     philosophy:    [action research, adaptability, contemplation, phenomenology]
+    place:         [home, domestic technology, location-based design, location-based narrative, public space]
 
-    place:     [home, domestic technology, location-based design, location-based narrative, public space]
     mobility:  [mobile devices, mobile phones, mobile technology, movement analysis, movement, kinesthetic sense,
                 mobility]
+
     narrative: [material narratives, location-based narrative, reading]
 
     physicality: [physical gestures, physical interaction, physical interfaces, physical manipulatives, material narratives,
@@ -76,46 +79,26 @@ content:
 
     intimacy:    [intimacy, intimate group communication, social intimacy]
 
-    sensing: [sensor network user interface (SNUI), sensor network, sensorial interfaces, pen-based input,
+    use_context: [industrial configuration, pneumatics, refrigeration technicians, system maintenance, 
+                 work practice, travel, digital video editing, multihandicapped children]
+
+    sensing: [sensor network user interface (SNUI), sensor network, sensorial interfaces, pen-based input]
 
     hci: [HCI, interface design]
 
     tei: [TUI, tangibility, tangible UIs, tangible computing, tangible interaction, tangible interface, tangible interfaces, 
           tangible user interface (TUI), tangible user interface, tangible user interfaces]
 
+    interface_locale: [tilting table, shape displays, visual displays]
  
-rapid prototyping: 1
-
-play, game heuristics,
+    communication: [communication, multi-user communication, messaging, remote interfaces]
 
 
-communication, multi-user communication, messaging
+    misc: [control system, digitalisation, illiterate programmer, presentation tool, navigable information space]
 
-control system
-digital video editing: 1
-digitalisation: 1
-frameworks: 1
+    theory: [mathematics, model, frameworks]
 
-multihandicapped children
-illiterate programmer
-
-  useContext: [industrial configuration, pneumatics, refrigeration technicians, system maintenance, 
-               work practice, travel]
-
-mathematics
-metaphor
-model
-multi-disciplinary
-navigable information space
-
-remote interfaces
-presentation tool
-
-real-time behavior
-
-tilting table
-shape displays
-visual displays
+    general_concepts: [metaphor, multi-disciplinary, real-time behavior]
 
   contributions: 
     ro: 
