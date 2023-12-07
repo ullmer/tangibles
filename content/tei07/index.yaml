@@ -33,6 +33,107 @@ content:
     namerica: {abbrev: N, instances: [USA, Canada]}
     samerica: {abbrev: S, instances: [Colombia]}
 
+  keywords: 
+    collaboration: [CSCW, collaboration, group awareness
+    education:     [Montessori-inspired manipulatives, children, digital manipulatives, manipulatives,
+                    learning toys, learning,
+                    education, educational game, edutainment
+    arts:          [Laban effort-shape, aesthetics artifacts, art/design installation, choreography of interaction, expressiveness,
+    music:         [music, musical instrument, musical performance,
+    design:        [design process, design research, design, interaction design, product design, communication design, 
+    tech:          [Flash, NFC, active tokens, application development framework, authoring tools, 
+                    computer vision
+    paradigms:     [augmented reality, distributed physical user interfaces, haptic interface, haptic user interfaces, haptics
+                    paper user interface, ubiquitous computing
+    ambience:      [ambient display, ambient environment
+
+    hci: [HCI, interface design, 
+
+    interaction: [interaction techniques, interaction, interactive book, interactive installation, interactive toys,
+                  interactive video and sound installation, embedded interaction, explicit interaction
+
+    tei: [TUI, tangibility, tangible UIs, tangible computing, tangible interaction, tangible interface, tangible interfaces, 
+          tangible user interface (TUI), tangible user interface, tangible user interfaces]
+
+    embodiment:    [body, gesture input, embodied experience, embodied interaction, embodiment
+    consciousness: [biofeedback, emotional awareness, empathy, identity, intuitivity
+    cognition:     [cognitive development, distributed cognition, image schemas, embodied cognition
+    philosophy:    [action research, adaptability, contemplation, phenomenology,
+
+    place:    [home, domestic technology, location-based design, location-based narrative
+    mobility: [mobile devices, mobile phones, mobile technology, movement analysis, movement, kinesthetic sense,
+               mobility,
+    narrative: [material narratives, location-based narrative, reading
+ 
+    physicality: [physical gestures, physical interaction, physical interfaces, physical manipulatives, material narratives,
+                  personal objects,
+rapid prototyping: 1
+
+  intimacy: [intimacy, intimate group communication, social intimacy,
+play, game heuristics,
+
+  evaluation: [case studies, evaluation, participatory design, experience
+
+communication,
+complex products: 1
+control system: 1
+digital video editing: 1
+digitalisation: 1
+frameworks: 1
+illiterate programmer: 1
+industrial configuration: 1
+markup language: 1
+mathematics: 1
+messaging: 1
+metaphor: 1
+model: 1
+multi-disciplinary: 1
+multi-user communication: 1
+multihandicapped children: 1
+navigable information space: 1
+passive awareness: 1
+pen-based input: 1
+phidgets: 1
+pneumatics: 1
+presentation tool: 1
+programming languages: 1
+public space: 1
+real-time behavior: 1
+refrigeration technicians: 1
+remote interfaces: 1
+responsive environments: 1
+role playing: 1
+sensing: [sensor network user interface (SNUI), sensor network, sensorial interfaces,
+sensory mapping: 1
+shape displays: 1
+siftable computing interface: 1
+simplicity: 1
+smart artifacts: 1
+social interaction: 1
+somatics: 1
+sound feedback: 1
+spatial interaction: 1
+system maintenance: 1
+tabletop interaction: 1
+tabletop interfaces: 1
+tabletop sensing: 1
+tactile interface: 1
+tactile: 1
+thermochromic displays: 1
+tilting table: 1
+touch: 1
+travel: 1
+usability: 1
+use qualities: 1
+user experience: 1
+user studies: 1
+user supportive: 1
+user-oriented framework: 1
+visual displays: 1
+work practice: 1
+
+
+
   contributions: 
     ro: 
       title: Keynote
@@ -348,7 +449,7 @@ content:
         - [Jukka Linjama,  Nokia, Finland]
         - [Ashley Colley,  Nokia, Finland]
         - [Saana Kaleva,   Nokia, Finland]
-      keywords: [gesture input, haptic user interfaces, mobile devices, user studies
+      keywords: [gesture input, haptic user interfaces, mobile devices, user studies]
 
     km:
       title: "Teaching Table: A tangible mentor for pre-K math education, slides"
