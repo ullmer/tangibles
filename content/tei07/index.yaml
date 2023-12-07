@@ -44,7 +44,9 @@ content:
                     complex products]
 
     tech:          [Flash, NFC, active tokens, application development framework, authoring tools, 
-                    computer vision]
+                    computer vision, programming languages, phidgets, thermochromic displays, 
+                    markup language, smart artifacts]
+
     evaluation:    [case studies, evaluation, participatory design, experience, usability, use qualities, user experience,
                     user studies, user supportive, user-oriented framework, role playing]
 
@@ -89,37 +91,31 @@ play, game heuristics,
 
 communication, multi-user communication, messaging
 
-control system: 1
+control system
 digital video editing: 1
 digitalisation: 1
 frameworks: 1
 
-multihandicapped children: 1
-illiterate programmer: 1
-programming languages: 1
-phidgets: 1
-thermochromic displays: 1
-markup language: 1
-pneumatics: 1
+multihandicapped children
+illiterate programmer
 
-smart artifacts: 1
+  useContext: [industrial configuration, pneumatics, refrigeration technicians, system maintenance, 
+               work practice, travel]
 
-industrial configuration: 1
-refrigeration technicians
-work practice: 1
-system maintenance: 1
-mathematics: 1
+mathematics
 metaphor
 model
 multi-disciplinary
 navigable information space
+
 remote interfaces
 presentation tool
+
 real-time behavior
-shape displays: 1
-tilting table: 1
-travel: 1
-visual displays: 1
+
+tilting table
+shape displays
+visual displays
 
   contributions: 
     ro: 
