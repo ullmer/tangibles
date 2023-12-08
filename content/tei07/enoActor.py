@@ -14,13 +14,15 @@ from pgzero.builtins import Actor, animate, keyboard
 ##################### enodia actor #####################
 
 class enoActor:
-  pos        = (0,0)
-  actorDim  = (100, 30)
-  buttonRect = None
-  buttonText = "actor"
+  pos         = (0,0)
+  actorDim    = (100, 30)
+  buttonRect  = None
+  textPrimary = None
+
   bgcolor1   = (0, 0, 130)
   bgcolor2   = (50, 50, 250)
   fgcolor    = "#bbbbbb"
+
   alpha      = .8
   fontSize   = 36
   imgFn      = None
@@ -37,7 +39,7 @@ class enoActor:
 
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-    self.actor = Actor(imgFn)
+    self.actor     = Actor(imgFn)
     self.actor.pos = self.pos
 
   ############# pgzero draw #############
@@ -48,16 +50,19 @@ class enoActor:
   ############# pgzero draw #############
 
   def draw(self, screen):
-    return self.actor.draw()
+    self.actor.draw()
 
-    if self.toggleMode and self.toggleState: bgcolor = self.bgcolor2
-    else:                                    bgcolor = self.bgcolor1
+    if self.textPrimary is not None: 
 
-    screen.draw.filled_rect(self.buttonRect, bgcolor)
-    x0, y0 = self.pos; dx, dy = self.actorDim; cx=x0+dx/2; cy = y0+dy/2
-    screen.draw.text(self.buttonText, centerx=cx, centery=cy, align="center",
-                     fontsize=self.fontSize, 
-                     color=self.fgcolor, alpha=self.alpha)
+      x0, y0 = self.pos; dx, dy = self.actorDim; cx=x0+dx/2; cy = y0+dy/2
+      screen.draw.text(self.textPrimary, centerx=cx, centery=cy, align="center",
+                       fontsize=self.fontSize, 
+                       color=self.fgcolor, alpha=self.alpha)
+    return 
+
+    #if self.toggleMode and self.toggleState: bgcolor = self.bgcolor2
+    #else:                                    bgcolor = self.bgcolor1
+    #screen.draw.filled_rect(self.buttonRect, bgcolor)
 
   ############# nudge #############
 
@@ -83,7 +88,7 @@ class enoActor:
     if self.verbose: print("ofd:", x, y)
     if self.actor.collidepoint((x,y)): 
       if self.abbrev is not None: print(self.abbrev, "pressed1")
-      else:                       print(self.buttonText, "pressed2")
+      else:                       print(self.actorTextPrimary, "pressed2")
       self.toggle()
       return True
 
