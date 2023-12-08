@@ -13,8 +13,9 @@ class enoThemePgz(enoActor):
   pos        = (0,0)
   actorDim   = (100, 30)
   buttonRect = None
-  textKws    = None
-  textPapers = None
+  kwNum, pNum = None, None
+  textKws     = None
+  textPapers  = None
 
   txtOffset1 = (-60, -40)
   txtOffsetK = (-80,  10)
@@ -37,6 +38,9 @@ class enoThemePgz(enoActor):
     super(enoThemePgz, self).draw(screen) # call parent draw method
 
     x0, y0 = self.pos; dx, dy = self.actorDim; 
+
+    if self.kwNum is not None: self.textKws    = str(self.kwNum)
+    if self.pNum  is not None: self.textPapers = str(self.pNum)
 
     if self.textKws is not None: 
       tdx, tdy = self.txtOffsetK
@@ -65,8 +69,9 @@ class enoThemePgzEnsemble(enoActorEnsemble):
 
   ############# pgzero draw #############
 
-  def addTheme(self, themeName, imgFn, **kwargs): 
-    a = enoThemePgz(imgFn, pos=kwargs['pos'])
+  def addTheme(self, themeName, kwNum, pNum, imgFn, **kwargs): 
+    a = enoThemePgz(imgFn, pos=kwargs['pos'], kwNum=kwNum, pNum=pNum, primaryText=themeName)
+
     self.themeList.append(a)
     self.themeNameDict[themeName] = a
     return a
