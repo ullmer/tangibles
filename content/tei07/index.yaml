@@ -34,84 +34,84 @@ content:
     samerica: {abbrev: S, instances: [Colombia]}
 
   themes: 
-    collaboration: {kw: [CSCW, collaboration, group awareness, social interaction],          p: -}
+    collaboration: {kw: [CSCW, collaboration, group awareness, social interaction],          p: 5}
     education:     {kw: [Montessori-inspired manipulatives, children, digital manipulatives, manipulatives,
-                         learning toys, learning, education, educational game, edutainment], p: -}
-    play:          {kw: [play, game heuristics, edutainment, interactive toys],              p: -} 
+                         learning toys, learning, education, educational game, edutainment], p: 10}
+    play:          {kw: [play, game heuristics, edutainment, interactive toys],              p: 3} 
     arts:          {kw: [Laban effort-shape, aesthetics artifacts, art/design installation, 
-                         choreography of interaction, expressiveness],                       p: -}
-    music:         {kw: [music, musical instrument, musical performance, sound feedback],    p: -}
+                         choreography of interaction, expressiveness],                       p: 3}
+    music:         {kw: [music, musical instrument, musical performance, sound feedback],    p: 3}
 
     design:        {kw: [design process, design research, design, interaction design, 
-                         product design, communication design, complex products],            p: -}
+                         product design, communication design, complex products],            p: 10}
 
     tech:          {kw: [Flash, NFC, active tokens, application development framework, 
                          authoring tools, computer vision, programming languages, phidgets, 
-                         thermochromic displays, markup language, smart artifacts],          p: -}
+                         thermochromic displays, markup language, smart artifacts],          p: 9}
 
     evaluation:    {kw: [case studies, evaluation, participatory design, experience, usability, 
                          use qualities, user experience, user studies, user supportive, 
-                         user-oriented framework, role playing],                             p: -}
+                         user-oriented framework, role playing],                             p: 10}
 
     haptics:       {kw: [haptic interface, haptic user interfaces, haptics, 
-                         tactile interface, tactile, touch],                                 p: -}
+                         tactile interface, tactile, touch],                                 p: 6}
     paradigms:     {kw: [augmented reality, distributed physical user interfaces, 
                          paper user interface, ubiquitous computing, responsive environments, 
                          spatial interaction, siftable computing interface, tabletop sensing, 
-                         tabletop interaction, tabletop interfaces],                         p: -}
+                         tabletop interaction, tabletop interfaces],                         p: 11}
 
-    ambience:      {kw: [ambient display, ambient environment],                              p: -}
+    ambience:      {kw: [ambient display, ambient environment],                              p: 3}
 
-    fabrication:   {kw: [rapid prototyping],                                                 p: -}
+    fabrication:   {kw: [rapid prototyping],                                                 p: 1}
 
     interaction:   {kw: [interaction techniques, interaction, interactive book, 
                          interactive installation, interactive toys, explicit interaction,
-                         interactive video and sound installation, embedded interaction],    p: -} 
+                         interactive video and sound installation, embedded interaction],    p: 11} 
 
     embodiment:    {kw: [body, gesture input, embodied experience, embodied interaction, 
-                         embodiment, sensory mapping, somatics],                             p: -}
-    consciousness: {kw: [biofeedback, emotional awareness, empathy, identity, intuitivity],  p: -}
+                         embodiment, sensory mapping, somatics],                             p: 8}
+    consciousness: {kw: [biofeedback, emotional awareness, empathy, identity, intuitivity],  p: 4}
 
     cognition:     {kw: [cognitive development, distributed cognition, image schemas, 
-                         embodied cognition, passive awareness],                             p: -}
-    philosophy:    {kw: [action research, adaptability, contemplation, phenomenology],       p: -}
+                         embodied cognition, passive awareness],                             p: 4}
+    philosophy:    {kw: [action research, adaptability, contemplation, phenomenology],       p: 4}
 
     place:         {kw: [home, domestic technology, location-based design, 
-                         location-based narrative, public space],                            p: -}
+                         location-based narrative, public space],                            p: 4}
 
     mobility:      {kw: [mobile devices, mobile phones, mobile technology, 
-                         movement analysis, movement, kinesthetic sense, mobility],          p: -}
+                         movement analysis, movement, kinesthetic sense, mobility],          p: 6}
 
-    narrative:     {kw: [material narratives, location-based narrative, reading],            p: -}
+    narrative:     {kw: [material narratives, location-based narrative, reading],            p: 3}
 
     physicality:   {kw: [physical gestures, physical interaction, physical interfaces, 
-                         physical manipulatives, material narratives, personal objects],     p: -}
+                         physical manipulatives, material narratives, personal objects],     p: 6}
 
-    intimacy:      {kw: [intimacy, intimate group communication, social intimacy],           p: -}
+    intimacy:      {kw: [intimacy, intimate group communication, social intimacy],           p: 3}
 
     use_context:   {kw: [industrial configuration, pneumatics, refrigeration technicians, 
                          system maintenance, work practice, travel, digital video editing, 
-                         multihandicapped children],                                         p: -}
+                         multihandicapped children],                                         p: 5}
 
     sensing:       {kw: [sensor network user interface (SNUI), sensor network, 
-                         sensorial interfaces, pen-based input],                             p: -}
+                         sensorial interfaces, pen-based input],                             p: 3}
 
-    hci:           {kw: [HCI, interface design],                                             p: -}
+    hci:           {kw: [HCI, interface design],                                             p: 3}
 
     tangible_ui:   {kw: [TUI, tangibility, tangible UIs, tangible computing, 
                          tangible interaction, tangible interface, tangible interfaces, 
                          tangible user interface (TUI), tangible user interface, 
-                         tangible user interfaces],                                          p: -}
+                         tangible user interfaces],                                          p: 24}
 
-    communication: {kw: [communication, multi-user communication, messaging],                p: -}
+    communication: {kw: [communication, multi-user communication, messaging],                p: 3}
 
-    theory:        {kw: [mathematics, model, frameworks],                                    p: -}
+    theory:        {kw: [mathematics, model, frameworks],                                    p: 3}
 
     misc:          {kw: [control system, digitalisation, illiterate programmer, simplicity,
                          remote interfaces, presentation tool, navigable information space, 
-                         metaphor, multi-disciplinary, real-time behavior],                  p: -}
+                         metaphor, multi-disciplinary, real-time behavior],                  p: 8}
 
-    interface_locale: {kw: [tilting table, shape displays, visual displays],                 p: -}
+    interface_locale: {kw: [tilting table, shape displays, visual displays],                 p: 3}
 
   contributions: 
     ro: 
