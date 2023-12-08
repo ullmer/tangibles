@@ -8,7 +8,7 @@ from   enoThemePgz     import *
 from   pgzEno          import *
 from   pgzero.builtins import Actor
 
-WIDTH  = 1024
+WIDTH  = 1200
 HEIGHT = 768
 TITLE  = 'Enodia interactivity experiment'
 BLACK  = (0, 0, 0)
@@ -18,12 +18,13 @@ a1 = etpe.addTheme("foo",    3, 5, "tg01h2-theme", pos=(200, 100))
 a2 = etpe.addTheme("swishy", 5, 9, "tg01h2-theme", pos=(200, 300))
 
 numBrackets = 6
-x, y = 30, 30
-dx   = 150
+x, y = 150, 300
+dx   = 200
+
+eae = enoActorEnsemble()
 
 for i in range(numBrackets):
-eae = enoActorEnsemble()
-eae.addActor("b" + str(i), "tg01h2-bracket", pos=(x+i*dx, y))
+  eae.addActor("b" + str(i), "tg01h2-bracket", pos=(x+i*dx, y))
 
 ######################### draw #########################
 
