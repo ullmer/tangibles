@@ -62,7 +62,7 @@ content:
                          authoring tools, computer vision, programming languages, phidgets, 
                          thermochromic displays, markup language, smart artifacts],          p: 9}
 
-    embodiment:    {kw: body, gesture input, embodied experience, embodied interaction, 
+    embodiment:    {kw: [body, gesture input, embodied experience, embodied interaction, 
                          embodiment, sensory mapping, somatics],                             p: 8}
 
     haptics:       {kw: [haptic interface, haptic user interfaces, haptics, 

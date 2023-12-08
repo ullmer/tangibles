@@ -14,12 +14,13 @@ class enoContent:
   yamlFn     = 'index.yaml'
   yamlD      = None
 
-  countries     = None
-  continents    = None
-  themesYaml    = None
-  themesPapers  = None
-  keywordCounts = None
-  keywordPapers = None
+  countries      = None
+  continents     = None
+  themesYaml     = None
+  themesKeywords = None
+  themesPapers   = None
+  keywordCounts  = None
+  keywordPapers  = None
 
   country2continentAbbrev = None
 
@@ -153,8 +154,9 @@ class enoContent:
   ############# tallyThemes #############
 
   def tallyThemes(self):
-    self.themesYaml   = self.getSection('themes')
-    self.themesPapers = {}
+    self.themesYaml     = self.getSection('themes')
+    self.themesPapers   = {}
+    self.themesKeywords = {}
 
     for theme in self.themesYaml:
       papers = {}
@@ -162,6 +164,7 @@ class enoContent:
         th = self.themesYaml[theme]
         if 'kw' in th:
           kws = th['kw']
+          self.themesKeywords[theme] = kws
           for kw in kws:
             #print("tt:", theme, kw)
             if kw in self.keywordPapers: 
@@ -201,8 +204,10 @@ def main():
 
   for theme in thPap:
     papers = thPap[theme]
+    kcount = len(ec.themesKeywords[theme])
     pcount = len(papers)
-    print("%s: %i (%s)" % (theme, pcount, list(papers.keys())))
+    print("%s: K %i P %i" % (theme, kcount, pcount))
+
 
 if __name__ == '__main__': main()
 
