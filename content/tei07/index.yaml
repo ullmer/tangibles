@@ -65,44 +65,53 @@ content:
     fabrication:   {kw: [rapid prototyping],                                                 p: -}
 
     interaction:   {kw: [interaction techniques, interaction, interactive book, 
-                         interactive installation, interactive toys, interactive video and sound installation, embedded interaction, explicit interaction]
+                         interactive installation, interactive toys, explicit interaction,
+                         interactive video and sound installation, embedded interaction],    p: -} 
 
-    embodiment:    [body, gesture input, embodied experience, embodied interaction, embodiment, sensory mapping, somatics]
-    consciousness: [biofeedback, emotional awareness, empathy, identity, intuitivity, simplicity]
-    cognition:     [cognitive development, distributed cognition, image schemas, embodied cognition, passive awareness]
-    philosophy:    [action research, adaptability, contemplation, phenomenology]
-    place:         [home, domestic technology, location-based design, location-based narrative, public space]
+    embodiment:    {kw: [body, gesture input, embodied experience, embodied interaction, 
+                         embodiment, sensory mapping, somatics],                             p: -}
+    consciousness: {kw: [biofeedback, emotional awareness, empathy, identity, intuitivity],  p: -}
 
-    mobility:  [mobile devices, mobile phones, mobile technology, movement analysis, movement, kinesthetic sense,
-                mobility]
+    cognition:     {kw: [cognitive development, distributed cognition, image schemas, 
+                         embodied cognition, passive awareness],                             p: -}
+    philosophy:    {kw: [action research, adaptability, contemplation, phenomenology],       p: -}
+    place:         {kw: [home, domestic technology, location-based design, 
+                         location-based narrative, public space],                            p: -}
 
-    narrative: [material narratives, location-based narrative, reading]
+    mobility:      {kw: [mobile devices, mobile phones, mobile technology, 
+                         movement analysis, movement, kinesthetic sense, mobility],          p: -}
 
-    physicality: [physical gestures, physical interaction, physical interfaces, physical manipulatives, material narratives,
-                  personal objects]
+    narrative:     {kw: [material narratives, location-based narrative, reading],            p: -}
 
-    intimacy:    [intimacy, intimate group communication, social intimacy]
+    physicality:   {kw: [physical gestures, physical interaction, physical interfaces, 
+                         physical manipulatives, material narratives, personal objects],     p: -}
 
-    use_context: [industrial configuration, pneumatics, refrigeration technicians, system maintenance, 
-                 work practice, travel, digital video editing, multihandicapped children]
+    intimacy:      {kw: [intimacy, intimate group communication, social intimacy],           p: -}
 
-    sensing: [sensor network user interface (SNUI), sensor network, sensorial interfaces, pen-based input]
+    use_context:   {kw: [industrial configuration, pneumatics, refrigeration technicians, 
+                         system maintenance, work practice, travel, digital video editing, 
+                         multihandicapped children],                                         p: -}
 
-    hci: [HCI, interface design]
+    sensing:       {kw: [sensor network user interface (SNUI), sensor network, 
+                         sensorial interfaces, pen-based input],                             p: -}
 
-    tei: [TUI, tangibility, tangible UIs, tangible computing, tangible interaction, tangible interface, tangible interfaces, 
-          tangible user interface (TUI), tangible user interface, tangible user interfaces]
+    hci:           {kw: [HCI, interface design],                                             p: -}
 
-    interface_locale: [tilting table, shape displays, visual displays]
- 
-    communication: [communication, multi-user communication, messaging, remote interfaces]
+    tangible_ui:   {kw: [TUI, tangibility, tangible UIs, tangible computing, 
+                         tangible interaction, tangible interface, tangible interfaces, 
+                         tangible user interface (TUI), tangible user interface, 
+                         tangible user interfaces],                                          p: -}
 
+    communication: {kw: [communication, multi-user communication, messaging],                p: -}
 
-    misc: [control system, digitalisation, illiterate programmer, presentation tool, navigable information space]
+    theory:        {kw: [mathematics, model, frameworks],                                    p: -}
 
-    theory: [mathematics, model, frameworks]
+    misc:          {kw: [control system, digitalisation, illiterate programmer, simplicity,
+                         remote interfaces, presentation tool, navigable information space, 
+                         metaphor, multi-disciplinary, real-time behavior],                  p: -}
 
-    general_concepts: [metaphor, multi-disciplinary, real-time behavior]
+    interface_locale: {kw: [tilting table, shape displays, visual displays],                 p: -}
+
 
   contributions: 
     ro: 
