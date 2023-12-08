@@ -8,14 +8,14 @@ from   enoActor        import *
 from   pgzEno          import *
 from   pgzero.builtins import Actor
 
-WIDTH  = 510
-HEIGHT = 310
+WIDTH  = 1024
+HEIGHT = 768
 TITLE  = 'Enodia interactivity experiment'
 BLACK  = (0, 0, 0)
 
 eae = enoActorEnsemble()
-a1 = eae.addActor("p1",        "person-iconic1",     pos=( 50, 50))
-a2 = eae.addActor("addPerson", "person-add-iconic1", pos=(465, 55))
+a1 = eae.addActor("t1", "tg01h-theme", pos=(200, 100))
+a2 = eae.addActor("t2", "tg01h-theme", pos=(200, 300))
 
 ######################### draw #########################
 
