@@ -9,7 +9,7 @@ from enoActor import *
 
 ##################### enodia actor #####################
 
-class enoTheme(enoActor):
+class enoThemePgz(enoActor):
   pos        = (0,0)
   actorDim   = (100, 30)
   buttonRect = None
@@ -22,10 +22,19 @@ class enoTheme(enoActor):
 
   fontSizeKP = 20
 
+  ############# constructor #############
+
+  def __init__(self, imgFn, **kwargs): 
+
+    self.__dict__.update(kwargs) 
+    super(enoThemePgz, self).__init__(imgFn, kwargs)
+
+    self.primaryTextOffset = self.txtOffset1 #there is almost certainly a more elegant approach
+
   ############# pgzero draw #############
 
   def draw(self, screen):
-    super(enoTheme, self).draw(screen) # call parent draw method
+    super(enoThemePgz, self).draw(screen) # call parent draw method
 
     x0, y0 = self.pos; dx, dy = self.actorDim; 
 
@@ -38,50 +47,28 @@ class enoTheme(enoActor):
                        color=self.fgcolor, alpha=self.alpha)
 
     if self.textPapers is not None: 
-      tdx, tdy = self.textPapers
+      tdx, tdy = self.txtOffsetP
       cx=x0+dx/2 + tdx; cy = y0+dy/2 + tdy
 
-      screen.draw.text(self.textKws, centerx=cx, centery=cy, align="center",
+      screen.draw.text(self.textPapers, centerx=cx, centery=cy, align="center",
                        fontsize=self.fontSizeKP, 
                        color=self.fgcolor, alpha=self.alpha)
-
 
 ############################################################### 
 ##################### enodia actor ensemble ###################
 ## plurality, but not of regular structure
 
-class enoActorEnsemble:
-  actorList     = None
+class enoThemePgzEnsemble(enoActorEnsemble):
+  themeList     = None
   lastSelected  = None
-  actorNameDict = None
-
-  ############# constructor #############
-
-  def __init__(self, **kwargs): 
-    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
-    self.actorList     = []
-    self.actorNameDict = {}
+  themeNameDict = None
 
   ############# pgzero draw #############
 
-  def addActor(self, actorName, imgFn, **kwargs): 
-    a = enoActor(imgFn, pos=kwargs['pos'])
-    self.actorList.append(a)
-    self.actorNameDict[actorName] = a
+  def addTheme(self, themeName, imgFn, **kwargs): 
+    a = enoThemePgz(imgFn, pos=kwargs['pos'])
+    self.themeList.append(a)
+    self.themeNameDict[themeName] = a
     return a
-
-  ############# pgzero draw #############
-
-  def draw(self, screen): 
-    for actor in self.actorList: actor.draw(screen)
-
-  ######################### on_mouse_down #########################
-
-  def on_finger_down(self, finger_id, x, y):
-
-    for actor in self.actorList:
-      if actor.on_finger_down(finger_id, x, y):
-        if self.lastSelected is not None: self.lastSelected.toggle()
-        self.lastSelected = actor
 
 ### end ###
