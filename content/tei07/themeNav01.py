@@ -4,7 +4,10 @@
 
 import random, math
 import pygame
-from   enoThemePgz     import *
+
+from   enoThemePgz import *
+from   enoContent  import *
+
 from   pgzEno          import *
 from   pgzero.builtins import Actor
 
@@ -27,6 +30,18 @@ eae = enoActorEnsemble()
 
 for i in range(numBrackets):
   eae.addActor("b" + str(i), "tg01h2-bracket", pos=(x+i*dx, y))
+
+ec = enoContent()
+
+c      = ec.tallyCountries()
+kwDict = ec.tallyKeywords()
+thPap  = ec.tallyThemes()
+
+for theme in thPap:
+  papers = thPap[theme]
+  kcount = len(ec.themesKeywords[theme])
+  pcount = len(papers)
+  print("%s: K%i P%i" % (theme, kcount, pcount))
 
 ######################### draw #########################
 
