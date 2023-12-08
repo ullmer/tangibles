@@ -4,7 +4,7 @@
 
 import pgzero.spellcheck
 import pgzero.game
-import os
+import os, platform
 
 os.environ['SDL_MOUSE_TOUCH_EVENTS'] = '1'
 
@@ -19,6 +19,15 @@ from   pgzero.game       import PGZeroGame
 #https://pygame-zero.readthedocs.io/en/stable/ide-mode.html
 #https://stackoverflow.com/questions/3692159/how-do-i-redefine-functions-in-python
 
+################# windows positioning #################
+
+def winpos(x,y, width, height):
+  #https://stackoverflow.com/questions/57674156/how-to-move-a-no-frame-pygame-windows-when-user-click-on-it/57681853#57681853
+
+  if platform.system() == "Windows":
+    from ctypes import windll
+    hwnd = pygame.display.get_wm_info()['window']
+    windll.user32.MoveWindow(hwnd, x, y, width, height, False)
 
 ################# PyGame Zero -- Extended Interaction ############
 ################################################################## 

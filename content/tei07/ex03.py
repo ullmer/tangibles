@@ -13,6 +13,8 @@ HEIGHT = 768
 TITLE  = 'Enodia interactivity experiment'
 BLACK  = (0, 0, 0)
 
+winpos(0,0, WIDTH, HEIGHT) #provided by pgzEno
+
 etpe = enoThemePgzEnsemble()
 a1 = etpe.addTheme("foo",    3, 5, "tg01h2-theme", pos=(200, 100))
 a2 = etpe.addTheme("swishy", 5, 9, "tg01h2-theme", pos=(200, 300))
