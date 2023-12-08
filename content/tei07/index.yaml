@@ -33,20 +33,21 @@ content:
     namerica: {abbrev: N, instances: [USA, Canada]}
     samerica: {abbrev: S, instances: [Colombia]}
 
-  keywords: 
-    collaboration: [CSCW, collaboration, group awareness, social interaction]
-    education:     [Montessori-inspired manipulatives, children, digital manipulatives, manipulatives,
-                    learning toys, learning, education, educational game, edutainment]
-    play:          [play, game heuristics, edutainment]
-    arts:          [Laban effort-shape, aesthetics artifacts, art/design installation, choreography of interaction, expressiveness]
-    music:         [music, musical instrument, musical performance, sound feedback]
+  themes: 
+    collaboration: {kw: [CSCW, collaboration, group awareness, social interaction],          p: -}
+    education:     {kw: [Montessori-inspired manipulatives, children, digital manipulatives, manipulatives,
+                         learning toys, learning, education, educational game, edutainment], p: -}
+    play:          {kw: [play, game heuristics, edutainment]
+    arts:          {kw: [Laban effort-shape, aesthetics artifacts, art/design installation, 
+                         choreography of interaction, expressiveness],                       p: -}
+    music:         {kw: [music, musical instrument, musical performance, sound feedback],    p: -}
 
-    design:        [design process, design research, design, interaction design, product design, communication design, 
-                    complex products]
+    design:        {kw: [design process, design research, design, interaction design, product design, communication design, 
+                         complex products], p: -}
 
-    tech:          [Flash, NFC, active tokens, application development framework, authoring tools, 
-                    computer vision, programming languages, phidgets, thermochromic displays, 
-                    markup language, smart artifacts]
+    tech:          {kw: [Flash, NFC, active tokens, application development framework, authoring tools, 
+                         computer vision, programming languages, phidgets, thermochromic displays, 
+                         markup language, smart artifacts], p: -}
 
     evaluation:    [case studies, evaluation, participatory design, experience, usability, use qualities, user experience,
                     user studies, user supportive, user-oriented framework, role playing]
@@ -58,7 +59,7 @@ content:
 
     ambience:      [ambient display, ambient environment]
 
-    fabrication:   [rapid prototyping
+    fabrication:   [rapid prototyping]
 
     interaction:   [interaction techniques, interaction, interactive book, interactive installation, interactive toys,
                     interactive video and sound installation, embedded interaction, explicit interaction]
