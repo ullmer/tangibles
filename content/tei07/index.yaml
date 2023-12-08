@@ -37,7 +37,7 @@ content:
     collaboration: {kw: [CSCW, collaboration, group awareness, social interaction],          p: -}
     education:     {kw: [Montessori-inspired manipulatives, children, digital manipulatives, manipulatives,
                          learning toys, learning, education, educational game, edutainment], p: -}
-    play:          {kw: [play, game heuristics, edutainment],                                p: -}
+    play:          {kw: [play, game heuristics, edutainment, interactive toys],              p: -} 
     arts:          {kw: [Laban effort-shape, aesthetics artifacts, art/design installation, 
                          choreography of interaction, expressiveness],                       p: -}
     music:         {kw: [music, musical instrument, musical performance, sound feedback],    p: -}
@@ -53,17 +53,19 @@ content:
                          use qualities, user experience, user studies, user supportive, 
                          user-oriented framework, role playing],                             p: -}
 
-    haptics:       [haptic interface, haptic user interfaces, haptics, tactile interface, tactile, touch]
-    paradigms:     [augmented reality, distributed physical user interfaces, 
-                    paper user interface, ubiquitous computing, responsive environments, spatial interaction, 
-                    siftable computing interface, tabletop sensing, tabletop interaction, tabletop interfaces]
+    haptics:       {kw: [haptic interface, haptic user interfaces, haptics, 
+                         tactile interface, tactile, touch],                                 p: -}
+    paradigms:     {kw: [augmented reality, distributed physical user interfaces, 
+                         paper user interface, ubiquitous computing, responsive environments, 
+                         spatial interaction, siftable computing interface, tabletop sensing, 
+                         tabletop interaction, tabletop interfaces],                         p: -}
 
-    ambience:      [ambient display, ambient environment]
+    ambience:      {kw: [ambient display, ambient environment],                              p: -}
 
-    fabrication:   [rapid prototyping]
+    fabrication:   {kw: [rapid prototyping],                                                 p: -}
 
-    interaction:   [interaction techniques, interaction, interactive book, interactive installation, interactive toys,
-                    interactive video and sound installation, embedded interaction, explicit interaction]
+    interaction:   {kw: [interaction techniques, interaction, interactive book, 
+                         interactive installation, interactive toys, interactive video and sound installation, embedded interaction, explicit interaction]
 
     embodiment:    [body, gesture input, embodied experience, embodied interaction, embodiment, sensory mapping, somatics]
     consciousness: [biofeedback, emotional awareness, empathy, identity, intuitivity, simplicity]
