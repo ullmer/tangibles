@@ -11,12 +11,13 @@ import yaml
 
 class enoContent:
 
-  yamlFn    = 'index.yaml'
-  yamlD     = None
+  yamlFn     = 'index.yaml'
+  yamlD      = None
 
-  countries  = None
-  continents = None
-  keywords   = None
+  countries     = None
+  continents    = None
+  themes        = None
+  keywordCounts = None
 
   country2continentAbbrev = None
 
@@ -144,6 +145,27 @@ class enoContent:
 
       except: print("enoContent getKeywords glitch:", content); traceback.print_exc()
 
+  ############# getThemes #############
+
+  def getThemes(self):
+    self.themes    = self.getSection('themes')
+    result         = {}
+
+    for theme in self.themes:
+      pcount = 0
+      try:
+        if 'kw' in theme:
+          kws = theme['kw']
+          for kw in kws:
+            if kw in self.keywords: pcount += self.keywords[kw]
+          
+          keywords = mainSection[content]['keywords']
+          for keyword in keywords:
+            if keyword not in self.keywords: self.keywords[keyword]  = 1
+            else:                            self.keywords[keyword] += 1
+
+      except: print("enoContent getKeywords glitch:", content); traceback.print_exc()
+
     return self.keywords
 
 ################### main ###################
@@ -153,13 +175,12 @@ def main():
 
   content = ec.getSection()
   print(len(content))
-  #print(ec.getCountries())
-  #print(ec.getKeywords())
+  c      = ec.getCountries()
+  kwDict = ec.getKeywords()
 
-  keywordsDict = ec.getKeywords()
   kws = []
-  for keyword in keywordsDict:
-    count = keywordsDict[keyword]
+  for keyword in kwDict:
+    count = kwDict[keyword]
     kws.append("%s: %i" % (keyword, count))
 
   kws.sort()

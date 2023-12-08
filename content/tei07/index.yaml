@@ -75,6 +75,7 @@ content:
     cognition:     {kw: [cognitive development, distributed cognition, image schemas, 
                          embodied cognition, passive awareness],                             p: -}
     philosophy:    {kw: [action research, adaptability, contemplation, phenomenology],       p: -}
+
     place:         {kw: [home, domestic technology, location-based design, 
                          location-based narrative, public space],                            p: -}
 
@@ -111,7 +112,6 @@ content:
                          metaphor, multi-disciplinary, real-time behavior],                  p: -}
 
     interface_locale: {kw: [tilting table, shape displays, visual displays],                 p: -}
-
 
   contributions: 
     ro: 
