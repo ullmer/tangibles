@@ -28,7 +28,7 @@ class enoThemePgz(enoActor):
   def __init__(self, imgFn, **kwargs): 
 
     self.__dict__.update(kwargs) 
-    super(enoThemePgz, self).__init__(imgFn, kwargs)
+    super(enoThemePgz, self).__init__(imgFn)
 
     self.primaryTextOffset = self.txtOffset1 #there is almost certainly a more elegant approach
 
@@ -64,8 +64,15 @@ class enoThemePgz(enoActor):
 
 class enoThemePgzEnsemble(enoActorEnsemble):
   themeList     = None
-  lastSelected  = None
   themeNameDict = None
+
+  ############# constructor #############
+
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    super(enoThemePgzEnsemble, self).__init__()
+    self.themeList     = []
+    self.themeNameDict = {}
 
   ############# pgzero draw #############
 
