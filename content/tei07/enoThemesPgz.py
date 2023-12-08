@@ -10,11 +10,11 @@ from enoActor import *
 ##################### enodia actor #####################
 
 class enoTheme(enoActor):
-  pos         = (0,0)
-  actorDim    = (100, 30)
-  buttonRect  = None
-  textKws     = None
-  textPaperss = None
+  pos        = (0,0)
+  actorDim   = (100, 30)
+  buttonRect = None
+  textKws    = None
+  textPapers = None
 
   txtOffset1 = (-60, -40)
   txtOffsetK = (-80,  10)
@@ -22,23 +22,29 @@ class enoTheme(enoActor):
 
   fontSizeKP = 20
 
-
   ############# pgzero draw #############
 
   def draw(self, screen):
-    self.actor.draw()
+    super(enoTheme, self).draw(screen) # call parent draw method
 
-    if self.textPrimary is not None: 
-      tdx, tdy = self.primaryTextOffset
+    x0, y0 = self.pos; dx, dy = self.actorDim; 
 
-      x0, y0 = self.pos; dx, dy = self.actorDim; 
+    if self.textKws is not None: 
+      tdx, tdy = self.txtOffsetK
       cx=x0+dx/2 + tdx; cy = y0+dy/2 + tdy
 
-      screen.draw.text(self.textPrimary, centerx=cx, centery=cy, align="center",
-                       fontsize=self.fontSize, 
+      screen.draw.text(self.textKws, centerx=cx, centery=cy, align="center",
+                       fontsize=self.fontSizeKP, 
                        color=self.fgcolor, alpha=self.alpha)
 
-    return 
+    if self.textPapers is not None: 
+      tdx, tdy = self.textPapers
+      cx=x0+dx/2 + tdx; cy = y0+dy/2 + tdy
+
+      screen.draw.text(self.textKws, centerx=cx, centery=cy, align="center",
+                       fontsize=self.fontSizeKP, 
+                       color=self.fgcolor, alpha=self.alpha)
+
 
 ############################################################### 
 ##################### enodia actor ensemble ###################
