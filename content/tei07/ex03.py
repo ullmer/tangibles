@@ -17,9 +17,6 @@ etpe = enoThemePgzEnsemble()
 a1 = etpe.addTheme("foo",    3, 5, "tg01h2-theme", pos=(200, 100))
 a2 = etpe.addTheme("swishy", 5, 9, "tg01h2-theme", pos=(200, 300))
 
-a1.textPrimary = 'foo'
-a2.textPrimary = 'supercalifragilistic'
-
 a1.primaryTextOffset = (-60, -40)
 
 ######################### draw #########################

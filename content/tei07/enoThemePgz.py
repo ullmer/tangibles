@@ -17,11 +17,11 @@ class enoThemePgz(enoActor):
   textKws     = None
   textPapers  = None
 
-  txtOffset1 = (-60, -40)
-  txtOffsetK = (-80,  10)
-  txtOffsetP = ( 20,  10)
+  txtOffset1 = (-55, -40)
+  txtOffsetK = (-90,  18)
+  txtOffsetP = (  0,  18)
 
-  fontSizeKP = 20
+  fontSizeKP = 32
 
   ############# constructor #############
 
@@ -77,10 +77,15 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   ############# pgzero draw #############
 
   def addTheme(self, themeName, kwNum, pNum, imgFn, **kwargs): 
-    a = enoThemePgz(imgFn, pos=kwargs['pos'], kwNum=kwNum, pNum=pNum, primaryText=themeName)
+    a = enoThemePgz(imgFn, pos=kwargs['pos'], kwNum=kwNum, pNum=pNum, textPrimary=themeName)
 
     self.themeList.append(a)
     self.themeNameDict[themeName] = a
     return a
+
+  ############# pgzero draw #############
+
+  def draw(self, screen): 
+    for el in self.themeList: el.draw(screen)
 
 ### end ###
