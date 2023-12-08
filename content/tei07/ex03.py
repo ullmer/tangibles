@@ -17,12 +17,19 @@ etpe = enoThemePgzEnsemble()
 a1 = etpe.addTheme("foo",    3, 5, "tg01h2-theme", pos=(200, 100))
 a2 = etpe.addTheme("swishy", 5, 9, "tg01h2-theme", pos=(200, 300))
 
-a1.primaryTextOffset = (-60, -40)
+numBrackets = 6
+x, y = 30, 30
+dx   = 150
+
+for i in range(numBrackets):
+eae = enoActorEnsemble()
+eae.addActor("b" + str(i), "tg01h2-bracket", pos=(x+i*dx, y))
 
 ######################### draw #########################
 
 def draw():
   screen.fill(BLACK)
+  eae.draw(screen)
   etpe.draw(screen)
 
 touch_coords = {} # dictionary with coordinates of active touches
