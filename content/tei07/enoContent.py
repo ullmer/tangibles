@@ -16,8 +16,10 @@ class enoContent:
 
   countries     = None
   continents    = None
-  themes        = None
+  themesYaml    = None
+  themesPapers  = None
   keywordCounts = None
+  keywordPapers = None
 
   country2continentAbbrev = None
 
@@ -99,9 +101,9 @@ class enoContent:
     return result
 
 
-  ############# getCountries#############
+  ############# tallyCountries#############
 
-  def getCountries(self):
+  def tallyCountries(self):
     self.countries = {}
     mainSection    = self.getSection()
     result         = {}
@@ -122,51 +124,50 @@ class enoContent:
         if cca in result: result[cca] += 1
         else            : result[cca]  = 1
 
-      #except: print("enoContent getCountries glitch, ignoring")
-      except: print("enoContent getCountries glitch:", content)
+      #except: print("enoContent tallyCountries glitch, ignoring")
+      except: print("enoContent tallyCountries glitch:", content)
 
     #return self.countries
     return result
 
-  ############# getKeywords #############
+  ############# tallyKeywords #############
 
-  def getKeywords(self):
-    self.keywords  = {}
+  def tallyKeywords(self):
     mainSection    = self.getSection()
-    result         = {}
+
+    self.keywordCounts = {}
+    self.keywordPapers = {}
 
     for content in mainSection:
       try:
         if 'keywords' in mainSection[content]:
           keywords = mainSection[content]['keywords']
-          for keyword in keywords:
-            if keyword not in self.keywords: self.keywords[keyword]  = 1
-            else:                            self.keywords[keyword] += 1
+          for kw in keywords:
+            if kw not in self.keywordCounts: self.keywordCounts[kw]  = 1; self.keywordPapers[kw] = [content]
+            else:                            self.keywordCounts[kw] += 1; self.keywordPapers[kw].append(content)
 
-      except: print("enoContent getKeywords glitch:", content); traceback.print_exc()
+      except: print("enoContent tallyKeywords glitch:", content); traceback.print_exc()
 
-  ############# getThemes #############
+  ############# tallyThemes #############
 
-  def getThemes(self):
-    self.themes    = self.getSection('themes')
-    result         = {}
+  def tallyThemes(self):
+    self.themesYaml   = self.getSection('themes')
+    self.themesPapers = {}
 
-    for theme in self.themes:
-      pcount = 0
+    for theme in self.themesYaml:
+      papers = {}
       try:
         if 'kw' in theme:
           kws = theme['kw']
           for kw in kws:
-            if kw in self.keywords: pcount += self.keywords[kw]
-          
-          keywords = mainSection[content]['keywords']
-          for keyword in keywords:
-            if keyword not in self.keywords: self.keywords[keyword]  = 1
-            else:                            self.keywords[keyword] += 1
+            if kw in self.keywordPapers: 
+              kwpapers = self.keywordPapers[kw]
+              for paper in kwpapers: papers[paper] = True
+        self.themesPapers[themes] = papers
 
-      except: print("enoContent getKeywords glitch:", content); traceback.print_exc()
+      except: print("enoContent tallyThemes glitch:", theme); traceback.print_exc()
 
-    return self.keywords
+    return self.themesPapers
 
 ################### main ###################
 
@@ -175,8 +176,9 @@ def main():
 
   content = ec.getSection()
   print(len(content))
-  c      = ec.getCountries()
-  kwDict = ec.getKeywords()
+  c      = ec.tallyCountries()
+  kwDict = ec.tallyKeywords()
+  thPap  = ec.tallyThemes()
 
   kws = []
   for keyword in kwDict:
@@ -185,8 +187,13 @@ def main():
 
   kws.sort()
 
-  for el in kws:
-    print(el)
+  #for el in kws:
+  #  print(el)
+
+  for theme in thPap:
+    papers = thPap[theme]
+    pcount = len(papers)
+    print("%s: %i (%s)" % (theme, pcount, papers))
 
 if __name__ == '__main__': main()
 
