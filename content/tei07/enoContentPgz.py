@@ -1,15 +1,15 @@
 # Enodia content support class
 # Brygg Ullmer, Clemson University
-# Begun 2023-12-04
+# Begun 2023-12-08
 
 import traceback
 import yaml
 
 ################################################################
-######################## Enodia Content ########################
+##################### Enodia Content PyGame Zero ###############
 ################################################################
 
-class enoContent:
+class enoContentPgz(enoContent):
 
   yamlFn     = 'index.yaml'
   yamlD      = None

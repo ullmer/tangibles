@@ -1,0 +1,11 @@
+### Enodia movements choreography descriptor ###
+# By Brygg Ullmer, Clemson University
+# Begun 2022-07-24
+
+panel:
+  buttons:
+    mA: {}
+    mB: {}
+    mC: {}
+
+### end ###
