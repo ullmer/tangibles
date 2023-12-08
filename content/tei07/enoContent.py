@@ -148,6 +148,8 @@ class enoContent:
 
       except: print("enoContent tallyKeywords glitch:", content); traceback.print_exc()
 
+    return self.keywordCounts 
+
   ############# tallyThemes #############
 
   def tallyThemes(self):
@@ -157,13 +159,18 @@ class enoContent:
     for theme in self.themesYaml:
       papers = {}
       try:
-        if 'kw' in theme:
-          kws = theme['kw']
+        th = self.themesYaml[theme]
+        if 'kw' in th:
+          kws = th['kw']
           for kw in kws:
+            #print("tt:", theme, kw)
             if kw in self.keywordPapers: 
               kwpapers = self.keywordPapers[kw]
               for paper in kwpapers: papers[paper] = True
-        self.themesPapers[themes] = papers
+            else: print("tallyThemes: kw not tracked:", kw)
+        else: print("kw not in theme", theme)
+
+        self.themesPapers[theme] = papers
 
       except: print("enoContent tallyThemes glitch:", theme); traceback.print_exc()
 
@@ -180,10 +187,12 @@ def main():
   kwDict = ec.tallyKeywords()
   thPap  = ec.tallyThemes()
 
+  #print("kp:", ec.keywordPapers)
+
   kws = []
-  for keyword in kwDict:
-    count = kwDict[keyword]
-    kws.append("%s: %i" % (keyword, count))
+  for kw in kwDict:
+    count = kwDict[kw]
+    kws.append("%s: %i" % (kw, count))
 
   kws.sort()
 
@@ -193,7 +202,7 @@ def main():
   for theme in thPap:
     papers = thPap[theme]
     pcount = len(papers)
-    print("%s: %i (%s)" % (theme, pcount, papers))
+    print("%s: %i (%s)" % (theme, pcount, list(papers.keys())))
 
 if __name__ == '__main__': main()
 
