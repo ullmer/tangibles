@@ -109,11 +109,12 @@ class enoThemePgzEnsemble(enoActorEnsemble):
 
         if el.selectable: el.select()
         self.actorSelected = el
+    self.mousePressed = True
 
   ######################### on_mouse_move #########################
 
   def on_mouse_move(self, rel):
-    if self.objSelected is not None:
+    if self.objSelected is not None and self.mousePressed:
       objName = self.objSelected 
       obj = self.themeObjDict[objName]
     
@@ -128,7 +129,8 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   def on_mouse_up(self):
     if self.objSelected is not None: 
       obj = self.themeObjDict[self.objSelected]
-      obj.deselect()
-    self.objSelected = None
+      #obj.deselect()
+    #self.objSelected = None
+    self.mousePressed = False
 
 ### end ###

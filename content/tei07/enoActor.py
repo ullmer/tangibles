@@ -206,6 +206,7 @@ class enoActorEnsemble:
   nameObjDict   = None
   objNameDict   = None
   actorSelected = None
+  mousePressed  = False
 
   ############# constructor #############
 
@@ -243,6 +244,7 @@ class enoActorEnsemble:
       if el.actor.collidepoint((x,y)) and el.selectable:
         el.select()
         self.actorSelected = el
+    self.mousePressed  = True
 
   ######################### on_mouse_down #########################
 
@@ -250,7 +252,8 @@ class enoActorEnsemble:
     if self.actorSelected is not None:
       el = self.actorSelected
       if el.selectedCb is not None: el.selectedCb()
-      el.deselect()
-      self.actorSelected = None
+      self.mousePressed = False
+      #el.deselect()
+      #self.actorSelected = None
 
 ### end ###
