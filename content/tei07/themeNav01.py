@@ -66,14 +66,14 @@ def normalizePos(x,y): return (int(x*WIDTH), int(y*HEIGHT))
 
 #def on_finger_down(finger_id, x, y):
 
-def on_mouse_down(x, y):
+def on_mouse_down(pos):
   #pos    = touch_coords[finger_id] = normalizePos(x,y)
   #px, py = x*WIDTH, y*HEIGHT
   #eae.on_finger_down(finger_id, px, py)
  
-  etpe.on_mouse_down(x,y)
+  etpe.on_mouse_down(pos)
 
-pgze = pgzEno(["multitouch"])
-pgze.go()
+#pgze = pgzEno(["multitouch"])
+#pgze.go()
 
 ### end ###

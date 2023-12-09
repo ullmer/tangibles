@@ -65,6 +65,7 @@ class enoThemePgz(enoActor):
 class enoThemePgzEnsemble(enoActorEnsemble):
   themeList     = None
   themeNameDict = None
+  objThemeDict  = None
 
   ############# constructor #############
 
@@ -73,6 +74,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     super(enoThemePgzEnsemble, self).__init__()
     self.themeList     = []
     self.themeNameDict = {}
+    self.objThemeDict  = {}
 
   ############# pgzero draw #############
 
@@ -81,6 +83,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
 
     self.themeList.append(a)
     self.themeNameDict[themeName] = a
+    self.objThemeDict[a]          = themeName
     return a
 
   ############# pgzero draw #############
@@ -90,8 +93,11 @@ class enoThemePgzEnsemble(enoActorEnsemble):
 
   ######################### on_mouse_down #########################
 
-  def on_mouse_down(self, x, y):
+  def on_mouse_down(self, pos):
+    x,y=pos
     for el in self.themeList:
-      if el.  self.actor.collidepoint((x,y)):
+      if el.actor.collidepoint((x,y)): 
+        name = self.objThemeDict[el]
+        print("mouse selected:", name)
 
 ### end ###
