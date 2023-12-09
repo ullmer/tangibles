@@ -7,9 +7,7 @@ import pygame
 
 from   enoThemePgz import *
 from   enoContent  import *
-
-from   pgzEno          import *
-from   pgzero.builtins import Actor
+from   pgzEno      import *
 
 WIDTH  = 1600
 HEIGHT = 768
@@ -17,7 +15,6 @@ TITLE  = 'Enodia interactivity experiment'
 BLACK  = (0, 0, 0)
 
 winpos(0,0, WIDTH, HEIGHT) #provided by pgzEno
-
 
 numBrackets = 6
 x, y = 40, 280
@@ -59,19 +56,9 @@ def draw():
   eae.draw(screen)
   etpe.draw(screen)
 
-touch_coords = {} # dictionary with coordinates of active touches
-def normalizePos(x,y): return (int(x*WIDTH), int(y*HEIGHT))
-
-############ fingerdown ##########
-
-#def on_finger_down(finger_id, x, y):
-
-def on_mouse_down(pos):
-  #pos    = touch_coords[finger_id] = normalizePos(x,y)
-  #px, py = x*WIDTH, y*HEIGHT
-  #eae.on_finger_down(finger_id, px, py)
- 
-  etpe.on_mouse_down(pos)
+def on_mouse_down(pos): etpe.on_mouse_down(pos)
+def on_mouse_move(rel): etpe.on_mouse_move(rel)
+def on_mouse_up(pos):   etpe.on_mouse_up()
 
 #pgze = pgzEno(["multitouch"])
 #pgze.go()

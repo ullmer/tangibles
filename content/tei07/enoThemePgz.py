@@ -10,9 +10,6 @@ from enoActor import *
 ##################### enodia actor #####################
 
 class enoThemePgz(enoActor):
-  pos        = (0,0)
-  actorDim   = (100, 30)
-  buttonRect = None
   kwNum, pNum = None, None
   textKws     = None
   textPapers  = None
@@ -64,17 +61,18 @@ class enoThemePgz(enoActor):
 
 class enoThemePgzEnsemble(enoActorEnsemble):
   themeList     = None
-  themeNameDict = None
+  themeObjDict = None
   objThemeDict  = None
+  objSelected   = None
 
   ############# constructor #############
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super(enoThemePgzEnsemble, self).__init__()
-    self.themeList     = []
-    self.themeNameDict = {}
-    self.objThemeDict  = {}
+    self.themeList    = []
+    self.themeObjDict = {}
+    self.objThemeDict = {}
 
   ############# pgzero draw #############
 
@@ -82,8 +80,8 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     a = enoThemePgz(imgFn, pos=kwargs['pos'], kwNum=kwNum, pNum=pNum, textPrimary=themeName)
 
     self.themeList.append(a)
-    self.themeNameDict[themeName] = a
-    self.objThemeDict[a]          = themeName
+    self.themeObjDict[themeName] = a
+    self.objThemeDict[a]         = themeName
     return a
 
   ############# pgzero draw #############
@@ -99,5 +97,24 @@ class enoThemePgzEnsemble(enoActorEnsemble):
       if el.actor.collidepoint((x,y)): 
         name = self.objThemeDict[el]
         print("mouse selected:", name)
+        self.objSelected = name
+
+  ######################### on_mouse_move #########################
+
+  def on_mouse_move(self, rel):
+    if self.objSelected is not None:
+      objName = self.objSelected 
+      obj = self.themeObjDict[objName]
+    
+      x1, y1 = obj.pos
+      dx, dy = rel
+      x2, y2 = x1+dx,y1+dy
+      obj.pos = (x2,y2)
+      obj.actor.pos = obj.pos
+
+  ######################### on_mouse_up #########################
+
+  def on_mouse_up(self):
+    self.objSelected = None
 
 ### end ###
