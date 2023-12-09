@@ -91,14 +91,13 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   ############# getMatrixContents #############
 
   def getMatrixContents(self, row, col):
-    print("gmc", row, col)
+    #print("gmc", row, col)
     try:
       if self.matrix is None:         return None
       if row not in self.matrix:      return None
       if col not in self.matrix[row]: return None
 
-      theme = self.matrix[row][col]
-      obj   = self.themeObjDict[theme]
+      obj = self.matrix[row][col]
       return obj
     except:
       print("enoThemePgz getMatrixContents error", row, col); traceback.print_exc()
@@ -107,7 +106,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   ############# getMatrixContents #############
 
   def setMatrixContents(self, row, col, contents):
-    print("smc", row, col, contents)
+    #print("smc", row, col, contents)
 
     if self.matrix is None:         self.matrix = {}
     if row not in self.matrix:      self.matrix[row] = {}
@@ -149,7 +148,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
 
   def moveCursor(self, dx, dy):
     y1, x1 = self.cursorRow, self.cursorCol
-    x2, y2 = x1+dx, y1+dy
+    y2, x2 = y1+dy,          x1+dx
     self.deselectCursor()
     self.cursorRow, self.cursorCol = y2, x2
     self.selectCursor()
@@ -252,7 +251,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
 
       self.setMatrixContents(row, col, t)
 
-      self.matrix[row][col] = theme
+      self.matrix[row][col] = t
 
       y   += self.dy;   row += 1
       if y > self.maxY: row  = 0; y = y0; x += self.dx; col += 1
