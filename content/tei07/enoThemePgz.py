@@ -79,7 +79,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   ex0, ey0     = 130, 75
   dx, dy       = 250, 102
   maxY         = 550
-  animDuration = .5
+  animDuration = .2
 
   ############# constructor #############
 
@@ -157,6 +157,9 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     self.cursorRow, self.cursorCol = y2, x2
     self.selectCursor()
 
+    destpos = self.calcScreenPosition(y2, x2) 
+    animate(self.themeCursor.actor, pos=destpos, tween='accel_decel', duration=self.animDuration)
+
   ############# moveCursor #############
 
   def moveObject(self, dx, dy):
@@ -170,6 +173,9 @@ class enoThemePgzEnsemble(enoActorEnsemble):
       crow, ccol = cursorPos0
       scrPos0    = self.calcScreenPosition(crow,    ccol)
       scrPos1    = self.calcScreenPosition(crow+dy, ccol+dx)
+
+      destpos = self.calcScreenPosition(crow+dy, ccol+dx)
+      animate(self.themeCursor.actor, pos=destpos, tween='accel_decel', duration=self.animDuration)
 
       animate(cursorObj.actor, pos=scrPos1, tween='accel_decel', duration=self.animDuration)
       animate(cursorObj,       pos=scrPos1, tween='accel_decel', duration=self.animDuration)
@@ -245,7 +251,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     y0       = y
     row, col = 0, 0
 
-    self.themeCursor = self.addTheme(cursor, None, None, self.themeCursorFn, pos=(x,y))
+    self.themeCursor = self.addTheme(None, None, None, self.themeCursorFn, pos=(x,y))
 
     for theme in thPap:
       papers = thPap[theme]
@@ -266,6 +272,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
 
   def draw(self, screen): 
     for el in self.themeList: el.draw(screen)
+    if self.themeCursor is not None: self.themeCursor.draw(screen)
 
   ######################### on_mouse_down #########################
 
