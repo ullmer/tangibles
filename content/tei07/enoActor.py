@@ -19,7 +19,7 @@ class enoActor:
   drawRect    = False
   buttonRect  = None
   text        = None
-  selectable  = False
+  selectable  = True
   selected    = False
   selectedCb  = None
   textOffset  = (0, 0)

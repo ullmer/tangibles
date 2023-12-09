@@ -51,7 +51,8 @@ for theme in thPap:
   kcount = len(ec.themesKeywords[theme])
   pcount = len(papers)
   #print("%s: K%i P%i" % (theme, kcount, pcount))
-  etpe.addTheme(theme, kcount, pcount, "tg01h2-theme", pos=(x,y))
+  t = etpe.addTheme(theme, kcount, pcount, "tg01h2-theme", pos=(x,y))
+  t.selImgFn = "tg01h2-theme-sel" #image backdrop when selected
   y += dy
   if y > HEIGHT: y = y0; x += dx
 
