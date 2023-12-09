@@ -77,7 +77,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   ############# pgzero draw #############
 
   def addTheme(self, themeName, kwNum, pNum, imgFn, **kwargs): 
-    a = enoThemePgz(imgFn, pos=kwargs['pos'], kwNum=kwNum, pNum=pNum, textPrimary=themeName)
+    a = enoThemePgz(imgFn, pos=kwargs['pos'], kwNum=kwNum, pNum=pNum, text=themeName)
 
     self.themeList.append(a)
     self.themeObjDict[themeName] = a

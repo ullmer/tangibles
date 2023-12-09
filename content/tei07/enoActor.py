@@ -19,7 +19,11 @@ class enoActor:
   drawRect    = False
   buttonRect  = None
   text        = None
+  selectable  = False
   textOffset  = (0, 0)
+
+  normImgFn   = None
+  selImgFn    = None
 
   bgcolor1   = (0, 0, 130)
   bgcolor2   = (50, 50, 250)
@@ -44,6 +48,7 @@ class enoActor:
 
     self.actor     = Actor(imgFn)
     self.actor.pos = self.pos
+    self.normImgFn = imgFn
 
   ############# pgzero draw #############
 
@@ -178,26 +183,31 @@ class enoActorArray:
 class enoActorEnsemble:
   actorList     = None
   lastSelected  = None
-  actorNameDict = None
+  nameObjDict   = None
+  objNameDict   = None
+  actorSelected = None
 
   ############# constructor #############
 
   def __init__(self, **kwargs): 
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
-    self.actorList     = []
-    self.actorNameDict = {}
+    self.actorList   = []
+    self.nameObjDict = {}
+    self.objNameDict = {}
 
   ############# pgzero draw #############
 
   def addActor(self, actorName, imgFn, **kwargs): 
     a = enoActor(imgFn, pos=kwargs['pos'])
+    
 
     if 'drawRect'    in kwargs: a.drawRect   = kwargs['drawRect']
     if 'text'        in kwargs: a.text       = kwargs['text']
     if 'textOffset'  in kwargs: a.textOffset = kwargs['textOffset']
 
     self.actorList.append(a)
-    self.actorNameDict[actorName] = a
+    self.nameObjDict[actorName] = a
+    self.objNameDict[a]         = actorName
     return a
 
   ############# pgzero draw #############
@@ -207,16 +217,7 @@ class enoActorEnsemble:
 
   ######################### on_mouse_down #########################
 
-  #def on_mouse_down(self, x, y):
-  #  for actor in 
+  def on_mouse_down(self, pos):
 
-  ######################### on_mouse_down #########################
-
-  def on_finger_down(self, finger_id, x, y):
-
-    for actor in self.actorList:
-      if actor.on_finger_down(finger_id, x, y):
-        if self.lastSelected is not None: self.lastSelected.toggle()
-        self.lastSelected = actor
 
 ### end ###

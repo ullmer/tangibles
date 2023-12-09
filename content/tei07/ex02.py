@@ -14,8 +14,13 @@ TITLE  = 'Enodia interactivity experiment'
 BLACK  = (0, 0, 0)
 
 eae = enoActorEnsemble()
-a1 = eae.addActor("t1", "tg01h-theme", pos=(200, 100))
-a2 = eae.addActor("t2", "tg01h-theme", pos=(200, 300))
+a1 = eae.addActor("t1", "tg01h2-theme", pos=(200, 100))
+a2 = eae.addActor("t2", "tg01h2-theme", pos=(200, 300))
+
+a1.textPrimary = 'foo'
+a2.textPrimary = 'supercalifragilistic'
+
+a1.primaryTextOffset = (-60, -40)
 
 ######################### draw #########################
 
