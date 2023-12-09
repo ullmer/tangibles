@@ -73,7 +73,8 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   cursorRow, cursorCol         = 0, 0
 
   ex0, ey0 = 130, 75
-  dy       = 100
+  dx, dy   = 250, 102
+  maxY     = 550
 
   ############# constructor #############
 
@@ -139,6 +140,17 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     self.cursorRow, self.cursorCol = y2, x2
     self.selectCursor()
 
+  ############# moveCursor #############
+
+  def moveObject(self, dx, dy):
+    cursorObj  = self.getCursorObj()
+    cursorPos0 = self.getCursorPos()
+    crow, ccol = cursorPos0
+    scrPos0    = self.calcScreenPosition(crow,    ccol)
+    scrPos1    = self.calcScreenPosition(crow+dy, ccol+dx)
+
+    #      animate(a1, pos=(400, 500), tween='accel_decel', duration=.75)
+
   ############# load state #############
 
   def loadState(self):
@@ -186,9 +198,16 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     self.objThemeDict[a]         = themeName
     return a
 
+  ############# calcScreenPosition #############
+
+  def calcScreenPosition(self, row, col):
+    x0, y0 = self.ex0,  self.ey0
+    x1, y1 = x0+col*dx, y0+row*dy
+    return (x1, y1)
+
   ############# loadEnoContent #############
 
-  def loadEnoContent(self, ec, HEIGHT, dx):
+  def loadEnoContent(self, ec, HEIGHT):
     c      = ec.tallyCountries()
     kwDict = ec.tallyKeywords()
     thPap  = ec.tallyThemes()
@@ -209,8 +228,8 @@ class enoThemePgzEnsemble(enoActorEnsemble):
 
       self.matrix[row][col] = theme
 
-      y += self.dy;  row += 1
-      if y > HEIGHT: row  = 0; y = y0; x += dx; col += 1
+      y   += self.dy;   row += 1
+      if y > self.maxY: row  = 0; y = y0; x += self.dx; col += 1
 
   ############# pgzero draw #############
 
@@ -269,10 +288,16 @@ class enoThemePgzEnsemble(enoActorEnsemble):
 
     if self.shiftLPressed or self.shiftRPressed: self.shiftPressed = True
 
-    if key == keys.RIGHT: self.moveCursor( 1, 0)
-    if key == keys.LEFT:  self.moveCursor(-1, 0)
-    if key == keys.UP:    self.moveCursor( 0,-1)
-    if key == keys.DOWN:  self.moveCursor( 0, 1)
+    if not self.shiftPressed:
+      if key == keys.RIGHT: self.moveCursor( 1, 0)
+      if key == keys.LEFT:  self.moveCursor(-1, 0)
+      if key == keys.UP:    self.moveCursor( 0,-1)
+      if key == keys.DOWN:  self.moveCursor( 0, 1)
+    else: #shift pressed
+      if key == keys.RIGHT: self.moveObj( 1, 0)
+      if key == keys.LEFT:  self.moveObj(-1, 0)
+      if key == keys.UP:    self.moveObj( 0,-1)
+      if key == keys.DOWN:  self.moveObj( 0, 1)
 
   ######################### on_key_down #########################
 

@@ -16,8 +16,7 @@ BLACK  = (0, 0, 0)
 winpos(0,0, WIDTH, HEIGHT) #provided by pgzEno; start window @0,0
 
 numBrackets = 6
-x, y = 40, 280
-dx   = 250
+x, y, dx    = 40, 280, 250
 
 eae = enoActorEnsemble()
 
@@ -26,7 +25,7 @@ for i in range(numBrackets):
 
 ec   = enoContent()
 etpe = enoThemePgzEnsemble()
-etpe.loadEnoContent(ec, HEIGHT, dx)
+etpe.loadEnoContent(ec, HEIGHT)
 etpe.selectCursor()
 
 def save(): print("save"); etpe.saveState()
