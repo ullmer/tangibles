@@ -66,9 +66,11 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   objThemeDict = None
   objSelected  = None
   matrix       = None
+  stateFn      = 'positions.yaml'
+
   shiftPressed = False
-  stateFn              = 'positions.yaml'
-  cursorRow, cursorCol = 0, 0
+  shiftLPressed, shiftRPressed = False, False
+  cursorRow, cursorCol         = 0, 0
 
   ex0, ey0 = 130, 75
   dy       = 100
@@ -249,23 +251,35 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   ######################### on_mouse_up #########################
 
   def on_mouse_up(self):
-    if self.objSelected is not None: 
-      obj = self.themeObjDict[self.objSelected]
-      #obj.deselect()
-    #self.objSelected = None
+    if self.objSelected is not None: obj = self.themeObjDict[self.objSelected]
     self.mousePressed = False
 
   ######################### on_key_down #########################
 
   def on_key_down(self, key):
+    #print("on_key_down", key)
+
     #if key == keys.SPACE:  print("space pressed")
     #if numTimesSpaceHit == 0:
     #      animate(a1, pos=(400, 500), tween='accel_decel', duration=.75)
     #else: animate(a2, pos=(500, 500), tween='accel_decel', duration=.75)
 
+    if key == keys.LSHIFT: self.shiftLPressed = True
+    if key == keys.RSHIFT: self.shiftRPressed = True
+
+    if self.shiftLPressed or self.shiftRPressed: self.shiftPressed = True
+
     if key == keys.RIGHT: self.moveCursor( 1, 0)
     if key == keys.LEFT:  self.moveCursor(-1, 0)
     if key == keys.UP:    self.moveCursor( 0,-1)
     if key == keys.DOWN:  self.moveCursor( 0, 1)
+
+  ######################### on_key_down #########################
+
+  def on_key_up(self, key):
+    if key == keys.LSHIFT: self.shiftLPressed = False
+    if key == keys.RSHIFT: self.shiftRPressed = False
+
+    if not self.shiftLPressed and not self.shiftRPressed: self.shiftPressed = False
 
 ### end ###

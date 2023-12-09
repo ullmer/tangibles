@@ -50,7 +50,9 @@ def draw():
 def on_mouse_down(pos): etpe.on_mouse_down(pos); eae.on_mouse_down(pos)
 def on_mouse_move(rel): etpe.on_mouse_move(rel) 
 def on_mouse_up(pos):   etpe.on_mouse_up();      eae.on_mouse_up()
+
 def on_key_down(key):   etpe.on_key_down(key)
+def on_key_up(key):     etpe.on_key_up(key)
 
 #pgze = pgzEno(["multitouch"])
 #pgze.go()
