@@ -165,9 +165,11 @@ class enoThemePgzEnsemble(enoActorEnsemble):
 
   ############# moveCursor #############
 
-  def moveObject(self, dx, dy):
+  def moveObject(self, dx, dy, obj=None):
     try:  
-      cursorObj  = self.getCursorObj()
+      if obj is not None: cursorObj = obj
+      else:               cursorObj  = self.getCursorObj()
+
       if cursorObj is None:
         print("enoThemePgzEnsemble moveObject: cursorObj is None"); traceback.print_exc()
         return None
@@ -202,10 +204,14 @@ class enoThemePgzEnsemble(enoActorEnsemble):
           coords = y[objName]
           if objName in self.themeObjDict:
             obj = self.themeObjDict[objName]
-            #obj.pos  = coords[0:2]
-            row, col = coords[2:4]
+            #obj.pos   = coords[0:2]
+            row0, col0 = self.objRowColCoordDict[obj]
+            row1, col1 = coords[2:4]
             #obj.actor.pos = obj.pos
-            self.moveObject(row, col, obj)
+            dr, dc = row0-row1, col0-col1
+            print(dr, dc)
+            if dr != 0 or dc != 0: self.moveObject(dc, dr, obj)
+
         except:  print("enoThemePgzEnsemble loadState issue L1:"); traceback.print_exc()
     except:  print("enoThemePgzEnsemble loadState issue L2:"); traceback.print_exc()
 
