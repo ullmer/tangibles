@@ -4,7 +4,7 @@
 
 import yaml, traceback
 from pygame import Rect
-from pgzero.builtins import Actor, animate, keyboard
+from pgzero.builtins import Actor, animate, keyboard, keys
 from enoActor import *
 
 ##################### enodia actor #####################
@@ -101,6 +101,18 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     if self.matrix is None:         self.matrix = {}
     if row not in self.matrix:      self.matrix[row] = {}
     self.matrix[row][col] = contents
+  
+  ############# getCursorPos #############
+
+  def getCursorPos(self):
+    result = (self.cursorRow, self.cursorCol)
+    return result
+
+  ############# getCursorPos #############
+
+  def getCursorObj(self):
+    cursor = self.getMatrixContents(self.cursorRow, self.cursorCol)
+    return cursor
 
   ############# selectCursor #############
 
@@ -108,6 +120,22 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     cursor = self.getMatrixContents(self.cursorRow, self.cursorCol)
     if cursor is None: print("enoThemePgzEnsemble selectCursor: cursor empty for", self.cursorRow, self.cursorCol)
     else: cursor.select()
+
+  ############# deselectCursor #############
+
+  def deselectCursor(self):
+    cursor = self.getMatrixContents(self.cursorRow, self.cursorCol)
+    if cursor is None: print("enoThemePgzEnsemble deselectCursor: cursor empty for", self.cursorRow, self.cursorCol)
+    else: cursor.deselect()
+
+  ############# moveCursor #############
+
+  def moveCursor(self, dx, dy):
+    y1, x1 = self.cursorRow, self.cursorCol
+    x2, y2 = x1+dx, y1+dy
+    self.deselectCursor()
+    self.cursorRow, self.cursorCol = y2, x2
+    self.selectCursor()
 
   ############# load state #############
 
@@ -226,5 +254,18 @@ class enoThemePgzEnsemble(enoActorEnsemble):
       #obj.deselect()
     #self.objSelected = None
     self.mousePressed = False
+
+  ######################### on_key_down #########################
+
+  def on_key_down(self, key):
+    #if key == keys.SPACE:  print("space pressed")
+    #if numTimesSpaceHit == 0:
+    #      animate(a1, pos=(400, 500), tween='accel_decel', duration=.75)
+    #else: animate(a2, pos=(500, 500), tween='accel_decel', duration=.75)
+
+    if key == keys.RIGHT: self.moveCursor( 1, 0)
+    if key == keys.LEFT:  self.moveCursor(-1, 0)
+    if key == keys.UP:    self.moveCursor( 0,-1)
+    if key == keys.DOWN:  self.moveCursor( 0, 1)
 
 ### end ###
