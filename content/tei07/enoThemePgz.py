@@ -25,7 +25,8 @@ class enoThemePgz(enoActor):
   def __init__(self, imgFn, **kwargs): 
 
     self.__dict__.update(kwargs) 
-    super(enoThemePgz, self).__init__(imgFn)
+    #super(enoThemePgz, self).__init__(imgFn)
+    super().__init__(imgFn)
 
     self.textOffset = self.txtOffset1 #there is almost certainly a more elegant approach
 
@@ -89,8 +90,10 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     if self.matrix is None:         return None
     if row not in self.matrix:      return None
     if col not in self.matrix[row]: return None
-    result = self.matrix[row][col]
-    return result
+
+    theme = self.matrix[row][col]
+    obj   = self.themeObjDict[theme]
+    return obj
 
   ############# getMatrixContents #############
 
