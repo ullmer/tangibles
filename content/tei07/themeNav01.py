@@ -34,7 +34,7 @@ c      = ec.tallyCountries()
 kwDict = ec.tallyKeywords()
 thPap  = ec.tallyThemes()
 
-x,  y  = 120,75
+x,  y  = 130, 75
 dy     = 100
 y0     = y
 
