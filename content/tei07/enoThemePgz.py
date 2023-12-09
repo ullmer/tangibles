@@ -123,6 +123,27 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     self.objThemeDict[a]         = themeName
     return a
 
+  ############# loadEnoContent #############
+
+  def loadEnoContent(self, ec, HEIGHT, dx):
+    c      = ec.tallyCountries()
+    kwDict = ec.tallyKeywords()
+    thPap  = ec.tallyThemes()
+
+    x,  y  = 130, 75
+    dy     = 100
+    y0     = y
+
+    for theme in thPap:
+      papers = thPap[theme]
+      kcount = len(ec.themesKeywords[theme])
+      pcount = len(papers)
+      #print("%s: K%i P%i" % (theme, kcount, pcount))
+      t = self.addTheme(theme, kcount, pcount, "tg01h2-theme", pos=(x,y))
+      t.selImgFn = "tg01h2-theme-sel" #image backdrop when selected
+      y += dy
+      if y > HEIGHT: y = y0; x += dx
+
   ############# pgzero draw #############
 
   def draw(self, screen): 

@@ -26,6 +26,7 @@ for i in range(numBrackets):
 
 ec   = enoContent()
 etpe = enoThemePgzEnsemble()
+etpe.loadEnoContent(ec, HEIGHT, dx)
 
 def save(): print("save"); etpe.saveState()
 def load(): print("load"); etpe.loadState()
@@ -38,23 +39,6 @@ q = eae.addActor("quit", "button_frame", pos=(x, y), text='quit', cb=quit, textO
 
 for el in [s,l,q]: el.selImgFn = 'button_frame_sel' #button frame, selected 
 
-c      = ec.tallyCountries()
-kwDict = ec.tallyKeywords()
-thPap  = ec.tallyThemes()
-
-x,  y  = 130, 75
-dy     = 100
-y0     = y
-
-for theme in thPap:
-  papers = thPap[theme]
-  kcount = len(ec.themesKeywords[theme])
-  pcount = len(papers)
-  #print("%s: K%i P%i" % (theme, kcount, pcount))
-  t = etpe.addTheme(theme, kcount, pcount, "tg01h2-theme", pos=(x,y))
-  t.selImgFn = "tg01h2-theme-sel" #image backdrop when selected
-  y += dy
-  if y > HEIGHT: y = y0; x += dx
 
 ######################### draw #########################
 
