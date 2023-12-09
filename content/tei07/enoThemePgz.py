@@ -91,17 +91,24 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   ############# getMatrixContents #############
 
   def getMatrixContents(self, row, col):
-    if self.matrix is None:         return None
-    if row not in self.matrix:      return None
-    if col not in self.matrix[row]: return None
+    print("gmc", row, col)
+    try:
+      if self.matrix is None:         return None
+      if row not in self.matrix:      return None
+      if col not in self.matrix[row]: return None
 
-    theme = self.matrix[row][col]
-    obj   = self.themeObjDict[theme]
-    return obj
+      theme = self.matrix[row][col]
+      obj   = self.themeObjDict[theme]
+      return obj
+    except:
+      print("enoThemePgz getMatrixContents error", row, col); traceback.print_exc()
+      return None
 
   ############# getMatrixContents #############
 
   def setMatrixContents(self, row, col, contents):
+    print("smc", row, col)
+
     if self.matrix is None:         self.matrix = {}
     if row not in self.matrix:      self.matrix[row] = {}
     self.matrix[row][col] = contents
@@ -160,8 +167,11 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     animate(cursorObj,       pos=scrPos1, tween='accel_decel', duration=self.animDuration)
 
     self.setMatrixContents(crow,    ccol,    None)
-    self.setMatrixContents(crow+dy, ccol+dx, cursorObj)
+
     self.cursorRow, self.cursorCol = crow + dy, ccol + dx
+
+    cr2, cc2 = crow+dy, ccol+dx
+    self.setMatrixContents(cr2, cc2, cursorObj)
 
   ############# load state #############
 
