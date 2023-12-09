@@ -67,6 +67,10 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   objSelected  = None
   matrix       = None
   stateFn      = 'positions.yaml'
+  themeBgFn     = "tg01h2-theme"
+
+  themeCursor   = None
+  themeCursorFn = "tg01h2-cursor"
 
   shiftPressed = False
   shiftLPressed, shiftRPressed = False, False
@@ -241,12 +245,14 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     y0       = y
     row, col = 0, 0
 
+    self.themeCursor = self.addTheme(cursor, None, None, self.themeCursorFn, pos=(x,y))
+
     for theme in thPap:
       papers = thPap[theme]
       kcount = len(ec.themesKeywords[theme])
       pcount = len(papers)
       #print("%s: K%i P%i" % (theme, kcount, pcount))
-      t = self.addTheme(theme, kcount, pcount, "tg01h2-theme", pos=(x,y))
+      t = self.addTheme(theme, kcount, pcount, self.themeBgFn, pos=(x,y))
       t.selImgFn = "tg01h2-theme-sel" #image backdrop when selected
 
       self.setMatrixContents(row, col, t)
