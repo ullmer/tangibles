@@ -228,6 +228,8 @@ class enoActorEnsemble:
   ######################### on_mouse_down #########################
 
   def on_mouse_up(self):
-    if self.actorSelected
+    if self.actorSelected:
+      if el.actor.selectedCb is not None: el.actor.selectedCb()
+      el.actor.deselect()
 
 ### end ###
