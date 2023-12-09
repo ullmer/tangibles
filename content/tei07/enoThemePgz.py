@@ -100,13 +100,15 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   ######################### on_mouse_down #########################
 
   def on_mouse_down(self, pos):
-    super().on_mouse_down(pos)
     x,y=pos
     for el in self.themeList:
       if el.actor.collidepoint((x,y)): 
         name = self.objThemeDict[el]
         print("mouse selected:", name)
         self.objSelected = name
+
+        if el.selectable: el.select()
+        self.actorSelected = el
 
   ######################### on_mouse_move #########################
 
@@ -124,7 +126,6 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   ######################### on_mouse_up #########################
 
   def on_mouse_up(self):
-    super().on_mouse_up()
     self.objSelected = None
 
 ### end ###
