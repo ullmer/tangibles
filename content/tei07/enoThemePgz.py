@@ -107,7 +107,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   ############# getMatrixContents #############
 
   def setMatrixContents(self, row, col, contents):
-    print("smc", row, col)
+    print("smc", row, col, contents)
 
     if self.matrix is None:         self.matrix = {}
     if row not in self.matrix:      self.matrix[row] = {}
@@ -157,21 +157,25 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   ############# moveCursor #############
 
   def moveObject(self, dx, dy):
-    cursorObj  = self.getCursorObj()
-    cursorPos0 = self.getCursorPos()
-    crow, ccol = cursorPos0
-    scrPos0    = self.calcScreenPosition(crow,    ccol)
-    scrPos1    = self.calcScreenPosition(crow+dy, ccol+dx)
+    try:  
+      cursorObj  = self.getCursorObj()
+      if cursorObj is None:
+        print("enoThemePgzEnsemble moveObject: cursorObj is None"); traceback.print_exc()
+        return None
 
-    animate(cursorObj.actor, pos=scrPos1, tween='accel_decel', duration=self.animDuration)
-    animate(cursorObj,       pos=scrPos1, tween='accel_decel', duration=self.animDuration)
+      cursorPos0 = self.getCursorPos()
+      crow, ccol = cursorPos0
+      scrPos0    = self.calcScreenPosition(crow,    ccol)
+      scrPos1    = self.calcScreenPosition(crow+dy, ccol+dx)
 
-    self.setMatrixContents(crow,    ccol,    None)
+      animate(cursorObj.actor, pos=scrPos1, tween='accel_decel', duration=self.animDuration)
+      animate(cursorObj,       pos=scrPos1, tween='accel_decel', duration=self.animDuration)
 
-    self.cursorRow, self.cursorCol = crow + dy, ccol + dx
+      self.setMatrixContents(crow,    ccol,    None)
+      self.cursorRow, self.cursorCol = crow + dy, ccol + dx
 
-    cr2, cc2 = crow+dy, ccol+dx
-    self.setMatrixContents(cr2, cc2, cursorObj)
+      self.setMatrixContents(self.cursorRow, self.cursorCol, cursorObj)
+    except:  print("enoThemePgzEnsemble moveObject", dx, dy); traceback.print_exc()
 
   ############# load state #############
 
