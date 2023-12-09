@@ -25,7 +25,10 @@ eae = enoActorEnsemble()
 for i in range(numBrackets):
   eae.addActor("b" + str(i), "tg01h2-bracket", pos=(x+i*dx, y))
 
-eae.addActor("save", "button_frame", pos=(900, 900), text='save', textOffset=(-50,-10))
+x, y = 1550, 750; dy = 50
+eae.addActor("save", "button_frame", pos=(x, y), text='save', textOffset=(-52,-17)); y+=dy
+eae.addActor("load", "button_frame", pos=(x, y), text='load', textOffset=(-52,-17)); y+=dy
+eae.addActor("quit", "button_frame", pos=(x, y), text='quit', textOffset=(-52,-17))
 
 ec = enoContent()
 
