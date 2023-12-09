@@ -24,7 +24,10 @@ eae = enoActorEnsemble()
 for i in range(numBrackets):
   eae.addActor("b" + str(i), "tg01h2-bracket", pos=(x+i*dx, y))
 
-def save(): print("save")
+ec   = enoContent()
+etpe = enoThemePgzEnsemble()
+
+def save(): print("save"); etpe.saveState()
 def load(): print("load")
 def quit(): sys.exit()
 
@@ -35,8 +38,6 @@ q = eae.addActor("quit", "button_frame", pos=(x, y), text='quit', cb=quit, textO
 
 for el in [s,l,q]: el.selImgFn = 'button_frame_sel' #button frame, selected 
 
-ec = enoContent()
-
 c      = ec.tallyCountries()
 kwDict = ec.tallyKeywords()
 thPap  = ec.tallyThemes()
@@ -44,8 +45,6 @@ thPap  = ec.tallyThemes()
 x,  y  = 130, 75
 dy     = 100
 y0     = y
-
-etpe = enoThemePgzEnsemble()
 
 for theme in thPap:
   papers = thPap[theme]

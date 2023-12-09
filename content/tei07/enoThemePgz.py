@@ -60,10 +60,10 @@ class enoThemePgz(enoActor):
 ## plurality, but not of regular structure
 
 class enoThemePgzEnsemble(enoActorEnsemble):
-  themeList     = None
+  themeList    = None
   themeObjDict = None
-  objThemeDict  = None
-  objSelected   = None
+  objThemeDict = None
+  objSelected  = None
 
   ############# constructor #############
 
@@ -73,6 +73,14 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     self.themeList    = []
     self.themeObjDict = {}
     self.objThemeDict = {}
+
+  ############# pgzero draw #############
+
+  def saveState(self):
+    for obj in self.themeList:
+      name, pos = obj.text, obj.pos
+      x, y      = pos
+      print('%18s [%i,%i]' % (name+':', x,y))
 
   ############# pgzero draw #############
 
