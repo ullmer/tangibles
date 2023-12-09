@@ -64,14 +64,14 @@ def normalizePos(x,y): return (int(x*WIDTH), int(y*HEIGHT))
 
 ############ fingerdown ##########
 
-def on_finger_down(finger_id, x, y):
-  pos    = touch_coords[finger_id] = normalizePos(x,y)
-  cursor = Actor(cursorFn, pos)
-  cursors[finger_id] = cursor
+#def on_finger_down(finger_id, x, y):
 
-  px, py = x*WIDTH, y*HEIGHT
-
-  eae.on_finger_down(finger_id, px, py)
+def on_mouse_down(x, y):
+  #pos    = touch_coords[finger_id] = normalizePos(x,y)
+  #px, py = x*WIDTH, y*HEIGHT
+  #eae.on_finger_down(finger_id, px, py)
+ 
+  etpe.on_mouse_down(x,y)
 
 pgze = pgzEno(["multitouch"])
 pgze.go()

@@ -88,4 +88,10 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   def draw(self, screen): 
     for el in self.themeList: el.draw(screen)
 
+  ######################### on_mouse_down #########################
+
+  def on_mouse_down(self, x, y):
+    for el in self.themeList:
+      if el.  self.actor.collidepoint((x,y)):
+
 ### end ###
