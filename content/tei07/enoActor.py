@@ -20,6 +20,7 @@ class enoActor:
   buttonRect  = None
   text        = None
   selectable  = False
+  selectedCb  = None
   textOffset  = (0, 0)
 
   normImgFn   = None
@@ -218,6 +219,15 @@ class enoActorEnsemble:
   ######################### on_mouse_down #########################
 
   def on_mouse_down(self, pos):
+    x,y=pos
+    for el in self.actorList:
+      if el.actor.collidepoint((x,y)) and el.actor.selectable:
+        el.actor.select()
+        self.actorSelected = el
 
+  ######################### on_mouse_down #########################
+
+  def on_mouse_up(self):
+    if self.actorSelected
 
 ### end ###
