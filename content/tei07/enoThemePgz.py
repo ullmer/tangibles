@@ -64,7 +64,11 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   themeObjDict = None
   objThemeDict = None
   objSelected  = None
+  matrix       = None
   stateFn      = 'positions.yaml'
+
+  ex0, ey0 = 130, 75
+  dy       = 100
 
   ############# constructor #############
 
@@ -74,6 +78,8 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     self.themeList    = []
     self.themeObjDict = {}
     self.objThemeDict = {}
+
+    self.matrix       = {} 
 
   ############# load state #############
 
@@ -86,7 +92,6 @@ class enoThemePgzEnsemble(enoActorEnsemble):
       for objName in y:
         try:  
           pos = y[objName]
-
           if objName in self.themeObjDict:
             obj = self.themeObjDict[objName]
             obj.pos = pos
@@ -130,9 +135,9 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     kwDict = ec.tallyKeywords()
     thPap  = ec.tallyThemes()
 
-    x,  y  = 130, 75
-    dy     = 100
-    y0     = y
+    x,  y    = self.ex0, self.ey0
+    y0       = y
+    row, col = 0, 0
 
     for theme in thPap:
       papers = thPap[theme]
@@ -141,8 +146,13 @@ class enoThemePgzEnsemble(enoActorEnsemble):
       #print("%s: K%i P%i" % (theme, kcount, pcount))
       t = self.addTheme(theme, kcount, pcount, "tg01h2-theme", pos=(x,y))
       t.selImgFn = "tg01h2-theme-sel" #image backdrop when selected
-      y += dy
-      if y > HEIGHT: y = y0; x += dx
+
+      if row not in self.matrix: self.matrix[row] = {}
+
+      self.matrix[row][col] = theme
+
+      y += self.dy;  row += 1
+      if y > HEIGHT: row  = 0; y = y0; x += dx; col += 1
 
   ############# pgzero draw #############
 

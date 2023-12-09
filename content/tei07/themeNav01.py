@@ -39,7 +39,6 @@ q = eae.addActor("quit", "button_frame", pos=(x, y), text='quit', cb=quit, textO
 
 for el in [s,l,q]: el.selImgFn = 'button_frame_sel' #button frame, selected 
 
-
 ######################### draw #########################
 
 def draw():
