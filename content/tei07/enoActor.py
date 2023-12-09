@@ -20,6 +20,7 @@ class enoActor:
   buttonRect  = None
   text        = None
   selectable  = False
+  selected    = False
   selectedCb  = None
   textOffset  = (0, 0)
 
@@ -51,10 +52,28 @@ class enoActor:
     self.actor.pos = self.pos
     self.normImgFn = imgFn
 
-  ############# pgzero draw #############
+  ############# get abbreviation #############
 
   def getAbbrev(self):
     return self.abbrev
+
+  ############# select #############
+
+  def select(self):
+    if self.selectable and \
+       self.selImgFn is not None and \
+       self.actor    is not None: 
+         self.actor.image = self.selImgFn
+         self.selected    = True
+
+  ############# deselect #############
+
+  def deselect(self):
+    if self.selectable and \
+       self.normImgFn is not None and \
+       self.actor     is not None: 
+         self.actor.image = self.normImgFn
+         self.selected    = False
 
   ############# pgzero draw #############
 
@@ -201,10 +220,10 @@ class enoActorEnsemble:
   def addActor(self, actorName, imgFn, **kwargs): 
     a = enoActor(imgFn, pos=kwargs['pos'])
     
-
     if 'drawRect'    in kwargs: a.drawRect   = kwargs['drawRect']
     if 'text'        in kwargs: a.text       = kwargs['text']
     if 'textOffset'  in kwargs: a.textOffset = kwargs['textOffset']
+    if 'cb'          in kwargs: a.selectable = True; a.selectedCb = kwargs['cb']
 
     self.actorList.append(a)
     self.nameObjDict[actorName] = a
@@ -221,15 +240,17 @@ class enoActorEnsemble:
   def on_mouse_down(self, pos):
     x,y=pos
     for el in self.actorList:
-      if el.actor.collidepoint((x,y)) and el.actor.selectable:
-        el.actor.select()
+      if el.actor.collidepoint((x,y)) and el.selectable:
+        el.select()
         self.actorSelected = el
 
   ######################### on_mouse_down #########################
 
   def on_mouse_up(self):
-    if self.actorSelected:
-      if el.actor.selectedCb is not None: el.actor.selectedCb()
-      el.actor.deselect()
+    if self.actorSelected is not None:
+      el = self.actorSelected
+      if el.selectedCb is not None: el.selectedCb()
+      el.deselect()
+      self.actorSelected = None
 
 ### end ###
