@@ -10,11 +10,11 @@ from   enoContent  import *
 from   pgzEno      import *
 
 WIDTH  = 1600
-HEIGHT = 768
+HEIGHT = 1000
 TITLE  = 'Enodia interactivity experiment'
 BLACK  = (0, 0, 0)
 
-winpos(0,0, WIDTH, HEIGHT) #provided by pgzEno
+winpos(0,0, WIDTH, HEIGHT) #provided by pgzEno; start window @0,0
 
 numBrackets = 6
 x, y = 40, 280
@@ -24,6 +24,8 @@ eae = enoActorEnsemble()
 
 for i in range(numBrackets):
   eae.addActor("b" + str(i), "tg01h2-bracket", pos=(x+i*dx, y))
+
+eae.addActor("save", "button_frame", pos=(900, 900), text='save', textOffset=(-50,-10))
 
 ec = enoContent()
 
@@ -41,13 +43,10 @@ for theme in thPap:
   papers = thPap[theme]
   kcount = len(ec.themesKeywords[theme])
   pcount = len(papers)
-  print("%s: K%i P%i" % (theme, kcount, pcount))
+  #print("%s: K%i P%i" % (theme, kcount, pcount))
   etpe.addTheme(theme, kcount, pcount, "tg01h2-theme", pos=(x,y))
   y += dy
   if y > HEIGHT: y = y0; x += dx
-
-#a1 = etpe.addTheme("foo",    3, 5, "tg01h2-theme", pos=(200, 100))
-#a2 = etpe.addTheme("swishy", 5, 9, "tg01h2-theme", pos=(200, 300))
 
 ######################### draw #########################
 

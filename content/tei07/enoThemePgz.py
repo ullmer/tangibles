@@ -14,7 +14,7 @@ class enoThemePgz(enoActor):
   textKws     = None
   textPapers  = None
 
-  txtOffset1 = (-55, -40)
+  txtOffset1 = (-50, -40)
   txtOffsetK = (-90,  18)
   txtOffsetP = (  0,  18)
 
@@ -27,7 +27,7 @@ class enoThemePgz(enoActor):
     self.__dict__.update(kwargs) 
     super(enoThemePgz, self).__init__(imgFn)
 
-    self.primaryTextOffset = self.txtOffset1 #there is almost certainly a more elegant approach
+    self.textOffset = self.txtOffset1 #there is almost certainly a more elegant approach
 
   ############# pgzero draw #############
 

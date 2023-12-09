@@ -16,12 +16,15 @@ from pgzero.builtins import Actor, animate, keyboard
 class enoActor:
   pos         = (0,0)
   actorDim    = (100, 30)
+  drawRect    = False
   buttonRect  = None
-  textPrimary = None
+  text        = None
+  textOffset  = (0, 0)
 
   bgcolor1   = (0, 0, 130)
   bgcolor2   = (50, 50, 250)
-  fgcolor    = "#bbbbbb"
+  #fgcolor    = "#bbbbbb"
+  fgcolor    = "#eeeeee"
 
   alpha      = .8
   fontSize   = 36
@@ -52,17 +55,22 @@ class enoActor:
   def draw(self, screen):
     self.actor.draw()
 
-    if self.textPrimary is not None: 
+    if self.drawRect: screen.draw.filled_rect(self.buttonRect, bgcolor)
 
-      x0, y0 = self.pos; dx, dy = self.actorDim; cx=x0+dx/2; cy = y0+dy/2
-      screen.draw.text(self.textPrimary, centerx=cx, centery=cy, align="center",
+    if self.text is not None: 
+      tdx, tdy = self.textOffset
+
+      x0, y0 = self.pos; dx, dy = self.actorDim; 
+      cx=x0+dx/2 + tdx; cy = y0+dy/2 + tdy
+
+      screen.draw.text(self.text, centerx=cx, centery=cy, align="center",
                        fontsize=self.fontSize, 
                        color=self.fgcolor, alpha=self.alpha)
+
     return 
 
     #if self.toggleMode and self.toggleState: bgcolor = self.bgcolor2
     #else:                                    bgcolor = self.bgcolor1
-    #screen.draw.filled_rect(self.buttonRect, bgcolor)
 
   ############# nudge #############
 
@@ -183,13 +191,24 @@ class enoActorEnsemble:
 
   def addActor(self, actorName, imgFn, **kwargs): 
     a = enoActor(imgFn, pos=kwargs['pos'])
+
+    if 'drawRect'    in kwargs: a.drawRect   = kwargs['drawRect']
+    if 'text'        in kwargs: a.text       = kwargs['text']
+    if 'textOffset'  in kwargs: a.textOffset = kwargs['textOffset']
+
     self.actorList.append(a)
     self.actorNameDict[actorName] = a
+    return a
 
   ############# pgzero draw #############
 
   def draw(self, screen): 
     for actor in self.actorList: actor.draw(screen)
+
+  ######################### on_mouse_down #########################
+
+  #def on_mouse_down(self, x, y):
+  #  for actor in 
 
   ######################### on_mouse_down #########################
 
