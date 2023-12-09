@@ -251,9 +251,8 @@ class enoActorEnsemble:
   def on_mouse_up(self):
     if self.actorSelected is not None:
       el = self.actorSelected
-      if el.selectedCb is not None: el.selectedCb()
+      if el.selectedCb is not None: 
+        el.selectedCb(); el.deselect(); self.actorSelected = None
       self.mousePressed = False
-      #el.deselect()
-      #self.actorSelected = None
 
 ### end ###

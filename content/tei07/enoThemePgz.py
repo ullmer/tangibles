@@ -77,10 +77,17 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   ############# pgzero draw #############
 
   def saveState(self):
+    maxLen = 0
+    for obj in self.themeList: 
+      sl = len(obj.text)
+      if sl>maxLen: maxLen=sl
+
     for obj in self.themeList:
       name, pos = obj.text, obj.pos
       x, y      = pos
-      print('%18s [%i,%i]' % (name+':', x,y))
+      padlen    = maxLen-len(name)
+      pad       = ' '*padlen
+      print('%s:%s [%i,%i]' % (name, pad, x, y))
 
   ############# pgzero draw #############
 
@@ -101,6 +108,10 @@ class enoThemePgzEnsemble(enoActorEnsemble):
 
   def on_mouse_down(self, pos):
     x,y=pos
+    if self.objSelected is not None: 
+      obj = self.themeObjDict[self.objSelected]
+      obj.deselect()
+
     for el in self.themeList:
       if el.actor.collidepoint((x,y)): 
         name = self.objThemeDict[el]
