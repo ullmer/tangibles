@@ -126,6 +126,9 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   ######################### on_mouse_up #########################
 
   def on_mouse_up(self):
+    if self.objSelected is not None: 
+      obj = self.themeObjDict[self.objSelected]
+      obj.deselect()
     self.objSelected = None
 
 ### end ###
