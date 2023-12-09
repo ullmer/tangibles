@@ -153,6 +153,14 @@ class enoThemePgzEnsemble(enoActorEnsemble):
 
   ############# moveCursor #############
 
+  def setCursor(self, x, y):
+    self.cursorRow, self.cursorCol = y, x
+
+    destpos = self.calcScreenPosition(y, x) 
+    animate(self.themeCursor.actor, pos=destpos, tween='accel_decel', duration=self.animDuration)
+
+  ############# moveCursor #############
+
   def moveCursor(self, dx, dy):
     y1, x1 = self.cursorRow, self.cursorCol
     y2, x2 = y1+dy,          x1+dx
@@ -204,13 +212,13 @@ class enoThemePgzEnsemble(enoActorEnsemble):
           coords = y[objName]
           if objName in self.themeObjDict:
             obj = self.themeObjDict[objName]
-            #obj.pos   = coords[0:2]
             row0, col0 = self.objRowColCoordDict[obj]
             row1, col1 = coords[2:4]
-            #obj.actor.pos = obj.pos
-            dr, dc = row0-row1, col0-col1
-            print(dr, dc)
-            if dr != 0 or dc != 0: self.moveObject(dc, dr, obj)
+            dr, dc = row1-row0, col1-col0
+
+            if dr != 0 or dc != 0: 
+              self.setCursor(col0, row0)
+              self.moveObject(dc, dr)
 
         except:  print("enoThemePgzEnsemble loadState issue L1:"); traceback.print_exc()
     except:  print("enoThemePgzEnsemble loadState issue L2:"); traceback.print_exc()
