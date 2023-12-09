@@ -121,16 +121,22 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   ############# selectCursor #############
 
   def selectCursor(self):
-    cursor = self.getMatrixContents(self.cursorRow, self.cursorCol)
-    if cursor is None: print("enoThemePgzEnsemble selectCursor: cursor empty for", self.cursorRow, self.cursorCol)
-    else: cursor.select()
+    try:
+      cursor = self.getMatrixContents(self.cursorRow, self.cursorCol)
+      if cursor is None: print("enoThemePgzEnsemble selectCursor: cursor empty for", self.cursorRow, self.cursorCol)
+      else: cursor.select()
+    except:
+      print("enoThemePgz selectCursor error"); traceback.print_exc()
 
   ############# deselectCursor #############
 
   def deselectCursor(self):
-    cursor = self.getMatrixContents(self.cursorRow, self.cursorCol)
-    if cursor is None: print("enoThemePgzEnsemble deselectCursor: cursor empty for", self.cursorRow, self.cursorCol)
-    else: cursor.deselect()
+    try:
+      cursor = self.getMatrixContents(self.cursorRow, self.cursorCol)
+      if cursor is None: print("enoThemePgzEnsemble deselectCursor: cursor empty for", self.cursorRow, self.cursorCol)
+      else: cursor.deselect()
+    except:
+      print("enoThemePgz deselectCursor error"); traceback.print_exc()
 
   ############# moveCursor #############
 
@@ -152,6 +158,10 @@ class enoThemePgzEnsemble(enoActorEnsemble):
 
     animate(cursorObj.actor, pos=scrPos1, tween='accel_decel', duration=self.animDuration)
     animate(cursorObj,       pos=scrPos1, tween='accel_decel', duration=self.animDuration)
+
+    self.setMatrixContents(crow,    ccol,    None)
+    self.setMatrixContents(crow+dy, ccol+dx, cursorObj)
+    self.cursorRow, self.cursorCol = crow + dy, ccol + dx
 
   ############# load state #############
 
