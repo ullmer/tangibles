@@ -65,7 +65,9 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   objThemeDict = None
   objSelected  = None
   matrix       = None
-  stateFn      = 'positions.yaml'
+  shiftPressed = False
+  stateFn              = 'positions.yaml'
+  cursorRow, cursorCol = 0, 0
 
   ex0, ey0 = 130, 75
   dy       = 100
@@ -80,6 +82,29 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     self.objThemeDict = {}
 
     self.matrix       = {} 
+  
+  ############# getMatrixContents #############
+
+  def getMatrixContents(self, row, col):
+    if self.matrix is None:         return None
+    if row not in self.matrix:      return None
+    if col not in self.matrix[row]: return None
+    result = self.matrix[row][col]
+    return result
+
+  ############# getMatrixContents #############
+
+  def setMatrixContents(self, row, col, contents):
+    if self.matrix is None:         self.matrix = {}
+    if row not in self.matrix:      self.matrix[row] = {}
+    self.matrix[row][col] = contents
+
+  ############# selectCursor #############
+
+  def selectCursor(self):
+    cursor = self.getMatrixContents(self.cursorRow, self.cursorCol)
+    if cursor is None: print("enoThemePgzEnsemble selectCursor: cursor empty for", self.cursorRow, self.cursorCol)
+    else: cursor.select()
 
   ############# load state #############
 
@@ -147,7 +172,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
       t = self.addTheme(theme, kcount, pcount, "tg01h2-theme", pos=(x,y))
       t.selImgFn = "tg01h2-theme-sel" #image backdrop when selected
 
-      if row not in self.matrix: self.matrix[row] = {}
+      self.setMatrixContents(row, col, t)
 
       self.matrix[row][col] = theme
 

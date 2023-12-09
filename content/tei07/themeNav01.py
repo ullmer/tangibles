@@ -27,6 +27,7 @@ for i in range(numBrackets):
 ec   = enoContent()
 etpe = enoThemePgzEnsemble()
 etpe.loadEnoContent(ec, HEIGHT, dx)
+etpe.selectCursor()
 
 def save(): print("save"); etpe.saveState()
 def load(): print("load"); etpe.loadState()
