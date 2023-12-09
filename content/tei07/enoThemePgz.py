@@ -71,6 +71,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
 
   themeCursor   = None
   themeCursorFn = "tg01h2-cursor"
+  objRowColCoordDict = None
 
   shiftPressed = False
   shiftLPressed, shiftRPressed = False, False
@@ -89,6 +90,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     self.themeList    = []
     self.themeObjDict = {}
     self.objThemeDict = {}
+    self.objRowColCoordDict = {}
 
     self.matrix       = {} 
   
@@ -115,6 +117,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     if self.matrix is None:         self.matrix = {}
     if row not in self.matrix:      self.matrix[row] = {}
     self.matrix[row][col] = contents
+    self.objRowColCoordDict[contents] = (row, col)
   
   ############# getCursorPos #############
 
@@ -196,11 +199,13 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     try:  
       for objName in y:
         try:  
-          pos = y[objName]
+          coords = y[objName]
           if objName in self.themeObjDict:
             obj = self.themeObjDict[objName]
-            obj.pos = pos
-            obj.actor.pos = obj.pos
+            #obj.pos  = coords[0:2]
+            row, col = coords[2:4]
+            #obj.actor.pos = obj.pos
+            self.moveObject(row, col, obj)
         except:  print("enoThemePgzEnsemble loadState issue L1:"); traceback.print_exc()
     except:  print("enoThemePgzEnsemble loadState issue L2:"); traceback.print_exc()
 
@@ -209,6 +214,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   def saveState(self):
     maxLen = 0
     for obj in self.themeList: 
+      if obj.text is None: continue
       sl = len(obj.text)
       if sl>maxLen: maxLen=sl
 
@@ -217,9 +223,14 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     for obj in self.themeList:
       name, pos = obj.text, obj.pos
       x, y      = pos
+
+      if obj not in self.objRowColCoordDict: continue
+      rc        = self.objRowColCoordDict[obj]
+      if rc is None: continue
+      row, col  = rc
       padlen    = maxLen-len(name)
       pad       = ' '*padlen
-      f.write('%s:%s [%i,%i]\n' % (name, pad, x, y))
+      f.write('%s:%s [%i,%i,%i,%i]\n' % (name, pad, x, y, row, col))
 
     f.close()
 
@@ -264,6 +275,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
       self.setMatrixContents(row, col, t)
 
       self.matrix[row][col] = t
+      self.objRowColCoordDict[t] = (row, col)
 
       y   += self.dy;   row += 1
       if y > self.maxY: row  = 0; y = y0; x += self.dx; col += 1
