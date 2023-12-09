@@ -72,9 +72,10 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   shiftLPressed, shiftRPressed = False, False
   cursorRow, cursorCol         = 0, 0
 
-  ex0, ey0 = 130, 75
-  dx, dy   = 250, 102
-  maxY     = 550
+  ex0, ey0     = 130, 75
+  dx, dy       = 250, 102
+  maxY         = 550
+  animDuration = .5
 
   ############# constructor #############
 
@@ -149,7 +150,8 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     scrPos0    = self.calcScreenPosition(crow,    ccol)
     scrPos1    = self.calcScreenPosition(crow+dy, ccol+dx)
 
-    #      animate(a1, pos=(400, 500), tween='accel_decel', duration=.75)
+    animate(cursorObj.actor, pos=scrPos1, tween='accel_decel', duration=self.animDuration)
+    animate(cursorObj,       pos=scrPos1, tween='accel_decel', duration=self.animDuration)
 
   ############# load state #############
 
@@ -202,7 +204,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
 
   def calcScreenPosition(self, row, col):
     x0, y0 = self.ex0,  self.ey0
-    x1, y1 = x0+col*dx, y0+row*dy
+    x1, y1 = x0+col*self.dx, y0+row*self.dy
     return (x1, y1)
 
   ############# loadEnoContent #############
