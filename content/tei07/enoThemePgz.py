@@ -294,10 +294,10 @@ class enoThemePgzEnsemble(enoActorEnsemble):
       if key == keys.UP:    self.moveCursor( 0,-1)
       if key == keys.DOWN:  self.moveCursor( 0, 1)
     else: #shift pressed
-      if key == keys.RIGHT: self.moveObj( 1, 0)
-      if key == keys.LEFT:  self.moveObj(-1, 0)
-      if key == keys.UP:    self.moveObj( 0,-1)
-      if key == keys.DOWN:  self.moveObj( 0, 1)
+      if key == keys.RIGHT: self.moveObject( 1, 0)
+      if key == keys.LEFT:  self.moveObject(-1, 0)
+      if key == keys.UP:    self.moveObject( 0,-1)
+      if key == keys.DOWN:  self.moveObject( 0, 1)
 
   ######################### on_key_down #########################
 
