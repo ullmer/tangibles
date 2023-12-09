@@ -2,7 +2,7 @@
 # Brygg Ullmer, Clemson University
 # Begun 2023-12-08
 
-import yaml
+import yaml, traceback
 from pygame import Rect
 from pgzero.builtins import Actor, animate, keyboard
 from enoActor import *
@@ -64,6 +64,7 @@ class enoThemePgzEnsemble(enoActorEnsemble):
   themeObjDict = None
   objThemeDict = None
   objSelected  = None
+  stateFn      = 'positions.yaml'
 
   ############# constructor #############
 
@@ -74,7 +75,26 @@ class enoThemePgzEnsemble(enoActorEnsemble):
     self.themeObjDict = {}
     self.objThemeDict = {}
 
-  ############# pgzero draw #############
+  ############# load state #############
+
+  def loadState(self):
+    f = open(self.stateFn, 'rt')
+    y = yaml.safe_load(f)
+    f.close()
+
+    try:  
+      for objName in y:
+        try:  
+          pos = y[objName]
+
+          if objName in self.themeObjDict:
+            obj = self.themeObjDict[objName]
+            obj.pos = pos
+            obj.actor.pos = obj.pos
+        except:  print("enoThemePgzEnsemble loadState issue L1:"); traceback.print_exc()
+    except:  print("enoThemePgzEnsemble loadState issue L2:"); traceback.print_exc()
+
+  ############# save state #############
 
   def saveState(self):
     maxLen = 0
@@ -82,12 +102,16 @@ class enoThemePgzEnsemble(enoActorEnsemble):
       sl = len(obj.text)
       if sl>maxLen: maxLen=sl
 
+    f = open(self.stateFn, 'wt')
+
     for obj in self.themeList:
       name, pos = obj.text, obj.pos
       x, y      = pos
       padlen    = maxLen-len(name)
       pad       = ' '*padlen
-      print('%s:%s [%i,%i]' % (name, pad, x, y))
+      f.write('%s:%s [%i,%i]\n' % (name, pad, x, y))
+
+    f.close()
 
   ############# pgzero draw #############
 

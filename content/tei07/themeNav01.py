@@ -28,7 +28,7 @@ ec   = enoContent()
 etpe = enoThemePgzEnsemble()
 
 def save(): print("save"); etpe.saveState()
-def load(): print("load")
+def load(): print("load"); etpe.loadState()
 def quit(): sys.exit()
 
 x, y = 1550, 750; dy = 50
