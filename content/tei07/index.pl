@@ -48,16 +48,16 @@ continent([name, abbrev1, abbrev2, countries], 'Oceania',       oceania,  O, [ne
 continent([name, abbrev1, abbrev2, countries], 'North America', namerica, N, [usa, canada]).
 continent([name, abbrev1, abbrev2, countries], 'South America', samerica, S, [colombia]).
 
-  themes2: 
-    tangible_ui:   {kw: [TUI, tangibility, tangible UIs, tangible computing, 
-                         tangible interaction, tangible interface, tangible interfaces, 
-                         tangible user interface (TUI), tangible user interface, 
-                         tangible user interfaces],                                          p: 24}
+%%%%%%%%%%%%%%%%%%%%%%%% Themes 2 %%%%%%%%%%%%%%%%%%%%%%%%
 
-    paradigms:     {kw: [augmented reality, distributed physical user interfaces, 
-                         paper user interface, ubiquitous computing, responsive environments, 
-                         spatial interaction, siftable computing interface, tabletop sensing, 
-                         tabletop interaction, tabletop interfaces],                         p: 11}
+themes2([title, abbrev, keywords, numPapers], 'Tangible UI', tangible_ui,   
+  [tui, tangibility, tangible_UIs, tangible_computing, tangible_interaction, 
+   tangible_interface, tangible_interfaces, tangible_user_interface, tangible_user_interfaces],   24).
+
+themes2([title, abbrev, keywords, numPapers], 'Paradigms', paradigms,     
+   [augmented_reality, distributed_physical_user_interfaces, paper_user_interface, 
+    ubiquitous_computing, responsive_environments, spatial_interaction, 
+    siftable_computing_interface, tabletop_sensing, tabletop_interaction, tabletop_interfaces],   11).
 
     interaction:   {kw: [interaction techniques, interaction, interactive book, 
                          interactive installation, interactive toys, explicit interaction,
