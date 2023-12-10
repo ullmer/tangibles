@@ -79,9 +79,7 @@ themes2('Technology', tech, [flash, nfc, active_tokens, application_development_
 
 themes2('Embodiment', embodiment, [body, gesture_input, embodied_experience, embodied_interaction, embodiment, 
                                                                                 sensory_mapping, somatics],             8).
-
 themes2('Haptics', haptics, [haptic_interface, haptic_user_interfaces, haptics, tactile_interface, tactile, touch],     6).
-
 themes2('Mobility', mobility, [mobile_devices, mobile_phones, mobile_technology, movement_analysis, movement, 
                                                                                        kinesthetic_sense, mobility],    6).
 
@@ -111,10 +109,10 @@ themes2(sensing,    [sensor_network_user_interface, sensor_network, sensorial_in
 themes2(hci,              [HCI, interface_design],                                                              3).
 themes2(communication,    [communication, multi-user communication, messaging],                                 3).
 themes2(theory,           [mathematics, model, frameworks],                                                     3).
-themes2(interface_locale, [tilting table, shape displays, visual displays],                                     3).
-themes2(fabrication,      [rapid prototyping],                                                                  1).
-themes2(misc,             [control system, digitalisation, illiterate programmer, simplicity, 
-                           remote interfaces, presentation tool, navigable information space, metaphor, 
+themes2(interface_locale, [tilting_table, shape_displays, visual_displays],                                     3).
+themes2(fabrication,      [rapid_prototyping],                                                                  1).
+themes2(misc,             [control_system, digitalisation, illiterate_programmer, simplicity, 
+                           remote_interfaces, presentation tool, navigable information space, metaphor, 
                            multi-disciplinary, real-time behavior],                                             8).
 
   contributions: 
