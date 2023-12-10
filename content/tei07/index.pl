@@ -115,7 +115,7 @@ themes2(misc,             [control_system, digitalisation, illiterate_programmer
 %%%%%%%%%%%%%%%%%%%%%%%% Themes 2 %%%%%%%%%%%%%%%%%%%%%%%%
 
 contribution(ro,  'Keynote', ['Tom Rodden', 'University of Nottingham', uk], []).
-contribution(bwd, 'A Handle on What's Going On: Combining Tangible Interfaces and Ambient Displays for Collaborative Groups',
+contribution(bwd, 'A Handle on What''s Going On: Combining Tangible Interfaces and Ambient Displays for Collaborative Groups',
                             [['Johanna Brewer',  'University of California, Irvine', usa],
                              ['Amanda Williams', 'University of California, Irvine', usa],
                              ['Paul Dourish',    'University of California, Irvine', usa]],
@@ -131,7 +131,7 @@ contribution(kmhrbrs, 'A Knife and a Cutting Board as Implicit User Interface: T
                              ['Albrecht Schmidt', 'University of Munich',           germany]], []).
 
 contribution(vg, 'A Malleable Control Structure for Softwired User Interfaces',
-                           [['Nicolas Villar', 'Lancaster University', uk]
+                           [['Nicolas Villar', 'Lancaster University', uk],
                             ['Hans Gellersen', 'Lancaster University', uk]], []).
 
 contribution(je, 'A Physical Approach to Tangible Interaction Design',
@@ -139,28 +139,28 @@ contribution(je, 'A Physical Approach to Tangible Interaction Design',
                             [tangible_interaction, physicality, interaction_qualities, 
                              physical_metaphor, video_action_wall]).
 
-contribution(er, 'A Tangible User Interface for Multi-User Awareness Systems'
-                           [['Richard Etter',  'Fraunhofer IPSI', germany]
+contribution(er, 'A Tangible User Interface for Multi-User Awareness Systems',
+                           [['Richard Etter',  'Fraunhofer IPSI', germany],
                             ['Carsten Röcker', 'Fraunhofer IPSI', germany]],
                             [emotional_awareness, music, smart_artifacts, multi_user_communication, 
                              intimate_group_communication, tangible_user_interfaces, aesthetics_artifacts]).
 
 contribution(pno, 'Actuation and Tangible User Interfaces: Vaucanson duck, Robots and Shape Displays',
-                           [['Ivan Poupyrev',    'Sony CSL',           japan]
-                            ['Tatsushi Nashida', 'Sony Design Center', japan]
+                           [['Ivan Poupyrev',    'Sony CSL',           japan],
+                            ['Tatsushi Nashida', 'Sony Design Center', japan],
                             ['Makoto Okabe',     'Tokyo University',   japan]],
                             [haptics, shape_displays, interaction, collaboration]).
 
-contribution(sh, 'Beyond video: choosing the right medium for a media rich interaction'
+contribution(sh, 'Beyond video: choosing the right medium for a media rich interaction',
                             ['Peter Shultz', 'Art Center College of Design', usa], 
                             [branding, slide_projectors, medium_selection]).
 
-contribution(fr, 'CabBoots: Shoes with integrated Guidance System'
+contribution(fr, 'CabBoots: Shoes with integrated Guidance System',
                             ['Martin Frey', 'UdK Berlin', germany], 
                             [human_machine_interface, haptic_interface, tangible_interface,
-                             tactile_feedback, guidance_system, augmented reality]).
+                             tactile_feedback, guidance_system, augmented_reality]).
 
-contribution(mn, 'Collaborative Ambient Systems by Blow Displays'
+contribution(mn, 'Collaborative Ambient Systems by Blow Displays',
                            [['Mitsuru Minakuchi', 'National Institute of Information and Communications Technology', japan],
                             ['Satoshi Nakamura',  'National Institute of Information and Communications Technology', japan]],
                             [ambient_display, haptic_interface]).
@@ -182,19 +182,19 @@ contribution(hhv, 'Designing for Diversity: Developing Complex Adaptive Tangible
                             [interactive_toys, adaptability, tangible_interaction, 
                              multihandicapped_children, complex_products, edutainment]).
 
-contribution(hr, 'Designing Tangible Programming Languages for Classroom Use'
+contribution(hr, 'Designing Tangible Programming Languages for Classroom Use',
                            [['Michael Horn', 'Tufts University', usa],
                             ['Robert Jacob', 'Tufts University', usa]],
                             [tangible_UIs, education, children, programming_languages]).
 
-contribution(ms, 'Distributed Physical Interfaces With Shared Phidgets'
+contribution(ms, 'Distributed Physical Interfaces With Shared Phidgets',
                            [['Nicolai Marquardt', 'Bauhaus-University Weimar', germany],
                             ['Saul Greenberg',    'University of Calgary',      canada]],
                             [distributed_physical_user_interfaces, phidgets]).
 
 contribution(ma, 'Do tangible interfaces enhance learning?',
                             ['Paul Marshall', 'Open University', uk],
-                            [tangible_interface, TUI, frameworks, learning]).
+                            [tangible_interface, tui, frameworks, learning]).
 
 contribution(slelo, 'Explicit interaction for surgical rehabilitation',
                            [['Tomas Sokoler',       'Malmö University', sweden],
@@ -202,9 +202,9 @@ contribution(slelo, 'Explicit interaction for surgical rehabilitation',
                             ['Mette Agger Eriksen', 'Malmö University', sweden],
                             ['Per Linde',           'Malmö University', sweden],
                             ['Stefan Olofsson',     'Malmö University', sweden]],
-                            [explicit_interaction, ubiquitous computing, interaction design, use qualities]).
+                            [explicit_interaction, ubiquitous_computing, interaction_design, use_qualities]).
 
-contribution(daw, 'Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children'
+contribution(daw, 'Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children',
                            [['Milena Droumeva', 'Simon Fraser University', canada],
                             ['Alissa Antle',    'Simon Fraser University', canada],
                             ['Ron Wakkary',     'Simon Fraser University', canada]],
