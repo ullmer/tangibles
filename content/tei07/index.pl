@@ -59,15 +59,17 @@ themes2([title, abbrev, keywords, numPapers], 'Paradigms', paradigms,
     ubiquitous_computing, responsive_environments, spatial_interaction, 
     siftable_computing_interface, tabletop_sensing, tabletop_interaction, tabletop_interfaces],   11).
 
-    interaction:   {kw: [interaction techniques, interaction, interactive book, 
-                         interactive installation, interactive toys, explicit interaction,
-                         interactive video and sound installation, embedded interaction],    p: 11} 
+themes2([title, abbrev, keywords, numPapers], 'Interaction', interaction,     
+   [interaction_techniques, interaction, interactive_book, interactive_installation, interactive_toys, 
+    explicit_interaction, interactive_video_and_sound_installation, embedded_interaction],        11).
 
-    design:        {kw: [design process, design research, design, interaction design, 
-                         product design, communication design, complex products],            p: 10}
+themes2([title, abbrev, keywords, numPapers], 'Design', design,        
+   [design_process, design_research, design, interaction_design, 
+    product_design, communication_design, complex_products],                                      10).
 
-    education:     {kw: [Montessori-inspired manipulatives, children, digital manipulatives, manipulatives,
-                         learning toys, learning, education, educational game, edutainment], p: 10}
+themes2([title, abbrev, keywords, numPapers], 'Education', education,
+   [montessori_inspired_manipulatives, children, digital_manipulatives, manipulatives,
+    learning_toys, learning, education, educational_game, edutainment],                           10).
 
     evaluation:    {kw: [case studies, evaluation, participatory design, experience, usability, 
                          use qualities, user experience, user studies, user supportive, 
