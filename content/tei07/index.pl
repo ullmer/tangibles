@@ -9,13 +9,14 @@ content:
     addresses: [https://tei.acm.org/2007/program/TwoMinuteMadness_1.pdf,
                 https://tei.acm.org/2007/program/TwoMinuteMadness_2.pdf]
 
-  themes1: 
-    Connectedness:                                {chapter: [bwd, er, mg, mo, snkbsars, bwd, mg, mk ehlo, rtsi, zhsj],
-                                                  sessions: [[er, mo], [zhsj, snkbsars, bwd, mg]],
-                                                    chairs: [Ali Mazalek, Martin Kaltenbrunner]}
+  themes1([title, chapter, sessions, chairs], 'Connectedness'
+            [bwd, er, mg, mo, snkbsars, bwd, mg, mk ehlo, rtsi, zhsj],
+            [[er, mo], [zhsj, snkbsars, bwd, mg]],
+            ['Ali Mazalek', 'Martin Kaltenbrunner']).
 
-    Integrating the Virtual and the Physical:     {chapter: [vg, sn, pa, mb, dkm, eng, db, lcgs, lkm, svgs],       
-                                                   session: [pa, svgs, sn, eng],         chair: Trevor Pering} 
+  themes1([title, chapter, session, chair], 'Integrating the Virtual and the Physical'
+            [vg, sn, pa, mb, dkm, eng, db, lcgs, lkm, svgs],       
+            [pa, svgs, sn, eng], 'Trevor Pering').
 
     The Expressive Character of Interaction:      {chapter: [sh, mn, hfamop, re, hi, cgzi, jgak, sm, bvhhb]
                                                    session: [hamop, slelo, cgzi, hi],    chair: Peter Gall Krogh}
