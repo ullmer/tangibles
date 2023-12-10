@@ -88,31 +88,29 @@ themes2(physicality, [physical_gestures, physical_interaction, physical_interfac
 themes2(use_context, [industrial_configuration, pneumatics, refrigeration_technicians, 
                          system_maintenance, work_practice, travel, digital_video_editing, multihandicapped_children],  5).
 
-themes2(cognition, [cognitive_development, distributed_cognition, image_schemas, 
-                                                               embodied_cognition, passive_awareness],                  4).
-
-themes2(haptics,       [haptic_interface, haptic_user_interfaces, haptics, tactile_interface, tactile, touch],  6).
-themes2(collaboration, [cscw, collaboration, group_awareness, social_interaction],                              5).
-themes2(consciousness, [biofeedback, emotional_awareness, empathy, identity, intuitivity],                      4).
-themes2(philosophy, [action research, adaptability, contemplation, phenomenology],                              4).
-themes2(place,      [home, domestic_technology, location_based_design, location_based_narrative, public_space], 4).
-themes2(play,       [play, game_heuristics, edutainment, interactive_toys],                                     3).
-themes2(music,      [music, musical instrument, musical performance, sound feedback],                           3).
-themes2(ambience,   [ambient_display, ambient_environment],                                                     3).
-themes2(narrative,  [material narratives, location-based narrative, reading],                                   3).
-themes2(intimacy,   [intimacy, intimate group communication, social intimacy],                                  3).
-themes2(sensing,    [sensor_network_user_interface, sensor_network, sensorial_interfaces, pen_based_input],     3).  
-themes2(hci,              [HCI, interface_design],                                                              3).
-themes2(communication,    [communication, multi-user communication, messaging],                                 3).
-themes2(theory,           [mathematics, model, frameworks],                                                     3).
-themes2(interface_locale, [tilting_table, shape_displays, visual_displays],                                     3).
-themes2(fabrication,      [rapid_prototyping],                                                                  1).
+themes2(cognition, [cognitive_development, distributed_cognition, image_schemas, embodied_cognition, passive_awareness], 4).
+themes2(place,      [home, domestic_technology, location_based_design, location_based_narrative, public_space],          4).
+themes2(haptics,          [haptic_interface, haptic_user_interfaces, haptics, tactile_interface, tactile, touch], 6).
+themes2(collaboration,    [cscw, collaboration, group_awareness, social_interaction],                             5).
+themes2(consciousness,    [biofeedback, emotional_awareness, empathy, identity, intuitivity],                     4).
+themes2(philosophy,       [action research, adaptability, contemplation, phenomenology],                          4).
+themes2(play,             [play, game_heuristics, edutainment, interactive_toys],                                 3).
+themes2(music,            [music, musical_instrument, musical_performance, sound_feedback],                       3).
+themes2(ambience,         [ambient_display, ambient_environment],                                                 3).
+themes2(narrative,        [material narratives, location-based narrative, reading],                               3).
+themes2(intimacy,         [intimacy, intimate group communication, social intimacy],                              3).
+themes2(sensing,          [sensor_network_user_interface, sensor_network, sensorial_interfaces, pen_based_input], 3).  
+themes2(hci,              [HCI, interface_design],                                                                3).
+themes2(communication,    [communication, multi-user communication, messaging],                                   3).
+themes2(theory,           [mathematics, model, frameworks],                                                       3).
+themes2(interface_locale, [tilting_table, shape_displays, visual_displays],                                       3).
+themes2(fabrication,      [rapid_prototyping],                                                                    1).
 
 themes2(arts,             [laban_effort-shape, aesthetics_artifacts, art_design_installation, 
-                           choreography_of_interaction, expressiveness],                                        3).
+                           choreography_of_interaction, expressiveness],                                          3).
 themes2(misc,             [control_system, digitalisation, illiterate_programmer, simplicity, 
-                           remote_interfaces, presentation tool, navigable information space, metaphor, 
-                           multi-disciplinary, real-time behavior],                                             8).
+                           remote_interfaces, presentation_tool, navigable_information_space, metaphor, 
+                           multi_disciplinary, real_time_behavior],                                               8).
 
   contributions: 
     ro: 
