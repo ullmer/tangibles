@@ -1,6 +1,7 @@
-# References to ACM TEI 2007 content
-# Brygg Ullmer, Clemson University
-# Begun 2023-11-16
+% References to ACM TEI 2007 content
+% Brygg Ullmer, Clemson University
+% Begun 2023-11-16
+
 
 content:
   program:     https://tei.acm.org/2007/program.html
@@ -45,7 +46,7 @@ content:
     namerica: {abbrev: N, instances: [USA, Canada]}
     samerica: {abbrev: S, instances: [Colombia]}
 
-  themes: 
+  themes2: 
     tangible_ui:   {kw: [TUI, tangibility, tangible UIs, tangible computing, 
                          tangible interaction, tangible interface, tangible interfaces, 
                          tangible user interface (TUI), tangible user interface, 
