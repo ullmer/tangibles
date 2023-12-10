@@ -9,19 +9,23 @@ content:
                 https://tei.acm.org/2007/program/TwoMinuteMadness_2.pdf]
 
   chapters: 
-    Connectedness:                                {papers: [bwd, er, mg, mo, snkbsars, bwd, mg, mk ehlo, rtsi, zhsj],
-                                                   chairs: [Ali Mazalek, Martin Kaltenbrunner]}
+    Connectedness:                                {chapter: [bwd, er, mg, mo, snkbsars, bwd, mg, mk ehlo, rtsi, zhsj],
+                                                    chairs: [Ali Mazalek, Martin Kaltenbrunner]}
 
-    Integrating the Virtual and the Physical:     {papers: [vg, sn, pa, mb, dkm, eng, db, lcgs, lkm, svgs],       
+    Integrating the Virtual and the Physical:     {chapter: [vg, sn, pa, mb, dkm, eng, db, lcgs, lkm, svgs],       
                                                    chair: Trevor Pering} 
 
-    The Expressive Character of Interaction:      {papers: [sh, mn, hfamop, re, hi, cgzi, jgak, sm, bvhhb]
+    The Expressive Character of Interaction:      {chapter: [sh, mn, hfamop, re, hi, cgzi, jgak, sm, bvhhb]
                                                    chair: Peter Gall Krogh}
 
-    Learning through Physical Interaction:        {papers: [m, km, hhv, a],           chair: Orit Shaer}
-    Connectedness:                                {papers: [zhsj, 
-    Body Movements:                               {papers: [paw, rhkcl, lre, m],      chair: Thecla Schiphorst}
-    Context Dependency and Physical Adaptability: {papers: [scb, mrgk, pno, b],       chair: Nicolas Villar}
+    Learning through Physical Interaction:        {chapter: [hhvbm, hj, ma, daw, dh, gtshesj, vfh, km, an],
+                                                   chair: Orit Shaer}
+
+    Context Dependency and Physical Adaptability: {chapter: [pno, kmhbrbrs, bi, sscb, mrgak],
+                                                   session: [scb, mrgk, pno, b],      chair: Nicolas Villar}
+
+    Body Movements:                               {chapter: [je, fr, shs, mo, paw, rhkcl, lre, bsh],
+                                                   session: [paw, rhkcl, lre, m],     chair: Thecla Schiphorst}
 
   sessions: 
     Two Minute Madness (1): 
