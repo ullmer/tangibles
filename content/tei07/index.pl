@@ -52,41 +52,41 @@ continent([name, abbrev1, abbrev2, countries], 'South America', samerica, S, [co
 
 themes2([title, abbrev, keywords, numPapers], 'Tangible UI', tangible_ui,   
   [tui, tangibility, tangible_UIs, tangible_computing, tangible_interaction, 
-   tangible_interface, tangible_interfaces, tangible_user_interface, tangible_user_interfaces],   24).
+   tangible_interface, tangible_interfaces, tangible_user_interface, tangible_user_interfaces],  24).
 
 themes2([title, abbrev, keywords, numPapers], 'Paradigms', paradigms,     
-   [augmented_reality, distributed_physical_user_interfaces, paper_user_interface, 
-    ubiquitous_computing, responsive_environments, spatial_interaction, 
-    siftable_computing_interface, tabletop_sensing, tabletop_interaction, tabletop_interfaces],   11).
+  [augmented_reality, distributed_physical_user_interfaces, paper_user_interface, 
+   ubiquitous_computing, responsive_environments, spatial_interaction, 
+   siftable_computing_interface, tabletop_sensing, tabletop_interaction, tabletop_interfaces],   11).
 
 themes2([title, abbrev, keywords, numPapers], 'Interaction', interaction,     
-   [interaction_techniques, interaction, interactive_book, interactive_installation, interactive_toys, 
-    explicit_interaction, interactive_video_and_sound_installation, embedded_interaction],        11).
+  [interaction_techniques, interaction, interactive_book, interactive_installation, interactive_toys, 
+   explicit_interaction, interactive_video_and_sound_installation, embedded_interaction],        11).
 
 themes2([title, abbrev, keywords, numPapers], 'Design', design,        
-   [design_process, design_research, design, interaction_design, 
-    product_design, communication_design, complex_products],                                      10).
+  [design_process, design_research, design, interaction_design, 
+   product_design, communication_design, complex_products],                                      10).
 
 themes2([title, abbrev, keywords, numPapers], 'Education', education,
-   [montessori_inspired_manipulatives, children, digital_manipulatives, manipulatives,
-    learning_toys, learning, education, educational_game, edutainment],                           10).
+  [montessori_inspired_manipulatives, children, digital_manipulatives, manipulatives,
+   learning_toys, learning, education, educational_game, edutainment],                           10).
 
-    evaluation:    {kw: [case studies, evaluation, participatory design, experience, usability, 
-                         use qualities, user experience, user studies, user supportive, 
-                         user-oriented framework, role playing],                             p: 10}
+themes2([title, abbrev, keywords, numPapers], 'Evaluation', evaluation,
+  [case_studies, evaluation, participatory_design, experience, usability, use_qualities, 
+   user_experience, user_studies, user_supportive, user_oriented_framework, role_playing],       10).
 
-    tech:          {kw: [Flash, NFC, active tokens, application development framework, 
-                         authoring tools, computer vision, programming languages, phidgets, 
-                         thermochromic displays, markup language, smart artifacts],          p: 9}
+themes2([title, abbrev, keywords, numPapers], 'Technology', tech,
+  [flash, nfc, active_tokens, application_development_framework, authoring_tools, computer_vision, 
+   programming_languages, phidgets, thermochromic_displays, markup_language, smart_artifacts],    9).
 
-    embodiment:    {kw: [body, gesture input, embodied experience, embodied interaction, 
-                         embodiment, sensory mapping, somatics],                             p: 8}
+themes2([title, abbrev, keywords, numPapers], 'Embodiment', embodiment,    
+  [body, gesture_input, embodied_experience, embodied_interaction, embodiment, sensory_mapping, somatics],      8).
 
-    haptics:       {kw: [haptic interface, haptic user interfaces, haptics, 
-                         tactile interface, tactile, touch],                                 p: 6}
+themes2([title, abbrev, keywords, numPapers], 'Haptics', haptics,    
+  [haptic_interface, haptic_user_interfaces, haptics, tactile_interface, tactile, touch],                       6).
 
-    mobility:      {kw: [mobile devices, mobile phones, mobile technology, 
-                         movement analysis, movement, kinesthetic sense, mobility],          p: 6}
+themes2([title, abbrev, keywords, numPapers], 'Mobility', mobility,
+  [mobile_devices, mobile_phones, mobile_technology, movement_analysis, movement, kinesthetic_sense, mobility], 6).
 
     physicality:   {kw: [physical gestures, physical interaction, physical interfaces, 
                          physical manipulatives, material narratives, personal objects],     p: 6}
