@@ -187,21 +187,17 @@ contribution(ms, 'Distributed Physical Interfaces With Shared Phidgets'
 			    ['Saul Greenberg',    'University of Calgary',      canada]],
 			    [distributed_physical_user_interfaces, phidgets]).
 
-contribution(ma:
-title: Do tangible interfaces enhance learning?, slides]
-authors:
-  [Paul Marshall, Open University, UK]
-keywords: [tangible interface, TUI, frameworks, learning]
+contribution(ma, 'Do tangible interfaces enhance learning?',
+                            ['Paul Marshall', 'Open University', uk],
+                            [tangible_interface, TUI, frameworks, learning]).
 
-contribution(slelo:
-title: Explicit interaction for surgical rehabilitation
-authors:
-  [Tomas Sokoler, K3,   Malmö University, Sweden]
-  [Jonas Löwgren,       Malmö University, Sweden]
-  [Mette Agger Eriksen, Malmö University, Sweden]
-  [Per Linde,           Malmö University, Sweden]
-  [Stefan Olofsson,     Malmö University, Sweden]
-keywords: [explicit interaction, ubiquitous computing, interaction design, use qualities]
+contribution(slelo, 'Explicit interaction for surgical rehabilitation',
+                           [['Tomas Sokoler',       'Malmö University', sweden],
+			    ['Jonas Löwgren',       'Malmö University', sweden],
+			    ['Mette Agger Eriksen', 'Malmö University', sweden],
+			    ['Per Linde',           'Malmö University', sweden],
+			    ['Stefan Olofsson',     'Malmö University', sweden]],
+			    [explicit_interaction, ubiquitous computing, interaction design, use qualities]).
 
 contribution(daw:
 title: Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children
