@@ -2,12 +2,11 @@
 % Brygg Ullmer, Clemson University
 % Begun 2023-11-16
 
-
-content:
-  program:     https://tei.acm.org/2007/program.html
-  overview: 
-    addresses: [https://tei.acm.org/2007/program/TwoMinuteMadness_1.pdf,
-                https://tei.acm.org/2007/program/TwoMinuteMadness_2.pdf]
+%content:
+%  program:     https://tei.acm.org/2007/program.html
+%  overview: 
+%    addresses: [https://tei.acm.org/2007/program/TwoMinuteMadness_1.pdf,
+%                https://tei.acm.org/2007/program/TwoMinuteMadness_2.pdf]
 
 %%%%%%%%%%%%%%%%%%%%%%%% Themes 1 %%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -222,21 +221,17 @@ contribution(mo, 'From Hand-Held to Body-Worn: Embodied Experiences of the Desig
 contribution(pwa, 'Gesture Connect: Facilitating Tangible Interaction With a Flick Of The Wrist',
                            [['Trevor Pering',  'Intel Research',           usa],
                             ['Roy Want',       'Intel Research',           usa],
-                            ['Yaw Anokwa',     'University of Washington', usa]]
-keywords: [NFC, physical gestures, mobile phones, tangible interaction]
+                            ['Yaw Anokwa',     'University of Washington', usa]],
+                            [NFC, physical gestures, mobile phones, tangible interaction]).
 
-contribution(re:
-title: Giving Materials a Voice
-authors:
-  [Hannah Regier, Art Center College of Design, USA]
-keywords: [material narratives, design process, communication design, tangible interfaces]
+contribution(re, 'Giving Materials a Voice',
+                            ['Hannah Regier', 'Art Center College of Design', usa],
+                            [material_narratives, design_process, communication_design, tangible_interfaces]).
 
-contribution(hi:
-title: "Image Schemas and Their Metaphorical Extensions: Intuitive Patterns for Tangible Interaction"
-authors:
-  [Joern Hurtienne,       Technische Universität Berlin,                                         Germany]
-  [Johann Habakuk Israel, Fraunhofer-Institute for Production Systems and Design Technology IPK, Germany]
-keywords: [tangible user interfaces, intuitivity, image schemas, metaphor, embodiment]
+contribution(hi, 'Image Schemas and Their Metaphorical Extensions: Intuitive Patterns for Tangible Interaction',
+                    [['Joern Hurtienne',       'Technische Universität Berlin',                                         germany],
+                     ['Johann Habakuk Israel', 'Fraunhofer-Institute for Production Systems and Design Technology IPK', germany]],
+                     [tangible_user_interfaces, intuitivity, image_schemas, metaphor, embodiment]).
 
 contribution(mo:
 title: "Keep in Touch: A Tactile-Vision Intimate Interface"
