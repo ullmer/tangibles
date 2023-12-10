@@ -11,24 +11,25 @@ content:
 
 %%%%%%%%%%%%%%%%%%%%%%%% Themes 1 %%%%%%%%%%%%%%%%%%%%%%%%
 
-themes1([title, abbrev, chapter, sessions, chairs], 'Connectedness', co, 
-          [bwd, er, mg, mo, snkbsars, bwd, mg, mk ehlo, rtsi, zhsj],
-          [[er, mo], [zhsj, snkbsars, bwd, mg]], ['Ali Mazalek', 'Martin Kaltenbrunner']).
+schema(themes1, [title, abbrev, chapter, sessions, chair]).
 
-themes1([title, abbrev, chapter, session, chair], 'Integrating the Virtual and the Physical', ivp, 
-          [vg, sn, pa, mb, dkm, eng, db, lcgs, lkm, svgs],  [pa, svgs, sn, eng],      'Trevor Pering').
+themes1('Connectedness', co, [bwd, er, mg, mo, snkbsars, bwd, mg, mk ehlo, rtsi, zhsj],
+                             [[er, mo], [zhsj, snkbsars, bwd, mg]], ['Ali Mazalek', 'Martin Kaltenbrunner']).
 
-themes1([title, abbrev, chapter, session, chair], 'The Expressive Character of Interaction', eci,
-          [sh, mn, hfamop, re, hi, cgzi, jgak, sm, bvhhb],  [hamop, slelo, cgzi, hi], 'Peter Gall Krogh').
+themes1('Integrating the Virtual and the Physical', ivp, 
+               [vg, sn, pa, mb, dkm, eng, db, lcgs, lkm, svgs],  [pa, svgs, sn, eng],      'Trevor Pering').
 
-themes1([title, abbrev, chapter, session, chair], 'Learning through Physical Interaction', lpi,
-        [hhvbm, hj, ma, daw, dh, gtshesj, vfh, km, an],     [ma, km, hhv, an],        'Orit Shaer').
+themes1('The Expressive Character of Interaction', eci,
+               [sh, mn, hfamop, re, hi, cgzi, jgak, sm, bvhhb],  [hamop, slelo, cgzi, hi], 'Peter Gall Krogh').
 
-themes1([title, abbrev, chapter, session, chair], 'Context Dependency and Physical Adaptability', cdpa,
-        [pno, kmhbrbrs, bi, sscb, mrgak],                   [scb, mrgk, pno, b],      'Nicolas Villar').
+themes1('Learning through Physical Interaction', lpi,
+             [hhvbm, hj, ma, daw, dh, gtshesj, vfh, km, an],     [ma, km, hhv, an],        'Orit Shaer').
 
-themes1([title, abbrev, chapter, session, chair], 'Body Movements', bm,
-        [je, fr, shs, mo, paw, rhkcl, lre, bsh],            [paw, rhkcl, lre, m],     'Thecla Schiphorst').
+themes1('Context Dependency and Physical Adaptability', cdpa,
+             [pno, kmhbrbrs, bi, sscb, mrgak],                   [scb, mrgk, pno, b],      'Nicolas Villar').
+
+themes1('Body Movements', bm,
+             [je, fr, shs, mo, paw, rhkcl, lre, bsh],            [paw, rhkcl, lre, m],     'Thecla Schiphorst').
 
 %%%%%%%%%%%%%%%%%%%%%%%% Sessions %%%%%%%%%%%%%%%%%%%%%%%%
 
