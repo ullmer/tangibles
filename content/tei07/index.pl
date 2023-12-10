@@ -438,33 +438,18 @@ session(tmm1, lcgs, 'The Meatbook: Tangible and Visceral Interaction',
                    ['Aaron Levisohn', 'Jayme Cochrane', 'Diane Gromala', 'Jinsil Seo'],
                    [tangible_interfaces_for_artworks, organic_inorganic_interfaces]).
 
-session(tmm1, 
-bvhhb: 
-  title:    "Weathergods: tangible interaction in a digital tabletop game" 
-  authors:  [Saskia Bakker, Debby Vorstenbosch, Elise van den Hoven, Gerard Hollemans, Tom Bergman]
-  keywords: [interaction design, digital tabletop gaming, tangible user interfaces, 
-             pervasive games, tangible interaction]
+session(tmm1, bvhhb, 'Weathergods: tangible interaction in a digital tabletop game',
+                   ['Saskia Bakker', 'Debby Vorstenbosch', 'Elise van den Hoven', 'Gerard Hollemans', 'Tom Bergman'],
+                   [interaction design, digital tabletop gaming, tangible user interfaces, pervasive games, tangible interaction]).
 
-session(tmm1, 
-re:
-  title:   Giving Materials a Voice
-  authors: [Hannah Regier]
+session(tmm1, re,   'Giving Materials a Voice', ['Hannah Regier']).
 
-session(tmm1, 
-jgak:
-  title: "The reacTable: Exploring the Synergy between Live Music Performance and Tabletop Tangible Interfaces"
-  authors: [Sergi Jorda, Günter Geiger, Marcos Alonso, Martin Kaltenbrunner]
-  media:   [https://tei.acm.org/2007/program/JordaEtAl_Reactable.wmv]
+session(tmm1, jgak, 'The reacTable: Exploring the Synergy between Live Music Performance and Tabletop Tangible Interfaces',
+                   ['Sergi Jorda', 'Günter Geiger', 'Marcos Alonso', 'Martin Kaltenbrunner'],
+                   ['https://tei.acm.org/2007/program/JordaEtAl_Reactable.wmv'],
 
-session(tmm1, 
-hj:
-  title:   Designing Tangible Programming Languages for Classroom Use
-  authors: [Michael Horn, Robert Jacob]
-
-session(tmm1, 
-dh:
-  title:   Lessons from an AR Book study
-  authors: [Andreas Dünser, Eva Hornecker]
+session(tmm1, hj, 'Designing Tangible Programming Languages for Classroom Use', ['Michael Horn', 'Robert Jacob']).
+session(tmm1, dh, 'Lessons from an AR Book study',                              ['Andreas Dünser', 'Eva Hornecker']).
 
 session(tmm1, 
 daw:
