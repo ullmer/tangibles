@@ -18,6 +18,10 @@ contributionWithKeyword(Abbrev, Title, Keyword) :-
   contribution(Abbrev, Title, _, Keywords),
   member(Keyword, Keywords).
 
+contributionWithAuthor(Abbrev, Title, AuthorFullname) :-
+  contribution(Abbrev, Title, Authors, _),
+  authorsIncludeFullname(Authors, AuthorFullname).
+
 %%% Determine if any of authors from a specified country %%%
 
 authorsFromCountry([AuthorHead|AuthorTail], Country) :-
@@ -32,5 +36,16 @@ authorsFromCountry([AuthorHead|AuthorTail], Country) :-
 authorFromCountry([AuthorHead|AuthorTail], Country) :-
   not(is_list(AuthorHead)),
   last(AuthorTail, Country).
+
+%%% Authors include fullname %%%
+
+authorsIncludeFullname([AuthorHead|AuthorTail], AuthorFullname) :-
+  not(is_list(AuthorHead)), 
+  AuthorHead==AuthorFullname.
+
+authorsIncludeFullname([AuthorHead|AuthorTail], AuthorFullname) :-
+  is_list(AuthorHead), 
+  (authorsIncludeFullname(AuthorHead, AuthorFullname);
+   authorsIncludeFullname(AuthorTail, AuthorFullname)).
 
 %%% end %%%
