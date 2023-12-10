@@ -134,7 +134,9 @@ contribution(vg, 'A Malleable Control Structure for Softwired User Interfaces',
                             ['Hans Gellersen', 'Lancaster University', uk]], []).
 
 contribution(je, 'A Physical Approach to Tangible Interaction Design',
-                            ['Mads Jensen', 'University of Southern Denmark', denmark], []).
+                            ['Mads Jensen', 'University of Southern Denmark', denmark], 
+                            [tangible_interaction, physicality, interaction_qualities, 
+                             physical_metaphor, video_action_wall]).
 
 contribution(er, 'A Tangible User Interface for Multi-User Awareness Systems'
                            [['Richard Etter',  'Fraunhofer IPSI', germany]
@@ -149,7 +151,8 @@ contribution(pno, 'Actuation and Tangible User Interfaces: Vaucanson duck, Robot
                             [haptics, shape_displays, interaction, collaboration]).
 
 contribution(sh, 'Beyond video: choosing the right medium for a media rich interaction'
-                            ['Peter Shultz', 'Art Center College of Design', usa], []).
+                            ['Peter Shultz', 'Art Center College of Design', usa], 
+                            [branding, slide_projectors, medium_selection]).
 
 contribution(fr, 'CabBoots: Shoes with integrated Guidance System'
                             ['Martin Frey', 'UdK Berlin', germany], []).
@@ -448,67 +451,29 @@ session(tmm1, jgak, 'The reacTable: Exploring the Synergy between Live Music Per
                    ['Sergi Jorda', 'Günter Geiger', 'Marcos Alonso', 'Martin Kaltenbrunner'],
                    ['https://tei.acm.org/2007/program/JordaEtAl_Reactable.wmv'],
 
-session(tmm1, hj, 'Designing Tangible Programming Languages for Classroom Use', ['Michael Horn', 'Robert Jacob']).
-session(tmm1, dh, 'Lessons from an AR Book study',                              ['Andreas Dünser', 'Eva Hornecker']).
+session(tmm1, hj,  'Designing Tangible Programming Languages for Classroom Use',   ['Michael Horn',  'Robert Jacob']).
+session(tmm1, dh,  'Lessons from an AR Book study',                              ['Andreas Dünser', 'Eva Hornecker']).
+session(tmm1, daw, 'Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children',
+                                                                  ['Milena Droumeva', 'Alissa Antle', 'Ron Wakkary']).
 
-session(tmm1, 
-daw:
-  title:   Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children
-  authors: [Milena Droumeva, Alissa Antle, Ron Wakkary]
+session(tmm1, sc,   'Freequent Traveller',                                    ['Susanne Schuricht', 'Tobias Schmidt']).
+session(tmm1, je,   'A Physical Approach to Tangible Interaction Design',                             ['Mads Jensen']).
+session(tmm2, rtsi, 'Remote Active Tangible Interactions',
+                                                   ['Jan Richter', 'Bruce Thomas', 'Maki Sugimoto', 'Masahiko Inami']).
 
-session(tmm1, 
-sc:
-  title:   Freequent Traveller 
-  authors: [Susanne Schuricht, Tobias Schmidt]
-  media:   [http://sushu.de/free/, https://tei.acm.org/2007/program/SusanneSchuricht_FrequentTraveller.pdf]
+session(tmm2, kb,  'reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction'
+                                                                             ['Martin Kaltenbrunner', 'Ross Bencina']).
 
-session(tmm1, 
-je:
-  title:    A Physical Approach to Tangible Interaction Design
-  authors:  [Mads Jensen]
-  keywords: [tangible interaction, physicality, interaction qualities, physical metaphor, video action wall]
+session(tmm2, mkm, 'Siftables: Towards Sensor Network User Interfaces',
+                                                                 ['David Merrill', 'Jeevan Kalanithi', 'Pattie Maes']).
 
-session(tmm2, 
-rtsi: 
-  title:   Remote Active Tangible Interactions 
-  authors: [Jan Richter, Bruce Thomas, Maki Sugimoto, Masahiko Inami]
-  media:   [https://tei.acm.org/2007/program/RemoteActiveTangibleInteractions.pdf]
+session(tmm2, vg,  'A Malleable Control Structure for Softwired User Interfaces', ['Nicolas Villar', 'Hans Gellersen']).
+session(tmm2, sm,  'Using Magnets in Physical Blocks That Behave As Programming Objects',             ['Andrew Smith']).
 
-session(tmm2, 
-kb:
-  title:   "reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction"
-  authors: [Martin Kaltenbrunner, Ross Bencina]
-
-session(tmm2, 
-mkm:
-  title:   "Siftables: Towards Sensor Network User Interfaces"
-  authors: [David Merrill, Jeevan Kalanithi, Pattie Maes]
-
-session(tmm2, 
-vg:
-  title:   A Malleable Control Structure for Softwired User Interfaces
-  authors: [Nicolas Villar, Hans Gellersen]
-
-session(tmm2, 
-sm:
-  title:   Using Magnets in Physical Blocks That Behave As Programming Objects
-  authors: Andrew Smith
-
-session(tmm2, 
-mn:
-  title:   Collaborative Ambient Systems by Blow Displays
-  authors: [Mitsuru Minakuchi, Satoshi Nakamura]
-
-session(tmm2, 
-sh:
-  title:    Brand consciousness as a driving design force
-  authors:  Peter Shultz
-  keywords: [branding, slide projectors, medium selection]
-
-session(tmm2, 
-vfh:
-  title:   "TagTiles: optimal challenge in educational electronics"
-  authors: [Janneke Verhaegh, Willem Fontijn, Jettie Hoonhout]
+session(tmm2, mn,  'Collaborative Ambient Systems by Blow Displays',         ['Mitsuru Minakuchi', 'Satoshi Nakamura']).
+session(tmm2, sh,  'Brand consciousness as a driving design force',                                   ['Peter Shultz']).
+session(tmm2, vfh, 'TagTiles: optimal challenge in educational electronics',
+                                                             ['Janneke Verhaegh', 'Willem Fontijn', 'Jettie Hoonhout']).
 
 session(tmm2, 
 gshesj:
