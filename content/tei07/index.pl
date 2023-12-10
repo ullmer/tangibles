@@ -10,7 +10,10 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%% Themes 1 %%%%%%%%%%%%%%%%%%%%%%%%
 
-:- discontiguous(schema/2). %Prolog normally wishes such assertions to be colocated
+:- discontiguous(schema/2).   %Prolog normally wishes such assertions to be colocated
+:- discontiguous(session/4). 
+:- discontiguous(session/5). 
+
 schema(themes1, [title, abbrev, chapter, sessions, chair]).
 
 themes1('Connectedness', co, [bwd, er, mg, mo, snkbsars, bwd, mg, mk, ehlo, rtsi, zhsj],
@@ -413,7 +416,7 @@ contribution(mrgk, 'Using Personal Objects as Tangible Interfaces for Memory Rec
                        ['Omar Abou Khaled', 'University of Applied Sciences of Western Switzerland, Fribourg', switzerland]],
                        [hci, tangible_user_interface, personal_objects, user_oriented_framework, model, markup_language]).
 
-contribution(svgs: 'VoodooFlash: Authoring across Physical and Digital Form',
+contribution(svgs, 'VoodooFlash: Authoring across Physical and Digital Form',
                              [['Wolfgang Spiessl', 'University of Munich', germany],
                               ['Nicolas Villar',   'Lancaster University',      uk],
                               ['Hans Gellersen',   'Lancaster University',      uk],
@@ -434,7 +437,7 @@ session(tmm1, lka, 'Tilting Table: A Movable Screen',
 
 session(tmm1, db, 
   'The Card Box at Hand: Exploring the Potentials of a Paper-Based Tangible Interface for Education and Research in Art History',
-                   ['Tanja Döring', 'Steffi Beckhaus'] 
+                   ['Tanja Döring', 'Steffi Beckhaus'],
                    [tabletop_tangible_interface, paper_card_interface, digital_art_history, 
                     creativity_support_tool, information_visualization]).
 
@@ -444,13 +447,13 @@ session(tmm1, lcgs, 'The Meatbook: Tangible and Visceral Interaction',
 
 session(tmm1, bvhhb, 'Weathergods: tangible interaction in a digital tabletop game',
                    ['Saskia Bakker', 'Debby Vorstenbosch', 'Elise van den Hoven', 'Gerard Hollemans', 'Tom Bergman'],
-                   [interaction design, digital tabletop gaming, tangible user interfaces, pervasive games, tangible interaction]).
+                   [interaction_design, digital_tabletop_gaming, tangible_user_interfaces, pervasive_games, tangible_interaction]).
 
 session(tmm1, re,   'Giving Materials a Voice', ['Hannah Regier']).
 
 session(tmm1, jgak, 'The reacTable: Exploring the Synergy between Live Music Performance and Tabletop Tangible Interfaces',
                    ['Sergi Jorda', 'Günter Geiger', 'Marcos Alonso', 'Martin Kaltenbrunner'],
-                   ['https://tei.acm.org/2007/program/JordaEtAl_Reactable.wmv'],
+                   ['https://tei.acm.org/2007/program/JordaEtAl_Reactable.wmv']).
 
 session(tmm1, hj,  'Designing Tangible Programming Languages for Classroom Use',   ['Michael Horn',  'Robert Jacob']).
 session(tmm1, dh,  'Lessons from an AR Book study',                              ['Andreas Dünser', 'Eva Hornecker']).
@@ -462,7 +465,7 @@ session(tmm1, je,   'A Physical Approach to Tangible Interaction Design',       
 session(tmm2, rtsi, 'Remote Active Tangible Interactions',
                                                    ['Jan Richter', 'Bruce Thomas', 'Maki Sugimoto', 'Masahiko Inami']).
 
-session(tmm2, kb,  'reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction'
+session(tmm2, kb,  'reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction',
                                                                              ['Martin Kaltenbrunner', 'Ross Bencina']).
 
 session(tmm2, mkm, 'Siftables: Towards Sensor Network User Interfaces',
