@@ -67,26 +67,23 @@ themes2('Interaction', interaction, [interaction_techniques, interaction, intera
 themes2('Design', design, [design_process, design_research, design, interaction_design, 
                            product_design, communication_design, complex_products],                                    10).
 
-themes2([title, abbrev, keywords, numPapers], 'Education', education,
-  [montessori_inspired_manipulatives, children, digital_manipulatives, manipulatives,
-   learning_toys, learning, education, educational_game, edutainment],                           10).
+themes2('Education', education, [montessori_inspired_manipulatives, children, digital_manipulatives, manipulatives,
+                                 learning_toys, learning, education, educational_game, edutainment],                   10).
 
-themes2([title, abbrev, keywords, numPapers], 'Evaluation', evaluation,
-  [case_studies, evaluation, participatory_design, experience, usability, use_qualities, 
-   user_experience, user_studies, user_supportive, user_oriented_framework, role_playing],       10).
+themes2('Evaluation', evaluation, [case_studies, evaluation, participatory_design, experience, usability, use_qualities, 
+                               user_experience, user_studies, user_supportive, user_oriented_framework, role_playing], 10).
 
-themes2([title, abbrev, keywords, numPapers], 'Technology', tech,
-  [flash, nfc, active_tokens, application_development_framework, authoring_tools, computer_vision, 
-   programming_languages, phidgets, thermochromic_displays, markup_language, smart_artifacts],    9).
+themes2('Technology', tech, [flash, nfc, active_tokens, application_development_framework, authoring_tools, 
+                             computer_vision, programming_languages, phidgets, thermochromic_displays, 
+                             markup_language, smart_artifacts],                                                         9).
 
-themes2([title, abbrev, keywords, numPapers], 'Embodiment', embodiment, [body, gesture_input, 
-   embodied_experience, embodied_interaction, embodiment, sensory_mapping, somatics],             8).
+themes2('Embodiment', embodiment, [body, gesture_input, embodied_experience, embodied_interaction, embodiment, 
+                                                                                sensory_mapping, somatics],             8).
 
-themes2([title, abbrev, keywords, numPapers], 'Haptics', haptics,    
-  [haptic_interface, haptic_user_interfaces, haptics, tactile_interface, tactile, touch],         6).
+themes2('Haptics', haptics, [haptic_interface, haptic_user_interfaces, haptics, tactile_interface, tactile, touch],     6).
 
-themes2([title, abbrev, keywords, numPapers], 'Mobility', mobility, [mobile_devices, 
-  mobile_phones, mobile_technology, movement_analysis, movement, kinesthetic_sense, mobility],    6).
+themes2('Mobility', mobility, [mobile_devices, mobile_phones, mobile_technology, movement_analysis, movement, 
+                                                                                       kinesthetic_sense, mobility],    6).
 
 themes2([title, abbrev, keywords, numPapers], 'Physicality', physicality, 
   [physical_gestures, physical_interaction, physical_interfaces, physical_manipulatives, 
