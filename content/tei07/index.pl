@@ -79,17 +79,18 @@ themes2([title, abbrev, keywords, numPapers], 'Technology', tech,
   [flash, nfc, active_tokens, application_development_framework, authoring_tools, computer_vision, 
    programming_languages, phidgets, thermochromic_displays, markup_language, smart_artifacts],    9).
 
-themes2([title, abbrev, keywords, numPapers], 'Embodiment', embodiment,    
-  [body, gesture_input, embodied_experience, embodied_interaction, embodiment, sensory_mapping, somatics],      8).
+themes2([title, abbrev, keywords, numPapers], 'Embodiment', embodiment, [body, gesture_input, 
+   embodied_experience, embodied_interaction, embodiment, sensory_mapping, somatics],             8).
 
 themes2([title, abbrev, keywords, numPapers], 'Haptics', haptics,    
-  [haptic_interface, haptic_user_interfaces, haptics, tactile_interface, tactile, touch],                       6).
+  [haptic_interface, haptic_user_interfaces, haptics, tactile_interface, tactile, touch],         6).
 
-themes2([title, abbrev, keywords, numPapers], 'Mobility', mobility,
-  [mobile_devices, mobile_phones, mobile_technology, movement_analysis, movement, kinesthetic_sense, mobility], 6).
+themes2([title, abbrev, keywords, numPapers], 'Mobility', mobility, [mobile_devices, 
+  mobile_phones, mobile_technology, movement_analysis, movement, kinesthetic_sense, mobility],    6).
 
-    physicality:   {kw: [physical gestures, physical interaction, physical interfaces, 
-                         physical manipulatives, material narratives, personal objects],     p: 6}
+themes2([title, abbrev, keywords, numPapers], 'Physicality', physicality, 
+  [physical_gestures, physical_interaction, physical_interfaces, physical_manipulatives, 
+   material_narratives, personal_objects],                                                        6).
 
     collaboration: {kw: [CSCW, collaboration, group awareness, social interaction],          p: 5}
 
