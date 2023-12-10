@@ -410,32 +410,23 @@ contribution(mrgk, 'Using Personal Objects as Tangible Interfaces for Memory Rec
                        [hci, tangible_user_interface, personal_objects, user_oriented_framework, model, markup_language]).
 
 contribution(svgs: 'VoodooFlash: Authoring across Physical and Digital Form',
-                             [[Wolfgang Spiessl, University of Munich, Germany],
-                              [Nicolas Villar,   Lancaster University, UK],
-                              [Hans Gellersen,   Lancaster University, UK],
-                              [Albrecht Schmidt, University of Munich, Germany]],
-                              [product design, physical interfaces, authoring tools, Flash]
+                             [['Wolfgang Spiessl', 'University of Munich', germany],
+                              ['Nicolas Villar',   'Lancaster University',      uk],
+                              ['Hans Gellersen',   'Lancaster University',      uk],
+                              ['Albrecht Schmidt', 'University of Munich', germany]],
+                              [product_design, physical_interfaces, authoring_tools, flash]).
 
-contribution(bsh:
-title: When is Role Playing really experiential? Case studies
-authors:
-                              
-  [Stella Boess,     Delft University of Technology, Netherlands]
-                              
-  [Daniel Saakes,    Delft University of Technology, Netherlands]
-                              
-  [Caroline Hummels, Delft University of Technology, Netherlands]
-                              
-keywords: [role playing, design process, experience, empathy]
-contribution(
-contribution(twoMinuteMadness1: 
-eho: 
-  title:   "Reclaiming Public Space: Designing for Public Interaction with Private Devices"
-  authors: [Eva Eriksson, Thomas Riisgaard Hansen, Andreas Lykke-Olesen]
+contribution(bsh, 'When is Role Playing really experiential? Case studies',
+                             [['Stella Boess',     'Delft University of Technology', netherlands],
+                              ['Daniel Saakes',    'Delft University of Technology', netherlands],
+                              ['Caroline Hummels', 'Delft University of Technology', netherlands]],
+                              [role_playing, design_process, experience, empathy]).
 
-lka:  
-  title:   "Tilting Table: A Movable Screen"
-  authors: [Hyun-Jean Lee, Madhur Khandelwal, Ali Mazalek]
+session(tmm1, eho, 'Reclaiming Public Space: Designing for Public Interaction with Private Devices',
+                   ['Eva Eriksson', 'Thomas Riisgaard Hansen', 'Andreas Lykke-Olesen']).
+
+session(tmm1, lka, 'Tilting Table: A Movable Screen',
+                   ['Hyun-Jean Lee', 'Madhur Khandelwal', 'Ali Mazalek']).
 
 db:
   title:   >
