@@ -376,46 +376,44 @@ contribution(jgka, 'The reacTable: Exploring the Synergy between Live Music Perf
                               [tangible_interfaces, tabletop_interfaces, musical_instrument, 
                                musical_performance, design, interaction_techniques]).
 
-contribution(zhsj:
-title: "The Tangible Video Editor: Collaborative Video Editing with Active Tokens"
-authors:
-  [Jamie Zigelbaum, MIT Media Lab,    USA]
-  [Michael Horn,    Tufts University, USA]
-  [Orit Shaer,      Tufts University, USA]
-  [Robert Jacob,    Tufts University, USA]
-keywords: [tangible user interface, digital video editing, active tokens,
-           interface design, CSCW, distributed cognition, tabletop interaction, 
-           physical interaction]
+contribution(zhsj, 'The Tangible Video Editor: Collaborative Video Editing with Active Tokens',
+                             [['Jamie Zigelbaum', 'MIT Media Lab',    usa],
+                              ['Michael Horn',    'Tufts University', usa],
+                              ['Orit Shaer',      'Tufts University', usa],
+                              ['Robert Jacob',    'Tufts University', usa]],
+                              [tangible_user_interface, digital_video_editing, active_tokens,
+                               interface_design, CSCW, distributed_cognition, tabletop_interaction, 
+                               physical_interaction]).
 
-contribution(lmk:
-title: "Tilting Table: A Movable Screen"
-authors:
-  [Hyun-Jean Lee,     Georgia Institute of Technology, USA]
-  [Ali Mazalek,       Georgia Institute of Technology, USA]
-  [Madhur Khandelwal, Georgia Institute of Technology, USA]
-keywords: [tangible interface, tilting table, interactive video and sound installation, 
-           navigable information space]
+contribution(lmk, 'Tilting Table: A Movable Screen',
+                             [['Hyun-Jean Lee',     'Georgia Institute of Technology', usa],
+                              ['Ali Mazalek',       'Georgia Institute of Technology', usa],
+                              ['Madhur Khandelwal', 'Georgia Institute of Technology', usa]],
+                              [tangible_interface, tilting_table, interactive_video_and_sound_installation, 
+                               navigable_information_space]).
 
-contribution(mk:
-title: Towards Sensor Network User Interfaces
-authors:
-  [David Merrill,    MIT Media Laboratory, USA]
-  [Jeevan Kalanithi, MIT Media Laboratory, USA]
-keywords: [sensor network user interface (SNUI), tangible user interface (TUI), 
-           sensor network, siftable computing interface]
+contribution(mk, 'Towards Sensor Network User Interfaces'
+                             [[David Merrill,    MIT Media Laboratory, usa]
+                              [Jeevan Kalanithi, MIT Media Laboratory, usa]
+                              [sensor_network_user_interface, tangible_user_interface,
+                               sensor_network, siftable_computing_interface]).
 
-contribution(sm:
-title: Using Magnets in Physical Blocks That Behave As Programming Objects
-authors:
+contribution(sm, 'Using Magnets in Physical Blocks That Behave As Programming Objects'
+                              
   [Andrew Smith, African Advanced Institute for Information & Communications Technology, South Africa]
+                              
 keywords: [TUI, digital manipulatives, Montessori-inspired manipulatives, illiterate programmer]
 
 contribution(mrgk:
 title: Using Personal Objects as Tangible Interfaces for Memory Recollection and Sharing
 authors:
+                              
   [Elena Mugellini,  University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
+                              
   [Elisa Rubegni,    University of Siena, Italy]
+                              
   [Sandro Gerardi,   University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
+                              
   [Omar Abou Khaled, University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
 keywords: [HCI, tangible user interface, personal objects, user-oriented framework, model, markup language]
 
