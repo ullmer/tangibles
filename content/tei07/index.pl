@@ -270,113 +270,93 @@ contribution(kb, 'reacTIVision: A Computer-Vision Framework for Table-Based Tang
                              ['Ross Bencina',         'Sonic Fritter Pty Ltd',    australia]],
                              [tangible_user_interface, computer_vision, application_development_framework]).
 
-contribution(ehlo:
-title: Reclaiming Public Space [Designing for Public Interaction with Private Devices
-authors:
-                             
-  [Eva Eriksson,            Chalmers University of Technology, Sweden]
-                             
-  [Thomas Riisgaard Hansen, University of Aarhus,              Denmark]
-                             
-  [Andreas Lykke-Olesen,    Aarhus School of Architecture,     Denmark]
-keywords: [interaction design, public space, mobile technology]
+contribution(ehlo, 'Reclaiming Public Space [Designing for Public Interaction with Private Devices',
+                            [['Eva Eriksson',            'Chalmers University of Technology', sweden],
+                             ['Thomas Riisgaard Hansen', 'University of Aarhus',              denmark],
+                             ['Andreas Lykke-Olesen',    'Aarhus School of Architecture',     denmark]],
+                             [interaction_design, public_space, mobile_technology]).
 
-contribution(rtsi:
-title: Remote Active Tangible Interactions
-authors:
-  [Jan Richter,    University of South Australia,            Australia]
-  [Bruce Thomas,   University of South Australia,            Australia]
-  [Maki Sugimoto,  The University of Electro-Communications, Japan]
-  [Masahiko Inami, University of Electro-Communications,     Japan]
-slides: https://tei.acm.org/2007/program/RemoteActiveTangibleInteractions.pdf
+contribution(rtsi, 'Remote Active Tangible Interactions'
+                            [[Jan Richter,    University of South Australia,            Australia]
+                             [Bruce Thomas,   University of South Australia,            Australia]
+                             [Maki Sugimoto,  The University of Electro-Communications, Japan]
+                             [Masahiko Inami, University of Electro-Communications,     Japan]
+                             
 keywords: [tangible user interfaces, evaluation, remote interfaces]
 
-contribution(cgz:
-title: Simplicity in Interaction Design
-authors:
-  [Angela Chang,     MIT Media Lab, USA]
-  [James Gouldstone, MIT Media Lab, USA]
-  [Jamie Zigelbaum,  MIT Media Lab, USA]
-keywords: [interface design, expressiveness, simplicity, usability]
+contribution(cgz, 'Simplicity in Interaction Design',
+                            [['Angela Chang',     'MIT Media Lab', usa],
+                             ['James Gouldstone', 'MIT Media Lab', usa],
+                             ['Jamie Zigelbaum',  'MIT Media Lab', usa]],
+                             [interface_design, expressiveness, simplicity, usability]).
 
-contribution(gthesj:
-title: "Smart Blocks: A Tangible Mathematical Manipulative"
-authors:
-  [Audrey Girouard,   Tufts University, USA]
-  [Erin Treacy,       Tufts University, USA]
-  [Leanne Hirshfield, Tufts University, USA]
-  [Stacey Ecott,      Tufts University, USA]
-  [Orit Shaer,        Tufts University, USA]
-  [Robert Jacob,      Tufts University, USA]
-keywords: [tangible user interface, education, mathematics, manipulatives]
+contribution(gthesj, 'Smart Blocks: A Tangible Mathematical Manipulative',
+                             ['Audrey Girouard',   'Tufts University', usa],
+                             ['Erin Treacy',       'Tufts University', usa],
+                             ['Leanne Hirshfield', 'Tufts University', usa],
+                             ['Stacey Ecott',      'Tufts University', usa],
+                             ['Orit Shaer',        'Tufts University', usa],
+                             ['Robert Jacob',      'Tufts University', usa]],
+                             [tangible_user_interface, education, mathematics, manipulatives]).
 
-contribution(bi:
-title: Spatializing Real Time Interactive Environments
-authors:
-  [Nimish Biloria, TU Delft, Netherlands]
-keywords: [real-time behavior, multi-disciplinary, control system, interaction, pneumatics]
+contribution(bi, 'Spatializing Real Time Interactive Environments'
+                             ['Nimish Biloria', 'TU Delft', netherlands],
+                             [real_time_behavior, multi_disciplinary, control_system, interaction, pneumatics]).
 
-contribution(eng:
-title: "StickySpots: Using Location to Embed Technology in the Social Practices of the Home"
-authors:
-  [Kathryn Elliot,     University of Calgary, Canada]
-  [Carman Neustaedter, University of Calgary, Canada]
-  [Saul Greenberg,     University of Calgary, Canada]
-keywords: [domestic technology, location-based design, messaging, ubiquitous computing, case studies]
+contribution(eng, 'StickySpots: Using Location to Embed Technology in the Social Practices of the Home',
+                            [['Kathryn Elliot',     'University of Calgary', canada],
+                             ['Carman Neustaedter', 'University of Calgary', canada],
+                             ['Saul Greenberg',     'University of Calgary', canada]],
+                             [domestic_technology, location_based_design, messaging, ubiquitous_computing, case_studies]).
 
-contribution(vfh:
-title: "TagTiles: optimal challenge in educational electronics"
-authors:
-  [Janneke Verhaegh, Philips Research Europe, Netherlands]
-  [Willem Fontijn,   Philips Research, Netherlands]
-  [Jettie Hoonhout,  Philips Research, Netherlands]
-keywords: [educational game, tangible interface, game heuristics]
+contribution(vfh, 'TagTiles: optimal challenge in educational electronics',
+                            [['Janneke Verhaegh', 'Philips Research Europe', netherlands],
+                             ['Willem Fontijn',   'Philips Research',        netherlands],
+                             ['Jettie Hoonhout',  'Philips Research',        netherlands]],
+                             [educational_game, tangible_interface, game_heuristics]).
 
-contribution(hn:
-title: "Tangible Image Studio: Augmented Reality Based Tangible Interface Tool for Digital Imaging"
-authors:
-  [Jung-ah Hwang, KAIST, South Korea]
-  [Tek-jin Nam,   KAIST, South Korea]
+contribution(hn, 'Tangible Image Studio: Augmented Reality Based Tangible Interface Tool for Digital Imaging',
+                            [['Jung-ah Hwang', 'KAIST', southKorea]
+                             ['Tek-jin Nam',   'KAIST', southKorea]], []).
 
-contribution(bvhhb:
-title: "Tangible interaction in tabletop games: comparing iconic and symbolic play pieces"
-authors:
-  [Saskia Bakker,       Eindhoven University of Technology,      Netherlands]
-  [Debby Vorstenbosch,  Eindhoven University of Technology,      Netherlands]
-  [Elise van den Hoven, Eindhoven University of Technology,      Netherlands]
-  [Gerard Hollemans,    Philips Research Laboratories Eindhoven, Netherlands]
-  [Tom Bergman,         Philips Research Laboratories Eindhoven, Netherlands]
+contribution(bvhhb, 'Tangible interaction in tabletop games: comparing iconic and symbolic play pieces',
+                            [['Saskia Bakker',       'Eindhoven University of Technology',      netherlands],
+                             ['Debby Vorstenbosch',  'Eindhoven University of Technology',      netherlands],
+                             ['Elise van den Hoven', 'Eindhoven University of Technology',      netherlands],
+                             ['Gerard Hollemans',    'Philips Research Laboratories Eindhoven', netherlands],
+                             ['Tom Bergman',         'Philips Research Laboratories Eindhoven', netherlands]], []).
 
-contribution(scb:
-title: Tangible user interfaces for configuration practices
-authors:
-  [Larisa Sitorus, University of Southern Denmark, Denmark]
-  [Shan Shan Cao,  University of Southern Denmark, Denmark]
-  [Jacob Buur,     University of Southern Denmark, Denmark]
-keywords: [refrigeration technicians, industrial configuration, 
-           tangible user interface, user supportive, work practice, system maintenance]
+contribution(scb, 'Tangible user interfaces for configuration practices',
+                            [['Larisa Sitorus', 'University of Southern Denmark', denmark],
+                             ['Shan Shan Cao',  'University of Southern Denmark', denmark],
+                             ['Jacob Buur',     'University of Southern Denmark', denmark]],
+                             [refrigeration_technicians, industrial_configuration,
+                              tangible_user_interface, user_supportive, work_practice, system_maintenance]).
 
-contribution(rhlck:
-title: Tap Input as an Embedded Interaction Method for Mobile Devices, slides]
-authors:
-  [Sami Ronkainen, Nokia, Finland]
-  [Jonna Hakkila,  Nokia, Finland]
-  [Jukka Linjama,  Nokia, Finland]
-  [Ashley Colley,  Nokia, Finland]
-  [Saana Kaleva,   Nokia, Finland]
-keywords: [gesture input, haptic user interfaces, mobile devices, user studies]
+contribution(rhlck, 'Tap Input as an Embedded Interaction Method for Mobile Devices',
+                             [['Sami Ronkainen', 'Nokia', finland],
+                              ['Jonna Hakkila',  'Nokia', finland],
+                              ['Jukka Linjama',  'Nokia', finland],
+                              ['Ashley Colley',  'Nokia', finland],
+                              ['Saana Kaleva',   'Nokia', finland]],
+                              [gesture_input, haptic_user_interfaces, mobile_devices, user_studies]).
 
 contribution(km:
 title: "Teaching Table: A tangible mentor for pre-K math education, slides"
 authors:
+                              
   [Madhur Khandelwal, Georgia Institute of Technology, USA]
+                              
   [Ali Mazalek,       Georgia Institute of Technology, USA]
+                              
 keywords: [tangible computing, education, tabletop sensing, physical manipulatives, learning toys]
 
 contribution(db:
 title: The card box at hand
 authors:
+                              
   [Tanja Döring,    University of Hamburg, Germany]
+                              
   [Steffi Beckhaus, University of Hamburg, Germany]
 
 contribution(an:
