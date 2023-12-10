@@ -214,14 +214,10 @@ contribution(ss, 'Freequent Traveller',
                             [interactive_installation, mobility, home, identity, embodied_experience, 
                              biofeedback, communication, digitalisation, travel, contemplation]).
 
-contribution(mo:
-title: >
-  .. From Hand-Held to Body-Worn: Embodied Experiences of the Design and Use 
-  ..   of a Wearable Movement-Based Interaction Concept, slides 6MB]
-authors:
-  [Jin Moen, Interactive Institute; Moement R&D, Sweden]
-keywords: [movement quality, movement-based interaction, kinesthetics, 
-           wearable artifacts, embodied interaction, social context of use]
+contribution(mo, 'From Hand-Held to Body-Worn: Embodied Experiences of the Design and Use of a Wearable Movement-Based Interaction Concept',
+                           ['Jin Moen', 'Interactive Institute; Moement R&D', sweden]
+                           [movement_quality, movement_based_interaction, kinesthetics, 
+                            wearable_artifacts, embodied_interaction, social_context_of_use]).
 
 contribution(pwa:
 title: "Gesture Connect: Facilitating Tangible Interaction With a Flick Of The Wrist"
