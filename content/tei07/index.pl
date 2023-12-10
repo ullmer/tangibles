@@ -10,9 +10,10 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%% Themes 1 %%%%%%%%%%%%%%%%%%%%%%%%
 
+:- discontiguous(schema/2). %Prolog normally wishes such assertions to be colocated
 schema(themes1, [title, abbrev, chapter, sessions, chair]).
 
-themes1('Connectedness', co, [bwd, er, mg, mo, snkbsars, bwd, mg, mk ehlo, rtsi, zhsj],
+themes1('Connectedness', co, [bwd, er, mg, mo, snkbsars, bwd, mg, mk, ehlo, rtsi, zhsj],
                              [[er, mo], [zhsj, snkbsars, bwd, mg]], ['Ali Mazalek', 'Martin Kaltenbrunner']).
 
 themes1('Integrating the Virtual and the Physical', ivp, 
@@ -41,12 +42,12 @@ session('Two Minute Madness (2)', tmm2, [rtsi, kb, mkm, vg, s, mn, s, vfh, gshes
 
 schema(continent, [name, abbrev1, abbrev2, countries]).
 
-continent('Europe',        europe,   E, [germany, uk, denmark, netherlands, sweden, switzerland, spain, finland, italy]).
-continent('Asia',          asia,     I, [japan, southKorea]).
-continent('Africa',        africa,   F, [southAfrica]).
-continent('Oceania',       oceania,  O, [newZealand, australia]).
-continent('North America', namerica, N, [usa, canada]).
-continent('South America', samerica, S, [colombia]).
+continent('Europe',        europe,   e, [germany, uk, denmark, netherlands, sweden, switzerland, spain, finland, italy]).
+continent('Asia',          asia,     i, [japan, southKorea]).
+continent('Africa',        africa,   f, [southAfrica]).
+continent('Oceania',       oceania,  o, [newZealand, australia]).
+continent('North America', namerica, n, [usa, canada]).
+continent('South America', samerica, s, [colombia]).
 
 %%%%%%%%%%%%%%%%%%%%%%%% Themes 2 %%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -92,15 +93,15 @@ themes2(place,      [home, domestic_technology, location_based_design, location_
 themes2(haptics,          [haptic_interface, haptic_user_interfaces, haptics, tactile_interface, tactile, touch], 6).
 themes2(collaboration,    [cscw, collaboration, group_awareness, social_interaction],                             5).
 themes2(consciousness,    [biofeedback, emotional_awareness, empathy, identity, intuitivity],                     4).
-themes2(philosophy,       [action research, adaptability, contemplation, phenomenology],                          4).
+themes2(philosophy,       [action_research, adaptability, contemplation, phenomenology],                          4).
 themes2(play,             [play, game_heuristics, edutainment, interactive_toys],                                 3).
 themes2(music,            [music, musical_instrument, musical_performance, sound_feedback],                       3).
 themes2(ambience,         [ambient_display, ambient_environment],                                                 3).
-themes2(narrative,        [material narratives, location-based narrative, reading],                               3).
-themes2(intimacy,         [intimacy, intimate group communication, social intimacy],                              3).
+themes2(narrative,        [material_narratives, location_based_narrative, reading],                               3).
+themes2(intimacy,         [intimacy, intimate_group_communication, social_intimacy],                              3).
 themes2(sensing,          [sensor_network_user_interface, sensor_network, sensorial_interfaces, pen_based_input], 3).  
-themes2(hci,              [HCI, interface_design],                                                                3).
-themes2(communication,    [communication, multi-user communication, messaging],                                   3).
+themes2(hci,              [hci, interface_design],                                                                3).
+themes2(communication,    [communication, multi_user_communication, messaging],                                   3).
 themes2(theory,           [mathematics, model, frameworks],                                                       3).
 themes2(interface_locale, [tilting_table, shape_displays, visual_displays],                                       3).
 themes2(fabrication,      [rapid_prototyping],                                                                    1).
@@ -113,7 +114,7 @@ themes2(misc,             [control_system, digitalisation, illiterate_programmer
 
 %%%%%%%%%%%%%%%%%%%%%%%% Themes 2 %%%%%%%%%%%%%%%%%%%%%%%%
 
-contribution(ro,  'Keynote', ['Tom Rodden', 'University of Nottingham', uk], [])
+contribution(ro,  'Keynote', ['Tom Rodden', 'University of Nottingham', uk], []).
 contribution(bwd, 'A Handle on What's Going On: Combining Tangible Interfaces and Ambient Displays for Collaborative Groups',
                             [['Johanna Brewer',  'University of California, Irvine', usa],
                              ['Amanda Williams', 'University of California, Irvine', usa],
