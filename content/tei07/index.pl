@@ -95,18 +95,21 @@ themes2([title, abbrev, keywords, numPapers], 'Physicality', physicality,
 themes2([title, abbrev, keywords, numPapers], 'Collaboration', collaboration, 
   [cscw, collaboration, group_awareness, social_interaction],                                     5).
 
-    use_context:   {kw: [industrial configuration, pneumatics, refrigeration technicians, 
-                         system maintenance, work practice, travel, digital video editing, 
-                         multihandicapped children],                                         p: 5}
+themes2([title, abbrev, keywords, numPapers], 'Use context', use_context,
+  [industrial_configuration, pneumatics, refrigeration_technicians, system_maintenance, 
+   work_practice, travel, digital_video_editing, multihandicapped_children],                      5).
 
-    consciousness: {kw: [biofeedback, emotional awareness, empathy, identity, intuitivity],  p: 4}
+themes2([title, abbrev, keywords, numPapers], 'Consciousness', consciousness,
+  [biofeedback, emotional_awareness, empathy, identity, intuitivity],                             4).
 
-    cognition:     {kw: [cognitive development, distributed cognition, image schemas, 
-                         embodied cognition, passive awareness],                             p: 4}
-    philosophy:    {kw: [action research, adaptability, contemplation, phenomenology],       p: 4}
+themes2([title, abbrev, keywords, numPapers], 'Cognition', cognition, [cognitive_development, 
+   distributed_cognition, image_schemas, embodied_cognition, passive_awareness],                  4).
 
-    place:         {kw: [home, domestic technology, location-based design, 
-                         location-based narrative, public space],                            p: 4}
+themes2([title, abbrev, keywords, numPapers], 'Philosophy', philosophy,
+  [action research, adaptability, contemplation, phenomenology],                                  4).
+
+themes2([title, abbrev, keywords, numPapers], 'Place', place, [home, domestic_technology, 
+   location_based_design, location_based_narrative, public_space],                                4).
 
     play:          {kw: [play, game heuristics, edutainment, interactive toys],              p: 3} 
 
