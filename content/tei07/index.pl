@@ -33,23 +33,25 @@ themes1('Body Movements', bm,
 
 %%%%%%%%%%%%%%%%%%%%%%%% Sessions %%%%%%%%%%%%%%%%%%%%%%%%
 
-session([title, abbrev, papers, chair], 'Two Minute Madness (1)', tmm1, 
-      [ehl, lkm, db, lcgs, bvhhb, r, jgak, hj, dh, daw, ss, j],    'Matthias Kranz').
-    
-session([title, abbrev, papers, chair], 'Two Minute Madness (2)', tmm2, 
-      [rtsi, kb, mkm, vg, s, mn, s, vfh, gshesj, f, bsh, kmhrbrs], 'Matthias Kranz').
+schema(session, [title, abbrev, papers, chair]).
+
+session('Two Minute Madness (1)', tmm1, [ehl, lkm, db, lcgs, bvhhb, r, jgak, hj, dh, daw, ss, j],    'Matthias Kranz').
+session('Two Minute Madness (2)', tmm2, [rtsi, kb, mkm, vg, s, mn, s, vfh, gshesj, f, bsh, kmhrbrs], 'Matthias Kranz').
 
 %%%%%%%%%%%%%%%%%%%%%%%% Continents %%%%%%%%%%%%%%%%%%%%%%%%
 
-continent([name, abbrev1, abbrev2, countries], 'Europe',        europe,   E, 
-          [germany, uk, denmark, netherlands, sweden, switzerland, spain, finland, italy]).
-continent([name, abbrev1, abbrev2, countries], 'Asia',          asia,     I, [japan, southKorea]).
-continent([name, abbrev1, abbrev2, countries], 'Africa',        africa,   F, [southAfrica]).
-continent([name, abbrev1, abbrev2, countries], 'Oceania',       oceania,  O, [newZealand, australia]).
-continent([name, abbrev1, abbrev2, countries], 'North America', namerica, N, [usa, canada]).
-continent([name, abbrev1, abbrev2, countries], 'South America', samerica, S, [colombia]).
+schema(continent, [name, abbrev1, abbrev2, countries]).
+
+continent('Europe',        europe,   E, [germany, uk, denmark, netherlands, sweden, switzerland, spain, finland, italy]).
+continent('Asia',          asia,     I, [japan, southKorea]).
+continent('Africa',        africa,   F, [southAfrica]).
+continent('Oceania',       oceania,  O, [newZealand, australia]).
+continent('North America', namerica, N, [usa, canada]).
+continent('South America', samerica, S, [colombia]).
 
 %%%%%%%%%%%%%%%%%%%%%%%% Themes 2 %%%%%%%%%%%%%%%%%%%%%%%%
+
+schema(themes2, [title, abbrev, keywords, numPapers]).
 
 themes2([title, abbrev, keywords, numPapers], 'Tangible UI', tangible_ui,   
   [tui, tangibility, tangible_UIs, tangible_computing, tangible_interaction, 
