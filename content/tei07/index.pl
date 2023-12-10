@@ -233,47 +233,35 @@ contribution(hi, 'Image Schemas and Their Metaphorical Extensions: Intuitive Pat
                      ['Johann Habakuk Israel', 'Fraunhofer-Institute for Production Systems and Design Technology IPK', germany]],
                      [tangible_user_interfaces, intuitivity, image_schemas, metaphor, embodiment]).
 
-contribution(mo:
-title: "Keep in Touch: A Tactile-Vision Intimate Interface"
-authors:
-  [Nima Motamedi, Simon Fraser University, Canada]
-keywords: [intimacy, tactile, sensorial interfaces, sensory mapping]
+contribution(mo, 'Keep in Touch: A Tactile-Vision Intimate Interface',
+                             ['Nima Motamedi', 'Simon Fraser University', canada],
+                             [intimacy, tactile, sensorial_interfaces, sensory_mapping]).
 
-contribution(dh:
-title: Lessons from an AR Book study
-authors:
-  [Andreas Dünser, HIT Lab NZ, University of Canterbury, New Zealand]
-  [Eva Hornecker,  HIT Lab NZ, University of Canterbury, New Zealand]
-keywords: [reading, augmented reality, interactive book, children]
+contribution(dh, 'Lessons from an AR Book study'
+                            [[Andreas Dünser, HIT Lab NZ, University of Canterbury, New Zealand],
+                             [Eva Hornecker,  HIT Lab NZ, University of Canterbury, New Zealand]],
+                             [reading, augmented_reality, interactive_book, children]).
 
-contribution(sn:
-title: "PaperPoint: A Paper-Based Presentation and Interactive Paper Prototyping Toolkit"
-authors:
-  [Beat Signer,  ETH Zurich, Switzerland]
-  [Moira Norrie, ETH Zurich, Switzerland]
-keywords: [paper user interface, presentation tool, rapid prototyping, pen-based input]
+contribution(sn, 'PaperPoint: A Paper-Based Presentation and Interactive Paper Prototyping Toolkit',
+                            [['Beat Signer',  'ETH Zurich', switzerland],
+                             ['Moira Norrie', 'ETH Zurich', switzerland]],
+                             [paper_user_interface, presentation_tool, rapid_prototyping, pen_based_input]).
 
-contribution(pa:
-title: >
-  .. "Physical Interventions in a Location Based Cultural Narrative: "
-  ..   "A Case Study of Embedded Media in Public Space Installations"
-authors:
-  [Amanda Parkes,   MIT Media Lab,             USA]
-  [Jussi Angesleva, University of Arts Berlin, Germany]
-keywords: [embedded interaction, visual displays, thermochromic displays, location-based narrative]
+contribution(pa, 'Physical Interventions in a Location Based Cultural Narrative: A Case Study of Embedded Media in Public Space Installations',
+                            [['Amanda Parkes',   'MIT Media Lab',             usa],
+                             ['Jussi Angesleva', 'University of Arts Berlin', germany]],
+                             [embedded_interaction, visual_displays, thermochromic_displays, location_based_narrative]).
 
-contribution(snkbssap:
-title: "PillowTalk: Can We Afford Intimacy?"
-authors:
-  [Thecla Schiphorst, Simon Fraser University,              Canada]
-  [Frank Nack,        V2_ Institute for the Unstable Media, Netherlands]
-  [Michiel Kauwatjoe, V2_ Institute for the Unstable Media, Netherlands]
-  [Simon de Bakker,   V2_ Institute for the Unstable Media, Canada]
-  [Stock Stock,       V2_ Institute for the Unstable Media, Netherlands]
-  [Hielke Schut,      Eindhoven University of Technology,   Netherlands]
-  [Lora Aroyo,        Eindhoven University of Technology,   Netherlands]
-  [Angel Perez,       Eindhoven University of Technology,   Netherlands]
-keywords: [social intimacy, tactile interface, somatics, movement analysis, 
+contribution(snkbssap, 'PillowTalk: Can We Afford Intimacy?',
+                            [[Thecla Schiphorst, Simon Fraser University,              Canada]
+                             [Frank Nack,        V2_ Institute for the Unstable Media, Netherlands]
+                             [Michiel Kauwatjoe, V2_ Institute for the Unstable Media, Netherlands]
+                             [Simon de Bakker,   V2_ Institute for the Unstable Media, Canada]
+                             [Stock Stock,       V2_ Institute for the Unstable Media, Netherlands]
+                             [Hielke Schut,      Eindhoven University of Technology,   Netherlands]
+                             [Lora Aroyo,        Eindhoven University of Technology,   Netherlands]
+                             [Angel Perez,       Eindhoven University of Technology,   Netherlands]
+                             [social intimacy, tactile interface, somatics, movement analysis, 
            Laban effort-shape, tangible UIs, art/design installation, play, 
            social interaction, user experience, ambient environment, choreography of interaction]
 
