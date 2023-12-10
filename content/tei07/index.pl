@@ -155,7 +155,9 @@ contribution(sh, 'Beyond video: choosing the right medium for a media rich inter
                             [branding, slide_projectors, medium_selection]).
 
 contribution(fr, 'CabBoots: Shoes with integrated Guidance System'
-                            ['Martin Frey', 'UdK Berlin', germany], []).
+                            ['Martin Frey', 'UdK Berlin', germany], 
+                            [human_machine_interface, haptic_interface, tangible_interface,
+                             tactile_feedback, guidance_system, augmented reality]).
 
 contribution(mn, 'Collaborative Ambient Systems by Blow Displays'
                            [['Mitsuru Minakuchi', 'National Institute of Information and Communications Technology', japan],
@@ -475,27 +477,14 @@ session(tmm2, sh,  'Brand consciousness as a driving design force',             
 session(tmm2, vfh, 'TagTiles: optimal challenge in educational electronics',
                                                              ['Janneke Verhaegh', 'Willem Fontijn', 'Jettie Hoonhout']).
 
-session(tmm2, 
-gshesj:
-  title:   "Smart Blocks: A Tangible Mathematical Manipulative"
-  authors: [Audrey Girouard, Erin Treacy Solovey, Leanne Hirshfield, Stacey Ecott, Orit Shaer, Robert Jacob]
+session(tmm2, gshesj, 'Smart Blocks: A Tangible Mathematical Manipulative',
+         ['Audrey Girouard', 'Erin Treacy Solovey', 'Leanne Hirshfield', 'Stacey Ecott', 'Orit Shaer', 'Robert Jacob']).
 
-session(tmm2, 
-fr:
-  title:    "CabBoots: Shoes with integrated Guidance System"
-  authors:  [Martin Frey]
-  keywords: [human-machine interface, haptic interface, tangible interface,
-             tactile feedback, guidance system, augmented reality]
+session(tmm2, fr,  'CabBoots: Shoes with integrated Guidance System',                                   ['Martin Frey']).
+session(tmm2, bsh, 'When is Role Playing really experiential? Case studies',
+                                                                  ['Stella Boess', 'Daniel Saakes', 'Caroline Hummels']).
 
-session(tmm2, 
-bsh:
-  title: When is Role Playing really experiential? Case studies
-  authors: [Stella Boess, Daniel Saakes, Caroline Hummels]
-
-session(tmm2, 
-kmhrbrs:
-  title: Context-Aware Kitchen Utilities
-  authors: [Matthias Kranz, Alexis Maldonado, Benedikt Hörnler, Radu Rusu, Michael Beetz, 
-            Gerhard Rigoll, Albrecht Schmidt]
+session(tmm2, kmhrbrs, 'Context-Aware Kitchen Utilities', ['Matthias Kranz', 'Alexis Maldonado', 'Benedikt Hörnler', 
+                                                    'Radu Rusu', 'Michael Beetz', 'Gerhard Rigoll', 'Albrecht Schmidt']).
 
 %%% end %%%
