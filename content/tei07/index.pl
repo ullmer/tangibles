@@ -53,22 +53,19 @@ continent('South America', samerica, S, [colombia]).
 
 schema(themes2, [title, abbrev, keywords, numPapers]).
 
-themes2([title, abbrev, keywords, numPapers], 'Tangible UI', tangible_ui,   
-  [tui, tangibility, tangible_UIs, tangible_computing, tangible_interaction, 
-   tangible_interface, tangible_interfaces, tangible_user_interface, tangible_user_interfaces],  24).
+themes2('Tangible UI', tangible_ui, [tui, tangibility, tangible_UIs, tangible_computing, tangible_interaction, 
+                       tangible_interface, tangible_interfaces, tangible_user_interface, tangible_user_interfaces],    24).
 
-themes2([title, abbrev, keywords, numPapers], 'Paradigms', paradigms,     
-  [augmented_reality, distributed_physical_user_interfaces, paper_user_interface, 
-   ubiquitous_computing, responsive_environments, spatial_interaction, 
-   siftable_computing_interface, tabletop_sensing, tabletop_interaction, tabletop_interfaces],   11).
+themes2('Paradigms', paradigms, [augmented_reality, distributed_physical_user_interfaces, paper_user_interface, 
+                     ubiquitous_computing, responsive_environments, spatial_interaction, siftable_computing_interface, 
+                     tabletop_sensing, tabletop_interaction, tabletop_interfaces],                                     11).
 
-themes2([title, abbrev, keywords, numPapers], 'Interaction', interaction,     
-  [interaction_techniques, interaction, interactive_book, interactive_installation, interactive_toys, 
-   explicit_interaction, interactive_video_and_sound_installation, embedded_interaction],        11).
+themes2('Interaction', interaction, [interaction_techniques, interaction, interactive_book, interactive_installation, 
+                                     interactive_toys, explicit_interaction, interactive_video_and_sound_installation, 
+                                     embedded_interaction],                                                            11).
 
-themes2([title, abbrev, keywords, numPapers], 'Design', design,        
-  [design_process, design_research, design, interaction_design, 
-   product_design, communication_design, complex_products],                                      10).
+themes2('Design', design, [design_process, design_research, design, interaction_design, 
+                           product_design, communication_design, complex_products],                                    10).
 
 themes2([title, abbrev, keywords, numPapers], 'Education', education,
   [montessori_inspired_manipulatives, children, digital_manipulatives, manipulatives,
