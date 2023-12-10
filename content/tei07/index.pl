@@ -399,39 +399,33 @@ contribution(mk, 'Towards Sensor Network User Interfaces'
                                sensor_network, siftable_computing_interface]).
 
 contribution(sm, 'Using Magnets in Physical Blocks That Behave As Programming Objects'
-                              
-  [Andrew Smith, African Advanced Institute for Information & Communications Technology, South Africa]
-                              
-keywords: [TUI, digital manipulatives, Montessori-inspired manipulatives, illiterate programmer]
+                       ['Andrew Smith', 'African Advanced Institute for Information & Communications Technology', southAfrica],
+                       [tui, digital_manipulatives, montessori_inspired_manipulatives, illiterate_programmer]).
 
-contribution(mrgk:
-title: Using Personal Objects as Tangible Interfaces for Memory Recollection and Sharing
-authors:
-                              
-  [Elena Mugellini,  University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
-                              
-  [Elisa Rubegni,    University of Siena, Italy]
-                              
-  [Sandro Gerardi,   University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
-                              
-  [Omar Abou Khaled, University of Applied Sciences of Western Switzerland, Fribourg, Switzerland]
-keywords: [HCI, tangible user interface, personal objects, user-oriented framework, model, markup language]
+contribution(mrgk, 'Using Personal Objects as Tangible Interfaces for Memory Recollection and Sharing',
+                      [['Elena Mugellini',  'University of Applied Sciences of Western Switzerland, Fribourg', switzerland]
+                       ['Elisa Rubegni',    'University of Siena',                                             italy]
+                       ['Sandro Gerardi',   'University of Applied Sciences of Western Switzerland, Fribourg', switzerland]
+                       ['Omar Abou Khaled', 'University of Applied Sciences of Western Switzerland, Fribourg', switzerland]
+                       [hci, tangible_user_interface, personal_objects, user_oriented_framework, model, markup_language]).
 
-contribution(svgs:
-title: "VoodooFlash: Authoring across Physical and Digital Form"
-authors:
-  [Wolfgang Spiessl, University of Munich, Germany]
-  [Nicolas Villar,   Lancaster University, UK]
-  [Hans Gellersen,   Lancaster University, UK]
-  [Albrecht Schmidt, University of Munich, Germany]
-keywords: [product design, physical interfaces, authoring tools, Flash]
+contribution(svgs: 'VoodooFlash: Authoring across Physical and Digital Form',
+                             [[Wolfgang Spiessl, University of Munich, Germany],
+                              [Nicolas Villar,   Lancaster University, UK],
+                              [Hans Gellersen,   Lancaster University, UK],
+                              [Albrecht Schmidt, University of Munich, Germany]],
+                              [product design, physical interfaces, authoring tools, Flash]
 
 contribution(bsh:
 title: When is Role Playing really experiential? Case studies
 authors:
+                              
   [Stella Boess,     Delft University of Technology, Netherlands]
+                              
   [Daniel Saakes,    Delft University of Technology, Netherlands]
+                              
   [Caroline Hummels, Delft University of Technology, Netherlands]
+                              
 keywords: [role playing, design process, experience, empathy]
 contribution(
 contribution(twoMinuteMadness1: 
