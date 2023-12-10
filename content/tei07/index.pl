@@ -428,6 +428,7 @@ session(tmm1, eho, 'Reclaiming Public Space: Designing for Public Interaction wi
 session(tmm1, lka, 'Tilting Table: A Movable Screen',
                    ['Hyun-Jean Lee', 'Madhur Khandelwal', 'Ali Mazalek']).
 
+session(tmm1, 
 db:
   title:   >
      .."The Card Box at Hand: Exploring the Potentials of a Paper-Based Tangible Interface "
@@ -436,100 +437,120 @@ db:
   keywords: [tabletop tangible interface, paper card interface, digital art history, 
              creativity support tool, information visualization]
 
+session(tmm1, 
 lcgs:
   title:   "The Meatbook: Tangible and Visceral Interaction"
   authors:  [Aaron Levisohn, Jayme Cochrane, Diane Gromala, Jinsil Seo]
   keywords: [Tangible interfaces for artworks, organic-inorganic interfaces]
 
+session(tmm1, 
 bvhhb: 
   title:    "Weathergods: tangible interaction in a digital tabletop game" 
   authors:  [Saskia Bakker, Debby Vorstenbosch, Elise van den Hoven, Gerard Hollemans, Tom Bergman]
   keywords: [interaction design, digital tabletop gaming, tangible user interfaces, 
              pervasive games, tangible interaction]
 
+session(tmm1, 
 re:
   title:   Giving Materials a Voice
   authors: [Hannah Regier]
 
+session(tmm1, 
 jgak:
   title: "The reacTable: Exploring the Synergy between Live Music Performance and Tabletop Tangible Interfaces"
   authors: [Sergi Jorda, Günter Geiger, Marcos Alonso, Martin Kaltenbrunner]
   media:   [https://tei.acm.org/2007/program/JordaEtAl_Reactable.wmv]
 
+session(tmm1, 
 hj:
   title:   Designing Tangible Programming Languages for Classroom Use
   authors: [Michael Horn, Robert Jacob]
 
+session(tmm1, 
 dh:
   title:   Lessons from an AR Book study
   authors: [Andreas Dünser, Eva Hornecker]
 
+session(tmm1, 
 daw:
   title:   Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children
   authors: [Milena Droumeva, Alissa Antle, Ron Wakkary]
 
+session(tmm1, 
 sc:
   title:   Freequent Traveller 
   authors: [Susanne Schuricht, Tobias Schmidt]
   media:   [http://sushu.de/free/, https://tei.acm.org/2007/program/SusanneSchuricht_FrequentTraveller.pdf]
 
+session(tmm1, 
 je:
   title:    A Physical Approach to Tangible Interaction Design
   authors:  [Mads Jensen]
   keywords: [tangible interaction, physicality, interaction qualities, physical metaphor, video action wall]
 
-contribution(twoMinuteMadness2:
+session(tmm2, 
 rtsi: 
   title:   Remote Active Tangible Interactions 
   authors: [Jan Richter, Bruce Thomas, Maki Sugimoto, Masahiko Inami]
   media:   [https://tei.acm.org/2007/program/RemoteActiveTangibleInteractions.pdf]
 
+session(tmm2, 
 kb:
   title:   "reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction"
   authors: [Martin Kaltenbrunner, Ross Bencina]
 
+session(tmm2, 
 mkm:
   title:   "Siftables: Towards Sensor Network User Interfaces"
   authors: [David Merrill, Jeevan Kalanithi, Pattie Maes]
 
+session(tmm2, 
 vg:
   title:   A Malleable Control Structure for Softwired User Interfaces
   authors: [Nicolas Villar, Hans Gellersen]
 
+session(tmm2, 
 sm:
   title:   Using Magnets in Physical Blocks That Behave As Programming Objects
   authors: Andrew Smith
 
+session(tmm2, 
 mn:
   title:   Collaborative Ambient Systems by Blow Displays
   authors: [Mitsuru Minakuchi, Satoshi Nakamura]
 
+session(tmm2, 
 sh:
   title:    Brand consciousness as a driving design force
   authors:  Peter Shultz
   keywords: [branding, slide projectors, medium selection]
 
+session(tmm2, 
 vfh:
   title:   "TagTiles: optimal challenge in educational electronics"
   authors: [Janneke Verhaegh, Willem Fontijn, Jettie Hoonhout]
 
+session(tmm2, 
 gshesj:
   title:   "Smart Blocks: A Tangible Mathematical Manipulative"
   authors: [Audrey Girouard, Erin Treacy Solovey, Leanne Hirshfield, Stacey Ecott, Orit Shaer, Robert Jacob]
 
+session(tmm2, 
 fr:
   title:    "CabBoots: Shoes with integrated Guidance System"
   authors:  [Martin Frey]
   keywords: [human-machine interface, haptic interface, tangible interface,
              tactile feedback, guidance system, augmented reality]
 
+session(tmm2, 
 bsh:
   title: When is Role Playing really experiential? Case studies
   authors: [Stella Boess, Daniel Saakes, Caroline Hummels]
 
+session(tmm2, 
 kmhrbrs:
   title: Context-Aware Kitchen Utilities
   authors: [Matthias Kranz, Alexis Maldonado, Benedikt Hörnler, Radu Rusu, Michael Beetz, 
             Gerhard Rigoll, Albrecht Schmidt]
 
-### end ###
+%%% end %%%
