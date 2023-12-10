@@ -362,34 +362,19 @@ contribution(lre, 'The Feel Dimension of Technology Interaction: Exploring Tangi
                               [body, embodiment, interaction, interaction_design, kinesthetic_sense, movement, 
                                phenomenology, tangibility, touch]).
 
-contribution(lcgs:
-title: "The Meatbook: Tangible and Visceral Interaction"
-authors:
-                              
-  [Aaron Levisohn, Simon Fraser University, Canada]
-                              
-  [Jayme Cochrane, Simon Fraser University, Canada]
-                              
-  [Diane Gromala,  Simon Fraser University, Canada]
-                              
-  [Jinsil Seo,     Simon Fraser University, Canada]
+contribution(lcgs, 'The Meatbook: Tangible and Visceral Interaction',
+                             [['Aaron Levisohn', 'Simon Fraser University', canada]
+                              ['Jayme Cochrane', 'Simon Fraser University', canada]
+                              ['Diane Gromala',  'Simon Fraser University', canada]
+                              ['Jinsil Seo',     'Simon Fraser University', canada]], []).
 
-contribution(jgka:
-title:
-  "The reacTable: Exploring the Synergy between Live Music Performance and Tabletop Tangible Interfaces"
-authors:
-                              
-  [Sergi Jorda, Pompeu Fabra University, Spain]
-                              
-  [Günter Geiger, Pompeu Fabra University, Spain]
-                              
-  [Martin Kaltenbrunner, Pompeu Fabra University, Spain]
-                              
-  [Marcos Alonso, Pompeu Fabra University, Spain]
-                              
-keywords: [tangible interfaces, tabletop interfaces, musical instrument, 
-                              
-           musical performance, design, interaction techniques]
+contribution(jgka, 'The reacTable: Exploring the Synergy between Live Music Performance and Tabletop Tangible Interfaces',
+                             [['Sergi Jorda',          'Pompeu Fabra University', spain],
+                              ['Günter Geiger',        'Pompeu Fabra University', spain],
+                              ['Martin Kaltenbrunner', 'Pompeu Fabra University', spain],
+                              ['Marcos Alonso',        'Pompeu Fabra University', spain]],
+                              [tangible_interfaces, tabletop_interfaces, musical_instrument, 
+                               musical_performance, design, interaction_techniques]).
 
 contribution(zhsj:
 title: "The Tangible Video Editor: Collaborative Video Editing with Active Tokens"
