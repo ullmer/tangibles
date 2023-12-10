@@ -124,15 +124,15 @@ contribution(bwd, 'A Handle on What's Going On: Combining Tangible Interfaces an
 contribution(kmhrbrs, 'A Knife and a Cutting Board as Implicit User Interface: Towards Context-Aware Kitchen Utilities',
                             [['Matthias Kranz',   'University of Munich',           germany],
                              ['Alexis Maldonado', 'Technische Universität München', germany],
-			     ['Benedikt Hörnler', 'Technische Universität München', germany],
-			     ['Radu Rusu',        'Technische Universität München', germany],
-			     ['Michael Beetz',    'Technische Universität München', germany],
-			     ['Gerhard Rigoll',   'Technische Universität München', germany],
-			     ['Albrecht Schmidt', 'University of Munich',           germany]], []).
+                             ['Benedikt Hörnler', 'Technische Universität München', germany],
+                             ['Radu Rusu',        'Technische Universität München', germany],
+                             ['Michael Beetz',    'Technische Universität München', germany],
+                             ['Gerhard Rigoll',   'Technische Universität München', germany],
+                             ['Albrecht Schmidt', 'University of Munich',           germany]], []).
 
 contribution(vg, 'A Malleable Control Structure for Softwired User Interfaces',
                            [['Nicolas Villar', 'Lancaster University', uk]
-			    ['Hans Gellersen', 'Lancaster University', uk]], []).
+                            ['Hans Gellersen', 'Lancaster University', uk]], []).
 
 contribution(je, 'A Physical Approach to Tangible Interaction Design',
                             ['Mads Jensen', 'University of Southern Denmark', denmark], []).
@@ -145,9 +145,9 @@ contribution(er, 'A Tangible User Interface for Multi-User Awareness Systems'
 
 contribution(pno, 'Actuation and Tangible User Interfaces: Vaucanson duck, Robots and Shape Displays',
                            [['Ivan Poupyrev',    'Sony CSL',           japan]
-			    ['Tatsushi Nashida', 'Sony Design Center', japan]
-			    ['Makoto Okabe',     'Tokyo University',   japan]],
-			    [haptics, shape_displays, interaction, collaboration]).
+                            ['Tatsushi Nashida', 'Sony Design Center', japan]
+                            ['Makoto Okabe',     'Tokyo University',   japan]],
+                            [haptics, shape_displays, interaction, collaboration]).
 
 contribution(sh, 'Beyond video: choosing the right medium for a media rich interaction'
                             ['Peter Shultz', 'Art Center College of Design', usa], []).
@@ -157,35 +157,35 @@ contribution(fr, 'CabBoots: Shoes with integrated Guidance System'
 
 contribution(mn, 'Collaborative Ambient Systems by Blow Displays'
                            [['Mitsuru Minakuchi', 'National Institute of Information and Communications Technology', japan],
-			    ['Satoshi Nakamura',  'National Institute of Information and Communications Technology', japan]],
-			    [ambient_display, haptic_interface]).
+                        ['Satoshi Nakamura',  'National Institute of Information and Communications Technology', japan]],
+                        [ambient_display, haptic_interface]).
 
 contribution(hfamop, 'Design Research & Tangible Interaction',
                            [['Elise van den Hoven',  'Eindhoven University of Technology', netherlands],
-			    ['Joep Frens',           'Eindhoven University of Technology', netherlands],
-			    ['Dima Aliakseyeu',      'Eindhoven University of Technology', netherlands],
-			    ['Jean-Bernard Martens', 'Eindhoven University of Technology', netherlands],
-			    ['Kees Overbeeke',       'Eindhoven University of Technology', netherlands],
-			    ['Peter Peters',         'Eindhoven University of Technology', netherlands]],
-			    [design, tangible_interaction, action_research, design_research, 
-			     embodied_interaction, product_design]).
+                          ['Joep Frens',           'Eindhoven University of Technology', netherlands],
+                        ['Dima Aliakseyeu',      'Eindhoven University of Technology', netherlands],
+                        ['Jean-Bernard Martens', 'Eindhoven University of Technology', netherlands],
+                        ['Kees Overbeeke',       'Eindhoven University of Technology', netherlands],
+                        ['Peter Peters',         'Eindhoven University of Technology', netherlands]],
+                        [design, tangible_interaction, action_research, design_research, 
+                         embodied_interaction, product_design]).
 
 contribution(hhv, 'Designing for Diversity: Developing Complex Adaptive Tangible Products',
                            [['Bart Hengeveld',   'University of Technology Delft',               netherlands],
-			    ['Caroline Hummels', 'University of Technology Delft',               netherlands],
-			    ['Riny Voort',       'Viataal-Research, Development & Support, RDS', netherlands]],
-			    [interactive_toys, adaptability, tangible_interaction, 
-			     multihandicapped_children, complex_products, edutainment]).
+                        ['Caroline Hummels', 'University of Technology Delft',               netherlands],
+                        ['Riny Voort',       'Viataal-Research, Development & Support, RDS', netherlands]],
+                        [interactive_toys, adaptability, tangible_interaction, 
+                         multihandicapped_children, complex_products, edutainment]).
 
 contribution(hr, 'Designing Tangible Programming Languages for Classroom Use'
                            [['Michael Horn', 'Tufts University', usa],
-			    ['Robert Jacob', 'Tufts University', usa]],
-			    [tangible_UIs, education, children, programming_languages]).
+                        ['Robert Jacob', 'Tufts University', usa]],
+                        [tangible_UIs, education, children, programming_languages]).
 
 contribution(ms, 'Distributed Physical Interfaces With Shared Phidgets'
                            [['Nicolai Marquardt', 'Bauhaus-University Weimar', germany],
-			    ['Saul Greenberg',    'University of Calgary',      canada]],
-			    [distributed_physical_user_interfaces, phidgets]).
+                        ['Saul Greenberg',    'University of Calgary',      canada]],
+                        [distributed_physical_user_interfaces, phidgets]).
 
 contribution(ma, 'Do tangible interfaces enhance learning?',
                             ['Paul Marshall', 'Open University', uk],
@@ -193,31 +193,26 @@ contribution(ma, 'Do tangible interfaces enhance learning?',
 
 contribution(slelo, 'Explicit interaction for surgical rehabilitation',
                            [['Tomas Sokoler',       'Malmö University', sweden],
-			    ['Jonas Löwgren',       'Malmö University', sweden],
-			    ['Mette Agger Eriksen', 'Malmö University', sweden],
-			    ['Per Linde',           'Malmö University', sweden],
-			    ['Stefan Olofsson',     'Malmö University', sweden]],
-			    [explicit_interaction, ubiquitous computing, interaction design, use qualities]).
+                        ['Jonas Löwgren',       'Malmö University', sweden],
+                        ['Mette Agger Eriksen', 'Malmö University', sweden],
+                        ['Per Linde',           'Malmö University', sweden],
+                        ['Stefan Olofsson',     'Malmö University', sweden]],
+                        [explicit_interaction, ubiquitous computing, interaction design, use qualities]).
 
-contribution(daw:
-title: Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children
-authors:
-  [Milena Droumeva, Simon Fraser Unversity, Canada]
-  [Alissa Antle,    Simon Fraser University, Canada]
-  [Ron Wakkary,     Simon Fraser University, Canada]
-keywords: [children, sound feedback, interaction, responsive environments, 
-           participatory design, collaboration]
+contribution(daw, 'Exploring Ambient Sound Techniques in the Design of Responsive Environments for Children'
+                           [['Milena Droumeva', 'Simon Fraser University', canada],
+                        ['Alissa Antle',    'Simon Fraser University', canada],
+                        ['Ron Wakkary',     'Simon Fraser University', canada]],
+                        [children, sound_feedback, interaction, responsive_environments, 
+                         participatory_design, collaboration]).
 
-contribution(ss:
-title: Freequent Traveller
-authors:
-  [Susanne Schuricht, University of the Arts Berlin, Germany]
-  [Tobias Schmidt,    University of the Arts Berlin, Germany]
-cowriters:
-  [Michael Hohl,      Sheffield Hallam University,                   UK]
-  [Mirjam Struppek,   Interactionfield, Urban Media Research Berlin, Germany]
-keywords: [interactive installation, mobility, home, identity, embodied experience, 
-           biofeedback, communication, digitalisation, travel, contemplation]
+contribution(ss, 'Freequent Traveller', 
+                           [['Susanne Schuricht', 'University of the Arts Berlin',                 germany],
+                        ['Tobias Schmidt',    'University of the Arts Berlin',                 germany],
+                        ['Michael Hohl',      'Sheffield Hallam University',                        uk],
+                        ['Mirjam Struppek',   'Interactionfield, Urban Media Research Berlin', germany]]
+                        [interactive_installation, mobility, home, identity, embodied_experience, 
+                          biofeedback, communication, digitalisation, travel, contemplation]).
 
 contribution(mo:
 title: >
