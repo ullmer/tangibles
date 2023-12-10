@@ -8,15 +8,22 @@ content:
     addresses: [https://tei.acm.org/2007/program/TwoMinuteMadness_1.pdf,
                 https://tei.acm.org/2007/program/TwoMinuteMadness_2.pdf]
 
-  sessions: 
-    Connectedness:                                {papers: [er, m],                   chair: Ali Mazalek}
-    Integrating the Virtual and the Physical:     {papers: [pa, svgs, sn, eng],       chair: Trevor Pering} 
-    The Expressive Character of Interaction:      {papers: [hamop, slelo, cgzi, hi],  chair: Peter Gall Krogh}
+  chapters: 
+    Connectedness:                                {papers: [bwd, er, mg, mo, snkbsars, bwd, mg, mk ehlo, rtsi, zhsj],
+                                                   chairs: [Ali Mazalek, Martin Kaltenbrunner]}
+
+    Integrating the Virtual and the Physical:     {papers: [vg, sn, pa, mb, dkm, eng, db, lcgs, lkm, svgs],       
+                                                   chair: Trevor Pering} 
+
+    The Expressive Character of Interaction:      {papers: [sh, mn, hfamop, re, hi, cgzi, jgak, sm, bvhhb]
+                                                   chair: Peter Gall Krogh}
+
     Learning through Physical Interaction:        {papers: [m, km, hhv, a],           chair: Orit Shaer}
-    Connectedness:                                {papers: [zhsj, snkbsars, bwd, mg], chair: Martin Kaltenbrunner}
+    Connectedness:                                {papers: [zhsj, 
     Body Movements:                               {papers: [paw, rhkcl, lre, m],      chair: Thecla Schiphorst}
     Context Dependency and Physical Adaptability: {papers: [scb, mrgk, pno, b],       chair: Nicolas Villar}
 
+  sessions: 
     Two Minute Madness (1): 
       papers: [ehl, lkm, db, lcgs, bvhhb, r, jgak, hj, dh, daw, ss, j]
       chair: Matthias Kranz
@@ -344,7 +351,7 @@ content:
         - [Ross Bencina,         Sonic Fritter Pty Ltd,    Australia]
       keywords: [tangible user interface, computer vision, application development framework]
 
-    ehl:
+    ehlo:
       title: Reclaiming Public Space - [Designing for Public Interaction with Private Devices
       authors:
         - [Eva Eriksson,            Chalmers University of Technology, Sweden]
