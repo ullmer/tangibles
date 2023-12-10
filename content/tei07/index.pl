@@ -215,12 +215,12 @@ contribution(ss, 'Freequent Traveller',
                            [['Susanne Schuricht', 'University of the Arts Berlin',                 germany],
                             ['Tobias Schmidt',    'University of the Arts Berlin',                 germany],
                             ['Michael Hohl',      'Sheffield Hallam University',                        uk],
-                            ['Mirjam Struppek',   'Interactionfield, Urban Media Research Berlin', germany]]
+                            ['Mirjam Struppek',   'Interactionfield, Urban Media Research Berlin', germany]],
                             [interactive_installation, mobility, home, identity, embodied_experience, 
                              biofeedback, communication, digitalisation, travel, contemplation]).
 
 contribution(mo, 'From Hand-Held to Body-Worn: Embodied Experiences of the Design and Use of a Wearable Movement-Based Interaction Concept',
-                           ['Jin Moen', 'Interactive Institute; Moement R&D', sweden]
+                           ['Jin Moen', 'Interactive Institute; Moement R&D', sweden],
                            [movement_quality, movement_based_interaction, kinesthetics, 
                             wearable_artifacts, embodied_interaction, social_context_of_use]).
 
@@ -228,7 +228,7 @@ contribution(pwa, 'Gesture Connect: Facilitating Tangible Interaction With a Fli
                            [['Trevor Pering',  'Intel Research',           usa],
                             ['Roy Want',       'Intel Research',           usa],
                             ['Yaw Anokwa',     'University of Washington', usa]],
-                            [NFC, physical gestures, mobile phones, tangible interaction]).
+                            [nfc, physical_gestures, mobile_phones, tangible_interaction]).
 
 contribution(re, 'Giving Materials a Voice',
                             ['Hannah Regier', 'Art Center College of Design', usa],
@@ -243,9 +243,9 @@ contribution(mo, 'Keep in Touch: A Tactile-Vision Intimate Interface',
                              ['Nima Motamedi', 'Simon Fraser University', canada],
                              [intimacy, tactile, sensorial_interfaces, sensory_mapping]).
 
-contribution(dh, 'Lessons from an AR Book study'
-                            [[Andreas Dünser, HIT Lab NZ, University of Canterbury, New Zealand],
-                             [Eva Hornecker,  HIT Lab NZ, University of Canterbury, New Zealand]],
+contribution(dh, 'Lessons from an AR Book study',
+                            [['Andreas Dünser', 'HIT Lab NZ, University of Canterbury', newZealand],
+                             ['Eva Hornecker',  'HIT Lab NZ, University of Canterbury', newZealand]],
                              [reading, augmented_reality, interactive_book, children]).
 
 contribution(sn, 'PaperPoint: A Paper-Based Presentation and Interactive Paper Prototyping Toolkit',
@@ -282,13 +282,12 @@ contribution(ehlo, 'Reclaiming Public Space [Designing for Public Interaction wi
                              ['Andreas Lykke-Olesen',    'Aarhus School of Architecture',     denmark]],
                              [interaction_design, public_space, mobile_technology]).
 
-contribution(rtsi, 'Remote Active Tangible Interactions'
-                            [[Jan Richter,    University of South Australia,            Australia]
-                             [Bruce Thomas,   University of South Australia,            Australia]
-                             [Maki Sugimoto,  The University of Electro-Communications, Japan]
-                             [Masahiko Inami, University of Electro-Communications,     Japan]
-                             
-keywords: [tangible user interfaces, evaluation, remote interfaces]
+contribution(rtsi, 'Remote Active Tangible Interactions',
+                            [['Jan Richter',    'University of South Australia',            australia],
+                             ['Bruce Thomas',   'University of South Australia',            australia],
+                             ['Maki Sugimoto',  'The University of Electro-Communications', japan],
+                             ['Masahiko Inami', 'University of Electro-Communications',     japan]],
+                             [tangible_user_interfaces, evaluation, remote_interfaces]).
 
 contribution(cgz, 'Simplicity in Interaction Design',
                             [['Angela Chang',     'MIT Media Lab', usa],
@@ -297,7 +296,7 @@ contribution(cgz, 'Simplicity in Interaction Design',
                              [interface_design, expressiveness, simplicity, usability]).
 
 contribution(gthesj, 'Smart Blocks: A Tangible Mathematical Manipulative',
-                             ['Audrey Girouard',   'Tufts University', usa],
+                            [['Audrey Girouard',   'Tufts University', usa],
                              ['Erin Treacy',       'Tufts University', usa],
                              ['Leanne Hirshfield', 'Tufts University', usa],
                              ['Stacey Ecott',      'Tufts University', usa],
@@ -305,7 +304,7 @@ contribution(gthesj, 'Smart Blocks: A Tangible Mathematical Manipulative',
                              ['Robert Jacob',      'Tufts University', usa]],
                              [tangible_user_interface, education, mathematics, manipulatives]).
 
-contribution(bi, 'Spatializing Real Time Interactive Environments'
+contribution(bi, 'Spatializing Real Time Interactive Environments',
                              ['Nimish Biloria', 'TU Delft', netherlands],
                              [real_time_behavior, multi_disciplinary, control_system, interaction, pneumatics]).
 
@@ -322,7 +321,7 @@ contribution(vfh, 'TagTiles: optimal challenge in educational electronics',
                              [educational_game, tangible_interface, game_heuristics]).
 
 contribution(hn, 'Tangible Image Studio: Augmented Reality Based Tangible Interface Tool for Digital Imaging',
-                            [['Jung-ah Hwang', 'KAIST', southKorea]
+                            [['Jung-ah Hwang', 'KAIST', southKorea],
                              ['Tek-jin Nam',   'KAIST', southKorea]], []).
 
 contribution(bvhhb, 'Tangible interaction in tabletop games: comparing iconic and symbolic play pieces',
@@ -369,9 +368,9 @@ contribution(lre, 'The Feel Dimension of Technology Interaction: Exploring Tangi
                                phenomenology, tangibility, touch]).
 
 contribution(lcgs, 'The Meatbook: Tangible and Visceral Interaction',
-                             [['Aaron Levisohn', 'Simon Fraser University', canada]
-                              ['Jayme Cochrane', 'Simon Fraser University', canada]
-                              ['Diane Gromala',  'Simon Fraser University', canada]
+                             [['Aaron Levisohn', 'Simon Fraser University', canada],
+                              ['Jayme Cochrane', 'Simon Fraser University', canada],
+                              ['Diane Gromala',  'Simon Fraser University', canada],
                               ['Jinsil Seo',     'Simon Fraser University', canada]], []).
 
 contribution(jgka, 'The reacTable: Exploring the Synergy between Live Music Performance and Tabletop Tangible Interfaces',
@@ -387,9 +386,8 @@ contribution(zhsj, 'The Tangible Video Editor: Collaborative Video Editing with 
                               ['Michael Horn',    'Tufts University', usa],
                               ['Orit Shaer',      'Tufts University', usa],
                               ['Robert Jacob',    'Tufts University', usa]],
-                              [tangible_user_interface, digital_video_editing, active_tokens,
-                               interface_design, CSCW, distributed_cognition, tabletop_interaction, 
-                               physical_interaction]).
+                              [tangible_user_interface, digital_video_editing, active_tokens, interface_design, 
+                               cscw, distributed_cognition, tabletop_interaction, physical_interaction]).
 
 contribution(lmk, 'Tilting Table: A Movable Screen',
                              [['Hyun-Jean Lee',     'Georgia Institute of Technology', usa],
@@ -398,21 +396,21 @@ contribution(lmk, 'Tilting Table: A Movable Screen',
                               [tangible_interface, tilting_table, interactive_video_and_sound_installation, 
                                navigable_information_space]).
 
-contribution(mk, 'Towards Sensor Network User Interfaces'
-                             [[David Merrill,    MIT Media Laboratory, usa]
-                              [Jeevan Kalanithi, MIT Media Laboratory, usa]
+contribution(mk, 'Towards Sensor Network User Interfaces',
+                             [['David Merrill',    'MIT Media Laboratory', usa],
+                              ['Jeevan Kalanithi', 'MIT Media Laboratory', usa]],
                               [sensor_network_user_interface, tangible_user_interface,
                                sensor_network, siftable_computing_interface]).
 
-contribution(sm, 'Using Magnets in Physical Blocks That Behave As Programming Objects'
+contribution(sm, 'Using Magnets in Physical Blocks That Behave As Programming Objects',
                        ['Andrew Smith', 'African Advanced Institute for Information & Communications Technology', southAfrica],
                        [tui, digital_manipulatives, montessori_inspired_manipulatives, illiterate_programmer]).
 
 contribution(mrgk, 'Using Personal Objects as Tangible Interfaces for Memory Recollection and Sharing',
-                      [['Elena Mugellini',  'University of Applied Sciences of Western Switzerland, Fribourg', switzerland]
-                       ['Elisa Rubegni',    'University of Siena',                                             italy]
-                       ['Sandro Gerardi',   'University of Applied Sciences of Western Switzerland, Fribourg', switzerland]
-                       ['Omar Abou Khaled', 'University of Applied Sciences of Western Switzerland, Fribourg', switzerland]
+                      [['Elena Mugellini',  'University of Applied Sciences of Western Switzerland, Fribourg', switzerland],
+                       ['Elisa Rubegni',    'University of Siena',                                             italy],
+                       ['Sandro Gerardi',   'University of Applied Sciences of Western Switzerland, Fribourg', switzerland],
+                       ['Omar Abou Khaled', 'University of Applied Sciences of Western Switzerland, Fribourg', switzerland]],
                        [hci, tangible_user_interface, personal_objects, user_oriented_framework, model, markup_language]).
 
 contribution(svgs: 'VoodooFlash: Authoring across Physical and Digital Form',
