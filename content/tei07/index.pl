@@ -428,20 +428,15 @@ session(tmm1, eho, 'Reclaiming Public Space: Designing for Public Interaction wi
 session(tmm1, lka, 'Tilting Table: A Movable Screen',
                    ['Hyun-Jean Lee', 'Madhur Khandelwal', 'Ali Mazalek']).
 
-session(tmm1, 
-db:
-  title:   >
-     .."The Card Box at Hand: Exploring the Potentials of a Paper-Based Tangible Interface "
-     .. "for Education and Research in Art History"
-  authors:  [Tanja Döring, Steffi Beckhaus] 
-  keywords: [tabletop tangible interface, paper card interface, digital art history, 
-             creativity support tool, information visualization]
+session(tmm1, db, 
+  'The Card Box at Hand: Exploring the Potentials of a Paper-Based Tangible Interface for Education and Research in Art History',
+                   ['Tanja Döring', 'Steffi Beckhaus'] 
+                   [tabletop_tangible_interface, paper_card_interface, digital_art_history, 
+                    creativity_support_tool, information_visualization]).
 
-session(tmm1, 
-lcgs:
-  title:   "The Meatbook: Tangible and Visceral Interaction"
-  authors:  [Aaron Levisohn, Jayme Cochrane, Diane Gromala, Jinsil Seo]
-  keywords: [Tangible interfaces for artworks, organic-inorganic interfaces]
+session(tmm1, lcgs, 'The Meatbook: Tangible and Visceral Interaction',
+                   ['Aaron Levisohn', 'Jayme Cochrane', 'Diane Gromala', 'Jinsil Seo'],
+                   [tangible_interfaces_for_artworks, organic_inorganic_interfaces]).
 
 session(tmm1, 
 bvhhb: 
