@@ -219,12 +219,10 @@ contribution(mo, 'From Hand-Held to Body-Worn: Embodied Experiences of the Desig
                            [movement_quality, movement_based_interaction, kinesthetics, 
                             wearable_artifacts, embodied_interaction, social_context_of_use]).
 
-contribution(pwa:
-title: "Gesture Connect: Facilitating Tangible Interaction With a Flick Of The Wrist"
-authors:
-  [Trevor Pering,  Intel Research,           USA]
-  [Roy Want,       Intel Research,           USA]
-  [Yaw Anokwa,     University of Washington, USA]
+contribution(pwa, 'Gesture Connect: Facilitating Tangible Interaction With a Flick Of The Wrist',
+                           [['Trevor Pering',  'Intel Research',           usa],
+                            ['Roy Want',       'Intel Research',           usa],
+                            ['Yaw Anokwa',     'University of Washington', usa]]
 keywords: [NFC, physical gestures, mobile phones, tangible interaction]
 
 contribution(re:
