@@ -85,14 +85,12 @@ themes2('Haptics', haptics, [haptic_interface, haptic_user_interfaces, haptics, 
 themes2('Mobility', mobility, [mobile_devices, mobile_phones, mobile_technology, movement_analysis, movement, 
                                                                                        kinesthetic_sense, mobility],    6).
 
-themes2([title, abbrev, keywords, numPapers], 'Physicality', physicality, 
-  [physical_gestures, physical_interaction, physical_interfaces, physical_manipulatives, 
-   material_narratives, personal_objects],                                                        6).
+themes2('Physicality', physicality, [physical_gestures, physical_interaction, physical_interfaces, 
+                                     physical_manipulatives, material_narratives, personal_objects],                    6).
 
-themes2([title, abbrev, keywords, numPapers], 'Collaboration', collaboration, 
-  [cscw, collaboration, group_awareness, social_interaction],                                     5).
+themes2('Collaboration', collaboration, [cscw, collaboration, group_awareness, social_interaction],                     5).
 
-themes2([title, abbrev, keywords, numPapers], 'Use context', use_context,
+themes2('Use context', use_context,
   [industrial_configuration, pneumatics, refrigeration_technicians, system_maintenance, 
    work_practice, travel, digital_video_editing, multihandicapped_children],                      5).
 
