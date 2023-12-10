@@ -98,36 +98,33 @@ themes2('Consciousness', consciousness, [biofeedback, emotional_awareness, empat
 themes2('Cognition', cognition, [cognitive_development, distributed_cognition, image_schemas, 
                                                                embodied_cognition, passive_awareness],                  4).
 
-themes2('Philosophy', philosophy, [action research, adaptability, contemplation, phenomenology],                        4).
+themes2(philosophy, [action research, adaptability, contemplation, phenomenology],                        4).
 
-themes2('Place', place, [home, domestic_technology, location_based_design, location_based_narrative, public_space],     4).
+themes2(place,      [home, domestic_technology, location_based_design, location_based_narrative, public_space],     4).
+themes2(play,       [play, game_heuristics, edutainment, interactive_toys],                                         3).
+themes2(arts,       [laban_effort-shape, aesthetics_artifacts, art_design_installation, 
+                         choreography_of_interaction, expressiveness],                                              3).
+themes2(music,      [music, musical instrument, musical performance, sound feedback],                               3).
+themes2(ambience,   [ambient_display, ambient_environment],                                                         3).
 
-    play:          {kw: [play, game heuristics, edutainment, interactive toys],              p: 3} 
+themes2('
+    narrative:     {kw: [material narratives, location-based narrative, reading],            p: 3).
 
-    arts:          {kw: [Laban effort-shape, aesthetics artifacts, art/design installation, 
-                         choreography of interaction, expressiveness],                       p: 3}
-
-    music:         {kw: [music, musical instrument, musical performance, sound feedback],    p: 3}
-
-
-    ambience:      {kw: [ambient display, ambient environment],                              p: 3}
-
-    narrative:     {kw: [material narratives, location-based narrative, reading],            p: 3}
-
-    intimacy:      {kw: [intimacy, intimate group communication, social intimacy],           p: 3}
+themes2('
+    intimacy:      {kw: [intimacy, intimate group communication, social intimacy],           p: 3).
 
     sensing:       {kw: [sensor network user interface (SNUI), sensor network, 
-                         sensorial interfaces, pen-based input],                             p: 3}
+                         sensorial interfaces, pen-based input],                             p: 3).
 
-    hci:           {kw: [HCI, interface design],                                             p: 3}
+    hci:           {kw: [HCI, interface design],                                             p: 3).
 
-    communication: {kw: [communication, multi-user communication, messaging],                p: 3}
+    communication: {kw: [communication, multi-user communication, messaging],                p: 3).
 
-    theory:        {kw: [mathematics, model, frameworks],                                    p: 3}
+    theory:        {kw: [mathematics, model, frameworks],                                    p: 3).
 
-    interface_locale: {kw: [tilting table, shape displays, visual displays],                 p: 3}
+    interface_locale: {kw: [tilting table, shape displays, visual displays],                 p: 3).
 
-    fabrication:   {kw: [rapid prototyping],                                                 p: 1}
+    fabrication:   {kw: [rapid prototyping],                                                 p: 1).
 
     misc:          {kw: [control system, digitalisation, illiterate programmer, simplicity,
                          remote interfaces, presentation tool, navigable information space, 
