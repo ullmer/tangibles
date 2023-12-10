@@ -92,7 +92,8 @@ themes2([title, abbrev, keywords, numPapers], 'Physicality', physicality,
   [physical_gestures, physical_interaction, physical_interfaces, physical_manipulatives, 
    material_narratives, personal_objects],                                                        6).
 
-    collaboration: {kw: [CSCW, collaboration, group awareness, social interaction],          p: 5}
+themes2([title, abbrev, keywords, numPapers], 'Collaboration', collaboration, 
+  [cscw, collaboration, group_awareness, social_interaction],                                     5).
 
     use_context:   {kw: [industrial configuration, pneumatics, refrigeration technicians, 
                          system maintenance, work practice, travel, digital video editing, 
