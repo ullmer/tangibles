@@ -341,59 +341,54 @@ contribution(rhlck, 'Tap Input as an Embedded Interaction Method for Mobile Devi
                               ['Saana Kaleva',   'Nokia', finland]],
                               [gesture_input, haptic_user_interfaces, mobile_devices, user_studies]).
 
-contribution(km:
-title: "Teaching Table: A tangible mentor for pre-K math education, slides"
-authors:
-                              
-  [Madhur Khandelwal, Georgia Institute of Technology, USA]
-                              
-  [Ali Mazalek,       Georgia Institute of Technology, USA]
-                              
-keywords: [tangible computing, education, tabletop sensing, physical manipulatives, learning toys]
+contribution(km, 'Teaching Table: A tangible mentor for pre-K math education',
+                             [['Madhur Khandelwal', 'Georgia Institute of Technology', usa],
+                              ['Ali Mazalek',       'Georgia Institute of Technology', usa]],
+                              [tangible_computing, education, tabletop_sensing, physical_manipulatives, learning_toys]).
 
-contribution(db:
-title: The card box at hand
-authors:
-                              
-  [Tanja Döring,    University of Hamburg, Germany]
-                              
-  [Steffi Beckhaus, University of Hamburg, Germany]
+contribution(db, 'The card box at hand',
+                             [['Tanja Döring',    'University of Hamburg', germany],
+                              ['Steffi Beckhaus', 'University of Hamburg', germany]], []).
 
-contribution(an:
-title: >
-  .."The CTI Framework: Informing the Design of Tangible and Spatial Interactive "
-  ..  "Systems for Children"
-authors:
-  [Alissa Antle, Simon Fraser University, Canada]
-keywords: [tangible interfaces, spatial interaction, embodied cognition, 
-           cognitive development, interaction design, children]
+contribution(an, 'The CTI Framework: Informing the Design of Tangible and Spatial Interactive Systems for Children',
+                              ['Alissa Antle', 'Simon Fraser University', canada],
+                              [tangible_interfaces, spatial_interaction, embodied_cognition, 
+                               cognitive_development, interaction_design, children]).
 
-contribution(lre:
-title: "The Feel Dimension of Technology Interaction: Exploring Tangibles through Movement and Touch"
-authors:
-  [Astrid Larssen, University of Technology Sydney, Australia]
-  [Toni Robertson, University of Technology Sydney, Australia]
-  [Jenny Edwards, University of Technology Sydney, Australia]
-keywords: [body, embodiment, interaction, interaction design, kinesthetic sense, movement, 
-           phenomenology, tangibility, touch]
+contribution(lre, 'The Feel Dimension of Technology Interaction: Exploring Tangibles through Movement and Touch',
+                             [['Astrid Larssen', 'University of Technology Sydney', australia],
+                              ['Toni Robertson', 'University of Technology Sydney', australia],
+                              ['Jenny Edwards',  'University of Technology Sydney', australia]],
+                              [body, embodiment, interaction, interaction_design, kinesthetic_sense, movement, 
+                               phenomenology, tangibility, touch]).
 
 contribution(lcgs:
 title: "The Meatbook: Tangible and Visceral Interaction"
 authors:
+                              
   [Aaron Levisohn, Simon Fraser University, Canada]
+                              
   [Jayme Cochrane, Simon Fraser University, Canada]
+                              
   [Diane Gromala,  Simon Fraser University, Canada]
+                              
   [Jinsil Seo,     Simon Fraser University, Canada]
 
 contribution(jgka:
 title:
   "The reacTable: Exploring the Synergy between Live Music Performance and Tabletop Tangible Interfaces"
 authors:
+                              
   [Sergi Jorda, Pompeu Fabra University, Spain]
+                              
   [Günter Geiger, Pompeu Fabra University, Spain]
+                              
   [Martin Kaltenbrunner, Pompeu Fabra University, Spain]
+                              
   [Marcos Alonso, Pompeu Fabra University, Spain]
+                              
 keywords: [tangible interfaces, tabletop interfaces, musical instrument, 
+                              
            musical performance, design, interaction techniques]
 
 contribution(zhsj:
