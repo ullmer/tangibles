@@ -53,16 +53,16 @@ continent('South America', samerica, S, [colombia]).
 
 schema(themes2, [title, abbrev, keywords, numPapers]).
 
-themes2('Tangible UI', tangible_ui, [tui, tangibility, tangible_UIs, tangible_computing, tangible_interaction, 
-                       tangible_interface, tangible_interfaces, tangible_user_interface, tangible_user_interfaces],    24).
+themes2(tangible_ui, [tui, tangibility, tangible_UIs, tangible_computing, tangible_interaction, 
+                      tangible_interface, tangible_interfaces, tangible_user_interface, tangible_user_interfaces],     24).
 
-themes2(paradigms, [augmented_reality, distributed_physical_user_interfaces, paper_user_interface, 
-                     ubiquitous_computing, responsive_environments, spatial_interaction, siftable_computing_interface, 
-                     tabletop_sensing, tabletop_interaction, tabletop_interfaces],                                     11).
+themes2(paradigms,   [augmented_reality, distributed_physical_user_interfaces, paper_user_interface, 
+                      ubiquitous_computing, responsive_environments, spatial_interaction, 
+                      siftable_computing_interface, tabletop_sensing, tabletop_interaction, tabletop_interfaces],      11).
 
 themes2(interaction, [interaction_techniques, interaction, interactive_book, interactive_installation, 
-                                     interactive_toys, explicit_interaction, interactive_video_and_sound_installation, 
-                                     embedded_interaction],                                                            11).
+                      interactive_toys, explicit_interaction, interactive_video_and_sound_installation, 
+                      embedded_interaction],                                                                           11).
 
 themes2(design,    [design_process, design_research, design, interaction_design, product_design, communication_design, 
                                                                                                     complex_products], 10).
@@ -112,21 +112,14 @@ themes2(misc,             [control_system, digitalisation, illiterate_programmer
                            remote_interfaces, presentation_tool, navigable_information_space, metaphor, 
                            multi_disciplinary, real_time_behavior],                                               8).
 
-  contributions: 
-    ro: 
-      title: Keynote
-      authors:
-        - [Tom Rodden, University of Nottingham, UK]
+%%%%%%%%%%%%%%%%%%%%%%%% Themes 2 %%%%%%%%%%%%%%%%%%%%%%%%
 
-    bwd: 
-      title: >
-        .. "A Handle on What's Going On: Combining Tangible Interfaces and Ambient Displays " 
-        .. "for Collaborative Groups"
-      authors:
-        - [Johanna Brewer,  University of California, Irvine, USA]
-        - [Amanda Williams, University of California, Irvine, USA]
-        - [Paul Dourish,    University of California, Irvine, USA]
-      keywords: [ambient display, passive awareness, group awareness, tangible interfaces, embodied interaction]
+contribution(ro,  'Keynote', ['Tom Rodden', 'University of Nottingham', uk], [])
+contribution(bwd, 'A Handle on What's Going On: Combining Tangible Interfaces and Ambient Displays for Collaborative Groups',
+                            [['Johanna Brewer',  'University of California, Irvine', usa],
+                             ['Amanda Williams', 'University of California, Irvine', usa],
+                             ['Paul Dourish',    'University of California, Irvine', usa]],
+                             [ambient_display, passive_awareness, group_awareness, tangible_interfaces, embodied_interaction]).
 
     kmhrbrs: 
       title: "A Knife and a Cutting Board as Implicit User Interface: Towards Context-Aware Kitchen Utilities"
