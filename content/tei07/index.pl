@@ -9,6 +9,8 @@ content:
     addresses: [https://tei.acm.org/2007/program/TwoMinuteMadness_1.pdf,
                 https://tei.acm.org/2007/program/TwoMinuteMadness_2.pdf]
 
+%%%%%%%%%%%%%%%%%%%%%%%% Themes 1 %%%%%%%%%%%%%%%%%%%%%%%%
+
 themes1([title, abbrev, chapter, sessions, chairs], 'Connectedness', co, 
           [bwd, er, mg, mo, snkbsars, bwd, mg, mk ehlo, rtsi, zhsj],
           [[er, mo], [zhsj, snkbsars, bwd, mg]], ['Ali Mazalek', 'Martin Kaltenbrunner']).
@@ -22,28 +24,29 @@ themes1([title, abbrev, chapter, session, chair], 'The Expressive Character of I
 themes1([title, abbrev, chapter, session, chair], 'Learning through Physical Interaction', lpi,
         [hhvbm, hj, ma, daw, dh, gtshesj, vfh, km, an],     [ma, km, hhv, an],        'Orit Shaer').
 
-    Context Dependency and Physical Adaptability: {chapter: [pno, kmhbrbrs, bi, sscb, mrgak],
-                                                   session: [scb, mrgk, pno, b],         chair: Nicolas Villar}
+themes1([title, abbrev, chapter, session, chair], 'Context Dependency and Physical Adaptability', cdpa,
+        [pno, kmhbrbrs, bi, sscb, mrgak],                   [scb, mrgk, pno, b],      'Nicolas Villar').
 
-    Body Movements:                               {chapter: [je, fr, shs, mo, paw, rhkcl, lre, bsh],
-                                                   session: [paw, rhkcl, lre, m],        chair: Thecla Schiphorst}
+themes1([title, abbrev, chapter, session, chair], 'Body Movements', bm,
+        [je, fr, shs, mo, paw, rhkcl, lre, bsh],            [paw, rhkcl, lre, m],     'Thecla Schiphorst').
 
-  sessions: 
-    Two Minute Madness (1): 
-      papers: [ehl, lkm, db, lcgs, bvhhb, r, jgak, hj, dh, daw, ss, j]
-      chair: Matthias Kranz
+%%%%%%%%%%%%%%%%%%%%%%%% Sessions %%%%%%%%%%%%%%%%%%%%%%%%
+
+session([title, abbrev, papers, chair], 'Two Minute Madness (1)', tmm1, 
+      [ehl, lkm, db, lcgs, bvhhb, r, jgak, hj, dh, daw, ss, j],    'Matthias Kranz').
     
-    Two Minute Madness (2): 
-      papers: [rtsi, kb, mkm, vg, s, mn, s, vfh, gshesj, f, bsh, kmhrbrs]
-      chair: Matthias Kranz
+session([title, abbrev, papers, chair], 'Two Minute Madness (2)', tmm2, 
+      [rtsi, kb, mkm, vg, s, mn, s, vfh, gshesj, f, bsh, kmhrbrs], 'Matthias Kranz').
 
-  continents: 
-    europe:   {abbrev: E, instances: [Germany, UK, Denmark, Netherlands, Sweden, Switzerland, Spain, Finland, Italy]}
-    asia:     {abbrev: I, instances: [Japan, South Korea]}
-    africa:   {abbrev: F, instances: [South Africa]}
-    oceania:  {abbrev: O, instances: [New Zealand, Australia]}
-    namerica: {abbrev: N, instances: [USA, Canada]}
-    samerica: {abbrev: S, instances: [Colombia]}
+%%%%%%%%%%%%%%%%%%%%%%%% Continents %%%%%%%%%%%%%%%%%%%%%%%%
+
+continent([name, abbrev1, abbrev2, countries], 'Europe',        europe,   E, 
+          [germany, uk, denmark, netherlands, sweden, switzerland, spain, finland, italy]).
+continent([name, abbrev1, abbrev2, countries], 'Asia',          asia,     I, [japan, southKorea]).
+continent([name, abbrev1, abbrev2, countries], 'Africa',        africa,   F, [southAfrica]).
+continent([name, abbrev1, abbrev2, countries], 'Oceania',       oceania,  O, [newZealand, australia]).
+continent([name, abbrev1, abbrev2, countries], 'North America', namerica, N, [usa, canada]).
+continent([name, abbrev1, abbrev2, countries], 'South America', samerica, S, [colombia]).
 
   themes2: 
     tangible_ui:   {kw: [TUI, tangibility, tangible UIs, tangible computing, 
