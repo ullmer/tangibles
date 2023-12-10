@@ -253,30 +253,31 @@ contribution(pa, 'Physical Interventions in a Location Based Cultural Narrative:
                              [embedded_interaction, visual_displays, thermochromic_displays, location_based_narrative]).
 
 contribution(snkbssap, 'PillowTalk: Can We Afford Intimacy?',
-                            [[Thecla Schiphorst, Simon Fraser University,              Canada]
-                             [Frank Nack,        V2_ Institute for the Unstable Media, Netherlands]
-                             [Michiel Kauwatjoe, V2_ Institute for the Unstable Media, Netherlands]
-                             [Simon de Bakker,   V2_ Institute for the Unstable Media, Canada]
-                             [Stock Stock,       V2_ Institute for the Unstable Media, Netherlands]
-                             [Hielke Schut,      Eindhoven University of Technology,   Netherlands]
-                             [Lora Aroyo,        Eindhoven University of Technology,   Netherlands]
-                             [Angel Perez,       Eindhoven University of Technology,   Netherlands]
-                             [social intimacy, tactile interface, somatics, movement analysis, 
-           Laban effort-shape, tangible UIs, art/design installation, play, 
-           social interaction, user experience, ambient environment, choreography of interaction]
+                            [['Thecla Schiphorst', 'Simon Fraser University',              canada],
+                             ['Frank Nack',        'V2_ Institute for the Unstable Media', netherlands],
+                             ['Michiel Kauwatjoe', 'V2_ Institute for the Unstable Media', netherlands],
+                             ['Simon de Bakker',   'V2_ Institute for the Unstable Media', canada],
+                             ['Stock Stock',       'V2_ Institute for the Unstable Media', netherlands],
+                             ['Hielke Schut',      'Eindhoven University of Technology',   netherlands],
+                             ['Lora Aroyo',        'Eindhoven University of Technology',   netherlands],
+                             ['Angel Perez',       'Eindhoven University of Technology',   netherlands]],
+                             [social_intimacy, tactile_interface, somatics, movement_analysis, 
+                              laban_effort_shape, tangible_UIs, art_design_installation, play, 
+                              social_interaction, user_experience, ambient_environment, choreography_of_interaction]).
 
-contribution(kb:
-title: "reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction"
-authors:
-  [Martin Kaltenbrunner, Universitat Pompeu Fabra, Spain]
-  [Ross Bencina,         Sonic Fritter Pty Ltd,    Australia]
-keywords: [tangible user interface, computer vision, application development framework]
+contribution(kb, 'reacTIVision: A Computer-Vision Framework for Table-Based Tangible Interaction',
+                            [['Martin Kaltenbrunner', 'Universitat Pompeu Fabra', spain],
+                             ['Ross Bencina',         'Sonic Fritter Pty Ltd',    australia]],
+                             [tangible_user_interface, computer_vision, application_development_framework]).
 
 contribution(ehlo:
 title: Reclaiming Public Space [Designing for Public Interaction with Private Devices
 authors:
+                             
   [Eva Eriksson,            Chalmers University of Technology, Sweden]
+                             
   [Thomas Riisgaard Hansen, University of Aarhus,              Denmark]
+                             
   [Andreas Lykke-Olesen,    Aarhus School of Architecture,     Denmark]
 keywords: [interaction design, public space, mobile technology]
 
