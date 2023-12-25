@@ -1,5 +1,8 @@
 import mido
 
+#https://github.com/mido/mido
+#https://librosa.org/doc/main/generated/librosa.midi_to_note.html
+
 mfn = 'merryChristmas.mid'
 mid = mido.MidiFile(mfn)
 
