@@ -39,7 +39,7 @@ class cursor:
     screen.draw.line((self.cursorPos, 0), (self.cursorPos, HEIGHT), colScaleRed)
     if self.cursorPos == WIDTH: 
       self.cursorPos = 0
-      animate(self, cursorPos=WIDTH, duration=20.)
+      animate(self, cursorPos=WIDTH, duration=10.)
 
 ######################## noteStore ########################
 
@@ -89,7 +89,7 @@ def drawGrid():
 
 c  = cursor()
 ns = noteStore(curs=c)
-animate(c, cursorPos=WIDTH, duration=20.)
+animate(c, cursorPos=WIDTH, duration=10.)
   
 #ns.addNote(10, 10)
 #ns.addNote(20, 20)

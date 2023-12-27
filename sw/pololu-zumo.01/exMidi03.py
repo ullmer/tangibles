@@ -28,14 +28,13 @@ sys.stdout.reconfigure(encoding='utf-8') #sharps and flats :-)
 
 for msg in mid.play():
   #print(msg)
-  port.send(msg)
   diffTime = currentTime() - firstTime
   try:    n = librosa.midi_to_note(int(msg.note))
   except: continue
 
-  if msg.time != 0: 
-    print(msg.note, diffTime, n, msg.time)
-  else:
-    print(msg.note, diffTime, n)
+  try:    print(msg.note, diffTime, n, msg.time)
+  except: print("err:", msg)
+
+  port.send(msg)
 
 ### end ###

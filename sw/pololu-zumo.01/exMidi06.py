@@ -20,7 +20,8 @@ f  = open(fn, 'rt')
 rawlines = f.readlines()
 
 lastBegun      = 0
-sameTimeThresh = 15 #if time difference within N milliseconds, assume ~chord
+sameTimeThresh = 3 #if time difference within N milliseconds, assume ~chord
+#sameTimeThresh = 15 #if time difference within N milliseconds, assume ~chord
 queuedNotes    = []
 
 for rawline in rawlines:

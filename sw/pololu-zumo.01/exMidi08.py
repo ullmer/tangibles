@@ -19,7 +19,7 @@ import time, mido
 
 mo  = mido.open_output()
 
-fn = '3400themerrypheastevenritchie.txt'
+fn = '3400themerrypheastevenritchie.txt4'
 f  = open(fn, 'rt')
 rawlines = f.readlines()
 
