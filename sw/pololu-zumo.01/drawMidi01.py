@@ -22,23 +22,33 @@ if platform.system() == "Windows":
   hwnd = pygame.display.get_wm_info()['window']
   windll.user32.MoveWindow(hwnd, 0, 0, WIDTH, HEIGHT, False)
 
+######################## cursor ########################
+
+class cursor:
+  cursorPos = 0
+  def draw(self): screen.draw.line((self.cursorPos, 0), (self.cursorPos, HEIGHT), scaleRed)
+
 ######################## draw grid ########################
 
-def drawGrid(currentX):
+def drawGrid():
   x1, x2 = 0, WIDTH
   y      = pixelsPerVal
-  x3     = currentX
 
   for octIdx in range(midiValOctaves):
     screen.draw.line((x1,y), (x2,y), scaleGray)
     y += midiValsPerOctave * pixelsPerVal
 
-  screen.draw.line((x3, 0), (x3, HEIGHT), scaleRed)
+
+######################## main ########################
+
+c = cursor()
+animate(c, cursorPos=WIDTH, duration=5.)
 
 ######################## draw ########################
 
 def draw():
   screen.fill((10, 10, 20))
-  drawGrid(100)
+  drawGrid()
+  c.draw()
 
 ### end ###
