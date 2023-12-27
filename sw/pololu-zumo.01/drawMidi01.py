@@ -4,6 +4,7 @@
 
 midiValsPerOctave = 12
 pixelsPerVal      = 5
+pixelsPerVal2     = pixelsPerVal / 2.
 midiValsTotal     = 127
 midiValOctaves    = int(midiValsTotal / midiValsPerOctave)
 
@@ -38,17 +39,18 @@ class cursor:
 
 class noteStore:
   notes                 = []
-  noteWidth, noteHeight = 4
   
-  def addNote(self, noteVal, xCoord): notes.append([noteVal, xCoord])
+  def addNote(self, noteVal, xCoord): self.notes.append([noteVal, xCoord])
 
   def draw(self):
     for note in self.notes:
       noteVal, xCoord = note
       self.drawNote(noteVal, xCoord)
    
-  def drawNote(noteVal, xCoord):
-    
+  def drawNote(self, noteVal, xCoord):
+    x, y = xCoord, (pixelsPerVal * noteVal) 
+    w, h = pixelsPerVal, pixelsPerVal
+    r      = Rect((x,y), (w, h))
     screen.draw.filled_rect(r, colNote)
 
 ######################## draw grid ########################
@@ -66,6 +68,10 @@ def drawGrid():
 c  = cursor()
 ns = noteStore()
 animate(c, cursorPos=WIDTH, duration=5.)
+  
+ns.addNote(10, 10)
+ns.addNote(20, 20)
+ns.addNote(30, 30)
 
 ######################## draw ########################
 
@@ -74,5 +80,6 @@ def draw():
   drawGrid()
   ns.draw()
   c.draw()
+
 
 ### end ###
