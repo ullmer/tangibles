@@ -13,6 +13,15 @@ scaleRed  = (100, 0,  0)
 HEIGHT = midiValsTotal * pixelsPerVal
 WIDTH  = 1200
 
+######################## place window @ 0,0 ####################
+
+#magic for placing at 0,0
+import platform, pygame
+if platform.system() == "Windows":
+  from ctypes import windll
+  hwnd = pygame.display.get_wm_info()['window']
+  windll.user32.MoveWindow(hwnd, 0, 0, WIDTH, HEIGHT, False)
+
 ######################## draw grid ########################
 
 def drawGrid(currentX):
