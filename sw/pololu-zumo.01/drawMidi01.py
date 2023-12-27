@@ -4,7 +4,6 @@
 
 midiValsPerOctave = 12
 pixelsPerVal      = 5
-pixelsPerVal2     = pixelsPerVal / 2.
 midiValsTotal     = 127
 midiValOctaves    = int(midiValsTotal / midiValsPerOctave)
 
@@ -38,16 +37,29 @@ class cursor:
 ######################## noteStore ########################
 
 class noteStore:
-  notes                 = []
+  notes = []
+  curs  = None #cursor     
   
+  ####################### constructor #######################
+
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
+
+  ####################### add note #######################
+
   def addNote(self, noteVal, xCoord): self.notes.append([noteVal, xCoord])
+
+  ####################### draw #######################
 
   def draw(self):
     for note in self.notes:
       noteVal, xCoord = note
       self.drawNote(noteVal, xCoord)
    
-  def drawNote(self, noteVal, xCoord):
+  def drawNote(self, noteVal, xCoord=None):
+    if xCoord is None: xCoord is curs.cursorPos
+
     x, y = xCoord, (pixelsPerVal * noteVal) 
     w, h = pixelsPerVal, pixelsPerVal
     r      = Rect((x,y), (w, h))
@@ -66,7 +78,7 @@ def drawGrid():
 ######################## main ########################
 
 c  = cursor()
-ns = noteStore()
+ns = noteStore(curs=c)
 animate(c, cursorPos=WIDTH, duration=5.)
   
 ns.addNote(10, 10)
@@ -80,6 +92,5 @@ def draw():
   drawGrid()
   ns.draw()
   c.draw()
-
 
 ### end ###
