@@ -13,7 +13,8 @@ for port in mido.get_output_names():
   outport = port; print("output:", outport)
 
 def currentTime(): return round(time.time() * 1000)
-def bendTime():    return time.time() / 6.
+#def bendTime():    return time.time() * 2.
+#def bendTime():    return time.time() / 6.
 
 firstTime = currentTime()
 
@@ -23,7 +24,9 @@ sys.stdout.reconfigure(encoding='utf-8') #sharps and flats :-)
 
 #https://mido.readthedocs.io/en/latest/api.html#mido.MidiFile.play
 
-for msg in mid.play(now=bendTime):
+#for msg in mid.play(now=bendTime):
+
+for msg in mid.play():
   #print(msg)
   port.send(msg)
   diffTime = currentTime() - firstTime
