@@ -139,7 +139,8 @@ class pgzMidoPlayer:
     msg = self.queuedMessage
     self.midoOut.send(msg)
 
-    if msg.time != 0: self.ns.addNote(int(msg.note))
+    try:    self.ns.addNote(int(msg.note))
+    except: print(msg)
 
     self.serviceMessages()
 
@@ -160,7 +161,9 @@ class pgzMidoPlayer:
         break
       else: 
         if isinstance(msg, MetaMessage): continue 
-        if msg.time != 0: self.ns.addNote(int(msg.note))
+        try:    self.ns.addNote(int(msg.note))
+        except: print(msg)
+
         self.midoOut.send(msg)
 
 ######################## midi setup ########################
