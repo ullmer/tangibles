@@ -48,7 +48,8 @@ class noteStore:
       self.drawNote(noteVal, xCoord)
    
   def drawNote(noteVal, xCoord):
-    screen.draw.filled_rect(
+    
+    screen.draw.filled_rect(r, colNote)
 
 ######################## draw grid ########################
 
