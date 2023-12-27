@@ -3,6 +3,7 @@
 # Begun 2023-12-27
 
 import mido, time
+from functools import partial
 
 midiValsPerOctave = 12
 pixelsPerVal      = 5
@@ -95,11 +96,22 @@ def draw():
   ns.draw()
   c.draw()
 
-######################## draw ########################
+######################## midi setup ########################
 
-def mido_play(midoObj, midoOut, meta_messages=False, now=time.time):
+def mido_play_update(midoObj, midoOut):
+
+  print("mpu")
+
+  msg = pgz_mido_play(midoObj, midoOut)
+  midoOut.send(msg)
+
+######################## mido play ########################
+
+def pgz_mido_play(midoObj, midoOut):
+  print("mpnow")
+
   #variant of https://github.com/mido/mido/blob/main/mido/midifiles/midifiles.py
-  start_time = now()
+  start_time = time.time()
   input_time = 0.0
 
   print("mp")
@@ -107,15 +119,15 @@ def mido_play(midoObj, midoOut, meta_messages=False, now=time.time):
   for msg in midoObj:
     input_time += msg.time
 
-    playback_time          = now()      - start_time
+    playback_time          = time.time()      - start_time
     duration_to_next_event = input_time - playback_time
 
-    if duration_to_next_event > 0.0:
-      pcb = partial(mido_play_update, midoObj, midoOut)
-      clock.schedule(pcb, duration_to_next_event)
+    pcb = partial(mido_play_update, midoObj, midoOut)
 
-    if isinstance(msg, MetaMessage) and not meta_messages: continue
-    else:                                                  yield msg
+    if duration_to_next_event > 0.0:
+      clock.schedule(pcb, duration_to_next_event)
+    else: 
+      pcb()
 
 ######################## midi setup ########################
 
@@ -128,15 +140,8 @@ mout = mido.open_output(outport)
 mfn     = '3400themerrypheastevenritchie.mid'
 midoObj = mido.MidiFile(mfn)
 
-mido_play(midoObj, mout)
-
-######################## midi setup ########################
-
-def mido_play_update(midoObj, midoOut):
-
-  print("mpu")
-
-  msg = mido_play(midoObj, midoOut)
-  midoOut.send(msg)
+print(1)
+pgz_mido_play(midoObj, mout)
+print(2)
 
 ### end ###
