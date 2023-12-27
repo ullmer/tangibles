@@ -7,8 +7,9 @@ pixelsPerVal      = 5
 midiValsTotal     = 127
 midiValOctaves    = int(midiValsTotal / midiValsPerOctave)
 
-scaleGray = (50, 50, 50)
-scaleRed  = (100, 0,  0)
+colScaleGray = (50, 50, 50)
+colScaleRed  = (100, 0,  0)
+colNote      = (100, 100, 100)
 
 HEIGHT = midiValsTotal * pixelsPerVal
 WIDTH  = 1200
@@ -28,10 +29,26 @@ class cursor:
   cursorPos = 0
 
   def draw(self): 
-    screen.draw.line((self.cursorPos, 0), (self.cursorPos, HEIGHT), scaleRed)
+    screen.draw.line((self.cursorPos, 0), (self.cursorPos, HEIGHT), colScaleRed)
     if self.cursorPos == WIDTH: 
       self.cursorPos = 0
       animate(self, cursorPos=WIDTH, duration=5.)
+
+######################## noteStore ########################
+
+class noteStore:
+  notes                 = []
+  noteWidth, noteHeight = 4
+  
+  def addNote(self, noteVal, xCoord): notes.append([noteVal, xCoord])
+
+  def draw(self):
+    for note in self.notes:
+      noteVal, xCoord = note
+      self.drawNote(noteVal, xCoord)
+   
+  def drawNote(noteVal, xCoord):
+    screen.draw.filled_rect(
 
 ######################## draw grid ########################
 
@@ -40,12 +57,13 @@ def drawGrid():
   y      = pixelsPerVal
 
   for octIdx in range(midiValOctaves):
-    screen.draw.line((x1,y), (x2,y), scaleGray)
+    screen.draw.line((x1,y), (x2,y), colScaleGray)
     y += midiValsPerOctave * pixelsPerVal
 
 ######################## main ########################
 
-c = cursor()
+c  = cursor()
+ns = noteStore()
 animate(c, cursorPos=WIDTH, duration=5.)
 
 ######################## draw ########################
@@ -53,6 +71,7 @@ animate(c, cursorPos=WIDTH, duration=5.)
 def draw():
   screen.fill((10, 10, 20))
   drawGrid()
+  ns.draw()
   c.draw()
 
 ### end ###
