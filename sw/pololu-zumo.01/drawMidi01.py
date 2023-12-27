@@ -26,7 +26,12 @@ if platform.system() == "Windows":
 
 class cursor:
   cursorPos = 0
-  def draw(self): screen.draw.line((self.cursorPos, 0), (self.cursorPos, HEIGHT), scaleRed)
+
+  def draw(self): 
+    screen.draw.line((self.cursorPos, 0), (self.cursorPos, HEIGHT), scaleRed)
+    if self.cursorPos == WIDTH: 
+      self.cursorPos = 0
+      animate(self, cursorPos=WIDTH, duration=5.)
 
 ######################## draw grid ########################
 
@@ -37,7 +42,6 @@ def drawGrid():
   for octIdx in range(midiValOctaves):
     screen.draw.line((x1,y), (x2,y), scaleGray)
     y += midiValsPerOctave * pixelsPerVal
-
 
 ######################## main ########################
 
