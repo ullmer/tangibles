@@ -97,7 +97,7 @@ def draw():
 
 ######################## draw ########################
 
-def mido_play(midoObj, meta_messages=False, now=time.time):
+def mido_play(midoObj, midoOut, meta_messages=False, now=time.time):
   #variant of https://github.com/mido/mido/blob/main/mido/midifiles/midifiles.py
   start_time = now()
   input_time = 0.0
@@ -109,13 +109,11 @@ def mido_play(midoObj, meta_messages=False, now=time.time):
     duration_to_next_event = input_time - playback_time
 
     if duration_to_next_event > 0.0:
-      time.sleep(duration_to_next_event)
-      clock.schedule(
+      pcb = partial(mido_play_update, midoObj
+      clock.schedule(pcb, duration_to_next_event)
 
-    if isinstance(msg, MetaMessage) and not meta_messages:
-      continue
-    else:
-      yield msg
+    if isinstance(msg, MetaMessage) and not meta_messages: continue
+    else:                                                  yield msg
 
 ######################## midi setup ########################
 
@@ -125,9 +123,16 @@ for port in mido.get_output_names():
 
 mout = mido.open_output(outport)
 
-for msg in mid.play():
-  port.send(msg)
+mfn   = '3400themerrypheastevenritchie.mid'
+midof = mido.MidiFile(mfn)
 
-def mido_play_update():
+mido_play(midof, mout)
+
+######################## midi setup ########################
+
+def mido_play_update(midof, midoOut):
+
+  msg = mido_play(midof, midoOut)
+  midoOut.send(msg)
 
 ### end ###
