@@ -20,7 +20,6 @@ f  = open(fn, 'rt')
 rawlines = f.readlines()
 
 lastBegun      = 0
-lastOutStr     = ''
 sameTimeThresh = 15 #if time difference within N milliseconds, assume ~chord
 queuedNotes    = []
 
@@ -32,10 +31,17 @@ for rawline in rawlines:
     fields = cleanline.split(' ')
     nv, tb, wn, nd = fields
     noteVal, timeBegun, whichNote, noteDuration = int(nv), int(tb), wn, float(nd)
+    if lastBegun == 0: lastBegun = timeBegun 
+    diffTime = timeBegun - lastBegun
 
-    outStr = "%s %i" % (whichNote, timeBegun-lastBegun)
-    if outStr != lastOutStr: print(outStr); lastOutStr = outStr
-    lastBegun = timeBegun
+    if diffTime < sameTimeThresh: 
+      if whichNote not in queuedNotes: queuedNotes.append(whichNote) #resolve observed ambiguous situation
+      continue
+
+    outStr = "%s %i" % (queuedNotes, diffTime)
+    print(outStr)
+    lastBegun = timeBegun; queuedNotes = []
+
   except: print("oops:", len(fields), fields)
 
 ### end ###
