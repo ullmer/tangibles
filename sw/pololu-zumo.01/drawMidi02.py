@@ -52,7 +52,9 @@ class noteStore:
 
   ####################### add note #######################
 
-  def addNote(self, noteVal, xCoord): self.notes.append([noteVal, xCoord])
+  def addNote(self, noteVal, xCoord=None): 
+    if xCoord is None: xCoord is self.curs.cursorPos
+    self.notes.append([noteVal, xCoord])
 
   ####################### draw #######################
 
@@ -62,7 +64,7 @@ class noteStore:
       self.drawNote(noteVal, xCoord)
    
   def drawNote(self, noteVal, xCoord=None):
-    if xCoord is None: xCoord is curs.cursorPos
+    if xCoord is None: xCoord is self.curs.cursorPos
 
     x, y = xCoord, (pixelsPerVal * noteVal) 
     w, h = pixelsPerVal, pixelsPerVal
