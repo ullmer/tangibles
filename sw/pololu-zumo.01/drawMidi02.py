@@ -136,6 +136,7 @@ class pgzMidoPlayer:
   def serviceMessages(self):
     while True:
       msg = self.midoObjIter.__next__()
+      is msg is None: break
       self.input_time += msg.time
 
       playback_time          = time.time() - self.start_time
