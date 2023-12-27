@@ -37,10 +37,11 @@ for rawline in rawlines:
     if diffTime < sameTimeThresh: 
       if whichNote not in queuedNotes: queuedNotes.append(whichNote) #resolve observed ambiguous situation
       continue
+    else: 
+      outStr = "%s %i" % (queuedNotes, diffTime)
+      print(outStr)
 
-    outStr = "%s %i" % (queuedNotes, diffTime)
-    print(outStr)
-    lastBegun = timeBegun; queuedNotes = []
+    lastBegun = timeBegun; queuedNotes = [whichNote]
 
   except: print("oops:", len(fields), fields)
 
