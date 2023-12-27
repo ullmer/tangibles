@@ -17,7 +17,7 @@ colScaleRed  = (100, 0,  0)
 colNote      = (100, 100, 100)
 
 HEIGHT = midiValsTotal * pixelsPerVal
-WIDTH  = 1200
+WIDTH  = 1600
 
 ######################## place window @ 0,0 ####################
 
@@ -37,7 +37,7 @@ class cursor:
     screen.draw.line((self.cursorPos, 0), (self.cursorPos, HEIGHT), colScaleRed)
     if self.cursorPos == WIDTH: 
       self.cursorPos = 0
-      animate(self, cursorPos=WIDTH, duration=5.)
+      animate(self, cursorPos=WIDTH, duration=20.)
 
 ######################## noteStore ########################
 
@@ -50,11 +50,14 @@ class noteStore:
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
+  
+
+  def clearNotes(self): self.notes = []
 
   ####################### add note #######################
 
   def addNote(self, noteVal, xCoord=None): 
-    if xCoord is None: xCoord is self.curs.cursorPos
+    if xCoord is None: xCoord = self.curs.cursorPos
     self.notes.append([noteVal, xCoord])
 
   ####################### draw #######################
@@ -65,9 +68,7 @@ class noteStore:
       self.drawNote(noteVal, xCoord)
    
   def drawNote(self, noteVal, xCoord=None):
-    if xCoord is None: xCoord = self.curs.cursorPos
-
-    x, y = xCoord, (pixelsPerVal * noteVal) 
+    x, y = xCoord, HEIGHT - (pixelsPerVal * noteVal) 
     w, h = pixelsPerVal, pixelsPerVal
     #print("r:", x,y,w,h)
     r    = pygame.Rect(x,y,w,h)
@@ -87,11 +88,11 @@ def drawGrid():
 
 c  = cursor()
 ns = noteStore(curs=c)
-animate(c, cursorPos=WIDTH, duration=5.)
+animate(c, cursorPos=WIDTH, duration=20.)
   
-ns.addNote(10, 10)
-ns.addNote(20, 20)
-ns.addNote(30, 30)
+#ns.addNote(10, 10)
+#ns.addNote(20, 20)
+#ns.addNote(30, 30)
 
 ######################## draw ########################
 
