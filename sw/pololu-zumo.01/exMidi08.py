@@ -31,13 +31,16 @@ for rawline in rawlines:
   cleanline = rawline.rstrip() # remove newline
 
   try:
-    f = cleanline.split(' ')
-    noteVal, timeBegun, whichNote, noteDuration = int(f[0]), int(f[1]), f[2], float(f[3])
-    outStr = "%s %i" % (whichNote, timeBegun-lastBegun)
-    mo.send(mido.Message('note_on', note=note))
-    time.sleep(diffTime)
-    if outStr != lastOutStr: print(outStr); lastOutStr = outStr
-    lastBegun = timeBegun
+    fields = cleanline.split(' ')
+    nv, tb, wn, nd = fields
+    noteVal, timeBegun, whichNote, noteDuration = int(nv), int(tb), wn, float(nd)
+    if lastBegun == 0: lastBegun = timeBegun
+    diffTime     = timeBegun - lastBegun; lastBegun=timeBegun
+
+    mo.send(mido.Message('note_on', note=noteVal))
+    if diffTime > 0: time.sleep(diffTime/1000.)
+    print(fields)
+
   except: print("oops:", len(fields), fields)
 
 ### end ###
