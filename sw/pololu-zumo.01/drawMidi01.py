@@ -3,11 +3,11 @@
 # Begun 2023-12-27
 
 midiValsPerOctave = 12
-pixelsPerVal      = 4
+pixelsPerVal      = 5
 midiValsTotal     = 127
 midiValOctaves    = int(midiValsTotal / midiValsPerOctave)
 
-scaleGray = (10, 10, 10)
+scaleGray = (50, 50, 50)
 scaleRed  = (100, 0,  0)
 
 HEIGHT = midiValsTotal * pixelsPerVal
@@ -20,14 +20,16 @@ def drawGrid(currentX):
   y      = pixelsPerVal
   x3     = currentX
 
-  for octIdx in midiValOctaves:
-    draw.line((x1,y1), (x2,y2), scaleGray)
+  for octIdx in range(midiValOctaves):
+    screen.draw.line((x1,y), (x2,y), scaleGray)
+    y += midiValsPerOctave * pixelsPerVal
 
-  draw.line((x3, 0), (x3, HEIGHT), scaleRed)
+  screen.draw.line((x3, 0), (x3, HEIGHT), scaleRed)
 
 ######################## draw ########################
 
 def draw():
+  screen.fill((10, 10, 20))
   drawGrid(100)
 
 ### end ###
