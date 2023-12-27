@@ -99,8 +99,9 @@ def draw():
 ######################## mido play ########################
 
 class pgzMidoPlayer:
-  midoObj = None
-  midoOut = None
+  midoObjIter = None
+  midoObj     = None
+  midoOut     = None
 
   start_time = None
   input_time = None
@@ -118,8 +119,9 @@ class pgzMidoPlayer:
     print("mpnow")
 
     #variant of https://github.com/mido/mido/blob/main/mido/midifiles/midifiles.py
-    self.start_time = time.time()
-    self.input_time = 0.0
+    self.start_time  = time.time()
+    self.input_time  = 0.0
+    self.midoObjIter = midoObj.__iter__()
 
     self.serviceMessages()
 
@@ -133,7 +135,7 @@ class pgzMidoPlayer:
 
   def serviceMessages(self):
     while True:
-      msg = self.midoObj.__iter__().__next__()
+      msg = self.midoObjIter.__next__()
       self.input_time += msg.time
 
       playback_time          = time.time() - self.start_time
