@@ -3,6 +3,7 @@
 # Begun 2023-12-27
 
 import mido, time
+from mido import MetaMessage
 from functools import partial
 
 midiValsPerOctave = 12
@@ -147,6 +148,7 @@ class pgzMidoPlayer:
         clock.schedule(self.resume_play, duration_to_next_event)
         break
       else: 
+        if isinstance(msg, MetaMessage): continue 
         self.midoOut.send(msg)
 
 ######################## midi setup ########################
