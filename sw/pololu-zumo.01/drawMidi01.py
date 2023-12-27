@@ -2,7 +2,7 @@
 # Brygg Ullmer, Clemson University
 # Begun 2023-12-27
 
-import mido
+import mido, time
 
 midiValsPerOctave = 12
 pixelsPerVal      = 5
@@ -94,45 +94,5 @@ def draw():
   drawGrid()
   ns.draw()
   c.draw()
-
-######################## draw ########################
-
-def mido_play(midoObj, midoOut, meta_messages=False, now=time.time):
-  #variant of https://github.com/mido/mido/blob/main/mido/midifiles/midifiles.py
-  start_time = now()
-  input_time = 0.0
-
-  for msg in midoObj:
-    input_time += msg.time
-
-    playback_time          = now()      - start_time
-    duration_to_next_event = input_time - playback_time
-
-    if duration_to_next_event > 0.0:
-      pcb = partial(mido_play_update, midoObj
-      clock.schedule(pcb, duration_to_next_event)
-
-    if isinstance(msg, MetaMessage) and not meta_messages: continue
-    else:                                                  yield msg
-
-######################## midi setup ########################
-
-outport = None
-for port in mido.get_output_names():
-  outport = port; print("output:", outport)
-
-mout = mido.open_output(outport)
-
-mfn   = '3400themerrypheastevenritchie.mid'
-midof = mido.MidiFile(mfn)
-
-mido_play(midof, mout)
-
-######################## midi setup ########################
-
-def mido_play_update(midof, midoOut):
-
-  msg = mido_play(midof, midoOut)
-  midoOut.send(msg)
 
 ### end ###
