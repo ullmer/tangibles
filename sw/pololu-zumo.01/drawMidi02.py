@@ -8,7 +8,8 @@ from functools import partial
 import pygame
 
 midiValsPerOctave = 12
-pixelsPerVal      = 5
+pixelsPerVal      = 3
+vertMultiplier    = 3
 midiValsTotal     = 127
 midiValOctaves    = int(midiValsTotal / midiValsPerOctave)
 
@@ -16,7 +17,8 @@ colScaleGray = (50, 50, 50)
 colScaleRed  = (100, 0,  0)
 colNote      = (100, 100, 100)
 
-HEIGHT = midiValsTotal * pixelsPerVal
+#HEIGHT = midiValsTotal * pixelsPerVal
+HEIGHT = 1000
 WIDTH  = 1600
 
 ######################## place window @ 0,0 ####################
@@ -51,7 +53,6 @@ class noteStore:
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
   
-
   def clearNotes(self): self.notes = []
 
   ####################### add note #######################
@@ -68,7 +69,7 @@ class noteStore:
       self.drawNote(noteVal, xCoord)
    
   def drawNote(self, noteVal, xCoord=None):
-    x, y = xCoord, HEIGHT - (pixelsPerVal * noteVal) 
+    x, y = xCoord, HEIGHT - (pixelsPerVal * noteVal * vertMultiplier) 
     w, h = pixelsPerVal, pixelsPerVal
     #print("r:", x,y,w,h)
     r    = pygame.Rect(x,y,w,h)
@@ -82,7 +83,7 @@ def drawGrid():
 
   for octIdx in range(midiValOctaves):
     screen.draw.line((x1,y), (x2,y), colScaleGray)
-    y += midiValsPerOctave * pixelsPerVal
+    y += midiValsPerOctave * pixelsPerVal * vertMultiplier
 
 ######################## main ########################
 
