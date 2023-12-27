@@ -20,11 +20,15 @@ port = mido.open_output(outport)
 sys.stdout.reconfigure(encoding='utf-8')
 
 for msg in mid.play():
-  #port.send(msg)
   #print(msg)
+  port.send(msg)
+  diffTime = currentTime() - firstTime
+  try:    n = librosa.midi_to_note(int(msg.note))
+  except: continue
+
   if msg.time != 0: 
-    diffTime = currentTime() - firstTime
-    n = librosa.midi_to_note(int(msg.note))
     print(msg.note, diffTime, n, msg.time)
+  else:
+    print(msg.note, diffTime, n)
 
 ### end ###

@@ -3,7 +3,8 @@ import mido
 #https://github.com/mido/mido
 #https://librosa.org/doc/main/generated/librosa.midi_to_note.html
 
-mfn = 'merryChristmas.mid'
+#mfn = 'merryChristmas.mid'
+mfn = '3400themerrypheastevenritchie.mid'
 mid = mido.MidiFile(mfn)
 
 outport = None
