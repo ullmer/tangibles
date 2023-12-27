@@ -152,13 +152,14 @@ outport = None
 for port in mido.get_output_names():
   outport = port; print("output:", outport)
 
-midoOut = mido.open_output(outport)
-
 mfn     = '3400themerrypheastevenritchie.mid'
+midoOut = mido.open_output(outport)
 midoObj = mido.MidiFile(mfn)
 
+pmp = pgzMidoPlayer(midoObj=midoObj, midoOut=midoOut)
+
 print(1)
-mido_play_update(midoObj, midoOut)
+pmp.play()
 print(2)
 
 ### end ###
