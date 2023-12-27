@@ -96,38 +96,55 @@ def draw():
   ns.draw()
   c.draw()
 
-######################## midi setup ########################
-
-def mido_play_update(midoObj, midoOut):
-
-  print("mpu")
-
-  msg = pgz_mido_play(midoObj, midoOut)
-  midoOut.send(msg)
-
 ######################## mido play ########################
 
-def pgz_mido_play(midoObj, midoOut):
-  print("mpnow")
+class pgzMidoPlayer:
+  midoObj = None
+  midoOut = None
 
-  #variant of https://github.com/mido/mido/blob/main/mido/midifiles/midifiles.py
-  start_time = time.time()
-  input_time = 0.0
+  start_time = None
+  input_time = None
+  queuedMsg  = None
 
-  print("mp")
+  ####################### constructor #######################
 
-  for msg in midoObj:
-    input_time += msg.time
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-    playback_time          = time.time()      - start_time
-    duration_to_next_event = input_time - playback_time
+  ####################### play #######################
 
-    pcb = partial(mido_play_update, midoObj, midoOut)
+  def play(self):
 
-    if duration_to_next_event > 0.0:
-      clock.schedule(pcb, duration_to_next_event)
-    else: 
-      pcb()
+    print("mpnow")
+
+    #variant of https://github.com/mido/mido/blob/main/mido/midifiles/midifiles.py
+    self.start_time = time.time()
+    self.input_time = 0.0
+
+    self.serviceMessages()
+
+  ####################### play #######################
+
+  def resume_play(self):
+    self.midoOut.send(msg)
+    self.serviceMessages()
+
+  ####################### play #######################
+
+  def serviceMessages(self):
+    while True:
+      msg = self.midoObj.__next__()
+      self.input_time += msg.time
+
+      playback_time          = time.time() - start_time
+      duration_to_next_event = input_time  - playback_time
+
+      if duration_to_next_event > 0.0:
+        self.queuedMessage = msg
+        clock.schedule(self.resume_play, duration_to_next_event)
+        break
+      else: 
+        self.midoOut.send(msg)
 
 ######################## midi setup ########################
 
@@ -135,13 +152,13 @@ outport = None
 for port in mido.get_output_names():
   outport = port; print("output:", outport)
 
-mout = mido.open_output(outport)
+midoOut = mido.open_output(outport)
 
 mfn     = '3400themerrypheastevenritchie.mid'
 midoObj = mido.MidiFile(mfn)
 
 print(1)
-pgz_mido_play(midoObj, mout)
+mido_play_update(midoObj, midoOut)
 print(2)
 
 ### end ###
