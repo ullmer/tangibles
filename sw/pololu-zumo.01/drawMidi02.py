@@ -102,7 +102,8 @@ def draw():
 class pgzMidoPlayer:
   midoObjIter = None
   midoObj     = None
-  midoOut     = None
+  midoOut     = None  
+  ns          = None #notestore
 
   start_time = None
   input_time = None
@@ -129,7 +130,11 @@ class pgzMidoPlayer:
   ####################### play #######################
 
   def resume_play(self):
-    self.midoOut.send(self.queuedMessage)
+    msg = self.queuedMessage
+    self.midoOut.send(msg)
+
+    if msg.time != 0: self.ns.addNote(int(msg.note))
+
     self.serviceMessages()
 
   ####################### play #######################
@@ -149,6 +154,7 @@ class pgzMidoPlayer:
         break
       else: 
         if isinstance(msg, MetaMessage): continue 
+        if msg.time != 0: self.ns.addNote(int(msg.note))
         self.midoOut.send(msg)
 
 ######################## midi setup ########################
@@ -161,7 +167,7 @@ mfn     = '3400themerrypheastevenritchie.mid'
 midoOut = mido.open_output(outport)
 midoObj = mido.MidiFile(mfn)
 
-pmp = pgzMidoPlayer(midoObj=midoObj, midoOut=midoOut)
+pmp = pgzMidoPlayer(midoObj=midoObj, midoOut=midoOut, ns=ns)
 
 print(1)
 pmp.play()
