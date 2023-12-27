@@ -5,6 +5,7 @@
 import mido, time
 from mido import MetaMessage
 from functools import partial
+import pygame
 
 midiValsPerOctave = 12
 pixelsPerVal      = 5
@@ -64,11 +65,12 @@ class noteStore:
       self.drawNote(noteVal, xCoord)
    
   def drawNote(self, noteVal, xCoord=None):
-    if xCoord is None: xCoord is self.curs.cursorPos
+    if xCoord is None: xCoord = self.curs.cursorPos
 
     x, y = xCoord, (pixelsPerVal * noteVal) 
     w, h = pixelsPerVal, pixelsPerVal
-    r      = Rect((x,y), (w, h))
+    #print("r:", x,y,w,h)
+    r    = pygame.Rect(x,y,w,h)
     screen.draw.filled_rect(r, colNote)
 
 ######################## draw grid ########################
