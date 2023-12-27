@@ -19,16 +19,18 @@ fn = '3400themerrypheastevenritchie.txt'
 f  = open(fn, 'rt')
 rawlines = f.readlines()
 
-lastBegun = 0
+lastBegun  = 0
+lastOutStr = ''
 
 for rawline in rawlines:
   if rawline[0:3] == 'out': continue #ignore MIDI output debug messages
   cleanline = rawline.rstrip() # remove newline
 
   try:
-    fields = cleanline.split(' ')
-    noteVal, timeBegun, whichNote, noteDuration = fields
-    print(whichNote, timeBegun - lastBegun)
+    f = cleanline.split(' ')
+    noteVal, timeBegun, whichNote, noteDuration = int(f[0]), int(f[1]), f[2], float(f[3])
+    outStr = "%s %i" % (whichNote, timeBegun-lastBegun)
+    if outStr != lastOutStr: print(outStr); lastOutStr = outStr
     lastBegun = timeBegun
   except: print("oops:", len(fields), fields)
 
