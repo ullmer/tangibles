@@ -133,11 +133,11 @@ class pgzMidoPlayer:
 
   def serviceMessages(self):
     while True:
-      msg = self.midoObj.__next__()
+      msg = self.midoObj.__iter__().__next__()
       self.input_time += msg.time
 
-      playback_time          = time.time() - start_time
-      duration_to_next_event = input_time  - playback_time
+      playback_time          = time.time() - self.start_time
+      duration_to_next_event = self.input_time  - playback_time
 
       if duration_to_next_event > 0.0:
         self.queuedMessage = msg
