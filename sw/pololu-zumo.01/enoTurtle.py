@@ -42,18 +42,34 @@ class enoTurtleZumo:
 
     if engine=='zumo'::
       self.timr = Timer()
+      self.motors = robot.Motors()
+
+  ####################### show error #######################
+
+  def err(self, msg):
+    if engine!='zumo': print('enoTurtleZumo proxy error:', msg)
+
+  ####################### schedule callback #######################
 
   def scheduleCb(self, periodMs, callback):
     if engine=='zumo'::
       self.timr.init(mode=Timer.ONE_SHOT, period=periodMs, callback=callback)
-    else:
+    else: 
+      self.err('scheduleCb: no zumo binding')
 
-  def stopMotors(self): 
+  ####################### stop motors #######################
 
-  def scheduleCb(self, periodMs, callback):
-    self.timr.init(mode=Timer.ONE_SHOT, period=periodMs, callback=callback)
+  def stopMotors(self, when=0): 
+    if engine=='zumo': 
+      if when == 0: self.motors.set_speeds(0, 0) #now
+      else:         self.scheduleCb(when, self.stopMotors)
 
+  ####################### turn right #######################
 
+  def right(self, periodMs):
+    if engine=='zumo': 
+      self.motors.set_speeds(0, self.motorSpeed)
+      self.stopMotors(periodMs)
 
 ################ initiations ################ 
 
@@ -65,10 +81,6 @@ if engine == 'zumo':
 # Create shortcuts for frequent commands (cmds)
 cmds       = {'r': t.right, 'l': t.left, 'f': t.fd, 'b': t.bk, 'c': t.circle,
               'u': t.penup, 'd': t.pendown}
-
-
-
-
 
 
 patterns   = {'-': 'u f110 d',        # scoot  forward a bit, no marks
