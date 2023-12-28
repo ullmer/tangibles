@@ -15,6 +15,11 @@
 #65 2509 F4 0.20689649999999998
 #65 2509 F4 0.20258615625
 
+import librosa
+import sys
+
+sys.stdout.reconfigure(encoding='utf-8')
+
 #fn = '3400themerrypheastevenritchie.txt5'
 fn='midi-tst01d.txt'
 
@@ -46,7 +51,9 @@ for rawline in rawlines:
       noteBegun    = noteDict[noteVal]
       currentTime  = timeBegun   - firstBegun
       noteDuration = currentTime - noteBegun
-      outStr = "- [%4i, %3i, %i]" % (noteBegun, noteVal, noteDuration)
+      n = librosa.midi_to_note(noteVal)
+
+      outStr = "- [%4i, %3i, %i, %s]" % (noteBegun, noteVal, noteDuration, n)
       print(outStr)
 
     lastBegun = timeBegun; queuedNotes = [noteVal]
