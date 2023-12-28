@@ -129,7 +129,8 @@ class enoCommandSeq:
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-  def registerSeq(self, cmdSeq): self.commandSeq = cmdSeq.split() #break apart 'r90 f130' into ['r90', 'f130']
+  def registerSeqTxt(self, cmdSeq):      self.commandSeqTxt      = cmdSeq.split() #break apart 'r90 f130' into ['r90', 'f130']
+  def registerSeqPartials(self, cmdSeq): self.commandSeqPartials = cmdSeq
 
   def err(self, msg):
     if engine!='zumo': print('enoCommandSeq proxy error:', msg)
@@ -172,9 +173,41 @@ ecs = enoCommandSeq(etz=t) #pass enoTurtleZumo instance for timer callbacks/etc.
 def followPatternAsync(patTxt): #follow a command sequence defined by pattern text
   global cmds, pattern, engine, ecs
 
-  ecs.registerSeq(patTxt)
+  ecs.registerSeqTxt(patTxt)
 
+  commands = patTxt.split() #break apart 'r90 f130' into ['r90', 'f130']
+  cmdSeqPartials = []
+
+  for command in commands:
+    try:
+      cmdChar = command[0];
+      if cmdChar in patterns:
+        patTxt = patterns[cmdChar]
+        followPattern(patTxt)
+        continue
+
+      args = []
+
+      if len(command) > 1:
+        argTxt1 = command[1:] # break text into two parts
+        if argTxt1.find(','): argTxt2 = argTxt1.split(',') #handle commas
+        else:                 argTxt2 = [argTxt1]
+
+        for arg in argTxt2: args.append(int(arg)) # turn letters into numbers
+
+      if cmdChar in cmds:
+        cmd = cmds[cmdChar]
+
+        if len(args) == 0: cmdSeqPartials.append(cmd)
+        if len(args) == 1: pcb = partial(cmd, args[0]);          cmdSeqPartials.append(pcb)
+        if len(args) == 2: pcb = partial(cmd, args[0], args[1]); cmdSeqParitals(append(pcb)
+
+    except:
+      print("Noting + ignoring enoTurtle followPattern bug processing", command)
+      traceback.print_exc()
   
+    ecs.registerSeqPartials(cmdSeqPartials)
+    ecs.runNextCmd()
 
 ################# Follow Patterns / blocking ###############
 
