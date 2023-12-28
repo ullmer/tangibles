@@ -5,7 +5,7 @@ from musicSupport import *
 import enoTurtle
 
 song  = "V3 T200 cf...a>c... <f >a#dfdc"
-dance = "f50 r50" * 4 # a square
+dance = "f50 r50" * 4         # a square dance :-)
 
 zumoPrep()
 
