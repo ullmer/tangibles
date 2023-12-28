@@ -5,7 +5,8 @@ import mido, librosa
 #https://librosa.org/doc/main/generated/librosa.midi_to_note.html
 
 #mfn = 'merryChristmas.mid'
-mfn = '3400themerrypheastevenritchie.mid'
+#mfn = '3400themerrypheastevenritchie.mid'
+mfn='midi-tst01b.mid'
 mid = mido.MidiFile(mfn)
 
 outport = None
@@ -15,6 +16,8 @@ for port in mido.get_output_names():
 def currentTime(): return round(time.time() * 1000)
 #def bendTime():    return time.time() * 2.
 #def bendTime():    return time.time() / 6.
+  
+n = librosa.midi_to_note(60)
 
 firstTime = currentTime()
 
@@ -32,7 +35,7 @@ for msg in mid.play():
   try:    n = librosa.midi_to_note(int(msg.note))
   except: continue
 
-  try:    print(msg.note, diffTime, n, msg.time)
+  try:    print(msg.note, diffTime, n, msg.velocity, msg.time)
   except: print("err:", msg)
 
   port.send(msg)

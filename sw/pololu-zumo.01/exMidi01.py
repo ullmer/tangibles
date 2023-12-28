@@ -4,7 +4,8 @@ import mido
 #https://librosa.org/doc/main/generated/librosa.midi_to_note.html
 
 #mfn = 'merryChristmas.mid'
-mfn = '3400themerrypheastevenritchie.mid'
+#mfn = '3400themerrypheastevenritchie.mid'
+mfn='midi-tst01b.mid'
 mid = mido.MidiFile(mfn)
 
 outport = None
@@ -15,5 +16,6 @@ port = mido.open_output(outport)
 
 for msg in mid.play():
   port.send(msg)
+  print(msg)
 
 ### end ###

@@ -12,7 +12,9 @@
 
 import yaml, mido, time
 
-yfn = '3400themerrypheastevenritchie4.yaml'
+#yfn = '3400themerrypheastevenritchie4.yaml'
+yfn='midi-tst01c.yaml'
+
 yf  = open(yfn, 'rt')
 yd  = yaml.safe_load(yf)
 

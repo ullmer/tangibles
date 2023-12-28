@@ -15,12 +15,14 @@
 #65 2509 F4 0.20689649999999998
 #65 2509 F4 0.20258615625
 
-fn = '3400themerrypheastevenritchie.txt5'
+#fn = '3400themerrypheastevenritchie.txt5'
+fn='midi-tst01c.txt'
+
 f  = open(fn, 'rt')
 rawlines = f.readlines()
 
 lastBegun      = 0
-sameTimeThresh = 3 #if time difference within N milliseconds, assume ~chord
+sameTimeThresh = 1 #if time difference within N milliseconds, assume ~chord
 #sameTimeThresh = 15 #if time difference within N milliseconds, assume ~chord
 queuedNotes    = []
 
