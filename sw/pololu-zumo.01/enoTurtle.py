@@ -117,12 +117,21 @@ patterns   = {'-': 'u f110 d',        # scoot  forward a bit, no marks
               'P': 'r90 f130 b100 f50 l90 c40,180 r180',
               'C': 'c60,180', 'V': 'f130 r140 f130', 'A': 'f130 r140 f130'}
 
+################# command sequence #################
+
+class enoCommandSeq:
+  commandSeq = []
+  commandIdx = 0
+
+  def registerSeq(self, cmdSeq): self.commandSeq = cmdSeq.split() #break apart 'r90 f130' into ['r90', 'f130']
+
 ################# Follow Patterns #################
 
 def followPattern(patTxt): #follow a command sequence defined by pattern text
-  global cmds, pattern
+  global cmds, pattern, engine
 
   commands = patTxt.split() #break apart 'r90 f130' into ['r90', 'f130']
+
   for command in commands:
     try:
       cmdChar = command[0];
