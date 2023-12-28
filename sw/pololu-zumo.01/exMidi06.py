@@ -15,7 +15,7 @@
 #65 2509 F4 0.20689649999999998
 #65 2509 F4 0.20258615625
 
-fn = '3400themerrypheastevenritchie.txt'
+fn = '3400themerrypheastevenritchie.txt5'
 f  = open(fn, 'rt')
 rawlines = f.readlines()
 

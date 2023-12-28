@@ -12,7 +12,7 @@
 
 import yaml, mido, time
 
-yfn = '3400themerrypheastevenritchie3.yaml'
+yfn = '3400themerrypheastevenritchie4.yaml'
 yf  = open(yfn, 'rt')
 yd  = yaml.safe_load(yf)
 
@@ -20,8 +20,8 @@ mo  = mido.open_output()
 
 for row in yd:
   delayVal, notes = row
-  for note in notes: mo.send(mido.Message('note_on', note=note))
   time.sleep(delayVal/1000.)
+  for note in notes: mo.send(mido.Message('note_on', note=note))
   
 ### end ###
 
