@@ -21,7 +21,7 @@ mo  = mido.open_output()
 for row in yd:
   delayVal, notes = row
   time.sleep(delayVal/1000.)
-  for note in notes: mo.send(mido.Message('note_on', note=note))
+  for note in notes: mo.send(mido.Message('note_on', note=note, channel=1))
   
 ### end ###
 
