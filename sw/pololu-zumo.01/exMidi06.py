@@ -26,6 +26,8 @@ sameTimeThresh = 1 #if time difference within N milliseconds, assume ~chord
 #sameTimeThresh = 15 #if time difference within N milliseconds, assume ~chord
 queuedNotes    = []
 
+noteDict = {}
+
 for rawline in rawlines:
   if rawline[0:3] == 'out': continue #ignore MIDI output debug messages
   cleanline = rawline.rstrip() # remove newline
@@ -38,8 +40,12 @@ for rawline in rawlines:
     diffTime = timeBegun - lastBegun
 
     #outStr = "- {noteDelay: %4i, noteVals: %s}" % (diffTime, queuedNotes)
-    outStr = "- [%4i, %3i, %i]" % (diffTime, noteVal, whichVel)
-    print(outStr)
+    if whichVel != 0: noteDict[noteVal] = diffTime
+    else:
+      noteBegun    = noteDict[noteVal]
+      noteDuration = diffTime - noteBegun
+      outStr = "- [%4i, %3i, %i]" % (noteBegun, noteVal, noteDuration)
+      print(outStr)
 
     lastBegun = timeBegun; queuedNotes = [noteVal]
 
