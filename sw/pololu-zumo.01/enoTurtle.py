@@ -122,8 +122,22 @@ patterns   = {'-': 'u f110 d',        # scoot  forward a bit, no marks
 class enoCommandSeq:
   commandSeq = []
   commandIdx = 0
+  repeat     = True
 
   def registerSeq(self, cmdSeq): self.commandSeq = cmdSeq.split() #break apart 'r90 f130' into ['r90', 'f130']
+
+  def err(self, msg):
+    if engine!='zumo': print('enoCommandSeq proxy error:', msg)
+
+  def getNextCmd(self): 
+    cslen = len(commandSeq)
+    if cslen==0: err("genNextCmd: no commands registered"); return None
+
+    if commandIdx >= cslen: 
+      if self.repeat=True: commandIdx = 0
+      result = commandSeq[commandIdx]
+      commandIdx += 1
+      return result
 
 ################# Follow Patterns #################
 
