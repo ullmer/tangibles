@@ -17,16 +17,16 @@ def currentTime(): return round(time.time() * 1000)
 #def bendTime():    return time.time() * 2.
 #def bendTime():    return time.time() / 6.
   
-n = librosa.midi_to_note(60)
+n = librosa.midi_to_note(60) #experiencing 1-2s latency on first 
+                             #librosa call, so this needs to happen
+                             #before mid-playback use
 
 firstTime = currentTime()
 
 port = mido.open_output(outport)
 sys.stdout.reconfigure(encoding='utf-8') #sharps and flats :-)
 
-
 #https://mido.readthedocs.io/en/latest/api.html#mido.MidiFile.play
-
 #for msg in mid.play(now=bendTime):
 
 for msg in mid.play():
