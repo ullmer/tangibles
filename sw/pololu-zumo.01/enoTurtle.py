@@ -73,14 +73,41 @@ class enoTurtleZumo:
       self.motors.set_speeds(0, self.motorSpeed)
       self.stopMotors(units * self.multRot)
 
+  ####################### turn right #######################
+
+  def left(self, units):
+    if engine=='zumo': 
+      self.motors.set_speeds(self.motorSpeed, 0)
+      self.stopMotors(units * self.multRot)
+
+  ####################### turn right #######################
+
+  def left(self, units):
+    if engine=='zumo': 
+      self.motors.set_speeds(self.motorSpeed, 0)
+      self.stopMotors(units * self.multRot)
+
+  ####################### go forward #######################
+
+  def fd(self, units):
+    if engine=='zumo': 
+      self.motors.set_speeds(self.motorSpeed, self.motorSpeed)
+      self.stopMotors(units * self.multForwBack)
+
+  ####################### go forward #######################
+
+  def bk(self, units):
+    if engine=='zumo': 
+      self.motors.set_speeds(-1 * self.motorSpeed, -1 * self.motorSpeed)
+      self.stopMotors(units * self.multForwBack)
+
 ################ initiations ################ 
 
 if engine == 'zumo':   
   from zumo_2040_robot import robot
-  t = 
+  t = enoTurtleZumo()
 
-
-# Create shortcuts for frequent commands (cmds)
+##### Create shortcuts for frequent commands (cmds)
 cmds       = {'r': t.right, 'l': t.left, 'f': t.fd, 'b': t.bk, 'c': t.circle,
               'u': t.penup, 'd': t.pendown}
 
