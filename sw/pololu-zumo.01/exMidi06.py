@@ -16,7 +16,7 @@
 #65 2509 F4 0.20258615625
 
 #fn = '3400themerrypheastevenritchie.txt5'
-fn='midi-tst01c.txt'
+fn='midi-tst01d.txt'
 
 f  = open(fn, 'rt')
 rawlines = f.readlines()
@@ -32,18 +32,14 @@ for rawline in rawlines:
 
   try:
     fields = cleanline.split(' ')
-    nv, tb, wn, nd = fields
-    noteVal, timeBegun, whichNote, noteDuration = int(nv), int(tb), wn, float(nd)
+    nv, tb, wn, v, nd = fields
+    noteVal, timeBegun, whichNote, whichVel, noteDuration = int(nv), int(tb), wn, int(v), float(nd)
     if lastBegun == 0: lastBegun = timeBegun 
     diffTime = timeBegun - lastBegun
 
-    if diffTime < sameTimeThresh: 
-      if noteVal not in queuedNotes: queuedNotes.append(noteVal) #resolve observed ambiguous situation
-      continue
-    else: 
-      #outStr = "- {noteDelay: %4i, noteVals: %s}" % (diffTime, queuedNotes)
-      outStr = "- [%4i, %s]" % (diffTime, queuedNotes)
-      print(outStr)
+    #outStr = "- {noteDelay: %4i, noteVals: %s}" % (diffTime, queuedNotes)
+    outStr = "- [%4i, %3i, %i]" % (diffTime, noteVal, whichVel)
+    print(outStr)
 
     lastBegun = timeBegun; queuedNotes = [noteVal]
 
