@@ -120,28 +120,65 @@ patterns   = {'-': 'u f110 d',        # scoot  forward a bit, no marks
 ################# command sequence #################
 
 class enoCommandSeq:
-  commandSeq = []
+  commandSeqTxt      = []
+  commandSeqPartials = []
   commandIdx = 0
   repeat     = True
+  etz        = None   #class enoTurtleZumo
+
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
   def registerSeq(self, cmdSeq): self.commandSeq = cmdSeq.split() #break apart 'r90 f130' into ['r90', 'f130']
 
   def err(self, msg):
     if engine!='zumo': print('enoCommandSeq proxy error:', msg)
 
+  ################# get next command #################
+
   def getNextCmd(self): 
-    cslen = len(commandSeq)
+    cslen = len(commandSeqPartials)
     if cslen==0: err("genNextCmd: no commands registered"); return None
 
     if commandIdx >= cslen: 
       if self.repeat=True: commandIdx = 0
-      result = commandSeq[commandIdx]
+      result = commandSeqPartials[commandIdx]
       commandIdx += 1
       return result
 
+  ################# run next command #################
+
+  def runNextCmd(self, autoscheduleNext=True): 
+    nc = self.getNextCmd()
+ 
+    try:
+      timeToCompletion = nc()
+      if autoscheduleNext: etz.scheduleCb(timeToCompletion, self.runNextCmd)
+      return  1
+    except:
+      err("runNextCmd error")
+      return -1
+
 ################# Follow Patterns #################
 
-def followPattern(patTxt): #follow a command sequence defined by pattern text
+def followPattern(patTxt): 
+  if engine!='zumo': self.followPatternBlocking(patTxt)
+  else:              self.followPatternAsync(patTxt)
+
+################# Follow Patterns / asynchronous #################
+
+ecs = enoCommandSeq(etz=t) #pass enoTurtleZumo instance for timer callbacks/etc.
+
+def followPatternAsync(patTxt): #follow a command sequence defined by pattern text
+  global cmds, pattern, engine, ecs
+
+  ecs.registerSeq(patTxt)
+
+  
+
+################# Follow Patterns / blocking ###############
+
+def followPatternBlocking(patTxt): #follow a command sequence defined by pattern text
   global cmds, pattern, engine
 
   commands = patTxt.split() #break apart 'r90 f130' into ['r90', 'f130']
