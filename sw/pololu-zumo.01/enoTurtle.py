@@ -30,9 +30,11 @@ if engine == 'zumo': import Timer
 class enoTurtleZumo:
   #https://docs.micropython.org/en/latest/library/machine.Timer.html
 
-  timr       = None # timer
-  motorSpeed = 1500
-  motor      = None
+  timr         = None # timer
+  motorSpeed   = 1500
+  motor        = None
+  multRot      = 10
+  multForwBack = 10
   
   ####################### constructor #######################
 
@@ -66,10 +68,10 @@ class enoTurtleZumo:
 
   ####################### turn right #######################
 
-  def right(self, periodMs):
+  def right(self, units):
     if engine=='zumo': 
       self.motors.set_speeds(0, self.motorSpeed)
-      self.stopMotors(periodMs)
+      self.stopMotors(units * self.multRot)
 
 ################ initiations ################ 
 
