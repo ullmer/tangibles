@@ -9,6 +9,8 @@ engine  = 'zumo'
 
 import traceback
 
+################ Standard Python turtle bindings ################ 
+
 if engine == 'turtle': 
   import turtle
   turtle.title('Turtles in motion')
@@ -21,17 +23,53 @@ if engine == 'turtle':
   t.color("orange")  #make the "pen color" orange
   t.pensize(10)      #choose a pen width of 10
 
+################ Zumo + friends support library ################ 
+
+if engine == 'zumo': import Timer 
+
+class enoTurtleZumo:
+  #https://docs.micropython.org/en/latest/library/machine.Timer.html
+
+  timr       = None # timer
+  motorSpeed = 1500
+  motor      = None
+  
+  ####################### constructor #######################
+
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
+
+    if engine=='zumo'::
+      self.timr = Timer()
+
+  def scheduleCb(self, periodMs, callback):
+    if engine=='zumo'::
+      self.timr.init(mode=Timer.ONE_SHOT, period=periodMs, callback=callback)
+    else:
+
+  def stopMotors(self): 
+
+  def scheduleCb(self, periodMs, callback):
+    self.timr.init(mode=Timer.ONE_SHOT, period=periodMs, callback=callback)
+
+
+
+################ initiations ################ 
+
 if engine == 'zumo':   
   from zumo_2040_robot import robot
-
-
-
-
+  t = 
 
 
 # Create shortcuts for frequent commands (cmds)
 cmds       = {'r': t.right, 'l': t.left, 'f': t.fd, 'b': t.bk, 'c': t.circle,
               'u': t.penup, 'd': t.pendown}
+
+
+
+
+
 
 patterns   = {'-': 'u f110 d',        # scoot  forward a bit, no marks
               '*': 'f200 r144 ' * 5,  # repeat star-leg 5 times
