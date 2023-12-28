@@ -2,14 +2,15 @@
 
 from zumo_2040_robot import robot
 from musicSupport import *
+import enoTurtle
 
-song = "V3 T200 cf...a>c... <f >a#dfdc"
+song  = "V3 T200 cf...a>c... <f >a#dfdc"
+dance = "f50 r50" * 4 # a square
 
 zumoPrep()
 
 buzzer.play_in_background(song)
-#motors.set_speeds(1000, 1000)
-motors.set_speeds(1500, 1500)
+enoTurtle.followPattern(dance)
 
 zumoLoop(song)
 
