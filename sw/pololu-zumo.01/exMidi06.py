@@ -21,7 +21,8 @@ fn='midi-tst01d.txt'
 f  = open(fn, 'rt')
 rawlines = f.readlines()
 
-lastBegun      = 0
+firstBegun = 0
+lastBegun  = 0
 sameTimeThresh = 1 #if time difference within N milliseconds, assume ~chord
 #sameTimeThresh = 15 #if time difference within N milliseconds, assume ~chord
 queuedNotes    = []
@@ -36,14 +37,15 @@ for rawline in rawlines:
     fields = cleanline.split(' ')
     nv, tb, wn, v, nd = fields
     noteVal, timeBegun, whichNote, whichVel, noteDuration = int(nv), int(tb), wn, int(v), float(nd)
-    if lastBegun == 0: lastBegun = timeBegun 
+    if lastBegun == 0: lastBegun = timeBegun ; firstBegun = timeBegun
     diffTime = timeBegun - lastBegun
 
     #outStr = "- {noteDelay: %4i, noteVals: %s}" % (diffTime, queuedNotes)
-    if whichVel != 0: noteDict[noteVal] = diffTime
+    if whichVel != 0: noteDict[noteVal] = timeBegun - firstBegun
     else:
       noteBegun    = noteDict[noteVal]
-      noteDuration = diffTime - noteBegun
+      currentTime  = timeBegun   - firstBegun
+      noteDuration = currentTime - noteBegun
       outStr = "- [%4i, %3i, %i]" % (noteBegun, noteVal, noteDuration)
       print(outStr)
 
