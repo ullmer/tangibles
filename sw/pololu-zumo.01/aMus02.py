@@ -5,12 +5,12 @@ from musicSupport import *
 import enoTurtle
 
 song  = "V3 T200 cf...a>c... <f >a#dfdc"
-dance = "f50 r50" * 4         # a square dance :-)
+dance = "f50 r90" * 4         # a square dance :-)
 
 zumoPrep()
 
 buzzer.play_in_background(song)
-enoTurtle.followPattern(dance)
+enoTurtle.followPattern(dance, repeat=True)
 
 zumoLoop(song)
 
