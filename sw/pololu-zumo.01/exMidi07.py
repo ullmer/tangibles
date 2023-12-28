@@ -24,9 +24,13 @@ lastTime = 0
 for row in yd:
   timeVal, note, duration = row
   if lastTime == 0: lastTime = timeVal
-  mo.send(mido.Message('note_on', note=note, channel=1))
-  delayVal = timeVal-lastTime; lastTime = timeVal
+  delayVal = timeVal-lastTime
+
   time.sleep(delayVal/1000.)
+  mo.send(mido.Message('note_on', note=note))
+  time.sleep(duration/1000.)
+  mo.send(mido.Message('note_on', note=note, velocity=0))
+  lastTime = timeVal + duration
   
 ### end ###
 
