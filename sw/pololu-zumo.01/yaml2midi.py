@@ -29,9 +29,10 @@ for row in yd:
   if delayVal > 0: time.sleep(delayVal/1000.)
   mo.send(mido.Message('note_on', note=note))
 
-  time.sleep(duration/1000.)
-  mo.send(mido.Message('note_on', note=note, velocity=0))
-  lastTime = timeVal + duration
+  #time.sleep(duration/1000.)
+  #mo.send(mido.Message('note_on', note=note, velocity=0))
+  #lastTime = timeVal + duration
+  lastTime = timeVal
   
 ### end ###
 
