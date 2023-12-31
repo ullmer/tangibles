@@ -20,7 +20,8 @@ import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-fn = '3400themerrypheastevenritchie.txt'
+#example used with permission: https://www.classicalmidi.co.uk/music3/3400themerrypheastevenritchie.mid
+fn = 'music/3400themerrypheastevenritchie.txt'
 #fn='midi-tst01d.txt'
 
 f  = open(fn, 'rt')

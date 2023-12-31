@@ -12,7 +12,8 @@
 
 import yaml, mido, time
 
-yfn = '3400themerrypheastevenritchie.yaml'
+#example used with permission: https://www.classicalmidi.co.uk/music3/3400themerrypheastevenritchie.mid
+yfn = 'music/3400themerrypheastevenritchie.yaml'
 #yfn='midi-tst01d.yaml'
 
 yf  = open(yfn, 'rt')

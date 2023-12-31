@@ -4,9 +4,12 @@ import mido, librosa
 #https://github.com/mido/mido
 #https://librosa.org/doc/main/generated/librosa.midi_to_note.html
 
-#mfn = 'merryChristmas.mid'
+#example used with permission: https://www.classicalmidi.co.uk/music3/3400themerrypheastevenritchie.mid
 mfn = 'music/3400themerrypheastevenritchie.mid'
+
+#mfn = 'merryChristmas.mid'
 #mfn='midi-tst01b.mid'
+
 mid = mido.MidiFile(mfn)
 
 outport = None
