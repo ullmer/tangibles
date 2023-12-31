@@ -20,8 +20,8 @@ import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-#fn = '3400themerrypheastevenritchie.txt5'
-fn='midi-tst01d.txt'
+fn = '3400themerrypheastevenritchie.txt'
+#fn='midi-tst01d.txt'
 
 f  = open(fn, 'rt')
 rawlines = f.readlines()

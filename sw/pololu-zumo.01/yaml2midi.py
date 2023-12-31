@@ -12,8 +12,8 @@
 
 import yaml, mido, time
 
-#yfn = '3400themerrypheastevenritchie4.yaml'
-yfn='midi-tst01d.yaml'
+yfn = '3400themerrypheastevenritchie.yaml'
+#yfn='midi-tst01d.yaml'
 
 yf  = open(yfn, 'rt')
 yd  = yaml.safe_load(yf)
@@ -22,12 +22,13 @@ mo  = mido.open_output()
 
 lastTime = 0
 for row in yd:
-  timeVal, note, duration = row
+  timeVal, note, duration, noteStr = row
   if lastTime == 0: lastTime = timeVal
   delayVal = timeVal-lastTime
 
-  time.sleep(delayVal/1000.)
+  if delayVal > 0: time.sleep(delayVal/1000.)
   mo.send(mido.Message('note_on', note=note))
+
   time.sleep(duration/1000.)
   mo.send(mido.Message('note_on', note=note, velocity=0))
   lastTime = timeVal + duration

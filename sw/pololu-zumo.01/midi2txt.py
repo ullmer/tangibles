@@ -5,8 +5,8 @@ import mido, librosa
 #https://librosa.org/doc/main/generated/librosa.midi_to_note.html
 
 #mfn = 'merryChristmas.mid'
-#mfn = '3400themerrypheastevenritchie.mid'
-mfn='midi-tst01b.mid'
+mfn = 'music/3400themerrypheastevenritchie.mid'
+#mfn='midi-tst01b.mid'
 mid = mido.MidiFile(mfn)
 
 outport = None
