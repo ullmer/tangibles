@@ -6,6 +6,7 @@
 import FreeCAD as App
 import FreeCADGui as Gui
 import pivy.coin as coin
+
 import traceback
 
 ########################## Texture Plane ###########################
@@ -13,6 +14,11 @@ import traceback
 class enoTexturePlane:
   translationVal    = None
   translationNode   = None
+
+  rotationAngle     = None
+  rotationNode      = None
+  rotationAxis      = coin.SoRotationXYZ.X
+
   textureImgFn      = None
   textureSize       = (1,1)
   textureCoord      = None
@@ -91,6 +97,12 @@ class enoTexturePlane:
       self.translationNode = coin.SoTranslation()
       self.translationNode.translation = self.translationVal
       tpn.addChild(self.translationNode)
+
+    if self.rotationAngle is not None:
+      self.rotationNode       = coin.SoRotationXYZ()
+      self.rotationNode.axis  = self.rotationAxis
+      self.rotationNode.angle = self.rotationAngle
+      tpn.addChild(self.rotationNode)
 
     tc  = self.textureCoord      = coin.SoTextureCoordinate2()
 
@@ -180,8 +192,7 @@ class enoTextureStack:
     if whichLayer > tnLen or whichLayer < 1:
       print("enoImgStack enoTextureStack highlight error: bad layer specifier %i (%i)" % (whichLayer, tnLen)); return None
  
-    self.lastHighlighted.changeTransp(
-
-      self.lastHighlighted = 
+    #self.lastHighlighted.changeTransp(
+    #self.lastHighlighted = 
 
 #### end ###
