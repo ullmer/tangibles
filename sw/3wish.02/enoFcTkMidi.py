@@ -22,6 +22,7 @@ class enoFcTkMidi:
   useMidi    = False
   useFreecad = False
   autolaunch = True  #autostart all core behaviors (including scheduled callbacks)
+  updateTkTitlebar = False
 
   swBasePath     = None
   swIconFn       = '/images/enodiaTkTitlebar01g.png'
@@ -84,11 +85,17 @@ class enoFcTkMidi:
     #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
+    print(2)
     if self.useFreecad: self.activateFreecad() 
+    print(3)
     if self.useTk:      self.activateTk();     self.buildTkUi()
+    print(4)
     if self.useMidi:    self.activateMidi();   self.buildMidi()
+    print(5)
     if self.useEnoMidi: self.activateEnoMidi()
+    print(6)
     if self.autolaunch: self.runAutolaunch() #naming of these two may benefit from revisiting
+    print(7)
 
   ############# report error#############
 
@@ -220,21 +227,29 @@ class enoFcTkMidi:
   def buildTkUi(self):
     if self.tkRoot is not None: return # don't rebuild multiple times
 
+    print(10)
+
     try: 
+      print(101)
       self.tkRoot    = tk.Tk() # Create the root (base) window
-      self.tkRoot.winfo_toplevel().title(self.tkWinName)
+      print(102)
+      if self.updateTkTitlebar: self.tkRoot.winfo_toplevel().title(self.tkWinName)
       self.tkActive  = True
+      print(103)
     except: 
       self.tkActive = False
       self.reportError('buildTkUi', 'Initial invocation of Tkinter unsuccessful.')
 
-    try:
-      iconFn = self.swBasePath + self.swIconFn
-      iconPh = tk.PhotoImage(file = iconFn)
-      self.tkRoot.iconphoto(False, iconPh)
-    except: 
-      self.reportError('buildTkUi', 'issues registering titlebar icon image; details:')
-      traceback.print_exc()
+    print(11)
+ 
+    if self.updateTkTitlebar:
+      try:
+        iconFn = self.swBasePath + self.swIconFn
+        iconPh = tk.PhotoImage(file = iconFn)
+        self.tkRoot.iconphoto(False, iconPh)
+      except: 
+        self.reportError('buildTkUi', 'issues registering titlebar icon image; details:')
+        traceback.print_exc()
 
     r,g,b = self.tkBgRgb
     bgCol = self.rgb2tk(r,g,b)
@@ -246,6 +261,7 @@ class enoFcTkMidi:
     if self.showButtonGrid2D: self.buildButtonGrid(bGridFrame)
 
     for el in [bGridFrame, sliderFrame]: el.pack(side=tk.TOP, expand=True, fill=tk.BOTH)
+    print(15)
 
   ############ build sliders user interface ############
 
