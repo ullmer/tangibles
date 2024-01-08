@@ -47,12 +47,12 @@ class enoTexturePlane:
   ############# get rotational axis #############
 
   def getRotAxis(self):
-    if !isinstance(self.rotationAxis, str):
+    if not isinstance(self.rotationAxis, str):
       print("enoTexturePlane getRotAxis: rotationAxis is non-string value:", whichAxis)
       return None
 
-    waLower = self.rotationAxis.tolower()
-    if waLower not in self.rotAxes
+    waLower = self.rotationAxis.lower()
+    if waLower not in self.rotAxes:
       print("enoTexturePlane setRotAxis: rotationAxis not among known rotational axes:", waLower)
       return None
 
@@ -62,12 +62,12 @@ class enoTexturePlane:
   ############# set rotational axis #############
 
   def setRotAxis(self, whichAxis, whichAngle=None):
-    if !isinstance(whichAxis, str):
+    if not isinstance(whichAxis, str):
       print("enoTexturePlane setRotAxis: whichAxis passed non-string value:", whichAxis)
       return None
 
-    waLower = whichAxis.tolower()
-    if waLower not in self.rotAxes
+    waLower = whichAxis.lower()
+    if waLower not in self.rotAxes:
       print("enoTexturePlane setRotAxis: whichAxis not among known rotational axes:", whichAxis)
       return None
 
@@ -134,7 +134,7 @@ class enoTexturePlane:
       tpn.addChild(self.translationNode)
 
     if self.rotationAngle is not None:
-      self.rotationNode       = SoRotationXYZ()
+      self.rotationNode       = coin.SoRotationXYZ()
       self.rotationNode.axis  = self.getRotAxis()
       self.rotationNode.angle = self.rotationAngle
       tpn.addChild(self.rotationNode)
