@@ -17,7 +17,12 @@ class enoTexturePlane:
 
   rotationAngle     = None
   rotationNode      = None
-  rotationAxis      = coin.SoRotationXYZ.X
+
+  rotAxes = {'x': coin.SoRotationXYZ.X,
+             'y': coin.SoRotationXYZ.Y,
+             'z': coin.SoRotationXYZ.Z}
+
+  rotationAxis      = 'x'
 
   textureImgFn      = None
   textureSize       = (1,1)
@@ -38,6 +43,36 @@ class enoTexturePlane:
 
     if self.textureImgFn is not None:
       self.buildTexturePlaneIv()
+
+  ############# get rotational axis #############
+
+  def getRotAxis(self):
+    if !isinstance(self.rotationAxis, str):
+      print("enoTexturePlane getRotAxis: rotationAxis is non-string value:", whichAxis)
+      return None
+
+    waLower = self.rotationAxis.tolower()
+    if waLower not in self.rotAxes
+      print("enoTexturePlane setRotAxis: rotationAxis not among known rotational axes:", waLower)
+      return None
+
+    result = self.rotAxes[waLower]
+    return result
+
+  ############# set rotational axis #############
+
+  def setRotAxis(self, whichAxis, whichAngle=None):
+    if !isinstance(whichAxis, str):
+      print("enoTexturePlane setRotAxis: whichAxis passed non-string value:", whichAxis)
+      return None
+
+    waLower = whichAxis.tolower()
+    if waLower not in self.rotAxes
+      print("enoTexturePlane setRotAxis: whichAxis not among known rotational axes:", whichAxis)
+      return None
+
+    self.rotationAxis = waLower
+    if whichAngle is not None: self.rotationAngle = whichAngle
 
   ############# setValues3 #############
 
@@ -99,12 +134,12 @@ class enoTexturePlane:
       tpn.addChild(self.translationNode)
 
     if self.rotationAngle is not None:
-      self.rotationNode       = coin.SoRotationXYZ()
-      self.rotationNode.axis  = self.rotationAxis
+      self.rotationNode       = SoRotationXYZ()
+      self.rotationNode.axis  = self.getRotAxis()
       self.rotationNode.angle = self.rotationAngle
       tpn.addChild(self.rotationNode)
 
-    tc  = self.textureCoord      = coin.SoTextureCoordinate2()
+    tc  = self.textureCoord   = coin.SoTextureCoordinate2()
 
     if self.textureOrient == 0:
       self.setValues2(tc.point, [[1,1], [0,1], [0,0], [1,0]])
