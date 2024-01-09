@@ -137,7 +137,8 @@ class enoFcTkMidi:
     tab.addTab(tab2,"Sliders")
 
     numSl = 8
-    slW, slH, x0, y0, dx = 10, 250, 10, 10, 30
+    slW, slH, x0, y0, dx = 14, 250, 10, 10, 31
+    ldx, ldy = 5, 15
 
     for i in range(numSl):
 
@@ -146,6 +147,8 @@ class enoFcTkMidi:
      geom = QtCore.QRect(x0, y0, slW, slH)
      sl.setGeometry(geom)
      sl.show()
+
+
      x0 += dx
 
     #self.horizontalSlider.setOrientation(QtCore.Qt.Horizontal)
@@ -153,6 +156,20 @@ class enoFcTkMidi:
     #self.horizontalSlider.valueChanged.connect(self.on_horizontal_slider)
 
     tab2.show()
+
+    #font = QFont("monospace");
+    #QFontInfo info(font);
+
+    f = QtGui.QFont("monospace") 
+    f.setStyleHint(QtGui.QFont.Monospace);
+
+    txt = " 01  02  03  04  05  06  07  08"
+    lb = QtGui.QLabel(txt, tab2)
+    lb.setFont(f)
+    lb.show()
+
+#https://srinikom.github.io/pyside-docs/PySide/QtGui/QLabel.html
+#https://forum.qt.io/topic/35999/solved-qplaintextedit-how-to-change-the-font-to-be-monospaced/4
 
   ############# activate Freecad #############
 
