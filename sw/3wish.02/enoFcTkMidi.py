@@ -3,9 +3,11 @@
 # Begun 2023-11-11
 
 import sys, traceback # for assisting error debugging (without code failing)
+import PySide
 
 from time import sleep
 from functools import partial
+from PySide import QtCore, QtGui
 
 basedir = 'c:/git/tangibles/sw/3wish.02' #update to location of source if manually installed, or None otherwise
 
@@ -85,29 +87,54 @@ class enoFcTkMidi:
     #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-    print(2)
     if self.useFreecad: self.activateFreecad() ; self.buildFCUi()
-    print(3)
     if self.useTk:      self.activateTk();     self.buildTkUi()
-    print(4)
     if self.useMidi:    self.activateMidi();   self.buildMidi()
-    print(5)
     if self.useEnoMidi: self.activateEnoMidi()
-    print(6)
     if self.autolaunch: self.runAutolaunch() #naming of these two may benefit from revisiting
-    print(7)
 
-  ############# report error#############
+  ############# report error #############
 
   def reportError(self, methodCalled, errorMsg): #with an eye toward VR, etc.
     if self.reportErrorAsStdout:
       print("error: enoFcTkiMidi %s: %s" % (methodCalled, errorMsg))
 
+#https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Code_snippets.md#add-a-tab-to-the-combo-view
+
+  ############# get main window #############
+
+  def getMainWindow(self):
+    "returns the main window"
+    # using QtGui.qApp.activeWindow() isn't very reliable because if another
+    # widget than the mainwindow is active (e.g. a dialog) the wrong widget is
+    # returned
+
+    #toplevel = QtGui.qApp.topLevelWidgets()
+    toplevel = QtGui.QApplication.topLevelWidgets()
+    for i in toplevel:
+      if i.metaObject().className() == "Gui::MainWindow": return i
+    raise Exception("No main window found")
+  
+  ############# get combo view #############
+
+  def getComboView(self, mw):
+    dw=mw.findChildren(QtGui.QDockWidget)
+    for i in dw:
+      if str(i.objectName()) == "Combo View":
+        return i.findChild(QtGui.QTabWidget)
+      elif str(i.objectName()) == "Python Console":
+        return i.findChild(QtGui.QTabWidget)
+    raise Exception ("No tab widget found")
+
   ############# build freecad user interface#############
 
   def buildFCUi(self):
+
+    mw  = self.getMainWindow()
+    tab = self.getComboView(mw)
+
     tab2=QtGui.QDialog()
-    tab.addTab(tab2,"A Special Tab")
+    tab.addTab(tab2,"Sliders")
 
     numSl = 8
     slW, slH, x0, y0, dx = 10, 250, 10, 10, 30
@@ -115,7 +142,7 @@ class enoFcTkMidi:
     for i in range(numSl):
 
      sl = QtGui.QSlider(tab2)
-     sl.setObjectName(_fromUtf8("a"))
+     sl.setObjectName("a")
      geom = QtCore.QRect(x0, y0, slW, slH)
      sl.setGeometry(geom)
      sl.show()
