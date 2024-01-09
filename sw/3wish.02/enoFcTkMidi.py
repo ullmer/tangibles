@@ -20,7 +20,7 @@ class enoFcTkMidi:
   tkSliderNames = None
 
   useTk      = True 
-  useEnoMidi = True # Enodia MIDI controller class
+  useEnoMidi = False # Enodia MIDI controller class
   useMidi    = False
   useFreecad = False
   autolaunch = True  #autostart all core behaviors (including scheduled callbacks)
@@ -52,7 +52,7 @@ class enoFcTkMidi:
 
   etkColorGrid = None
   
-  useTimerCallback = True
+  useTimerCallback = False
   useIdleCallback  = False # I view SoIdle callback as much more 
                            #  responsive to system load, but it doesn't
                            #  appear to be properly working in FreeCAD ~0.21
@@ -278,21 +278,14 @@ class enoFcTkMidi:
   def buildTkUi(self):
     if self.tkRoot is not None: return # don't rebuild multiple times
 
-    print(10)
-
     try: 
-      print(101)
       self.tkRoot    = tk.Tk() # Create the root (base) window
-      print(102)
       if self.updateTkTitlebar: self.tkRoot.winfo_toplevel().title(self.tkWinName)
       self.tkActive  = True
-      print(103)
     except: 
       self.tkActive = False
       self.reportError('buildTkUi', 'Initial invocation of Tkinter unsuccessful.')
 
-    print(11)
- 
     if self.updateTkTitlebar:
       try:
         iconFn = self.swBasePath + self.swIconFn
@@ -312,7 +305,6 @@ class enoFcTkMidi:
     if self.showButtonGrid2D: self.buildButtonGrid(bGridFrame)
 
     for el in [bGridFrame, sliderFrame]: el.pack(side=tk.TOP, expand=True, fill=tk.BOTH)
-    print(15)
 
   ############ build sliders user interface ############
 
