@@ -109,21 +109,23 @@ class enoFcTkMidi:
     tab2=QtGui.QDialog()
     tab.addTab(tab2,"A Special Tab")
 
-#https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Code_snippets.md#add-a-tab-to-the-combo-view
+    numSl = 8
+    slW, slH, x0, y0, dx = 10, 250, 10, 10, 30
 
-    self.horzSl = QtGui.QSlider(tab2)
-    self.horzSl.show()
+    for i in range(numSl):
 
-    #self.horizontalSlider = QtGui.QSlider(self.widget)     # create horizontalSlider
-    #self.horizontalSlider.setGeometry(QtCore.QRect(64, 5, 302, 16))                     # coordinates position
-    #self.horizontalSlider.setOrientation(QtCore.Qt.Horizontal)                          # orientation Horizontal
-    #self.horizontalSlider.setInvertedAppearance(False)                                  # displacement rigth to left or left to rigth value "True" or "False"
-    #self.horizontalSlider.setObjectName(_fromUtf8("horizontalSlider"))                  # object Name
-    #self.horizontalSlider.valueChanged.connect(self.on_horizontal_slider)               # connect on "def on_horizontal_slider:" for execute action
+     sl = QtGui.QSlider(tab2)
+     sl.setObjectName(_fromUtf8("a"))
+     geom = QtCore.QRect(x0, y0, slW, slH)
+     sl.setGeometry(geom)
+     sl.show()
+     x0 += dx
+
+    #self.horizontalSlider.setOrientation(QtCore.Qt.Horizontal)
+    #self.horizontalSlider.setInvertedAppearance(False)
+    #self.horizontalSlider.valueChanged.connect(self.on_horizontal_slider)
 
     tab2.show()
-
-    ##uic.loadUi("/myTaskPanelforTabs.ui",tab2)
 
   ############# activate Freecad #############
 
