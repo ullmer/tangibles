@@ -74,6 +74,8 @@ class enoFcTkMidi:
   tkFgRgb           = [170] * 3
   tkButBgRgb        = [50]  * 3 #background near buttons
 
+  qtSliderTab       = None
+
   #tkSliderMinVal = 0
   #tkSliderMaxVal = 127
 
@@ -132,39 +134,46 @@ class enoFcTkMidi:
 
     mw  = self.getMainWindow()
     tab = self.getComboView(mw)
+    for i in dir(tab): print(i)
 
-    tab2=QtGui.QDialog()
-    tab.addTab(tab2,"Sliders")
+    try: tab.removeTab(2) #hardcoded, but works initially to prevent repeated additions
+    except: print("*attempted to remove Sliders tab, failed")
 
-    numSl = 8
-    slW, slH, x0, y0, dx = 14, 250, 10, 10, 31
+    qst = QtGui.QDialog()
+    self.qtSliderTab = qst
+    tab.addTab(qst, "Sliders")
+
+    numSl = 9 
+    slW, slH, x0, y0, dx = 14, 250, 13, 30, 31
     ldx, ldy = 5, 15
 
     for i in range(numSl):
 
-     sl = QtGui.QSlider(tab2)
+     sl = QtGui.QSlider(qst)
      sl.setObjectName("a")
      geom = QtCore.QRect(x0, y0, slW, slH)
      sl.setGeometry(geom)
      sl.show()
-
-
      x0 += dx
 
     #self.horizontalSlider.setOrientation(QtCore.Qt.Horizontal)
     #self.horizontalSlider.setInvertedAppearance(False)
     #self.horizontalSlider.valueChanged.connect(self.on_horizontal_slider)
 
-    tab2.show()
-
-    #font = QFont("monospace");
-    #QFontInfo info(font);
+    qst.show()
+    #try: tab.setTabVisible(2, False) 
+    #try: tab.setTabEnabled(2, True) 
+    try: tab.setCurrentIndex(2) 
+    except: print("tried to set tab 2/Sliders visible, but failed")
 
     f = QtGui.QFont("monospace") 
     f.setStyleHint(QtGui.QFont.Monospace);
 
-    txt = " 01  02  03  04  05  06  07  08"
-    lb = QtGui.QLabel(txt, tab2)
+    #txt = " 01  02  03  04  05  06  07  08"
+    txt  = "  x   x   x   y   y   y   z   z   z\n" + \
+           "  10  1  .1   10  1  .1   10  1  .1\n" + \
+           "  x: -0.02    y: 0.015    z: 0.3"
+    lb = QtGui.QLabel(txt, qst)
     lb.setFont(f)
     lb.show()
 
