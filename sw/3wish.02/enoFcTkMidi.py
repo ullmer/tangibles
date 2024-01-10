@@ -75,6 +75,11 @@ class enoFcTkMidi:
   tkButBgRgb        = [50]  * 3 #background near buttons
 
   qtSliderTab       = None
+  qPalette          = None
+  bgHlColor         = "#ff0050"
+  qtSliders         = None
+  qtSliderLayouts   = None
+  qtSliderNumFrames = 3
 
   #tkSliderMinVal = 0
   #tkSliderMaxVal = 127
@@ -128,13 +133,13 @@ class enoFcTkMidi:
         return i.findChild(QtGui.QTabWidget)
     raise Exception ("No tab widget found")
 
-  ############# build freecad user interface#############
+  ############# build freecad user interface variant 1 #############
 
   def buildFCUi(self):
 
     mw  = self.getMainWindow()
     tab = self.getComboView(mw)
-    for i in dir(tab): print(i)
+    print("build fcui1")
 
     try: tab.removeTab(2) #hardcoded, but works initially to prevent repeated additions
     except: print("*attempted to remove Sliders tab, failed")
@@ -153,6 +158,73 @@ class enoFcTkMidi:
      sl.setObjectName("a")
      geom = QtCore.QRect(x0, y0, slW, slH)
      sl.setGeometry(geom)
+
+     sl.show()
+     x0 += dx
+
+    qst.show()
+    try: tab.setCurrentIndex(2) 
+    except: print("tried to set tab 2/Sliders visible, but failed")
+
+    f = QtGui.QFont("monospace") 
+    f.setStyleHint(QtGui.QFont.Monospace);
+
+    txt  = "  x           y           z        \n" + \
+           "  10  1  .1   10  1  .1   10  1  .1\n" + \
+           "  x: -0.02    y: 0.015    z: 0.3"
+    lb = QtGui.QLabel(txt, qst)
+    lb.setFont(f)
+    lb.show()
+
+  ############# build freecad user interface variant 2 #############
+
+  def buildFCUi2(self):
+
+    mw  = self.getMainWindow()
+    tab = self.getComboView(mw)
+    #for i in dir(tab): print(i)
+
+    try: tab.removeTab(2) #hardcoded, but works initially to prevent repeated additions
+    except: print("*attempted to remove Sliders tab, failed")
+
+    qst = QtGui.QDialog()
+    self.qtSliderTab = qst
+    tab.addTab(qst, "Sliders")
+    self.qtSliders       = []
+    self.qtSliderLayouts = {}
+
+    for i in range(self.qtSliderNumFrames): #e.g., 3
+       f = QtGui.QFrame()
+       f.setFrameShape( QtGui.QFrame.StyledPanel)
+       f.setFrameShadow(QtGui.QFrame.Plain)
+       f.setLineWidth(3)
+       lay = QtGui.QVBoxLayout(f)
+       qst.addWidget(lay)
+       self.qtSliderLayouts[i] = lay
+
+    print('palette 1')
+    self.qPalette = QtGui.QPalette()
+    self.qPalette.setColor(QtGui.QPalette.Window, "#ffffff")
+    #self.qPalette.setColor(QtGui.QPalette.Window, self.bgHlColor)
+    #self.qPalette.setColor(QtGui.QPalette.Base, self.bgHlColor)
+    #self.qPalette.setColor(QtGui.QPalette.AlternateBase, self.bgHlColor)
+    #self.qPalette.setColor(QtGui.QPalette.WindowText, self.bgHlColor)
+
+    numSl = 9 
+    slW, slH, x0, y0, dx = 14, 250, 13, 30, 31
+    ldx, ldy = 5, 15
+
+    qst.setAutoFillBackground(True)
+    qst.setPalette(self.qPalette)
+
+    for i in range(numSl):
+
+     sl = QtGui.QSlider(qst)
+     sl.setObjectName("a")
+     geom = QtCore.QRect(x0, y0, slW, slH)
+     sl.setGeometry(geom)
+     for i in dir(sl.handle.horizontal): print(i)
+
      sl.show()
      x0 += dx
 
@@ -177,6 +249,8 @@ class enoFcTkMidi:
     lb.setFont(f)
     lb.show()
 
+#https://stackoverflow.com/questions/62028393/using-qframes-in-qt-for-python
+#https://wiki.qt.io/How_to_Change_the_Background_Color_of_QWidget
 #https://srinikom.github.io/pyside-docs/PySide/QtGui/QLabel.html
 #https://forum.qt.io/topic/35999/solved-qplaintextedit-how-to-change-the-font-to-be-monospaced/4
 
