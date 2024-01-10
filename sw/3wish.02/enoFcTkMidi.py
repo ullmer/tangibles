@@ -150,7 +150,7 @@ class enoFcTkMidi:
 
     numSl = 9 
     slW, slH, x0, y0, dx = 14, 250, 13, 30, 31
-    ldx, ldy = 5, 15
+    ldx, ldy, groupNudge = 5, 15, 16
 
     for i in range(numSl):
 
@@ -161,6 +161,7 @@ class enoFcTkMidi:
 
      sl.show()
      x0 += dx
+     if i%3==2: x0 += groupNudge
 
     qst.show()
     try: tab.setCurrentIndex(2) 
@@ -169,9 +170,9 @@ class enoFcTkMidi:
     f = QtGui.QFont("monospace") 
     f.setStyleHint(QtGui.QFont.Monospace);
 
-    txt  = "  x           y           z        \n" + \
-           "  10  1  .1   10  1  .1   10  1  .1\n" + \
-           "  x: -0.02    y: 0.015    z: 0.3"
+    txt  = "  x             y             z        \n" + \
+           "  10  1  .1     10  1  .1     10  1  .1\n" + \
+           "  x: -0.02      y: 0.015      z: 0.3"
     lb = QtGui.QLabel(txt, qst)
     lb.setFont(f)
     lb.show()
