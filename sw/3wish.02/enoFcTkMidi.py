@@ -170,7 +170,7 @@ class enoFcTkMidi:
     sb     = self.sliderBase   # e.g., [-.02, .015, .3]
     componentResult = 0
 
-    for i in self.numSliders:
+    for i in range(self.numSliders):
       sliderMod = i % 3
       if i > 0 and sliderMod == 0:
         result.append(componentResult); componentResult = 0
@@ -219,8 +219,7 @@ class enoFcTkMidi:
 
      sl.setRange(sMin, sMax)
      sl.setValue(0.)
-     sl.setSingleStep(v0/20.)
-
+     sl.setSingleStep(20)
      #sl.setPageStep(10)
 
      self.qtSliders.append(sl)
