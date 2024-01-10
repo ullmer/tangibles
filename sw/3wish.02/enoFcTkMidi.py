@@ -78,6 +78,11 @@ class enoFcTkMidi:
   qPalette          = None
   bgHlColor         = "#ff0050"
   qtSliders         = None
+  qtHeaderLabel     = None
+  qtHeaderLabelTxt  = \
+           "  x             y             z        \n" + \
+           "  10  1  .1     10  1  .1     10  1  .1\n" + \
+           "  x: -0.02      y: 0.015      z: 0.3"
 
   #tkSliderMinVal = 0
   #tkSliderMaxVal = 127
@@ -133,8 +138,15 @@ class enoFcTkMidi:
 
   ############# slider update callback #############
 
+# IMPORTANT NOTE: unless FreeCad -> Preferences -> Python -> 
+#   Macro -> Run macros in local environment is unchecked, Qt callbacks
+#   do not appear to work, nor are script objects accessible from the terminal.
+
   def sliderUpdate(self, value):
     #self.result_label.setText(f'Current Value: {value}')
+    self.qtHeaderLabelTxt += "."
+    self.qtHeaderLabel.setText(self.qtHeaderLabelTxt)
+
     print('slider update', value)
 
   ############# build freecad user interface #############
@@ -143,7 +155,7 @@ class enoFcTkMidi:
 
     mw  = self.getMainWindow()
     tab = self.getComboView(mw)
-    print("build fcui1")
+    print("build fcui2")
 
     try: tab.removeTab(2) #hardcoded, but works initially to prevent repeated additions
     except: print("*attempted to remove Sliders tab, failed")
@@ -173,8 +185,8 @@ class enoFcTkMidi:
      sl.setPageStep(10)
 
      self.qtSliders.append(sl)
-     sl.valueChanged.connect(self.sliderUpdate)
      sl.show()
+     sl.valueChanged[int].connect(self.sliderUpdate)
      x0 += dx
      if i%3==2: x0 += groupNudge
 
@@ -185,14 +197,11 @@ class enoFcTkMidi:
     f = QtGui.QFont("monospace") 
     f.setStyleHint(QtGui.QFont.Monospace);
 
-    txt  = "  x             y             z        \n" + \
-           "  10  1  .1     10  1  .1     10  1  .1\n" + \
-           "  x: -0.02      y: 0.015      z: 0.3"
+    txt = self.qtHeaderLabelTxt
     lb = QtGui.QLabel(txt, qst)
     lb.setFont(f)
     lb.show()
-
-
+    self.qtHeaderLabel = lb
 
     #self.qtSliderLayouts = {}
 
