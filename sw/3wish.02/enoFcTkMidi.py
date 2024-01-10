@@ -131,7 +131,13 @@ class enoFcTkMidi:
         return i.findChild(QtGui.QTabWidget)
     raise Exception ("No tab widget found")
 
-  ############# build freecad user interface variant 1 #############
+  ############# slider update callback #############
+
+  def sliderUpdate(self, value):
+    #self.result_label.setText(f'Current Value: {value}')
+    print('slider update', value)
+
+  ############# build freecad user interface #############
 
   def buildFCUi(self):
 
@@ -156,8 +162,18 @@ class enoFcTkMidi:
      sl = QtGui.QSlider(qst)
      sl.setObjectName("a")
      geom = QtCore.QRect(x0, y0, slW, slH)
+     #sl.setTickPosition(QtGui.QSlider.TickPosition.TicksLeft)
+     sl.setTickPosition(sl.TicksLeft)
+     sl.setTickInterval(8)
      sl.setGeometry(geom)
 
+     sl.setRange(0, 100)
+     sl.setValue(50)
+     sl.setSingleStep(5)
+     sl.setPageStep(10)
+
+     self.qtSliders.append(sl)
+     sl.valueChanged.connect(self.sliderUpdate)
      sl.show()
      x0 += dx
      if i%3==2: x0 += groupNudge
@@ -176,6 +192,8 @@ class enoFcTkMidi:
     lb.setFont(f)
     lb.show()
 
+
+
     #self.qtSliderLayouts = {}
 
     #for i in range(self.qtSliderNumFrames): #e.g., 3
@@ -187,6 +205,7 @@ class enoFcTkMidi:
     #   qst.addWidget(lay)
     #   self.qtSliderLayouts[i] = lay
 
+#https://www.pythontutorial.net/pyqt/pyqt-qslider/
 #https://stackoverflow.com/questions/62028393/using-qframes-in-qt-for-python
 #https://wiki.qt.io/How_to_Change_the_Background_Color_of_QWidget
 #https://srinikom.github.io/pyside-docs/PySide/QtGui/QLabel.html
