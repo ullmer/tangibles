@@ -78,6 +78,11 @@ class enoFcTkMidi:
   qPalette          = None
   bgHlColor         = "#ff0050"
   qtSliders         = None
+  numSliders        = 9
+  sliderBase        = [-.02, .015, .3]
+  sliderRanges      = [10., 1., .1]
+
+  sliderOffsets     = None
   qtHeaderLabel     = None
   qtHeaderLabelTxt1 = \
            "  x             y             z        \n" + \
@@ -154,7 +159,26 @@ class enoFcTkMidi:
     self.qtHeaderLabelTxt  = self.qtHeaderLabelTxt1 + \
                              self.qtHeaderLabelTxt2
 
-    print('slider update', sliderNum, value)
+    v = self.calcSliderInflectedXYZ()
+    print('slider update', sliderNum, value, v)
+
+  ############# calculate slider-inflected XYZ #############
+  # migrate soon to another class
+
+  def calcSliderInflectedXYZ(self):
+    result = []
+    sb     = self.sliderBase   # e.g., [-.02, .015, .3]
+    componentResult = 0
+
+    for i in self.numSliders:
+      sliderMod = i % 3
+      if i > 0 and sliderMod == 0:
+        result.append(componentResult); componentResult = 0
+
+      sliderVal        = self.qtSliders[i].value()
+      componentResult += sliderVal
+
+    return result
 
   ############# build freecad user interface #############
 
@@ -175,11 +199,11 @@ class enoFcTkMidi:
     tab.addTab(qst, "Sliders")
     self.qtSliders       = []
 
-    numSl = 9 
     slW, slH, x0, y0, dx = 14, 250, 13, 30, 31
     ldx, ldy, groupNudge = 5, 15, 16
 
-    for i in range(numSl):
+    for i in range(self.numSliders):
+     v0 = self.sliderRanges[i%3] # e.g., [10., 1., .1]
 
      sl = QtGui.QSlider(qst)
      sl.setObjectName("a")
@@ -189,10 +213,15 @@ class enoFcTkMidi:
      sl.setTickInterval(8)
      sl.setGeometry(geom)
 
-     sl.setRange(0, 100)
-     sl.setValue(50)
-     sl.setSingleStep(5)
-     sl.setPageStep(10)
+     #sl.setRange(0, 100)
+     #sl.setValue(50)
+     sMin, sMax = -1. * v0, v0
+
+     sl.setRange(sMin, sMax)
+     sl.setValue(0.)
+     sl.setSingleStep(v0/20.)
+
+     #sl.setPageStep(10)
 
      self.qtSliders.append(sl)
      sl.show()
