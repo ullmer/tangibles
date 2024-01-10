@@ -79,10 +79,14 @@ class enoFcTkMidi:
   bgHlColor         = "#ff0050"
   qtSliders         = None
   qtHeaderLabel     = None
-  qtHeaderLabelTxt  = \
+  qtHeaderLabelTxt1 = \
            "  x             y             z        \n" + \
-           "  10  1  .1     10  1  .1     10  1  .1\n" + \
+           "  10  1  .1     10  1  .1     10  1  .1\n" 
+
+  qtHeaderLabelTxt2 = \
            "  x: -0.02      y: 0.015      z: 0.3"
+
+  qtHeaderLabelTxt  = None
 
   #tkSliderMinVal = 0
   #tkSliderMaxVal = 127
@@ -142,12 +146,15 @@ class enoFcTkMidi:
 #   Macro -> Run macros in local environment is unchecked, Qt callbacks
 #   do not appear to work, nor are script objects accessible from the terminal.
 
-  def sliderUpdate(self, value):
+  def sliderUpdate(self, sliderNum, value):
     #self.result_label.setText(f'Current Value: {value}')
     self.qtHeaderLabelTxt += "."
     self.qtHeaderLabel.setText(self.qtHeaderLabelTxt)
 
-    print('slider update', value)
+    self.qtHeaderLabelTxt  = self.qtHeaderLabelTxt1 + \
+                             self.qtHeaderLabelTxt2
+
+    print('slider update', sliderNum, value)
 
   ############# build freecad user interface #############
 
@@ -157,7 +164,10 @@ class enoFcTkMidi:
     tab = self.getComboView(mw)
     print("build fcui2")
 
-    try: tab.removeTab(2) #hardcoded, but works initially to prevent repeated additions
+    self.qtHeaderLabelTxt  = self.qtHeaderLabelTxt1 + \
+                             self.qtHeaderLabelTxt2
+
+    try: tab.removeTab(2) #temp. hardcoded; prevents repeated additions
     except: print("*attempted to remove Sliders tab, failed")
 
     qst = QtGui.QDialog()
@@ -186,7 +196,10 @@ class enoFcTkMidi:
 
      self.qtSliders.append(sl)
      sl.show()
-     sl.valueChanged[int].connect(self.sliderUpdate)
+
+     cb = partial(self.sliderUpdate, i)
+     sl.valueChanged[int].connect(cb)
+
      x0 += dx
      if i%3==2: x0 += groupNudge
 
