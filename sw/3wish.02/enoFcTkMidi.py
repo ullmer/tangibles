@@ -152,15 +152,19 @@ class enoFcTkMidi:
 #   do not appear to work, nor are script objects accessible from the terminal.
 
   def sliderUpdate(self, sliderNum, value):
-    #self.result_label.setText(f'Current Value: {value}')
-    self.qtHeaderLabelTxt += "."
-    self.qtHeaderLabel.setText(self.qtHeaderLabelTxt)
+    v = self.calcSliderInflectedXYZ()
+    self.updateSliderText(v)
 
+    #print('slider update', sliderNum, value, v)
+
+  ############# updateSliderText #############
+
+  def updateSliderText(self, xyz):
+    x,y,z = xyz
+    self.qtHeaderLabelTxt2 = "  x: %2.3f   y: %2.3f  z: %2.3f" % (x,y,z)
     self.qtHeaderLabelTxt  = self.qtHeaderLabelTxt1 + \
                              self.qtHeaderLabelTxt2
-
-    v = self.calcSliderInflectedXYZ()
-    print('slider update', sliderNum, value, v)
+    self.qtHeaderLabel.setText(self.qtHeaderLabelTxt)
 
   ############# calculate slider-inflected XYZ #############
   # migrate soon to another class
