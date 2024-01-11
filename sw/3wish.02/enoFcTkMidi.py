@@ -157,11 +157,29 @@ class enoFcTkMidi:
 
     #print('slider update', sliderNum, value, v)
 
+  ############# float to n characters #############
+
+  def float2nchar(self, axis, val, nchars):
+    result = "%s: %2.5f" % (axis, val) 
+    lr = len(result)
+
+    if lr == nchars: return result
+    result = str(result)
+
+    if lr   > nchars: return result[0:nchars]
+    diff    = lr-nchars
+    result += " " * (diff+1)
+    return result
+
   ############# updateSliderText #############
 
   def updateSliderText(self, xyz):
     x,y,z = xyz
-    self.qtHeaderLabelTxt2 = "  x: %2.3f   y: %2.3f  z: %2.3f" % (x,y,z)
+
+    self.qtHeaderLabelTxt2  = "  "     + self.float2nchar('x', x, 8)
+    self.qtHeaderLabelTxt2 += "      " + self.float2nchar('y', y, 8)
+    self.qtHeaderLabelTxt2 += "      " + self.float2nchar('z', z, 8)
+
     self.qtHeaderLabelTxt  = self.qtHeaderLabelTxt1 + \
                              self.qtHeaderLabelTxt2
     self.qtHeaderLabel.setText(self.qtHeaderLabelTxt)
@@ -170,7 +188,7 @@ class enoFcTkMidi:
   # migrate soon to another class
 
   def calcSliderInflectedXYZ(self):
-    result = []
+    result0 = []
     sb     = self.sliderBase   # e.g., [-.02, .015, .3]
     componentResult = 0
 
@@ -178,11 +196,18 @@ class enoFcTkMidi:
       sr = self.sliderRanges[i%3] # e.g., [10., 1., .1]
       sliderMod = i % 3
       if i > 0 and sliderMod == 0:
-        result.append(componentResult); componentResult = 0
+        result0.append(componentResult); componentResult = 0
 
       sliderVal        = self.qtSliders[i].value()/100. * sr
       componentResult += sliderVal
-    result.append(componentResult)
+    result0.append(componentResult)
+
+    sb = self.sliderBase        #[-.02, .015, .3]
+    result = []
+
+    for i in range(3):
+      v = sb[i] + result0[i]
+      result.append(v)
 
     return result
 
