@@ -171,12 +171,14 @@ class enoFcTkMidi:
     componentResult = 0
 
     for i in range(self.numSliders):
+      sr = self.sliderRanges[i%3] # e.g., [10., 1., .1]
       sliderMod = i % 3
       if i > 0 and sliderMod == 0:
         result.append(componentResult); componentResult = 0
 
-      sliderVal        = self.qtSliders[i].value()
+      sliderVal        = self.qtSliders[i].value()/100. * sr
       componentResult += sliderVal
+    result.append(componentResult)
 
     return result
 
@@ -203,7 +205,6 @@ class enoFcTkMidi:
     ldx, ldy, groupNudge = 5, 15, 16
 
     for i in range(self.numSliders):
-     v0 = self.sliderRanges[i%3] # e.g., [10., 1., .1]
 
      sl = QtGui.QSlider(qst)
      sl.setObjectName("a")
@@ -213,14 +214,10 @@ class enoFcTkMidi:
      sl.setTickInterval(8)
      sl.setGeometry(geom)
 
-     #sl.setRange(0, 100)
-     #sl.setValue(50)
-     sMin, sMax = -1. * v0, v0
-
-     sl.setRange(sMin, sMax)
-     sl.setValue(0.)
-     sl.setSingleStep(20)
-     #sl.setPageStep(10)
+     sl.setRange(-100, 100)
+     sl.setValue(0)
+     sl.setSingleStep(10)
+     sl.setPageStep(20)
 
      self.qtSliders.append(sl)
      sl.show()
@@ -255,6 +252,7 @@ class enoFcTkMidi:
     #   qst.addWidget(lay)
     #   self.qtSliderLayouts[i] = lay
 
+#https://forum.freecad.org/viewtopic.php?t=11243
 #https://www.pythontutorial.net/pyqt/pyqt-qslider/
 #https://stackoverflow.com/questions/62028393/using-qframes-in-qt-for-python
 #https://wiki.qt.io/How_to_Change_the_Background_Color_of_QWidget
