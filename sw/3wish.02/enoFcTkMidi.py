@@ -79,8 +79,11 @@ class enoFcTkMidi:
   bgHlColor         = "#ff0050"
   qtSliders         = None
   numSliders        = 9
-  sliderBase        = [-.02, .015, .3]
-  sliderRanges      = [10., 1., .1]
+  #sliderBase        = [-.02, .015, .3]
+  #sliderBase        = [-1., -100., 15.]
+  sliderBase        = [53, -200., 15]
+  #sliderRanges      = [10., 1., .1]
+  sliderRanges      = [100., 10., 1.]
 
   sliderOffsets     = None
   qtHeaderLabel     = None
@@ -92,6 +95,7 @@ class enoFcTkMidi:
            "  x: -0.02      y: 0.015      z: 0.3"
 
   qtHeaderLabelTxt  = None
+  fcActiveTranslationNode = None
 
   #tkSliderMinVal = 0
   #tkSliderMaxVal = 127
@@ -99,6 +103,7 @@ class enoFcTkMidi:
   tkSliderMinVal = 127
   tkSliderMaxVal = 0
   lightState     = 0
+  
 
   ############# constructor #############
 
@@ -154,6 +159,12 @@ class enoFcTkMidi:
   def sliderUpdate(self, sliderNum, value):
     v = self.calcSliderInflectedXYZ()
     self.updateSliderText(v)
+
+    if self.fcActiveTranslationNode is not None:
+      tv = self.fcActiveTranslationNode.translation.getValue()
+      for i in range(3):
+        tv[i] = v[i]
+      self.fcActiveTranslationNode.touch() #propagate updates
 
     #print('slider update', sliderNum, value, v)
 
