@@ -108,7 +108,7 @@ def getNamedNode(parent, name):
 
 ################ Get Named Node Path ################ 
 
-def getNamedNodePath (parent, name):
+def getNamedNodePath(parent, name):
   search = coin.SoSearchAction()
   search.setName(name)
   search.apply(parent)
@@ -260,6 +260,22 @@ def getParentFrame(root, name):
   except:
     print("getObjSeparator exception:"); traceback.print_exc()
     return False
+
+################# Get named object transformation ################ 
+## Borrowing again from 1995 3wish cod
+
+def getNObjTransf(root, name):
+  node         = self.getNamedNode(root, name)
+  matrixAction = coin.SoGetMatrixAction(node) 
+  path         = self.getNamedNodePath(name)
+  matrixAction.apply(path)
+
+  matrix       = matrixAction.getMatrix()
+  matrix.getTransform(translation, rotation, scale, scaleorient)
+
+  result = []
+  for i in range(3): result.append(translation[i]
+  return result
 
 ### end ###
 
