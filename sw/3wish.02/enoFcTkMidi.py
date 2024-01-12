@@ -79,10 +79,7 @@ class enoFcTkMidi:
   bgHlColor         = "#ff0050"
   qtSliders         = None
   numSliders        = 9
-  #sliderBase        = [-.02, .015, .3]
-  #sliderBase        = [-1., -100., 15.]
-  sliderBase        = [53, -200., 15]
-  #sliderRanges      = [10., 1., .1]
+  sliderBase        = [-16., -276., 15.3]
   sliderRanges      = [100., 10., 1.]
 
   sliderOffsets     = None
@@ -103,7 +100,6 @@ class enoFcTkMidi:
   tkSliderMinVal = 127
   tkSliderMaxVal = 0
   lightState     = 0
-  
 
   ############# constructor #############
 
@@ -171,7 +167,7 @@ class enoFcTkMidi:
   ############# float to n characters #############
 
   def float2nchar(self, axis, val, nchars):
-    result = "%s: %2.5f" % (axis, val) 
+    result = "%s: %2.6f" % (axis, val) 
     lr = len(result)
 
     if lr == nchars: return result
@@ -280,6 +276,7 @@ class enoFcTkMidi:
     lb.setFont(f)
     lb.show()
     self.qtHeaderLabel = lb
+    self.sliderUpdate(0, 0) #temporary hack to update translations
 
     #self.qtSliderLayouts = {}
 
