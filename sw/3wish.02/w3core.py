@@ -264,10 +264,10 @@ def getParentFrame(root, name):
 ################# Get named object transformation ################ 
 ## Borrowing again from 1995 3wish cod
 
-def getNObjTransf(root, node):
-  matrixAction = coin.SoGetMatrixAction(node) 
+def getNObjTransf(root, node, viewport):
+  matrixAction = coin.SoGetMatrixAction(viewport) 
   path         = getNamedNodePath(node)
-  matrixAction.apply(path)
+  matrixAction.apply(viewport)
 
   matrix       = matrixAction.getMatrix()
   matrix.getTransform(translation, rotation, scale, scaleorient)
