@@ -4,8 +4,11 @@
 
 import FreeCAD as App
 import FreeCADGui as Gui
+import Mesh
 import pivy.coin as coin
 import yaml, traceback
+
+>>> Mesh.open(u"/Users/brygg/svn/tangviz/proj/ipanelUsLoc.04/sc.bms")
 
 ##################### Enodia FreeCAD support objects ##################### 
 
@@ -28,6 +31,26 @@ class enoFreecad:
     self.fcDoc  = fcDoc
 
     if yamlFn is not None: self.loadYaml(yamlFn)
+
+  ############# openMesh #############
+
+  def openMesh(self, meshFn):
+    Mesh.open(meshFn)
+    mesh = Gui.ActiveDocument.ActiveObject.Object.Mesh
+    return mesh
+  
+  ############# openMesh #############
+
+  def avgMeshCoord(self, mesh):
+    points = mesh.getPoints(0)
+    sx, sy, sz, count = 0, 0, 0, 0
+
+    for point in points:
+      x,y,z = point
+      sx += x; sy += y; sz += z; count += 1
+
+    result = [sx/count, sy/count, sz/count]
+    return result
 
   ############# getObj #############
 
