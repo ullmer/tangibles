@@ -237,15 +237,78 @@ class enoMidiController:
 
     try:
       for c in controlsList:
-        ctrlName, midiStatus, midiNum = c['key'], c['status'], c['midino']
+        #print("C:", c)
+        if 'status' in c:
+          ctrlName, midiStatus, midiNum = c['key'], c['status'], c['midino']
+          self.registerKeyStatusMidino(ctrlName, midiStatus, midiNum, callbackFunc)
+
+        elif 'status_press' in c and 'status_release' in c:
+          ctrlName, midiStatusPress, midiStatusRelease, midiNum = \
+            c['key'], c['status_press'], c['status_release'], c['midino']
+          self.registerKeyStatusMidino(ctrlName, midiStatusPress,   midiNum, callbackFunc)
+          self.registerKeyStatusMidino(ctrlName, midiStatusRelease, midiNum, callbackFunc)
+
+    except:
+      print("enoMidiController registerControls exception:")
+      traceback.print_exc(); return None
+
+  ############# register external callback #############
+
+  def registerKeyStatusMidino(self, ctrlName, midiStatus, midiNum, callbackFunc):
+    try:
         midiStatNumKey = self.midiStatusNumKey(midiStatus, midiNum)
         self.controllerStatusNumDict[midiStatNumKey] = ctrlName
         self.controllerNumDict[midiNum]              = ctrlName
         #self.registerCallback(ctrlName, self.debugCallback)
         self.registerCallback(ctrlName, callbackFunc)
     except:
-      print("enoMidiController registerControls exception:")
+      print("enoMidiController registerKeyStatusMidino exception:")
       traceback.print_exc(); return None
+
+  ############# register external callback #############
+
+  def registerExternalCB(self, externalCallbackFunc):
+    ecb = partial(externalCallbackFunc, self)
+    self.registerControls(ecb)
+
+  ############# initLaunchpad #############
+
+  def initLaunchpad(self):
+    print("enoMidiController initLaunchpad called")
+    try:   import launchpad_py as launchpad
+    except ImportError:
+      try:                 import launchpad
+      except ImportError:  sys.exit("ERROR: loading launchpad.py failed")
+
+    self.lp = launchpad.Launchpad()
+
+    # try the first Mk2
+    if self.lp.Check( 0, "mk2" ):
+      self.lp = launchpad.LaunchpadMk2()
+
+      if self.lp.Open( 0, "mk2" ): print( " - Launchpad Mk2: OK" )
+      else:                        print( " - Launchpad Mk2: ERROR"); return
+    elif self.lp.Check( 1, "Launchpad X") or self.lp.Check( 1, "LPX" ):
+      self.lp = launchpad.LaunchpadLPX()
+      # Open() includes looking for "LPX" and "Launchpad X"
+      if self.lp.Open(1):
+        print( " - Launchpad X: OK" )
+      else:
+        print( " - Launchpad X: ERROR")
+        return
+
+    else: print( " - No Launchpad Mk2 or X available" ); return
+
+    # Clear the buffer because the Launchpad remembers everything
+    self.lp.ButtonFlush()
+
+  ############# initiate Akai APC Mini Mk2 #############
+
+  def initAkaiApcMiniMk2(self): pass
+
+  ############## clearlights #############
+
+  #def clearLights(self):
 
   ############# register external callback #############
 
