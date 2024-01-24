@@ -42,7 +42,7 @@ class enoFreecad:
   ############# openMesh #############
 
   def avgMeshCoord(self, mesh):
-    points = mesh.getPoints(0)
+    points = mesh.getPoints(0)[0]
     sx, sy, sz, count = 0, 0, 0, 0
 
     for point in points:
