@@ -8,7 +8,7 @@ import Mesh
 import pivy.coin as coin
 import yaml, traceback
 
->>> Mesh.open(u"/Users/brygg/svn/tangviz/proj/ipanelUsLoc.04/sc.bms")
+#>>> Mesh.open(u"/Users/brygg/svn/tangviz/proj/ipanelUsLoc.04/sc.bms")
 
 ##################### Enodia FreeCAD support objects ##################### 
 
