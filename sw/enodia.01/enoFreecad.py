@@ -8,7 +8,7 @@ import Mesh
 import pivy.coin as coin
 import yaml, traceback
 
->>> Mesh.open(u"/Users/brygg/svn/tangviz/proj/ipanelUsLoc.04/sc.bms")
+#>>> Mesh.open(u"/Users/brygg/svn/tangviz/proj/ipanelUsLoc.04/sc.bms")
 
 ##################### Enodia FreeCAD support objects ##################### 
 
@@ -42,7 +42,7 @@ class enoFreecad:
   ############# openMesh #############
 
   def avgMeshCoord(self, mesh):
-    points = mesh.getPoints(0)
+    points = mesh.getPoints(0)[0]
     sx, sy, sz, count = 0, 0, 0, 0
 
     for point in points:

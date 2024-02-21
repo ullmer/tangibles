@@ -29,5 +29,5 @@ def ping():
 
   mw  = getMainWindow()
   tab = getComboView(mw)
-  print(dir(tab))
+  return(tab)
 

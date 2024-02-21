@@ -266,8 +266,14 @@ def getParentFrame(root, name):
 
 def getNObjTransf(root, node, viewport):
   matrixAction = coin.SoGetMatrixAction(viewport) 
+  search       = coin.SoSearchAction()
+  search.setName(name)
+  search.apply(parent)
+  path = search.getPath()
+
+
   path         = getNamedNodePath(node)
-  matrixAction.apply(viewport)
+  matrixAction.apply(node)
 
   matrix       = matrixAction.getMatrix()
   matrix.getTransform(translation, rotation, scale, scaleorient)
