@@ -29,6 +29,4 @@ def on_key_down(key):
   if key is keys.UP:    eti.shiftImg(0, -nudge)
   if key is keys.DOWN:  eti.shiftImg(0,  nudge)
 
-def update():
-
 ### end ###

@@ -5,6 +5,7 @@
 import sys
 
 WIDTH=1024
+import moveWinHome #hack to move window to 0,0 on windows, avoiding redraw error
 
 knownActorFilenames = ['red-hl-1in-200dpi', 'person-iconic1',
                        'ipanel-cell-selection1']
