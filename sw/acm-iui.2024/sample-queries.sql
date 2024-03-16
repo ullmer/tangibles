@@ -103,3 +103,9 @@ select t.id from titles as t, authors as a, ti_au as ta where
   and ta.ti_id = t.id and ta.au_id=a.id group by t.id;
 
 
+select id, lastn, firstn from authors where lastn in
+   ('Mitra', 'Patil', 'Mothish', 'Kumar', 'Mukhopadhyay', 'Murthy', 'Chakrabarti', 'Biswas')
+   order by lastn, firstn;
+
+Mukund Mitra, Ameya Patil, GVS Mothish, Gyanig Kumar, Abishek Mukhopadhyay, LRD Murthy, Partha Pratim Chakrabarti, Pradipta Biswas
+
