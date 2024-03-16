@@ -110,4 +110,8 @@ select t.id from titles as t, authors as a, ti_au as ta where
   a.id in (2522, 4726, 2526, 1918)
   and ta.ti_id = t.id and ta.au_id=a.id group by t.id;
 
+select id, lastn, firstn from authors where lastn in
+   ('Yang', 'Haeri', 'Magaki', 'Zarrin-Khameh', 'Gu', 'Chen')
+   order by lastn, firstn;
 
+ authors: [Chunxu Yang, Mohammad Haeri, Shino Magaki, Neda Zarrin-Khameh, Hongyan Gu, Xiang ‘Anthony’ Chen]

@@ -206,10 +206,19 @@ posters:
     priorKwIds: [142, 1120, 1584, 4722, 4887, 787, 2636, 4071, 5162]
     domains: []
   19: 
-    title:   ""
-    authors: []
-    geo:     [us.ca]
-    domains: []
+    title:   "MitFlex- A Human-AI Collaborative System to Support Mitosis Assessment in Pathology"
+    authors: [Chunxu Yang, Mohammad Haeri, Shino Magaki, Neda Zarrin-Khameh, Hongyan Gu, Xiang ‘Anthony’ Chen]
+    geo:     [us.ca, us.tx, us.ka]
+    domains: [ucla.edu, kumc.edu, medschool.ucla.edu, bcm.edu]
+    authorIds:     [1394, 1181] 
+    priorPaperIds: [464, 487, 539, 894, 906]
+    priorKwIds:    [35, 121, 517, 828, 904, 1240, 1266, 1268, 1329, 1330, 1331, 1393, 1394, 1538, 1817, 2371, 2394, 2395]
+    priorKwNames:  [3d visualization, accelerometer, acoustic sensing, algorithm, deep learning, design probe, 
+                    electromyogram, explainable ai, gesture recognition, human computer interaction, interaction techniques, 
+                    machine learning, mobile devices, mobile grading, novel input, optical recognition, patient education, 
+                    question answering]
+
+    
   20: 
     title:   ""
     authors: []
