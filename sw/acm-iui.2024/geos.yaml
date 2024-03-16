@@ -2,7 +2,18 @@ regions:
   na:
     count:    22
     fullname: North America
-    contributions
+    contributions:
+      us.sc: 6
+      us.ca: 4
+      us.nc: 3
+      us.pa: 2
+      us.oh: 1
+      us.in: 1
+      us.md: 1
+      us.ne: 1
+      us.ny: 1
+      us.va: 1
+      us.wa: 1
 
 
       1 sa
@@ -17,15 +28,3 @@ regions:
       2 at
       2 de
      eu 7
-      1 us.oh
-      1 us.in
-      1 us.md
-      1 us.ne
-      1 us.ny
-      1 us.va
-      1 us.wa
-      2 us.pa
-      3 us.nc
-      4 us.ca
-      6 us.sc
-     na 22 
