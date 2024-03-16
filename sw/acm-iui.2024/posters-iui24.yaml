@@ -200,9 +200,10 @@ posters:
     geo:     [us.nc]
     domains: []
   18: 
-    title:   ""
-    authors: []
+    title:   "Measuring Heterogeneity in Language Modeling for Enhanced Chatbot Personalization"
+    authors: [Marina Lin]
     geo:     [us.va]
+    priorKwIds: [142, 1120, 1584, 4722, 4887, 787, 2636, 4071, 5162]
     domains: []
   19: 
     title:   ""
