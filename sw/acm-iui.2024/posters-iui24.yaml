@@ -179,12 +179,18 @@ posters:
     title:   "Multimodal Target Prediction for Rapid Human-Robot Interaction"
     authors: [Mukund Mitra, Ameya Patil, GVS Mothish, Gyanig Kumar, Abishek Mukhopadhyay, LRD Murthy, Partha Pratim Chakrabarti, Pradipta Biswas]
     geo:     [in]
-    authorIds: [2522, 4726, 2526, 1918]
+    authorIds:     [2522, 4726, 2526, 1918]
+    priorPaperIds: [781, 1031, 1560, 1751, 2073, 2084, 2189]
+    priorKwIds:    [129, 517, 698, 1012, 1105, 2099, 2100, 2659, 2660, 2661, 2833, 3801, 3802, 3803, 3804, 3805, 4229, 4831, 4832, 4833, 4856]
+    priorKwNames:  [assistive technology, distraction detection, driver distraction, e-inclusion, evaluation of eye gaze tracking, 
+                    eye gaze tracker, flight simulator, gaze controlled interface, gaze estimation datasets, gaze estimation models, 
+                    hud, human computer interaction, human-computer interaction, inverse reinforcement learning, mfd, neural networks, 
+                    simulator, target prediction, usability evaluation, user model, virtual and mixed reality]
     domains: []
   16: 
-    title:   ""
-    authors: []
-    geo:     []
+    title:   "Training Adults with Mild to Moderate Dementia in ChatGPT: Exploring Best Practices"
+    authors: [Elizabeth Gilman, Sushant Kot, Margi Engineer, Emma Dixon]
+    geo:     [us.sc]
     domains: []
   17: 
     title:   ""
