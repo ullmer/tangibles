@@ -11,15 +11,28 @@ posters:
     domains:       [unc.edu]
     authorIDs:     [1600]
     priorPaperIds: [637, 638]
+    priorKwIds: [4]
+    priorKwNames: [recommender systems]
+
   2: 
     title:   "EvaluLLM: LLM Assisted Evaluation of Generative Outputs"
-    authors:   [Michael Desmond, Zahra Ashktorab, Qian Pan, James M. Johnson, Casey Dugan, Martin Santillan Cooper]
+    authors:       [Michael Desmond, Zahra Ashktorab, Qian Pan, James M. Johnson, Casey Dugan, Martin Santillan Cooper]
     authorIDs:     [1209, 1207, 908, 1224, 4827]
     geo:           [us.ny]
     domains:       [ibm.com]
     priorPaperIds: [367, 471, 474, 792, 969, 1308, 1327, 1480, 2113, 2185, 2268]
-    priorKwIds:    [
-    priorKeywords: [
+
+    priorKwIds:    [4, 11, 35, 193, 223, 271, 273, 346, 433, 665, 822, 1014, 1039, 1040, 1041, 1206, 1240, 1247, 1250, 
+                    1321, 1335, 1350, 1351, 1352, 1362, 1363, 1364 , 1365, 1505, 2088, 2538, 2539, 2540, 2860, 3274, 
+                    3311, 4910, 5069, 5070, 5071]
+
+    priorKwNames: [accountability, acm principles, activation clustering, activity-centric collaboration, ai assistance, 
+                   ai explainability, ai security, alerts, algorithmic transparency, attention, awareness, backdoor poisoning, 
+                   conversational agents, data labeling, emerging technologies, empirical studies, explainable ai, explanation, 
+                   explanations, fairness, gamification, human computer interaction, information overload, intelligent interface, 
+                   intelligent systems, intelligibility, machine learning, mechanical turk, mental models, natural language interaction, 
+                   productivity, programming-by-example, recommendation, recommender systems, search, task, transparency, user interfaces, 
+                   user study, visualizations]
   3: 
     title:     "XAIVIER: Time Series Classifier Verification with Faithful Explainable AI"
     authors:   [Ilija Simic, Santokh Singh, Christian Partl, Eduardo Veas, Vedran Sabol]
@@ -70,6 +83,10 @@ posters:
     geo:      [us.sc]
     domains:  [clemson.edu]
     keywords: [situated interaction, mixed-initiative touch, actuated tangible interfaces, tangible interfaces]
+    priorKwIds:   [538, 703, 1021, 1696, 3291, 573, 4723]
+    priorKwNames: [tangible interaction, tangible interface, tangible interfaces, tangible user interfaces, tangible user interface,
+                   architecture, genetic data]
+
   12: 
     title:   ""
     authors: []
@@ -136,7 +153,15 @@ posters:
     geo:      [us.sc]
     domains:  [clemson.edu]
     keywords: [digital privacy education, human-AI trust, user perception of AI, education for older adults]
-    authorIDs: [2446, 844, 2734]
+    authorIDs:     [2446, 844, 2734]
+    priorPaperIds: [335, 820, 974, 1116, 1451, 1570, 2060, 2088]
+    priorKwIds:    [4, 11, 35, 46, 86, 110, 120, 161, 346, 368, 503, 970, 971, 972, 973, 1826, 2051, 2186, 2361, 2545, 2828, 3590, 3591, 3823, 3824, 4862]
+
+    priorKwNames: [adaptive interfaces, data-driven design, information disclosure, intelligent user interface, intelligent user interfaces, 
+                   internet of things, location sharing, machine learning, music streaming services, privacy, privacy settings, recommendation, 
+                   recommender systems, satisfaction, smarthome, tic-tac- toe game, trust, user behavior, user characteristics, user experience, 
+                   user experiments, user study, user-centric evaluation, user-centric evaluation framework, ximl, xml]
+
   25: 
     title:   ""
     authors: []

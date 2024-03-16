@@ -49,4 +49,12 @@ select t.id from titles as t, authors as a, ti_au as ta where
   a.id in (1623, 1117, 2155, 2654)
   and ta.ti_id = t.id and ta.au_id=a.id group by t.id;
 
+select k.id, k.keyword from titles as t, keywords as k, ti_kw as tk, ti_au as ta, authors as a where 
+  t.id in (367, 471, 474, 792, 969, 1308, 1327, 1480, 2113, 2185, 2268)
+   and ta.ti_id = t.id and ta.au_id = a.id and tk.ti_id = t.id and tk.kw_id = k.id group by keyword;
+
+select t.id from titles as t, authors as a, ti_au as ta where 
+  a.id in (2446, 844, 2734)
+  and ta.ti_id = t.id and ta.au_id=a.id group by t.id;
+
 
