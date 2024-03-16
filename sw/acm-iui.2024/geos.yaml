@@ -1,7 +1,7 @@
 regions:
   na:
-    count:    22
     fullname: North America
+    count:    22
     contributions:
       us.sc: 6
       us.ca: 4
@@ -14,6 +14,15 @@ regions:
       us.ny: 1
       us.va: 1
       us.wa: 1
+  eu:
+    fullname: Europe
+    count:    7
+    contributions:
+      at: 2
+      de: 2
+      uk: 2
+      it: 2
+      ba: 2
 
 
       1 sa
