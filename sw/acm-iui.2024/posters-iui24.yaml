@@ -29,10 +29,11 @@ posters:
     geo:     [uk]
     domains: []
   5: 
-    title:   "Utilizing Large Language Models in Tribal Emergency Management"
-    authors: [Srishti Gupta, Yu-Che Chen, Chun-Hua Tsai]
-    geo:     [us.ne]
-    domains: []
+    title:     "Utilizing Large Language Models in Tribal Emergency Management"
+    authors:   [Srishti Gupta, Yu-Che Chen, Chun-Hua Tsai]
+    authorIDs: [1048]
+    geo:       [us.ne]
+    domains:   []
   6: 
     title:   "CHARM: A Group Decision Making Support Chatbot"
     authors: [Amra Delic, Hanif Emamgholizadeh, Ngoc Nguyen, Francesco Ricci]

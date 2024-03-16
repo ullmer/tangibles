@@ -18,4 +18,10 @@ select id, lastn, firstn from authors where lastn in
 select id, lastn, firstn from authors where lastn in
    ('Simic', 'Singh', 'Partl', 'Veas', 'Sabol') order by lastn, firstn;
 
-   
+select id, lastn, firstn from authors where lastn in
+   ('Wang', 'Ivrissimtzis', 'Li', 'Shi') order by lastn, firstn;
+  
+select id, lastn, firstn from authors where lastn in
+   ('Gupta', 'Chen', 'Tsai') order by lastn, firstn;
+
+Srishti Gupta, Yu-Che Chen, Chun-Hua Tsai
