@@ -43,11 +43,14 @@ for key in keywordId2papers:
     entry = keyword + "\n"
     for posterId in val:
       try:
-        title   = p[posterId].title
-        authors = p[posterId].authors
-        elentry = "  %s\t(%s)\n" % (title, authors)
+        poster  = p[posterId]
+        title   = poster['title']
+        authors = ', '.join(poster['authors'])
+        elentry = "  %i\t%s\t(%s)\n" % (posterId, title, authors)
         entry += elentry
-      except: print("missing data on entry %i; ignoring" % posterId)
+      except: 
+        print("missing data on entry %i; ignoring" % posterId)
+        print(posterId, p[posterId])
 
     if count not in count2entries: count2entries[count] = []
     count2entries[count].append(entry)
