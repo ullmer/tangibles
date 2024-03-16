@@ -154,14 +154,26 @@ posters:
 
     domains: []
   13: 
-    title:   ""
-    authors: []
-    geo:     []
-    domains: []
+    title:   "Exploring AI-assisted Ideation and Prototyping for Choreography"
+    authors:   [Yimeng Liu, Mishra Sra]
+    geo:       [us.ca]
+    domains:   [ucsb.edu]
+    authorIds:     [5006]
+    priorPaperIds: [2159]
+    priorKwIds:    [1199, 2738, 5017]
+    priorKwNames:  [ai, ai-generated characters, human-ai interaction]
+
   14: 
-    title:   ""
-    authors: []
-    geo:     []
+    title:   "Can LLMs Infer Domain Knowledge from Code Exemplars? A Preliminary Study"
+    authors: [Jiajing Guo, Vikram Mohanty, Hongtao Hao, Liang Gou, Liu Ren]
+    geo:     [us.ca]
+    authorIds:     [3776, 3242, 2112]
+    priorPaperIds: [841, 1242, 1338, 1524]
+    priorKwIds:    [116, 228, 758, 852, 863, 865, 1621, 1866, 2243, 2244, 3116, 3117, 3335, 3336, 3337, 3338, 3723, 3724, 3725, 3726]
+    priorKwNames: [adaptive interface, artificial intelligence, big five, crowd-ai interaction, crowdsourcing, design language system, 
+                   enterprise user experience design, face recognition, history, mobile system, natural language processing, online communities, 
+                   person identification, personality, personality changes, project management, social media, ui recommendation, 
+                   visualization, visualization and comparison]
     domains: []
   15: 
     title:   ""

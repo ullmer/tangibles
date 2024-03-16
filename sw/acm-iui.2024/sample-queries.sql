@@ -90,4 +90,16 @@ select t.id from titles as t, authors as a, ti_au as ta where
   a.id in (3617, 3249)
   and ta.ti_id = t.id and ta.au_id=a.id group by t.id;
 
+select id, lastn, firstn from authors where lastn in
+   ('Liu', 'Sra')
+   order by lastn, firstn;
+
+select id, lastn, firstn from authors where lastn in
+   ('Guo', 'Mohanty', 'Hao', 'Gou', 'Ren')
+   order by lastn, firstn;
+
+select t.id from titles as t, authors as a, ti_au as ta where 
+  a.id in (3776, 3242, 2112)
+  and ta.ti_id = t.id and ta.au_id=a.id group by t.id;
+
 
