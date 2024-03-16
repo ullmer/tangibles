@@ -25,15 +25,41 @@ for key in p: # iterate through papers
 con   = sqlite3.connect("dl-iui.db3")
 cur   = con.cursor()
 
+count2entries = {}
+
 ## search for commonalities ##
 
 for key in keywordId2papers:
-  val = keywordId2papers[key]
-  if len(val) > 1: 
+  val   = keywordId2papers[key]
+  count = len(val)
+  if count > 1: 
 
     query = 'select keyword from keywords where id=%i;' % key
     result  = cur.execute(query)
     qresult = result.fetchone()
-    print(key, val, qresult)
+   
+    #entry = str(key) + str(val) + str(qresult[0])
+    keyword = qresult[0]
+    entry = keyword + "\n"
+    for posterId in val:
+      try:
+        title   = p[posterId].title
+        authors = p[posterId].authors
+        elentry = "  %s\t(%s)\n" % (title, authors)
+        entry += elentry
+      except: print("missing data on entry %i; ignoring" % posterId)
+
+    if count not in count2entries: count2entries[count] = []
+    count2entries[count].append(entry)
+
+counts = list(count2entries.keys())
+counts.sort(reverse=True)
+#print(counts)
+
+for count in counts:
+  hashbar = '=' * 15
+  print("\n%s %i %s" % (hashbar, count, hashbar)) 
+  els = count2entries[count]
+  for el in els: print(el)
 
 ### end ###
