@@ -4,7 +4,17 @@
 
 import sqlite3 # https://docs.python.org/3/library/sqlite3.html
 
-titleIds = [637, 638]
+#titleIds = [443, 644, 868, 1076, 1286, 1402, 1591, 1605, 2280]
+#titleIds = [423, 1320, 1578, 2056]
+#titleIds = [108, 1295, 1509, 2007, 2216, 2303]
+#titleIds = [911, 944, 973, 1537, 2025, 2035]
+#titleIds = [954]
+#titleIds = [944, 1738]
+#titleIds  = [1339, 1459, 1617, 2161]
+#titleIds  = [2159]
+#titleIds  = [841, 1242, 1338, 1524]
+titleIds  = [781, 1031, 1560, 1751, 2073, 2084, 2189]
+
 ti  = str(titleIds)[1:-1]
 
 con   = sqlite3.connect("dl-iui.db3")
