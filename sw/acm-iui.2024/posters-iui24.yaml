@@ -85,9 +85,16 @@ posters:
     domains:       []
 
   7: 
-    title:   ""
-    authors: []
-    geo:     []
+    title:   "A Bicycle Navigation System for Analyzing the Comfort Level of the Cyclist"
+    authors: [Ryuta Yamaguchi, Keisuke Murashige, Tomoki Yoshihisa, Shinji Shimojo, Faisal Mehmood, Yukiko Kawai]
+    geo:     [jp]
+    authorIDs: [2268]
+    priorPaperIds: [911, 944, 973, 1537, 2025, 2035]
+    priorKwIds: [40, 219, 333, 388, 880, 1246, 1805, 2043, 2407, 2408, 2488, 2489, 2490, 2544, 3750, 3751, 3752, 4742, 4743, 4764]
+    priorKwNames: [complaint, cooking recipes, cooking videos, data analysis, e-commerce, editing features, foreign languages, 
+                   movie trailer, query language, recommender system, review, route navigation, spatial, spatial operators, 
+                   spatial search, supplementary information, temporal, twitter, user interface, video analysis]
+
     domains: []
   8: 
     title:   ""

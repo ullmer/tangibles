@@ -61,3 +61,10 @@ select t.id from titles as t, authors as a, ti_au as ta where
   a.id in (1048)
   and ta.ti_id = t.id and ta.au_id=a.id group by t.id;
 
+select id, lastn, firstn from authors where lastn in
+   ('Yamaguchi', 'Murashige', 'Yoshihisa', 'Shimojo', 'Mehmood', 'Kawai']
+   order by lastn, firstn;
+
+    authors: [Ryuta Yamaguchi, Keisuke Murashige, Tomoki Yoshihisa, Shinji Shimojo, Faisal Mehmood, Yukiko Kawai]
+
+
