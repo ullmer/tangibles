@@ -3,6 +3,7 @@ meta:
   people: Brygg Ullmer, Sida Dai, Jasmine Davidson, Winifred Elysse Newman, Miriam K. Konkel
   dirFullres: posters.0315a/
   fnPat: iui24_%2i.png
+
 posters:
   1: 
     title:   "Human-AI Collaboration in a Student Discussion Forum"
@@ -40,6 +41,19 @@ posters:
     domains:   [know-center.at]
     authorIDs:     [1623, 1117, 2155, 2654]
     priorPaperIds: [443, 644, 868, 1076, 1286, 1402, 1591, 1605, 2280]
+    priorKwIds:    [4, 11, 89, 114, 121, 138, 165, 175, 540, 670, 782, 855, 1014, 1045, 1198, 1265, 1266, 1267, 1508, 1526, 1618, 1627, 
+                    1774, 1945, 2224, 2306, 2750, 2751, 2752, 2753, 2754, 3216, 3217, 3218, 3219, 3220, 3455, 3482, 3775, 3866, 4345, 5256, 5257]
+
+    priorKwNames: [recommendation system, applications of intelligent user interfaces, collaborative filtering, collaborative interfaces, 
+                   crowd-based experiment, deep feature selection, deep learning, evaluations of intelligent user interfaces - reproducibility, 
+                   exploratory search, gesture interaction, gesture recognition, haptic display, haptic feedback, hci, hybrid ranking, 
+                   information filtering, information retrieval, interaction, interaction design, interactive machine learning, 
+                   knowledge-based approaches to user interface design and generation, multi-tasking, multimodal, preference elicitation, 
+                   recommender systems, search, search interface, searching as learning, sensor selection, wearable design, computational design, 
+                   gesture detection, skin reading, social search, stimulation, tactile feedback, text analytics, text quality, user study, 
+                   user-generated content, vibrotactile feedback, visual analytics, visualization recommendation, 
+                   wearable, wearables, wikipedia]
+
   4: 
     title:   "Impact of Personalized AI Chat Assistant on Mediated Human-Human Textual Conversations"
     authors: [Jindi Wang, Ioannis Ivrissimtzis, Zhaoxing Li, Lei Shi]
