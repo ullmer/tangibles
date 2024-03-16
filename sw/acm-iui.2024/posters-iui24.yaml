@@ -97,20 +97,39 @@ posters:
 
     domains: []
   8: 
-    title:   ""
-    authors: []
-    geo:     []
-    domains: []
+    title:   "Evaluating ADHD Users' Experience with Recommender Systems"
+    authors: [Sushmita Khan, Bart Knijnenburg, Emma Dixon]
+    geo:     [us.sc]
+    domains: [clemson.edu]
+    priorPaperIds: [335, 820, 974, 1116, 1451, 1570, 2060, 2088]
+    priorKwIds:    [4, 11, 35, 46, 86, 110, 120, 161, 346, 368, 503, 970, 971, 972, 973, 1826, 2051, 2186, 2361, 2545, 2828, 3590, 3591, 3823, 3824, 4862]
+
+    priorKwNames: [adaptive interfaces, data-driven design, information disclosure, intelligent user interface, intelligent user interfaces,
+                   internet of things, location sharing, machine learning, music streaming services, privacy, privacy settings, recommendation,
+                   recommender systems, satisfaction, smarthome, tic-tac-toe game, trust, user behavior, user characteristics, user experience,
+                   user experiments, user study, user-centric evaluation, user-centric evaluation framework, ximl, xml]
+
   9: 
-    title:   ""
-    authors: []
-    geo:     []
+    title:   "CARE: An Infrastructure for Evaluation of Carousel-Based Recommender Interfaces"
+    authors: [Behnam Rahdari, Peter Brusilovksy]
+    geo:     [us.pa]
     domains: []
+    authorIDs:     [2384]
+    priorPaperIds: [954]
+    priorKwIds:    [2509, 2510]
+    priorKwNames:  [hybrid recommendation, user-controlled recommendation]
+
   10: 
-    title:   ""
-    authors: []
-    geo:     []
-    domains: []
+    title:   "Search Result Presentation for Non-Native Language Documents"
+    authors: [Tetsuya Sasaoka, Yoko Yamakata, Keishi Tajima]
+    geo:           [jp]
+    authorIDs:     [2366]
+    priorPaperIds: [944, 1738]
+    domains:       []
+    priorKwIds: [2488, 2489, 2490, 4185, 4186, 4187, 4188, 4189, 4190, 4191, 4192]
+    priorKwNames: [augmented thumbnail, multitask, query language, site logo, spatial operators, spatial search, tab-browser, 
+                   task grouping, task switching, window system, working set]
+
   11: 
     title:   "Generative AI syntheses of platform, content, visuals, and kinetics for cyberphysical computationally-mediated posters and broader applications"
     authors:  [Sida Dai, Jasmine Davidson, Brygg Ullmer, Winifred Elysse Newman, Miriam K. Konkel]
