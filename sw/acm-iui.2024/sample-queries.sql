@@ -36,5 +36,11 @@ select t.id from titles as t, authors as a, ti_au as ta where
   t.id in (1209, 1207, 908, 1224, 4827) 
   and ta.ti_id = t.id and ta.au_id=a.id group by t.id;
 
+select t.id from titles as t, authors as a, ti_au as ta where 
+  t.id in (1209, 1207, 908, 1224, 4827) 
+  and ta.ti_id = t.id and ta.au_id=a.id group by t.id;
 
+select k.id, k.keyword from titles as t, keywords as k, ti_kw as tk, ti_au as ta, authors as a where 
+  t.id in (1209, 1207, 908, 1224, 4827) 
+   and ta.ti_id = t.id and ta.au_id = a.id and tk.ti_id = t.id and tk.kw_id = k.id group by keyword;
 
