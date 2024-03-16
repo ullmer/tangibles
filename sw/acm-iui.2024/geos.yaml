@@ -14,6 +14,7 @@ regions:
       us.ny: 1
       us.va: 1
       us.wa: 1
+
   eu:
     fullname: Europe
     count:    7
@@ -24,16 +25,18 @@ regions:
       it: 2
       ba: 2
 
+  as:
+    fullname: Asia
+    count:    6
+    contributions:
+      in: 2
+      jp: 2
+      kr: 2
 
-      1 sa
-     me 1
-      2 in
-      2 jp
-      2 kr
-     as 6
-      1 ba
-      1 it
-      2 uk
-      2 at
-      2 de
-     eu 7
+  Middle East:
+    fullname: Middle East
+    count:    1
+    contributions:
+      sa: 1
+
+### end ###
