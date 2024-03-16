@@ -7,18 +7,22 @@ posters:
   1: 
     title:   "Human-AI Collaboration in a Student Discussion Forum"
     authors: [Mason Laney, Prasun Dewan]
-    geo:     [us.nc]
-    domains: [unc.edu]
+    geo:           [us.nc]
+    domains:       [unc.edu]
+    authorIDs:     [1600]
+    priorPaperIds: [637, 638]
   2: 
     title:   "EvaluLLM: LLM Assisted Evaluation of Generative Outputs"
-    authors: [Michael Desmond, Zahra Ashktorab, Qian Pan, James M. Johnson, Casey Dugan, Martin Santillan Cooper]
-    geo:     [us.ny]
-    domains: [ibm.com]
+    authors:   [Michael Desmond, Zahra Ashktorab, Qian Pan, James M. Johnson, Casey Dugan, Martin Santillan Cooper]
+    authorIDs: [1209, 1207, 908, 1224, 4827]
+    geo:       [us.ny]
+    domains:   [ibm.com]
   3: 
-    title:   "XAIVIER: Time Series Classifier Verification with Faithful Explainable AI"
-    authors: [Ilija Simic, Santokh Singh, Christian Partl, Eduardo Veas, Vedran Sabol]
-    geo:     [at]
-    domains: [know-center.at]
+    title:     "XAIVIER: Time Series Classifier Verification with Faithful Explainable AI"
+    authors:   [Ilija Simic, Santokh Singh, Christian Partl, Eduardo Veas, Vedran Sabol]
+    authorIDs: [1623, 1117, 2155, 2654]
+    geo:       [at]
+    domains:   [know-center.at]
   4: 
     title:   "Impact of Personalized AI Chat Assistant on Mediated Human-Human Textual Conversations"
     authors: [Jindi Wang, Ioannis Ivrissimtzis, Zhaoxing Li, Lei Shi]
