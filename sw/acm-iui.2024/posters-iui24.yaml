@@ -63,14 +63,27 @@ posters:
     title:     "Utilizing Large Language Models in Tribal Emergency Management"
     authors:   [Srishti Gupta, Yu-Che Chen, Chun-Hua Tsai]
     authorIDs: [1048]
+    priorPaperIds: [423, 1320, 1578, 2056]
     geo:       [us.ne]
     domains:   []
+    priorKwIds:   [40, 114, 219, 397, 433, 2509, 3171, 3299, 3838, 3839, 4806, 4807]
+    priorKwNames: [diversification, diversity, explainable intelligent user interface, explanation, hci, hybrid recommendation, 
+                   recommender system, social recommendation, social recommender, user interface, user-driven exploration, user-driven fusion]
+
   6: 
     title:   "CHARM: A Group Decision Making Support Chatbot"
     authors: [Amra Delic, Hanif Emamgholizadeh, Ngoc Nguyen, Francesco Ricci]
     geo:     [ba, it, us.oh]
-    authorIDs: [289]
-    domains: []
+    authorIDs:     [289]
+    priorPaperIds: [108, 1295, 1509, 2007, 2216, 2303]
+    priorKwIds: [4, 40, 91, 123, 124, 219, 344, 345, 698, 2127, 2661, 3242, 3243, 3700, 3701, 4694, 5127, 5303, 5304]
+
+    priorKwNames: [command, context-aware, critiquing, emotions, facial expressions, implicit preference elicitation, 
+                   integrated development environment, inverse reinforcement learning, iot, mobile recommender systems, pairwise scores, 
+                   recommeder systems, recommender system, recommender systems, simulation environment, tourism, user interface, 
+                   user model, user preferences]
+    domains:       []
+
   7: 
     title:   ""
     authors: []

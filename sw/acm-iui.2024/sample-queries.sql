@@ -57,4 +57,7 @@ select t.id from titles as t, authors as a, ti_au as ta where
   a.id in (2446, 844, 2734)
   and ta.ti_id = t.id and ta.au_id=a.id group by t.id;
 
+select t.id from titles as t, authors as a, ti_au as ta where 
+  a.id in (1048)
+  and ta.ti_id = t.id and ta.au_id=a.id group by t.id;
 
