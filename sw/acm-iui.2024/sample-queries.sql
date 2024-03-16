@@ -24,4 +24,10 @@ select id, lastn, firstn from authors where lastn in
 select id, lastn, firstn from authors where lastn in
    ('Gupta', 'Chen', 'Tsai') order by lastn, firstn;
 
-Srishti Gupta, Yu-Che Chen, Chun-Hua Tsai
+select id, lastn, firstn from authors where lastn in
+   ('Delic', 'Emamgholizadeh', 'Nguyen', 'Ricci') 
+   order by lastn, firstn;
+
+
+[Amra Delic, Hanif Emamgholizadeh, Ngoc Nguyen, Francesco Ricci]
+
