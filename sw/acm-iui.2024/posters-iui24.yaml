@@ -141,9 +141,17 @@ posters:
                    architecture, genetic data]
 
   12: 
-    title:   ""
-    authors: []
-    geo:     []
+    title:   "ExpressEdit: Video Editing with Natural Language and Sketching"
+    authors: [Bekzat Tilekbay, Saelyne Yang, Michal Lewkowicz, Alex Suryapranata, Juho Kim]
+    geo:       [kr]
+    authorIds: [3617, 3249]
+    priorPaperIds: [1339, 1459, 1617, 2161]
+    priorKwIds:    [169, 852, 854, 2641, 3339, 3340, 3341, 3607, 3608, 3609, 3610, 3918, 3919, 3920, 5021, 5022, 5023, 5024, 5025]
+    priorKwNames:  [3d reconstruction, answer aggregation, autonomous vehicle, computer vision, crowdsourcing, dall-e, data-driven interface, 
+                    human computation, interaction log analysis, interview study, large-scale text-to-image generation model, literature review, 
+                    multi-tool aggregation, particle filter, semantic image segmentation, software tutorial videos, tool diversity, 
+                    video interaction, visual artists]
+
     domains: []
   13: 
     title:   ""
