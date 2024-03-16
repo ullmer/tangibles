@@ -65,7 +65,7 @@ posters:
     authors:  [Sida Dai, Jasmine Davidson, Brygg Ullmer, Winifred Elysse Newman, Miriam K. Konkel]
     geo:      [us.sc]
     domains:  [clemson.edu]
-    keywords: [situated interaction, mixed-initiative touch, actuated tangible interfaces]
+    keywords: [situated interaction, mixed-initiative touch, actuated tangible interfaces, tangible interfaces]
   12: 
     title:   ""
     authors: []
@@ -132,6 +132,7 @@ posters:
     geo:      [us.sc]
     domains:  [clemson.edu]
     keywords: [digital privacy education, human-AI trust, user perception of AI, education for older adults]
+    authorIDs: [2446, 844, 2734]
   25: 
     title:   ""
     authors: []

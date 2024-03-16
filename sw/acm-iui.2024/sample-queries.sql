@@ -28,6 +28,9 @@ select id, lastn, firstn from authors where lastn in
    ('Delic', 'Emamgholizadeh', 'Nguyen', 'Ricci') 
    order by lastn, firstn;
 
+select id, lastn, firstn from authors where lastn in
+   ('Aly', 'Byrne', 'Knijnenburg')
+   order by lastn, firstn;
 
-[Amra Delic, Hanif Emamgholizadeh, Ngoc Nguyen, Francesco Ricci]
 
+Heba Aly, Kaileigh Angela Byrne, Bart Knijnenburg]
