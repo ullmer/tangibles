@@ -32,5 +32,9 @@ select id, lastn, firstn from authors where lastn in
    ('Aly', 'Byrne', 'Knijnenburg')
    order by lastn, firstn;
 
+select t.id from titles as t, authors as a, ti_au as ta where 
+  t.id in (1209, 1207, 908, 1224, 4827) 
+  and ta.ti_id = t.id and ta.au_id=a.id group by t.id;
 
-Heba Aly, Kaileigh Angela Byrne, Bart Knijnenburg]
+
+
