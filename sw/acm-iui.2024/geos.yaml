@@ -1,16 +1,23 @@
-      1 sa, uk
+regions:
+  na:
+    count:    22
+    fullname: North America
+    contributions
+
+
+      1 sa
      me 1
       2 in
       2 jp
       2 kr
      as 6
-      1 ba, it, us.oh
-      1 sa, uk
-      1 uk
+      1 ba
+      1 it
+      2 uk
       2 at
       2 de
      eu 7
-      1 ba, it, us.oh
+      1 us.oh
       1 us.in
       1 us.md
       1 us.ne
