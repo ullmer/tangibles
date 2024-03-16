@@ -191,6 +191,8 @@ posters:
     title:   "Training Adults with Mild to Moderate Dementia in ChatGPT: Exploring Best Practices"
     authors: [Elizabeth Gilman, Sushant Kot, Margi Engineer, Emma Dixon]
     geo:     [us.sc]
+    priorKwIds:   [2635, 2676, 1680, 2331]
+    priorKwNames: [gpt-2/3, gpt-3, dementia care, dementia]
     domains: []
   17: 
     title:   ""
