@@ -9,14 +9,23 @@ mmpController:
     scriptfiles: {file: ''}
     controls:
       control:
-        - {group: '[Master]', key: m1, status: 176, midino: 104, options: {script-binding: ''}} #top margin
-        - {group: '[Master]', key: m2, status: 176, midino: 105, options: {script-binding: ''}}
-        - {group: '[Master]', key: m3, status: 176, midino: 106, options: {script-binding: ''}}
-        - {group: '[Master]', key: m4, status: 176, midino: 107, options: {script-binding: ''}}
-        - {group: '[Master]', key: m5, status: 176, midino: 108, options: {script-binding: ''}}
-        - {group: '[Master]', key: m6, status: 176, midino: 109, options: {script-binding: ''}}
-        - {group: '[Master]', key: m7, status: 176, midino: 110, options: {script-binding: ''}}
-        - {group: '[Master]', key: m8, status: 176, midino: 111, options: {script-binding: ''}}
+        #- {group: '[Master]', key: m1, status: 176, midino: 104, options: {script-binding: ''}} #top margin
+        #- {group: '[Master]', key: m2, status: 176, midino: 105, options: {script-binding: ''}}
+        #- {group: '[Master]', key: m3, status: 176, midino: 106, options: {script-binding: ''}}
+        #- {group: '[Master]', key: m4, status: 176, midino: 107, options: {script-binding: ''}}
+        #- {group: '[Master]', key: m5, status: 176, midino: 108, options: {script-binding: ''}}
+        #- {group: '[Master]', key: m6, status: 176, midino: 109, options: {script-binding: ''}}
+        #- {group: '[Master]', key: m7, status: 176, midino: 110, options: {script-binding: ''}}
+        #- {group: '[Master]', key: m8, status: 176, midino: 111, options: {script-binding: ''}}
+
+        - {group: '[Master]', key: m1, status: 144, midino: 91, options: {script-binding: ''}} #top margin
+        - {group: '[Master]', key: m2, status: 144, midino: 92, options: {script-binding: ''}}
+        - {group: '[Master]', key: m3, status: 144, midino: 93, options: {script-binding: ''}}
+        - {group: '[Master]', key: m4, status: 144, midino: 94, options: {script-binding: ''}}
+        - {group: '[Master]', key: m5, status: 144, midino: 95, options: {script-binding: ''}}
+        - {group: '[Master]', key: m6, status: 144, midino: 96, options: {script-binding: ''}}
+        - {group: '[Master]', key: m7, status: 144, midino: 97, options: {script-binding: ''}}
+        - {group: '[Master]', key: m8, status: 144, midino: 98, options: {script-binding: ''}}
 
         - {group: '[Master]', key: ma, status: 144, midino:  89, options: {script-binding: ''}} #right margin
         - {group: '[Master]', key: mb, status: 144, midino:  79, options: {script-binding: ''}}
