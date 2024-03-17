@@ -123,16 +123,19 @@ class posterMidiController:
         r,g,b = self.getBaseColor(i, j)
         self.emc.setLaunchpadXYColor(i,j,r,g,b)
   
-#### main ####
-  
-emc = enoMidiController('nov_launchpad_x')
-#emc = enoMidiController('nov_launchpad_mk2')
-emc.clearLights()
+####################### main #######################
 
-pmc = posterMidiController(emc=emc)
+def main(): #test stub
+  emc = enoMidiController('nov_launchpad_x')
+  #emc = enoMidiController('nov_launchpad_mk2')
+  emc.clearLights()
 
-while True:
-  emc.pollMidi()
-  time.wait(50)
+  pmc = posterMidiController(emc=emc)
+
+  while True:
+    emc.pollMidi()
+    time.wait(50)
+
+if __name__ == '__main__': main()
 
 ### end ###
