@@ -190,8 +190,7 @@ def draw():
 
 def on_key_down(key): pb.on_key_down(key)
 
-while pb.useMidiController:
-  pb.poll()     #emc.pollMidi()
-  time.wait(50)
+if pb.useMidiController:
+  clock.schedule_interval(pb.poll, .05) #ask pygame to service midi polling
 
 ### end ###
