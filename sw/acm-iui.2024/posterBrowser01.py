@@ -26,7 +26,7 @@ class posterBrowser:
   numPosters          = 34
   posterFnPrefix      = 'posters.0315a/screen_res/iui24_'
   posterActors        = None
-  activePoster         = 0
+  activePoster         = 1
   cyclePosters         = True #automatically cycle between posters
   cyclePosterFrequency = 10.  #how frequently to make the cycling
   cyclePosterAutolaunchDelay = 60. #after how many seconds should autolaunch begin
@@ -53,7 +53,7 @@ class posterBrowser:
   def calcSelectedPoster(self): 
     rx, ry = self.upperHlBoxRelPos
     mx, my = self.upperHlBoxRelMaxPos
-    result = rx + ry * mx
+    result = rx + ry * mx + 1
     return result
 
   ######################## get poster actor ######################## 
@@ -125,8 +125,9 @@ class posterBrowser:
     if key == keys.LEFT:  self.shiftUpperCursor(-1,  0)
     if key == keys.UP:    self.shiftUpperCursor( 0, -1)
     if key == keys.DOWN:  self.shiftUpperCursor( 0,  1)
-    selPosterNum = self.calcSelectedPoster()
+    selPosterNum = self.calcSelectedPoster() 
     print("selected poster number:", selPosterNum)
+    self.activePoster = selPosterNum
 
 ######################## main ######################## 
  
