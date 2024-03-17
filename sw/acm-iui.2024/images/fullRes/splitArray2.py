@@ -8,15 +8,19 @@
 from PIL import Image
 
 class tiledPanel:
-  imgSrcFn = 'enodiaAbout20d.png'
+  #imgSrcFn = 'enodiaAbout20d.png'
+  imgSrcFn = None
   imgSrc   = None
   targPane = None
   #arrayDim = [6, 3]
-  arrayDim = [6, 1]
+  #arrayDim = [6, 1]
+  arrayDim = [8, 8]
   panelWidth  = None
   panelHeight = None
 
-  def __init__(self):
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+
     self.imgSrc = Image.open(self.imgSrcFn)
     #self.imgSrc.show()
     self.panelWidth, self.panelHeight = self.imgSrc.size
@@ -32,13 +36,15 @@ class tiledPanel:
     self.targPane = self.imgSrc.crop((x1, y1, x2, y2))
     return self.targPane
     #self.targPane.show()
+  
+tfnPre = "gridMap03k1"
+tfn    = tfnPre + '.png'
+tp = tiledPanel(imgSrcFn=tfn)
 
-tp = tiledPanel()
-
-tfnPre = "enodiaAbout20dT"
 for i in range(tp.arrayDim[0]):
-  targPane = tp.extractPane(i,0)
-  fn = tp.imgSrcFn; tfn = tfnPre + str(i) + ".png"
-  targPane.save(tfn)
+  for j in range(tp.arrayDim[1]):
+    targPane = tp.extractPane(i,j)
+    fn = tp.imgSrcFn; tfn = tfnPre + str(i) + ".png"
+    targPane.save(tfn)
 
 ### end ###
