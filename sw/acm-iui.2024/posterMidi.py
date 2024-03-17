@@ -10,9 +10,10 @@ from functools   import partial
 ########################## poster midi controller ##########################
 
 class posterMidiController:
-  emc           = None #enodia midi controller handle
-  baseColorDict = None
-  dimensions    = [9, 9]
+  emc                 = None #enodia midi controller handle
+  baseColorDict       = None
+  dimensions          = [9, 9]
+  highlightMultiplier = 6 
 
   ######################## constructor ######################## 
 
@@ -45,15 +46,32 @@ class posterMidiController:
       result = self.baseColorDict[x][y]
       return result
     except:
-      print("posterMidiController getBaseColor reports exception")
-      traceback.print_exc()
+      return [0, 0, 0] #unlit if unassigned 
+      #print("posterMidiController getBaseColor reports exception")
+      #traceback.print_exc()
+
+  ######################## highlight button ######################## 
+
+  def highlightButton(self, x, y):
+    col   = self.getBaseColor(x, y)
+    hlcol = []
+    for el in col: 
+      v = el*self.highlightMultiplier
+      if v > 63: v=63
+      hlcol.append(v)
+
+    r,g,b = hlcol
+    self.emc.setLaunchpadXYColor(x,y,r,g,b)
 
   ######################## button callback ######################## 
 
   def buttonCB(self, emc, control, arg):
     x, y    = emc.addr2coord(control)
-    r, g, b = [63, 63, 63]
-    emc.setLaunchpadXYColor(x, y, r, g, b)
+
+    #r, g, b = [63, 63, 63]
+    #emc.setLaunchpadXYColor(x, y, r, g, b)
+
+    self.highlightButton(x,y)
   
   ######################## labelLaunchpad ######################## 
   
