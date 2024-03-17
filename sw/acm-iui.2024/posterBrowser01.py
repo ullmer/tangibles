@@ -18,6 +18,7 @@ class posterBrowser:
   upperHlBoxRelPos    = (0, 0)
   upperHlBoxRelMaxPos = (7, 7)
   hlBoxDiffPos        = (266, 183)
+  posterFullPos       = (0,  1210)
   animDur             = .3
   animTween           = 'accel_decel'
   removeTitle         = True
@@ -25,6 +26,10 @@ class posterBrowser:
   numPosters          = 34
   posterFnPrefix      = 'posters.0315a/screen_res/iui24_'
   posterActors        = None
+  activePoster         = 0
+  cyclePosters         = True #automatically cycle between posters
+  cyclePosterFrequency = 10.  #how frequently to make the cycling
+  cyclePosterAutolaunchDelay = 60. #after how many seconds should autolaunch begin
 
   topBlockA    = None #pgzero actors
   upperHlBoxA  = None
@@ -59,7 +64,7 @@ class posterBrowser:
 
     afn = '%s%02i' % (self.posterFnPrefix, whichPoster)
 
-    a   = Actor(afn, topleft=(0,0))
+    a   = Actor(afn, topleft=self.posterFullPos)
     self.posterActors[whichPoster] = a
     return a
 
@@ -85,6 +90,9 @@ class posterBrowser:
   def draw(self):
     if self.firstDraw and self.removeTitle: self.removeTitlebar()
     for actor in self.actors: actor.draw()
+
+    pa = self.getPosterActor(self.activePoster)
+    pa.draw()
 
   ###################### shiftUpperCursor ######################
 
