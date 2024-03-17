@@ -48,6 +48,10 @@ def labelLaunchpad(emc):
   emc.setLaunchpadXYColor(5, 5, 14,  0,  0) #as
   emc.setLaunchpadXYColor(6, 5, 14, 14,  0) #me
 
+  for j in range(3):
+    for i in [0, 2, 4, 6]: emc.setLaunchpadXYColor(i, j+6, 0, 0, 8)
+    for i in [1, 3, 5, 7]: emc.setLaunchpadXYColor(i, j+6, 8, 8, 8)
+
 #### main ####
 
 emc = enoMidiController('nov_launchpad_x')
