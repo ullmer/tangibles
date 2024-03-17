@@ -20,6 +20,10 @@ class posterBrowser:
   animDur             = .3
   animTween           = 'accel_decel'
 
+  numPosters          = 34
+  posterFnPrefix      = 'posters.0315a/screen_res/iui24_'
+  posterActors        = None
+
   topBlockA    = None #pgzero actors
   upperHlBoxA  = None
 
@@ -45,11 +49,25 @@ class posterBrowser:
     result = rx + ry * mx
     return result
 
+  ######################## get poster actor ######################## 
+
+  def getPosterActor(self, whichPoster):
+    if self.posterActors is None:        self.posterActors = {}
+    if whichPoster in self.posterActors: return self.posterActors[whichPoster]
+
+    afn = '%s%02i' % (self.posterFnPrefix, whichPoster)
+
+    a   = Actor(afn, topleft=(0,0)
+    self.posterActors[whichPoster] = a
+    return a
+
   ######################## constructActors ######################## 
 
   def constructActors(self):
     self.topBlockA   = Actor(self.topBlockFn,   topleft = self.topBlockPos)
     self.upperHlBoxA = Actor(self.upperHlBoxFn, topleft = self.upperHlBoxBasePos)
+
+    self.posterActors = {}
 
     self.actors = [self.topBlockA, self.upperHlBoxA]
 
