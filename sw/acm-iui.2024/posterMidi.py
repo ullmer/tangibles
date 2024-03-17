@@ -28,7 +28,6 @@ class posterMidiController:
       self.baseColorDict[i] = {} 
       self.highlightDict[i] = {} 
       for j in range(self.dimensions[1]): self.highlightDict[i][j] = False
-      
 
     if self.emc is not None: #emc should be passed as an argument
       self.labelLaunchpad(self.emc)
@@ -84,12 +83,13 @@ class posterMidiController:
     #r, g, b = [63, 63, 63]
     #emc.setLaunchpadXYColor(x, y, r, g, b)
 
-    isButtonHighlighted = self.highlightDict[x,y]
-    if isButtonHighlighted: 
-      self.highlightDict[x,y] = False
+    buttonIsHighlighted = self.highlightDict[x][y]
+
+    if buttonIsHighlighted: 
+      self.highlightDict[x][y] = False
       self.normalLightButton(x,y)
     else:
-      self.highlightDict[x,y] = True
+      self.highlightDict[x][y] = True
       self.highlightButton(x,y)
 
   ######################## labelLaunchpad ######################## 
@@ -131,6 +131,6 @@ pmc = posterMidiController(emc=emc)
 
 while True:
   emc.pollMidi()
-  time.wait(100)
+  time.wait(50)
 
 ### end ###
