@@ -9,40 +9,28 @@ from functools   import partial
 
 #### callback function ####
 
-def painterCB(emc, control, arg):
-  if control[0] == 'm': #margin button
-    whichMarginKey = control[1]
-
-    if emc.isRightMargin(whichMarginKey):
-      color = emc.getRightMarginColor(whichMarginKey)
-      emc.setActiveColor(color)
-      emc.topMarginFadedColor(color)
-
-    if emc.isTopMargin(whichMarginKey):
-      color = emc.getTopMarginColor(whichMarginKey)
-      emc.setActiveColor(color)
-      
-  else: 
-    x, y    = emc.addr2coord(control)
-    r, g, b = emc.getActiveColor()
-    emc.setLaunchpadXYColor(x, y, r, g, b)
+def buttonCB(emc, control, arg):
+  x, y    = emc.addr2coord(control)
+  r, g, b = [63, 63, 63]
+  emc.setLaunchpadXYColor(x, y, r, g, b)
 
 #### labelLaunchpad####
 
 def labelLaunchpad(emc):
-  #for j in range(8):
-  #  for i in [1, 3, 5, 7]: emc.setLaunchpadXYColor(i, j, 10, 10, 0)
-  #  for i in [0, 2, 4, 6]: emc.setLaunchpadXYColor(i, j, 63, 63, 0)
+
+  for i in range(4): emc.setLaunchpadXYColor(i, 0, 13, 13, 13)
 
   for j in range(4):
     for i in [0, 4]: emc.setLaunchpadXYColor(i, j+1, 8,   8, 8)
     for i in [1, 5]: emc.setLaunchpadXYColor(i, j+1, 0,   8, 2)
     for i in [2, 6]: emc.setLaunchpadXYColor(i, j+1, 10, 10, 0)
     for i in [3, 7]: emc.setLaunchpadXYColor(i, j+1, 15,  5, 0)
+
   emc.setLaunchpadXYColor(0, 5, 8, 8, 8)
   emc.setLaunchpadXYColor(1, 5, 0, 8, 2)
 
   for i in [2, 7]: emc.setLaunchpadXYColor(i, 5, 4, 4, 4)
+
   emc.setLaunchpadXYColor(3, 5,  0, 12,  0) #na
   emc.setLaunchpadXYColor(4, 5,  0,  0, 12) #eu
   emc.setLaunchpadXYColor(5, 5, 14,  0,  0) #as
@@ -61,7 +49,7 @@ emc.clearLights()
 labelLaunchpad(emc)
 
 #emc.rightMarginRainbow()
-#emc.registerExternalCB(painterCB)
+emc.registerExternalCB(buttonCB)
 
 while True:
   emc.pollMidi()
