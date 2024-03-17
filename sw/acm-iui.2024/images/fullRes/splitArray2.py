@@ -37,14 +37,16 @@ class tiledPanel:
     return self.targPane
     #self.targPane.show()
   
-tfnPre = "gridMap03k1"
-tfn    = tfnPre + '.png'
-tp = tiledPanel(imgSrcFn=tfn)
+tfnPre = "gridMap03k5"
+srcFn  = tfnPre + '.png'
+tp = tiledPanel(imgSrcFn=srcFn)
 
 for i in range(tp.arrayDim[0]):
   for j in range(tp.arrayDim[1]):
     targPane = tp.extractPane(i,j)
-    fn = tp.imgSrcFn; tfn = tfnPre + str(i) + ".png"
+    fn = tp.imgSrcFn; 
+    tfn = '%s/%i%i.png' % (tfnPre, i, j)
+    print(tfn)
     targPane.save(tfn)
 
 ### end ###
