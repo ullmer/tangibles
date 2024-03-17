@@ -54,6 +54,8 @@ class posterBrowser:
     rx, ry = self.upperHlBoxRelPos
     mx, my = self.upperHlBoxRelMaxPos
     result = rx + ry * mx + 1
+    if result < 1:               result = 1
+    if result > self.numPosters: result = self.numPosters
     return result
 
   ######################## get poster actor ######################## 
