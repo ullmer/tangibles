@@ -12,8 +12,8 @@ class posterBrowser:
   topBlockFn   = 'full_res/top_block01'
   upperHlBoxFn = 'full_res/upper_highlight_box'
 
-  topBlockPos   = (0,0)
-  upperHlBoxPos = (0,0)
+  topBlockPos       = (0, 0)
+  upperHlBoxBasePos = (15,280)
 
   topBlockA    = None #pgzero actors
   upperHlBoxA  = None
@@ -36,7 +36,7 @@ class posterBrowser:
 
   def constructActors(self):
     self.topBlockA   = Actor(self.topBlockFn,   topleft = self.topBlockPos)
-    self.upperHlBoxA = Actor(self.upperHlBoxFn, topleft = self.upperHlBoxPos)
+    self.upperHlBoxA = Actor(self.upperHlBoxFn, topleft = self.upperHlBoxBasePos)
 
     self.actors = [self.topBlockA, self.upperHlBoxA]
 
