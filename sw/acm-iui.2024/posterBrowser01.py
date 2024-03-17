@@ -16,7 +16,7 @@ class posterBrowser:
   upperHlBoxBasePos   = (13,218)
   upperHlBoxRelPos    = (0, 0)
   upperHlBoxRelMaxPos = (7, 7)
-  hlBoxDiffPos        = (266, 196)
+  hlBoxDiffPos        = (266, 183)
   animDur             = .3
   animTween           = 'accel_decel'
 
@@ -57,7 +57,7 @@ class posterBrowser:
 
     afn = '%s%02i' % (self.posterFnPrefix, whichPoster)
 
-    a   = Actor(afn, topleft=(0,0)
+    a   = Actor(afn, topleft=(0,0))
     self.posterActors[whichPoster] = a
     return a
 
@@ -112,8 +112,8 @@ class posterBrowser:
   def on_key_down(self, key):
     if key == keys.RIGHT: self.shiftUpperCursor( 1,  0)
     if key == keys.LEFT:  self.shiftUpperCursor(-1,  0)
-    if key == keys.UP:    self.shiftUpperCursor( 0,  1)
-    if key == keys.DOWN:  self.shiftUpperCursor( 0, -1)
+    if key == keys.UP:    self.shiftUpperCursor( 0, -1)
+    if key == keys.DOWN:  self.shiftUpperCursor( 0,  1)
     selPosterNum = self.calcSelectedPoster()
     print("selected poster number:", selPosterNum)
 
