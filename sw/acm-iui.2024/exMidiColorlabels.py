@@ -30,9 +30,15 @@ def painterCB(emc, control, arg):
 #### labelLaunchpad####
 
 def labelLaunchpad(emc):
-  for j in range(8):
-    for i in [1, 3, 5, 7]: emc.setLaunchpadXYColor(i, j, 10, 10, 0)
-    for i in [0, 2, 4, 6]: emc.setLaunchpadXYColor(i, j, 63, 63, 0)
+  #for j in range(8):
+  #  for i in [1, 3, 5, 7]: emc.setLaunchpadXYColor(i, j, 10, 10, 0)
+  #  for i in [0, 2, 4, 6]: emc.setLaunchpadXYColor(i, j, 63, 63, 0)
+
+  for j in range(4):
+    for i in [0, 4]: emc.setLaunchpadXYColor(i, j, 8,   8, 8)
+    for i in [1, 5]: emc.setLaunchpadXYColor(i, j, 0,  12, 0)
+    for i in [2, 6]: emc.setLaunchpadXYColor(i, j, 10, 10, 0)
+    for i in [3, 7]: emc.setLaunchpadXYColor(i, j, 15,  5, 0)
 
 #### main ####
 
