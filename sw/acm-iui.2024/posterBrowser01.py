@@ -12,8 +12,11 @@ class posterBrowser:
   topBlockFn   = 'full_res/top_block01'
   upperHlBoxFn = 'full_res/upper_highlight_box'
 
-  topBlockPos       = (0, 0)
-  upperHlBoxBasePos = (15,280)
+  topBlockPos         = (0, 0)
+  upperHlBoxBasePos   = (13,218)
+  upperHlBoxRelPos    = (0, 0)
+  upperHlBoxRelMaxPos = (7, 7)
+  hlBoxDiffPos        = (280, 196)
 
   topBlockA    = None #pgzero actors
   upperHlBoxA  = None
@@ -52,6 +55,33 @@ class posterBrowser:
     if self.firstDraw: self.removeTitlebar()
     for actor in self.actors: actor.draw()
 
+  ###################### shiftUpperCursor ######################
+
+  def shiftUpperCursor(self, dx, dy): 
+    uhbrp  = self.upperHlBoxRelPos
+    uhbrmp = self.upperHlBoxRelMaxPos 
+
+    if   dx + uhbrp[0] < 0:         uhbrp[0] = 0
+    elif dx + uhbrp[0] > uhbrmp[0]: uhbrp[0] = uhbrmp[0]
+    else:                           uhbrp[0] += dx
+
+    if   dy + uhbrp[1] < 0:         uhbrp[1] = 0
+    elif dy + uhbrp[1] > uhbrmp[1]: uhbrp[1] = uhbrmp[1]
+    else:                           uhbrp[1] += dy
+
+    x = self.upperHlBoxBasePos[0] + uhbrp[0] * self.hlBoxDiffPos[0]
+    y = self.upperHlBoxBasePos[1] + uhbrp[1] * self.hlBoxDiffPos[1]
+
+    self.upperHlBoxA.topleft = (x, y)
+
+  ###################### on key down ######################
+
+  def on_key_down(self, key):
+    if key == keys.RIGHT: self.shiftUpperCursor( 1,  0)
+    if key == keys.LEFT:  self.shiftUpperCursor(-1,  0)
+    if key == keys.UP:    self.shiftUpperCursor( 0,  1)
+    if key == keys.DOWN:  self.shiftUpperCursor( 0, -1)
+
 ######################## main ######################## 
  
 pb = posterBrowser()
@@ -59,5 +89,7 @@ pb = posterBrowser()
 def draw(): 
   screen.clear()
   pb.draw()
+
+def on_key_down(key): pb.on_key_down(key)
 
 ### end ###
