@@ -13,6 +13,7 @@ class posterMidiController:
   emc                 = None #enodia midi controller handle
   baseColorDict       = None
   highlightDict       = None
+  useDefaultCb        = True
 
   dimensions          = [9, 9]
   highlightMultiplier = 6 
@@ -31,7 +32,8 @@ class posterMidiController:
 
     if self.emc is not None: #emc should be passed as an argument
       self.labelLaunchpad(self.emc)
-      self.emc.registerExternalCB(self.buttonCB)
+      if self.useDefaultCb: 
+        self.emc.registerExternalCB(self.buttonCB)
 
   ######################## set base color ######################## 
 

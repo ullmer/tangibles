@@ -66,8 +66,30 @@ class posterBrowser:
 
   def launchMidiController(self): 
     self.emc = enoMidiController('nov_launchpad_x') #'nov_launchpad_mk2'
-    self.pmc = posterMidiController(emc=self.emc)
+    self.pmc = posterMidiController(emc=self.emc, useDefaultCb=False)
+    self.emc.registerExternalCB(self.midiButtonCB)
+
     self.emc.clearLights()
+
+  ######################## button callback ########################
+
+  def midiButtonCB(self, emc, control, arg):
+    x, y    = emc.addr2coord(control)
+    if y == 13: y=0 # hack around bug
+
+    print("pb2 mbcb XY:", x, y)
+
+    #r, g, b = [63, 63, 63]
+    #emc.setLaunchpadXYColor(x, y, r, g, b)
+
+    buttonIsHighlighted = self.highlightDict[x][y]
+
+    if buttonIsHighlighted:
+      self.highlightDict[x][y] = False
+      self.normalLightButton(x,y)
+    else:
+      self.highlightDict[x][y] = True
+      self.highlightButton(x,y)
 
   ######################## calcSelectedPoster ######################## 
 
