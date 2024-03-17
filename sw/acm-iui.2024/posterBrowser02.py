@@ -24,6 +24,8 @@ class posterBrowser:
   animTween           = 'accel_decel'
   removeTitle         = True
 
+  useMidiController   = True
+
   numPosters          = 34
   posterFnPrefix      = 'posters.0315a/screen_res/iui24_'
   posterActors        = None
@@ -48,6 +50,25 @@ class posterBrowser:
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
     self.constructActors()
+
+    if self.useMidiController: self.launchMidiController()
+
+  ######################## poll ######################## 
+
+  def poll(self): 
+    if self.emc is not None: self.emc.pollMidi()
+    else:                    print("posterBrowser poll: no midi binding present")
+
+  ######################## launchMidiController ######################## 
+
+  def launchMidiController(self): 
+
+emc  = enoMidiController('nov_launchpad_x')
+#emc = enoMidiController('nov_launchpad_mk2')
+emc.clearLights()
+
+pmc = posterMidiController(emc=emc)
+
 
   ######################## calcSelectedPoster ######################## 
 
@@ -144,14 +165,8 @@ def draw():
 
 def on_key_down(key): pb.on_key_down(key)
 
-emc = enoMidiController('nov_launchpad_x')
-#emc = enoMidiController('nov_launchpad_mk2')
-emc.clearLights()
-
-pmc = posterMidiController(emc=emc)
-
-while True:
-  emc.pollMidi()
+while pb.useMidiController:
+  pb.poll()     #emc.pollMidi()
   time.wait(50)
 
 ### end ###

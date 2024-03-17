@@ -96,21 +96,21 @@ class posterBrowser:
     pa = self.getPosterActor(self.activePoster)
     pa.draw()
 
-  ###################### shiftUpperCursor ######################
+  ###################### shiftCursor ######################
 
-  def shiftUpperCursor(self, dx, dy): 
+  def shiftCursor(self, dx, dy): 
     uhbrp  = self.upperHlBoxRelPos
     uhbrmp = self.upperHlBoxRelMaxPos 
 
     rx, ry = uhbrp
 
-    if   dx + uhbrp[0] < 0:         rx = 0
-    elif dx + uhbrp[0] > uhbrmp[0]: rx = uhbrmp[0]
-    else:                           rx += dx
-
-    if   dy + uhbrp[1] < 0:         ry = 0
-    elif dy + uhbrp[1] > uhbrmp[1]: ry = uhbrmp[1]
+    if   dy + uhbrp[1] < 0:         ry = uhbrmp[1]
+    elif dy + uhbrp[1] > uhbrmp[1]: ry = 0
     else:                           ry += dy
+
+    if   dx + uhbrp[0] < 0:         rx = 0
+    elif dx + uhbrp[0] > uhbrmp[0]: rx = 0; ry += 1
+    else:                           rx += dx
 
     self.upperHlBoxRelPos = (rx, ry)
 
@@ -120,13 +120,15 @@ class posterBrowser:
     #self.upperHlBoxA.topleft = (x, y)
     animate(self.upperHlBoxA, topleft=(x,y), duration=self.animDur, tween=self.animTween)
 
+    upperHlBoxRelMaxPos = (7, 7)
+
   ###################### on key down ######################
 
   def on_key_down(self, key):
-    if key == keys.RIGHT: self.shiftUpperCursor( 1,  0)
-    if key == keys.LEFT:  self.shiftUpperCursor(-1,  0)
-    if key == keys.UP:    self.shiftUpperCursor( 0, -1)
-    if key == keys.DOWN:  self.shiftUpperCursor( 0,  1)
+    if key == keys.RIGHT: self.shiftCursor( 1,  0)
+    if key == keys.LEFT:  self.shiftCursor(-1,  0)
+    if key == keys.UP:    self.shiftCursor( 0, -1)
+    if key == keys.DOWN:  self.shiftCursor( 0,  1)
     selPosterNum = self.calcSelectedPoster() 
     print("selected poster number:", selPosterNum)
     self.activePoster = selPosterNum
