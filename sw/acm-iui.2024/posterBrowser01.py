@@ -6,8 +6,14 @@ WIDTH  = 2160
 HEIGHT = 2160
 
 class posterBrowser:
-  topBlockFn = 'full_res/top_block01'
-  upperHlBox = 'full_res/upper_highlight_box'
+  topBlockFn   = 'full_res/top_block01'
+  upperHlBoxFn = 'full_res/upper_highlight_box'
+
+  topBlockPos   = (0,0)
+  upperHlBoxPos = (0,0)
+
+  topBlockA    = None #pgzero actors
+  upperHlBoxA  = None
 
   arrayDim = [8, 8]
 
@@ -18,12 +24,14 @@ class posterBrowser:
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-    self.buildActors()
+    self.constructActors()
 
   ######################## constructActors ######################## 
 
   def constructActors(self):
-
+    self.topBlockA   = Actor(self.topBlockFn,  cpos = self.topBlockPos)
+    self.upperHlBoxA = Actor(self.upperHlBoxA, cpos = self.upperHlBoxPos)
+     
   ######################## draw ######################## 
 
   def draw(self):
