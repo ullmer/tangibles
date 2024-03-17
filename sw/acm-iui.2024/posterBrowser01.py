@@ -37,6 +37,14 @@ class posterBrowser:
 
     self.constructActors()
 
+  ######################## calcSelectedPoster ######################## 
+
+  def calcSelectedPoster(self): 
+    rx, ry = self.upperHlBoxRelPos
+    mx, my = self.upperHlBoxRelMaxPos
+    result = rx + ry * mx
+    return result
+
   ######################## constructActors ######################## 
 
   def constructActors(self):
@@ -88,6 +96,8 @@ class posterBrowser:
     if key == keys.LEFT:  self.shiftUpperCursor(-1,  0)
     if key == keys.UP:    self.shiftUpperCursor( 0,  1)
     if key == keys.DOWN:  self.shiftUpperCursor( 0, -1)
+    selPosterNum = self.calcSelectedPoster()
+    print("selected poster number:", selPosterNum)
 
 ######################## main ######################## 
  
