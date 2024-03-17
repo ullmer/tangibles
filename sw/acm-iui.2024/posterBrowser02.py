@@ -81,7 +81,7 @@ class posterBrowser:
     x, y    = emc.addr2coord(control)
     if y == 13: y=0 # hack around bug
 
-    print("pb2 mbcb XY:", x, y)
+    if self.verbose: print("pb2 mbcb XY:", x, y)
 
     #r, g, b = [63, 63, 63]
     #emc.setLaunchpadXYColor(x, y, r, g, b)
@@ -94,6 +94,14 @@ class posterBrowser:
     else:
       self.pmc.highlightDict[x][y] = True
       self.pmc.highlightButton(x,y)
+
+    if y==0: 
+      # couldn't get Conda to install Python 3.10 on Win device, so reverting to if/elif
+      #match x: # https://www.freecodecamp.org/news/python-switch-statement-switch-case-example/ 
+      if   x==0: self.shiftCursor( 0, -1); print("up")
+      elif x==1: self.shiftCursor( 0,  1); print("down")
+      elif x==2: self.shiftCursor(-1,  0); print("left")
+      elif x==3: self.shiftCursor( 1,  0); print("right")
 
   ######################## calcSelectedPoster ######################## 
 
