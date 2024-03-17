@@ -17,27 +17,16 @@ class posterMidiController:
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-  #### callback function ####
+    if emc is not None: emc.registerExternalCB(self.buttonCB)
+
+  ######################## button callback ######################## 
+
+  def buttonCB(self, emc, control, arg):
+    x, y    = emc.addr2coord(control)
+    r, g, b = [63, 63, 63]
+    emc.setLaunchpadXYColor(x, y, r, g, b)
   
-  def painterCB(emc, control, arg):
-    if control[0] == 'm': #margin button
-      whichMarginKey = control[1]
-  
-      if emc.isRightMargin(whichMarginKey):
-        color = emc.getRightMarginColor(whichMarginKey)
-        emc.setActiveColor(color)
-        emc.topMarginFadedColor(color)
-  
-      if emc.isTopMargin(whichMarginKey):
-        color = emc.getTopMarginColor(whichMarginKey)
-        emc.setActiveColor(color)
-        
-    else: 
-      x, y    = emc.addr2coord(control)
-      r, g, b = emc.getActiveColor()
-      emc.setLaunchpadXYColor(x, y, r, g, b)
-  
-  #### labelLaunchpad####
+  ######################## labelLaunchpad ######################## 
   
   def labelLaunchpad(emc):
   
@@ -71,7 +60,6 @@ pmc = posterMidiController(emc=emc)
 
 labelLaunchpad(emc)
 
-emc.registerExternalCB(painterCB)
 
 while True:
   emc.pollMidi()
