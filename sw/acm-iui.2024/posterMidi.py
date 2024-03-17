@@ -79,6 +79,8 @@ class posterMidiController:
 
   def buttonCB(self, emc, control, arg):
     x, y    = emc.addr2coord(control)
+    if y == 13: y=0 # hack around bug
+    print("XY:", x, y)
 
     #r, g, b = [63, 63, 63]
     #emc.setLaunchpadXYColor(x, y, r, g, b)
