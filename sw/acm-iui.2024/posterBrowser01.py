@@ -2,10 +2,11 @@
 # Brygg Ullmer, Clemson University
 # Begun 2024-03-17
 
-WIDTH  = 2160
-HEIGHT = 2160
-
 import moveWinHome #hack to move window to 0,0 on windows, avoiding redraw error
+
+WIDTH  = 2160
+HEIGHT = 3660
+
 import pygame
 
 class posterBrowser:
@@ -19,6 +20,7 @@ class posterBrowser:
   hlBoxDiffPos        = (266, 183)
   animDur             = .3
   animTween           = 'accel_decel'
+  removeTitle         = True
 
   numPosters          = 34
   posterFnPrefix      = 'posters.0315a/screen_res/iui24_'
@@ -75,12 +77,13 @@ class posterBrowser:
 
   def removeTitlebar(self):
     self.scr = pygame.display.set_mode((WIDTH, HEIGHT), pygame.NOFRAME)
+    pygame.display.toggle_fullscreen()
     self.firstDraw = False
      
   ######################## draw ######################## 
 
   def draw(self):
-    if self.firstDraw: self.removeTitlebar()
+    if self.firstDraw and self.removeTitle: self.removeTitlebar()
     for actor in self.actors: actor.draw()
 
   ###################### shiftUpperCursor ######################

@@ -12,11 +12,14 @@ if platform.system() == "Windows":
   hwnd = pygame.display.get_wm_info()['window']
   windll.user32.MoveWindow(hwnd, 0, 0, WIDTH, HEIGHT, False)
 else:
-  #os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (0,0)
-  #screen = pygame.display.set_mode((100,100))
+  os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (0,0)
+  screen = pygame.display.set_mode((100,100))
 
-  w, h = pygame.display.get_surface().get_size()
-  os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (0, 0)
-  os.environ['SDL_VIDEO_CENTERED'] = '1'
+  #w, h = pygame.display.get_surface().get_size()
+  #os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (0, 0)
+  #os.environ['SDL_VIDEO_CENTERED'] = '1'
+
+  #print(dir(pygame.display))
+  #pygame.display.set_window_pos((0, 0))
 
 ### end ###
