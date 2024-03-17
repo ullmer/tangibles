@@ -48,6 +48,7 @@ class enoMidiController:
 
   colorDivisors = [63, 40, 30, 20, 8, 5, 2, 1]
   activeColor   = [63, 63, 63]
+  fadeColorFactor = 4
 
   topMarginColors   = None
   rightMarginColors = None
@@ -72,6 +73,11 @@ class enoMidiController:
   def getActiveColor(self):
     return self.activeColor 
 
+  def getFadedColor(self):
+    newcolor = []
+    for component in self.activeColor: newcolor.append(component/self.fadeColorFactor)
+    return newcolor
+    
   ############# is active device #############
 
   def isActiveDevice(self, deviceName): 
