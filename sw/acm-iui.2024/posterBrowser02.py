@@ -8,8 +8,8 @@ WIDTH  = 2160
 HEIGHT = 3660
 
 import pygame
-from posterMidi           import *
-from enodiaMidiController import *
+from posterMidi        import *
+from enoMidiController import *
 
 class posterBrowser:
   topBlockFn   = 'full_res/top_block01'
@@ -46,6 +46,7 @@ class posterBrowser:
 
   actors   = None
   scr      = None
+  verbose  = True
 
   ######################## constructor ######################## 
 
@@ -65,11 +66,14 @@ class posterBrowser:
   ######################## launchMidiController ######################## 
 
   def launchMidiController(self): 
+    if self.verbose: print("launchMidiController called")
     self.emc = enoMidiController('nov_launchpad_x') #'nov_launchpad_mk2'
+    self.emc.clearLights()
+
     self.pmc = posterMidiController(emc=self.emc, useDefaultCb=False)
     self.emc.registerExternalCB(self.midiButtonCB)
 
-    self.emc.clearLights()
+    if self.verbose: print("launchMidiController completed")
 
   ######################## button callback ########################
 
@@ -82,14 +86,14 @@ class posterBrowser:
     #r, g, b = [63, 63, 63]
     #emc.setLaunchpadXYColor(x, y, r, g, b)
 
-    buttonIsHighlighted = self.highlightDict[x][y]
+    buttonIsHighlighted = self.pmc.highlightDict[x][y]
 
     if buttonIsHighlighted:
-      self.highlightDict[x][y] = False
-      self.normalLightButton(x,y)
+      self.pmc.highlightDict[x][y] = False
+      self.pmc.normalLightButton(x,y)
     else:
-      self.highlightDict[x][y] = True
-      self.highlightButton(x,y)
+      self.pmc.highlightDict[x][y] = True
+      self.pmc.highlightButton(x,y)
 
   ######################## calcSelectedPoster ######################## 
 
