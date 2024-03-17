@@ -29,8 +29,10 @@ class posterBrowser:
   ######################## constructActors ######################## 
 
   def constructActors(self):
-    self.topBlockA   = Actor(self.topBlockFn,  cpos = self.topBlockPos)
-    self.upperHlBoxA = Actor(self.upperHlBoxA, cpos = self.upperHlBoxPos)
+    self.topBlockA   = Actor(self.topBlockFn,   pos = self.topBlockPos)
+    self.upperHlBoxA = Actor(self.upperHlBoxFn, pos = self.upperHlBoxPos)
+
+    self.actors = [self.topBlockA, self.upperHlBoxA]
      
   ######################## draw ######################## 
 
