@@ -61,13 +61,17 @@ class posterBrowser:
     uhbrp  = self.upperHlBoxRelPos
     uhbrmp = self.upperHlBoxRelMaxPos 
 
-    if   dx + uhbrp[0] < 0:         uhbrp[0] = 0
-    elif dx + uhbrp[0] > uhbrmp[0]: uhbrp[0] = uhbrmp[0]
-    else:                           uhbrp[0] += dx
+    rx, ry = uhbrp
 
-    if   dy + uhbrp[1] < 0:         uhbrp[1] = 0
-    elif dy + uhbrp[1] > uhbrmp[1]: uhbrp[1] = uhbrmp[1]
-    else:                           uhbrp[1] += dy
+    if   dx + uhbrp[0] < 0:         rx = 0
+    elif dx + uhbrp[0] > uhbrmp[0]: rx = uhbrmp[0]
+    else:                           rx += dx
+
+    if   dy + uhbrp[1] < 0:         ry = 0
+    elif dy + uhbrp[1] > uhbrmp[1]: ry = uhbrmp[1]
+    else:                           ry += dy
+
+    uhbrp = (rx, ry)
 
     x = self.upperHlBoxBasePos[0] + uhbrp[0] * self.hlBoxDiffPos[0]
     y = self.upperHlBoxBasePos[1] + uhbrp[1] * self.hlBoxDiffPos[1]
