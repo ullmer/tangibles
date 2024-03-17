@@ -17,7 +17,9 @@ class posterMidiController:
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-    if emc is not None: emc.registerExternalCB(self.buttonCB)
+    if self.emc is not None: #emc should be passed as an argument
+      self.labelLaunchpad(self.emc)
+      self.emc.registerExternalCB(self.buttonCB)
 
   ######################## button callback ######################## 
 
@@ -50,16 +52,13 @@ class posterMidiController:
       for i in [0, 2, 4, 6]: emc.setLaunchpadXYColor(i, j+6, 0, 0, 8)
       for i in [1, 3, 5, 7]: emc.setLaunchpadXYColor(i, j+6, 8, 8, 8)
   
-  #### main ####
+#### main ####
   
 emc = enoMidiController('nov_launchpad_x')
 #emc = enoMidiController('nov_launchpad_mk2')
 emc.clearLights()
 
 pmc = posterMidiController(emc=emc)
-
-labelLaunchpad(emc)
-
 
 while True:
   emc.pollMidi()
