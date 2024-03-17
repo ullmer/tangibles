@@ -8,6 +8,7 @@ WIDTH  = 2160
 HEIGHT = 3660
 
 import pygame
+from posterMidi import *
 
 class posterBrowser:
   topBlockFn   = 'full_res/top_block01'
@@ -142,5 +143,15 @@ def draw():
   pb.draw()
 
 def on_key_down(key): pb.on_key_down(key)
+
+emc = enoMidiController('nov_launchpad_x')
+#emc = enoMidiController('nov_launchpad_mk2')
+emc.clearLights()
+
+pmc = posterMidiController(emc=emc)
+
+while True:
+  emc.pollMidi()
+  time.wait(50)
 
 ### end ###
