@@ -35,10 +35,18 @@ def labelLaunchpad(emc):
   #  for i in [0, 2, 4, 6]: emc.setLaunchpadXYColor(i, j, 63, 63, 0)
 
   for j in range(4):
-    for i in [0, 4]: emc.setLaunchpadXYColor(i, j, 8,   8, 8)
-    for i in [1, 5]: emc.setLaunchpadXYColor(i, j, 0,  12, 0)
-    for i in [2, 6]: emc.setLaunchpadXYColor(i, j, 10, 10, 0)
-    for i in [3, 7]: emc.setLaunchpadXYColor(i, j, 15,  5, 0)
+    for i in [0, 4]: emc.setLaunchpadXYColor(i, j+1, 8,   8, 8)
+    for i in [1, 5]: emc.setLaunchpadXYColor(i, j+1, 0,   8, 2)
+    for i in [2, 6]: emc.setLaunchpadXYColor(i, j+1, 10, 10, 0)
+    for i in [3, 7]: emc.setLaunchpadXYColor(i, j+1, 15,  5, 0)
+  emc.setLaunchpadXYColor(0, 5, 8, 8, 8)
+  emc.setLaunchpadXYColor(1, 5, 0, 8, 2)
+
+  for i in [2, 7]: emc.setLaunchpadXYColor(i, 5, 4, 4, 4)
+  emc.setLaunchpadXYColor(3, 5,  0, 12,  0) #na
+  emc.setLaunchpadXYColor(4, 5,  0,  0, 12) #eu
+  emc.setLaunchpadXYColor(5, 5, 14,  0,  0) #as
+  emc.setLaunchpadXYColor(6, 5, 14, 14,  0) #me
 
 #### main ####
 
