@@ -8,7 +8,8 @@ WIDTH  = 2160
 HEIGHT = 3660
 
 import pygame
-from posterMidi import *
+from posterMidi           import *
+from enodiaMidiController import *
 
 class posterBrowser:
   topBlockFn   = 'full_res/top_block01'
@@ -25,6 +26,8 @@ class posterBrowser:
   removeTitle         = True
 
   useMidiController   = True
+  emc                 = None #enodia midi  controller handle
+  pmc                 = None #enodia poster midi controller handle
 
   numPosters          = 34
   posterFnPrefix      = 'posters.0315a/screen_res/iui24_'
@@ -62,13 +65,10 @@ class posterBrowser:
   ######################## launchMidiController ######################## 
 
   def launchMidiController(self): 
-
-emc  = enoMidiController('nov_launchpad_x')
-#emc = enoMidiController('nov_launchpad_mk2')
-emc.clearLights()
-
-pmc = posterMidiController(emc=emc)
-
+    self.emc  = enoMidiController('nov_launchpad_x')
+    #emc = enoMidiController('nov_launchpad_mk2')
+    self.emc.clearLights()
+    self.pmc = posterMidiController(emc=emc)
 
   ######################## calcSelectedPoster ######################## 
 
