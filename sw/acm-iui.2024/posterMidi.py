@@ -12,6 +12,8 @@ from functools   import partial
 class posterMidiController:
   emc                 = None #enodia midi controller handle
   baseColorDict       = None
+  highlightDict       = None
+
   dimensions          = [9, 9]
   highlightMultiplier = 6 
 
@@ -20,8 +22,13 @@ class posterMidiController:
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-    self.baseColorDict = {}
-    for i in range(self.dimensions[0]): self.baseColorDict[i] = {} 
+    self.baseColorDict = {}; self.highlightDict = {}
+
+    for i in range(self.dimensions[0]): 
+      self.baseColorDict[i] = {} 
+      self.highlightDict[i] = {} 
+      for j in range(self.dimensions[1]): self.highlightDict[i][j] = False
+      
 
     if self.emc is not None: #emc should be passed as an argument
       self.labelLaunchpad(self.emc)
@@ -63,6 +70,12 @@ class posterMidiController:
     r,g,b = hlcol
     self.emc.setLaunchpadXYColor(x,y,r,g,b)
 
+  ######################## highlight button ######################## 
+
+  def normalLightButton(self, x, y):
+    r,g,b = self.getBaseColor(x, y)
+    self.emc.setLaunchpadXYColor(x,y,r,g,b)
+
   ######################## button callback ######################## 
 
   def buttonCB(self, emc, control, arg):
@@ -71,8 +84,14 @@ class posterMidiController:
     #r, g, b = [63, 63, 63]
     #emc.setLaunchpadXYColor(x, y, r, g, b)
 
-    self.highlightButton(x,y)
-  
+    isButtonHighlighted = self.highlightDict[x,y]
+    if isButtonHighlighted: 
+      self.highlightDict[x,y] = False
+      self.normalLightButton(x,y)
+    else:
+      self.highlightDict[x,y] = True
+      self.highlightButton(x,y)
+
   ######################## labelLaunchpad ######################## 
   
   def labelLaunchpad(self, emc):
