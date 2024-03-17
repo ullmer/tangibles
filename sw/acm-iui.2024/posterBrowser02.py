@@ -65,10 +65,9 @@ class posterBrowser:
   ######################## launchMidiController ######################## 
 
   def launchMidiController(self): 
-    self.emc  = enoMidiController('nov_launchpad_x')
-    #emc = enoMidiController('nov_launchpad_mk2')
+    self.emc = enoMidiController('nov_launchpad_x') #'nov_launchpad_mk2'
+    self.pmc = posterMidiController(emc=self.emc)
     self.emc.clearLights()
-    self.pmc = posterMidiController(emc=emc)
 
   ######################## calcSelectedPoster ######################## 
 
