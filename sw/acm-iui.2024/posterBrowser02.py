@@ -15,11 +15,13 @@ class posterBrowser:
   topBlockFn   = 'full_res/top_block01'
   upperHlBoxFn = 'full_res/upper_highlight_box'
 
-  topBlockPos         = (0, 0)
-  upperHlBoxBasePos   = (13,218)
-  upperHlBoxRelPos    = (0, 0)
-  upperHlBoxRelMaxPos = (7, 7)
-  hlBoxDiffPos        = (266, 183)
+  topBlockPos          = (0, 0)
+  upperHlBoxBasePos    = (13,218)
+  upperHlBoxRelPos     = (0, 0)
+  upperHlBoxRelMaxPos  = (7, 7)
+  hlBoxDiffPos         = (266, 183)
+  lastHighlightedCoord = None
+
   posterFullPos       = (0,  1210)
   animDur             = .3
   animTween           = 'accel_decel'
@@ -81,19 +83,20 @@ class posterBrowser:
     x, y    = emc.addr2coord(control)
     if y == 13: y=0 # hack around bug
 
+    if self.lastHighlightedCoord is not None and y>0: #repeat buttons allowed for controllers
+      lx, ly = self.lastHighlightedCoord
+      if x==lx and y==ly: print("midiButtonCB: ignoring"); return
+      self.pmc.normalLightButton(lx,ly)
+      self.pmc.highlightDict[lx][ly] = False
+
     if self.verbose: print("pb2 mbcb XY:", x, y)
 
     #r, g, b = [63, 63, 63]
     #emc.setLaunchpadXYColor(x, y, r, g, b)
 
-    buttonIsHighlighted = self.pmc.highlightDict[x][y]
-
-    if buttonIsHighlighted:
-      self.pmc.highlightDict[x][y] = False
-      self.pmc.normalLightButton(x,y)
-    else:
-      self.pmc.highlightDict[x][y] = True
-      self.pmc.highlightButton(x,y)
+    self.pmc.highlightDict[x][y] = True
+    self.pmc.highlightButton(x,y)
+    self.lastHighlightedCoord = (x,y)
 
     if y==0: 
       # couldn't get Conda to install Python 3.10 on Win device, so reverting to if/elif
