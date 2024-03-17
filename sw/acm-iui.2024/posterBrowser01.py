@@ -16,7 +16,9 @@ class posterBrowser:
   upperHlBoxBasePos   = (13,218)
   upperHlBoxRelPos    = (0, 0)
   upperHlBoxRelMaxPos = (7, 7)
-  hlBoxDiffPos        = (280, 196)
+  hlBoxDiffPos        = (266, 196)
+  animDur             = .3
+  animTween           = 'accel_decel'
 
   topBlockA    = None #pgzero actors
   upperHlBoxA  = None
@@ -71,12 +73,13 @@ class posterBrowser:
     elif dy + uhbrp[1] > uhbrmp[1]: ry = uhbrmp[1]
     else:                           ry += dy
 
-    uhbrp = (rx, ry)
+    self.upperHlBoxRelPos = (rx, ry)
 
     x = self.upperHlBoxBasePos[0] + uhbrp[0] * self.hlBoxDiffPos[0]
     y = self.upperHlBoxBasePos[1] + uhbrp[1] * self.hlBoxDiffPos[1]
 
-    self.upperHlBoxA.topleft = (x, y)
+    #self.upperHlBoxA.topleft = (x, y)
+    animate(self.upperHlBoxA, topleft=(x,y), duration=self.animDur, tween=self.animTween)
 
   ###################### on key down ######################
 
