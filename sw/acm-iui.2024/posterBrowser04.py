@@ -9,6 +9,8 @@ HEIGHT = 3660
 
 import time as pytime #since pgzero maps pygame time to "time"
 import pygame
+import yaml
+
 from posterMidi        import *
 from enoMidiController import *
 
@@ -17,6 +19,10 @@ class posterBrowser:
   upperHlBoxFn = 'full_res/upper_highlight_box'
   brHlBoxFn    = 'bottom_rightv08g_cursor'
   brBlockFn    = 'bottom_rightv08g'
+  ypfn         = 'posters-iui24.yaml'
+  ygfn         = 'geos.yaml'
+  ypd          = None
+  ygd          = None
 
   topBlockPos          = (0, 0)
   upperHlBoxBasePos    = (13,218)
@@ -86,8 +92,18 @@ class posterBrowser:
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
     self.constructActors()
+    self.loadYaml()
 
     if self.useMidiController: self.launchMidiController()
+
+  ######################## load yaml ######################## 
+
+  def loadYaml(self): 
+    ypf = open(self.ypfn, 'rt') #poster metainfo
+    ygf = open(self.ygfn, 'rt') #geographical metainfo
+    
+    self.ypd = yaml.safe_load(ypf)
+    self.ygd = yaml.safe_load(ygf)
 
   ######################## poll ######################## 
 
