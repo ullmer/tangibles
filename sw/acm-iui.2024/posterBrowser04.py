@@ -20,7 +20,7 @@ class posterBrowser:
   upperHlBoxFn = 'full_res/upper_highlight_box'
   brHlBoxFn    = 'bottom_rightv08g_cursor'
   brBlockFn    = 'bottom_rightv08g'
-  gridIconsFn = 'images/full_res/gridMap03k3/%02i'
+  gridIconsFn  = 'full_res/gridmap03k3/%02i'
   ypfn         = 'posters-iui24.yaml'
   ygfn         = 'geos.yaml'
   ypd          = None
@@ -45,6 +45,7 @@ class posterBrowser:
   #metaBlockNormPos   = (   0, 2508)
   titlebarWidthHeight = (2160,   70)
   titlebarColor       = (60, 60, 60)
+  titleIconOffset     = (10, 10)
 
   brBlockNormPos      = (1214, 100) #for debugging on laptop
   #brBlockNormPos     = (1214, 2538)
@@ -211,8 +212,11 @@ class posterBrowser:
       if whichPoster in self.posterIconActors: return self.posterIconActors[whichPoster]
 
       iconFn = self.gridIconsFn % whichPoster
+      x1, y1 = self.metaBlockNormPos
+      dx, dy = self.titleIconOffset
+      x2, y2 = x1+dx, y1+dy
 
-      a = Actor(iconFn, topleft=self.metaBlockNormPos)
+      a = Actor(iconFn, topleft=(x2, y2))
       self.posterIconActors[whichPoster] = a
       return a
     except:
@@ -282,7 +286,7 @@ class posterBrowser:
       title = pmeta['title']
 
       pia = self.getPosterIconActor(pid)
-      pia.draw()
+      if pia is not None: pia.draw()
 
     except:
       print("posterBrowser drawPosterMetainfo exception for poster", pid)
