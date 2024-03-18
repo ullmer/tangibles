@@ -23,11 +23,12 @@ class posterBrowser:
   upperHlBoxBasePos    = (13,218)
   upperHlBoxRelPos     = (0, 0)
   upperHlBoxRelMaxPos  = (7, 7)
-  hlBoxDiffPos         = (266, 183)
+  upperHlBoxDiffPos    = (266, 183)
   lastHighlightedCoord = None
+  brHlBoxDiffPos       = (118, 118)
   brHlBoxBasePos       = (1212,455)
-  #brHlBoxBasePos       = (98,455)
-  #brHlBoxBasePos       = (1209, 2533)
+  #brHlBoxBasePos      = (98,455)
+  #brHlBoxBasePos      = (1209, 2533)
 
   posterNormPos       = (0,    1210)
   posterNormDim       = (2160, 1215)
@@ -190,42 +191,6 @@ class posterBrowser:
   def autoAdvancePosters(self):
     self.shiftCursorRel(1,0)
 
-  ###################### shift cursor relative ######################
-
-  def shiftCursorRel(self, dx, dy): 
-    rx, ry = self.upperHlBoxRelPos
-    relmax = self.upperHlBoxRelMaxPos 
-
-    if   dy + ry < 0:         ry = relmax[1]
-    elif dy + ry > relmax[1]: ry = 0
-    else:                     ry += dy
-
-    if   dx + rx < 0:         rx = relmax[0]; ry -= 1
-    elif dx + rx > relmax[0]: rx = 0; ry += 1
-    else:                     rx += dx
-
-    if ry < 0: rx, ry = 1, 4
-
-    self.upperHlBoxRelPos = (rx, ry)
-
-    x = self.upperHlBoxBasePos[0] + rx * self.hlBoxDiffPos[0]
-    y = self.upperHlBoxBasePos[1] + ry * self.hlBoxDiffPos[1]
-
-    animate(self.upperHlBoxA, topleft=(x,y), duration=self.cursorAnimDur, tween=self.animTween)
-
-    if self.lastHighlightedCoord is not None:
-      lx, ly = self.lastHighlightedCoord
-      self.pmc.normalLightButton(lx,ly)
-      self.pmc.highlightDict[lx][ly] = False
-      dx, dy = lx-rx, ly-(ry+1)
-    else: dx, dy = None, None
-
-    self.lastHighlightedCoord=(rx, ry+1)
-    self.pmc.highlightButton(  rx, ry+1)
-    self.pmc.highlightDict[rx][ry] = True
-
-    self.displayPoster(dx, dy)
-
   ###################### animate last poster out ######################
 
   def animLastPosterOut(self, dx=None, dy=None):  
@@ -280,14 +245,52 @@ class posterBrowser:
     self.animLastPosterOut( dx, dy)
     self.animActivePosterIn(dx, dy)
 
+  ###################### shift cursor relative ######################
+
+  def shiftCursorRel(self, dx, dy): 
+    rx, ry = self.upperHlBoxRelPos
+    relmax = self.upperHlBoxRelMaxPos 
+
+    if   dy + ry < 0:         ry = relmax[1]
+    elif dy + ry > relmax[1]: ry = 0
+    else:                     ry += dy
+
+    if   dx + rx < 0:         rx = relmax[0]; ry -= 1
+    elif dx + rx > relmax[0]: rx = 0; ry += 1
+    else:                     rx += dx
+
+    if ry < 0: rx, ry = 1, 4
+
+    self.upperHlBoxRelPos = (rx, ry)
+
+    x = self.upperHlBoxBasePos[0] + rx * self.upperHlBoxDiffPos[0]
+    y = self.upperHlBoxBasePos[1] + ry * self.upperHlBoxDiffPos[1]
+
+    animate(self.upperHlBoxA, topleft=(x,y), duration=self.cursorAnimDur, tween=self.animTween)
+
+    if self.lastHighlightedCoord is not None:
+      lx, ly = self.lastHighlightedCoord
+      self.pmc.normalLightButton(lx,ly)
+      self.pmc.highlightDict[lx][ly] = False
+      dx, dy = lx-rx, ly-(ry+1)
+    else: dx, dy = None, None
+
+    self.lastHighlightedCoord=(rx, ry+1)
+    self.pmc.highlightButton(  rx, ry+1)
+    self.pmc.highlightDict[rx][ry] = True
+
+    self.displayPoster(dx, dy)
+
+#  brHlBoxDiffPos       = (118, 118)
+
   ###################### shift cursor absolute ######################
 
   def shiftCursorAbs(self, rx, ry): 
 
     self.upperHlBoxRelPos = (rx, ry)
 
-    x = self.upperHlBoxBasePos[0] + rx * self.hlBoxDiffPos[0]
-    y = self.upperHlBoxBasePos[1] + ry * self.hlBoxDiffPos[1]
+    x = self.upperHlBoxBasePos[0] + rx * self.upperHlBoxDiffPos[0]
+    y = self.upperHlBoxBasePos[1] + ry * self.upperHlBoxDiffPos[1]
 
     animate(self.upperHlBoxA, topleft=(x,y), duration=self.cursorAnimDur, tween=self.animTween)
 
