@@ -56,6 +56,7 @@ class posterBrowser:
   authorsFont         = "tcm"
   authorsFontSize     = 50
   authorsFontColor    = (200, 200, 200)
+  authorsBlockWidth   = 800
 
   metaBlockOffset     = (0, 95)
   metaBlockWH         = (1200, 1200)
@@ -310,18 +311,19 @@ class posterBrowser:
       pmeta    = self.getPosterMetainfo(pid) 
       #title   = 'wunderbar'*30
       title    = pmeta['title']
-      authors  = pmeta['authors']
-      authors = 'wunderbar'*30
+      authors  = ', '.join(pmeta['authors'])
+      #authors  = 'wunderbar'*30
 
       dx, dy   = self.titleTextOffset   #draw title
       tx3, ty3 = tx1+dx, ty1+dy
       tf, tfs, tfc = self.titleFont, self.titleFontSize, self.titleFontColor
       screen.draw.text(title, (tx3, ty3), color=tfc, fontname=tf, fontsize=tfs) 
 
-      dx, dy   = self.authorsTextOffset #draw authors
-      tx4, ty4 = tx1+dx, ty1+dy
+      dx, dy       = self.authorsTextOffset #draw authors
+      tx4, ty4     = tx1+dx, ty1+dy
       tf, tfs, tfc = self.authorsFont, self.authorsFontSize, self.authorsFontColor
-      screen.draw.text(authors, (tx4, ty4), color=tfc, fontname=tf, fontsize=tfs) 
+      aw           = self.authorsBlockWidth   
+      screen.draw.text(authors, (tx4, ty4), color=tfc, fontname=tf, fontsize=tfs, width=aw) 
       
     except:
       print("posterBrowser drawPosterMetainfo exception for poster", pid)
