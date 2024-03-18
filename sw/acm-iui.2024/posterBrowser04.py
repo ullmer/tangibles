@@ -263,10 +263,15 @@ class posterBrowser:
 
     self.upperHlBoxRelPos = (rx, ry)
 
-    x = self.upperHlBoxBasePos[0] + rx * self.upperHlBoxDiffPos[0]
-    y = self.upperHlBoxBasePos[1] + ry * self.upperHlBoxDiffPos[1]
+    x1 = self.upperHlBoxBasePos[0] + rx * self.upperHlBoxDiffPos[0]
+    y1 = self.upperHlBoxBasePos[1] + ry * self.upperHlBoxDiffPos[1]
 
-    animate(self.upperHlBoxA, topleft=(x,y), duration=self.cursorAnimDur, tween=self.animTween)
+    animate(self.upperHlBoxA, topleft=(x1,y1), duration=self.cursorAnimDur, tween=self.animTween)
+
+    x2 = self.brHlBoxBasePos[0] + rx * self.brHlBoxDiffPos[0]
+    y2 = self.brHlBoxBasePos[1] + ry * self.brHlBoxDiffPos[1]
+
+    animate(self.brHlBoxA, topleft=(x1,y1), duration=self.cursorAnimDur, tween=self.animTween)
 
     if self.lastHighlightedCoord is not None:
       lx, ly = self.lastHighlightedCoord
@@ -281,7 +286,6 @@ class posterBrowser:
 
     self.displayPoster(dx, dy)
 
-#  brHlBoxDiffPos       = (118, 118)
 
   ###################### shift cursor absolute ######################
 
@@ -289,10 +293,15 @@ class posterBrowser:
 
     self.upperHlBoxRelPos = (rx, ry)
 
-    x = self.upperHlBoxBasePos[0] + rx * self.upperHlBoxDiffPos[0]
-    y = self.upperHlBoxBasePos[1] + ry * self.upperHlBoxDiffPos[1]
+    x1 = self.upperHlBoxBasePos[0] + rx * self.upperHlBoxDiffPos[0]
+    y1 = self.upperHlBoxBasePos[1] + ry * self.upperHlBoxDiffPos[1]
 
-    animate(self.upperHlBoxA, topleft=(x,y), duration=self.cursorAnimDur, tween=self.animTween)
+    animate(self.upperHlBoxA, topleft=(x1,y1), duration=self.cursorAnimDur, tween=self.animTween)
+
+    x2 = self.brHlBoxBasePos[0] + rx * self.brHlBoxDiffPos[0]
+    y2 = self.brHlBoxBasePos[1] + ry * self.brHlBoxDiffPos[1]
+
+    animate(self.brHlBoxA, topleft=(x1,y1), duration=self.cursorAnimDur, tween=self.animTween)
 
     if self.lastHighlightedCoord is not None:
       lx, ly = self.lastHighlightedCoord
