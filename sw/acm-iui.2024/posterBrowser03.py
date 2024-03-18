@@ -15,7 +15,7 @@ from enoMidiController import *
 class posterBrowser:
   topBlockFn   = 'full_res/top_block01'
   upperHlBoxFn = 'full_res/upper_highlight_box'
-  brHlBoxFn    = 'full_res/
+  brHlBoxFn    = 'bottom_rightv08g_cursor'
 
   brBlockFn    = 'bottom_rightv08g'
 
@@ -25,14 +25,16 @@ class posterBrowser:
   upperHlBoxRelMaxPos  = (7, 7)
   hlBoxDiffPos         = (266, 183)
   lastHighlightedCoord = None
-  brHlBoxBasePos       = (,)
+  brHlBoxBasePos       = (1212,455)
+  #brHlBoxBasePos       = (98,455)
+  #brHlBoxBasePos       = (1209, 2533)
 
   posterNormPos       = (0,    1210)
   posterNormDim       = (2160, 1215)
-  brBlockNormPos      = (100, 100) #for debugging on laptop
+  brBlockNormPos      = (1214, 100) #for debugging on laptop
   #brBlockNormPos     = (1214, 2538)
   brBlockNormDim      = ( 946, 1302)
-  cursorAnimDur       = .3
+  cursorAnimDur       = .5
   posterAnimDur       = .75
   #posterAnimDur      = 3.
   animTween           = 'accel_decel'
