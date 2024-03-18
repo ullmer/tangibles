@@ -4,6 +4,12 @@ meta:
   dirFullres: posters.0315a/
   fnPat: iui24_%2i.png
 
+posterIcons: ["00", "10", "20", "30", "40", "50", "60", "70", 
+              "01", "11", "21", "31", "41", "51", "61", "71",  
+              "02", "12", "22", "32", "42", "52", "62", "72",  
+              "03", "13", "23", "33", "43", "53", "63", "73",  
+              "04", "14"] #naming sequence relates to way visual grid auto-resolved
+
 posters:
   1: 
     title:   "Human-AI Collaboration in a Student Discussion Forum"

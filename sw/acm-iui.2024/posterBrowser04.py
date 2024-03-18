@@ -20,7 +20,7 @@ class posterBrowser:
   upperHlBoxFn = 'full_res/upper_highlight_box'
   brHlBoxFn    = 'bottom_rightv08g_cursor'
   brBlockFn    = 'bottom_rightv08g'
-  gridIconsFn  = 'full_res/gridmap03k3/%02i'
+  gridIconsFn  = 'full_res/gridmap03k3/%s'
   ypfn         = 'posters-iui24.yaml'
   ygfn         = 'geos.yaml'
   ypd          = None
@@ -215,7 +215,8 @@ class posterBrowser:
       if self.posterIconActors is None:        self.posterIconActors = {}
       if whichPoster in self.posterIconActors: return self.posterIconActors[whichPoster]
 
-      iconFn = self.gridIconsFn % whichPoster
+      pifp   = self.ypd['posterIcons']
+      iconFn = self.gridIconsFn % pifp[whichPoster-1]
       x1, y1 = self.metaBlockNormPos
       dx, dy = self.titleIconOffset
       x2, y2 = x1+dx, y1+dy
