@@ -46,7 +46,7 @@ class posterBrowser:
   titlebarWidthHeight = (2160,   70)
   titlebarColor       = (60, 60, 60)
   titleIconOffset     = (10, 10)
-  titleTextOffset     = (350, 10)
+  titleTextOffset     = (375, 10)
   titleFont           = "tcm"
   titleFontSize       = 60
   titleFontColor      = (250, 250, 250)
@@ -290,11 +290,12 @@ class posterBrowser:
       if pia is not None: pia.draw()
 
       pmeta    = self.getPosterMetainfo(pid) 
+      #title   = 'wunderbar'*30
       title    = pmeta['title']
+      authors  = pmeta['authors']
+
       dx, dy   = self.titleTextOffset
       tx3, ty3 = tx1+dx, ty1+dy
-
-      title = 'wunderbar'*30
 
       tf, tfs, tfc = self.titleFont, self.titleFontSize, self.titleFontColor
       screen.draw.text(title, (tx3, ty3), color=tfc, fontname=tf, fontsize=tfs) 
