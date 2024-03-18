@@ -61,7 +61,7 @@ class posterMidiController:
   ######################## highlight button ######################## 
 
   def highlightButton(self, x, y):
-    print("hl:", x, y)
+    #print("hl:", x, y)
     col   = self.getBaseColor(x, y)
     hlcol = []
     for el in col: 
@@ -75,7 +75,7 @@ class posterMidiController:
   ######################## highlight button ######################## 
 
   def normalLightButton(self, x, y):
-    print("nl:", x, y)
+    #print("nl:", x, y)
     r,g,b = self.getBaseColor(x, y)
     self.emc.setLaunchpadXYColor(x,y,r,g,b)
 
@@ -105,10 +105,14 @@ class posterMidiController:
     for i in range(4): self.setBaseColor(i, 0, 13, 13, 13)
   
     for j in range(4):
-      for i in [0, 4]: self.setBaseColor(i, j+1, 8,   8, 8)
-      for i in [1, 5]: self.setBaseColor(i, j+1, 0,   8, 2)
-      for i in [2, 6]: self.setBaseColor(i, j+1, 10, 10, 0)
-      for i in [3, 7]: self.setBaseColor(i, j+1, 15,  5, 0)
+      #for i in [0, 4]: self.setBaseColor(i, j+1, 8,   8, 8)
+      #for i in [1, 5]: self.setBaseColor(i, j+1, 0,   8, 2)
+      #for i in [2, 6]: self.setBaseColor(i, j+1, 10, 10, 0)
+      #for i in [3, 7]: self.setBaseColor(i, j+1, 15,  5, 0)
+      for i in [0, 4]: self.setBaseColor(i, j+1, 6,   6, 6)
+      for i in [1, 5]: self.setBaseColor(i, j+1, 0,   6, 2)
+      for i in [2, 6]: self.setBaseColor(i, j+1, 8,   8, 0)
+      for i in [3, 7]: self.setBaseColor(i, j+1, 10,  3, 0)
     self.setBaseColor(0, 5, 8, 8, 8)
     self.setBaseColor(1, 5, 0, 8, 2)
   

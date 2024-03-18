@@ -85,7 +85,7 @@ class posterBrowser:
     if y == 13: y=0 # hack around bug
 
     #if self.lastHighlightedCoord is not None and y>0: #repeat buttons allowed for controllers
-    if self.lastHighlightedCoord is not None and x>0: #repeat buttons allowed for controllers
+    if self.lastHighlightedCoord is not None and x>=0: #repeat buttons allowed for controllers
       lx, ly = self.lastHighlightedCoord
       if x==lx and y==ly: print("midiButtonCB: ignoring"); return
       self.pmc.normalLightButton(lx,ly)
