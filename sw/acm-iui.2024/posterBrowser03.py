@@ -216,6 +216,21 @@ class posterBrowser:
     pa = self.getPosterActor(self.lastPoster)
     animate(pa, topleft=(destX, destY), duration=self.animDur, tween=self.animTween)
 
+  ###################### animate active poster in ######################
+
+  def animActivePosterIn(self, dx=None, dy=None):  
+    if dx is None or dy is None: return #nothing to do
+    if self.activePoster is None: return #again, nothing to do
+
+    fpx, fpy = self.posterFullPos #"full position"
+    fpw, fph = self.posterFullDim #poster width, height
+    beginX    = fpx - fpw * dx * 2
+    beginY    = fpy - fph * dy * 2
+
+    pa = self.getPosterActor(self.lastPoster)
+    pa.topleft = (beginX, beginY)
+    animate(pa, topleft=(fpx, fpy), duration=self.animDur, tween=self.animTween)
+
   ###################### is last poster still animating out ######################
  
   def lastPosterAnimatingOut(self): 
