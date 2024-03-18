@@ -80,6 +80,7 @@ class posterBrowser:
   ######################## button callback ########################
 
   def midiButtonCB(self, emc, control, arg):
+    if arg==0: return #key release
     x, y    = emc.addr2coord(control)
     if y == 13: y=0 # hack around bug
 
@@ -89,7 +90,7 @@ class posterBrowser:
       self.pmc.normalLightButton(lx,ly)
       self.pmc.highlightDict[lx][ly] = False
 
-    if self.verbose: print("pb2 mbcb XY:", x, y)
+    if self.verbose: print("pb2 mbcb XY:", x, y, arg)
 
     #r, g, b = [63, 63, 63]
     #emc.setLaunchpadXYColor(x, y, r, g, b)
@@ -157,6 +158,7 @@ class posterBrowser:
   ###################### shiftCursor ######################
 
   def shiftCursor(self, dx, dy): 
+    print("shiftCursor", dx, dy, self.upperHlBoxA.topleft)
     uhbrp  = self.upperHlBoxRelPos
     uhbrmp = self.upperHlBoxRelMaxPos 
 
@@ -170,15 +172,21 @@ class posterBrowser:
     elif dx + uhbrp[0] > uhbrmp[0]: rx = 0; ry += 1
     else:                           rx += dx
 
+    print("rx ry:", rx, ry)
+
     self.upperHlBoxRelPos = (rx, ry)
 
-    x = self.upperHlBoxBasePos[0] + uhbrp[0] * self.hlBoxDiffPos[0]
-    y = self.upperHlBoxBasePos[1] + uhbrp[1] * self.hlBoxDiffPos[1]
+    #x = self.upperHlBoxBasePos[0] + uhbrp[0] * self.hlBoxDiffPos[0]
+    #y = self.upperHlBoxBasePos[1] + uhbrp[1] * self.hlBoxDiffPos[1]
 
-    #self.upperHlBoxA.topleft = (x, y)
+    x = self.upperHlBoxA.topleft[0] + dx * self.hlBoxDiffPos[0]
+    y = self.upperHlBoxA.topleft[1] + dy * self.hlBoxDiffPos[1]
+
+    print("xx:", uhbrp[0], self.hlBoxDiffPos[0])
+
     animate(self.upperHlBoxA, topleft=(x,y), duration=self.animDur, tween=self.animTween)
 
-    upperHlBoxRelMaxPos = (7, 7)
+    print("shiftCursor -> animate called", x, y)
 
   ###################### on key down ######################
 
