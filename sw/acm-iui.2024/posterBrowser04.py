@@ -58,6 +58,11 @@ class posterBrowser:
   authorsFontColor    = (200, 200, 200)
   authorsBlockWidth   = 800
 
+  geoTextOffset       = (375, 310)
+  geoFont             = "tcm"
+  geoFontSize         = 50
+  geoFontColor        = (200, 200, 200)
+
   metaBlockOffset     = (0, 95)
   metaBlockWH         = (1200, 1200)
   metaBlockColor      = (30, 30, 30)
@@ -312,6 +317,7 @@ class posterBrowser:
       #title   = 'wunderbar'*30
       title    = pmeta['title']
       authors  = ', '.join(pmeta['authors'])
+      geos     = ', '.join(pmeta['geo'])
       #authors  = 'wunderbar'*30
 
       dx, dy   = self.titleTextOffset   #draw title
@@ -324,7 +330,12 @@ class posterBrowser:
       tf, tfs, tfc = self.authorsFont, self.authorsFontSize, self.authorsFontColor
       aw           = self.authorsBlockWidth   
       screen.draw.text(authors, (tx4, ty4), color=tfc, fontname=tf, fontsize=tfs, width=aw) 
-      
+
+      dx, dy   = self.geoTextOffset   #draw title
+      tx5, ty5 = tx1+dx, ty1+dy
+      tf, tfs, tfc = self.geoFont, self.geoFontSize, self.geoFontColor
+      screen.draw.text(geos, (tx5, ty5), color=tfc, fontname=tf, fontsize=tfs) 
+
     except:
       print("posterBrowser drawPosterMetainfo exception for poster", pid)
       traceback.print_exc()
