@@ -66,10 +66,11 @@ class posterBrowser:
   metaTextSubtitles   = ["prior author papers", "prior author keywords", "keyword-linked 2024 demos+posters"]
   metaTextFont        = "tcm"
   metaTextFontSize    = 50
-  metaTextFontColor   = (250, 250, 250)
-  mtSubtitlesWH       = (1180, 20)
+  metaTextFontColor   = (180, 180, 180)
+  mtSubtitlesWH       = (1180, 55)
   mtSubtitlesX1       = 10
   mtSubtitlesYs       = [500, 800, 1000]
+  mtSubtitleTxtOffset = (5, -2)
 
   metaBlockOffset     = (0, 95)
   metaBlockWH         = (1200, 1200)
@@ -352,10 +353,16 @@ class posterBrowser:
       ys           = self.mtSubtitlesYs
 
       for i in range(numSubtitles):
-        subtitle, y1, y2 = subtitles[i], ys[i], y1+h
-        tr = Rect((x1,y1), (x2, y2))
+        subtitle, y1 = subtitles[i], ys[i], 
+        y2 = y1+h
+        #tr = Rect((x1,y1), (x2, y2))
+        tr = Rect((x1,y1), (w, h))
         screen.draw.filled_rect(tr, tc)
         #screen.draw.text(subtitle, (tx6, ty6), color=tfc, fontname=tf, fontsize=tfs)
+        dx, dy   = self.mtSubtitleTxtOffset 
+        tx6, ty6 = x1+dx, y1+dy
+
+        screen.draw.text(subtitle, (tx6, ty6), color=tfc, fontname=tf, fontsize=tfs)
 
     except:
       print("posterBrowser drawPosterMetainfo exception for poster", pid)
