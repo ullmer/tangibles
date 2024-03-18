@@ -16,6 +16,8 @@ class posterBrowser:
   topBlockFn   = 'full_res/top_block01'
   upperHlBoxFn = 'full_res/upper_highlight_box'
 
+  brBlockFn    = 'bottom_rightv08g'
+
   topBlockPos          = (0, 0)
   upperHlBoxBasePos    = (13,218)
   upperHlBoxRelPos     = (0, 0)
@@ -23,8 +25,11 @@ class posterBrowser:
   hlBoxDiffPos         = (266, 183)
   lastHighlightedCoord = None
 
-  posterFullPos       = (0,    1210)
-  posterFullDim       = (2160, 1215)
+  posterNormPos       = (0,    1210)
+  posterNormDim       = (2160, 1215)
+  brBlockNormPos      = (100, 100) #for debugging on laptop
+  #brBlockNormPos      = (1214, 2538)
+  brBlockNormDim      = ( 946, 1302)
   cursorAnimDur       = .3
   posterAnimDur      = .75
   #posterAnimDur       = 3.
@@ -134,7 +139,7 @@ class posterBrowser:
 
     afn = '%s%02i' % (self.posterFnPrefix, whichPoster)
 
-    a   = Actor(afn, topleft=self.posterFullPos)
+    a   = Actor(afn, topleft=self.posterNormPos)
     self.posterActors[whichPoster] = a
     return a
 
@@ -213,8 +218,8 @@ class posterBrowser:
 
     self.lastPosterAnimTimeBegun = pytime.time()
 
-    fpx, fpy = self.posterFullPos #"full position"
-    fpw, fph = self.posterFullDim #poster width, height
+    fpx, fpy = self.posterNormPos #"full position"
+    fpw, fph = self.posterNormDim #poster width, height
     destX    = fpx - fpw * dx 
     destY    = fpy - fph * dy 
 
@@ -228,8 +233,8 @@ class posterBrowser:
     if dx is None or dy is None: return #nothing to do
     if self.activePoster is None: return #again, nothing to do
 
-    fpx, fpy = self.posterFullPos #"full position"
-    fpw, fph = self.posterFullDim #poster width, height
+    fpx, fpy = self.posterNormPos #"full position"
+    fpw, fph = self.posterNormDim #poster width, height
     beginX    = fpx + fpw * dx
     beginY    = fpy + fph * dy
 
