@@ -7,7 +7,7 @@ import moveWinHome #hack to move window to 0,0 on windows, avoiding redraw error
 WIDTH  = 2160
 HEIGHT = 3660
 
-import time
+import time as pytime #since pgzero maps pygame time to "time"
 import pygame
 from posterMidi        import *
 from enoMidiController import *
@@ -25,9 +25,11 @@ class posterBrowser:
 
   posterFullPos       = (0,    1210)
   posterFullDim       = (2160, 1215)
-  animDur             = .3
+  cursorAnimDur       = .3
+  posterAnimDur      = .75
+  #posterAnimDur       = 3.
   animTween           = 'accel_decel'
-  removeTitle         = True
+  requestMaximize     = True
 
   useMidiController   = True
   emc                 = None #enodia midi  controller handle
@@ -40,7 +42,9 @@ class posterBrowser:
   activePoster         = 1
   cyclePosters         = True #automatically cycle between posters
   cyclePosterFrequency = 10.  #how frequently to make the cycling
+
   cyclePosterAutolaunchDelay = 60. #after how many seconds should autolaunch begin
+  lastPosterAnimTimeBegun    = None
 
   topBlockA    = None #pgzero actors
   upperHlBoxA  = None
@@ -146,7 +150,7 @@ class posterBrowser:
 
   ######################## remove titlebar######################## 
 
-  def removeTitlebar(self):
+  def maximize(self):
     self.scr = pygame.display.set_mode((WIDTH, HEIGHT), pygame.NOFRAME)
     pygame.display.toggle_fullscreen()
     self.firstDraw = False
@@ -154,8 +158,7 @@ class posterBrowser:
   ######################## draw ######################## 
 
   def draw(self):
-    if self.firstDraw and self.removeTitle: self.removeTitlebar()
-    for actor in self.actors: actor.draw()
+    if self.firstDraw and self.requestMaximize: self.maximize()
 
     if self.lastPosterAnimatingOut(): 
       pla = self.getPosterActor(self.lastPoster)
@@ -163,6 +166,8 @@ class posterBrowser:
 
     pa = self.getPosterActor(self.activePoster)
     pa.draw()
+
+    for actor in self.actors: actor.draw()
 
   ###################### shift cursor relative ######################
 
@@ -185,7 +190,7 @@ class posterBrowser:
     x = self.upperHlBoxBasePos[0] + rx * self.hlBoxDiffPos[0]
     y = self.upperHlBoxBasePos[1] + ry * self.hlBoxDiffPos[1]
 
-    animate(self.upperHlBoxA, topleft=(x,y), duration=self.animDur, tween=self.animTween)
+    animate(self.upperHlBoxA, topleft=(x,y), duration=self.cursorAnimDur, tween=self.animTween)
 
     if self.lastHighlightedCoord is not None:
       lx, ly = self.lastHighlightedCoord
@@ -206,15 +211,16 @@ class posterBrowser:
     if dx is None or dy is None: return #nothing to do
     if self.lastPoster  is None: return #again, nothing to do
 
-    self.lastPosterAnimTimeBegun = time.time()
+    self.lastPosterAnimTimeBegun = pytime.time()
 
     fpx, fpy = self.posterFullPos #"full position"
     fpw, fph = self.posterFullDim #poster width, height
-    destX    = fpx + fpw * dx * 2
-    destY    = fpy + fph * dy * 2
+    destX    = fpx - fpw * dx 
+    destY    = fpy - fph * dy 
 
     pa = self.getPosterActor(self.lastPoster)
-    animate(pa, topleft=(destX, destY), duration=self.animDur, tween=self.animTween)
+    pa.topleft = fpx, fpy
+    animate(pa, topleft=(destX, destY), duration=self.posterAnimDur, tween=self.animTween)
 
   ###################### animate active poster in ######################
 
@@ -224,20 +230,22 @@ class posterBrowser:
 
     fpx, fpy = self.posterFullPos #"full position"
     fpw, fph = self.posterFullDim #poster width, height
-    beginX    = fpx - fpw * dx * 2
-    beginY    = fpy - fph * dy * 2
+    beginX    = fpx + fpw * dx
+    beginY    = fpy + fph * dy
 
-    pa = self.getPosterActor(self.lastPoster)
+    pa = self.getPosterActor(self.activePoster)
     pa.topleft = (beginX, beginY)
-    animate(pa, topleft=(fpx, fpy), duration=self.animDur, tween=self.animTween)
+    animate(pa, topleft=(fpx, fpy), duration=self.posterAnimDur, tween=self.animTween)
 
   ###################### is last poster still animating out ######################
  
   def lastPosterAnimatingOut(self): 
+    if self.lastPosterAnimTimeBegun is None: return False #not animating
+
     timeBegun   = self.lastPosterAnimTimeBegun 
-    currentTime = time.time()
+    currentTime = pytime.time()
     dt = currentTime - timeBegun
-    if dt < self.animDur: return True
+    if dt < self.posterAnimDur: return True
     return False
 
   ###################### display poster ######################
@@ -260,7 +268,7 @@ class posterBrowser:
     x = self.upperHlBoxBasePos[0] + rx * self.hlBoxDiffPos[0]
     y = self.upperHlBoxBasePos[1] + ry * self.hlBoxDiffPos[1]
 
-    animate(self.upperHlBoxA, topleft=(x,y), duration=self.animDur, tween=self.animTween)
+    animate(self.upperHlBoxA, topleft=(x,y), duration=self.cursorAnimDur, tween=self.animTween)
 
     if self.lastHighlightedCoord is not None:
       lx, ly = self.lastHighlightedCoord
