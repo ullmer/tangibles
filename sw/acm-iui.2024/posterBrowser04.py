@@ -24,6 +24,7 @@ class posterBrowser:
   upperHlBoxRelMaxPos  = (7, 7)
   upperHlBoxDiffPos    = (266, 183)
   lastHighlightedCoord = None
+
   brHlBoxDiffPos       = (118, 118)
   brHlBoxBasePos       = (1212,455)
   #brHlBoxBasePos      = (98,455)
@@ -31,6 +32,12 @@ class posterBrowser:
 
   posterNormPos       = (0,    1210)
   posterNormDim       = (2160, 1215)
+
+  metaBlockNormPos    = (   0,   10)
+  #metaBlockNormPos   = (   0, 2508)
+  titlebarWidthHeight = (2160,   70)
+  titlebarColor       = (60, 60, 60)
+
   brBlockNormPos      = (1214, 100) #for debugging on laptop
   #brBlockNormPos     = (1214, 2538)
   brBlockNormDim      = ( 946, 1302)
@@ -196,7 +203,17 @@ class posterBrowser:
 
   ######################## draw poster metainformation ###############
 
-  def drawPosterMetainfo(self): pass
+  def drawPosterMetainfo(self): 
+    basepos = self.metaBlockNormPos
+    #may hardcode details here that should migrate either to class def or yaml
+
+    tw, th   = self.titlebarWidthHeight
+    tc       = self.titlebarColor
+    tx1, ty1 = basepos
+    tx2, ty2 = tx1+tw, ty1+th
+    tr       = Rect((tx1, ty1), (tx2, ty2))
+
+    screen.draw.filled_rect(tr, tc)
 
   ###################### shift cursor relative ######################
 
