@@ -20,6 +20,7 @@ class posterBrowser:
   upperHlBoxFn = 'full_res/upper_highlight_box'
   brHlBoxFn    = 'bottom_rightv08g_cursor'
   brBlockFn    = 'bottom_rightv08g'
+  gridIconsFn = 'images/full_res/gridMap03k3/%02i'
   ypfn         = 'posters-iui24.yaml'
   ygfn         = 'geos.yaml'
   ypd          = None
@@ -63,6 +64,7 @@ class posterBrowser:
   numPosters           = 34
   posterFnPrefix       = 'posters.0315a/screen_res/iui24_'
   posterActors         = None
+  posterIconActors     = None
   lastPoster           = None
   activePoster         = 1
   cyclePosters         = True #automatically cycle between posters
@@ -201,6 +203,23 @@ class posterBrowser:
     self.posterActors[whichPoster] = a
     return a
 
+  ######################## get poster actor ######################## 
+
+  def getPosterIconActor(self, whichPoster):
+    try:
+      if self.posterIconActors is None:        self.posterIconActors = {}
+      if whichPoster in self.posterIconActors: return self.posterIconActors[whichPoster]
+
+      iconFn = self.gridIconsFn % whichPoster
+
+      a = Actor(iconFn, topleft=self.metaBlockNormPos)
+      self.posterIconActors[whichPoster] = a
+      return a
+    except:
+      print("posterBrowser getPosterIconActor exception for poster", whichPoster)
+      traceback.print_exc()
+      return None
+
   ######################## constructActors ######################## 
 
   def constructActors(self):
@@ -261,6 +280,10 @@ class posterBrowser:
   
       pmeta = self.getPosterMetainfo(pid)
       title = pmeta['title']
+
+      pia = getPosterIconActor(pid)
+      pia.draw()
+
     except:
       print("posterBrowser drawPosterMetainfo exception for poster", pid)
       traceback.print_exc()
