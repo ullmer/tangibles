@@ -90,7 +90,11 @@ class posterBrowser:
       self.pmc.normalLightButton(lx,ly)
       self.pmc.highlightDict[lx][ly] = False
 
-    if self.verbose: print("pb2 mbcb XY:", x, y, arg)
+    #if self.verbose: print("pb2 mbcb XY:", x, y, arg)
+    rmaxX, rmaxY = self.upperHlBoxRelMaxPos 
+
+    if 0<=x<rmaxX and 0<y<rmaxY:
+      self.shiftCursorAbs(x, y-1)
 
     #r, g, b = [63, 63, 63]
     #emc.setLaunchpadXYColor(x, y, r, g, b)
@@ -102,10 +106,10 @@ class posterBrowser:
     if y==0: 
       # couldn't get Conda to install Python 3.10 on Win device, so reverting to if/elif
       #match x: # https://www.freecodecamp.org/news/python-switch-statement-switch-case-example/ 
-      if   x==0: self.shiftCursor( 0, -1); print("up")
-      elif x==1: self.shiftCursor( 0,  1); print("down")
-      elif x==2: self.shiftCursor(-1,  0); print("left")
-      elif x==3: self.shiftCursor( 1,  0); print("right")
+      if   x==0: self.shiftCursorRel( 0, -1); print("up")
+      elif x==1: self.shiftCursorRel( 0,  1); print("down")
+      elif x==2: self.shiftCursorRel(-1,  0); print("left")
+      elif x==3: self.shiftCursorRel( 1,  0); print("right")
 
   ######################## calcSelectedPoster ######################## 
 
@@ -157,8 +161,8 @@ class posterBrowser:
 
   ###################### shiftCursor ######################
 
-  def shiftCursor(self, dx, dy): 
-    print("shiftCursor", dx, dy, self.upperHlBoxA.topleft)
+  def shiftCursorRel(self, dx, dy): 
+    #print("shiftCursorRel", dx, dy, self.upperHlBoxA.topleft)
     rx, ry = self.upperHlBoxRelPos
     relmax = self.upperHlBoxRelMaxPos 
 
@@ -177,15 +181,26 @@ class posterBrowser:
 
     animate(self.upperHlBoxA, topleft=(x,y), duration=self.animDur, tween=self.animTween)
 
-    print("shiftCursor -> animate called", x, y)
+    #print("shiftCursor -> animate called", x, y)
+
+  ###################### shiftCursor ######################
+
+  def shiftCursorAbs(self, rx, ry): 
+
+    self.upperHlBoxRelPos = (rx, ry)
+
+    x = self.upperHlBoxBasePos[0] + rx * self.hlBoxDiffPos[0]
+    y = self.upperHlBoxBasePos[1] + ry * self.hlBoxDiffPos[1]
+
+    animate(self.upperHlBoxA, topleft=(x,y), duration=self.animDur, tween=self.animTween)
 
   ###################### on key down ######################
 
   def on_key_down(self, key):
-    if key == keys.RIGHT: self.shiftCursor( 1,  0)
-    if key == keys.LEFT:  self.shiftCursor(-1,  0)
-    if key == keys.UP:    self.shiftCursor( 0, -1)
-    if key == keys.DOWN:  self.shiftCursor( 0,  1)
+    if key == keys.RIGHT: self.shiftCursorRel( 1,  0)
+    if key == keys.LEFT:  self.shiftCursorRel(-1,  0)
+    if key == keys.UP:    self.shiftCursorRel( 0, -1)
+    if key == keys.DOWN:  self.shiftCursorRel( 0,  1)
     selPosterNum = self.calcSelectedPoster() 
     print("selected poster number:", selPosterNum)
     self.activePoster = selPosterNum
