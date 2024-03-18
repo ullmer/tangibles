@@ -65,11 +65,11 @@ class posterBrowser:
 
   metaTextSubtitles   = ["prior author papers", "prior author keywords", "keyword-linked 2024 demos+posters"]
   metaTextFont        = "tcm"
-  metaTextFontSize    = 50
+  metaTextFontSize    = 40
   metaTextFontColor   = (180, 180, 180)
-  mtSubtitlesWH       = (1180, 55)
+  mtSubtitlesWH       = (1180, 48)
   mtSubtitlesX1       = 10
-  mtSubtitlesYs       = [400, 800, 1000]
+  mtSubtitlesYs       = [380, 700, 1000]
   mtSubtitleTxtOffset = (5, -2)
 
   metaBlockOffset     = (0, 95)
