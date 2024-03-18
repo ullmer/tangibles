@@ -16,7 +16,6 @@ class posterBrowser:
   topBlockFn   = 'full_res/top_block01'
   upperHlBoxFn = 'full_res/upper_highlight_box'
   brHlBoxFn    = 'bottom_rightv08g_cursor'
-
   brBlockFn    = 'bottom_rightv08g'
 
   topBlockPos          = (0, 0)
@@ -35,6 +34,8 @@ class posterBrowser:
   brBlockNormPos      = (1214, 100) #for debugging on laptop
   #brBlockNormPos     = (1214, 2538)
   brBlockNormDim      = ( 946, 1302)
+  brBlockMaximize     = False
+
   cursorAnimDur       = .5
   posterAnimDur       = .75
   #posterAnimDur      = 3.
@@ -59,9 +60,10 @@ class posterBrowser:
   lastPosterAnimTimeBegun    = None
 
   topBlockA    = None #pgzero actors
-  brBlockA     = None 
   upperHlBoxA  = None
+  brBlockA     = None 
   brHlBoxA     = None
+  brBlockMaxA  = None # maximized version of bottom-right interaction block
 
   firstDraw    = True 
 
@@ -158,8 +160,9 @@ class posterBrowser:
     self.topBlockA   = Actor(self.topBlockFn,   topleft = self.topBlockPos)
     self.upperHlBoxA = Actor(self.upperHlBoxFn, topleft = self.upperHlBoxBasePos)
 
-    self.brBlockA    = Actor(self.brBlockFn,    topleft = self.brBlockNormPos)
-    self.brHlBoxA    = Actor(self.brHlBoxFn,    topleft = self.brHlBoxBasePos)
+    self.brBlockA     = Actor(self.brBlockFn,    topleft = self.brBlockNormPos)
+    self.brHlBoxA     = Actor(self.brHlBoxFn,    topleft = self.brHlBoxBasePos)
+    #self.brBlockMaxA  = Actor(self.brBlockMaxFn, topleft = self.brBlockNormPos)
 
     self.posterActors = {}
 
@@ -177,14 +180,23 @@ class posterBrowser:
   def draw(self):
     if self.firstDraw and self.requestMaximize: self.maximize()
 
-    if self.lastPosterAnimatingOut(): 
-      pla = self.getPosterActor(self.lastPoster)
-      pla.draw()
+    if self.brBlockMaximize is False: #normal case
 
-    pa = self.getPosterActor(self.activePoster)
-    pa.draw()
+      if self.lastPosterAnimatingOut(): 
+        pla = self.getPosterActor(self.lastPoster)
+        pla.draw()
 
-    for actor in self.actors: actor.draw()
+      pa = self.getPosterActor(self.activePoster)
+      pa.draw()
+
+      for actor in self.actors: actor.draw()
+      self.drawPosterMetainfo()
+
+    else: pass #br block is maximized
+
+  ######################## draw poster metainformation ###############
+
+  def drawPosterMetainfo(self): pass
 
   ###################### shift cursor relative ######################
 
@@ -326,6 +338,8 @@ class posterBrowser:
 ######################## main ######################## 
  
 pb = posterBrowser()
+  
+pb.shiftCursorRel(0, 0) # temporary hack to highlight initial position
 
 def draw(): 
   screen.clear()
