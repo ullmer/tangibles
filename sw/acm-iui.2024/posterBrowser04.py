@@ -46,10 +46,10 @@ class posterBrowser:
   titlebarWidthHeight = (2160,   70)
   titlebarColor       = (60, 60, 60)
   titleIconOffset     = (10, 10)
-  titleTextOffset     = (300, 10)
-  titleFont           = "Viga"
-  titleFontSize       = 32
-  titleFontColor      = (200, 200, 200)
+  titleTextOffset     = (350, 10)
+  titleFont           = "tcm"
+  titleFontSize       = 60
+  titleFontColor      = (250, 250, 250)
 
   brBlockNormPos      = (1214, 100) #for debugging on laptop
   #brBlockNormPos     = (1214, 2538)
@@ -294,8 +294,10 @@ class posterBrowser:
       dx, dy   = self.titleTextOffset
       tx3, ty3 = tx1+dx, ty1+dy
 
+      title = 'wunderbar'*30
+
       tf, tfs, tfc = self.titleFont, self.titleFontSize, self.titleFontColor
-      screen.draw.text(title, (tx3, ty3), color=tc, fontname=tf, fontsize=tfs) 
+      screen.draw.text(title, (tx3, ty3), color=tfc, fontname=tf, fontsize=tfs) 
 
     except:
       print("posterBrowser drawPosterMetainfo exception for poster", pid)
