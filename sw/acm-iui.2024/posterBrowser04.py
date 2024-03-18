@@ -46,6 +46,10 @@ class posterBrowser:
   titlebarWidthHeight = (2160,   70)
   titlebarColor       = (60, 60, 60)
   titleIconOffset     = (10, 10)
+  titleTextOffset     = (300, 10)
+  titleFont           = "Viga"
+  titleFontSize       = 32
+  titleFontColor      = (200, 200, 200)
 
   brBlockNormPos      = (1214, 100) #for debugging on laptop
   #brBlockNormPos     = (1214, 2538)
@@ -278,15 +282,20 @@ class posterBrowser:
       tx2, ty2 = tx1+tw, ty1+th
       tr       = Rect((tx1, ty1), (tx2, ty2))
   
-      screen.draw.filled_rect(tr, tc)
+      screen.draw.filled_rect(tr, tc) # draw titlebar 
   
       if pid is None: print("posterBrowser drawPosterMetainfo: poster id is empty!"); return
   
-      pmeta = self.getPosterMetainfo(pid)
-      title = pmeta['title']
-
-      pia = self.getPosterIconActor(pid)
+      pia = self.getPosterIconActor(pid) #draw poster icon
       if pia is not None: pia.draw()
+
+      pmeta    = self.getPosterMetainfo(pid) 
+      title    = pmeta['title']
+      dx, dy   = self.titleTextOffset
+      tx3, ty3 = tx1+dx, ty1+dy
+
+      tf, tfs, tfc = self.titleFont, self.titleFontSize, self.titleFontColor
+      screen.draw.text(title, (tx3, ty3), color=tc, fontname=tf, fontsize=tfs) 
 
     except:
       print("posterBrowser drawPosterMetainfo exception for poster", pid)
