@@ -7,6 +7,7 @@ import moveWinHome #hack to move window to 0,0 on windows, avoiding redraw error
 WIDTH  = 2160
 HEIGHT = 3660
 
+import time
 import pygame
 from posterMidi        import *
 from enoMidiController import *
@@ -22,7 +23,8 @@ class posterBrowser:
   hlBoxDiffPos         = (266, 183)
   lastHighlightedCoord = None
 
-  posterFullPos       = (0,  1210)
+  posterFullPos       = (0,    1210)
+  posterFullDim       = (2160, 1215)
   animDur             = .3
   animTween           = 'accel_decel'
   removeTitle         = True
@@ -155,6 +157,10 @@ class posterBrowser:
     if self.firstDraw and self.removeTitle: self.removeTitlebar()
     for actor in self.actors: actor.draw()
 
+    if self.lastPosterAnimatingOut(): 
+      pla = self.getPosterActor(self.lastPoster)
+      pla.draw()
+
     pa = self.getPosterActor(self.activePoster)
     pa.draw()
 
@@ -196,7 +202,28 @@ class posterBrowser:
 
   ###################### animate last poster out ######################
 
-  def animLastPosterOut(self, dx=None, dy=None):  pass
+  def animLastPosterOut(self, dx=None, dy=None):  
+    if dx is None or dy is None: return #nothing to do
+    if self.lastPoster  is None: return #again, nothing to do
+
+    self.lastPosterAnimTimeBegun = time.time()
+
+    fpx, fpy = self.posterFullPos #"full position"
+    fpw, fph = self.posterFullDim #poster width, height
+    destX    = fpx + fpw * dx * 2
+    destY    = fpy + fph * dy * 2
+
+    pa = self.getPosterActor(self.lastPoster)
+    animate(pa, topleft=(destX, destY), duration=self.animDur, tween=self.animTween)
+
+  ###################### is last poster still animating out ######################
+ 
+  def lastPosterAnimatingOut(self): 
+    timeBegun   = self.lastPosterAnimTimeBegun 
+    currentTime = time.time()
+    dt = currentTime - timeBegun
+    if dt < self.animDur: return True
+    return False
 
   ###################### display poster ######################
 
