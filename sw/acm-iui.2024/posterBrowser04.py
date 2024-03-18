@@ -281,7 +281,7 @@ class posterBrowser:
       pmeta = self.getPosterMetainfo(pid)
       title = pmeta['title']
 
-      pia = getPosterIconActor(pid)
+      pia = self.getPosterIconActor(pid)
       pia.draw()
 
     except:
