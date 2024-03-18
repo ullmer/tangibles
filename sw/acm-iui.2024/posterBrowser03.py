@@ -30,11 +30,11 @@ class posterBrowser:
   posterNormPos       = (0,    1210)
   posterNormDim       = (2160, 1215)
   brBlockNormPos      = (100, 100) #for debugging on laptop
-  #brBlockNormPos      = (1214, 2538)
+  #brBlockNormPos     = (1214, 2538)
   brBlockNormDim      = ( 946, 1302)
   cursorAnimDur       = .3
-  posterAnimDur      = .75
-  #posterAnimDur       = 3.
+  posterAnimDur       = .75
+  #posterAnimDur      = 3.
   animTween           = 'accel_decel'
   requestMaximize     = True
 
@@ -48,8 +48,10 @@ class posterBrowser:
   lastPoster           = None
   activePoster         = 1
   cyclePosters         = True #automatically cycle between posters
-  cyclePosterFrequency = 10.  #how frequently to make the cycling
+  #cyclePosterFrequency = 10.  #how frequently to make the cycling
+  cyclePosterFrequency = 3.  #how frequently to make the cycling
 
+  autoAdvanceSlides          = True
   cyclePosterAutolaunchDelay = 60. #after how many seconds should autolaunch begin
   lastPosterAnimTimeBegun    = None
 
@@ -180,6 +182,11 @@ class posterBrowser:
     pa.draw()
 
     for actor in self.actors: actor.draw()
+
+  ###################### shift cursor relative ######################
+
+  def autoAdvancePosters(self):
+    self.shiftCursorRel(1,0)
 
   ###################### shift cursor relative ######################
 
@@ -315,5 +322,8 @@ def on_key_down(key): pb.on_key_down(key)
 
 if pb.useMidiController:
   clock.schedule_interval(pb.poll, .05) #ask pygame to service midi polling
+
+if pb.autoAdvanceSlides:
+  clock.schedule_interval(pb.autoAdvancePosters, pb.cyclePosterFrequency)
 
 ### end ###
