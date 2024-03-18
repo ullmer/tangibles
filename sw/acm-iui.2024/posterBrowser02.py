@@ -96,9 +96,6 @@ class posterBrowser:
     if 0<=x<rmaxX and 0<y<rmaxY:
       self.shiftCursorAbs(x, y-1)
 
-    #r, g, b = [63, 63, 63]
-    #emc.setLaunchpadXYColor(x, y, r, g, b)
-
     self.pmc.highlightDict[x][y] = True
     self.pmc.highlightButton(x,y)
     self.lastHighlightedCoord = (x,y)
@@ -162,7 +159,6 @@ class posterBrowser:
   ###################### shiftCursor ######################
 
   def shiftCursorRel(self, dx, dy): 
-    #print("shiftCursorRel", dx, dy, self.upperHlBoxA.topleft)
     rx, ry = self.upperHlBoxRelPos
     relmax = self.upperHlBoxRelMaxPos 
 
@@ -181,7 +177,13 @@ class posterBrowser:
 
     animate(self.upperHlBoxA, topleft=(x,y), duration=self.animDur, tween=self.animTween)
 
-    #print("shiftCursor -> animate called", x, y)
+    lx, ly = self.lastHighlightedCoord
+    self.pmc.normalLightButton(lx,ly-1)
+    self.pmc.highlightDict[lx][ly] = False
+
+    self.lastHighlightedCoord=(rx, ry)
+    self.pmc.highlightButton(rx, ry+1)
+    self.pmc.highlightDict[rx][ry] = True
 
   ###################### shiftCursor ######################
 
