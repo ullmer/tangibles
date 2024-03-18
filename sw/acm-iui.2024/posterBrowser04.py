@@ -244,16 +244,27 @@ class posterBrowser:
   ######################## draw poster metainformation ###############
 
   def drawPosterMetainfo(self): 
-    basepos = self.metaBlockNormPos
-    #may hardcode details here that should migrate either to class def or yaml
-
-    tw, th   = self.titlebarWidthHeight
-    tc       = self.titlebarColor
-    tx1, ty1 = basepos
-    tx2, ty2 = tx1+tw, ty1+th
-    tr       = Rect((tx1, ty1), (tx2, ty2))
-
-    screen.draw.filled_rect(tr, tc)
+    pid = self.activePoster
+    try:
+      basepos = self.metaBlockNormPos
+      #may hardcode details here that should migrate either to class def or yaml
+  
+      tw, th   = self.titlebarWidthHeight
+      tc       = self.titlebarColor
+      tx1, ty1 = basepos
+      tx2, ty2 = tx1+tw, ty1+th
+      tr       = Rect((tx1, ty1), (tx2, ty2))
+  
+      screen.draw.filled_rect(tr, tc)
+  
+      if pid is None: print("posterBrowser drawPosterMetainfo: poster id is empty!"); return
+  
+      pmeta = self.getPosterMetainfo(pid)
+      title = pmeta['title']
+    except:
+      print("posterBrowser drawPosterMetainfo exception for poster", pid)
+      traceback.print_exc()
+      return None
 
   ###################### shift cursor relative ######################
 
