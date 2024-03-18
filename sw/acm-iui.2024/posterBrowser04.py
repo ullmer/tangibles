@@ -90,15 +90,15 @@ class posterBrowser:
   emc                 = None #enodia midi  controller handle
   pmc                 = None #enodia poster midi controller handle
 
-  numPosters           = 34
-  posterFnPrefix       = 'posters.0315a/screen_res/iui24_'
-  posterActors         = None
-  posterIconActors     = None
-  lastPoster           = None
-  activePoster         = 1
-  cyclePosters         = True #automatically cycle between posters
+  numPosters            = 34
+  posterFnPrefix        = 'posters.0315a/screen_res/iui24_'
+  posterActors          = None
+  posterIconActors      = None
+  lastPoster            = None
+  activePoster          = 1
+  cyclePosters          = True #automatically cycle between posters
   #cyclePosterFrequency = 10.  #how frequently to make the cycling
-  cyclePosterFrequency = 3.  #how frequently to make the cycling
+  cyclePosterFrequency  = 3.  #how frequently to make the cycling
 
   autoAdvanceSlides          = True
   cyclePosterAutolaunchDelay = 60. #after how many seconds should autolaunch begin
