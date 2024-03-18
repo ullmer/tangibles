@@ -167,9 +167,11 @@ class posterBrowser:
     elif dy + ry > relmax[1]: ry = 0
     else:                     ry += dy
 
-    if   dx + rx < 0:         rx = 0
+    if   dx + rx < 0:         rx = relmax[0]; ry -= 1
     elif dx + rx > relmax[0]: rx = 0; ry += 1
     else:                     rx += dx
+
+    if ry < 0: rx, ry = 1, 4
 
     self.upperHlBoxRelPos = (rx, ry)
 
@@ -178,9 +180,10 @@ class posterBrowser:
 
     animate(self.upperHlBoxA, topleft=(x,y), duration=self.animDur, tween=self.animTween)
 
-    lx, ly = self.lastHighlightedCoord
-    self.pmc.normalLightButton(lx,ly)
-    self.pmc.highlightDict[lx][ly] = False
+    if self.lastHighlightedCoord is not None:
+      lx, ly = self.lastHighlightedCoord
+      self.pmc.normalLightButton(lx,ly)
+      self.pmc.highlightDict[lx][ly] = False
 
     self.lastHighlightedCoord=(rx, ry+1)
     self.pmc.highlightButton(  rx, ry+1)
