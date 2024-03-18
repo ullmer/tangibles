@@ -186,6 +186,15 @@ class posterBrowser:
     self.pmc.highlightButton(  rx, ry+1)
     self.pmc.highlightDict[rx][ry] = True
 
+    self.displayPoster()
+
+  ###################### shiftCursor ######################
+
+  def displayPoster(self): 
+    selPosterNum = self.calcSelectedPoster() 
+    print("selected poster number:", selPosterNum)
+    self.activePoster = selPosterNum
+
   ###################### shiftCursor ######################
 
   def shiftCursorAbs(self, rx, ry): 
@@ -197,6 +206,17 @@ class posterBrowser:
 
     animate(self.upperHlBoxA, topleft=(x,y), duration=self.animDur, tween=self.animTween)
 
+    if self.lastHighlightedCoord is not None:
+      lx, ly = self.lastHighlightedCoord
+      self.pmc.normalLightButton(lx,ly)
+      self.pmc.highlightDict[lx][ly] = False
+
+    self.lastHighlightedCoord=(rx, ry+1)
+    self.pmc.highlightButton(  rx, ry+1)
+    self.pmc.highlightDict[rx][ry] = True
+
+    self.displayPoster()
+
   ###################### on key down ######################
 
   def on_key_down(self, key):
@@ -204,9 +224,6 @@ class posterBrowser:
     if key == keys.LEFT:  self.shiftCursorRel(-1,  0)
     if key == keys.UP:    self.shiftCursorRel( 0, -1)
     if key == keys.DOWN:  self.shiftCursorRel( 0,  1)
-    selPosterNum = self.calcSelectedPoster() 
-    print("selected poster number:", selPosterNum)
-    self.activePoster = selPosterNum
 
 ######################## main ######################## 
  
