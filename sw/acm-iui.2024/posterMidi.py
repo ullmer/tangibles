@@ -61,6 +61,7 @@ class posterMidiController:
   ######################## highlight button ######################## 
 
   def highlightButton(self, x, y):
+    print("hl:", x, y)
     col   = self.getBaseColor(x, y)
     hlcol = []
     for el in col: 
@@ -74,6 +75,7 @@ class posterMidiController:
   ######################## highlight button ######################## 
 
   def normalLightButton(self, x, y):
+    print("nl:", x, y)
     r,g,b = self.getBaseColor(x, y)
     self.emc.setLaunchpadXYColor(x,y,r,g,b)
 

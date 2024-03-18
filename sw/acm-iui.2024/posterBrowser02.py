@@ -84,7 +84,8 @@ class posterBrowser:
     x, y    = emc.addr2coord(control)
     if y == 13: y=0 # hack around bug
 
-    if self.lastHighlightedCoord is not None and y>0: #repeat buttons allowed for controllers
+    #if self.lastHighlightedCoord is not None and y>0: #repeat buttons allowed for controllers
+    if self.lastHighlightedCoord is not None and x>0: #repeat buttons allowed for controllers
       lx, ly = self.lastHighlightedCoord
       if x==lx and y==ly: print("midiButtonCB: ignoring"); return
       self.pmc.normalLightButton(lx,ly)
@@ -178,11 +179,11 @@ class posterBrowser:
     animate(self.upperHlBoxA, topleft=(x,y), duration=self.animDur, tween=self.animTween)
 
     lx, ly = self.lastHighlightedCoord
-    self.pmc.normalLightButton(lx,ly-1)
+    self.pmc.normalLightButton(lx,ly)
     self.pmc.highlightDict[lx][ly] = False
 
-    self.lastHighlightedCoord=(rx, ry)
-    self.pmc.highlightButton(rx, ry+1)
+    self.lastHighlightedCoord=(rx, ry+1)
+    self.pmc.highlightButton(  rx, ry+1)
     self.pmc.highlightDict[rx][ry] = True
 
   ###################### shiftCursor ######################
