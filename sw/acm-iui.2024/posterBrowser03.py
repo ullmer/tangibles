@@ -31,9 +31,10 @@ class posterBrowser:
   emc                 = None #enodia midi  controller handle
   pmc                 = None #enodia poster midi controller handle
 
-  numPosters          = 34
-  posterFnPrefix      = 'posters.0315a/screen_res/iui24_'
-  posterActors        = None
+  numPosters           = 34
+  posterFnPrefix       = 'posters.0315a/screen_res/iui24_'
+  posterActors         = None
+  lastPoster           = None
   activePoster         = 1
   cyclePosters         = True #automatically cycle between posters
   cyclePosterFrequency = 10.  #how frequently to make the cycling
@@ -184,19 +185,25 @@ class posterBrowser:
       lx, ly = self.lastHighlightedCoord
       self.pmc.normalLightButton(lx,ly)
       self.pmc.highlightDict[lx][ly] = False
+      dx, dy = lx-rx, ly-(ry+1)
+    else: dx, dy = None, None
 
     self.lastHighlightedCoord=(rx, ry+1)
     self.pmc.highlightButton(  rx, ry+1)
     self.pmc.highlightDict[rx][ry] = True
 
-    self.displayPoster()
+    self.displayPoster(dx, dy)
 
   ###################### shiftCursor ######################
 
-  def displayPoster(self): 
+  def displayPoster(self, dx=None, dy=None): 
     selPosterNum = self.calcSelectedPoster() 
     print("selected poster number:", selPosterNum)
+    self.lastPoster   = self.activePoster
     self.activePoster = selPosterNum
+
+    self.animLastPosterOut( dx, dy)
+    self.animActivePosterIn(dx, dy)
 
   ###################### shiftCursor ######################
 
@@ -213,12 +220,14 @@ class posterBrowser:
       lx, ly = self.lastHighlightedCoord
       self.pmc.normalLightButton(lx,ly)
       self.pmc.highlightDict[lx][ly] = False
+      dx, dy = lx-rx, ly-(ry+1)
+    else: dx, dy = None, None
 
     self.lastHighlightedCoord=(rx, ry+1)
     self.pmc.highlightButton(  rx, ry+1)
     self.pmc.highlightDict[rx][ry] = True
 
-    self.displayPoster()
+    self.displayPoster(dx, dy)
 
   ###################### on key down ######################
 
