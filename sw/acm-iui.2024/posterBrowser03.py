@@ -15,6 +15,7 @@ from enoMidiController import *
 class posterBrowser:
   topBlockFn   = 'full_res/top_block01'
   upperHlBoxFn = 'full_res/upper_highlight_box'
+  brHlBoxFn    = 'full_res/
 
   brBlockFn    = 'bottom_rightv08g'
 
@@ -24,6 +25,7 @@ class posterBrowser:
   upperHlBoxRelMaxPos  = (7, 7)
   hlBoxDiffPos         = (266, 183)
   lastHighlightedCoord = None
+  brHlBoxBasePos       = (,)
 
   posterNormPos       = (0,    1210)
   posterNormDim       = (2160, 1215)
@@ -52,7 +54,9 @@ class posterBrowser:
   lastPosterAnimTimeBegun    = None
 
   topBlockA    = None #pgzero actors
+  brBlockA     = None 
   upperHlBoxA  = None
+  brHlBoxA     = None
 
   firstDraw    = True 
 
@@ -149,9 +153,12 @@ class posterBrowser:
     self.topBlockA   = Actor(self.topBlockFn,   topleft = self.topBlockPos)
     self.upperHlBoxA = Actor(self.upperHlBoxFn, topleft = self.upperHlBoxBasePos)
 
+    self.brBlockA    = Actor(self.brBlockFn,    topleft = self.brBlockNormPos)
+    self.brHlBoxA    = Actor(self.brHlBoxFn,    topleft = self.brHlBoxBasePos)
+
     self.posterActors = {}
 
-    self.actors = [self.topBlockA, self.upperHlBoxA]
+    self.actors = [self.topBlockA, self.upperHlBoxA, self.brBlockA, self.brHlBoxA]
 
   ######################## remove titlebar######################## 
 
