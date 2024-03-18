@@ -69,7 +69,7 @@ class posterBrowser:
   metaTextFontColor   = (180, 180, 180)
   mtSubtitlesWH       = (1180, 55)
   mtSubtitlesX1       = 10
-  mtSubtitlesYs       = [500, 800, 1000]
+  mtSubtitlesYs       = [400, 800, 1000]
   mtSubtitleTxtOffset = (5, -2)
 
   metaBlockOffset     = (0, 95)
