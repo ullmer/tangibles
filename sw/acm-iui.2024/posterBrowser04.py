@@ -271,7 +271,7 @@ class posterBrowser:
     x2 = self.brHlBoxBasePos[0] + rx * self.brHlBoxDiffPos[0]
     y2 = self.brHlBoxBasePos[1] + ry * self.brHlBoxDiffPos[1]
 
-    animate(self.brHlBoxA, topleft=(x1,y1), duration=self.cursorAnimDur, tween=self.animTween)
+    animate(self.brHlBoxA, topleft=(x2,y2), duration=self.cursorAnimDur, tween=self.animTween)
 
     if self.lastHighlightedCoord is not None:
       lx, ly = self.lastHighlightedCoord
@@ -285,7 +285,6 @@ class posterBrowser:
     self.pmc.highlightDict[rx][ry] = True
 
     self.displayPoster(dx, dy)
-
 
   ###################### shift cursor absolute ######################
 
@@ -301,7 +300,7 @@ class posterBrowser:
     x2 = self.brHlBoxBasePos[0] + rx * self.brHlBoxDiffPos[0]
     y2 = self.brHlBoxBasePos[1] + ry * self.brHlBoxDiffPos[1]
 
-    animate(self.brHlBoxA, topleft=(x1,y1), duration=self.cursorAnimDur, tween=self.animTween)
+    animate(self.brHlBoxA, topleft=(x2,y2), duration=self.cursorAnimDur, tween=self.animTween)
 
     if self.lastHighlightedCoord is not None:
       lx, ly = self.lastHighlightedCoord
