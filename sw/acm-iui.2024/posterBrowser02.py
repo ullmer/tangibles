@@ -159,30 +159,21 @@ class posterBrowser:
 
   def shiftCursor(self, dx, dy): 
     print("shiftCursor", dx, dy, self.upperHlBoxA.topleft)
-    uhbrp  = self.upperHlBoxRelPos
-    uhbrmp = self.upperHlBoxRelMaxPos 
+    rx, ry = self.upperHlBoxRelPos
+    relmax = self.upperHlBoxRelMaxPos 
 
-    rx, ry = uhbrp
+    if   dy + ry < 0:         ry = relmax[1]
+    elif dy + ry > relmax[1]: ry = 0
+    else:                     ry += dy
 
-    if   dy + uhbrp[1] < 0:         ry = uhbrmp[1]
-    elif dy + uhbrp[1] > uhbrmp[1]: ry = 0
-    else:                           ry += dy
-
-    if   dx + uhbrp[0] < 0:         rx = 0
-    elif dx + uhbrp[0] > uhbrmp[0]: rx = 0; ry += 1
-    else:                           rx += dx
-
-    print("rx ry:", rx, ry)
+    if   dx + rx < 0:         rx = 0
+    elif dx + rx > relmax[0]: rx = 0; ry += 1
+    else:                     rx += dx
 
     self.upperHlBoxRelPos = (rx, ry)
 
-    #x = self.upperHlBoxBasePos[0] + uhbrp[0] * self.hlBoxDiffPos[0]
-    #y = self.upperHlBoxBasePos[1] + uhbrp[1] * self.hlBoxDiffPos[1]
-
-    x = self.upperHlBoxA.topleft[0] + dx * self.hlBoxDiffPos[0]
-    y = self.upperHlBoxA.topleft[1] + dy * self.hlBoxDiffPos[1]
-
-    print("xx:", uhbrp[0], self.hlBoxDiffPos[0])
+    x = self.upperHlBoxBasePos[0] + rx * self.hlBoxDiffPos[0]
+    y = self.upperHlBoxBasePos[1] + ry * self.hlBoxDiffPos[1]
 
     animate(self.upperHlBoxA, topleft=(x,y), duration=self.animDur, tween=self.animTween)
 
