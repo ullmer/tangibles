@@ -16,11 +16,11 @@ yf   = open(yfn, 'rt')
 yd   = yaml.safe_load(yf)
 
 posters = yd['posters']
-for i in range(numPosters):
+print("P:", posters)
+for i in range(1,numPosters+1):
   p = posters[i]
   t = p['title']
   print(i, t)
-
 
 #titleIds  = [781, 1031, 1560, 1751, 2073, 2084, 2189]
 #ti  = str(titleIds)[1:-1]
