@@ -10,6 +10,7 @@ HEIGHT = 3660
 import time as pytime #since pgzero maps pygame time to "time"
 import pygame
 import yaml
+import traceback
 
 from posterMidi        import *
 from enoMidiController import *
@@ -104,6 +105,29 @@ class posterBrowser:
     
     self.ypd = yaml.safe_load(ypf)
     self.ygd = yaml.safe_load(ygf)
+
+  ###################### get poster metainfo ######################
+
+  def getPosterMetainfo(self, posterId): 
+    try:
+      p = self.ypd['posters'][posterId]
+      return p
+    except:
+      print("posterBrowser getPosterMetainfo issue for poster", posterId)
+      traceback.print_exc()
+      return None
+
+  ###################### get poster title ######################
+
+  def getPosterField(self, posterId, whichField): 
+    try:
+      posterD = self.getPosterMetainfo(posterId)
+      val     = posterD[whichField]
+      return val
+    except:
+      print("posterBrowser getPosterField issue for poster + field ", posterId, whichField)
+      traceback.print_exc()
+      return None
 
   ######################## poll ######################## 
 
