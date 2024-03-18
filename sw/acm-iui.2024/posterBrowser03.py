@@ -158,7 +158,7 @@ class posterBrowser:
     pa = self.getPosterActor(self.activePoster)
     pa.draw()
 
-  ###################### shiftCursor ######################
+  ###################### shift cursor relative ######################
 
   def shiftCursorRel(self, dx, dy): 
     rx, ry = self.upperHlBoxRelPos
@@ -194,7 +194,11 @@ class posterBrowser:
 
     self.displayPoster(dx, dy)
 
-  ###################### shiftCursor ######################
+  ###################### animate last poster out ######################
+
+  def animLastPosterOut(self, dx=None, dy=None):  pass
+
+  ###################### display poster ######################
 
   def displayPoster(self, dx=None, dy=None): 
     selPosterNum = self.calcSelectedPoster() 
@@ -205,7 +209,7 @@ class posterBrowser:
     self.animLastPosterOut( dx, dy)
     self.animActivePosterIn(dx, dy)
 
-  ###################### shiftCursor ######################
+  ###################### shift cursor absolute ######################
 
   def shiftCursorAbs(self, rx, ry): 
 
