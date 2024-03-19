@@ -26,21 +26,30 @@ for i in range(1,numPosters+1):
     key = 'priorPaperIds'
     if key in p: 
       priorPID = p[key]
+      pp=','.join(priorPID)
       print("P", priorPID)
+      query = "select year, title from titles where t.id in (%s); " % pp
+      print(query)
 
+      result  = cur.execute(query)
+      qresult = result.fetchall()
+      for year, title in qresult: print('    - {year: %s, title: "%s"}' % (year, title))
+  except: pass
+  try:
     key = 'priorKwIds'
     if key in p: 
       priorPID = p[key]
       print("K", priorPID)
+      query = """select k.keyword, k.count from titles as t, keywords as k, ti_kw as tk where
+                   t.id in (%s)
+                  and ta.ti_id = t.id and ta.au_id = a.id and tk.ti_id = t.id and tk.kw_id = k.id group by keyword;""" % (pp)
+      print(query)
+
+      result  = cur.execute(query)
+      qresult = result.fetchall()
+
   except: pass
 
-#query = """select k.id, k.keyword from titles as t, keywords as k, ti_kw as tk, ti_au as ta, authors as a where
-#             t.id in (%s)
-#             and ta.ti_id = t.id and ta.au_id = a.id and tk.ti_id = t.id and tk.kw_id = k.id group by keyword;""" % (ti)
-#print(query)
-#
-#result  = cur.execute(query)
-#qresult = result.fetchall()
 #
 #kwIds   = []
 #kwNames = []
