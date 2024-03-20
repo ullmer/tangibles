@@ -304,13 +304,15 @@ class posterBrowser:
   def drawPosterMetainfo(self): 
     pid = self.activePoster
     try:
-      basepos = self.metaBlockNormPos
-      bx, by  = basepos
-      #may hardcode details here that should migrate either to class def or yaml
+      bx, by = self.metaBlockNormPos #base position
+
+      if self.upshiftBottomVisualElements:
+        ubx, uby = self.upshiftBottomOffset
+        bx += ubx; by += uby
   
       tw, th   = self.titlebarWidthHeight
       tc       = self.titlebarColor
-      tx1, ty1 = basepos
+      tx1, ty1 = bx, by
       tx2, ty2 = tx1+tw, ty1+th
       tr       = Rect((tx1, ty1), (tx2, ty2))
   
