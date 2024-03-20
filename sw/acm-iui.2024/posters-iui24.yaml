@@ -64,14 +64,14 @@ posters:
     title:   "Impact of Personalized AI Chat Assistant on Mediated Human-Human Textual Conversations"
     authors: [Jindi Wang, Ioannis Ivrissimtzis, Zhaoxing Li, Lei Shi]
     geo:     [uk]
-    domains: []
+    domains: [dur.ac.uk, southampton.ac.uk, ncl.ac.uk]
   5: 
     title:     "Utilizing Large Language Models in Tribal Emergency Management"
     authors:   [Srishti Gupta, Yu-Che Chen, Chun-Hua Tsai]
     authorIDs: [1048]
     priorPaperIds: [423, 1320, 1578, 2056]
     geo:       [us.ne]
-    domains:   []
+    domains:   [unomaha.edu]
     priorKwIds:   [40, 114, 219, 397, 433, 2509, 3171, 3299, 3838, 3839, 4806, 4807]
     priorKwNames: [diversification, diversity, explainable intelligent user interface, explanation, hci, hybrid recommendation, 
                    recommender system, social recommendation, social recommender, user interface, user-driven exploration, user-driven fusion]
@@ -88,7 +88,7 @@ posters:
                    integrated development environment, inverse reinforcement learning, iot, mobile recommender systems, pairwise scores, 
                    recommeder systems, recommender system, recommender systems, simulation environment, tourism, user interface, 
                    user model, user preferences]
-    domains:       []
+    domains:       [unsa.ba, unibz.it, udayton.edu]
 
   7: 
     title:   "A Bicycle Navigation System for Analyzing the Comfort Level of the Cyclist"
@@ -101,7 +101,6 @@ posters:
                    movie trailer, query language, recommender system, review, route navigation, spatial, spatial operators, 
                    spatial search, supplementary information, temporal, twitter, user interface, video analysis]
 
-    domains: []
   8: 
     title:   "Evaluating ADHD Users' Experience with Recommender Systems"
     authors: [Sushmita Khan, Bart Knijnenburg, Emma Dixon]
@@ -119,7 +118,7 @@ posters:
     title:   "CARE: An Infrastructure for Evaluation of Carousel-Based Recommender Interfaces"
     authors: [Behnam Rahdari, Peter Brusilovksy]
     geo:     [us.pa]
-    domains: []
+    domains: [pitt.edu]
     authorIDs:     [2384]
     priorPaperIds: [954]
     priorKwIds:    [2509, 2510]
@@ -131,7 +130,7 @@ posters:
     geo:           [jp]
     authorIDs:     [2366]
     priorPaperIds: [944, 1738]
-    domains:       []
+    domains:       [kyoto-u.ac.jp, u-tokyo.ac.jp]
     priorKwIds: [2488, 2489, 2490, 4185, 4186, 4187, 4188, 4189, 4190, 4191, 4192]
     priorKwNames: [augmented thumbnail, multitask, query language, site logo, spatial operators, spatial search, tab-browser, 
                    task grouping, task switching, window system, working set]
@@ -157,8 +156,8 @@ posters:
                     human computation, interaction log analysis, interview study, large-scale text-to-image generation model, literature review, 
                     multi-tool aggregation, particle filter, semantic image segmentation, software tutorial videos, tool diversity, 
                     video interaction, visual artists]
+    domains: [ic.kaist.ac.kr, yale.edu]
 
-    domains: []
   13: 
     title:   "Exploring AI-assisted Ideation and Prototyping for Choreography"
     authors:   [Yimeng Liu, Mishra Sra]
@@ -180,7 +179,8 @@ posters:
                    enterprise user experience design, face recognition, history, mobile system, natural language processing, online communities, 
                    person identification, personality, personality changes, project management, social media, ui recommendation, 
                    visualization, visualization and comparison]
-    domains: []
+    domains: [bosch.us]
+
   15: 
     title:   "Multimodal Target Prediction for Rapid Human-Robot Interaction"
     authors: [Mukund Mitra, Ameya Patil, GVS Mothish, Gyanig Kumar, Abishek Mukhopadhyay, LRD Murthy, Partha Pratim Chakrabarti, Pradipta Biswas]
@@ -199,18 +199,18 @@ posters:
     geo:     [us.sc]
     priorKwIds:   [2635, 2676, 1680, 2331]
     priorKwNames: [gpt-2/3, gpt-3, dementia care, dementia]
-    domains: []
-  17: 
-    title:   ""
-    authors: []
+    domains: [clemson.edu]
+  17:
+    title:   "Assistant Dashboard Plus- Enhancing an Existing Instructor Dashboard with Difficulty Detection and GPT-based Code Clustering"
+    authors: [Samuel George, Tao Huang, Chandler Robinson, Gabriel Schell, Wei Shan, Ziqian Zhao, Zeqi Zhou, Prasun Dewan]
     geo:     [us.nc]
-    domains: []
+    domains: [unc.edu]
   18: 
     title:   "Measuring Heterogeneity in Language Modeling for Enhanced Chatbot Personalization"
     authors: [Marina Lin]
     geo:     [us.va]
     priorKwIds: [142, 1120, 1584, 4722, 4887, 787, 2636, 4071, 5162]
-    domains: []
+    domains: [tjhsst.fcps.edu]
   19: 
     title:   "MitFlex- A Human-AI Collaborative System to Support Mitosis Assessment in Pathology"
     authors: [Chunxu Yang, Mohammad Haeri, Shino Magaki, Neda Zarrin-Khameh, Hongyan Gu, Xiang ‘Anthony’ Chen]
@@ -229,21 +229,21 @@ posters:
     geo:     [us.nc]
     domains: [unc.edu]
     keywords: Learning at scale, Computer programming, Intelligent tutoring systems, ChatGPT, GPT
-  21: 
-    title:   ""
-    authors: []
+  21:
+    title:   "(X)AI-SPOT: an (X)AI-Supported Production Process Optimization Tool"
+    authors: [Inti Gabriel Mendoza Estrada, Hanna Muller, Johannes Georg Hoffer, Vedran Sabol]
     geo:     [at]
-    domains: []
-  22: 
-    title:   ""
-    authors: []
+    domains: [know-center.at]
+  22:
+    title:   "Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with SSMI"
+    authors: [Anujith Muraleedharan, Anamika J H, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas]
     geo:     [in]
     domains: []
-  23: 
-    title:   ""
-    authors: []
+  23:
+    title:   "A Demonstration of BLIP: A System to Explore Undesirable Consequences of Digital Technologies"
+    authors: [Rock Yuren Pang, Sebastian Santy, Rene’ Just, Katharina Reinecke]
     geo:     [us.wa]
-    domains: []
+    domains: [washington.edu] 
   24: 
     title:    "Perceived Trustworthiness of Human vs. AI Instructors in Digital Privacy Education for Older Adults"
     authors:  [Heba Aly, Kaileigh Angela Byrne, Bart Knijnenburg]
@@ -258,57 +258,57 @@ posters:
                    internet of things, location sharing, machine learning, music streaming services, privacy, privacy settings, recommendation, 
                    recommender systems, satisfaction, smarthome, tic-tac- toe game, trust, user behavior, user characteristics, user experience, 
                    user experiments, user study, user-centric evaluation, user-centric evaluation framework, ximl, xml]
-
-  25: 
-    title:   ""
-    authors: []
+  25:
+    title:   "Human-Centered Evaluation of Explanations in Assisted Decision-Making"
+    authors: [Xinru Wang]
     geo:     [us.in]
-    domains: []
+    domains: [purdue.edu]
+
+
   26: 
     title:   "Enhancing Digital Privacy Education for Older Adults"
     authors: [Heba Aly]
     geo:     [us.sc]
     domains: [clemson.edu]
-  27: 
-    title:   ""
-    authors: []
+  27:
+    title:   "Advancing GUI for Generative AI: Charting the Design Space of Human-AI Interactions through Task Creativity and Complexity"
+    authors: [Zijian Ding]
     geo:     [us.md]
-    domains: []
-  28: 
-    title:   ""
-    authors: []
+    domains: [umd.edu]
+  28:
+    title:   "An Estimation of Three-Layered Human’s Trust in Robots"
+    authors: [Abdullah Alzahrani, Muneeb Ahmad]
     geo:     [sa, uk]
-    domains: []
+    domains: [bu.edu.sa, swansea.ac.uk]
   29: 
     title:   "Developing Resilience through Retiree Volunteerism"
     authors: [Dan Roberts]
     geo:     [us.sc]
     domains: [clemson.edu]
-  30: 
-    title:   ""
-    authors: []
+  30:
+    title:   "Enhancing Spatial Problem-Solving Through Data-Driven Methods: A Practical Approach Utilizing Immersive Technologies and Multimodal Physical Tracking"
+    authors: [Henner Bendig]
     geo:     [de]
-    domains: []
-  31: 
-    title:   ""
-    authors: []
+    domains: [hs-flensburg.de]
+  31:
+    title:   "Investigate how diverse user groups perceive or use data-driven system to design inclusive data-driven systems"
+    authors: [Seoyoung Kim]
     geo:     [kr]
-    domains: []
-  32: 
-    title:   ""
-    authors: []
+    domains: [kaist.ac.kr]
+  32:
+    title:   "Revolutionizing Digital Consent: An Automated Approach to Simplifying and Deciphering Privacy Policies for Powered User Understanding"
+    authors: [Shikha Soneji]
     geo:     [us.pa]
-    domains: []
-  33: 
-    title:   ""
-    authors: []
+    domains: [psu.edu]
+  33:
+    title:   "Engaging Internet Users in Making Visual Media Accessible"
+    authors: [Ruolin Wang]
     geo:     [us.ca]
-    domains: []
-  34: 
-    title:   ""
-    authors: []
+    domains: [ucla.edu]
+  34:
+    title:   "Unlocking the Potential of Data: Investigating how AI-enabled data understanding empowers domain experts to curate data and make better decisions"
+    authors: [Joshua Holstein]
     geo:     [de]
-    domains: []
-
+    domains: [kit.edu]
 
 ### end ###
