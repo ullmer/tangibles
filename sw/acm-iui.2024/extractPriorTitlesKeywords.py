@@ -31,7 +31,7 @@ for i in range(1,numPosters+1):
       for el in priorPID: priorPIDstr.append(str(el))
       pp=','.join(priorPIDstr)
       print("P", priorPID)
-      query = "select year, title from titles where t.id in (%s); " % pp
+      query = "select year, title from titles where id in (%s); " % pp
       print(query)
 
       result  = cur.execute(query)
@@ -49,7 +49,7 @@ for i in range(1,numPosters+1):
       print("K", priorPID)
       query = """select k.keyword, k.count from titles as t, keywords as k, ti_kw as tk where
                    t.id in (%s)
-                  and ta.ti_id = t.id and ta.au_id = a.id and tk.ti_id = t.id and tk.kw_id = k.id group by keyword;""" % (pp)
+                  and tk.ti_id = t.id and tk.kw_id = k.id group by keyword order by k.count desc;""" % (pp)
       print(query)
 
       result  = cur.execute(query)
