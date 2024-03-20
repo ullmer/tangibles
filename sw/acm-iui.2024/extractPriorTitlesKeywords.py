@@ -3,6 +3,7 @@
 # Begun 2024-03-18
 
 import yaml
+import traceback
 import sqlite3 # https://docs.python.org/3/library/sqlite3.html
 
 dbfn = 'dl-iui.db3'
@@ -26,7 +27,9 @@ for i in range(1,numPosters+1):
     key = 'priorPaperIds'
     if key in p: 
       priorPID = p[key]
-      pp=','.join(priorPID)
+      priorPIDstr = []
+      for el in priorPID: priorPIDstr.append(str(el))
+      pp=','.join(priorPIDstr)
       print("P", priorPID)
       query = "select year, title from titles where t.id in (%s); " % pp
       print(query)
@@ -34,11 +37,15 @@ for i in range(1,numPosters+1):
       result  = cur.execute(query)
       qresult = result.fetchall()
       for year, title in qresult: print('    - {year: %s, title: "%s"}' % (year, title))
-  except: pass
+  except: traceback.print_exc()
+
   try:
     key = 'priorKwIds'
     if key in p: 
       priorPID = p[key]
+      priorPIDstr = []
+      for el in priorPID: priorPIDstr.append(str(el))
+      pp=','.join(priorPIDstr)
       print("K", priorPID)
       query = """select k.keyword, k.count from titles as t, keywords as k, ti_kw as tk where
                    t.id in (%s)
@@ -47,10 +54,10 @@ for i in range(1,numPosters+1):
 
       result  = cur.execute(query)
       qresult = result.fetchall()
+      for el in qresult: print(el)
 
-  except: pass
+  except: traceback.print_exc()
 
-#
 #kwIds   = []
 #kwNames = []
 #
