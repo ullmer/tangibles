@@ -30,7 +30,7 @@ for i in range(1,numPosters+1):
       priorPIDstr = []
       for el in priorPID: priorPIDstr.append(str(el))
       pp=','.join(priorPIDstr)
-      print("P", priorPID)
+      #print("P", priorPID)
       query = "select year, title from titles where id in (%s); " % pp
       print(query)
 
@@ -54,7 +54,8 @@ for i in range(1,numPosters+1):
 
       result  = cur.execute(query)
       qresult = result.fetchall()
-      for el in qresult: print(el)
+      for keyword, count in qresult: print('    - {keyword: "%s", 
+      #for el in qresult: print(el)
 
   except: traceback.print_exc()
 
