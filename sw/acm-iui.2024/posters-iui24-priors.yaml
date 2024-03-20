@@ -1,0 +1,793 @@
+1:
+  title: "Human-AI Collaboration in a Student Discussion Forum"
+  priorPapers:
+    - {year: 2015, title: "User-Interfaces for Incremental Recipient and Response Time Predictions in Asynchronous Messaging"}
+    - {year: 2015, title: "Interactive Control and Visualization of Difficulty Inferences from User-Interface Commands"}
+  priorKeywords:
+2:
+  title: "EvaluLLM: LLM Assisted Evaluation of Generative Outputs"
+  priorPapers:
+    - {year: 2017, title: "AWARE: Workshop on Awareness Interfaces and Interactions"}
+    - {year: 2021, title: "Increasing the Speed and Accuracy of Data Labeling Through an AI Assisted Interface"}
+    - {year: 2021, title: "The Design and Development of a Game to Study Backdoor Poisoning Attacks: The Backdoor Game"}
+    - {year: 2021, title: "TExSS: Transparency and Explanations in Smart Systems"}
+    - {year: 2019, title: "Intelligent user interfaces for algorithmic transparency in emerging technologies"}
+    - {year: 2019, title: "Explaining models: an empirical study of how explanations impact fairness judgment"}
+    - {year: 2019, title: "BigBlueBot: teaching strategies for successful human-agent interactions"}
+    - {year: 2020, title: "ExSS-ATEC: Explainable Smart Systems for Algorithmic Transparency in Emerging Technologies 2020"}
+    - {year: 2023, title: "Follow the Successful Herd: Towards Explanations for Improved Use and Mental Models of Natural Language Systems"}
+    - {year: 2008, title: "Automatically finding and recommending resources to support knowledge workers activities"}
+    - {year: 2017, title: "Towards Understanding Human Mistakes of Programming by Example: An Online User Study"}
+  priorKeywords:
+    - {keyword: "machine learning", count: 97}
+    - {keyword: "recommender systems", count: 81}
+    - {keyword: "personalization", count: 57}
+    - {keyword: "user modeling", count: 50}
+    - {keyword: "natural language processing", count: 42}
+    - {keyword: "intelligent user interfaces", count: 35}
+    - {keyword: "augmented reality", count: 35}
+    - {keyword: "information retrieval", count: 30}
+    - {keyword: "hci", count: 28}
+    - {keyword: "neural networks", count: 26}
+    - {keyword: "information visualization", count: 24}
+    - {keyword: "adaptive interfaces", count: 24}
+    - {keyword: "recommender system", count: 20}
+    - {keyword: "context", count: 20}
+    - {keyword: "explanations", count: 19}
+    - {keyword: "mobile", count: 18}
+    - {keyword: "music", count: 15}
+    - {keyword: "eye-tracking", count: 15}
+    - {keyword: "task models", count: 10}
+    - {keyword: "human-centered ai", count: 10}
+    - {keyword: "assistive technology", count: 10}
+    - {keyword: "agent", count: 10}
+    - {keyword: "web", count: 8}
+    - {keyword: "user evaluation", count: 7}
+    - {keyword: "web accessibility", count: 6}
+    - {keyword: "recognition", count: 6}
+    - {keyword: "computational creativity", count: 6}
+    - {keyword: "bayesian networks", count: 6}
+    - {keyword: "adaptive systems", count: 6}
+    - {keyword: "gestural interaction", count: 5}
+    - {keyword: "adaptivity", count: 5}
+    - {keyword: "user characteristics", count: 4}
+    - {keyword: "screen reader", count: 4}
+    - {keyword: "natural language understanding", count: 4}
+    - {keyword: "hypermedia", count: 4}
+    - {keyword: "virtual meetings", count: 3}
+    - {keyword: "user acceptance", count: 3}
+    - {keyword: "style transfer", count: 3}
+    - {keyword: "pda", count: 3}
+    - {keyword: "need for cognition", count: 3}
+    - {keyword: "narrative visualization", count: 3}
+    - {keyword: "model-based design", count: 3}
+    - {keyword: "intelligent learning environments", count: 3}
+    - {keyword: "impromptu polling", count: 3}
+    - {keyword: "hand gestures", count: 3}
+    - {keyword: "gesture elicitation", count: 3}
+    - {keyword: "educational interfaces", count: 3}
+    - {keyword: "direct manipulation", count: 3}
+    - {keyword: "data integration", count: 3}
+    - {keyword: "augmentative and alternative communication", count: 3}
+    - {keyword: "user interface adaptation", count: 2}
+    - {keyword: "sound synthesis", count: 2}
+    - {keyword: "questionnaire", count: 2}
+    - {keyword: "projector-camera system", count: 2}
+    - {keyword: "onomatopoeia", count: 2}
+    - {keyword: "multimodal input interpretation", count: 2}
+    - {keyword: "multi-domain", count: 2}
+    - {keyword: "low vision", count: 2}
+    - {keyword: "landmarks", count: 2}
+    - {keyword: "autonomous cars", count: 2}
+    - {keyword: "authoring tools", count: 2}
+    - {keyword: "adaptive visualization", count: 2}
+    - {keyword: "web apps", count: 1}
+    - {keyword: "wai-aria", count: 1}
+    - {keyword: "voip apps", count: 1}
+    - {keyword: "visualization literacy", count: 1}
+    - {keyword: "visual parsing", count: 1}
+    - {keyword: "visual languages", count: 1}
+    - {keyword: "video magnifiers", count: 1}
+    - {keyword: "user-in-the-loop", count: 1}
+    - {keyword: "usenet news", count: 1}
+    - {keyword: "url", count: 1}
+    - {keyword: "transformer", count: 1}
+    - {keyword: "student progress tracking", count: 1}
+    - {keyword: "structured data manipulation", count: 1}
+    - {keyword: "spotify", count: 1}
+    - {keyword: "speech interfaces", count: 1}
+    - {keyword: "spatial pattern recognition", count: 1}
+    - {keyword: "sound effects", count: 1}
+    - {keyword: "smart bicycles", count: 1}
+    - {keyword: "single page graphic design", count: 1}
+    - {keyword: "selection", count: 1}
+    - {keyword: "screen magnifiers", count: 1}
+    - {keyword: "robust input interpretation", count: 1}
+    - {keyword: "recommender/filtering systems", count: 1}
+    - {keyword: "predictive text", count: 1}
+    - {keyword: "phone number", count: 1}
+    - {keyword: "phone apps", count: 1}
+    - {keyword: "personal characteristics", count: 1}
+    - {keyword: "object-oriented interface", count: 1}
+    - {keyword: "music streaming services", count: 1}
+    - {keyword: "museum applications", count: 1}
+    - {keyword: "multiple perspectives", count: 1}
+    - {keyword: "multi-platform support", count: 1}
+    - {keyword: "modeling attention", count: 1}
+    - {keyword: "methods of engagement", count: 1}
+    - {keyword: "learning by interaction", count: 1}
+    - {keyword: "learning analytics dashboards", count: 1}
+    - {keyword: "intent detection", count: 1}
+    - {keyword: "intelligent multimodal interfaces", count: 1}
+    - {keyword: "human-machine interface", count: 1}
+    - {keyword: "guidance", count: 1}
+    - {keyword: "goal-based scenarios", count: 1}
+    - {keyword: "geographic name", count: 1}
+    - {keyword: "generative model", count: 1}
+    - {keyword: "game", count: 1}
+    - {keyword: "email address", count: 1}
+    - {keyword: "electronic catalogs", count: 1}
+    - {keyword: "educational systems", count: 1}
+    - {keyword: "educational recommender systems", count: 1}
+    - {keyword: "digital assistant", count: 1}
+    - {keyword: "design-by-instance", count: 1}
+    - {keyword: "design automation", count: 1}
+    - {keyword: "date", count: 1}
+    - {keyword: "datamining and machine learning", count: 1}
+    - {keyword: "cyclist", count: 1}
+    - {keyword: "curriculum mapping", count: 1}
+    - {keyword: "contextual", count: 1}
+    - {keyword: "context-sensitive help", count: 1}
+    - {keyword: "context-aware recommendation", count: 1}
+    - {keyword: "content effects of intelligent systems", count: 1}
+    - {keyword: "branding", count: 1}
+    - {keyword: "banner design", count: 1}
+    - {keyword: "av", count: 1}
+    - {keyword: "ai-powered interfaces", count: 1}
+    - {keyword: "adaptive tutoring", count: 1}
+    - {keyword: "adaptable user interfaces", count: 1}
+    - {keyword: "accessible videos", count: 1}
+    - {keyword: "acceptance model", count: 1}
+3:
+  title: "XAIVIER: Time Series Classifier Verification with Faithful Explainable AI"
+  priorPapers:
+    - {year: 2021, title: "Designing a Sensor Glove Using Deep Learning"}
+    - {year: 2015, title: "VizRec: A Two-Stage Recommender System for Personalized Visualizations"}
+    - {year: 2016, title: "Rank As You Go: User-Driven Exploration of Search Results"}
+    - {year: 2023, title: "Intelligent User Interface for Decision Support in Drug Development"}
+    - {year: 2019, title: "Background perception and comprehension of symbols conveyed through vibrotactile wearable displays"}
+    - {year: 2020, title: "Understanding the effects of control and transparency in searching as learning"}
+    - {year: 2018, title: "A Study on User-Controllable Social Exploratory Search"}
+    - {year: 2018, title: "Investigating Interactions for Text Recognition using a Vibrotactile Wearable Display"}
+    - {year: 2017, title: "WikiLyzer: Interactive Information Quality Assessment in Wikipedia"}
+  priorKeywords:
+    - {keyword: "machine learning", count: 97}
+    - {keyword: "recommender systems", count: 81}
+    - {keyword: "natural language processing", count: 42}
+    - {keyword: "information retrieval", count: 30}
+    - {keyword: "deep learning", count: 29}
+    - {keyword: "recommender system", count: 20}
+    - {keyword: "recommendation", count: 20}
+    - {keyword: "social media", count: 18}
+    - {keyword: "exploratory search", count: 18}
+    - {keyword: "multimodal interaction", count: 17}
+    - {keyword: "collaborative filtering", count: 14}
+    - {keyword: "twitter", count: 12}
+    - {keyword: "context-awareness", count: 12}
+    - {keyword: "explanation", count: 11}
+    - {keyword: "chatbot", count: 11}
+    - {keyword: "task models", count: 10}
+    - {keyword: "user modelling", count: 8}
+    - {keyword: "user evaluation", count: 7}
+    - {keyword: "natural language interface", count: 7}
+    - {keyword: "adaptive systems", count: 6}
+    - {keyword: "automotive", count: 5}
+    - {keyword: "aac", count: 5}
+    - {keyword: "web 2.0", count: 4}
+    - {keyword: "sensors", count: 4}
+    - {keyword: "natural language understanding", count: 4}
+    - {keyword: "hypermedia", count: 4}
+    - {keyword: "dual reality", count: 4}
+    - {keyword: "semantic search", count: 3}
+    - {keyword: "reliability", count: 3}
+    - {keyword: "narrative", count: 3}
+    - {keyword: "multi-touch", count: 3}
+    - {keyword: "model-based design", count: 3}
+    - {keyword: "database", count: 3}
+    - {keyword: "bayesian network", count: 3}
+    - {keyword: "touch screen", count: 2}
+    - {keyword: "tabletop", count: 2}
+    - {keyword: "semantic networks", count: 2}
+    - {keyword: "recommender interfaces", count: 2}
+    - {keyword: "nlg", count: 2}
+    - {keyword: "multimodal input interpretation", count: 2}
+    - {keyword: "inertial sensing", count: 2}
+    - {keyword: "hand detection", count: 2}
+    - {keyword: "ethnography", count: 2}
+    - {keyword: "web history", count: 1}
+    - {keyword: "video coding support", count: 1}
+    - {keyword: "task browser", count: 1}
+    - {keyword: "tag", count: 1}
+    - {keyword: "system optimisation", count: 1}
+    - {keyword: "surveillance camera optimization", count: 1}
+    - {keyword: "story", count: 1}
+    - {keyword: "stereo vision", count: 1}
+    - {keyword: "social attention", count: 1}
+    - {keyword: "smart spaces", count: 1}
+    - {keyword: "smart phone", count: 1}
+    - {keyword: "semantic clustering", count: 1}
+    - {keyword: "robust input interpretation", count: 1}
+    - {keyword: "museum applications", count: 1}
+    - {keyword: "monocular video based", count: 1}
+    - {keyword: "monitoring tool", count: 1}
+    - {keyword: "mobile spatial interaction", count: 1}
+    - {keyword: "mobile ontology", count: 1}
+    - {keyword: "luis", count: 1}
+    - {keyword: "life-logging", count: 1}
+    - {keyword: "layout design", count: 1}
+    - {keyword: "joystick", count: 1}
+    - {keyword: "intelligent multimodal interfaces", count: 1}
+    - {keyword: "human figure construction", count: 1}
+    - {keyword: "hand registration", count: 1}
+    - {keyword: "genetic algorithm(ga)", count: 1}
+    - {keyword: "genecic programming", count: 1}
+    - {keyword: "finger registration", count: 1}
+    - {keyword: "eye-tracking study", count: 1}
+    - {keyword: "event generation", count: 1}
+    - {keyword: "ergonomic", count: 1}
+    - {keyword: "dataset imbalance", count: 1}
+    - {keyword: "controller", count: 1}
+    - {keyword: "context-sensitive help", count: 1}
+    - {keyword: "conditional preference", count: 1}
+    - {keyword: "computerized adaptive testing", count: 1}
+    - {keyword: "classification accuracy", count: 1}
+    - {keyword: "children with asd", count: 1}
+    - {keyword: "brand", count: 1}
+    - {keyword: "automatic clustering", count: 1}
+    - {keyword: "attitude", count: 1}
+    - {keyword: "adaptive learning guide", count: 1}
+    - {keyword: "adaptable user interfaces", count: 1}
+    - {keyword: "activity based computing", count: 1}
+4:
+  title: "Impact of Personalized AI Chat Assistant on Mediated Human-Human Textual Conversations"
+5:
+  title: "Utilizing Large Language Models in Tribal Emergency Management"
+  priorPapers:
+    - {year: 2017, title: "An Interactive and Interpretable Interface for Diversity in Recommender Systems"}
+    - {year: 2019, title: "Explaining recommendations in an interactive hybrid social recommender"}
+    - {year: 2018, title: "Beyond the Ranked List: User-Driven Exploration and Diversification of Social Recommendation"}
+    - {year: 2018, title: "Explaining Social Recommendations to Casual Users: Design Principles and Opportunities"}
+  priorKeywords:
+    - {keyword: "machine learning", count: 97}
+    - {keyword: "affective computing", count: 29}
+    - {keyword: "eye tracking", count: 23}
+    - {keyword: "information filtering", count: 14}
+    - {keyword: "human-centered ai", count: 10}
+    - {keyword: "text entry", count: 9}
+    - {keyword: "recommender interfaces", count: 2}
+    - {keyword: "context-sensitive", count: 2}
+    - {keyword: "voicemail processing", count: 1}
+    - {keyword: "visual feedback", count: 1}
+    - {keyword: "layout design", count: 1}
+    - {keyword: "hypertext browsing", count: 1}
+    - {keyword: "gaze input", count: 1}
+    - {keyword: "eye-tracking study", count: 1}
+    - {keyword: "eye typing", count: 1}
+    - {keyword: "dwell time", count: 1}
+    - {keyword: "design-by-instance", count: 1}
+    - {keyword: "ai-powered interfaces", count: 1}
+6:
+  title: "CHARM: A Group Decision Making Support Chatbot"
+  priorPapers:
+    - {year: 2011, title: "Context relevance assessment for recommender systems"}
+    - {year: 2019, title: "Prediction of music pairwise preferences from facial expressions"}
+    - {year: 2020, title: "Enhancing Travel Experience Leveraging on-line and off-line Users Behaviour Data"}
+    - {year: 2018, title: "User Behaviour Analysis in a Simulated IoT Augmented Space"}
+    - {year: 2008, title: "Long-term and session-specific user preferences in a mobile recommender system"}
+    - {year: 2017, title: "GUI Design for IDE Command Recommendations"}
+  priorKeywords:
+    - {keyword: "machine learning", count: 97}
+    - {keyword: "user study", count: 35}
+    - {keyword: "affective computing", count: 29}
+    - {keyword: "virtual reality", count: 26}
+    - {keyword: "recommender system", count: 20}
+    - {keyword: "information filtering", count: 14}
+    - {keyword: "explainable artificial intelligence", count: 10}
+    - {keyword: "navigation", count: 9}
+    - {keyword: "web", count: 8}
+    - {keyword: "interface", count: 7}
+    - {keyword: "gesture", count: 7}
+    - {keyword: "human-machine interaction", count: 5}
+    - {keyword: "virtual agents", count: 4}
+    - {keyword: "pointing", count: 4}
+    - {keyword: "mobile device", count: 4}
+    - {keyword: "diversity", count: 3}
+    - {keyword: "user adaptivity", count: 2}
+    - {keyword: "resource adaptivity", count: 2}
+    - {keyword: "context-sensitive", count: 2}
+    - {keyword: "voicemail processing", count: 1}
+    - {keyword: "plan inference", count: 1}
+    - {keyword: "lexical entrainment", count: 1}
+    - {keyword: "lexical alignment", count: 1}
+    - {keyword: "interactive help systems", count: 1}
+    - {keyword: "icons", count: 1}
+    - {keyword: "hypertext browsing", count: 1}
+    - {keyword: "hyperlinks", count: 1}
+    - {keyword: "hybrid user interfaces", count: 1}
+    - {keyword: "directed search", count: 1}
+    - {keyword: "configuration problem", count: 1}
+7:
+  title: "A Bicycle Navigation System for Analyzing the Comfort Level of the Cyclist"
+  priorPapers:
+    - {year: 2019, title: "Movie trailer analysis based on editing features of movies"}
+    - {year: 2019, title: "A proposal of spatial operators for a collaborative map search system"}
+    - {year: 2019, title: "Second workshop on user interfaces for spatial and temporal data analysis (UISTDA2019)"}
+    - {year: 2020, title: "Dynamic Video Tag Cloud: A Cooking Support System for Recipe Short Videos"}
+    - {year: 2018, title: "Language Density Driven Route Navigation System for Pedestrians based on Twitter Data"}
+    - {year: 2018, title: "A Recommender System based on Detected Users Complaints by Analyzing Reviews"}
+  priorKeywords:
+    - {keyword: "machine learning", count: 97}
+    - {keyword: "recommender systems", count: 81}
+    - {keyword: "personalization", count: 57}
+    - {keyword: "affective computing", count: 29}
+    - {keyword: "trust", count: 18}
+    - {keyword: "information filtering", count: 14}
+    - {keyword: "tangible interaction", count: 8}
+    - {keyword: "location-based services", count: 8}
+    - {keyword: "avatar", count: 5}
+    - {keyword: "usability evaluation", count: 4}
+    - {keyword: "user acceptance", count: 3}
+    - {keyword: "projector-camera system", count: 2}
+    - {keyword: "interface evaluation", count: 2}
+    - {keyword: "hri", count: 2}
+    - {keyword: "context-sensitive", count: 2}
+    - {keyword: "vr", count: 1}
+    - {keyword: "voicemail processing", count: 1}
+    - {keyword: "spatial augmented reality (sar)", count: 1}
+    - {keyword: "smart grid", count: 1}
+    - {keyword: "safety aspects visualization", count: 1}
+    - {keyword: "privacy preferences", count: 1}
+    - {keyword: "mobile application evaluation", count: 1}
+    - {keyword: "location-sharing services", count: 1}
+    - {keyword: "load shifting", count: 1}
+    - {keyword: "immersive environment", count: 1}
+    - {keyword: "hypertext browsing", count: 1}
+    - {keyword: "essavis", count: 1}
+    - {keyword: "energy tariffs", count: 1}
+    - {keyword: "embedded systems", count: 1}
+    - {keyword: "demand response", count: 1}
+    - {keyword: "collaborative environment", count: 1}
+    - {keyword: "calibration", count: 1}
+    - {keyword: "cagd", count: 1}
+8:
+  title: "Evaluating ADHD Users' Experience with Recommender Systems"
+  priorPapers:
+    - {year: 2013, title: "Helping users with information disclosure decisions: potential for adaptation"}
+    - {year: 2016, title: "Evaluating Intelligent User Interfaces with User Experiments"}
+    - {year: 2019, title: "IUIoT: intelligent user interfaces for IoT"}
+    - {year: 2014, title: "Location sharing privacy preference: analysis and personalized recommendation"}
+    - {year: 2022, title: "Building Trust in Interactive Machine Learning via User Contributed Interpretable Rules"}
+    - {year: 2018, title: "A Data-Driven Approach to Developing IoT Privacy-Setting Interfaces"}
+    - {year: 2018, title: "Scenario Context v/s Framing and Defaults in Managing Privacy in Household IoT"}
+    - {year: 2022, title: "The Diversity of Music Recommender Systems"}
+  priorKeywords:
+    - {keyword: "recommender systems", count: 81}
+    - {keyword: "personalization", count: 57}
+    - {keyword: "user modeling", count: 50}
+    - {keyword: "user interface", count: 39}
+    - {keyword: "user interfaces", count: 37}
+    - {keyword: "intelligent user interfaces", count: 35}
+    - {keyword: "hci", count: 28}
+    - {keyword: "user experience", count: 27}
+    - {keyword: "sketch recognition", count: 19}
+    - {keyword: "explanations", count: 19}
+    - {keyword: "mobile", count: 18}
+    - {keyword: "evaluation", count: 18}
+    - {keyword: "adaptation", count: 15}
+    - {keyword: "knowledge acquisition", count: 14}
+    - {keyword: "twitter", count: 12}
+    - {keyword: "intelligent systems", count: 12}
+    - {keyword: "design", count: 12}
+    - {keyword: "eeg", count: 11}
+    - {keyword: "chatbot", count: 11}
+    - {keyword: "conversational agent", count: 9}
+    - {keyword: "social networks", count: 8}
+    - {keyword: "sketching", count: 8}
+    - {keyword: "planning", count: 8}
+    - {keyword: "user evaluation", count: 7}
+    - {keyword: "sketch understanding", count: 6}
+    - {keyword: "individual differences", count: 6}
+    - {keyword: "bayesian networks", count: 6}
+    - {keyword: "adaptive systems", count: 6}
+    - {keyword: "recommendations", count: 5}
+    - {keyword: "adaptivity", count: 5}
+    - {keyword: "web 2.0", count: 4}
+    - {keyword: "natural language understanding", count: 4}
+    - {keyword: "dialog", count: 4}
+    - {keyword: "adaptive agents", count: 4}
+    - {keyword: "pda", count: 3}
+    - {keyword: "modeling and prediction of user behavior", count: 3}
+    - {keyword: "document processing", count: 3}
+    - {keyword: "cad", count: 3}
+    - {keyword: "wearable technology", count: 2}
+    - {keyword: "video summarization", count: 2}
+    - {keyword: "spatial", count: 2}
+    - {keyword: "sns", count: 2}
+    - {keyword: "semantic workflows", count: 2}
+    - {keyword: "planning and plan recognition", count: 2}
+    - {keyword: "multimodal input interpretation", count: 2}
+    - {keyword: "mindfulness", count: 2}
+    - {keyword: "knowledge-based recommenders", count: 2}
+    - {keyword: "fnirs", count: 2}
+    - {keyword: "data analysis", count: 2}
+    - {keyword: "visual stylometry", count: 1}
+    - {keyword: "temporal", count: 1}
+    - {keyword: "technology facilitated self-awareness", count: 1}
+    - {keyword: "tablet pcs", count: 1}
+    - {keyword: "robust input interpretation", count: 1}
+    - {keyword: "reflective journalism", count: 1}
+    - {keyword: "people recommendations", count: 1}
+    - {keyword: "pen-input computing", count: 1}
+    - {keyword: "music listening", count: 1}
+    - {keyword: "music creation", count: 1}
+    - {keyword: "multi-attribute utility theory (maut)", count: 1}
+    - {keyword: "modeling attention", count: 1}
+    - {keyword: "model building", count: 1}
+    - {keyword: "intelligent multimodal interfaces", count: 1}
+    - {keyword: "intelligent interactive environments", count: 1}
+    - {keyword: "intelligent help systems", count: 1}
+    - {keyword: "help intelligent assistants for complex tasks", count: 1}
+    - {keyword: "context-sensitive help", count: 1}
+    - {keyword: "brain computer interface", count: 1}
+    - {keyword: "artistic style", count: 1}
+    - {keyword: "aids for cognitive behavioral therapy", count: 1}
+    - {keyword: "adaptive tutoring", count: 1}
+9:
+  title: "CARE: An Infrastructure for Evaluation of Carousel-Based Recommender Interfaces"
+  priorPapers:
+    - {year: 2019, title: "User-controlled hybrid recommendation for academic papers"}
+  priorKeywords:
+10:
+  title: "Search Result Presentation for Non-Native Language Documents"
+  priorPapers:
+    - {year: 2019, title: "A proposal of spatial operators for a collaborative map search system"}
+    - {year: 2010, title: "WildThumb: a web browser supporting efficient task management on wide displays"}
+  priorKeywords:
+11:
+  title: "Generative AI syntheses of platform, content, visuals, and kinetics for cyberphysical computationally-mediated posters and broader applications"
+  priorKeywords:
+    - {keyword: "user study", count: 35}
+    - {keyword: "crowdsourcing", count: 22}
+    - {keyword: "collaboration", count: 22}
+    - {keyword: "recommender system", count: 20}
+    - {keyword: "text entry", count: 9}
+    - {keyword: "intelligent visualization", count: 5}
+    - {keyword: "recommender", count: 2}
+    - {keyword: "web interface", count: 1}
+    - {keyword: "surveillance", count: 1}
+    - {keyword: "sport climbing", count: 1}
+    - {keyword: "presence", count: 1}
+    - {keyword: "phrase sets", count: 1}
+    - {keyword: "mental images", count: 1}
+    - {keyword: "keyboards", count: 1}
+12:
+  title: "ExpressEdit: Video Editing with Natural Language and Sketching"
+  priorPapers:
+    - {year: 2019, title: "Popup: reconstructing 3D video using particle filtering to aggregate crowd responses"}
+    - {year: 2022, title: "SoftVideo: Improving the Learning Experience of Software Tutorial Videos with Collective Interaction Data"}
+    - {year: 2018, title: "Two Tools are Better Than One: Tool Diversity as a Means of Improving Aggregate Crowd Performance"}
+    - {year: 2023, title: "Large-Scale Text-to-Image Generation Models for Visual Artists’ Creative Works"}
+  priorKeywords:
+    - {keyword: "recommender systems", count: 81}
+    - {keyword: "user interfaces", count: 37}
+    - {keyword: "user studies", count: 24}
+    - {keyword: "interaction design", count: 17}
+    - {keyword: "ubiquitous computing", count: 14}
+    - {keyword: "education", count: 13}
+    - {keyword: "learning", count: 10}
+    - {keyword: "tangible interaction", count: 8}
+    - {keyword: "video games", count: 7}
+    - {keyword: "spatial reasoning", count: 7}
+    - {keyword: "children", count: 7}
+    - {keyword: "smart objects", count: 6}
+    - {keyword: "cognitive science", count: 2}
+13:
+  title: "Exploring AI-assisted Ideation and Prototyping for Choreography"
+  priorPapers:
+    - {year: 2023, title: "Living Memories: AI-Generated Characters as Digital Mementos"}
+  priorKeywords:
+    - {keyword: "text analysis", count: 4}
+    - {keyword: "visual text analytics", count: 2}
+    - {keyword: "interactive visual text mining", count: 1}
+    - {keyword: "heterogeneous text", count: 1}
+    - {keyword: "exploratory text mining", count: 1}
+14:
+  title: "Can LLMs Infer Domain Knowledge from Code Exemplars? A Preliminary Study"
+  priorPapers:
+    - {year: 2016, title: "ScopeG: A Mobile Application for Exploration and Comparison of Personality Traits"}
+    - {year: 2013, title: "PersonalityViz: a visualization tool to analyze peoples personality with social media"}
+    - {year: 2019, title: "Photo sleuth: combining human expertise and face recognition to identify historical portraits"}
+    - {year: 2020, title: "DLS Magician: Promoting Early-Stage Collaboration by Automating UI Design Process in an E   amp;P Environment"}
+  priorKeywords:
+    - {keyword: "recommender systems", count: 81}
+    - {keyword: "visualization", count: 42}
+    - {keyword: "user interfaces", count: 37}
+    - {keyword: "user study", count: 35}
+    - {keyword: "interactive machine learning", count: 28}
+    - {keyword: "user experience", count: 27}
+    - {keyword: "evaluation", count: 18}
+    - {keyword: "visual analytics", count: 16}
+    - {keyword: "education", count: 13}
+    - {keyword: "speech recognition", count: 11}
+    - {keyword: "learning", count: 10}
+    - {keyword: "sentiment analysis", count: 8}
+    - {keyword: "interactive visualization", count: 8}
+    - {keyword: "video games", count: 7}
+    - {keyword: "spatial reasoning", count: 7}
+    - {keyword: "dialogue system", count: 7}
+    - {keyword: "children", count: 7}
+    - {keyword: "explanation interfaces", count: 4}
+    - {keyword: "user profiles", count: 3}
+    - {keyword: "need for cognition", count: 3}
+    - {keyword: "matrix factorization", count: 3}
+    - {keyword: "games with a purpose", count: 3}
+    - {keyword: "complex systems", count: 3}
+    - {keyword: "player profiling", count: 2}
+    - {keyword: "player modeling", count: 2}
+    - {keyword: "cross-modal interaction", count: 2}
+    - {keyword: "confidence measures", count: 2}
+    - {keyword: "cognitive science", count: 2}
+    - {keyword: "autonomous cars", count: 2}
+    - {keyword: "takeover of control", count: 1}
+    - {keyword: "product reviews", count: 1}
+    - {keyword: "pen-based gestures", count: 1}
+    - {keyword: "marking menus", count: 1}
+    - {keyword: "interactive recommending", count: 1}
+    - {keyword: "intelligent visual interfaces", count: 1}
+    - {keyword: "inclusive design.", count: 1}
+    - {keyword: "game design.", count: 1}
+    - {keyword: "exploratory analysis", count: 1}
+    - {keyword: "direct interaction", count: 1}
+    - {keyword: "cursive gestures", count: 1}
+    - {keyword: "computer-assisted speech transcription", count: 1}
+    - {keyword: "art and entertainment", count: 1}
+    - {keyword: "3d visualizations", count: 1}
+15:
+  title: "Multimodal Target Prediction for Rapid Human-Robot Interaction"
+  priorPapers:
+    - {year: 2012, title: "Developing intelligent user interfaces for e-accessibility and e-inclusion"}
+    - {year: 2023, title: "Comparison of Target Prediction in VR and MR Using Inverse Reinforcement Learning"}
+    - {year: 2018, title: "Eye Gaze Controlled MFD for Military Aviation"}
+    - {year: 2010, title: "Evaluating the design of inclusive interfaces by simulation"}
+    - {year: 2022, title: "Distraction Detection in Automotive Environment Using Appearance-Based Gaze Estimation"}
+    - {year: 2022, title: "PARKS-Gaze - A Precision-Focused Gaze Estimation Dataset in the Wild under Extreme Head Poses"}
+    - {year: 2008, title: "Automatic evaluation of assistive interfaces"}
+  priorKeywords:
+    - {keyword: "machine learning", count: 97}
+    - {keyword: "programming by demonstration", count: 24}
+    - {keyword: "information visualization", count: 24}
+    - {keyword: "gesture recognition", count: 23}
+    - {keyword: "eye-tracking", count: 15}
+    - {keyword: "adaptation", count: 15}
+    - {keyword: "speech recognition", count: 11}
+    - {keyword: "human-ai collaboration", count: 10}
+    - {keyword: "information integration", count: 5}
+    - {keyword: "gesture-based interaction", count: 5}
+    - {keyword: "semantics", count: 4}
+    - {keyword: "information access", count: 3}
+    - {keyword: "wrapper induction", count: 2}
+    - {keyword: "template matching", count: 2}
+    - {keyword: "skill acquisition", count: 2}
+    - {keyword: "misinformation", count: 2}
+    - {keyword: "information seeking", count: 2}
+    - {keyword: "covid-19", count: 2}
+    - {keyword: "spoken language interfaces", count: 1}
+    - {keyword: "rotation invariance", count: 1}
+    - {keyword: "pragmatic language communication", count: 1}
+    - {keyword: "plan inference", count: 1}
+    - {keyword: "nearest neighbor approach", count: 1}
+    - {keyword: "interactive semantics", count: 1}
+    - {keyword: "interactive help systems", count: 1}
+    - {keyword: "information assistants", count: 1}
+    - {keyword: "expert sourcing", count: 1}
+    - {keyword: "embodied ai", count: 1}
+    - {keyword: "crisis informatics", count: 1}
+    - {keyword: "configuration problem", count: 1}
+    - {keyword: "ai-powered chatbot", count: 1}
+16:
+  title: "Training Adults with Mild to Moderate Dementia in ChatGPT: Exploring Best Practices"
+  priorKeywords:
+    - {keyword: "text summarization", count: 3}
+    - {keyword: "social summarization method", count: 1}
+    - {keyword: "social relationship", count: 1}
+    - {keyword: "online auction", count: 1}
+    - {keyword: "feedback comments", count: 1}
+17:
+  title: ""
+18:
+  title: "Measuring Heterogeneity in Language Modeling for Enhanced Chatbot Personalization"
+  priorKeywords:
+    - {keyword: "recommender systems", count: 81}
+    - {keyword: "human-robot interaction", count: 16}
+    - {keyword: "cognitive load", count: 9}
+    - {keyword: "social and cultural inclusion", count: 3}
+    - {keyword: "interactive techniques", count: 3}
+    - {keyword: "handwriting", count: 3}
+    - {keyword: "stroke", count: 1}
+    - {keyword: "inter-stroke", count: 1}
+19:
+  title: "MitFlex- A Human-AI Collaborative System to Support Mitosis Assessment in Pathology"
+  priorPapers:
+    - {year: 2021, title: "XAlgo: a Design Probe of Explaining Algorithms’ Internal States via Question-Answering"}
+    - {year: 2021, title: "OralViewer: 3D Demonstration of Dental Surgeries for Patient Education with Oral Cavity Reconstruction from a 2D Panoramic X-ray"}
+    - {year: 2009, title: "Hand gesture recognition and virtual game control based on 3D accelerometer and EMG sensors"}
+    - {year: 2016, title: "SweepSense: Ad Hoc Configuration Sensing Using Reflected Swept-Frequency Ultrasonics"}
+    - {year: 2019, title: "Automatic exam grading by a mobile camera: snap a picture to grade your tests"}
+  priorKeywords:
+    - {keyword: "user modeling", count: 50}
+    - {keyword: "natural language processing", count: 42}
+    - {keyword: "hci", count: 28}
+    - {keyword: "mobile", count: 18}
+    - {keyword: "multimodal interaction", count: 17}
+    - {keyword: "interaction design", count: 17}
+    - {keyword: "speech recognition", count: 11}
+    - {keyword: "reinforcement learning", count: 11}
+    - {keyword: "intelligent tutoring system", count: 8}
+    - {keyword: "user evaluation", count: 7}
+    - {keyword: "recognition", count: 6}
+    - {keyword: "e-learning", count: 6}
+    - {keyword: "decision-making", count: 5}
+    - {keyword: "adaptivity", count: 5}
+    - {keyword: "touch", count: 4}
+    - {keyword: "semantics", count: 4}
+    - {keyword: "dual reality", count: 4}
+    - {keyword: "computational design", count: 4}
+    - {keyword: "pervasive computing", count: 3}
+    - {keyword: "pda", count: 3}
+    - {keyword: "mid-air gestures", count: 3}
+    - {keyword: "sketch", count: 2}
+    - {keyword: "medical healthcare", count: 2}
+    - {keyword: "keystroke-level modelling", count: 2}
+    - {keyword: "inertial sensing", count: 2}
+    - {keyword: "head movements", count: 2}
+    - {keyword: "computational evaluation", count: 2}
+    - {keyword: "web apps", count: 1}
+    - {keyword: "voip apps", count: 1}
+    - {keyword: "tdcs", count: 1}
+    - {keyword: "stereo vision", count: 1}
+    - {keyword: "spoken language interfaces", count: 1}
+    - {keyword: "speech interfaces", count: 1}
+    - {keyword: "smart spaces", count: 1}
+    - {keyword: "semantic representation", count: 1}
+    - {keyword: "scaffolding generation", count: 1}
+    - {keyword: "reliance on automation", count: 1}
+    - {keyword: "reading mode", count: 1}
+    - {keyword: "phone apps", count: 1}
+    - {keyword: "pen", count: 1}
+    - {keyword: "page layout", count: 1}
+    - {keyword: "neurostimulation", count: 1}
+    - {keyword: "multi-user interaction", count: 1}
+    - {keyword: "monitoring tool", count: 1}
+    - {keyword: "mobile spatial interaction", count: 1}
+    - {keyword: "low vision people", count: 1}
+    - {keyword: "learning techniques.", count: 1}
+    - {keyword: "large displays", count: 1}
+    - {keyword: "interactive semantics", count: 1}
+    - {keyword: "inference and reasoning", count: 1}
+    - {keyword: "game as research method", count: 1}
+    - {keyword: "facial movements", count: 1}
+    - {keyword: "expert advice", count: 1}
+    - {keyword: "drowsiness estimation", count: 1}
+    - {keyword: "automated decision aids", count: 1}
+    - {keyword: "accessible comics", count: 1}
+20:
+  title: "Notebook AI- Facilitating and Monitoring Explicit Lightweight Student GPT Help Requests During Programming Exercises"
+21:
+  title: ""
+22:
+  title: ""
+23:
+  title: ""
+24:
+  title: "Perceived Trustworthiness of Human vs. AI Instructors in Digital Privacy Education for Older Adults"
+  priorPapers:
+    - {year: 2013, title: "Helping users with information disclosure decisions: potential for adaptation"}
+    - {year: 2016, title: "Evaluating Intelligent User Interfaces with User Experiments"}
+    - {year: 2019, title: "IUIoT: intelligent user interfaces for IoT"}
+    - {year: 2014, title: "Location sharing privacy preference: analysis and personalized recommendation"}
+    - {year: 2022, title: "Building Trust in Interactive Machine Learning via User Contributed Interpretable Rules"}
+    - {year: 2018, title: "A Data-Driven Approach to Developing IoT Privacy-Setting Interfaces"}
+    - {year: 2018, title: "Scenario Context v/s Framing and Defaults in Managing Privacy in Household IoT"}
+    - {year: 2022, title: "The Diversity of Music Recommender Systems"}
+  priorKeywords:
+    - {keyword: "recommender systems", count: 81}
+    - {keyword: "personalization", count: 57}
+    - {keyword: "user modeling", count: 50}
+    - {keyword: "user interface", count: 39}
+    - {keyword: "user interfaces", count: 37}
+    - {keyword: "intelligent user interfaces", count: 35}
+    - {keyword: "hci", count: 28}
+    - {keyword: "user experience", count: 27}
+    - {keyword: "sketch recognition", count: 19}
+    - {keyword: "explanations", count: 19}
+    - {keyword: "mobile", count: 18}
+    - {keyword: "evaluation", count: 18}
+    - {keyword: "adaptation", count: 15}
+    - {keyword: "knowledge acquisition", count: 14}
+    - {keyword: "twitter", count: 12}
+    - {keyword: "intelligent systems", count: 12}
+    - {keyword: "design", count: 12}
+    - {keyword: "eeg", count: 11}
+    - {keyword: "chatbot", count: 11}
+    - {keyword: "conversational agent", count: 9}
+    - {keyword: "social networks", count: 8}
+    - {keyword: "sketching", count: 8}
+    - {keyword: "planning", count: 8}
+    - {keyword: "user evaluation", count: 7}
+    - {keyword: "sketch understanding", count: 6}
+    - {keyword: "individual differences", count: 6}
+    - {keyword: "bayesian networks", count: 6}
+    - {keyword: "adaptive systems", count: 6}
+    - {keyword: "recommendations", count: 5}
+    - {keyword: "adaptivity", count: 5}
+    - {keyword: "web 2.0", count: 4}
+    - {keyword: "natural language understanding", count: 4}
+    - {keyword: "dialog", count: 4}
+    - {keyword: "adaptive agents", count: 4}
+    - {keyword: "pda", count: 3}
+    - {keyword: "modeling and prediction of user behavior", count: 3}
+    - {keyword: "document processing", count: 3}
+    - {keyword: "cad", count: 3}
+    - {keyword: "wearable technology", count: 2}
+    - {keyword: "video summarization", count: 2}
+    - {keyword: "spatial", count: 2}
+    - {keyword: "sns", count: 2}
+    - {keyword: "semantic workflows", count: 2}
+    - {keyword: "planning and plan recognition", count: 2}
+    - {keyword: "multimodal input interpretation", count: 2}
+    - {keyword: "mindfulness", count: 2}
+    - {keyword: "knowledge-based recommenders", count: 2}
+    - {keyword: "fnirs", count: 2}
+    - {keyword: "data analysis", count: 2}
+    - {keyword: "visual stylometry", count: 1}
+    - {keyword: "temporal", count: 1}
+    - {keyword: "technology facilitated self-awareness", count: 1}
+    - {keyword: "tablet pcs", count: 1}
+    - {keyword: "robust input interpretation", count: 1}
+    - {keyword: "reflective journalism", count: 1}
+    - {keyword: "people recommendations", count: 1}
+    - {keyword: "pen-input computing", count: 1}
+    - {keyword: "music listening", count: 1}
+    - {keyword: "music creation", count: 1}
+    - {keyword: "multi-attribute utility theory (maut)", count: 1}
+    - {keyword: "modeling attention", count: 1}
+    - {keyword: "model building", count: 1}
+    - {keyword: "intelligent multimodal interfaces", count: 1}
+    - {keyword: "intelligent interactive environments", count: 1}
+    - {keyword: "intelligent help systems", count: 1}
+    - {keyword: "help intelligent assistants for complex tasks", count: 1}
+    - {keyword: "context-sensitive help", count: 1}
+    - {keyword: "brain computer interface", count: 1}
+    - {keyword: "artistic style", count: 1}
+    - {keyword: "aids for cognitive behavioral therapy", count: 1}
+    - {keyword: "adaptive tutoring", count: 1}
+25:
+  title: ""
+26:
+  title: "Enhancing Digital Privacy Education for Older Adults"
+27:
+  title: ""
+28:
+  title: ""
+29:
+  title: "Developing Resilience through Retiree Volunteerism"
+30:
+  title: ""
+31:
+  title: ""
+32:
+  title: ""
+33:
+  title: ""
+34:
+  title: ""
