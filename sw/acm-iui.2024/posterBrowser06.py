@@ -72,7 +72,7 @@ class posterBrowser:
   metaTextFontColor   = (180, 180, 180)
   mtSubtitlesWH       = (1180, 48)
   mtSubtitlesX1       = 10
-  mtSubtitlesYs       = [380, 700, 1000]
+  mtSubtitlesYs       = [380, 705, 1000]
   mtSubtitleTxtOffset = (5, -2)
 
   mtPriorPapersOffset      = (20, 423)
@@ -92,7 +92,7 @@ class posterBrowser:
 
   cursorAnimDur       = .5
   posterAnimDur       = .75
-  #posterAnimDur      = 3.
+  #posterAnimDur       = 10.
   animTween           = 'accel_decel'
   requestMaximize     = True
 
@@ -107,8 +107,8 @@ class posterBrowser:
   lastPoster            = None
   activePoster          = 1
   cyclePosters          = True #automatically cycle between posters
-  #cyclePosterFrequency = 10.  #how frequently to make the cycling
-  cyclePosterFrequency  = 3.  #how frequently to make the cycling
+  cyclePosterFrequency = 10.  #how frequently to make the cycling
+  #cyclePosterFrequency  = 3.  #how frequently to make the cycling
 
   autoAdvanceSlides          = True
   cyclePosterAutolaunchDelay = 60. #after how many seconds should autolaunch begin
@@ -398,7 +398,7 @@ class posterBrowser:
             if key2 in priorPaper: 
               year = priorPaper[key2]
               yearStr = str(year)
-              print("Y:", yearStr, ppx, ppy)
+              #print("Y:", yearStr, ppx, ppy)
               screen.draw.text(yearStr, (ppx, ppy), color=tfc, fontname=tf, fontsize=tfs)
             ppy += self.priorPapersNewlineOffset
 
