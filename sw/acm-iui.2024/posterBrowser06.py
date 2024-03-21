@@ -70,6 +70,7 @@ class posterBrowser:
   metaTextFont        = "tcm"
   metaTextFontSize    = 40
   metaTextFontColor   = (180, 180, 180)
+  metaTextFontColor2  = (120, 120, 120)
   mtSubtitlesWH       = (1180, 48)
   mtSubtitlesX1       = 10
   mtSubtitlesYs       = [380, 705, 1000]
@@ -77,6 +78,7 @@ class posterBrowser:
 
   mtPriorPapersOffset      = (20, 423)
   priorPapersNewlineOffset = 40
+  priorPapersTitleOffset   = 105
   maxPriorPapers           = 7
 
   metaBlockOffset     = (0, 95)
@@ -380,10 +382,12 @@ class posterBrowser:
         screen.draw.text(subtitle, (tx6, ty6), color=tfc, fontname=tf, fontsize=tfs)
 
       mppo = self.mtPriorPapersOffset
+      ppto = self.priorPapersTitleOffset  
       ppx, ppy = bx + mppo[0], by + mppo[1]
 
       priorPapersIdx = 0
       maxPriorPapers = self.maxPriorPapers 
+      tfc2 = self.metaTextFontColor2  
 
       if pid in self.yPd: #priors metadata present
         yd  = self.yPd[pid]
@@ -399,7 +403,13 @@ class posterBrowser:
               year = priorPaper[key2]
               yearStr = str(year)
               #print("Y:", yearStr, ppx, ppy)
-              screen.draw.text(yearStr, (ppx, ppy), color=tfc, fontname=tf, fontsize=tfs)
+              screen.draw.text(yearStr, (ppx, ppy), color=tfc2, fontname=tf, fontsize=tfs)
+
+            key3 = 'title' 
+            if key3 in priorPaper: 
+              title = priorPaper[key3]
+              screen.draw.text(title, (ppx+ppto, ppy), color=tfc, fontname=tf, fontsize=tfs)
+              
             ppy += self.priorPapersNewlineOffset
 
     except:
