@@ -28,7 +28,7 @@ class posterBrowser:
 
   upshiftBottomVisualElements = True      #for debugging on high-res landscape-format display
   #upshiftBottomOffset         = (0, -2500) 
-  upshiftBottomOffset         = (0, -1500) 
+  upshiftBottomOffset         = (0, -1800) 
 
   topBlockPos          = (0, 0)
   upperHlBoxBasePos    = (13,218)
@@ -598,14 +598,16 @@ class posterBrowser:
 
     if self.lastHighlightedCoord is not None:
       lx, ly = self.lastHighlightedCoord
-      self.pmc.normalLightButton(lx,ly)
-      self.pmc.highlightDict[lx][ly] = False
+      if pb.useMidiController:
+        self.pmc.normalLightButton(lx,ly)
+        self.pmc.highlightDict[lx][ly] = False
       dx, dy = lx-rx, ly-(ry+1)
     else: dx, dy = None, None
 
     self.lastHighlightedCoord=(rx, ry+1)
-    self.pmc.highlightButton(  rx, ry+1)
-    self.pmc.highlightDict[rx][ry] = True
+    if pb.useMidiController:
+      self.pmc.highlightButton(  rx, ry+1)
+      self.pmc.highlightDict[rx][ry] = True
 
     self.displayPoster(dx, dy)
 
@@ -617,6 +619,24 @@ class posterBrowser:
     if key == keys.UP:    self.shiftCursorRel( 0, -1)
     if key == keys.DOWN:  self.shiftCursorRel( 0,  1)
 
+  ###################### on mouse down ######################
+
+  def on_mouse_down(self, pos):
+    x, y       = pos
+    pnp        = self.posterNormPos
+    pnpx, pnpy = pnp
+    
+    uhbbp          = self.upperHlBoxBasePos
+    uhbbpx, uhbbpy = uhbbp
+
+    uhbdp          = self.upperHlBoxDiffPos
+    uhbdpx, uhbdpy = uhbdp
+
+    if uhbbpy <= y <= pnpy: #upper poster thumbnail area
+      rx = int((x - uhbbpx) / uhbdpx)
+      ry = int((y - uhbbpy) / uhbdpy)
+      self.shiftCursorAbs(rx, ry)
+
 ######################## main ######################## 
  
 pb = posterBrowser()
@@ -627,7 +647,8 @@ def draw():
   screen.clear()
   pb.draw()
 
-def on_key_down(key): pb.on_key_down(key)
+def on_mouse_down(pos): pb.on_mouse_down(pos)
+def on_key_down(key):   pb.on_key_down(key)
 
 if pb.useMidiController:
   clock.schedule_interval(pb.poll, .05) #ask pygame to service midi polling
