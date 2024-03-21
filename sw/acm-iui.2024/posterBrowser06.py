@@ -46,7 +46,7 @@ class posterBrowser:
 
   #metaBlockNormPos    = (   0,   10)
   metaBlockNormPos   = (   0, 2508)
-  titlebarWidthHeight = (2160,   50)
+  titlebarWidthHeight = (2160,   90)
   titlebarColor       = (60, 60, 60)
   titleIconOffset     = (10, 10)
 
@@ -315,13 +315,15 @@ class posterBrowser:
   
       tw, th   = self.titlebarWidthHeight
       tc       = self.titlebarColor
+      br     = Rect((bx,by), (tw, th))
+      screen.draw.filled_rect(br, tc) # draw metablock background
   
       x1, y1 = self.metaBlockOffset
       x1 += bx; y1 += by
       bw, bh = self.metaBlockWH
       x2, y2 = x1+bw, y1+bh 
       bc     = self.metaBlockColor
-      br     = Rect((x1,y1), (x2,y2))
+      br     = Rect((x1,y1), (bw, bh))
       screen.draw.filled_rect(br, bc) # draw metablock background
 
       if pid is None: print("posterBrowser drawPosterMetainfo: poster id is empty!"); return
