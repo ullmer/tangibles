@@ -27,7 +27,8 @@ class posterBrowser:
   ygd          = None   #yaml geographic data
 
   upshiftBottomVisualElements = True      #for debugging on high-res landscape-format display
-  upshiftBottomOffset         = (0, -2500) 
+  #upshiftBottomOffset         = (0, -2500) 
+  upshiftBottomOffset         = (0, -1500) 
 
   topBlockPos          = (0, 0)
   upperHlBoxBasePos    = (13,218)
