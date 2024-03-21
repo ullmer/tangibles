@@ -46,7 +46,7 @@ class posterBrowser:
 
   #metaBlockNormPos    = (   0,   10)
   metaBlockNormPos   = (   0, 2508)
-  titlebarWidthHeight = (2160,   70)
+  titlebarWidthHeight = (2160,   50)
   titlebarColor       = (60, 60, 60)
   titleIconOffset     = (10, 10)
 
@@ -77,12 +77,12 @@ class posterBrowser:
 
   metaBlockOffset     = (0, 95)
   metaBlockWH         = (1200, 1200)
-  #metaBlockWH         = (800, 1200)
+  #metaBlockWH        = (800, 1200)
   metaBlockColor      = (30, 30, 30)
 
-  #brBlockNormPos      = (1214, 100) #for debugging on laptop
+  #brBlockNormPos     = (1214, 100) #for debugging on laptop
   #brBlockNormPos     = (1214, 1538)
-  brBlockNormPos     = (1214, 2533)
+  brBlockNormPos      = (1214, 2533)
   brBlockNormDim      = ( 946, 1302)
   brBlockMaximize     = False
 
@@ -117,12 +117,10 @@ class posterBrowser:
   brBlockMaxA  = None # maximized version of bottom-right interaction block
 
   firstDraw    = True 
-
-  arrayDim = [8, 8]
-
-  actors   = None
-  scr      = None
-  verbose  = True
+  arrayDim     = [8, 8]
+  actors       = None
+  scr          = None
+  verbose      = True
 
   ######################## constructor ######################## 
 
@@ -248,6 +246,11 @@ class posterBrowser:
       pifp   = self.ypd['posterIcons']
       iconFn = self.gridIconsFn % pifp[whichPoster-1]
       x1, y1 = self.metaBlockNormPos
+
+      if self.upshiftBottomVisualElements:
+        ubx, uby = self.upshiftBottomOffset
+        x1 += ubx; y1 += uby
+
       dx, dy = self.titleIconOffset
       x2, y2 = x1+dx, y1+dy
 
@@ -312,11 +315,6 @@ class posterBrowser:
   
       tw, th   = self.titlebarWidthHeight
       tc       = self.titlebarColor
-      tx1, ty1 = bx, by
-      tx2, ty2 = tx1+tw, ty1+th
-      tr       = Rect((tx1, ty1), (tx2, ty2))
-  
-      #screen.draw.filled_rect(tr, tc) # draw titlebar 
   
       x1, y1 = self.metaBlockOffset
       x1 += bx; y1 += by
@@ -339,18 +337,18 @@ class posterBrowser:
       #authors  = 'wunderbar'*30
 
       dx, dy   = self.titleTextOffset   #draw title
-      tx3, ty3 = tx1+dx, ty1+dy
+      tx3, ty3 = bx+dx, by+dy
       tf, tfs, tfc = self.titleFont, self.titleFontSize, self.titleFontColor
       screen.draw.text(title, (tx3, ty3), color=tfc, fontname=tf, fontsize=tfs) 
 
       dx, dy       = self.authorsTextOffset #draw authors
-      tx4, ty4     = tx1+dx, ty1+dy
+      tx4, ty4     = bx+dx, by+dy
       tf, tfs, tfc = self.authorsFont, self.authorsFontSize, self.authorsFontColor
       aw           = self.authorsBlockWidth   
       screen.draw.text(authors, (tx4, ty4), color=tfc, fontname=tf, fontsize=tfs, width=aw) 
 
       dx, dy   = self.geoTextOffset   #draw title
-      tx5, ty5 = tx1+dx, ty1+dy
+      tx5, ty5 = bx+dx, by+dy
       tf, tfs, tfc = self.geoFont, self.geoFontSize, self.geoFontColor
       screen.draw.text(geos, (tx5, ty5), color=tfc, fontname=tf, fontsize=tfs) 
 
