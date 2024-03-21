@@ -37,15 +37,15 @@ class posterBrowser:
   lastHighlightedCoord = None
 
   brHlBoxDiffPos       = (118, 118)
-  #brHlBoxBasePos       = (1212,455)
+  #brHlBoxBasePos      = (1212,455)
   #brHlBoxBasePos      = (98,455)
-  brHlBoxBasePos      = (1209, 2533)
+  brHlBoxBasePos       = (1209, 2533)
 
   posterNormPos       = (0,    1210)
   posterNormDim       = (2160, 1215)
 
-  #metaBlockNormPos    = (   0,   10)
-  metaBlockNormPos   = (   0, 2508)
+  #metaBlockNormPos   = (   0,   10)
+  metaBlockNormPos    = (   0, 2508)
   titlebarWidthHeight = (2160,   90)
   titlebarColor       = (60, 60, 60)
   titleIconOffset     = (10, 10)
@@ -83,8 +83,11 @@ class posterBrowser:
   priorPapersTitleOffset   = 105
   maxPriorPapers           = 7
   priorPapersMaxWidth      = 1100
-  maxPriorKeywordRows      = 4
-  maxPriorKeywordCols      = 4
+  maxPriorKeywordRows      = 5 
+  maxPriorKeywordCols      = 3
+  maxPriorKwLength         = 12
+  priorKwTextOffset        = 60
+  priorKwColWidth          = 300
 
   metaBlockOffset     = (0, 95)
   metaBlockWH         = (1200, 1200)
@@ -432,15 +435,25 @@ class posterBrowser:
         key = 'priorKeywords' 
         if key in yd:
           priorKeywords = yd[key]
+          if priorKeywords is None: print("drawPosterMetainfo: prior keywords is none"); return
+
           mpkr, mpkc         = self.maxPriorKeywordRows, self.maxPriorKeywordCols 
           kwRowIdx, kwColIdx = 0, 0
           mpko = self.mtPriorKeywordsOffset
-          ppx, ppy = bx + mpko[0], by + mpko[1]
+          pkto = self.priorKwTextOffset        
+          pkx, pky = bx + mpko[0], by + mpko[1]
           for priorKWentry in priorKeywords:
             #priorKWIdx += 1
             #if priorKWIdx > maxPriorKeywords: break
-            keyword, count = priorKWentry['keyword'], priorKWentry['count']
+            keyword, count = priorKWentry['keyword'][:self.maxPriorKwLength], priorKWentry['count']
             screen.draw.text(str(count), (pkx, pky), color=tfc2, fontname=tf, fontsize=tfs)
+            screen.draw.text(keyword, (pkx+pkto, pky), color=tfc, fontname=tf, fontsize=tfs)
+
+            kwRowIdx += 1
+            pky += self.priorPapersNewlineOffset
+
+            if kwRowIdx > mpkr: kwRowIdx = 0; kwColIdx += 1; pkx += self.priorKwColWidth; pky = by + mpko[1]
+            if kwColIdx > mpkc: return
 
       mppo = self.mtPriorPapersOffset
 
