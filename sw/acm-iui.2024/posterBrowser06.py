@@ -71,6 +71,7 @@ class posterBrowser:
   metaTextFontSize    = 40
   metaTextFontColor   = (180, 180, 180)
   metaTextFontColor2  = (120, 120, 120)
+  maxTitleChars       = 70
   mtSubtitlesWH       = (1180, 48)
   mtSubtitlesX1       = 10
   mtSubtitlesYs       = [380, 705, 1000]
@@ -80,6 +81,7 @@ class posterBrowser:
   priorPapersNewlineOffset = 40
   priorPapersTitleOffset   = 105
   maxPriorPapers           = 7
+  priorPapersMaxWidth      = 1100
 
   metaBlockOffset     = (0, 95)
   metaBlockWH         = (1200, 1200)
@@ -321,6 +323,8 @@ class posterBrowser:
         ubx, uby = self.upshiftBottomOffset
         bx += ubx; by += uby
   
+      ######### display titlebar ######### 
+
       tw, th   = self.titlebarWidthHeight
       tc       = self.titlebarColor
       br     = Rect((bx,by), (tw, th))
@@ -338,6 +342,8 @@ class posterBrowser:
   
       pia = self.getPosterIconActor(pid) #draw poster icon
       if pia is not None: pia.draw()
+
+      ######### display title, authors, geos ######### 
 
       pmeta    = self.getPosterMetainfo(pid) 
       #title   = 'wunderbar'*30
@@ -362,6 +368,8 @@ class posterBrowser:
       tf, tfs, tfc = self.geoFont, self.geoFontSize, self.geoFontColor
       screen.draw.text(geos, (tx5, ty5), color=tfc, fontname=tf, fontsize=tfs) 
 
+      ######### display subtitles ######### 
+
       subtitles    = self.metaTextSubtitles
       numSubtitles = len(subtitles)
       tf, tfs, tfc = self.metaTextFont, self.metaTextFontSize, self.metaTextFontColor
@@ -381,9 +389,12 @@ class posterBrowser:
 
         screen.draw.text(subtitle, (tx6, ty6), color=tfc, fontname=tf, fontsize=tfs)
 
+      ######### display prior papers, keywords ######### 
+
       mppo = self.mtPriorPapersOffset
       ppto = self.priorPapersTitleOffset  
       ppx, ppy = bx + mppo[0], by + mppo[1]
+      ppmw = self.priorPapersMaxWidth
 
       priorPapersIdx = 0
       maxPriorPapers = self.maxPriorPapers 
@@ -391,6 +402,8 @@ class posterBrowser:
 
       if pid in self.yPd: #priors metadata present
         yd  = self.yPd[pid]
+
+        ######### display prior papers ######### 
         key = 'priorPapers' 
         if key in yd:
           priorPapers = yd[key]
@@ -407,10 +420,16 @@ class posterBrowser:
 
             key3 = 'title' 
             if key3 in priorPaper: 
-              title = priorPaper[key3]
+              title = priorPaper[key3][:self.maxTitleChars]
               screen.draw.text(title, (ppx+ppto, ppy), color=tfc, fontname=tf, fontsize=tfs)
               
             ppy += self.priorPapersNewlineOffset
+
+        ######### display prior keywords######### 
+        key = 'priorPapers' 
+        if key in yd:
+
+      mppo = self.mtPriorPapersOffset
 
     except:
       print("posterBrowser drawPosterMetainfo exception for poster", pid)
