@@ -27,7 +27,7 @@ class posterBrowser:
   ygd          = None   #yaml geographic data
 
   upshiftBottomVisualElements = True      #for debugging on high-res landscape-format display
-  upshiftBottomOffset         = (0, -1920) 
+  upshiftBottomOffset         = (0, -2500) 
 
   topBlockPos          = (0, 0)
   upperHlBoxBasePos    = (13,218)
@@ -78,10 +78,13 @@ class posterBrowser:
   mtSubtitleTxtOffset = (5, -2)
 
   mtPriorPapersOffset      = (20, 423)
+  mtPriorKeywordsOffset    = (20, 750)
   priorPapersNewlineOffset = 40
   priorPapersTitleOffset   = 105
   maxPriorPapers           = 7
   priorPapersMaxWidth      = 1100
+  maxPriorKeywordRows      = 4
+  maxPriorKeywordCols      = 4
 
   metaBlockOffset     = (0, 95)
   metaBlockWH         = (1200, 1200)
@@ -426,8 +429,18 @@ class posterBrowser:
             ppy += self.priorPapersNewlineOffset
 
         ######### display prior keywords######### 
-        key = 'priorPapers' 
+        key = 'priorKeywords' 
         if key in yd:
+          priorKeywords = yd[key]
+          mpkr, mpkc         = self.maxPriorKeywordRows, self.maxPriorKeywordCols 
+          kwRowIdx, kwColIdx = 0, 0
+          mpko = self.mtPriorKeywordsOffset
+          ppx, ppy = bx + mpko[0], by + mpko[1]
+          for priorKWentry in priorKeywords:
+            #priorKWIdx += 1
+            #if priorKWIdx > maxPriorKeywords: break
+            keyword, count = priorKWentry['keyword'], priorKWentry['count']
+            screen.draw.text(str(count), (pkx, pky), color=tfc2, fontname=tf, fontsize=tfs)
 
       mppo = self.mtPriorPapersOffset
 
