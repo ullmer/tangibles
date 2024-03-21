@@ -1,5 +1,3 @@
-# Poster++ tangibles-supported browser code
-# Brygg Ullmer, Clemson University
 # Begun 2024-03-17
 
 import moveWinHome #hack to move window to 0,0 on windows, avoiding redraw error
@@ -22,9 +20,11 @@ class posterBrowser:
   brBlockFn    = 'bottom_rightv08g'
   gridIconsFn  = 'full_res/gridmap03k3/%s'
   ypfn         = 'posters-iui24.yaml'
+  yPfn         = 'posters-iui24-priors.yaml'
   ygfn         = 'geos.yaml'
-  ypd          = None
-  ygd          = None
+  ypd          = None   #yaml papers data
+  yPd          = None   #yaml prior papers data
+  ygd          = None   #yaml geographic data
 
   upshiftBottomVisualElements = True      #for debugging on high-res landscape-format display
   upshiftBottomOffset         = (0, -1920) 
@@ -74,6 +74,9 @@ class posterBrowser:
   mtSubtitlesX1       = 10
   mtSubtitlesYs       = [380, 700, 1000]
   mtSubtitleTxtOffset = (5, -2)
+
+  mtPriorPapersOffset      = (20, 423)
+  priorPapersNewlineOffset = 40
 
   metaBlockOffset     = (0, 95)
   metaBlockWH         = (1200, 1200)
@@ -136,9 +139,11 @@ class posterBrowser:
 
   def loadYaml(self): 
     ypf = open(self.ypfn, 'rt') #poster metainfo
+    yPf = open(self.yPfn, 'rt') #poster metainfo
     ygf = open(self.ygfn, 'rt') #geographical metainfo
     
     self.ypd = yaml.safe_load(ypf)
+    self.yPd = yaml.safe_load(yPf)
     self.ygd = yaml.safe_load(ygf)
 
   ###################### get poster metainfo ######################
@@ -372,6 +377,23 @@ class posterBrowser:
         tx6, ty6 = x1+dx, y1+dy
 
         screen.draw.text(subtitle, (tx6, ty6), color=tfc, fontname=tf, fontsize=tfs)
+
+      mppo = self.mtPriorPapersOffset
+      ppx, ppy = bx + mppo[0], by + mppo[1]
+
+      if pid in self.yPd: #priors metadat present
+        yd  = self.yPd[pid]
+        key = 'priorPapers' 
+        if key in yd:
+          priorPapers = yd[key]
+          for priorPaper in priorPapers:
+            key2 = 'year' 
+            if key2 in priorPaper: 
+              year = priorPaper[key2]
+              yearStr = str(year)
+              print("Y:", yearStr, ppx, ppy)
+              screen.draw.text(yearStr, (ppx, ppy), color=tfc, fontname=tf, fontsize=tfs)
+            ppy += self.priorPapersNewlineOffset
 
     except:
       print("posterBrowser drawPosterMetainfo exception for poster", pid)
