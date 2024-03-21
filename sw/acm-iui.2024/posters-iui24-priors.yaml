@@ -7,17 +7,17 @@
 2:
   title: "EvaluLLM: LLM Assisted Evaluation of Generative Outputs"
   priorPapers:
+    - {year: 2008, title: "Automatically finding and recommending resources to support knowledge workers activities"}
     - {year: 2017, title: "AWARE: Workshop on Awareness Interfaces and Interactions"}
-    - {year: 2021, title: "Increasing the Speed and Accuracy of Data Labeling Through an AI Assisted Interface"}
-    - {year: 2021, title: "The Design and Development of a Game to Study Backdoor Poisoning Attacks: The Backdoor Game"}
-    - {year: 2021, title: "TExSS: Transparency and Explanations in Smart Systems"}
+    - {year: 2017, title: "Towards Understanding Human Mistakes of Programming by Example: An Online User Study"}
     - {year: 2019, title: "Intelligent user interfaces for algorithmic transparency in emerging technologies"}
     - {year: 2019, title: "Explaining models: an empirical study of how explanations impact fairness judgment"}
     - {year: 2019, title: "BigBlueBot: teaching strategies for successful human-agent interactions"}
     - {year: 2020, title: "ExSS-ATEC: Explainable Smart Systems for Algorithmic Transparency in Emerging Technologies 2020"}
+    - {year: 2021, title: "Increasing the Speed and Accuracy of Data Labeling Through an AI Assisted Interface"}
+    - {year: 2021, title: "The Design and Development of a Game to Study Backdoor Poisoning Attacks: The Backdoor Game"}
+    - {year: 2021, title: "TExSS: Transparency and Explanations in Smart Systems"}
     - {year: 2023, title: "Follow the Successful Herd: Towards Explanations for Improved Use and Mental Models of Natural Language Systems"}
-    - {year: 2008, title: "Automatically finding and recommending resources to support knowledge workers activities"}
-    - {year: 2017, title: "Towards Understanding Human Mistakes of Programming by Example: An Online User Study"}
   priorKeywords:
     - {keyword: "machine learning", count: 97}
     - {keyword: "recommender systems", count: 81}
@@ -151,15 +151,15 @@
 3:
   title: "XAIVIER: Time Series Classifier Verification with Faithful Explainable AI"
   priorPapers:
-    - {year: 2021, title: "Designing a Sensor Glove Using Deep Learning"}
     - {year: 2015, title: "VizRec: A Two-Stage Recommender System for Personalized Visualizations"}
     - {year: 2016, title: "Rank As You Go: User-Driven Exploration of Search Results"}
-    - {year: 2023, title: "Intelligent User Interface for Decision Support in Drug Development"}
-    - {year: 2019, title: "Background perception and comprehension of symbols conveyed through vibrotactile wearable displays"}
-    - {year: 2020, title: "Understanding the effects of control and transparency in searching as learning"}
+    - {year: 2017, title: "WikiLyzer: Interactive Information Quality Assessment in Wikipedia"}
     - {year: 2018, title: "A Study on User-Controllable Social Exploratory Search"}
     - {year: 2018, title: "Investigating Interactions for Text Recognition using a Vibrotactile Wearable Display"}
-    - {year: 2017, title: "WikiLyzer: Interactive Information Quality Assessment in Wikipedia"}
+    - {year: 2019, title: "Background perception and comprehension of symbols conveyed through vibrotactile wearable displays"}
+    - {year: 2020, title: "Understanding the effects of control and transparency in searching as learning"}
+    - {year: 2021, title: "Designing a Sensor Glove Using Deep Learning"}
+    - {year: 2023, title: "Intelligent User Interface for Decision Support in Drug Development"}
   priorKeywords:
     - {keyword: "machine learning", count: 97}
     - {keyword: "recommender systems", count: 81}
@@ -254,9 +254,9 @@
   title: "Utilizing Large Language Models in Tribal Emergency Management"
   priorPapers:
     - {year: 2017, title: "An Interactive and Interpretable Interface for Diversity in Recommender Systems"}
-    - {year: 2019, title: "Explaining recommendations in an interactive hybrid social recommender"}
     - {year: 2018, title: "Beyond the Ranked List: User-Driven Exploration and Diversification of Social Recommendation"}
     - {year: 2018, title: "Explaining Social Recommendations to Casual Users: Design Principles and Opportunities"}
+    - {year: 2019, title: "Explaining recommendations in an interactive hybrid social recommender"}
   priorKeywords:
     - {keyword: "machine learning", count: 97}
     - {keyword: "affective computing", count: 29}
@@ -279,12 +279,12 @@
 6:
   title: "CHARM: A Group Decision Making Support Chatbot"
   priorPapers:
+    - {year: 2008, title: "Long-term and session-specific user preferences in a mobile recommender system"}
     - {year: 2011, title: "Context relevance assessment for recommender systems"}
+    - {year: 2017, title: "GUI Design for IDE Command Recommendations"}
+    - {year: 2018, title: "User Behaviour Analysis in a Simulated IoT Augmented Space"}
     - {year: 2019, title: "Prediction of music pairwise preferences from facial expressions"}
     - {year: 2020, title: "Enhancing Travel Experience Leveraging on-line and off-line Users Behaviour Data"}
-    - {year: 2018, title: "User Behaviour Analysis in a Simulated IoT Augmented Space"}
-    - {year: 2008, title: "Long-term and session-specific user preferences in a mobile recommender system"}
-    - {year: 2017, title: "GUI Design for IDE Command Recommendations"}
   priorKeywords:
     - {keyword: "machine learning", count: 97}
     - {keyword: "user study", count: 35}
@@ -319,12 +319,12 @@
 7:
   title: "A Bicycle Navigation System for Analyzing the Comfort Level of the Cyclist"
   priorPapers:
+    - {year: 2018, title: "Language Density Driven Route Navigation System for Pedestrians based on Twitter Data"}
+    - {year: 2018, title: "A Recommender System based on Detected Users Complaints by Analyzing Reviews"}
     - {year: 2019, title: "Movie trailer analysis based on editing features of movies"}
     - {year: 2019, title: "A proposal of spatial operators for a collaborative map search system"}
     - {year: 2019, title: "Second workshop on user interfaces for spatial and temporal data analysis (UISTDA2019)"}
     - {year: 2020, title: "Dynamic Video Tag Cloud: A Cooking Support System for Recipe Short Videos"}
-    - {year: 2018, title: "Language Density Driven Route Navigation System for Pedestrians based on Twitter Data"}
-    - {year: 2018, title: "A Recommender System based on Detected Users Complaints by Analyzing Reviews"}
   priorKeywords:
     - {keyword: "machine learning", count: 97}
     - {keyword: "recommender systems", count: 81}
@@ -363,12 +363,12 @@
   title: "Evaluating ADHD Users' Experience with Recommender Systems"
   priorPapers:
     - {year: 2013, title: "Helping users with information disclosure decisions: potential for adaptation"}
-    - {year: 2016, title: "Evaluating Intelligent User Interfaces with User Experiments"}
-    - {year: 2019, title: "IUIoT: intelligent user interfaces for IoT"}
     - {year: 2014, title: "Location sharing privacy preference: analysis and personalized recommendation"}
-    - {year: 2022, title: "Building Trust in Interactive Machine Learning via User Contributed Interpretable Rules"}
+    - {year: 2016, title: "Evaluating Intelligent User Interfaces with User Experiments"}
     - {year: 2018, title: "A Data-Driven Approach to Developing IoT Privacy-Setting Interfaces"}
     - {year: 2018, title: "Scenario Context v/s Framing and Defaults in Managing Privacy in Household IoT"}
+    - {year: 2019, title: "IUIoT: intelligent user interfaces for IoT"}
+    - {year: 2022, title: "Building Trust in Interactive Machine Learning via User Contributed Interpretable Rules"}
     - {year: 2022, title: "The Diversity of Music Recommender Systems"}
   priorKeywords:
     - {keyword: "recommender systems", count: 81}
@@ -450,8 +450,8 @@
 10:
   title: "Search Result Presentation for Non-Native Language Documents"
   priorPapers:
-    - {year: 2019, title: "A proposal of spatial operators for a collaborative map search system"}
     - {year: 2010, title: "WildThumb: a web browser supporting efficient task management on wide displays"}
+    - {year: 2019, title: "A proposal of spatial operators for a collaborative map search system"}
   priorKeywords:
 11:
   title: "Generative AI syntheses of platform, content, visuals, and kinetics for cyberphysical computationally-mediated posters and broader applications"
@@ -473,9 +473,9 @@
 12:
   title: "ExpressEdit: Video Editing with Natural Language and Sketching"
   priorPapers:
+    - {year: 2018, title: "Two Tools are Better Than One: Tool Diversity as a Means of Improving Aggregate Crowd Performance"}
     - {year: 2019, title: "Popup: reconstructing 3D video using particle filtering to aggregate crowd responses"}
     - {year: 2022, title: "SoftVideo: Improving the Learning Experience of Software Tutorial Videos with Collective Interaction Data"}
-    - {year: 2018, title: "Two Tools are Better Than One: Tool Diversity as a Means of Improving Aggregate Crowd Performance"}
     - {year: 2023, title: "Large-Scale Text-to-Image Generation Models for Visual Artists’ Creative Works"}
   priorKeywords:
     - {keyword: "recommender systems", count: 81}
@@ -504,8 +504,8 @@
 14:
   title: "Can LLMs Infer Domain Knowledge from Code Exemplars? A Preliminary Study"
   priorPapers:
-    - {year: 2016, title: "ScopeG: A Mobile Application for Exploration and Comparison of Personality Traits"}
     - {year: 2013, title: "PersonalityViz: a visualization tool to analyze peoples personality with social media"}
+    - {year: 2016, title: "ScopeG: A Mobile Application for Exploration and Comparison of Personality Traits"}
     - {year: 2019, title: "Photo sleuth: combining human expertise and face recognition to identify historical portraits"}
     - {year: 2020, title: "DLS Magician: Promoting Early-Stage Collaboration by Automating UI Design Process in an E   amp;P Environment"}
   priorKeywords:
@@ -555,13 +555,13 @@
 15:
   title: "Multimodal Target Prediction for Rapid Human-Robot Interaction"
   priorPapers:
-    - {year: 2012, title: "Developing intelligent user interfaces for e-accessibility and e-inclusion"}
-    - {year: 2023, title: "Comparison of Target Prediction in VR and MR Using Inverse Reinforcement Learning"}
-    - {year: 2018, title: "Eye Gaze Controlled MFD for Military Aviation"}
+    - {year: 2008, title: "Automatic evaluation of assistive interfaces"}
     - {year: 2010, title: "Evaluating the design of inclusive interfaces by simulation"}
+    - {year: 2012, title: "Developing intelligent user interfaces for e-accessibility and e-inclusion"}
+    - {year: 2018, title: "Eye Gaze Controlled MFD for Military Aviation"}
     - {year: 2022, title: "Distraction Detection in Automotive Environment Using Appearance-Based Gaze Estimation"}
     - {year: 2022, title: "PARKS-Gaze - A Precision-Focused Gaze Estimation Dataset in the Wild under Extreme Head Poses"}
-    - {year: 2008, title: "Automatic evaluation of assistive interfaces"}
+    - {year: 2023, title: "Comparison of Target Prediction in VR and MR Using Inverse Reinforcement Learning"}
   priorKeywords:
     - {keyword: "machine learning", count: 97}
     - {keyword: "programming by demonstration", count: 24}
@@ -618,11 +618,11 @@
 19:
   title: "MitFlex- A Human-AI Collaborative System to Support Mitosis Assessment in Pathology"
   priorPapers:
-    - {year: 2021, title: "XAlgo: a Design Probe of Explaining Algorithms’ Internal States via Question-Answering"}
-    - {year: 2021, title: "OralViewer: 3D Demonstration of Dental Surgeries for Patient Education with Oral Cavity Reconstruction from a 2D Panoramic X-ray"}
     - {year: 2009, title: "Hand gesture recognition and virtual game control based on 3D accelerometer and EMG sensors"}
     - {year: 2016, title: "SweepSense: Ad Hoc Configuration Sensing Using Reflected Swept-Frequency Ultrasonics"}
     - {year: 2019, title: "Automatic exam grading by a mobile camera: snap a picture to grade your tests"}
+    - {year: 2021, title: "XAlgo: a Design Probe of Explaining Algorithms’ Internal States via Question-Answering"}
+    - {year: 2021, title: "OralViewer: 3D Demonstration of Dental Surgeries for Patient Education with Oral Cavity Reconstruction from a 2D Panoramic X-ray"}
   priorKeywords:
     - {keyword: "user modeling", count: 50}
     - {keyword: "natural language processing", count: 42}
@@ -692,12 +692,12 @@
   title: "Perceived Trustworthiness of Human vs. AI Instructors in Digital Privacy Education for Older Adults"
   priorPapers:
     - {year: 2013, title: "Helping users with information disclosure decisions: potential for adaptation"}
-    - {year: 2016, title: "Evaluating Intelligent User Interfaces with User Experiments"}
-    - {year: 2019, title: "IUIoT: intelligent user interfaces for IoT"}
     - {year: 2014, title: "Location sharing privacy preference: analysis and personalized recommendation"}
-    - {year: 2022, title: "Building Trust in Interactive Machine Learning via User Contributed Interpretable Rules"}
+    - {year: 2016, title: "Evaluating Intelligent User Interfaces with User Experiments"}
     - {year: 2018, title: "A Data-Driven Approach to Developing IoT Privacy-Setting Interfaces"}
     - {year: 2018, title: "Scenario Context v/s Framing and Defaults in Managing Privacy in Household IoT"}
+    - {year: 2019, title: "IUIoT: intelligent user interfaces for IoT"}
+    - {year: 2022, title: "Building Trust in Interactive Machine Learning via User Contributed Interpretable Rules"}
     - {year: 2022, title: "The Diversity of Music Recommender Systems"}
   priorKeywords:
     - {keyword: "recommender systems", count: 81}
