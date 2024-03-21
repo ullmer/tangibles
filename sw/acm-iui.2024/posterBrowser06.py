@@ -77,6 +77,7 @@ class posterBrowser:
 
   mtPriorPapersOffset      = (20, 423)
   priorPapersNewlineOffset = 40
+  maxPriorPapers           = 7
 
   metaBlockOffset     = (0, 95)
   metaBlockWH         = (1200, 1200)
@@ -381,12 +382,18 @@ class posterBrowser:
       mppo = self.mtPriorPapersOffset
       ppx, ppy = bx + mppo[0], by + mppo[1]
 
-      if pid in self.yPd: #priors metadat present
+      priorPapersIdx = 0
+      maxPriorPapers = self.maxPriorPapers 
+
+      if pid in self.yPd: #priors metadata present
         yd  = self.yPd[pid]
         key = 'priorPapers' 
         if key in yd:
           priorPapers = yd[key]
           for priorPaper in priorPapers:
+            priorPapersIdx += 1
+            if priorPapersIdx > maxPriorPapers: break
+
             key2 = 'year' 
             if key2 in priorPaper: 
               year = priorPaper[key2]
