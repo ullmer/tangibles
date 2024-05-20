@@ -12,7 +12,12 @@ touched = {'current': None}
 
 def draw(): screen.clear(); w.draw()
 
-#### on mouse movement ####
+#### handle simplest interactivity ####
+
+def on_mouse_up():        touched['current'] = None
+
+def on_mouse_down(pos): 
+  if w.collidepoint(pos): touched['current'] = 'wind'
 
 def on_mouse_move(rel):
   dx, dy = rel
@@ -21,12 +26,5 @@ def on_mouse_move(rel):
     x1, y1 = w.pos
     x2, y2 = x1+dx, y1+dy
     w.pos  = (x2, y2)
-
-#### handle simplest mouse interactivity ####
-
-def on_mouse_up():        touched['current'] = None
-
-def on_mouse_down(pos): 
-  if w.collidepoint(pos): touched['current'] = 'wind'
 
 ### end ###
