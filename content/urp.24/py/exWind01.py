@@ -3,8 +3,9 @@
 # Begun 2024-05-20
 
 WIDTH, HEIGHT = 1920, 1080
+import moveWinHome
 
-w       = Actor('wind21e')
+w       = Actor('wind21e3')
 touched = {'current': None}
 
 #### draw ####
