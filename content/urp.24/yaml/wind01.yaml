@@ -14,8 +14,14 @@ tangibles:
 associations: 
   urp:
      publications: [https://dl.acm.org/doi/abs/10.1145/302979.303114]
+     authors: {john.underkoffler, hiroshi.ishii}
      source:       
-       - {path: media.mit.edu:/mas/, date: }
+       - {path: media.mit.edu:/mas/tangible/u/gsantos/myUrp,    date: 1999-07-30}
+
+  durp:
+     authors: {john.underkoffler, hiroshi.ishii, dan.chak}
+     source:       
+       - {path: media.mit.edu:/mas/tangible/u/chak/linux/durp3, date: 2000-01-10}
 
   wff:
      name:    Weaving Fire into Form: Aspirations for Tangible and Embodied Interaction
