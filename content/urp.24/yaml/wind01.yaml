@@ -2,5 +2,11 @@
 # Brygg Ullmer, Clemson University
 # Begun 2024-05-20
 
+tangibles:
+  wind:
+    description:
+    bindings: 
+      1: {name: urp}
+      2: {name: durp}
 
 ### end ###
