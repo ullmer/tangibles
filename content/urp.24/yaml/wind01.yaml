@@ -7,8 +7,8 @@ tangibles:
     description: Building upon the Wind tangible of Underkoffler and Ishii's CHI'99 Urp
 
     glyphs:
-    bindings: [urp,     durp,   tmg,               ml,     sdg, 
-               animist, oblong, tei,  weavingFireForm, tangViz,
+    bindings: [urp,     durp,   tmg,   ml,     sdg, 
+               animist, oblong, tei,  wff, tangViz,
                space,   time,   themes]
 
 associations: 
@@ -16,5 +16,10 @@ associations:
      publications: [https://dl.acm.org/doi/abs/10.1145/302979.303114]
      source:       
        - {path: media.mit.edu:/mas/, date: }
+
+  wff:
+     name:    Weaving Fire into Form: Aspirations for Tangible and Embodied Interaction
+     descr:   ACM Book 
+     authors: brygg.ullmer, orit.shaer, ali.mazalek, caroline.hummels
 
 ### end ###
