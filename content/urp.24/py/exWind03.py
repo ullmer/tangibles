@@ -9,16 +9,18 @@ w       = Actor('wind21e3')
 b1      = Actor('wind21j-bldg3', pos=(850, 450))
 b2      = Actor('wind21s-bldg3', pos=(350, 650))
 
-actors     = [w, b1, b2]
-breezelets = []
-breezeFn   = 'wind21t-breeze3'
-touched    = {'current': None}
+actors       = [w, b1, b2]
+breezelets   = {}
+breezeletCnt = 0
+breezeFn     = 'wind21t-breeze3'
+touched      = {'current': None}
 
 #### draw ####
 
 def draw(): 
   screen.clear()
-  for a in actors: a.draw()
+  for a in actors:     a.draw()
+  for b in breezelets: breezelets[b].draw()
 
 #### handle simplest interactivity ####
 
@@ -40,12 +42,18 @@ def on_mouse_move(rel):
 #### breeze ~engine ####
 
 def genBreezelet():
+  global breezeletCnt
   b = Actor(breezeFn, pos=w.pos)
 
   x1, y1 = b.pos
+  x2     = x1 + 1524 
 
-  breezelets.append(b)
+  animate(b, pos=(x2, y1), duration=3.)
 
-schedule_interval(genBreezelet, .5) 
+  breezelets[breezeletCnt] = b #use of a dictionary will help with cleanup 
+  breezeletCnt += 1
+
+genBreezelet()
+clock.schedule_interval(genBreezelet, 1.5)
 
 ### end ###
