@@ -14,18 +14,23 @@ tangibles:
 associations: 
   urp:
      publications: [https://dl.acm.org/doi/abs/10.1145/302979.303114]
-     authors: {john.underkoffler, hiroshi.ishii}
+     authors: 
+       original:          [john.underkoffler, hiroshi.ishii]
+       laterContributors: [george.santos, brygg.ullmer, tbd]
      source:       
-       - {path: media.mit.edu:/mas/tangible/u/gsantos/myUrp,    date: 1999-07-30}
+       - {path: media.mit.edu:/mas/tangible/u/gsantos/myUrp,         date: 1999-07-30, status: offline}
+       - {path: github.com/ullmer/tangibles/urp.24/py/exWind01.yaml, date: 2024-05-20, status: online}
+
+media.mit.edu:/mas/tangible/u/gsantos/myUrp,    date: 1999-07-30, status: offline}
 
   durp:
-     authors: {john.underkoffler, hiroshi.ishii, dan.chak}
+     authors: [john.underkoffler, hiroshi.ishii, dan.chak]
      source:       
-       - {path: media.mit.edu:/mas/tangible/u/chak/linux/durp3, date: 2000-01-10}
+       - {path: media.mit.edu:/mas/tangible/u/chak/linux/durp3, date: 2000-01-10, status: offline}
 
   wff:
      name:    Weaving Fire into Form: Aspirations for Tangible and Embodied Interaction
      descr:   ACM Book 
-     authors: brygg.ullmer, orit.shaer, ali.mazalek, caroline.hummels
+     authors: [brygg.ullmer, orit.shaer, ali.mazalek, caroline.hummels]
 
 ### end ###
