@@ -48,12 +48,12 @@ def genBreezelet():
   x1, y1 = b.pos
   x2     = x1 + 1524 
 
-  animate(b, pos=(x2, y1), duration=8.)
+  animate(b, pos=(x2, y1), duration=9.)
 
   breezelets[breezeletCnt] = b #use of a dictionary will help with cleanup 
   breezeletCnt += 1
 
 genBreezelet()
-clock.schedule_interval(genBreezelet, 1)
+clock.schedule_interval(genBreezelet, 2)
 
 ### end ###
