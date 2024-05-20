@@ -6,8 +6,9 @@ WIDTH, HEIGHT = 1920, 1080
 import moveWinHome #move window to 0,0 / top-left of screen
 
 w       = Actor('wind21e3')
-b1      = Actor('wind21j-bldg3')
-actors  = [w, b1]
+b1      = Actor('wind21j-bldg3', pos=(850, 450))
+b2      = Actor('wind21s-bldg3', pos=(350, 650))
+actors  = [w, b1, b2]
 touched = {'current': None}
 
 #### draw ####
