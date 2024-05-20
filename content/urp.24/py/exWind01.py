@@ -3,7 +3,7 @@
 # Begun 2024-05-20
 
 WIDTH, HEIGHT = 1920, 1080
-import moveWinHome
+import moveWinHome #move window to 0,0 / top-left of screen
 
 w       = Actor('wind21e3')
 touched = {'current': None}
@@ -22,13 +22,11 @@ def on_mouse_move(rel):
     x2, y2 = x1+dx, y1+dy
     w.pos  = (x2, y2)
 
-#### when touchpad/mouse pressed ####
+#### handle simplest mouse interactivity ####
+
+def on_mouse_up():        touched['current'] = None
 
 def on_mouse_down(pos): 
   if w.collidepoint(pos): touched['current'] = 'wind'
-
-#### when touchpad/mouse released ####
-     
-def on_mouse_up():        touched['current'] = None
 
 ### end ###
