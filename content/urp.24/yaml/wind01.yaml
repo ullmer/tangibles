@@ -4,7 +4,8 @@
 
 tangibles:
   wind:
-    description:
+    description: Building upon the Wind tangible of Underkoffler and Ishii's CHI'99 Urp
+
     glyphs:
     bindings: 
       1:  {name: urp}
@@ -18,8 +19,14 @@ tangibles:
       9:  {name: weavingFireForm}
       10: {name: tangviz}
 
-      12: {name: geospace}
+      12: {name: space}
       11: {name: time}
       13: {name: themes}
+
+associations: 
+  urp:
+     publications: [https://dl.acm.org/doi/abs/10.1145/302979.303114]
+     source:       
+       - {path: media.mit.edu:/mas/, date: }
 
 ### end ###
