@@ -5,8 +5,17 @@
 tangibles:
   wind:
     description:
+    glyphs:
     bindings: 
-      1: {name: urp}
-      2: {name: durp}
+      1:  {name: urp}
+      2:  {name: durp}
+      3:  {name: tmg}
+      4:  {name: ml}
+      5:  {name: sdg}
+      6:  {name: animist}
+      7:  {name: oblong}
+      8:  {name: tei}
+      9:  {name: weavingFireForm}
+      10: {name: tangviz}
 
 ### end ###
