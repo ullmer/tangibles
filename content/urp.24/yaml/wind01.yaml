@@ -18,8 +18,8 @@ associations:
        original:          [john.underkoffler, hiroshi.ishii]
        laterContributors: [george.santos, brygg.ullmer, tbd]
      source:       
-       - {path: media.mit.edu:/mas/tangible/u/gsantos/myUrp,         date: 1999-07-30, status: offline}
-       - {path: github.com/ullmer/tangibles/urp.24/py/exWind01.yaml, date: 2024-05-20, status: online}
+       - {path: media.mit.edu:/mas/tangible/u/gsantos/myUrp,       date: 1999-07-30, status: offline}
+       - {path: github.com/ullmer/tangibles/urp.24/py/exWind01.py, date: 2024-05-20, status: online}
 
 media.mit.edu:/mas/tangible/u/gsantos/myUrp,    date: 1999-07-30, status: offline}
 
