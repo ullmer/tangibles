@@ -21,14 +21,16 @@ def draw():
 def on_mouse_up():        touched['current'] = None
 
 def on_mouse_down(pos): 
-  if w.collidepoint(pos): touched['current'] = 'wind'
+  for a in actors:
+    if a.collidepoint(pos): touched['current'] = a
 
 def on_mouse_move(rel):
   dx, dy = rel
 
-  if touched['current'] == 'wind':
-    x1, y1 = w.pos
-    x2, y2 = x1+dx, y1+dy
-    w.pos  = (x2, y2)
+  for a in actors:
+    if touched['current'] == a:
+      x1, y1 = a.pos
+      x2, y2 = x1+dx, y1+dy
+      a.pos  = (x2, y2)
 
 ### end ###
