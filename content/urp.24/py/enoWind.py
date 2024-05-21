@@ -19,13 +19,17 @@ class enoWind(Actor):
   translateFadeAnim = None
   rotateFadeAnim    = None
 
+  opacitySupported  = False
+
   windDistanceTransRotThresh = 75
 
   #### constructor ####
 
-  def __init__(self, coreImageFn=None):
+  def __init__(self, coreImageFn=None, **kwargs):
+
+    self.__dict__.update(kwargs)        #allow class fields to be passed in constructor
     if coreImageFn == None: coreImageFn = self.windImageFn
-    super().__init__(coreImageFn)
+    super().__init__(coreImageFn)       #pass core image filename to Actor ~parent-class
 
     self.arrowTrans = Actor(self.arrowTransFn)
     self.arrowRot   = Actor(self.arrowRotFn)
@@ -54,12 +58,12 @@ class enoWind(Actor):
 
     if distanceFromWindCenter > self.windDistanceTransRotThresh: #rotation mode
       self.rotateActive = True
-      if pgzSetup.opacitySupported: 
+      if self.opacitySupported: 
         an = animate(arrowRot, opacity=1., duration=0.25) #depends upon pgzero 1.3
         uiState['rotFadeAnim'] = an
     else: 
       uiState['translateActive'] = True
-      if pgzSetup.opacitySupported: 
+      if self.opacitySupported: 
         an = animate(arrowTrans, opacity=1., duration=0.25) #depends upon pgzero 1.3
         uiState['translateFadeAnim'] = an
 
