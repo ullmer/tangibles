@@ -13,9 +13,6 @@ bldg1 = Actor('wind21j-bldg3', pos=(850, 450))
 bldg2 = Actor('wind21s-bldg3', pos=(350, 650))
 
 actors       = [wind, bldg1, bldg2]
-breezelets   = {}
-breezeletCnt = 0
-breezeFn     = 'wind21t-breeze3'
 uiState      = {'current': None, 'translateActive': False, 'rotateActive': False,
                 'translateFadeAnim': None, 'rotateFadeAnim': None}
 

@@ -9,6 +9,7 @@ class enoWind(Actor):
   coreimageFn  = 'wind21u3'
   arrowTransFn = 'trans_arrows21v3'
   arrowRotFn   = 'rot_arrows21y3'
+  breezeImgFn  = 'wind21t-breeze3'
 
   arrowTrans   = None
   arrowRot     = None
@@ -20,118 +21,124 @@ class enoWind(Actor):
 
   breezeGenFrequency = 2.
   breezeletDuration  = 9.
+  fadeInDuration     = .25
+  fadeOutDuration    = .5
 
-  windDistanceTransRotThresh = 75
+ breezelets   = None
+ breezeletCnt = 0
 
-  opacitySupported  = False  # hope this will be overridden, but -- if we expect it and unsupported,
-                             # potential for crash
+ windDistanceTransRotThresh = 75
 
-  #### constructor ####
+ opacitySupported  = False  # hope this will be overridden, but -- if we expect it and unsupported,
+                            # potential for crash
 
-  def __init__(self, coreImageFn=None, **kwargs):
+ #### constructor ####
 
-    self.__dict__.update(kwargs)        #allow class fields to be passed in constructor
-    if coreImageFn == None: coreImageFn = self.windImageFn
-    super().__init__(coreImageFn)       #pass core image filename to Actor ~parent-class
+ def __init__(self, coreImageFn=None, **kwargs):
 
-    self.arrowTrans = Actor(self.arrowTransFn)
-    self.arrowRot   = Actor(self.arrowRotFn)
+   self.__dict__.update(kwargs)        #allow class fields to be passed in constructor
+   if coreImageFn == None: coreImageFn = self.windImageFn
+   super().__init__(coreImageFn)       #pass core image filename to Actor ~parent-class
 
-  #### draw ####
+   self.arrowTrans = Actor(self.arrowTransFn)
+   self.arrowRot   = Actor(self.arrowRotFn)
+   self.breezelets = {}
 
-  def draw(self): 
+ #### draw ####
 
-    trActive, tfActive = self.translateActive, self.translateFadeAnim
-  
-    if trActive or (tfActive != None and tfActive.running): 
-      arrowTrans.pos = self.pos
-      arrowTrans.draw()
+ def draw(self): 
 
-    rotActive, rfActive = self.rotateActive, self.rotateFadeAnim
+   trActive, tfActive = self.translateActive, self.translateFadeAnim
+ 
+   if trActive or (tfActive != None and tfActive.running): 
+     arrowTrans.pos = self.pos
+     arrowTrans.draw()
 
-    if rotActive or (rfActive != None and rfActive.running): 
-      arrowRot.pos = self.pos
-      arrowRot.draw()
+   rotActive, rfActive = self.rotateActive, self.rotateFadeAnim
 
-  #### mouse press ####
+   if rotActive or (rfActive != None and rfActive.running): 
+     arrowRot.pos = self.pos
+     arrowRot.draw()
 
-  def on_mouse_down(self, pos): 
+ #### mouse press ####
 
-    distanceFromWindCenter = math.dist(pos, self.pos)
+ def on_mouse_down(self, pos): 
 
-    if distanceFromWindCenter > self.windDistanceTransRotThresh: #rotation mode
-      self.rotateActive = True
-      if self.opacitySupported: 
-        an = animate(arrowRot, opacity=1., duration=0.25) #depends upon pgzero 1.3
-        self.rotFadeAnim = an
-    else: 
-      self.translateActive = True
-      if self.opacitySupported: 
-        an = animate(arrowTrans, opacity=1., duration=0.25) #depends upon pgzero 1.3
-        self.translateFadeAnim = an
+   distanceFromWindCenter = math.dist(pos, self.pos)
 
-  #### mouse release ####
+   if distanceFromWindCenter > self.windDistanceTransRotThresh: #rotation mode
+     self.rotateActive = True
+     if self.opacitySupported: 
+       an = animate(arrowRot, opacity=1., duration=self.fadeInDuration) #depends upon pgzero 1.3
+       self.rotFadeAnim = an
+   else: 
+     self.translateActive = True
+     if self.opacitySupported: 
+       an = animate(arrowTrans, opacity=1., duration=self.fadeInDuration) #depends upon pgzero 1.3
+       self.translateFadeAnim = an
 
-  def on_mouse_up(self):
+ #### mouse release ####
 
-    if self.translateActive
-      if self.opacitySupported: 
-        an = animate(arrowTrans, opacity=0., duration=0.5) #depends upon pgzero 1.3
-        self.translateFadeAnim = an
-      self.translateActive = False
+ def on_mouse_up(self):
 
-    if self.rotateActive:
-      if self.opacitySupported: 
-        an = animate(arrowRot, opacity=0., duration=0.5) #depends upon pgzero 1.3
-        self.rotateFadeAnim = an
-      self.rotateActive     = False
-      
-  #### calculate wind rotation ####
+   if self.translateActive
+     if self.opacitySupported: 
+       an = animate(arrowTrans, opacity=0., duration=self.fadeOutDuration) #depends upon pgzero 1.3
+       self.translateFadeAnim = an
+     self.translateActive = False
 
-  def calcWindRotRel(self, windPos, pos, rel):
+   if self.rotateActive:
+     if self.opacitySupported: 
+       an = animate(arrowRot, opacity=0., duration=self.fadeOutDuration) #depends upon pgzero 1.3
+       self.rotateFadeAnim = an
+     self.rotateActive     = False
+     
+ #### calculate wind rotation ####
 
-    wpx, wpy = windPos
-    px,  py  = pos
-    rx,  ry  = rel
-  
-    dx1, dy1 = px-wpx, py-wpy
-    dx2, dy2 = rx-wpx, ry-wpy
+ def calcWindRotRel(self, windPos, pos, rel):
 
-    angle1 = math.atan2(dy1, dx1) 
-    angle2 = math.atan2(dy2, dx2) 
+   wpx, wpy = windPos
+   px,  py  = pos
+   rx,  ry  = rel
+ 
+   dx1, dy1 = px-wpx, py-wpy
+   dx2, dy2 = rx-wpx, ry-wpy
 
-    a = angle2 - angle1
+   angle1 = math.atan2(dy1, dx1) 
+   angle2 = math.atan2(dy2, dx2) 
 
-    #print(angle2, angle1, a)
+   a = angle2 - angle1
 
-    return angle1
-      
-  #### mouse movement ####
+   #print(angle2, angle1, a)
 
-  def on_mouse_move(self, pos, rel):
-    dx, dy = rel
+   return angle1
+     
+ #### mouse movement ####
 
-    if self.rotateActive:
-      self.angle += self.calcWindRotRel(wind.center, pos, rel)
-      return
+ def on_mouse_move(self, pos, rel):
+   dx, dy = rel
 
-  #### breeze ~engine ####
+   if self.rotateActive:
+     self.angle += self.calcWindRotRel(wind.center, pos, rel)
+     return
 
-  def genBreezelet(self):
-    b = Actor(self.breezeFn, pos=self.pos)
+ #### breeze ~engine ####
 
-    x1, y1 = b.pos
-    x2     = x1 + 1524 
+ def genBreezelet(self):
+   b = Actor(self.breezeImgFn, pos=self.pos)
 
-    animate(b, pos=(x2, y1), duration=self.breezeletDuration)
+   x1, y1 = b.pos
+   x2     = x1 + 1524 
 
-    breezelets[breezeletCnt] = b #use of a dictionary will help with cleanup 
-    breezeletCnt += 1
+   animate(b, pos=(x2, y1), duration=self.breezeletDuration)
 
-  #### breeze ~engine ####
+   breezelets[breezeletCnt] = b #use of a dictionary will help with cleanup 
+   breezeletCnt += 1
 
-  def startBreeze(self):
-    self.genBreezelet()
-    clock.schedule_interval(self.genBreezelet, self.breezeGenFrequency)
+ #### breeze ~engine ####
 
-### end ###
+ def startBreeze(self):
+   self.genBreezelet()
+   clock.schedule_interval(self.genBreezelet, self.breezeGenFrequency)
+
+## end ###
