@@ -9,8 +9,8 @@ tangibles:
     glyphs:
     bindings: [urp,     durp,   tmg,   ml,        sdg, 
                animist, oblong, tei,  wff,    tangViz,
-               space,   time,   themes, people,  orgs,
-               namer,   europe, asia,   africa, samer]
+               space,   time,   themes, people, namer,
+               europe, asia,   africa, oceania, samer]
 
 associations: 
   urp:
