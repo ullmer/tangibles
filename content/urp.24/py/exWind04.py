@@ -9,11 +9,15 @@ w       = Actor('wind21e3')
 b1      = Actor('wind21j-bldg3', pos=(850, 450))
 b2      = Actor('wind21s-bldg3', pos=(350, 650))
 
+arrowsTrans  = Actor('transArrows21v3')
+#arrowsRot    = Actor('transArrows21v3')
+
 actors       = [w, b1, b2]
 breezelets   = {}
 breezeletCnt = 0
 breezeFn     = 'wind21t-breeze3'
-touched      = {'current': None}
+touched      = {'current': None, 'translate': False, 'rotate': False}
+
 
 #### draw ####
 
@@ -21,6 +25,10 @@ def draw():
   screen.clear()
   for a in actors:     a.draw()
   for b in breezelets: breezelets[b].draw()
+
+  if touched['translate']:
+    currentPos = touched['current'].pos
+    #draw arrow
 
 #### handle simplest interactivity ####
 
@@ -34,6 +42,9 @@ def on_mouse_move(rel):
   dx, dy = rel
 
   for a in actors:
+    if touched['current'] == a:
+
+
     if touched['current'] == a:
       x1, y1 = a.pos
       x2, y2 = x1+dx, y1+dy
