@@ -2,7 +2,6 @@
 # Brygg Ullmer, Clemson University
 # Begun 2024-05-21
 
-import pgzSetup #move window to 0,0 / top-left of screen; determine if opacity supported
 import math
 from pgzero.builtins import Actor, animate, keyboard
 
@@ -14,14 +13,18 @@ class enoWind(Actor):
   arrowTrans   = None
   arrowRot     = None
 
-  translateActive   = False
-  rotateActive      = False
-  translateFadeAnim = None
-  rotateFadeAnim    = None
+  translateActive    = False
+  rotateActive       = False
+  translateFadeAnim  = None
+  rotateFadeAnim     = None
 
-  opacitySupported  = False
+  breezeGenFrequency = 2.
+  breezeletDuration  = 9.
 
   windDistanceTransRotThresh = 75
+
+  opacitySupported  = False  # hope this will be overridden, but -- if we expect it and unsupported,
+                             # potential for crash
 
   #### constructor ####
 
@@ -60,82 +63,75 @@ class enoWind(Actor):
       self.rotateActive = True
       if self.opacitySupported: 
         an = animate(arrowRot, opacity=1., duration=0.25) #depends upon pgzero 1.3
-        uiState['rotFadeAnim'] = an
+        self.rotFadeAnim = an
     else: 
-      uiState['translateActive'] = True
+      self.translateActive = True
       if self.opacitySupported: 
         an = animate(arrowTrans, opacity=1., duration=0.25) #depends upon pgzero 1.3
-        uiState['translateFadeAnim'] = an
+        self.translateFadeAnim = an
 
-#### mouse release ####
+  #### mouse release ####
 
-def on_mouse_up():        
-  uiState['lastActive'] = uiState['current']
-  uiState['current']    = None
+  def on_mouse_up(self):
 
-  if uiState['translateActive']:
-    if pgzSetup.opacitySupported: 
-      an = animate(arrowTrans, opacity=0., duration=0.5) #depends upon pgzero 1.3
-      uiState['translateFadeAnim'] = an
-    uiState['translateActive'] = False
+    if self.translateActive
+      if self.opacitySupported: 
+        an = animate(arrowTrans, opacity=0., duration=0.5) #depends upon pgzero 1.3
+        self.translateFadeAnim = an
+      self.translateActive = False
 
-  if uiState['rotateActive']:
-    if pgzSetup.opacitySupported: 
-      an = animate(arrowRot, opacity=0., duration=0.5) #depends upon pgzero 1.3
-      uiState['rotateFadeAnim'] = an
-    uiState['rotateActive'] = False
-    
-#### calculate wind rotation ####
-
-def calcWindRotRel(windPos, pos, rel):
-
-  wpx, wpy = windPos
-  px,  py  = pos
-  rx,  ry  = rel
-
-  dx1, dy1 = px-wpx, py-wpy
-  dx2, dy2 = rx-wpx, ry-wpy
-
-  angle1 = math.atan2(dy1, dx1) 
-  angle2 = math.atan2(dy2, dx2) 
-
-  a = angle2 - angle1
-
-  #print(angle2, angle1, a)
-
-  return angle1
+    if self.rotateActive:
+      if self.opacitySupported: 
+        an = animate(arrowRot, opacity=0., duration=0.5) #depends upon pgzero 1.3
+        self.rotateFadeAnim = an
+      self.rotateActive     = False
       
-#### mouse movement ####
+  #### calculate wind rotation ####
 
-def on_mouse_move(pos, rel):
-  dx, dy = rel
+  def calcWindRotRel(self, windPos, pos, rel):
 
-  if uiState['current'] == wind and uiState['rotateActive']:
-    wind.angle += calcWindRotRel(wind.center, pos, rel)
-    return
+    wpx, wpy = windPos
+    px,  py  = pos
+    rx,  ry  = rel
+  
+    dx1, dy1 = px-wpx, py-wpy
+    dx2, dy2 = rx-wpx, ry-wpy
 
-  for a in actors:
-    if uiState['current'] == a:
-      x1, y1 = a.pos
+    angle1 = math.atan2(dy1, dx1) 
+    angle2 = math.atan2(dy2, dx2) 
 
-      x2, y2 = x1+dx, y1+dy
-      a.pos  = (x2, y2)
+    a = angle2 - angle1
 
-#### breeze ~engine ####
+    #print(angle2, angle1, a)
 
-def genBreezelet():
-  global breezeletCnt
-  b = Actor(breezeFn, pos=wind.pos)
+    return angle1
+      
+  #### mouse movement ####
 
-  x1, y1 = b.pos
-  x2     = x1 + 1524 
+  def on_mouse_move(self, pos, rel):
+    dx, dy = rel
 
-  animate(b, pos=(x2, y1), duration=9.)
+    if self.rotateActive:
+      self.angle += self.calcWindRotRel(wind.center, pos, rel)
+      return
 
-  breezelets[breezeletCnt] = b #use of a dictionary will help with cleanup 
-  breezeletCnt += 1
+  #### breeze ~engine ####
 
-genBreezelet()
-clock.schedule_interval(genBreezelet, 2)
+  def genBreezelet(self):
+    b = Actor(self.breezeFn, pos=self.pos)
+
+    x1, y1 = b.pos
+    x2     = x1 + 1524 
+
+    animate(b, pos=(x2, y1), duration=self.breezeletDuration)
+
+    breezelets[breezeletCnt] = b #use of a dictionary will help with cleanup 
+    breezeletCnt += 1
+
+  #### breeze ~engine ####
+
+  def startBreeze(self):
+    self.genBreezelet()
+    clock.schedule_interval(self.genBreezelet, self.breezeGenFrequency)
 
 ### end ###

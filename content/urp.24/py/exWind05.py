@@ -8,7 +8,7 @@ import pgzSetup #move window to 0,0 / top-left of screen; determine if opacity s
 import math
 import enoWind
 
-wind  = enoWind()
+wind  = enoWind(opacitySupported=pgzSetup.opacitySupported)
 bldg1 = Actor('wind21j-bldg3', pos=(850, 450))
 bldg2 = Actor('wind21s-bldg3', pos=(350, 650))
 
