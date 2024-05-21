@@ -17,7 +17,7 @@ class enoWind(Actor):
   translateFadeAnim = None
   rotateFadeAnim    = None
 
-  ##constructor ###
+  #### constructor ####
 
   def __init__(self, coreImageFn=None):
     if coreImageFn == None: coreImageFn = self.windImageFn
@@ -27,21 +27,17 @@ class enoWind(Actor):
 
   def draw(self): 
 
-    trActive, tfActive = uiState['translateActive'], uiState['translateFadeAnim']
+    trActive, tfActive = self.translateActive, self.translateFadeAnim
   
     if trActive or (tfActive != None and tfActive.running): 
-      if uiState['current'] != None: currentPos = uiState['current'].pos
-      else:                          currentPos = uiState['lastActive'].pos
-      arrowTrans.pos = currentPos
+      arrowTrans.pos = self.pos
       arrowTrans.draw()
 
-    rotActive, rfActive = uiState['rotateActive'], uiState['rotateFadeAnim']
+    rotActive, rfActive = self.rotateActive, self.rotateFadeAnim
 
-  if rotActive or (rfActive != None and rfActive.running): 
-    if uiState['current'] != None: currentPos = uiState['current'].pos
-    else:                          currentPos = uiState['lastActive'].pos
-    arrowRot.pos = currentPos
-    arrowRot.draw()
+    if rotActive or (rfActive != None and rfActive.running): 
+      arrowRot.pos = self.pos
+      arrowRot.draw()
 
 #### mouse press ####
 
