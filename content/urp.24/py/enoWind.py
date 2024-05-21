@@ -1,41 +1,41 @@
-# Successive illustrative examples of local & distributed (second) Wind
+# Class providing initial Wind support
 # Brygg Ullmer, Clemson University
-# Begun 2024-05-20
+# Begun 2024-05-21
 
-WIDTH, HEIGHT = 1920, 1080
 import pgzSetup #move window to 0,0 / top-left of screen; determine if opacity supported
 import math
+from pgzero.builtins import Actor, animate, keyboard
 
-wind  = Actor('wind21u3')
-bldg1 = Actor('wind21j-bldg3', pos=(850, 450))
-bldg2 = Actor('wind21s-bldg3', pos=(350, 650))
+class enoWind(Actor):
+  coreimageFn = 'wind21u3'
 
-arrowTrans = Actor('trans_arrows21v3')
-arrowRot   = Actor('rot_arrows21y3')
+  arrowTrans = Actor('trans_arrows21v3')
+  arrowRot   = Actor('rot_arrows21y3')
 
-actors       = [wind, bldg1, bldg2]
-breezelets   = {}
-breezeletCnt = 0
-breezeFn     = 'wind21t-breeze3'
-uiState      = {'current': None, 'translateActive': False, 'rotateActive': False,
-                'translateFadeAnim': None, 'rotateFadeAnim': None}
+  translateActive   = False
+  rotateActive      = False
+  translateFadeAnim = None
+  rotateFadeAnim    = None
 
-#### draw ####
+  ##constructor ###
 
-def draw(): 
-  screen.clear()
-  for a in actors:     a.draw()
-  for b in breezelets: breezelets[b].draw()
+  def __init__(self, coreImageFn=None):
+    if coreImageFn == None: coreImageFn = self.windImageFn
+    super().__init__(coreImageFn)
 
-  trActive, tfActive = uiState['translateActive'], uiState['translateFadeAnim']
+  #### draw ####
 
-  if trActive or (tfActive != None and tfActive.running): 
-    if uiState['current'] != None: currentPos = uiState['current'].pos
-    else:                          currentPos = uiState['lastActive'].pos
-    arrowTrans.pos = currentPos
-    arrowTrans.draw()
+  def draw(self): 
 
-  rotActive, rfActive = uiState['rotateActive'], uiState['rotateFadeAnim']
+    trActive, tfActive = uiState['translateActive'], uiState['translateFadeAnim']
+  
+    if trActive or (tfActive != None and tfActive.running): 
+      if uiState['current'] != None: currentPos = uiState['current'].pos
+      else:                          currentPos = uiState['lastActive'].pos
+      arrowTrans.pos = currentPos
+      arrowTrans.draw()
+
+    rotActive, rfActive = uiState['rotateActive'], uiState['rotateFadeAnim']
 
   if rotActive or (rfActive != None and rfActive.running): 
     if uiState['current'] != None: currentPos = uiState['current'].pos
