@@ -24,13 +24,13 @@ class enoWind(Actor):
   fadeInDuration     = .25
   fadeOutDuration    = .5
 
- breezelets   = None
- breezeletCnt = 0
+  breezelets   = None
+  breezeletCnt = 0
 
- windDistanceTransRotThresh = 75
+  windDistanceTransRotThresh = 75
 
- opacitySupported  = False  # hope this will be overridden, but -- if we expect it and unsupported,
-                            # potential for crash
+  opacitySupported  = False  # hope this will be overridden, but -- if we expect it and unsupported,
+                             # potential for crash, re dependency upon pgzero >=1.3
 
  #### constructor ####
 
@@ -69,12 +69,12 @@ class enoWind(Actor):
    if distanceFromWindCenter > self.windDistanceTransRotThresh: #rotation mode
      self.rotateActive = True
      if self.opacitySupported: 
-       an = animate(arrowRot, opacity=1., duration=self.fadeInDuration) #depends upon pgzero 1.3
+       an = animate(arrowRot, opacity=1., duration=self.fadeInDuration) 
        self.rotFadeAnim = an
    else: 
      self.translateActive = True
      if self.opacitySupported: 
-       an = animate(arrowTrans, opacity=1., duration=self.fadeInDuration) #depends upon pgzero 1.3
+       an = animate(arrowTrans, opacity=1., duration=self.fadeInDuration)
        self.translateFadeAnim = an
 
  #### mouse release ####
@@ -83,13 +83,13 @@ class enoWind(Actor):
 
    if self.translateActive
      if self.opacitySupported: 
-       an = animate(arrowTrans, opacity=0., duration=self.fadeOutDuration) #depends upon pgzero 1.3
+       an = animate(arrowTrans, opacity=0., duration=self.fadeOutDuration) 
        self.translateFadeAnim = an
      self.translateActive = False
 
    if self.rotateActive:
      if self.opacitySupported: 
-       an = animate(arrowRot, opacity=0., duration=self.fadeOutDuration) #depends upon pgzero 1.3
+       an = animate(arrowRot, opacity=0., duration=self.fadeOutDuration) 
        self.rotateFadeAnim = an
      self.rotateActive     = False
      
