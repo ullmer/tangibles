@@ -7,9 +7,10 @@ tangibles:
     description: Building upon the Wind tangible of Underkoffler and Ishii's CHI'99 Urp
 
     glyphs:
-    bindings: [urp,     durp,   tmg,   ml,     sdg, 
-               animist, oblong, tei,  wff, tangViz,
-               space,   time,   themes]
+    bindings: [urp,     durp,   tmg,   ml,        sdg, 
+               animist, oblong, tei,  wff,    tangViz,
+               space,   time,   themes, people,  orgs,
+               namer,   europe, asia,   africa, samer]
 
 associations: 
   urp:
