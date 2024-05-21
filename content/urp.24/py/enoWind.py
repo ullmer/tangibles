@@ -23,6 +23,7 @@ class enoWind(Actor):
   breezeletDuration  = 9.
   fadeInDuration     = .25
   fadeOutDuration    = .5
+  breezeletHorizon   = 1500
 
   breezelets   = None
   breezeletCnt = 0
@@ -135,11 +136,15 @@ class enoWind(Actor):
   def genBreezelet(self):
     b       = Actor(self.breezeImgFn, pos=self.pos)
     b.angle = self.angle
+    print("b:", b.angle)
  
     x1, y1  = b.pos
-    x2      = x1 + 1524 
+
+    radangle = b.angle / 180. * math.pi + math.pi/2.
+    x2      = x1 + self.breezeletHorizon * math.sin(radangle)
+    y2      = y1 + self.breezeletHorizon * math.cos(radangle)
  
-    animate(b, pos=(x2, y1), duration=self.breezeletDuration)
+    animate(b, pos=(x2, y2), duration=self.breezeletDuration)
  
     self.breezelets[self.breezeletCnt] = b #use of a dictionary will help with cleanup 
     self.breezeletCnt += 1
