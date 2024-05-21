@@ -16,7 +16,8 @@ actors       = [wind, bldg1, bldg2]
 breezelets   = {}
 breezeletCnt = 0
 breezeFn     = 'wind21t-breeze3'
-uiState      = {'current': None, 'translate': False, 'rotate': False}
+uiState      = {'current': None, 'translateActive': False, 'rotateActive': False,
+                'translateFadeAnim': None}
 
 #### draw ####
 
@@ -25,20 +26,23 @@ def draw():
   for a in actors:     a.draw()
   for b in breezelets: breezelets[b].draw()
 
-  if uiState['translate']:
+  trActive, tfActive = uiState['translateActive'], uiState['translateFadeAnim']
+
+  if trActive or (tfActive != None and tfActive.running()): 
     currentPos     = uiState['current'].pos
     arrowTrans.pos = currentPos
     arrowTrans.draw()
 
-#### handle simplest interactivity ####
+#### handle simple interactivity ####
 
 def on_mouse_up():        
   uiState['current']   = None
 
-  if uiState['translate']:
-    if pgzOpacitySupported: 
-      animate(arrowTrans, opacity=0., duration=0.5) #depends upon pgzero 1.3
-    uiState['translate'] = False
+  if uiState['translateActive']:
+    if pgzSetup.opacitySupported: 
+      an = animate(arrowTrans, opacity=0., duration=0.5) #depends upon pgzero 1.3
+      uiState['translateFadeAnim'] = an
+    uiState['translateActive'] = False
 
 def on_mouse_down(pos): 
   for a in actors:
@@ -55,10 +59,11 @@ def on_mouse_move(pos, rel):
 
       x2, y2 = x1+dx, y1+dy
       a.pos  = (x2, y2)
-      if uiState['translate'] == False and uiState['current'] == wind:
-        uiState['translate'] = True
-        if pgzOpacitySupported: 
-          animate(arrowTrans, opacity=1., duration=0.25) #depends upon pgzero 1.3
+      if uiState['translateActive'] == False and uiState['current'] == wind:
+        uiState['translateActive'] = True
+        if pgzSetup.opacitySupported: 
+          an = animate(arrowTrans, opacity=1., duration=0.25) #depends upon pgzero 1.3
+          uiState['translateFadeAnim'] = an
 
 #### breeze ~engine ####
 

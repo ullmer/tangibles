@@ -13,9 +13,11 @@ if platform.system() == "Windows":
 
 import pgzero
 
-global pgzOpacitySupported
-pgzOpacitySupported = False
-try:    if int(pgzero.__version__[2]) >= 3: pgzOpacitySupported = True
-except: pass #hack to determine if opacity is supported; will break when pgz 2, 3, etc. arrive
+global opacitySupported
+opacitySupported = False
 
+try:    
+  if int(pgzero.__version__[2]) >= 3: opacitySupported = True
+except: 
+  pass #hack to determine if opacity is supported; will break when pgz 2, 3, etc. arrive
 ### end ###
