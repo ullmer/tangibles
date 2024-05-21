@@ -9,8 +9,8 @@ import math
 from   enoWind import *
 
 wind  = enoWind(opacitySupported=pgzSetup.opacitySupported)
-bldg1 = Actor('wind21j-bldg3', pos=(850, 450))
-bldg2 = Actor('wind21s-bldg3', pos=(350, 650))
+bldg1 = Actor('wind21j-bldg3b', pos=(850, 450))
+bldg2 = Actor('wind21s-bldg3b', pos=(350, 650))
 
 actors       = [wind, bldg1, bldg2]
 uiState      = {'current': None, 'translateActive': False, 'rotateActive': False,
