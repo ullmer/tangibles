@@ -28,15 +28,17 @@ def draw():
 
   trActive, tfActive = uiState['translateActive'], uiState['translateFadeAnim']
 
-  if trActive or (tfActive != None and tfActive.running()): 
-    currentPos     = uiState['current'].pos
+  if trActive or (tfActive != None and tfActive.running): 
+    if uiState['current'] != None: currentPos = uiState['current'].pos
+    else:                          currentPos = uiState['lastActive'].pos
     arrowTrans.pos = currentPos
     arrowTrans.draw()
 
 #### handle simple interactivity ####
 
 def on_mouse_up():        
-  uiState['current']   = None
+  uiState['lastActive'] = uiState['current']
+  uiState['current']    = None
 
   if uiState['translateActive']:
     if pgzSetup.opacitySupported: 
