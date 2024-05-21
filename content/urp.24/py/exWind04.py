@@ -16,7 +16,7 @@ actors       = [w, b1, b2]
 breezelets   = {}
 breezeletCnt = 0
 breezeFn     = 'wind21t-breeze3'
-touched      = {'current': None, 'translate': False, 'rotate': False}
+uiState      = {'current': None, 'translate': False, 'rotate': False}
 
 
 #### draw ####
@@ -26,30 +26,30 @@ def draw():
   for a in actors:     a.draw()
   for b in breezelets: breezelets[b].draw()
 
-  if touched['translate']:
-    currentPos     = touched['current'].pos
+  if uiState['translate']:
+    currentPos     = uiState['current'].pos
     arrowTrans.pos = currentPos
     arrowTrans.draw()
 
 #### handle simplest interactivity ####
 
 def on_mouse_up():        
-  touched['current']   = None
-  touched['translate'] = False
+  uiState['current']   = None
+  uiState['translate'] = False
 
 def on_mouse_down(pos): 
   for a in actors:
-    if a.collidepoint(pos): touched['current'] = a
+    if a.collidepoint(pos): uiState['current'] = a
 
 def on_mouse_move(rel):
   dx, dy = rel
 
   for a in actors:
-    if touched['current'] == a:
+    if uiState['current'] == a:
       x1, y1 = a.pos
       x2, y2 = x1+dx, y1+dy
       a.pos  = (x2, y2)
-      touched['translate'] = True
+      uiState['translate'] = True
 
 #### breeze ~engine ####
 
