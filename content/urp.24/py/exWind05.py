@@ -13,7 +13,8 @@ bldg1 = Actor('wind21j-bldg3b', pos=(850, 450))
 bldg2 = Actor('wind21s-bldg3b', pos=(350, 650))
 
 actors       = [wind, bldg1, bldg2]
-uiState      = {'current': None, 'translateActive': False, 'rotateActive': False,
+uiState      = {'current': None, 'lastActive': wind, 
+                'translateActive': False, 'rotateActive': False,
                 'translateFadeAnim': None, 'rotateFadeAnim': None}
 
 #### draw ####
@@ -51,5 +52,16 @@ def on_mouse_move(pos, rel):
 
       x2, y2 = x1+dx, y1+dy
       a.pos  = (x2, y2)
+
+#### key press ####
+
+  def rotActor(self, whichActor, whichRot):
+    self.currentAngle += whichRot
+    animate(whichActor, angle=self.currentAngle, tween='accel_decel', duration=.3)
+
+  def on_key_down():
+    a = uiState['lastActive']
+    if keyboard.left:  self.rotActor(a2,  self.deltaAngle)
+    if keyboard.right: self.rotActor(a2, -self.deltaAngle)
 
 ### end ###
