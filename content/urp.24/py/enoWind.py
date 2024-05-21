@@ -81,6 +81,7 @@ class enoWind(Actor):
         an = animate(self.arrowTrans, opacity=1., duration=self.fadeInDuration)
         self.translateFadeAnim = an
 
+  #### mouse movement ####
 
   def on_mouse_move(self, pos, rel):
     if self.rotateActive:
@@ -129,15 +130,6 @@ class enoWind(Actor):
  
     return angle1 # this is not correct value, but a semi-functional placeholder
       
-  #### mouse movement ####
- 
-  def on_mouse_move(self, pos, rel):
-    dx, dy = rel
- 
-    if self.rotateActive:
-      self.angle += self.calcWindRotRel(wind.center, pos, rel)
-      return
- 
   #### breeze ~engine ####
  
   def genBreezelet(self):
