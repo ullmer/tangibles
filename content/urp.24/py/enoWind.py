@@ -80,7 +80,19 @@ class enoWind(Actor):
       if self.opacitySupported: 
         an = animate(self.arrowTrans, opacity=1., duration=self.fadeInDuration)
         self.translateFadeAnim = an
- 
+
+
+  def on_mouse_move(self, pos, rel):
+    if self.rotateActive:
+      self.angle += self.calcWindRotRel(self.center, pos, rel)
+      return
+
+    dx, dy = rel
+    x1, y1 = self.pos
+
+    x2, y2    = x1+dx, y1+dy
+    self.pos  = (x2, y2)
+
   #### mouse release ####
  
   def on_mouse_up(self):

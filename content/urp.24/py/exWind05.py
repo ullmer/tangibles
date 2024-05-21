@@ -40,8 +40,8 @@ def on_mouse_up():
 #### mouse movement ####
 
 def on_mouse_move(pos, rel):
-  if uiState['current'] == wind and uiState['rotateActive']:
-    wind.on_mouse_move_rot(pos, rel)
+  if uiState['current'] == wind:
+    wind.on_mouse_move(pos, rel)
     return
 
   for a in actors:
