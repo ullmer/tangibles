@@ -5,6 +5,10 @@
 WIDTH, HEIGHT = 1920, 1080
 import moveWinHome #move window to 0,0 / top-left of screen
 
+import pgzero
+pgzOpacitySupported = False
+if int(pgzero.__version__[2]) >= 3: pgzOpacitySupported = True #hacky
+
 wind  = Actor('wind21u3')
 bldg1 = Actor('wind21j-bldg3', pos=(850, 450))
 bldg2 = Actor('wind21s-bldg3', pos=(350, 650))
@@ -12,7 +16,7 @@ bldg2 = Actor('wind21s-bldg3', pos=(350, 650))
 arrowTrans  = Actor('trans_arrows21v3')
 #arrowsRot    = Actor('transArrows21v3')
 
-actors       = [w, bldg1, bldg2]
+actors       = [wind, bldg1, bldg2]
 breezelets   = {}
 breezeletCnt = 0
 breezeFn     = 'wind21t-breeze3'
@@ -34,7 +38,11 @@ def draw():
 
 def on_mouse_up():        
   uiState['current']   = None
-  uiState['translate'] = False
+
+  if uiState['translate']:
+    if pgzOpacitySupported: 
+      animate(arrowTrans, opacity=0., duration=0.5) #depends upon pgzero 1.3
+    uiState['translate'] = False
 
 def on_mouse_down(pos): 
   for a in actors:
@@ -47,18 +55,20 @@ def on_mouse_move(pos, rel):
     if uiState['current'] == a:
       x1, y1 = a.pos
 
-      if a != 
-
+      #if a != 
 
       x2, y2 = x1+dx, y1+dy
       a.pos  = (x2, y2)
-      uiState['translate'] = True
+      if uiState['translate'] == False and uiState['current'] == wind:
+        uiState['translate'] = True
+        if pgzOpacitySupported: 
+          animate(arrowTrans, opacity=1., duration=0.25) #depends upon pgzero 1.3
 
 #### breeze ~engine ####
 
 def genBreezelet():
   global breezeletCnt
-  b = Actor(breezeFn, pos=w.pos)
+  b = Actor(breezeFn, pos=wind.pos)
 
   x1, y1 = b.pos
   x2     = x1 + 1524 
