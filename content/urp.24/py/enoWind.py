@@ -132,15 +132,18 @@ class enoWind(Actor):
   #### harvest defunct breezelets ####
  
   def harvestDefunctBreezelets(self):
-    bkeys = self.breezelets.keys()
+    harvestList = []
 
-    for b in bkeys:
+    for b in self.breezelets:
       br   = self.breezelets[b]
       x, y = br.pos
       bh = self.breezeletHorizon
       if x > bh or y > bh: # off the map
-        self.breezelets.pop(b) #remove from the dictionary / ~garbage collection
-        print("!b", x, y)
+        harvestList.append(b)
+
+    for b in harvestList: #if popped above, dictionary throws a warning
+      self.breezelets.pop(b) #remove from the dictionary / ~garbage collection
+      #print("!b", x, y)
 
   #### generate breezelet ####
  
