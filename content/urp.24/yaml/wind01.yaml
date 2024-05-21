@@ -18,15 +18,22 @@ associations:
        original:          [john.underkoffler, hiroshi.ishii]
        laterContributors: [george.santos, brygg.ullmer, tbd]
      source:       
-       - {path: media.mit.edu:/mas/tangible/u/gsantos/myUrp,       date: 1999-07-30, status: offline}
-       - {path: github.com/ullmer/tangibles/urp.24/py/exWind01.py, date: 2024-05-20, status: online}
-
-media.mit.edu:/mas/tangible/u/gsantos/myUrp,    date: 1999-07-30, status: offline}
+       - {path: media.mit.edu:/mas/tangible/u/gsantos/myUrp,               date: 1999-07-30, status: offline}
+       - {path: github.com/ullmer/tangibles/content/urp.24/py/exWind05.py, date: 2024-05-20, status: online}
 
   durp:
      authors: [john.underkoffler, hiroshi.ishii, dan.chak]
      source:       
        - {path: media.mit.edu:/mas/tangible/u/chak/linux/durp3, date: 2000-01-10, status: offline}
+
+  sdg:
+     authors: [united.nations]
+     source:  
+       - https://www.un.org/sustainabledevelopment/news/communications-material/
+       - https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-inverted-icons-Print.zip
+       - https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Inverted-Icons-WEB.zip
+       - https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Transparent-Inverted-Icons.zip
+       - local:tangibles/content/urp.24/py/images/sdg/x16/%2i.png
 
   wff:
      name:    Weaving Fire into Form: Aspirations for Tangible and Embodied Interaction
