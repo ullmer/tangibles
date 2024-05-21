@@ -5,19 +5,18 @@
 WIDTH, HEIGHT = 1920, 1080
 import moveWinHome #move window to 0,0 / top-left of screen
 
-w       = Actor('wind21u3')
-b1      = Actor('wind21j-bldg3', pos=(850, 450))
-b2      = Actor('wind21s-bldg3', pos=(350, 650))
+wind  = Actor('wind21u3')
+bldg1 = Actor('wind21j-bldg3', pos=(850, 450))
+bldg2 = Actor('wind21s-bldg3', pos=(350, 650))
 
 arrowTrans  = Actor('trans_arrows21v3')
 #arrowsRot    = Actor('transArrows21v3')
 
-actors       = [w, b1, b2]
+actors       = [w, bldg1, bldg2]
 breezelets   = {}
 breezeletCnt = 0
 breezeFn     = 'wind21t-breeze3'
 uiState      = {'current': None, 'translate': False, 'rotate': False}
-
 
 #### draw ####
 
@@ -41,12 +40,16 @@ def on_mouse_down(pos):
   for a in actors:
     if a.collidepoint(pos): uiState['current'] = a
 
-def on_mouse_move(rel):
+def on_mouse_move(pos, rel):
   dx, dy = rel
 
   for a in actors:
     if uiState['current'] == a:
       x1, y1 = a.pos
+
+      if a != 
+
+
       x2, y2 = x1+dx, y1+dy
       a.pos  = (x2, y2)
       uiState['translate'] = True
