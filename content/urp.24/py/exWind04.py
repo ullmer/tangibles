@@ -82,14 +82,35 @@ def on_mouse_up():
       an = animate(arrowRot, opacity=0., duration=0.5) #depends upon pgzero 1.3
       uiState['rotateFadeAnim'] = an
     uiState['rotateActive'] = False
+    
+#### calculate wind rotation ####
+
+def calcWindRotRel(windPos, pos, rel):
+
+  wpx, wpy = windPos
+  px,  py  = pos
+  rx,  ry  = rel
+
+  dx1, dy1 = px-wpx, py-wpy
+  dx2, dy2 = rx-wpx, ry-wpy
+
+  angle1 = math.atan2(dy1, dx1) 
+  angle2 = math.atan2(dy2, dx2) 
+
+  a = angle2 - angle1
+
+  #print(angle2, angle1, a)
+
+  return angle1
       
 #### mouse movement ####
 
 def on_mouse_move(pos, rel):
   dx, dy = rel
 
-  #if uiState['current'] == wind and uiState['rotateActive']:
-  #  return
+  if uiState['current'] == wind and uiState['rotateActive']:
+    wind.angle += calcWindRotRel(wind.center, pos, rel)
+    return
 
   for a in actors:
     if uiState['current'] == a:
