@@ -43,6 +43,7 @@ class enoWind(Actor):
     self.arrowTrans = Actor(self.arrowTransFn)
     self.arrowRot   = Actor(self.arrowRotFn)
     self.breezelets = {}
+    self.startBreeze()
 
   #### draw ####
  
@@ -135,8 +136,8 @@ class enoWind(Actor):
  
     animate(b, pos=(x2, y1), duration=self.breezeletDuration)
  
-    breezelets[breezeletCnt] = b #use of a dictionary will help with cleanup 
-    breezeletCnt += 1
+    self.breezelets[self.breezeletCnt] = b #use of a dictionary will help with cleanup 
+    self.breezeletCnt += 1
  
   #### breeze ~engine ####
  
