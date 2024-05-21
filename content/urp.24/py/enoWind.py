@@ -7,10 +7,10 @@ import math
 from pgzero.builtins import Actor, animate, keyboard
 
 class enoWind(Actor):
-  coreimageFn = 'wind21u3'
-
+  coreimageFn  = 'wind21u3'
   arrowTransFn = 'trans_arrows21v3'
   arrowRotFn   = 'rot_arrows21y3'
+
   arrowTrans   = None
   arrowRot     = None
 
@@ -19,7 +19,7 @@ class enoWind(Actor):
   translateFadeAnim = None
   rotateFadeAnim    = None
 
-    if distanceFromWindCenter > 75: #rotation mode
+  windDistanceTransRotThresh = 75
 
   #### constructor ####
 
@@ -52,8 +52,8 @@ class enoWind(Actor):
 
     distanceFromWindCenter = math.dist(pos, self.pos)
 
-    if distanceFromWindCenter > 75: #rotation mode
-      uiState['rotateActive'] = True
+    if distanceFromWindCenter > self.windDistanceTransRotThresh: #rotation mode
+      self.rotateActive = True
       if pgzSetup.opacitySupported: 
         an = animate(arrowRot, opacity=1., duration=0.25) #depends upon pgzero 1.3
         uiState['rotFadeAnim'] = an
