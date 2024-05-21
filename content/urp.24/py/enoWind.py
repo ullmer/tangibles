@@ -124,19 +124,29 @@ class enoWind(Actor):
  
     angle1 = math.atan2(dy1, dx1) 
     angle2 = math.atan2(dy2, dx2) 
- 
-    a = angle2 - angle1
- 
+    a      = angle2 - angle1
     #print(angle2, angle1, a)
  
     return angle1 # this is not correct value, but a semi-functional placeholder
       
-  #### breeze ~engine ####
+  #### harvest defunct breezelets ####
+ 
+  def harvestDefunctBreezelets(self):
+    bkeys = self.breezelets.keys()
+
+    for b in bkeys:
+      br   = self.breezelets[b]
+      x, y = br.pos
+      bh = self.breezeletHorizon
+      if x > bh or y > bh: # off the map
+        self.breezelets.pop(b) #remove from the dictionary / ~garbage collection
+        print("!b", x, y)
+
+  #### generate breezelet ####
  
   def genBreezelet(self):
     b        = Actor(self.breezeImgFn, pos=self.pos)
     b.angle  = self.angle
- 
     x1, y1   = b.pos
 
     radangle = b.angle / 180. * math.pi + math.pi/2.
@@ -147,11 +157,12 @@ class enoWind(Actor):
  
     self.breezelets[self.breezeletCnt] = b #use of a dictionary will help with cleanup 
     self.breezeletCnt += 1
+    self.harvestDefunctBreezelets()
  
-  #### breeze ~engine ####
- 
+  #### start breezelet stream ####
+
   def startBreeze(self):
     self.genBreezelet()
     clock.schedule_interval(self.genBreezelet, self.breezeGenFrequency)
- 
+
 ### end ###
