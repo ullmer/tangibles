@@ -9,19 +9,26 @@ from pgzero.builtins import Actor, animate, keyboard
 class enoWind(Actor):
   coreimageFn = 'wind21u3'
 
-  arrowTrans = Actor('trans_arrows21v3')
-  arrowRot   = Actor('rot_arrows21y3')
+  arrowTransFn = 'trans_arrows21v3'
+  arrowRotFn   = 'rot_arrows21y3'
+  arrowTrans   = None
+  arrowRot     = None
 
   translateActive   = False
   rotateActive      = False
   translateFadeAnim = None
   rotateFadeAnim    = None
 
+    if distanceFromWindCenter > 75: #rotation mode
+
   #### constructor ####
 
   def __init__(self, coreImageFn=None):
     if coreImageFn == None: coreImageFn = self.windImageFn
     super().__init__(coreImageFn)
+
+    self.arrowTrans = Actor(self.arrowTransFn)
+    self.arrowRot   = Actor(self.arrowRotFn)
 
   #### draw ####
 
@@ -39,14 +46,11 @@ class enoWind(Actor):
       arrowRot.pos = self.pos
       arrowRot.draw()
 
-#### mouse press ####
+  #### mouse press ####
 
-def on_mouse_down(pos): 
-  for a in actors:
-    if a.collidepoint(pos): uiState['current'] = a
+  def on_mouse_down(self, pos): 
 
-  if uiState['current'] == wind:
-    distanceFromWindCenter = math.dist(pos, wind.pos)
+    distanceFromWindCenter = math.dist(pos, self.pos)
 
     if distanceFromWindCenter > 75: #rotation mode
       uiState['rotateActive'] = True
