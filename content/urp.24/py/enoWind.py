@@ -47,18 +47,19 @@ class enoWind(Actor):
   #### draw ####
  
   def draw(self): 
+    super().draw()
  
     trActive, tfActive = self.translateActive, self.translateFadeAnim
   
     if trActive or (tfActive != None and tfActive.running): 
-      arrowTrans.pos = self.pos
-      arrowTrans.draw()
+      self.arrowTrans.pos = self.pos
+      self.arrowTrans.draw()
  
     rotActive, rfActive = self.rotateActive, self.rotateFadeAnim
  
     if rotActive or (rfActive != None and rfActive.running): 
-      arrowRot.pos = self.pos
-      arrowRot.draw()
+      self.arrowRot.pos = self.pos
+      self.arrowRot.draw()
 
     for b in self.breezelets: self.breezelets[b].draw()
  
@@ -71,12 +72,12 @@ class enoWind(Actor):
     if distanceFromWindCenter > self.windDistanceTransRotThresh: #rotation mode
       self.rotateActive = True
       if self.opacitySupported: 
-        an = animate(arrowRot, opacity=1., duration=self.fadeInDuration) 
+        an = animate(self.arrowRot, opacity=1., duration=self.fadeInDuration) 
         self.rotFadeAnim = an
     else: 
       self.translateActive = True
       if self.opacitySupported: 
-        an = animate(arrowTrans, opacity=1., duration=self.fadeInDuration)
+        an = animate(self.arrowTrans, opacity=1., duration=self.fadeInDuration)
         self.translateFadeAnim = an
  
   #### mouse release ####
@@ -85,13 +86,13 @@ class enoWind(Actor):
  
     if self.translateActive:
       if self.opacitySupported: 
-        an = animate(arrowTrans, opacity=0., duration=self.fadeOutDuration) 
+        an = animate(self.arrowTrans, opacity=0., duration=self.fadeOutDuration) 
         self.translateFadeAnim = an
       self.translateActive = False
  
     if self.rotateActive:
       if self.opacitySupported: 
-        an = animate(arrowRot, opacity=0., duration=self.fadeOutDuration) 
+        an = animate(self.arrowRot, opacity=0., duration=self.fadeOutDuration) 
         self.rotateFadeAnim = an
       self.rotateActive     = False
       
