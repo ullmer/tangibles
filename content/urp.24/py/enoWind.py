@@ -134,15 +134,14 @@ class enoWind(Actor):
   #### breeze ~engine ####
  
   def genBreezelet(self):
-    b       = Actor(self.breezeImgFn, pos=self.pos)
-    b.angle = self.angle
-    print("b:", b.angle)
+    b        = Actor(self.breezeImgFn, pos=self.pos)
+    b.angle  = self.angle
  
-    x1, y1  = b.pos
+    x1, y1   = b.pos
 
     radangle = b.angle / 180. * math.pi + math.pi/2.
-    x2      = x1 + self.breezeletHorizon * math.sin(radangle)
-    y2      = y1 + self.breezeletHorizon * math.cos(radangle)
+    x2       = x1 + self.breezeletHorizon * math.sin(radangle)
+    y2       = y1 + self.breezeletHorizon * math.cos(radangle)
  
     animate(b, pos=(x2, y2), duration=self.breezeletDuration)
  
