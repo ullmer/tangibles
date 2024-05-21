@@ -6,7 +6,7 @@ import math
 from pgzero.builtins import Actor, animate, keyboard
 
 class enoWind(Actor):
-  coreimageFn  = 'wind21u3'
+  windImgFn    = 'wind21u3'
   arrowTransFn = 'trans_arrows21v3'
   arrowRotFn   = 'rot_arrows21y3'
   breezeImgFn  = 'wind21t-breeze3'
@@ -37,7 +37,7 @@ class enoWind(Actor):
   def __init__(self, coreImageFn=None, **kwargs):
 
     self.__dict__.update(kwargs)        #allow class fields to be passed in constructor
-    if coreImageFn == None: coreImageFn = self.windImageFn
+    if coreImageFn == None: coreImageFn = self.windImgFn
     super().__init__(coreImageFn)       #pass core image filename to Actor ~parent-class
 
     self.arrowTrans = Actor(self.arrowTransFn)
@@ -59,6 +59,8 @@ class enoWind(Actor):
     if rotActive or (rfActive != None and rfActive.running): 
       arrowRot.pos = self.pos
       arrowRot.draw()
+
+    for b in self.breezelets: self.breezelets[b].draw()
  
   #### mouse press ####
  

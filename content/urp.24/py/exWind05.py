@@ -6,7 +6,7 @@ WIDTH, HEIGHT = 1920, 1080
 
 import pgzSetup #move window to 0,0 / top-left of screen; determine if opacity supported
 import math
-import enoWind
+from   enoWind import *
 
 wind  = enoWind(opacitySupported=pgzSetup.opacitySupported)
 bldg1 = Actor('wind21j-bldg3', pos=(850, 450))
@@ -21,7 +21,6 @@ uiState      = {'current': None, 'translateActive': False, 'rotateActive': False
 def draw(): 
   screen.clear()
   for a in actors:     a.draw()
-  for b in breezelets: breezelets[b].draw()
 
 #### mouse press ####
 
