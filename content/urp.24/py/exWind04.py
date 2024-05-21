@@ -4,13 +4,14 @@
 
 WIDTH, HEIGHT = 1920, 1080
 import pgzSetup #move window to 0,0 / top-left of screen; determine if opacity supported
+import math
 
 wind  = Actor('wind21u3')
 bldg1 = Actor('wind21j-bldg3', pos=(850, 450))
 bldg2 = Actor('wind21s-bldg3', pos=(350, 650))
 
-arrowTrans   = Actor('trans_arrows21v3')
-#arrowsRot   = Actor('transArrows21v3')
+arrowTrans = Actor('trans_arrows21v3')
+arrowRot   = Actor('rot_arrows21v3')
 
 actors       = [wind, bldg1, bldg2]
 breezelets   = {}
@@ -34,7 +35,29 @@ def draw():
     arrowTrans.pos = currentPos
     arrowTrans.draw()
 
-#### handle simple interactivity ####
+#### mouse press ####
+
+def on_mouse_down(pos): 
+  for a in actors:
+    if a.collidepoint(pos): uiState['current'] = a
+
+  if uiState['current'] == wind:
+    distanceFromWindCenter = math.dist(pos, wind.pos)
+
+    if distanceFromWindCenter > 75: #rotation mode
+      uiState['rotateActive'] = True
+      if pgzSetup.opacitySupported: 
+        an = animate(arrowRotate, opacity=1., duration=0.25) #depends upon pgzero 1.3
+        uiState['rotFadeAnim'] = an
+    else: 
+      uiState['translateActive'] = True
+      if pgzSetup.opacitySupported: 
+        an = animate(arrowTrans, opacity=1., duration=0.25) #depends upon pgzero 1.3
+        uiState['translateFadeAnim'] = an
+
+#### breeze ~engine ####
+
+#### mouse release ####
 
 def on_mouse_up():        
   uiState['lastActive'] = uiState['current']
@@ -45,29 +68,21 @@ def on_mouse_up():
       an = animate(arrowTrans, opacity=0., duration=0.5) #depends upon pgzero 1.3
       uiState['translateFadeAnim'] = an
     uiState['translateActive'] = False
-
-def on_mouse_down(pos): 
-  for a in actors:
-    if a.collidepoint(pos): uiState['current'] = a
+      
+#### mouse movement ####
 
 def on_mouse_move(pos, rel):
   dx, dy = rel
+
+  if uiState['current'] == wind and uiState['rotateActive']:
+    return
 
   for a in actors:
     if uiState['current'] == a:
       x1, y1 = a.pos
 
-      #if a != 
-
       x2, y2 = x1+dx, y1+dy
       a.pos  = (x2, y2)
-      if uiState['translateActive'] == False and uiState['current'] == wind:
-        uiState['translateActive'] = True
-        if pgzSetup.opacitySupported: 
-          an = animate(arrowTrans, opacity=1., duration=0.25) #depends upon pgzero 1.3
-          uiState['translateFadeAnim'] = an
-
-#### breeze ~engine ####
 
 def genBreezelet():
   global breezeletCnt
