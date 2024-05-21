@@ -11,14 +11,14 @@ bldg1 = Actor('wind21j-bldg3', pos=(850, 450))
 bldg2 = Actor('wind21s-bldg3', pos=(350, 650))
 
 arrowTrans = Actor('trans_arrows21v3')
-arrowRot   = Actor('rot_arrows21v3')
+arrowRot   = Actor('rot_arrows21y3')
 
 actors       = [wind, bldg1, bldg2]
 breezelets   = {}
 breezeletCnt = 0
 breezeFn     = 'wind21t-breeze3'
 uiState      = {'current': None, 'translateActive': False, 'rotateActive': False,
-                'translateFadeAnim': None}
+                'translateFadeAnim': None, 'rotateFadeAnim': None}
 
 #### draw ####
 
@@ -35,6 +35,16 @@ def draw():
     arrowTrans.pos = currentPos
     arrowTrans.draw()
 
+  rotActive, rfActive = uiState['rotateActive'], uiState['rotateFadeAnim']
+
+  if rotActive or (rfActive != None and rfActive.running): 
+    if uiState['current'] != None: currentPos = uiState['current'].pos
+    else:                          currentPos = uiState['lastActive'].pos
+    arrowRot.pos = currentPos
+    arrowRot.draw()
+
+#### mouse press ####
+
 #### mouse press ####
 
 def on_mouse_down(pos): 
@@ -47,15 +57,13 @@ def on_mouse_down(pos):
     if distanceFromWindCenter > 75: #rotation mode
       uiState['rotateActive'] = True
       if pgzSetup.opacitySupported: 
-        an = animate(arrowRotate, opacity=1., duration=0.25) #depends upon pgzero 1.3
+        an = animate(arrowRot, opacity=1., duration=0.25) #depends upon pgzero 1.3
         uiState['rotFadeAnim'] = an
     else: 
       uiState['translateActive'] = True
       if pgzSetup.opacitySupported: 
         an = animate(arrowTrans, opacity=1., duration=0.25) #depends upon pgzero 1.3
         uiState['translateFadeAnim'] = an
-
-#### breeze ~engine ####
 
 #### mouse release ####
 
@@ -68,14 +76,20 @@ def on_mouse_up():
       an = animate(arrowTrans, opacity=0., duration=0.5) #depends upon pgzero 1.3
       uiState['translateFadeAnim'] = an
     uiState['translateActive'] = False
+
+  if uiState['rotateActive']:
+    if pgzSetup.opacitySupported: 
+      an = animate(arrowRot, opacity=0., duration=0.5) #depends upon pgzero 1.3
+      uiState['rotateFadeAnim'] = an
+    uiState['rotateActive'] = False
       
 #### mouse movement ####
 
 def on_mouse_move(pos, rel):
   dx, dy = rel
 
-  if uiState['current'] == wind and uiState['rotateActive']:
-    return
+  #if uiState['current'] == wind and uiState['rotateActive']:
+  #  return
 
   for a in actors:
     if uiState['current'] == a:
@@ -83,6 +97,8 @@ def on_mouse_move(pos, rel):
 
       x2, y2 = x1+dx, y1+dy
       a.pos  = (x2, y2)
+
+#### breeze ~engine ####
 
 def genBreezelet():
   global breezeletCnt
