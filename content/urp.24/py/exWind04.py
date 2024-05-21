@@ -3,18 +3,14 @@
 # Begun 2024-05-20
 
 WIDTH, HEIGHT = 1920, 1080
-import moveWinHome #move window to 0,0 / top-left of screen
-
-import pgzero
-pgzOpacitySupported = False
-if int(pgzero.__version__[2]) >= 3: pgzOpacitySupported = True #hacky
+import pgzSetup #move window to 0,0 / top-left of screen; determine if opacity supported
 
 wind  = Actor('wind21u3')
 bldg1 = Actor('wind21j-bldg3', pos=(850, 450))
 bldg2 = Actor('wind21s-bldg3', pos=(350, 650))
 
-arrowTrans  = Actor('trans_arrows21v3')
-#arrowsRot    = Actor('transArrows21v3')
+arrowTrans   = Actor('trans_arrows21v3')
+#arrowsRot   = Actor('transArrows21v3')
 
 actors       = [wind, bldg1, bldg2]
 breezelets   = {}

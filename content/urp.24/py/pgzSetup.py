@@ -11,4 +11,11 @@ if platform.system() == "Windows":
   hwnd = pygame.display.get_wm_info()['window']
   windll.user32.MoveWindow(hwnd, 0, 0, WIDTH, HEIGHT, False)
 
+import pgzero
+
+global pgzOpacitySupported
+pgzOpacitySupported = False
+try:    if int(pgzero.__version__[2]) >= 3: pgzOpacitySupported = True
+except: pass #hack to determine if opacity is supported; will break when pgz 2, 3, etc. arrive
+
 ### end ###
