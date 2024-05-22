@@ -3,14 +3,22 @@
 # Begun 2024-05-20
 
 WIDTH, HEIGHT = 1920, 1080
-import moveWinHome #move window to 0,0 / top-left of screen
+import pgzSetup
+import pygame
+import math
 
 w       = Actor('wind21e3')
 touched = {'current': None}
 
 #### draw ####
 
-def draw(): screen.clear(); w.draw()
+def draw(): 
+  screen.clear()
+  w.draw()
+  #r = Rect(100, 100, 200, 200)
+  r = Rect(300, 300, 600, 600)
+  v = 100
+  pygame.draw.arc(screen.surface, (v,v,v), r, 0, math.pi/2, 20)
 
 #### handle simplest interactivity ####
 
