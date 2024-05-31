@@ -8,6 +8,8 @@ rim:
 
   sourceURL: https://www.clemson.edu/brand/positioning/mission-vision.html
 
+  dimensions: {system: inch, OD: [6., 3.], ID: [5.5, 2.5], thickness: .175}
+
   angles: [{word: Our,        centroidA: 350.3, orthA: *}, {word: primary,       centroidA: 356.7, orthA: *},
            {word: purpose,    centroidA:   6.7, orthA: *}, {word: is,            centroidA:  24.8, orthA: *},
            {word: educating,  centroidA:  32.6, orthA: *}, {word: undergraduate, centroidA:  54.5, orthA: *},
