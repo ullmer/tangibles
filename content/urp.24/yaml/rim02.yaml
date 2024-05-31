@@ -10,6 +10,10 @@ rim:
 
   dimensions: {system: inch, OD: [6., 3.], ID: [5.5, 2.5], thickness: .175}
 
+  fonts: 
+    side: {face: TradeGothicLTStd-Bold.otf, size: 10}
+    top:  {face: TradeGothicLTStd-Bold.otf, size: 22}
+
   angles: [{word: Our,        centroidA: 350.3, orthA: .}, {word: primary,       centroidA: 356.7, orthA: _},
            {word: purpose,    centroidA:   6.7, orthA: _}, {word: is,            centroidA:  24.8, orthA: _},
            {word: educating,  centroidA:  32.6, orthA: _}, {word: undergraduate, centroidA:  54.5, orthA: _},
