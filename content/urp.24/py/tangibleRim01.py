@@ -13,7 +13,7 @@ verbose = True
 yfn = '../yaml/rim02.yaml' #refactor to command-line argument
 yf  = open(yfn, 'rt')
 yd  = yaml.safe_load(yf)
-if verbose: print(yd)
+#if verbose: print(yd)
 
 try:
   ydr = yd['rim']
@@ -23,24 +23,24 @@ except:
 #################### extract text angles #################### 
 
 def extractTextAngles(ydr):
-  angles = []
+  result = []
   try:
     angles = ydr['angles']
 
     for term in angles:
       if 'centroidA' in term:
         centroidAngle = term['centroidA']
-        print(centroidAngle)
-        angles.append(centroidAngle)
+        result.append(centroidAngle)
   except:
     print("problem in extraction of rim text angles"); 
     traceback.print_exc(); #sys.exit(-1)
-  return angles
+  return result
 
 #################### extract text angles #################### 
 
 def synthCubicApprox(angles):
-  pass
+  d = .02
+  testCube = Cube([d,d,d])
 
 #################### main #################### 
 
@@ -51,7 +51,8 @@ try:
   typeface = fontSide['face']
   fontSize = fontSide['size']
 except:
-  print("problems accessing font data from source yaml"); sys.exit(-1)
+  print("problems accessing font data from source yaml")
+  traceback.print_exc(); #sys.exit(-1)
 
 if verbose: print("fonts:", typeface, fontSize)
 
