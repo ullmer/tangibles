@@ -3,25 +3,25 @@
 # Begun 2024-05-31
 
 rim:
-  text: ["Our primary purpose is educating undergraduate and graduate students to think deeply about"
+  text: ["Our primary purpose is educating undergraduate and graduate students to think deeply about",
          "and engage in the social, scientific, economic, and professional challenges of our times."]
 
   sourceURL: https://www.clemson.edu/brand/positioning/mission-vision.html
 
   dimensions: {system: inch, OD: [6., 3.], ID: [5.5, 2.5], thickness: .175}
 
-  angles: [{word: Our,        centroidA: 350.3, orthA: *}, {word: primary,       centroidA: 356.7, orthA: *},
-           {word: purpose,    centroidA:   6.7, orthA: *}, {word: is,            centroidA:  24.8, orthA: *},
-           {word: educating,  centroidA:  32.6, orthA: *}, {word: undergraduate, centroidA:  54.5, orthA: *},
-           {word: and,        centroidA:  72.6, orthA: *}, {word: graduate,      centroidA: 106.7, orthA: *},
-           {word: students,   centroidA: 125.7, orthA: *}, {word: to,            centroidA: 136.5, orthA: *},
-           {word: think,      centroidA: 143.4, orthA: *}, {word: deeply,        centroidA: 151.3, orthA: *},
-           {word: about,      centroidA: 159.3, orthA: *}, {word: and,           centroidA: 165.4, orthA: *},
-           {word: engage,     centroidA: 196.0, orthA: *}, {word: in,            centroidA: 200.9, orthA: *},
-           {word: the,        centroidA: 205.0, orthA: *}, {word: social,        centroidA: 212.5, orthA: *}, #~66
-           {word: scientific, centroidA: 224.9, orthA: *}, {word: economic,      centroidA: 245.1, orthA: *},
-           {word: and,        centroidA: 262.6, orthA: *}, {word: professional,  centroidA: 291.5, orthA: *},
-           {word: challenges, centroidA: 312.6, orthA: *}, {word: of,            centroidA: 324.0, orthA: *},
-           {word: our,        centroidA: 328.3, orthA: *}, {word: times,         centroidA: 334.3, orthA: *}]
+  angles: [{word: Our,        centroidA: 350.3, orthA: .}, {word: primary,       centroidA: 356.7, orthA: _},
+           {word: purpose,    centroidA:   6.7, orthA: _}, {word: is,            centroidA:  24.8, orthA: _},
+           {word: educating,  centroidA:  32.6, orthA: _}, {word: undergraduate, centroidA:  54.5, orthA: _},
+           {word: and,        centroidA:  72.6, orthA: _}, {word: graduate,      centroidA: 106.7, orthA: _},
+           {word: students,   centroidA: 125.7, orthA: _}, {word: to,            centroidA: 136.5, orthA: _},
+           {word: think,      centroidA: 143.4, orthA: _}, {word: deeply,        centroidA: 151.3, orthA: _},
+           {word: about,      centroidA: 159.3, orthA: _}, {word: and,           centroidA: 165.4, orthA: _},
+           {word: engage,     centroidA: 196.0, orthA: _}, {word: in,            centroidA: 200.9, orthA: _},
+           {word: the,        centroidA: 205.0, orthA: _}, {word: social,        centroidA: 212.5, orthA: _}, #~66
+           {word: scientific, centroidA: 224.9, orthA: _}, {word: economic,      centroidA: 245.1, orthA: _},
+           {word: and,        centroidA: 262.6, orthA: _}, {word: professional,  centroidA: 291.5, orthA: _},
+           {word: challenges, centroidA: 312.6, orthA: _}, {word: of,            centroidA: 324.0, orthA: _},
+           {word: our,        centroidA: 328.3, orthA: _}, {word: times,         centroidA: 334.3, orthA: _}]
 
 ### end ###
