@@ -15,7 +15,7 @@ import yaml, sys, math, traceback
 
 verbose = False
 
-yfn = '../yaml/rim02.yaml' #refactor to command-line argument
+yfn = '../../yaml/rim02.yaml' #refactor to command-line argument
 yf  = open(yfn, 'rt')
 yd  = yaml.safe_load(yf)
 #if verbose: print(yd)
@@ -27,33 +27,35 @@ except:
 
 #################### extract text angles #################### 
 
-def extractTextAngles(ydr):
+def extractField(ydr, fieldName):
   result = []
   try:
     angles = ydr['angles']
 
     for term in angles:
-      if 'centroidA' in term:
-        centroidAngle = term['centroidA']
-        result.append(centroidAngle)
+      if fieldName in term:
+        value = term[fieldName]
+        result.append(value)
   except:
-    print("problem in extraction of rim text angles"); 
+    print("problem in extraction of", fieldName); 
     traceback.print_exc(); #sys.exit(-1)
   return result
 
+def extractTextAngles(ydr): return extractField(ydr, 'centroidA')
+def extractTextStrs(ydr):   return extractField(ydr, 'word')
+
 #################### extract text angles #################### 
 
-def synthTextAngles(angles, texts, ellipseWidth, ellipseHeight):
+def synthTextAngles(angles, textStrs, ellipseWidth, ellipseHeight):
   result = None
 
-  lenAng, lenTxts = len(angles), len(texts)
+  lenAng, lenTxts = len(angles), len(textStrs)
   if lenAng != lenTxts:
     print("synthTextAngles issue: length of lists angles and texts differs! Aborting."); sys.exit(-1)
 
   for i in range(lenAng):
-    angle    = angles[i]
-    textStr  = texts[i]
-    textGeom = text(text=textStr) #, font=
+    angle, textStr = angles[i], textStrs[i]
+    textGeom       = text(text=textStr) #, font=
 
     angleRadians = math.radians(angle)
     x   = ellipseWidth  * math.cos(angleRadians)
@@ -87,10 +89,11 @@ except:
 
 if verbose: print("fonts:", typeface, fontSize)
 
-angles = extractTextAngles(ydr)
+angles   = extractTextAngles(ydr)
+textStrs = extractTextStrs(ydr)
 if verbose: print(angles)
 
-geom = synthCubicApprox(angles, ellipseWidth, ellipseHeight)
+geom = synthTextAngles(angles, textStrs, ellipseWidth, ellipseHeight)
 print(geom)
 
 register_font("fonts/" + typeface)
