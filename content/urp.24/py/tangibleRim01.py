@@ -8,22 +8,35 @@
 from solid2 import text, register_font, set_global_viewport_translation
 import yaml, sys
 
+verbose = True
+
 yfn = '../yaml/rim02.yaml' #refactor to command-line argument
 yf  = open(yfn, 'rt')
 yd  = yaml.safe_load(yf)
-print(yd)
+if verbose: print(yd)
 
 try:
   ydr = yd['rim']
 except:
-  print("rim not found in source yaml); sys.exit(-1)
+  print("rim not found in source yaml"); sys.exit(-1)
+
+#################### extract text angles #################### 
+
+def extractTextAngles(ydr):
+  return None
+
+#################### main #################### 
+
+angleList = extractTextAngles(ydr)
 
 try:
   fontSide = ydr['fonts']['side']
   typeface = fontSide['face']
   fontSize = fontSide['size']
 except:
-  print("problems accessing font data from source yaml); sys.exit(-1)
+  print("problems accessing font data from source yaml"); sys.exit(-1)
+
+if verbose: print("fonts:", typeface, fontSize)
 
 register_font("fonts/" + typeface)
 
