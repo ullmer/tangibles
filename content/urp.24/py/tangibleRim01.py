@@ -23,15 +23,24 @@ except:
 #################### extract text angles #################### 
 
 def extractTextAngles(ydr):
+  angles = []
   try:
     angles = ydr['angles']
 
     for term in angles:
-      centroidAngle = term['centroidA']
-      print(centroidAngle)
+      if 'centroidA' in term:
+        centroidAngle = term['centroidA']
+        print(centroidAngle)
+        angles.append(centroidAngle)
   except:
     print("problem in extraction of rim text angles"); 
-    traceback.print_exc(); sys.exit(-1)
+    traceback.print_exc(); #sys.exit(-1)
+  return angles
+
+#################### extract text angles #################### 
+
+def synthCubicApprox(angles):
+  pass
 
 #################### main #################### 
 
@@ -45,6 +54,9 @@ except:
   print("problems accessing font data from source yaml"); sys.exit(-1)
 
 if verbose: print("fonts:", typeface, fontSize)
+
+angles = extractTextAngles(ydr)
+if verbose: print(angles)
 
 register_font("fonts/" + typeface)
 
