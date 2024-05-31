@@ -11,7 +11,7 @@
 
 from solid2 import *
 
-import yaml, sys, traceback
+import yaml, sys, math, traceback
 
 verbose = False
 
@@ -43,14 +43,19 @@ def extractTextAngles(ydr):
 
 #################### extract text angles #################### 
 
-def synthCubicApprox(angles):
-  d         = .002 #mm
+def synthCubicApprox(angles, ellipseWidth, ellipseHeight):
+  d         = .07 #in; roughly 2mm
   testCube  = cube([d,d,d])
- 
+
   result = None
 
   for angle in angles:
-    trCube  = translate([.035,0,0])(testCube)
+    angleRadians = math.radians(angle)
+    x   = ellipseWidth  * math.cos(angleRadians)
+    y   = ellipseHeight * math.sin(angleRadians)
+    len = math.hypot(x,y)
+
+    trCube  = translate([len,0,0])(testCube)
     rotCube = rotate(a=angle)(trCube)
 
     if result == None: result =  rotCube
@@ -60,8 +65,6 @@ def synthCubicApprox(angles):
 
 #################### main #################### 
 
-angleList = extractTextAngles(ydr)
-
 try:
   fontSide = ydr['fonts']['side']
   typeface = fontSide['face']
@@ -70,12 +73,19 @@ except:
   print("problems accessing font data from source yaml")
   traceback.print_exc(); #sys.exit(-1)
 
+try:
+  ellipseDimensions = ydr['dimensions']['OD']
+  ellipseWidth, ellipseHeight = ellipseDimensions
+except:
+  print("problems accessing ellipse dimensions from source yaml")
+  traceback.print_exc(); sys.exit(-1)
+
 if verbose: print("fonts:", typeface, fontSize)
 
 angles = extractTextAngles(ydr)
 if verbose: print(angles)
 
-geom = synthCubicApprox(angles)
+geom = synthCubicApprox(angles, ellipseWidth, ellipseHeight)
 print(geom)
 
 register_font("fonts/" + typeface)
