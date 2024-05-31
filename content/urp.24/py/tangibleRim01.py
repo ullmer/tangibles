@@ -6,7 +6,7 @@
 #https://github.com/jeff-dh/SolidPython/blob/master-2.0.0-beta-dev/solid2/examples/11-fonts.x.py
 
 from solid2 import text, register_font, set_global_viewport_translation
-import yaml, sys
+import yaml, sys, traceback
 
 verbose = True
 
@@ -23,7 +23,15 @@ except:
 #################### extract text angles #################### 
 
 def extractTextAngles(ydr):
-  return None
+  try:
+    angles = ydr['angles']
+
+    for term in angles:
+      centroidAngle = term['centroidA']
+      print(centroidAngle)
+  except:
+    print("problem in extraction of rim text angles"); 
+    traceback.print_exc(); sys.exit(-1)
 
 #################### main #################### 
 
