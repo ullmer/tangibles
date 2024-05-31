@@ -13,7 +13,7 @@ from solid2 import *
 
 import yaml, sys, traceback
 
-verbose = True
+verbose = False
 
 yfn = '../yaml/rim02.yaml' #refactor to command-line argument
 yf  = open(yfn, 'rt')
@@ -46,15 +46,15 @@ def extractTextAngles(ydr):
 def synthCubicApprox(angles):
   d         = .002 #mm
   testCube  = cube([d,d,d])
-  trans1 = translate([35, 0, 0]) #mm
  
   result = None
 
   for angle in angles:
-    rotCube = rotate(a=angle)(testCube)
-    trCube  = trans1(rotCube)
-    if result == None: result =  trCube
-    else:              result += trCube
+    trCube  = translate([.035,0,0])(testCube)
+    rotCube = rotate(a=angle)(trCube)
+
+    if result == None: result =  rotCube
+    else:              result += rotCube
 
   return result
 
