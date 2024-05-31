@@ -5,7 +5,12 @@
 #Builds upon:
 #https://github.com/jeff-dh/SolidPython/blob/master-2.0.0-beta-dev/solid2/examples/11-fonts.x.py
 
-from solid2 import text, register_font, set_global_viewport_translation
+#from solid2 import text, register_font, set_global_viewport_translation, cube, translate, rotate
+#from solid import *
+#from solid.utils import *
+
+from solid2 import *
+
 import yaml, sys, traceback
 
 verbose = True
@@ -38,16 +43,16 @@ def extractTextAngles(ydr):
 
 #################### extract text angles #################### 
 
-def synthCubicApprox(rootNode, angles):
-  d = .002 #mm
+def synthCubicApprox(angles):
+  d         = .002 #mm
   testCube  = cube([d,d,d])
-  translate = translate([35, 0, 0]) #mm
+  trans1 = translate([35, 0, 0]) #mm
  
   result = None
 
   for angle in angles:
     rotCube = rotate(a=angle)(testCube)
-    trCube  = translate(rotCube)
+    trCube  = trans1(rotCube)
     if result == None: result =  trCube
     else:              result += trCube
 
@@ -70,10 +75,12 @@ if verbose: print("fonts:", typeface, fontSize)
 angles = extractTextAngles(ydr)
 if verbose: print(angles)
 
+geom = synthCubicApprox(angles)
+print(geom)
+
 register_font("fonts/" + typeface)
 
 #set_global_viewport_translation([700, 900, 200])
-
 #text(font="Rich Eatin'", text="blablub").save_as_scad()
 
 ### end ###
