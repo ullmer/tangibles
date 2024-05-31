@@ -8,18 +8,18 @@ rim:
 
   sourceURL: https://www.clemson.edu/brand/positioning/mission-vision.html
 
-  angles: [{word: Our, centroidA: orthA:},        {word: primary,       centroidA: orthA:},
-           {word: purpose, centroidA: orthA:},    {word: is,            centroidA: orthA:},
-           {word: educating, centroidA: orthA:},  {word: undergraduate, centroidA: orthA:},
-           {word: and, centroidA: orthA:},        {word: graduate,      centroidA: orthA:},
-           {word: students, centroidA: orthA:},   {word: to,            centroidA: orthA:},
-           {word: think, centroidA: orthA:},      {word: deeply,        centroidA: orthA:},
-           {word: about, centroidA: orthA:},      {word: and,           centroidA: orthA:},
-           {word: engage, centroidA: orthA:},     {word: in,            centroidA: orthA:},
-           {word: the, centroidA: orthA:},        {word: social,        centroidA: 206.6 orthA: 66},
+  angles: [{word: Our,        centroidA: 350.3, orthA:}, {word: primary,       centroidA: orthA:},
+           {word: purpose,    centroidA: 356.7, orthA:}, {word: is,            centroidA: orthA:},
+           {word: educating,  centroidA: orthA:},  {word: undergraduate, centroidA: orthA:},
+           {word: and,        centroidA: orthA:},        {word: graduate,      centroidA: orthA:},
+           {word: students,   centroidA: orthA:},   {word: to,            centroidA: orthA:},
+           {word: think,      centroidA: orthA:},      {word: deeply,        centroidA: orthA:},
+           {word: about,      centroidA: orthA:},      {word: and,           centroidA: orthA:},
+           {word: engage,     centroidA: orthA:},     {word: in,            centroidA: orthA:},
+           {word: the,        centroidA: orthA:},        {word: social,        centroidA: 206.6 orthA: 66},
            {word: scientific, centroidA: orthA:}, {word: economic,      centroidA: orthA:},
-           {word: and, centroidA: orthA:},        {word: professional,  centroidA: orthA:},
+           {word: and,        centroidA: orthA:},        {word: professional,  centroidA: orthA:},
            {word: challenges, centroidA: orthA:}, {word: of,            centroidA: orthA:},
-           {word: our, centroidA: orthA:},        {word: times,         centroidA: orthA:}]
+           {word: our,        centroidA: orthA:},        {word: times,         centroidA: orthA:}]
 
 ### end ###
