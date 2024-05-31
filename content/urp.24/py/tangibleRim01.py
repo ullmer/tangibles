@@ -6,6 +6,12 @@
 #https://github.com/jeff-dh/SolidPython/blob/master-2.0.0-beta-dev/solid2/examples/11-fonts.x.py
 
 from solid2 import text, register_font, set_global_viewport_translation
+import yaml
+
+yfn = '../yaml/rim02.yaml' #refactor to command-line argument
+yf  = open(yfn, 'rt')
+yd  = yaml.safe_load(yf)
+print(yd)
 
 register_font("11-font/RichEatin.otf")
 #set_global_viewport_translation([700, 900, 200])
