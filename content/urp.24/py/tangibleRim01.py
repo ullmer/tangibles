@@ -38,9 +38,20 @@ def extractTextAngles(ydr):
 
 #################### extract text angles #################### 
 
-def synthCubicApprox(angles):
-  d = .02
-  testCube = Cube([d,d,d])
+def synthCubicApprox(rootNode, angles):
+  d = .002 #mm
+  testCube  = cube([d,d,d])
+  translate = translate([35, 0, 0]) #mm
+ 
+  result = None
+
+  for angle in angles:
+    rotCube = rotate(a=angle)(testCube)
+    trCube  = translate(rotCube)
+    if result == None: result =  trCube
+    else:              result += trCube
+
+  return result
 
 #################### main #################### 
 
