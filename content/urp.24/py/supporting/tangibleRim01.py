@@ -88,8 +88,7 @@ if verbose: print(angles)
 geom = synthCubicApprox(angles, ellipseWidth, ellipseHeight)
 print(geom)
 
-register_font("fonts/" + typeface)
-
+#register_font("fonts/" + typeface)
 #set_global_viewport_translation([700, 900, 200])
 #text(font="Rich Eatin'", text="blablub").save_as_scad()
 
