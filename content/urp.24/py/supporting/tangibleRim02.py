@@ -64,11 +64,13 @@ def synthTextAngles(angles, textStrs, ellipseWidth, ellipseHeight):
     length  = math.hypot(x,y)
 
     textGeomSc = scale([1,1,.1])(textGeom)
-    textTrans  = translate([length,0,0])(textGeomSc)
-    textRot    = rotate(a=angle)(textTrans)
+    textRot1   = rotate(a=90, v=[1,0,0])(textGeomSc)  #rotate first about x axis
+    textRot2   = rotate(a=90, v=[0,0,1])(textRot1)  #then about y axis
+    textTrans  = translate([length,0,0])(textRot2)    
+    textRot3   = rotate(a=angle)(textTrans)           #and a third rotation once we've shifted to the perimeter of the ellipse
 
-    if result == None: result =  textRot
-    else:              result += textRot
+    if result == None: result =  textRot3
+    else:              result += textRot3
 
   return result
 
