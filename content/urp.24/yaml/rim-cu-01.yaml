@@ -1,0 +1,31 @@
+
+#@argimenes / codexos
+text: "Once upon a midnight dreary ...",
+            standoffProperties: [
+                { type: "style/italics", start: 5, end: 12 },
+                { type: "style/bold", start: 7, end: 14 },
+                { type: "codex/entity-reference", start: 10, end: 18, value: "abd-def-ghi-123" },
+                { type: "codex/block-reference", start: 5, end: 14, value: "abd-def-ghi-321" }
+            ]
+        };
+
+
+rim:
+  text: ["Our primary purpose is educating undergraduate and graduate students to think deeply about"
+         "and engage in the social, scientific, economic, and professional challenges of our times."]
+  angles: [{word: Our, centroidA: orthA:},        {word: primary, centroidA: orthA:},
+           {word: purpose, centroidA: orthA:},    {word: is, centroidA: orthA:},
+           {word: educating, centroidA: orthA:},  {word: undergraduate, centroidA: orthA:},
+           {word: and, centroidA: orthA:},        {word: graduate, centroidA: orthA:},
+           {word: students, centroidA: orthA:},   {word: to, centroidA: orthA:},
+           {word: think, centroidA: orthA:},      {word: deeply, centroidA: orthA:},
+           {word: about, centroidA: orthA:},      {word: and, centroidA: orthA:},
+           {word: engage, centroidA: orthA:},     {word: in, centroidA: orthA:},
+           {word: the, centroidA: orthA:},        {word: social, centroidA: orthA:},
+           {word: scientific, centroidA: orthA:}, {word: economic, centroidA: orthA:},
+           {word: and, centroidA: orthA:},        {word: professional, centroidA: orthA:},
+           {word: challenges, centroidA: orthA:}, {word: of, centroidA: orthA:},
+           {word: our, centroidA: orthA:},        {word: times, centroidA: orthA:}]
+
+"Our primary purpose is educating undergraduate and graduate students to think deeply about"
+         "and engage in the social, scientific, economic, and professional challenges of our times."]
