@@ -55,18 +55,20 @@ def synthTextAngles(angles, textStrs, ellipseWidth, ellipseHeight):
 
   for i in range(lenAng):
     angle, textStr = angles[i], textStrs[i]
-    textGeom       = text(text=textStr) #, font=
+    textGeom       = text(text=textStr, size=.3) #, font=
+    # https://github.com/jeff-dh/SolidPython/blob/master-2.0.0-beta-dev/solid2/core/builtins/openscad_primitives.py
 
     angleRadians = math.radians(angle)
     x       = ellipseWidth  * math.cos(angleRadians)
     y       = ellipseHeight * math.sin(angleRadians)
     length  = math.hypot(x,y)
 
-    trTxt  = translate([length,0,0])(textGeom)
-    rotTxt = rotate(a=angle)(trTxt)
+    textGeomSc = scale([1,1,.1])(textGeom)
+    textTrans  = translate([length,0,0])(textGeomSc)
+    textRot    = rotate(a=angle)(textTrans)
 
-    if result == None: result =  rotTxt
-    else:              result += rotTxt
+    if result == None: result =  textRot
+    else:              result += textRot
 
   return result
 
