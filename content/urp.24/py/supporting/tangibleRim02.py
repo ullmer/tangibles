@@ -58,11 +58,11 @@ def synthTextAngles(angles, textStrs, ellipseWidth, ellipseHeight):
     textGeom       = text(text=textStr) #, font=
 
     angleRadians = math.radians(angle)
-    x   = ellipseWidth  * math.cos(angleRadians)
-    y   = ellipseHeight * math.sin(angleRadians)
-    len = math.hypot(x,y)
+    x       = ellipseWidth  * math.cos(angleRadians)
+    y       = ellipseHeight * math.sin(angleRadians)
+    length  = math.hypot(x,y)
 
-    trTxt  = translate([len,0,0])(textGeom)
+    trTxt  = translate([length,0,0])(textGeom)
     rotTxt = rotate(a=angle)(trTxt)
 
     if result == None: result =  rotTxt
