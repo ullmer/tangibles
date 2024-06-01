@@ -1,0 +1,36 @@
+# Emerging descriptor of textual angles in 3space for rim of Wind tangible
+# Brygg Ullmer, Clemson University
+# Begun 2024-05-31
+
+#@argimenes / codexos
+standoff_codexos:
+  text: "Once upon a midnight dreary ...",
+    standoffProperties: [
+                { type: "style/italics",          start: 5,  end: 12 },
+                { type: "style/bold",             start: 7,  end: 14 },
+                { type: "codex/entity-reference", start: 10, end: 18, value: "abd-def-ghi-123" },
+                { type: "codex/block-reference",  start: 5,  end: 14, value: "abd-def-ghi-321" }
+            ]
+
+
+rim:
+  upface:
+    text: ["building a new operating system animist spatial distributed collaborative temporal",
+           "mathematical, literary, musical, tabular, architectural, statistical, cinematic, typographic, geometric",
+           "semantic + compositional"]
+  sideface:
+    text: ["I am an architect, a constructor of worlds... the melody, a silhouette against the darkening sky.",
+           "I cannot know your name. nor can you know mine. tomorrow, we begin together the construction of a city. [L. Woods]"]
+
+  dimensions: {system: inch, OD: [6., 3.], ID: [5.5, 2.5], thickness: .175}
+
+  fonts: 
+    side: {face: TradeGothicLTStd-Bold.otf, size:  7}
+    top:  {face: TradeGothicLTStd-Bold.otf, size: 22}
+
+  angles: [{word: building, centroidA: _, orthA: _},  {word: a,         centroidA: _, orthA:_},
+           {word: new,      centroidA: _, orthA: _},  {word: operating, centroidA: _, orthA:_},
+           {word: system,   centroidA: _, orthA: _},  {word: animist,   centroidA: _, orthA:_}]
+
+
+### end ###
