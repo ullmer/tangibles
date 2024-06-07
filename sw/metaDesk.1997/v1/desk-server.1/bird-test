@@ -1,0 +1,44 @@
+#!3wish
+
+source libiv.tcl
+
+###Define the objects
+IvObj obj1 
+obj1 addObjs {{Material -diffuseColor {1 0 0}} 
+              {Cube -width 17 -height 10 -depth 5}}
+obj1 assertIv
+
+IvObj obj2
+obj2 addObjs {{Material -diffuseColor {0 1 1}} 
+              {Cube -width 17 -height 10 -depth 5}}
+obj2 assertIv
+
+###Initiate the birds
+initFlock  "/dev/ttyd2"
+
+###Give the objects some initial position (so Inventor can scale the 
+##   bounding box)
+
+#Rotations must be asserted before moves to get correct ordering in
+# Inventor stack
+rotNObj  obj1:rot   [getFlockOrient 0] 
+rotNObj  obj2:rot   [getFlockOrient 1]
+
+moveNObj obj1:trans [getFlockPos 0]
+moveNObj obj2:trans [getFlockPos 1]
+
+puts [getFlockPos 0]
+puts [getFlockPos 1]
+
+###Start the pos/rot update loop, updating @20hz
+
+tiPeriodic 0.05 {
+  moveNObj obj1:trans [getFlockPos 0]
+  rotNObj  obj1:rot   [getFlockOrient 0]
+
+  moveNObj obj2:trans [getFlockPos 1]
+  rotNObj  obj2:rot   [getFlockOrient 1]
+}
+
+#closeFlock
+
