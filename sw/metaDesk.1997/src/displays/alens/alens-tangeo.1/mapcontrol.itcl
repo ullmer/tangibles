@@ -1,0 +1,62 @@
+################# mapControllerObject ###############
+
+itcl_class mapControllerObject {
+
+    inherit geoBaseObject
+
+    constructor {config} {
+
+        set members [concat $members $local_members]
+    }
+
+    method update {args} {
+
+        set coord [lrange $args 0 1]
+#	set coord [list [expr $scalex * [lindex $coord 0]] \
+#		   [expr $scaley * [lindex $coord 1]]]
+
+
+        set rotation [lindex $args 2]
+
+        eval $location update
+    }
+
+    method leave {args} {
+
+        eval $location removeactiveobj $this [list $anchorpoint]
+        set location {}
+
+    }
+
+    ########  method enter - to reassert into scene 
+    ########usage -- enter location 
+
+    method enter {args} {
+        assertself $args
+    }
+
+
+
+    method assertself {locationname} {
+	global deskX deskY
+
+        set location $locationname
+        puts "asserting $this on $location"
+
+	set width [$location get width]
+	set height [$location get height]
+	puts "widthe height scalex $width $height $scalex" 
+	puts "deskx desky $deskX $deskY"
+	set scalex [expr $width / $deskX]
+	set scaley [expr $scalex * .813]
+	puts "scalex scaley $scalex $scaley"
+
+
+        eval $location addactiveobj $this [list $anchorpoint]
+    }
+
+    public local_members {anchorpoint}
+
+    public anchorpoint {}
+}
+

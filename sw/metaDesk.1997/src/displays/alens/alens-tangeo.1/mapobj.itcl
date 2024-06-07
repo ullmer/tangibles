@@ -1,0 +1,260 @@
+################  mapObject #############
+
+itcl_class mapObject {
+    inherit geoBaseObject
+  
+    constructor {config} {
+        set members [concat $members $local_members]
+    }
+
+    method addactiveobj {objname anchpoints} {
+        puts "adding active obj $objname"
+        lappend activeobjs $objname
+        lappend anchorpoints $anchpoints
+        puts "activeobjs $activeobjs"
+
+        if {[llength $activeobjs] == 2} {
+            set pointa [lindex $anchorpoints 0]
+            set pointb [lindex $anchorpoints 1]
+
+            set realp1p2dist [distance2D $pointa $pointb]
+
+#            set midpoint [list [expr ([lindex $pointa 0] + \
+#                                      [lindex $pointb 0])/2] \
+#                                      [expr ([lindex $pointa 1] + \
+#                                      [lindex $pointb 1])/2]]
+
+	    set midpoint [calcmidpoint $pointa $pointb]
+	    set anchormidpoint [calcmidpoint $pointa $pointb]
+
+            calcrealang
+
+        }
+    }
+
+    method calcmidpoint {pointa pointb} {
+        set midx [expr ([lindex $pointa 0] + [lindex $pointb 0])/2]
+        set midy [expr ([lindex $pointa 1] + [lindex $pointb 1])/2]
+
+	return [list $midx $midy]
+    }
+
+    method removeactiveobj {objname archpoints} {
+
+        put "removing active obj $objname"
+        set index [lsearch $activeobjs $objname]
+        set activeobjs [lreplace $activeobjs $index $index]
+
+        set index [lsearch $anchorpoints $anchorpoints]
+        set anchorpoints [lreplace $anchorpoints $index $index]
+
+        puts "activeobjs $activeobjs"
+    }
+
+
+    method addpassiveobj {objname} {
+       puts "adding passive object $objname"
+       lappend passiveobjs $objname
+    }
+
+    method removepassiveobj {objname} {
+        puts "removing passive object $objname"
+        set index [lsearch $passiveobjs $objname]
+        set passiveobjs [lreplace $passiveobjs $index $index]
+    }
+
+
+
+    method assert_geom {} {
+
+	puts "before first format"
+	set transfname [format {%s:transf} $this]
+	    set originoffx [expr $width /2.0]
+	    set originoffy [expr $height /2.0]
+	    set negoriginoffx [expr -1 * $width /2.0]
+	    set negoriginoffy [expr -1 * $height /2.0]
+	    puts "originoffsets $originoffx $originoffy"
+	
+	puts "before 2 format"
+	if {$activelens} {
+	    set geom [format {
+		DEF %s Translation {translation 0 0 0}
+		Translation {translation  %s %s 0}
+		DEF %s Scale {scaleFactor 1 1 1}
+		Translation {translation %s %s 0}
+		DEF %s Translation {translation %s %s 0}
+		DEF %s Rotation {rotation 0 0 1 0}
+		DEF %s Translation {translation %s %s 0}
+		Scale {scaleFactor %s %s %s}
+		Rotation {rotation 1 0 0 1.57}
+		DEF %s Scale {scaleFactor 1 1 1}
+		Translation {translation %s %s %s}
+		File {name "%s"}
+	    } "$this:trans"  $originoffx $originoffy "$this:zoom" $negoriginoffx $negoriginoffy "$this:transoff1" $originoffx $originoffy "$this:rot" "$this:transoff2" $negoriginoffx $negoriginoffy $scaleobjspace $scaleobjspace $scaleobjspace "$this:zoom" $calibx $caliby $calibz $ivfile]
+	    
+        } else {
+
+	    puts "before 3 format"
+	    set geom [format {
+		DEF %s Translation {translation 0 0 0}
+		Translation {translation  %s %s 0}
+		DEF %s Scale {scaleFactor 1 1 1}
+		Translation {translation %s %s 0}
+		DEF %s Translation {translation %s %s 0}
+		DEF %s Rotation {rotation 0 0 1 0}
+		DEF %s Translation {translation %s %s 0}
+		TextureCoordinate2 {point [1 1, 0 1, 0 0, 1 0]}
+		Texture2 {filename %s model DECAL}
+		DEF %s Texture2Transform {rotation 0 center .5 .5}
+		NormalBinding {value PER_FACE}
+		Normal {vector [0 1 0]}
+		Coordinate3 {point [%s  %s 0 , 0 %s 0 , 0 0 0 , %s 0 0]}
+		FaceSet {numVertices 4}
+	    } "$this:trans"  $originoffx $originoffy "$this:zoom" $negoriginoffx $negoriginoffy "$this:transoff1" $originoffx $originoffy "$this:rot" "$this:transoff2" $negoriginoffx $negoriginoffy $texfile $transfname $width $height $height $width]
+        }
+	puts "after all format"
+	
+        addNObj $this $geom
+        puts [getNObj $this] 
+	
+    }
+
+
+    method calcrealang {} {
+        set pointa [lindex $anchorpoints 0]
+        set pointb [lindex $anchorpoints 1]
+        set dy [expr [lindex $pointa 1] - [lindex $pointb 1]]
+        set dx [expr [lindex $pointa 0] - [lindex $pointb 0]]
+        set realang [expr atan2($dy,$dx) * 180.0 * 0.318]
+
+          #[expr atan2($anchor1y-$anchory2,$anchor1x-$anchor2x) * 180.0 * 0.318]
+    }
+
+    method doZoom {a b} {
+
+        set p1p2dist [distance2D $a $b]
+
+        set zoomfactor [expr $p1p2dist/$realp1p2dist]
+
+        #set zoomfactor [expr $zoomfactor*$scaleobjspace]
+        #set zoomfactor [expr $zoomfactor]
+        tweakNObj $this:zoom "scaleFactor $zoomfactor $zoomfactor $zoomfactor"
+    }
+
+
+    method doRotation {a b} {
+        set dx [expr [lindex $a 0] - [lindex $b 0]]
+        set dy [expr [lindex $a 1] - [lindex $b 1]]
+
+        set thetarad [expr atan2($dy,$dx)]
+        set theta [expr $thetarad * 180.0 * 0.318] ;#radians to degrees
+        set theta [expr $theta - $realang] ;#offset angle
+
+        set rotation $theta
+
+        rotNObj $this:rot [list 0 0 $theta]
+    }
+
+
+    method distance2D { a b } {
+        set dx [expr [lindex $a 0] - [lindex $b 0]]
+        set dy [expr [lindex $a 1] - [lindex $b 1]]
+
+        return [expr sqrt([expr $dx*$dx + $dy*$dy])]
+    }
+
+
+    method build2dVec { a b} {
+        set dx [expr [lindex $b 0] - [lindex $a 0]]
+        set dy [expr [lindex $b 1] - [lindex $a 1]]
+
+        return [list $dx $dy]
+    }
+
+    method movemap {obja objb} {
+        set a [$obja get coord]
+        set b [$objb get coord]
+
+	set midpoint [calcmidpoint $a $b]
+
+
+        set offsetx [expr ([lindex $a 0] + [lindex $b 0])/2 - \
+                          [lindex $anchormidpoint 0]]
+        set offsety [expr ([lindex $a 1] + [lindex $b 1])/2 - \
+                          [lindex $anchormidpoint 1]]
+
+        set coord [list $offsetx $offsety]
+
+        moveNObj $this:trans [list $offsetx $offsety 0]
+    }
+
+    method updateMidpoint {pointa pointb} {
+	set midpoint [calcmidpoint $pointa $pointb]
+	set midx [lindex $midpoint 0]
+	set midy [lindex $midpoint 1]
+	puts "midpoints $midx $midy -$midx -$midy"
+	puts "translation $midx $midy"
+	puts "translation -$midx -$midy"
+	
+	tweakNObj $this:transoff1 "translation $midx $midy 0"
+	tweakNObj $this:transoff2 "translation -$midx -$midy 0"
+
+	puts "ok done with updatemidpoint"
+    }
+
+    method update {} {
+        puts "activeobjs = $activeobjs"
+
+        if {$activeobjs == {}} {return}
+        if {[llength $activeobjs] == 1} {
+            puts "one object"
+            set dpos [build2dVec [$activeobjs get coord] [lindex $anchorpoints
+0]]
+            puts "moving"
+            puts $dpos
+            set coord $dpos
+
+            set rotation [$activeobjs get rotation]
+            rotNObj $this:rot [list 0  0 $rotation]
+            moveNObj $this:trans "$dpos 0"
+        }
+
+        if {[llength $activeobjs] == 2} {
+            set obj1 [lindex $activeobjs 0]
+            set obj2 [lindex $activeobjs 1]
+
+            updateMidpoint [$obj1 get coord] [$obj2 get coord]
+            doRotation [$obj1 get coord] [$obj2 get coord]
+            doZoom [$obj1 get coord] [$obj2 get coord]
+            movemap $obj1 $obj2
+        }
+
+        puts $passiveobjs
+        foreach el $passiveobjs {
+            puts "location updating $el"
+            $el locupdate
+        }
+
+    }
+
+    public local_members {realang activeobjs filename anchorpoints width height}
+    public ivfile {}
+    public activelens {0}
+    public realang {}
+    public activeobjs {}
+    public passiveobjs {}
+    public texfile {}
+    public anchorpoints {}
+    public width {550.0}
+    public height {250.0}
+    public calibx {0.0}
+    public caliby {0.0}
+    public calibz {0.0}
+        public zoomfactor {1.0}
+    protected realp1p2dist {}
+    protected midpoint {}
+    protected anchormidpoint {}
+    public scaleobjspace {1}
+
+}
+

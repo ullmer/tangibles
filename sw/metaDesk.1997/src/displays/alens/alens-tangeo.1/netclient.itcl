@@ -1,0 +1,126 @@
+###################  vision_client  #####################
+
+itcl_class vision_client {
+
+    inherit base
+    constructor {config} {
+        set members [concat $members $local_members]
+    }
+
+
+    method start_netclient {} {
+    global INTERGRAPH
+
+    if {$INTERGRAPH} {
+       global handle
+       set handle [lindex [dp_connect $server $port] 0]
+       dp_send $handle "GET"
+#       dp_socketOption $handle noblock yes
+
+    } else {
+        set handle [server_connect -buf $server $port]
+        server_send $handle "GET"
+    }
+
+        puts "connected to $server $port"
+        if {$INTERGRAPH} {
+         eval [format {
+              tiIdle {
+                if {[lindex [dp_isready %s] 0]} {
+                      %s process_request
+                        }
+                  }
+                } $handle $this]
+        } else {
+            fileevent $handle readable "$this process_request"
+        }
+
+    }
+
+    method process_request {} {
+        global INTERGRAPH
+
+    if {$INTERGRAPH} {
+            #set inline [dp_receive $handle]
+                set inline [gets $handle]
+        } else {
+        set inline [gets $handle]
+        }
+        puts "$inline"
+
+    set tokens [$this parseinput $inline]
+    set thing [lindex $tokens 0]
+        set name [lindex $tokens 1]
+        set command [lindex $tokens 2]
+        set args [lrange $tokens 3 [llength $tokens]]
+
+        puts "evalling $name $command $args"
+#       winMessage "evalling $name $command $args"
+
+        #### can i get away with just [eval $tokens]???? neat! ###
+
+        if {[string match $thing "object"]} {
+
+            eval $name $command $args
+            #actually [last $tokens]
+         }
+
+         if {[string match $thing "place"]} {
+            eval $name $command $args
+         }
+
+        puts [getNObj root]
+        if {$INTERGRAPH} {
+        #winMessage [getNObj root]
+        }
+
+    }
+
+    ######## parseinput #####
+    ##### input should look like "thing:name command ?args?" ###
+
+    method parseinput { string } {
+        set temp [split [lindex $string 0] :]
+        return [lreplace $string 0 0 [lindex $temp 0] [lindex $temp 1]]
+
+    }
+
+    public local_members {port server handle}
+    public port {}
+    public server {}
+    protected handle {}
+
+}
+
+#this is a bird client
+#it pulls from the bird server and moves the 3wish virtual
+#scene camera to an appropriate location
+
+set birdclient 1
+
+if { $birdclient } {
+    puts "lopes connection on the way"
+    #bird client
+    set server_handle [server_connect gumby 8005]
+    puts "satisfaction!"
+
+
+
+    #when the 3wish renderer is idle
+    tiIdle {
+
+        puts $server_handle "BIRD1 GET POSITION"
+        puts $server_handle "BIRD1 GET ORIENTATION"
+
+        flush $server_handle
+
+        set pos [string trim [gets $server_handle]]
+
+        set orient [string trim [gets $server_handle]]
+
+        moveTo $pos
+        rotTo $orient
+
+    }
+}
+

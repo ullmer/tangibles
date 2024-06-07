@@ -1,0 +1,20 @@
+source base.tcl
+##############  geoBaseOBject ##################
+
+itcl_class geoBaseObject {
+
+    inherit base
+
+    constructor {config} {
+        set members [concat $members $local_members]
+    }
+
+    public local_members {coord rotation name location}
+    public coord {0 0}
+    public rotation 0
+    public name {}
+    public location {}
+    public scalex 1.0
+    public scaley 1.0
+
+}

@@ -1,0 +1,237 @@
+############# Passive Lens ###############
+
+itcl_class passiveLensObject {
+
+    inherit geoBaseObject
+
+    constructor {config} {
+	set members [concat $members $local_members]
+    }
+
+    method update {args} {
+	#### args should be -  (x y rot)  ####
+
+	puts "beofre put plens args"
+ 	puts $args
+	puts "updating $this"
+
+	set coord [lrange $args 0 1]
+	#set coord [list [expr $scalex * [lindex $coord 0]] \
+	#	        [expr $scaley * [lindex $coord 1]]]
+	set rotation [lindex $args 2]
+
+	set x [lindex $coord 0]
+	set y [lindex $coord 1]
+
+	set locxextent [$location get width]
+	set locyextent [$location get height]
+	set locx [lindex [$location get coord] 0]
+	set locy [lindex [$location get coord] 1]
+
+   # set textransx [expr ($x-$locx+$calibrationx)/$locxextent]
+#	set textransy [expr ($y-$locy+$calibrationy)/$locyextent]
+
+	set textransx [expr .449 + ($x-$locx+$calibrationx) * (1.726/759)] 
+	set textransy [expr .985 + ($y-$locy+$calibrationy) * (0.635/139)] 
+
+    	set transx [expr $x]
+	set transy [expr $y]
+
+    set locwidth [$location get width]
+	set locheight [$location get height]
+
+	#### texture tranlate coor ####
+	set texcoorx [expr ($x-$locx+$calibrationx)/$locxextent]
+	set texcoory [expr ($y-$locy+$calibrationy)/$locyextent]
+
+	#set texcoorx1 [expr ($x-$locx+$width)/$locxextent]
+	#set texcoory1 [expr ($y-$locy+$height)/$locyextent]
+	###end texture trans ###
+
+	
+#	set texradians [expr (($rotation - [$location get rotation])/180.0)*3.145]
+
+	set texradians [expr ((-[$location get rotation])/180.0)*3.145]
+	set radians [expr (($rotation)/180.0)*3.145]
+	
+    set zfactor [$location get zoomfactor]
+	set zfactor [expr 1/$zfactor]
+
+       # Texture Transforms #
+
+#	 tweakNObj $this:texcoor [format {point [%s %s, %s %s, %s %s, %s %s]} \
+#	   $texcoorx1 $texcoory1 $texcoorx $texcoory1 $texcoorx $texcoory \
+#	   $texcoorx1 $texcoory]
+
+        #tweakNObj $this:transftrans "translation $textransx $textransy"
+        tweakNObj $this:transftrans "translation $textransx $textransy"
+
+        tweakNObj $this:transfscale [format {scaleFactor %s %s} $zfactor \
+	  $zfactor]
+
+#	tweakNObj $this:transfrot [format {rotation %s center %s %s} [expr \
+#	$texradians] [expr -$texcoorx] [expr -$texcoory]]
+
+
+	#$texradians] 0 0]
+
+	tweakNObj $this:transfrot [format {rotation %s center %s %s} [expr \
+	$texradians] [expr -$textransx] [expr -$textransy]]
+	
+
+
+	# Geometry Transforms #
+				
+       # tweakNObj $this:rot [format {rotation 0  0 1 %s} $texradians] 
+ 	moveNObj $this:trans "$transx $transy 0"
+    }
+
+    method tweak {args} {
+
+	puts "tweaking $this"
+
+	set coord [lrange $args 0 1]
+	set rotation [lindex $args 2]
+	set centerx [lindex $args 3]
+	set centery [lindex $args 4]
+
+	set x [lindex $coord 0]
+	set y [lindex $coord 1]
+
+	set locxextent [$location get width]
+	set locyextent [$location get height]
+	set locx [lindex [$location get coord] 0]
+	set locy [lindex [$location get coord] 1]
+
+
+        set transx [expr $x/$locxextent]
+	set transy [expr $y/$locyextent]
+
+	
+	set radians [expr (($rotation - [$location get rotation])/180.0)*3.145]
+
+	tweakNObj $this:transfrot [format {rotation %s center %s %s} \
+	    $radians $centerx $centery]
+
+        tweakNObj $this:transftrans "translation $transx $transy"
+
+   }
+	
+
+    method locupdate {} {
+	update [lindex $coord 0] [lindex $coord 1] $rotation
+    }
+
+    method leave {locationname} {
+        $location removepassiveobj $this
+        set location {}
+    }
+
+    method enter {locationname} {
+        assertself $locationname
+    }
+
+
+    method assertself {locationname} {
+
+	global deskX deskY
+	set location $locationname
+	puts "asserting $this on $location"
+	$location addpassiveobj $this
+
+	set width [$location get width]
+        set height [$location get height]
+        set scalex [expr $width / $deskX]
+        set scaley [expr $scalex * .8]
+    }
+
+    method assert_geom {} {
+
+        set transfrotname [format {%s:transfrot} $this]
+        set transfrot1name [format {%s:transfrot1} $this]
+	set textransname [format {%s:transftrans} $this]
+	set texcoorname [format {%s:texcoor} $this]
+
+        puts "getting lcoation poops"
+
+        set locwidth [$location get width]
+	set locheight [$location get height]
+
+	set scalefactorx [expr $width/$locwidth]
+	set scalefactory [expr $height/$locheight]
+
+        puts "getting lcoation poops"
+
+        set geom [format {
+	  Scale {scaleFactor .5 .5 1}
+	  Translation {translation %s %s 0}
+	  DEF %s Rotation {rotation 0 1 0 0}
+	  TextureCoordinate2 {
+  point [
+      0 1 ,
+      -0.309017 0.951057 ,
+      -0.587785 0.809017 ,
+      -0.809017 0.587785 ,
+      -0.951057 0.309017 ,
+      -1 -2.05103e-10 ,
+      -0.951057 -0.309017 ,
+      -0.809017 -0.587785 ,
+      -0.587785 -0.809017 ,
+      -0.309017 -0.951057 ,
+      4.10207e-10 -1 ,
+      0.309017 -0.951057 ,
+      0.587785 -0.809017 ,
+      0.809017 -0.587785 ,
+      0.951057 -0.309017 ,
+      1 6.1531e-10 ,
+      0.951057 0.309017 ,
+      0.809017 0.587785 ,
+      0.587785 0.809017 ,
+      0.309017 0.951057  ]
+
+	  }
+          Texture2 {filename %s model DECAL}
+	  Texture2Transform {scaleFactor .382 .382}
+	  DEF plens:transfscale Texture2Transform {scaleFactor 1 1}
+	  DEF %s Texture2Transform {translation 0 0 }
+	  Texture2Transform {
+	      scaleFactor 1 2.15028
+	  }
+	  DEF %s Texture2Transform {rotation 0}
+	  Texture2Transform {
+	      scaleFactor 1 0.465056
+          }
+
+	  DEF plens:transfscale1 Texture2Transform {scaleFactor .446397 1}
+          NormalBinding {value PER_FACE}
+	  Scale {scaleFactor 20 20 1}
+	  File {name "bettercirc.iv"}
+          } $calibrationx $calibrationy "$this:rot" \
+	  $texfile \
+	  $textransname \
+	  $transfrotname ]
+
+	 # $texcoorname $scalefactorx $scalefactory \
+	 #   $scalefactory $scalefactorx \
+	 #   $width $height $height $width]
+  	 #   $scalefactorx $scalefactory 
+    
+	  #DEF %s TextureCoordinate2 {point [%s %s, 0 %s, 0 0, %s 0]}
+
+         # Normal {vector [0 1 0]}
+	 #Coordinate3 {point [%s %s 0.1 , 0 %s 0.1  , 0 0 0.1, %s 0.1 0  ]}
+         # FaceSet {numVertices 4}
+
+	puts $geom
+        addNObj $this $geom
+
+    }
+
+    public local_members {texfile width height}
+
+    public texfile {}
+    public width {250.0}
+    public height {450.0}
+	public calibrationx {0.0}
+	public calibrationy {0.0}
+}

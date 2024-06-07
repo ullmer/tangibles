@@ -1,0 +1,4 @@
+#for shared lib package
+
+CC -c visionPackage.C -I/usr/local/include
+ld -shared -o visionPackage.so visionPackage.o Labeler.o RawBlob.o TanBlob.o
