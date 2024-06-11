@@ -1,0 +1,34 @@
+# United States: Bureau of Economic Analysis grouping of states
+# YAML expression by Brygg Ullmer, Clemson University, 2023-01-19
+
+regionList: [ne, me, se, gl, pl, sw, rm, fw]
+#populationThresh: [20, 15, 10, 5, 2.5, 1]
+#populationThresh: [5, 2.5, 1.5]
+
+regions:
+  ne: {name: New England,    col: 0x005697, states: [ct, me, ma, nh, ri, vt]}
+  me: {name: Mideast,        col: 0x9B751C, states: [de, dc, md, nj, ny, pa]}
+  se: {name: Southeast,      col: 0xAE573F, states: [al, ar, fl, ga, ky, la,
+                                                     ms, nc, sc, tn, va, wv]}
+  gl: {name: Great Lakes,    col: 0x4984C4, states: [il, in, mi, oh, wi    ]}
+  pl: {name: Plains,         col: 0xA5B26D, states: [ia, ka, mn, mo, ne, nd, sd]}
+  sw: {name: Southwest,      col: 0x845D56, states: [ar, nm, ok, tx]}
+  rm: {name: Rocky Mountain, col: 0xEBC181, states: [co, id, mt, ut, wy]}
+  fw: {name: Far West,       col: 0xFFD65D, states: [ak, ca, hi, nv, or, wa]}
+
+states: {ct: Connecticut,  me: Maine,        ma: Massachusetts,  nh: New Hampshire,
+         ri: Rhode Island, vt: Vermont,      de: Delaware,       md: Maryland,    
+         nj: New Jersey,   ny: New York,     pa: Pennsylvania,   al: Alabama,     
+         ar: Arkansas,     fl: Florida,      ga: Georgia,        ky: Kentucky,
+         la: Louisiana,    ms: Mississippi , nc: North Carolina, sc: South Carolina, 
+         tn: Tennessee,    va: Virginia,     wv: West Virginia,  il: Illinois,     
+         in: Indiana,      mi: Michigan,     oh: Ohio,           wi: Wisconsin,     
+         ia: Iowa,         ka: Kansas,       mn: Minnesota,      mo: Missouri,     
+         ne: Nebraska,     nd: North Dakota, sd: South Dakota,   ar: Arizona,
+         nm: New Mexico,   ok: Oklahoma,     tx: Texas,          co: Colorado,       
+         id: Idaho,        mt: Montana,      ut: Utah,           wy: Wyoming,      
+         ak: Alaska,       ca: California,   hi: Hawaii,         nv: Nevada,        
+         or: Oregon,       wa: Washington,   dc: "Washington, DC"}
+
+### end ###
+
