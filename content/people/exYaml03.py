@@ -36,7 +36,7 @@ for personData in yd:
 
     if field in categoryDictCounts:
       cdc  = categoryDictCounts[field]
-      cdl  = categoryDictCounts[field]
+      cdl  = categoryDictLists[field]
       vals = personData[field]
 
       for val in vals:
@@ -54,6 +54,6 @@ for field in categoryCounts:
 
 #print(categoryDictCounts)
 
-#print('e.g., associated with MA:', categoryDictCounts['geo']['MA'])
+#print('associated with MA:', categoryDictCounts['geo']['MA'])
 print(categoryDictLists['geo']['MA'])
 ### end ###
