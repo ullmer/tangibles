@@ -9,44 +9,46 @@
 - {n: [Clarke,       Arthur C.]
 - {n: [Csikznetmilhalyi, Mihaly], 
 - {n: [Dahlberg,     Bjorn]
-- {n: [Dyson,        Freeman
-- {n: [Frank,        Anne
-- {n: [Freiberger,   Paul
-- {n: [French Gates, Melinda
-- {n: [Geautroux,    Ben
-- {n: [Gibson,       William
-- {n: [Gorman,       Amanda
-- {n: [Griffith,     Saul
-- {n: [Harjo,        Joy
-- {n: [Hart,         Michael
-- {n: [Heinlein,     Robert
-- {n: [Henderson,    Rebecca
-- {n: [Herbert,      Simon
-- {n: [Hill,         Fiona
-- {n: [Huron,        Samuel
-- {n: [Jawerth,      Bjorn
-- {n: [Keller,       Evelyn Scott
-- {n: [King,         Martin Luther, Jr.
-- {n: [Lee,          Jae-Chol
-- {n: [Mabray,       Molly
-- {n: [Merkl,        Angela
-- {n: [Mattusch,     Harriet
-- {n: [Mattusch,     Kurt
-- {n: [McGrath,      Brian
-- {n: [Mindl,        David
-- {n: [Mumford,      Trini
-- {n: [Newby,        Gregory
-- {n: [Ookami,       Tooey
-- {n: [Power,        Samantha1G
-- {n: [Simmons,      Dan
-- {n: [Singh,        Pushpendra
+- {n: [Dyson,        Freeman], 
+- {n: [Frank,        Anne], 
+- {n: [Freiberger,   Paul], 
+- {n: [French Gates, Melinda], 
+- {n: [Geautroux,    Ben], 
+- {n: [Gibson,       William], 
+- {n: [Gorman,       Amanda], 
+- {n: [Griffith,     Saul], 
+- {n: [Harjo,        Joy], 
+- {n: [Hart,         Michael], 
+- {n: [Heinlein,     Robert], 
+- {n: [Henderson,    Rebecca], 
+- {n: [Herbert,      Simon], 
+- {n: [Hill,         Fiona], 
+- {n: [Huron,        Samuel], 
+- {n: [Jawerth,      Bjorn], 
+- {n: [Keller,       Evelyn Scott], 
+- {n: [King,         Martin Luther, Jr.], 
+- {n: [Lee,          Jae-Chol], 
+- {n: [Mabray,       Molly], 
+- {n: [Merkl,        Angela], 
+- {n: [Mattusch,     Harriet], 
+- {n: [Mattusch,     Kurt], 
+- {n: [McGrath,      Brian], 
+- {n: [Mindl,        David], 
+- {n: [Mumford,      Trini],  geo: [TX, AK], fictional: True}
+- {n: [Newby,        Gregory], 
+- {n: [Ookami,       Tooey],  geo: [AK],     fictional: True}
+- {n: [Power,        Samantha], 
+- {n: [Simmons,      Dan], 
+- {n: [Singh,        Pushpendra], 
 - {n: [Steinmeyer,   Frank-Walter], 
-- {n: [Stephenson,   Neal
-- {n: [Turkle,       Sherry
-- {n: [Ullmer,       Brygg
-- {n: [Verne,        Jules
-- {n: [Vinge,        Vernor
-- {n: [Zelenskyy,    Volodymyr]
+- {n: [Stephenson,   Neal], 
+- {n: [Turkle,       Sherry], 
+- {n: [Ullmer,       Brygg], nn: bau, geo:  [MS, KY, GA, SC, IL, CA, MA, JP, DE, HK, LA, SC], 
+                             edu:  [juliusmarks.fcps.net, illinois.edu, mit.edu], volunteer: [gutenberg.org, ncsa.illinois.edu, c-span.org],
+                             orgs: [hansley.com, usc.edu, uiuc.edu, interval.com, csl.sony.jp, zib.de, lsu.edu, clemson.edu],
+                             bk: [Weaving Fire Into Form: Aspirations for Tangible & Embodied Interaction]}
+- {n: [Verne,        Jules], 
+- {n: [Vinge,        Vernor], 
+- {n: [Zelenskyy,    Volodymyr], 
 
 ### end ###
-
