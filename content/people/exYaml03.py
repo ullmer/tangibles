@@ -54,6 +54,5 @@ for field in categoryCounts:
 
 #print(categoryDictCounts)
 
-#print('associated with MA:', categoryDictCounts['geo']['MA'])
-print(categoryDictLists['geo']['MA'])
+print("Individuals associated with Massachusetts:", categoryDictLists['geo']['MA'])
 ### end ###
