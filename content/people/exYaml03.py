@@ -56,7 +56,12 @@ for field in categoryCounts:
 
 print("Individuals associated with Massachusetts:", categoryDictNameLists['geo']['MA'])
 
-#bookList
-#print("Books associated with people associated with Massachusetts:", 
+maPeopleData = categoryDictDataLists['geo']['MA']
+bookList = []
+
+for maPeople in maPeopleData:
+  if 'bk' in maPeople: bookList += maPeople['bk']
+
+print("\nBooks associated with people associated with Massachusetts:", bookList)
 
 ### end ###
