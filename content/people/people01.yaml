@@ -11,12 +11,12 @@
 - {n: [Carter,       Jimmy],     geo: [GA, DC, GA], orgs: [navy.mil, georgia.gov, whitehouse.gov, carter.org],
                                  bk:  [An Hour Before Daylight,
                                        "A Call to Action: Women, Religion, Violence, and Power", 
-                                       Our Endangered Values: America's Moral Crisis,
-                                       Palestine: Peace Not Apartheid,
-                                       A Full Life: Reflections at Ninety]}
+                                       "Our Endangered Values: America's Moral Crisis",
+                                       "Palestine: Peace Not Apartheid",
+                                       "A Full Life: Reflections at Ninety"]}
 - {n: [Charnley,     Don],       geo: [],           orgs: [parc.xerox.com, interval.com]}
 - {n: [Clarke,       Arthur C.], bk:  [2001, 2010, More Than One Universe]}
-- {n: [Csikzetmilhalyi, Mihaly], geo: [IT, IL],     bk: [The Meaning of Things: Domestic Symbols and the self]}
+- {n: [Csikzetmilhalyi, Mihaly], geo: [IT, IL],     bk: ["The Meaning of Things: Domestic Symbols and the self"]}
 - {n: [Dahlberg,     Bjorn],     geo: [SE, SC]}
 - {n: [Dyson,        Freeman],   geo: [UK, NJ],     bk: [Disturbing the University, A Many-Colored Glass, "The Sun, The Genome, and the Internet"]}
 - {n: [Frank,        Anne],      geo: [DE, NL, DE], bk: [The Diary of a Young Girl]}
@@ -24,7 +24,7 @@
 - {n: [French Gates, Melinda],   geo: [TX, NC, WA], bk: [The Moment of Lift: How Empowering Women Transforms the World]}
 - {n: [Gibson,       William],   geo: [SC, VA, ON, DC, ON], bk: [Neuromancer, Count Zero, Mona Lisa Overdrive, The Peripheral]}
 - {n: [Gorman,       Amanda],    bk:  [Call Us What We Carry, The Hill We Climb]}
-- {n: [Griffith,     Saul],      geo: [AU, MA, CA], bk: [Electrify: An Optimist's Playbook for our Clean Energy Future]}
+- {n: [Griffith,     Saul],      geo: [AU, MA, CA], bk: ["Electrify: An Optimist's Playbook for our Clean Energy Future"]}
 - {n: [Guitreau,     Ben],       geo: [LA],         edu: [lsu.edu]}
 - {n: [Harjo,        Joy],       bk: [Crazy Brave, Catching the Light, Weaving Sundown in a Scarlet Light, 
                                       A Map to the Next World, Conflict Resolution for Holy Beings, 
@@ -35,11 +35,11 @@
 - {n: [Henderson,    Rebecca],   geo: [MA], org: [mit.edu, harvard.edu], bk: [Reimagining Capitalism in a World on Fire]}
 - {n: [Herbert,      Simon],     bk:  [The Sciences of the Artificial]}
 - {n: [Hill,         Fiona],     geo: [UK, SU, MA, DC], 
-                                 bk:  [There Is Nothing for You Here: Finding Opportunity in the Twenty-First Century]}
-- {n: [Huron,        Samuel],    bk:  [Making with Data: Physical Design and Craft in a Data-Driven World]}
+                                 bk:  ["There Is Nothing for You Here: Finding Opportunity in the Twenty-First Century"]}
+- {n: [Huron,        Samuel],    bk:  ["Making with Data: Physical Design and Craft in a Data-Driven World"]}
 - {n: [Jawerth,      Bjorn],     geo: [SE, SC]}
 - {n: [Keller,       Evelyn Scott],       bk: [A feeling for the organism]}
-- {n: [King,         Martin Luther, Jr.], bk: [Where do we go from here: community or chaos?]}
+- {n: [King,         Martin Luther, Jr.], bk: ["Where do we go from here: community or chaos?"]}
 - {n: [Lee,          Jae-Chol],  geo: [SK, MA, SK], edu: [mit.edu], orgs: [samsung.com, nationalgeographic.com]}
 - {n: [L'Engle,      Madeleine], geo: [NY, CH, FL, SC, MA, CT, NY, CT], 
                                  bk: [A Wrinkle in Time]}
@@ -49,33 +49,33 @@
                                 bk: ["Enduring Bronze: Ancient Art, Modern Views",
                                      "Rediscovering the Ancient World on the Bay of Naples, 1710-1890",
                                      The Victorious Youth, Bronzeworkers in the Athenian Agora,
-                                     Pompeii and the Roman Villa: Art and Culture Around the Bay of Naples,
-                                     The Villa dei Papiri at Herculaneum: Life and Afterlife of a Sculpture Collection,
-                                     Greek Bronze Statuary: From the Beginnings Through the Fifth Century B.C.,
-                                     Classical Bronzes: The Art and Craft of Greek and Roman Statuary,
-                                     The Fire of Hephaistos: Large Classical Bronzes from North American Collections,
-- {n: [Mattusch,     Harriet],  geo: [SD, NY, DE, VA, DE, SK, VA], bk: [Alive in the Twentieth Century]}
+                                     "Pompeii and the Roman Villa: Art and Culture Around the Bay of Naples",
+                                     "The Villa dei Papiri at Herculaneum: Life and Afterlife of a Sculpture Collection",
+                                     "Greek Bronze Statuary: From the Beginnings Through the Fifth Century B.C.",
+                                     "Classical Bronzes: The Art and Craft of Greek and Roman Statuary",
+                                     "The Fire of Hephaistos: Large Classical Bronzes from North American Collections",
+- {n: [Mattusch,     Harriet],  geo: [SD, NY, DE, VA, DE, SK, VA], bk: [Alive in the Twentieth Century"]}
 - {n: [Mattusch,     Kurt],     geo: [DE, VA, DE, VA, SK]}
-- {n: [McGrath,      Brian],    geo: [NY, SC], bk: [Look Round for Poetry: Untimely Romanticisms]}
+- {n: [McGrath,      Brian],    geo: [NY, SC], bk: ["Look Round for Poetry: Untimely Romanticisms"]}
 - {n: [Mindell,      David],    geo: [MA], bk: [Digital Apollo, Between Human and Machine]}
 - {n: [Mumford,      Trini],    geo: [TX, AK], fictional: True}
 - {n: [Newby,        Gregory],  org: [illinois.edu, unc.edu, asc.edu, gutenberg.org]}
 - {n: [Ookami,       Tooey],    geo: [AK],     fictional: True}
 - {n: [Power,        Samantha], geo: [UK, IE, PA, GA, CT, YU, MA, DC], edu: [yale.edu, harvard.edu], 
-                                bk:  [The Education of an Idealist: A Memoir]}
-- {n: [Simmons,      Dan],      bk: [Hyperion, The Fall of Hyperion, Endymion, Worlds Enough & Time]}
+                                bk:  ["The Education of an Idealist: A Memoir"]}
+- {n: [Simmons,      Dan],      bk:  [Hyperion, The Fall of Hyperion, Endymion, Worlds Enough & Time]}
 - {n: [Singh,        Pushpinder], edu: [mit.edu]}
 - {n: [Steinmeyer,   Frank-Walter], 
 - {n: [Stephenson,   Neal],   bk: [Snow Crash, The Diamond Age, Seveneves, In the Beginning There Was The Command Line, Zodiac]}
-- {n: [Turkle,       Sherry], bk: [Evocative Objects: Things We Think With, 
+- {n: [Turkle,       Sherry], bk: ["Evocative Objects: Things We Think With", 
                                    The Inner History of Devices,
-                                   Life on the Screen: Identity in the Age of the Internet,
+                                   "Life on the Screen: Identity in the Age of the Internet",
                                    "Left to Our Own Devices: Outsmarting Smart Technology to Reclaim Our Relationships, Health, and Focus"]}
 - {n: [Tversky,      Barbara], bk: [Mind in Motion: How Actions Shape Thought]}
 - {n: [Ullmer,       Brygg], nn: bau, geo:  [MS, KY, GA, SC, IL, CA, MA, JP, DE, HK, LA, SC], 
                              edu:  [juliusmarks.fcps.net, illinois.edu, mit.edu], volunteer: [gutenberg.org, ncsa.illinois.edu, c-span.org],
                              orgs: [hansley.com, usc.edu, uiuc.edu, interval.com, csl.sony.jp, zib.de, lsu.edu, clemson.edu],
-                             bk:   [Weaving Fire Into Form: Aspirations for Tangible & Embodied Interaction]}
+                             bk:   ["Weaving Fire Into Form: Aspirations for Tangible & Embodied Interaction"]}
 - {n: [Verne,        Jules],     geo: []}
 - {n: [Vinge,        Vernor],    geo: [CA], bk: [True Names, A Fire Upon The Deep}
 - {n: [Zelenskyy,    Volodymyr], geo: [UA]}
