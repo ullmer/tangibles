@@ -18,11 +18,15 @@
 - {n: [Clarke,       Arthur C.], bk:  [2001, 2010, More Than One Universe]}
 - {n: [Csikzetmilhalyi, Mihaly], geo: [IT, IL],     bk: ["The Meaning of Things: Domestic Symbols and the self"]}
 - {n: [Dahlberg,     Bjorn],     geo: [SE, SC]}
-- {n: [Dyson,        Freeman],   geo: [UK, NJ],     bk: [Disturbing the University, A Many-Colored Glass, "The Sun, The Genome, and the Internet"]}
+- {n: [Dyson,        Freeman],   geo: [UK, NJ],     
+                                 bk: [Disturbing the University, 
+                                      A Many-Colored Glass, 
+                                      "The Sun, The Genome, and the Internet"]}
 - {n: [Frank,        Anne],      geo: [DE, NL, DE], bk: [The Diary of a Young Girl]}
 - {n: [Freiberger,   Paul],      geo: [CA],         bk: [Fire in the Valley, Fuzzy Logic]}
 - {n: [French Gates, Melinda],   geo: [TX, NC, WA], bk: [The Moment of Lift: How Empowering Women Transforms the World]}
-- {n: [Gibson,       William],   geo: [SC, VA, ON, DC, ON], bk: [Neuromancer, Count Zero, Mona Lisa Overdrive, The Peripheral]}
+- {n: [Gibson,       William],   geo: [SC, VA, ON, DC, ON, BC], 
+                                 bk: [Neuromancer, Count Zero, Mona Lisa Overdrive, The Peripheral]}
 - {n: [Gorman,       Amanda],    bk:  [Call Us What We Carry, The Hill We Climb]}
 - {n: [Griffith,     Saul],      geo: [AU, MA, CA], bk: ["Electrify: An Optimist's Playbook for our Clean Energy Future"]}
 - {n: [Guitreau,     Ben],       geo: [LA],         edu: [lsu.edu]}
@@ -66,19 +70,21 @@
 - {n: [Power,        Samantha], geo: [UK, IE, PA, GA, CT, YU, MA, DC], edu: [yale.edu, harvard.edu], 
                                 bk:  ["The Education of an Idealist: A Memoir"]}
 - {n: [Simmons,      Dan],      bk:  [Hyperion, The Fall of Hyperion, Endymion, Worlds Enough & Time]}
-- {n: [Singh,        Pushpinder], edu: [mit.edu]}
-- {n: [Steinmeyer,   Frank-Walter]}
-- {n: [Stephenson,   Neal],   bk: [Snow Crash, The Diamond Age, Seveneves, In the Beginning There Was The Command Line, Zodiac]}
+- {n: [Singh,        Pushpinder],   geo: [ON, MA], edu: [mit.edu]}
+- {n: [Steinmeyer,   Frank-Walter], geo: [DE]}
+- {n: [Stephenson,   Neal],   bk: [Snow Crash, The Diamond Age, Seveneves, Zodiac,
+                                   In the Beginning There Was The Command Line]}
 - {n: [Turkle,       Sherry], bk: ["Evocative Objects: Things We Think With", 
                                    The Inner History of Devices,
                                    "Life on the Screen: Identity in the Age of the Internet",
                                    "Left to Our Own Devices: Outsmarting Smart Technology to Reclaim Our Relationships, Health, and Focus"]}
 - {n: [Tversky,      Barbara], bk: [Mind in Motion: How Actions Shape Thought]}
 - {n: [Ullmer,       Brygg], nn: bau, geo:  [MS, KY, GA, SC, IL, CA, MA, JP, DE, HK, LA, SC], 
-                             edu:  [juliusmarks.fcps.net, illinois.edu, tangible.media.mit.edu], volunteer: [gutenberg.org, ncsa.illinois.edu, c-span.org],
+                             edu:  [juliusmarks.fcps.net, uiuc.edu, tangible.media.mit.edu], 
                              orgs: [hansley.com, usc.edu, uiuc.edu, interval.com, csl.sony.jp, zib.de, lsu.edu, clemson.edu],
+                             volunteer: [gutenberg.org, ncsa.illinois.edu, c-span.org],
                              bk:   ["Weaving Fire Into Form: Aspirations for Tangible & Embodied Interaction"]}
-- {n: [Verne,        Jules], bk:   [Around the World in 80 Days]}
+- {n: [Verne,        Jules], geo: [FR], bk:   [Around the World in 80 Days]}
 - {n: [Vinge,        Vernor],    geo: [CA], bk: [True Names, A Fire Upon The Deep]}
 - {n: [Zelenskyy,    Volodymyr], geo: [UA]}
 
