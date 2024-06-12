@@ -14,7 +14,13 @@ yd  = yaml.safe_load(yf)
 numPeople = len(yd)
 print("num people:", numPeople)
 
-categoryDicts = { # a dictionary of dictionaries, lookups for list fields
+categoryDictCounts = { # a dictionary of dictionaries, lookups for list fields
+   'geo':  {}, 
+   'bks':  {},
+   'edu':  {}, 
+   'orgs': {}}
+
+categoryDictLists = { # a dictionary of dictionaries, lookups for list fields
    'geo':  {}, 
    'bks':  {},
    'edu':  {}, 
@@ -28,18 +34,26 @@ for personData in yd:
     if field in categoryCounts: categoryCounts[field] += 1
     else:                       categoryCounts[field]  = 1
 
-    if field in categoryDicts:
-      cd   = categoryDicts[field]
+    if field in categoryDictCounts:
+      cdc  = categoryDictCounts[field]
+      cdl  = categoryDictCounts[field]
       vals = personData[field]
+
       for val in vals:
-        if val in cd: cd[val] += 1
-        else:         cd[val]  = 1
+        if    'n' in personData: name = personData['n']  #name field, not always present
+        elif 'nn' in personData: name = personData['nn'] #nickname/abbrev, not always present
+        else:                    name = 'unknown'
+
+        if val in cdl: cdl[val].append(name)
+        else:          cdl[val] = [name]
 
 print("fields observed")
 for field in categoryCounts:
   numObserved = categoryCounts[field]
   print("field %s; \t num observed: %i" % (field, numObserved))
 
-print(categoryDicts)
+#print(categoryDictCounts)
 
+#print('e.g., associated with MA:', categoryDictCounts['geo']['MA'])
+print(categoryDictLists['geo']['MA'])
 ### end ###
