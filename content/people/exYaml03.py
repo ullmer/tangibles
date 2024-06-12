@@ -27,11 +27,19 @@ for personData in yd:
   for field in fields: 
     if field in categoryCounts: categoryCounts[field] += 1
     else:                       categoryCounts[field]  = 1
-    if field in 
+
+    if field in categoryDicts:
+      cd   = categoryDicts[field]
+      vals = personData[field]
+      for val in vals:
+        if val in cd: cd[val] += 1
+        else:         cd[val]  = 1
 
 print("fields observed")
 for field in categoryCounts:
   numObserved = categoryCounts[field]
   print("field %s; \t num observed: %i" % (field, numObserved))
+
+print(categoryDicts)
 
 ### end ###
