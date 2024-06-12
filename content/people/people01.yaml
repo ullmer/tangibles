@@ -61,6 +61,8 @@
 - {n: [Mumford,      Trini],    geo: [TX, AK], fictional: Yes}
 - {n: [Newby,        Gregory],  org: [illinois.edu, unc.edu, asc.edu, gutenberg.org]}
 - {n: [Ookami,       Tooey],    geo: [AK],     fictional: Yes}
+- {nn: mp, geo: [CA, KS, MA, IL], edu: [mit.edu, uiuc.edu], 
+                                  orgs: [symbios.com, ghs.com, fulcrummicro.com, oblong.com]}
 - {n: [Power,        Samantha], geo: [UK, IE, PA, GA, CT, YU, MA, DC], edu: [yale.edu, harvard.edu], 
                                 bk:  ["The Education of an Idealist: A Memoir"]}
 - {n: [Simmons,      Dan],      bk:  [Hyperion, The Fall of Hyperion, Endymion, Worlds Enough & Time]}
