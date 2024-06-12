@@ -43,7 +43,7 @@
 - {n: [Lee,          Jae-Chol],  geo: [SK, MA, SK], edu: [tangible.media.mit.edu], orgs: [samsung.com, nationalgeographic.com]}
 - {n: [L'Engle,      Madeleine], geo: [NY, CH, FL, SC, MA, CT, NY, CT], 
                                  bk: [A Wrinkle in Time]}
-- {n: [Mabray,       Molly],    geo: [AK], fictional: True}
+- {n: [Mabray,       Molly],    geo: [AK], fictional: Yes}
 - {n: [Merkl,        Angela],   geo: [DD, DE]}
 - {n: [Mattusch,     Carol],    geo: [DE, VA],                     
                                 bk: ["Enduring Bronze: Ancient Art, Modern Views",
@@ -58,9 +58,9 @@
 - {n: [Mattusch,     Kurt],     geo: [DE, VA, DE, VA, SK]}
 - {n: [McGrath,      Brian],    geo: [NY, SC], bk: ["Look Round for Poetry: Untimely Romanticisms"]}
 - {n: [Mindell,      David],    geo: [MA], bk: [Digital Apollo, Between Human and Machine]}
-- {n: [Mumford,      Trini],    geo: [TX, AK], fictional: True}
+- {n: [Mumford,      Trini],    geo: [TX, AK], fictional: Yes}
 - {n: [Newby,        Gregory],  org: [illinois.edu, unc.edu, asc.edu, gutenberg.org]}
-- {n: [Ookami,       Tooey],    geo: [AK],     fictional: True}
+- {n: [Ookami,       Tooey],    geo: [AK],     fictional: Yes}
 - {n: [Power,        Samantha], geo: [UK, IE, PA, GA, CT, YU, MA, DC], edu: [yale.edu, harvard.edu], 
                                 bk:  ["The Education of an Idealist: A Memoir"]}
 - {n: [Simmons,      Dan],      bk:  [Hyperion, The Fall of Hyperion, Endymion, Worlds Enough & Time]}
