@@ -7,13 +7,13 @@
 - {n: [Carter,       Jimmy],     geo: [GA, DC, GA]
 - {n: [Charnley,     Don],       geo: [
 - {n: [Clarke,       Arthur C.], geo: [
-- {n: [Csikzetmilhalyi, Mihaly], geo: [IT, IL], bk: [The Meaning of Things: Domestic Symbols and the self]}
-- {n: [Dahlberg,     Bjorn]
-- {n: [Dyson,        Freeman], 
-- {n: [Frank,        Anne], 
-- {n: [Freiberger,   Paul], 
-- {n: [French Gates, Melinda], 
-- {n: [Geautroux,    Ben], 
+- {n: [Csikzetmilhalyi, Mihaly], geo: [IT, IL],     bk: [The Meaning of Things: Domestic Symbols and the self]}
+- {n: [Dahlberg,     Bjorn],     geo: [SE, SC]}
+- {n: [Dyson,        Freeman],   geo: [UK, NJ],     bk: [Disturbing the University, A Many-Colored Glass, "The Sun, The Genome, and the Internet"]}
+- {n: [Frank,        Anne],      geo: [DE, NL, DE], bk: [The Diary of a Young Girl]}
+- {n: [Freiberger,   Paul],      geo: [CA],         bk: [Fire in the Valley, Fuzzy Logic]}
+- {n: [French Gates, Melinda],   geo: [TX, NC, WA], bk: [The Moment of Lift: How Empowering Women Transforms the World]}
+- {n: [Geautroux,    Ben],       geo: [LA],         edu: [lsu.edu]}
 - {n: [Gibson,       William], geo: [SC, VA, ON, DC, ON], bk: [Neuromancer, Mona Lisa Overdrive, The Peripheral]}
 - {n: [Gorman,       Amanda], 
 - {n: [Griffith,     Saul], 
