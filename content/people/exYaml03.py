@@ -40,7 +40,7 @@ for personData in yd:
       vals = personData[field]
 
       for val in vals:
-        if    'n' in personData: name = personData['n']  #name field, not always present
+        if    'n' in personData: name = ' '.join(personData['n'])  #name field, not always present
         elif 'nn' in personData: name = personData['nn'] #nickname/abbrev, not always present
         else:                    name = 'unknown'
 
