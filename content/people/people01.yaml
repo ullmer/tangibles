@@ -40,7 +40,7 @@
 - {n: [Jawerth,      Bjorn],     geo: [SE, SC]}
 - {n: [Keller,       Evelyn Scott],       bk: [A feeling for the organism]}
 - {n: [King,         Martin Luther, Jr.], bk: ["Where do we go from here: community or chaos?"]}
-- {n: [Lee,          Jae-Chol],  geo: [SK, MA, SK], edu: [mit.edu], orgs: [samsung.com, nationalgeographic.com]}
+- {n: [Lee,          Jae-Chol],  geo: [SK, MA, SK], edu: [tangible.media.mit.edu], orgs: [samsung.com, nationalgeographic.com]}
 - {n: [L'Engle,      Madeleine], geo: [NY, CH, FL, SC, MA, CT, NY, CT], 
                                  bk: [A Wrinkle in Time]}
 - {n: [Mabray,       Molly],    geo: [AK], fictional: True}
@@ -73,7 +73,7 @@
                                    "Left to Our Own Devices: Outsmarting Smart Technology to Reclaim Our Relationships, Health, and Focus"]}
 - {n: [Tversky,      Barbara], bk: [Mind in Motion: How Actions Shape Thought]}
 - {n: [Ullmer,       Brygg], nn: bau, geo:  [MS, KY, GA, SC, IL, CA, MA, JP, DE, HK, LA, SC], 
-                             edu:  [juliusmarks.fcps.net, illinois.edu, mit.edu], volunteer: [gutenberg.org, ncsa.illinois.edu, c-span.org],
+                             edu:  [juliusmarks.fcps.net, illinois.edu, tangible.media.mit.edu], volunteer: [gutenberg.org, ncsa.illinois.edu, c-span.org],
                              orgs: [hansley.com, usc.edu, uiuc.edu, interval.com, csl.sony.jp, zib.de, lsu.edu, clemson.edu],
                              bk:   ["Weaving Fire Into Form: Aspirations for Tangible & Embodied Interaction"]}
 - {n: [Verne,        Jules],     geo: []}
