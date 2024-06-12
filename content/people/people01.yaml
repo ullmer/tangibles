@@ -14,7 +14,7 @@
 - {n: [Freiberger,   Paul], 
 - {n: [French Gates, Melinda], 
 - {n: [Geautroux,    Ben], 
-- {n: [Gibson,       William], 
+- {n: [Gibson,       William], geo: [SC, VA, ON, DC, ON], bk: [Neuromancer, Mona Lisa Overdrive, The Peripheral]}
 - {n: [Gorman,       Amanda], 
 - {n: [Griffith,     Saul], 
 - {n: [Harjo,        Joy], 
@@ -48,7 +48,7 @@
                              orgs: [hansley.com, usc.edu, uiuc.edu, interval.com, csl.sony.jp, zib.de, lsu.edu, clemson.edu],
                              bk: [Weaving Fire Into Form: Aspirations for Tangible & Embodied Interaction]}
 - {n: [Verne,        Jules], 
-- {n: [Vinge,        Vernor], 
-- {n: [Zelenskyy,    Volodymyr], 
+- {n: [Vinge,        Vernor],    geo: [
+- {n: [Zelenskyy,    Volodymyr], geo: [ua]}
 
 ### end ###
