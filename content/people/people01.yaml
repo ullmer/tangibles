@@ -14,24 +14,25 @@
 - {n: [Freiberger,   Paul],      geo: [CA],         bk: [Fire in the Valley, Fuzzy Logic]}
 - {n: [French Gates, Melinda],   geo: [TX, NC, WA], bk: [The Moment of Lift: How Empowering Women Transforms the World]}
 - {n: [Geautroux,    Ben],       geo: [LA],         edu: [lsu.edu]}
-- {n: [Gibson,       William], geo: [SC, VA, ON, DC, ON], bk: [Neuromancer, Mona Lisa Overdrive, The Peripheral]}
+- {n: [Gibson,       William],   geo: [SC, VA, ON, DC, ON], bk: [Neuromancer, Mona Lisa Overdrive, The Peripheral]}
 - {n: [Gorman,       Amanda], 
 - {n: [Griffith,     Saul], 
 - {n: [Harjo,        Joy], 
 - {n: [Hart,         Michael], 
 - {n: [Heinlein,     Robert], 
-- {n: [Henderson,    Rebecca], 
+- {n: [Henderson,    Rebecca],  geo: [], org: [mit.edu, harvard.edu], bk: [A World on Fire]}
 - {n: [Herbert,      Simon], 
 - {n: [Hill,         Fiona], 
 - {n: [Huron,        Samuel], 
-- {n: [Jawerth,      Bjorn], 
+- {n: [Jawerth,      Bjorn],    geo: [SE, SC]}
 - {n: [Keller,       Evelyn Scott], 
 - {n: [King,         Martin Luther, Jr.], 
-- {n: [Lee,          Jae-Chol], 
-- {n: [Mabray,       Molly], 
+- {n: [Lee,          Jae-Chol],  geo: [SK, MA, SK], edu: [mit.edu], orgs: [samsung.com, nationalgeographic.com]}
+- {n: [Mabray,       Molly],     geo: [AK], fictional: True}
 - {n: [Merkl,        Angela], 
-- {n: [Mattusch,     Harriet], 
-- {n: [Mattusch,     Kurt], 
+- {n: [Mattusch,     Carol],     geo: [DE, VA],                     bk: []}
+- {n: [Mattusch,     Harriet],   geo: [SD, NY, DE, VA, DE, SK, VA], bk: [Alive in the Twentieth Century]}
+- {n: [Mattusch,     Kurt],      geo: [DE, VA, DE, VA, SK]}
 - {n: [McGrath,      Brian], 
 - {n: [Mindl,        David], 
 - {n: [Mumford,      Trini],  geo: [TX, AK], fictional: True}
@@ -47,8 +48,8 @@
                              edu:  [juliusmarks.fcps.net, illinois.edu, mit.edu], volunteer: [gutenberg.org, ncsa.illinois.edu, c-span.org],
                              orgs: [hansley.com, usc.edu, uiuc.edu, interval.com, csl.sony.jp, zib.de, lsu.edu, clemson.edu],
                              bk: [Weaving Fire Into Form: Aspirations for Tangible & Embodied Interaction]}
-- {n: [Verne,        Jules], 
-- {n: [Vinge,        Vernor],    geo: [
-- {n: [Zelenskyy,    Volodymyr], geo: [ua]}
+- {n: [Verne,        Jules],     geo: []}
+- {n: [Vinge,        Vernor],    geo: [CA]}
+- {n: [Zelenskyy,    Volodymyr], geo: [UA]}
 
 ### end ###
