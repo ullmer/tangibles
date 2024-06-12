@@ -14,17 +14,16 @@ yd  = yaml.safe_load(yf)
 numPeople = len(yd)
 print("num people:", numPeople)
 
-categoryDictCounts = { # a dictionary of dictionaries, lookups for list fields
-   'geo':  {}, 
-   'bks':  {},
-   'edu':  {}, 
-   'orgs': {}}
+listFields = ['geo', 'bks', 'edu', 'orgs']
 
-categoryDictLists = { # a dictionary of dictionaries, lookups for list fields
-   'geo':  {}, 
-   'bks':  {},
-   'edu':  {}, 
-   'orgs': {}}
+categoryDictCounts    = {} # a dictionary of dictionaries, counts of categories
+categoryDictNameLists = {} # a dictionary of dictionaries, names within categories
+categoryDictDataLists = {} # a dictionary of dictionaries, data structurs w/in categories
+
+for field in listFields:
+  categoryDictCounts[field]    = {}
+  categoryDictNameLists[field] = {}
+  categoryDictDataLists[field] = {}
 
 categoryCounts = {}
 
@@ -36,7 +35,8 @@ for personData in yd:
 
     if field in categoryDictCounts:
       cdc  = categoryDictCounts[field]
-      cdl  = categoryDictLists[field]
+      cdnl = categoryDictNameLists[field]
+      cddl = categoryDictDataLists[field]
       vals = personData[field]
 
       for val in vals:
@@ -44,8 +44,8 @@ for personData in yd:
         elif 'nn' in personData: name = personData['nn'] #nickname/abbrev, not always present
         else:                    name = 'unknown'
 
-        if val in cdl: cdl[val].append(name)
-        else:          cdl[val] = [name]
+        if val in cdnl: cdnl[val].append(name); cddl[val].append(personData)
+        else:           cdnl[val] = [name];     cddl[val] = [personData]
 
 print("fields observed")
 for field in categoryCounts:
@@ -54,5 +54,9 @@ for field in categoryCounts:
 
 #print(categoryDictCounts)
 
-print("Individuals associated with Massachusetts:", categoryDictLists['geo']['MA'])
+print("Individuals associated with Massachusetts:", categoryDictNameLists['geo']['MA'])
+
+#bookList
+#print("Books associated with people associated with Massachusetts:", 
+
 ### end ###
