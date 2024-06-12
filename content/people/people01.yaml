@@ -53,7 +53,7 @@
                                      "The Villa dei Papiri at Herculaneum: Life and Afterlife of a Sculpture Collection",
                                      "Greek Bronze Statuary: From the Beginnings Through the Fifth Century B.C.",
                                      "Classical Bronzes: The Art and Craft of Greek and Roman Statuary",
-                                     "The Fire of Hephaistos: Large Classical Bronzes from North American Collections",
+                                     "The Fire of Hephaistos: Large Classical Bronzes from North American Collections"]}
 - {n: [Mattusch,     Harriet],  geo: [SD, NY, DE, VA, DE, SK, VA], bk: [Alive in the Twentieth Century]}
 - {n: [Mattusch,     Kurt],     geo: [DE, VA, DE, VA, SK]}
 - {n: [McGrath,      Brian],    geo: [NY, SC], bk: ["Look Round for Poetry: Untimely Romanticisms"]}
@@ -65,7 +65,7 @@
                                 bk:  ["The Education of an Idealist: A Memoir"]}
 - {n: [Simmons,      Dan],      bk:  [Hyperion, The Fall of Hyperion, Endymion, Worlds Enough & Time]}
 - {n: [Singh,        Pushpinder], edu: [mit.edu]}
-- {n: [Steinmeyer,   Frank-Walter], 
+- {n: [Steinmeyer,   Frank-Walter]}
 - {n: [Stephenson,   Neal],   bk: [Snow Crash, The Diamond Age, Seveneves, In the Beginning There Was The Command Line, Zodiac]}
 - {n: [Turkle,       Sherry], bk: ["Evocative Objects: Things We Think With", 
                                    The Inner History of Devices,
@@ -76,8 +76,8 @@
                              edu:  [juliusmarks.fcps.net, illinois.edu, tangible.media.mit.edu], volunteer: [gutenberg.org, ncsa.illinois.edu, c-span.org],
                              orgs: [hansley.com, usc.edu, uiuc.edu, interval.com, csl.sony.jp, zib.de, lsu.edu, clemson.edu],
                              bk:   ["Weaving Fire Into Form: Aspirations for Tangible & Embodied Interaction"]}
-- {n: [Verne,        Jules],     geo: []}
-- {n: [Vinge,        Vernor],    geo: [CA], bk: [True Names, A Fire Upon The Deep}
+- {n: [Verne,        Jules], bk:   [Around the World in 80 Days]}
+- {n: [Vinge,        Vernor],    geo: [CA], bk: [True Names, A Fire Upon The Deep]}
 - {n: [Zelenskyy,    Volodymyr], geo: [UA]}
 
 ### end ###
