@@ -1,8 +1,15 @@
-# This is an initial set of individuals, eclectically populated 
+# This is an initial example set of individuals, eclectically populated 
 # from among public personalities (mostly authors) & collaborators 
 # the Animist/Plasma project, toward initial illustrations of entanglement
 # (mostly toward experimenting in library deployment contexts and in 
 #  collaborations on the Animist project).
+
+# Clearly, one would not "exhaustively" list most spaces of people or other entities in such way.
+# But, if one were wishing to support mixed human & computational engagement with different 
+# import/export subsets, toward certain aspirational "critical masses" of interesting relationships,
+# expressing in this way has a different kind of legibility & manipulability than (e.g.) in a Sqlite database
+# (of which I'm very fond), in XML, etc.
+
 # Alphabetically by last name.
 
 - {n: [Allen,        Paul],      geo: [WA],         orgs: [microsoft.com, interval.com], 
