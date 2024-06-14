@@ -10,6 +10,12 @@
 # expressing in this way has a different kind of legibility & manipulability than (e.g.) in a Sqlite database
 # (of which I'm very fond), in XML, etc.
 
+# @mignon also very helpfully flagged the disambiguation challenge between (e.g.) conflicting two-letter abbreviations of
+# states and countries.  Some have further flagged complexities relating to YAML mappings of (e.g.) NO (for Norway) to
+# YAML's inferencing of Boolean "FALSE"  https://news.ycombinator.com/item?id=26671136 is one interesting such dialogue
+# JSON-Schemas and YAML-Schemas seems to be one line of approach; trying to understand if compact, intuitive conventions
+# have been achieved
+
 # Alphabetically by last name.
 
 - {n: [Allen,        Paul],      geo: [WA],         orgs: [microsoft.com, interval.com], 
@@ -41,9 +47,9 @@
                                       A Map to the Next World, Conflict Resolution for Holy Beings, 
                                       How We Became Human, Poet Warrior, "Living Nations, Living Words", 
                                       An American Sunrise]}
-- {n: [Hart,         Michael],   org: [gutenberg.org]}
+- {n: [Hart,         Michael],   orgs: [gutenberg.org]}
 - {n: [Heinlein,     Robert],    bk:  [Stranger in a Strange Land]}
-- {n: [Henderson,    Rebecca],   geo: [MA], org: [mit.edu, harvard.edu], bk: [Reimagining Capitalism in a World on Fire]}
+- {n: [Henderson,    Rebecca],   geo: [MA], orgs: [mit.edu, harvard.edu], bk: [Reimagining Capitalism in a World on Fire]}
 - {n: [Herbert,      Simon],     bk:  [The Sciences of the Artificial]}
 - {n: [Hill,         Fiona],     geo: [UK, SU, MA, DC], 
                                  bk:  ["There Is Nothing for You Here: Finding Opportunity in the Twenty-First Century"]}
@@ -70,7 +76,7 @@
 - {n: [McGrath,      Brian],    geo: [NY, SC], bk: ["Look Round for Poetry: Untimely Romanticisms"]}
 - {n: [Mindell,      David],    geo: [MA], bk: [Digital Apollo, Between Human and Machine]}
 - {n: [Mumford,      Trini],    geo: [TX, AK], fictional: Yes}
-- {n: [Newby,        Gregory],  org: [illinois.edu, unc.edu, asc.edu, gutenberg.org]}
+- {n: [Newby,        Gregory],  orgs: [illinois.edu, unc.edu, asc.edu, gutenberg.org]}
 - {n: [Ookami,       Tooey],    geo: [AK],     fictional: Yes}
 - {nn: mp, geo: [CA, KS, MA, IL], edu: [mit.edu, uiuc.edu], 
                                   orgs: [symbios.com, ghs.com, fulcrummicro.com, oblong.com]}
