@@ -11,8 +11,8 @@ elDim = {'arch': [6. , 1.9, 3.], 'dentil': [1.34, .56, 2.5],
 
 perBoxGeoms  = {}; boxWidth = elDim['box'][0] + elDim['column'][0]
 
-for elName in elDim:
-  w,h,d = elDim[elName]; perBoxGeoms = cube(w,h,d)
+for elName in ['dentil', 'column']:
+  w,h,d = elDim[elName]; perBoxGeoms[elName] = cube(w,h,d)
 
 
 
