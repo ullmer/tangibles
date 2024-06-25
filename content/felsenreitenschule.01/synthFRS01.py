@@ -21,10 +21,6 @@ archCutter1 = cube([aw, ah, ad*.9])        # and borrow the archs dimensions, wi
 archCutter2 = translate([0, ah/2., 0])(archCutter) #shifting it upwards by the radius
 archCutter3 = archCutter2 - archCyl2       # now, Boolean-subtract the cylindrical void 
 
-c1 = cube()
-c2 = translate([1.5, 0, 0])(c1)
-outGeom = c1 + c2
-
 print(scad_render(outGeom))
 
 ### end ###
