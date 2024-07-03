@@ -24,11 +24,11 @@ archCutter4 = translate([0, 1.5, -.3])(archCutter3)
 
 archBox1    = cube([aw, ad, ah])
 archBox2    = translate([-aw/2., -ad/2., 0])(archBox1)
-
-outGeom = archCutter4 + archBox2
+archBox3    = archBox2 - archCutter4 
+outGeom     = archBox3
 
 radialSegments = 25;     hdr = '$fn = %s;' % radialSegments # create a header for the export
-scad_render_to_file(outGeom, 'frs01.scad', file_header=hdr) # write the .scad file
+scad_render_to_file(outGeom, 'frs02.scad', file_header=hdr) # write the .scad file
 
 ### end ###
 
