@@ -9,6 +9,8 @@ from solid import *  # load in SolidPython/SCAD support code; solid2?
 elDim = {'arch': [6. , 1.9, 5.], 'dentil': [1.34, .56, 2.5], 
          'box':  [6.4, 4.7, 2.], 'column': [1.,  4.7, None]}
 
+archGridWH = [10, 5] # width and height (in # arches) of arch grid
+
 perBoxGeoms  = {}; boxWidth = elDim['box'][0] + elDim['column'][0]
 
 for elName in ['column', 'dentil']: #create cubical masses for columns and dentils
@@ -25,7 +27,23 @@ archCutter4 = translate([0, 1.5, -.3])(archCutter3)
 archBox1    = cube([aw, ad, ah])
 archBox2    = translate([-aw/2., -ad/2., 0])(archBox1)
 archBox3    = archBox2 - archCutter4 
-outGeom     = archBox3
+archBoxes4  = archBox3
+
+x1 = 0; dx = aw + elDim['column'][0]
+y1 = 0; dy = ah + 4.
+
+for i in range(archGridWH[0]):
+  x1 += dx
+  archBox5    = translate([x1, 0, 0])(archBox3)
+  archBoxes4 += archBox5
+
+archBoxes6  = archBoxes4
+for i in range(archGridWH[1]):
+  y1         += dy
+  archBoxes7  = translate([0, y1, 0])(archBoxes4)
+  archBoxes6 += archBoxes7
+
+outGeom     = archBoxes6
 
 radialSegments = 25;     hdr = '$fn = %s;' % radialSegments # create a header for the export
 scad_render_to_file(outGeom, 'frs02.scad', file_header=hdr) # write the .scad file
