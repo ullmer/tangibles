@@ -17,11 +17,15 @@ for elName in ['column', 'dentil']: #create cubical masses for columns and denti
 aw, ah, ad  = elDim['arch']                # Prep to carve the arch
 archCyl1    = cylinder(r=.5, h=ad)         # We'll excise this cylinder from the archCutter
 archCyl2    = scale([aw, ah, 1])(archCyl1) # scaling it per elDimensions
-archCutter1 = cube([aw*1.1, ah, ad*.9])        # and borrow the archs dimensions, with less depth
-archCutter2 = translate([-aw*1.1/2., 0, 0])(archCutter1) #shifting it appropriately
+archCutter1 = cube([aw*1.1, ah, ad*.5])        # and borrow the archs dimensions, with less depth
+archCutter2 = translate([-aw*1.1/2., 0, .2])(archCutter1) #shifting it appropriately, including nudges
 archCutter3 = archCutter2 - archCyl2       # now, Boolean-subtract the cylindrical void 
+archCutter4 = translate([0, 1.5, -.3])(archCutter3)
 
-outGeom = archCutter3
+archBox1    = cube([aw, ad, ah])
+archBox2    = translate([-aw/2., -ad/2., 0])(archBox1)
+
+outGeom = archCutter4 + archBox2
 
 radialSegments = 25;     hdr = '$fn = %s;' % radialSegments # create a header for the export
 scad_render_to_file(outGeom, 'frs01.scad', file_header=hdr) # write the .scad file
