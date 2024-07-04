@@ -24,7 +24,7 @@ cornerGridR1 = efrs.spinObj(  0,  0, -45, cornerGrid)
 cornerGridR2 = efrs.shiftObj(71, -3.2, 0, cornerGridR1)
 
 scene  = backGrid + sideGridL2 + sideGridR2 
-scene +=          cornerGridL2 + cornerGridR2
+#scene +=          cornerGridL2 + cornerGridR2
 
 efrs.renderScad('frs04.scad', scene)
 
