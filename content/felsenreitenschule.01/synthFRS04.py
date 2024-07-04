@@ -7,11 +7,11 @@ from enoFRS import *
 
 efrs = enoFRS()
 
-th = 3
+th = 4
 
-backGrid   = efrs.synthPortal2DArrayHoles(10, 5, th)
-sideGrid   = efrs.synthPortal2DArrayHoles( 5, 5, th)
-cornerGrid = efrs.synthPortal2DArrayHoles( 1, 5, th)
+backGrid   = efrs.synthPortal2DArrayHoles(10, 5, th, 5)
+sideGrid   = efrs.synthPortal2DArrayHoles( 5, 5, th,  0)
+cornerGrid = efrs.synthPortal2DArrayHoles( 1, 5, th, -4)
 
 sideGridL1 = efrs.spinObj(  0,   0, -90, sideGrid)
 sideGridL2 = efrs.shiftObj(-8, -12.2, 0, sideGridL1)
@@ -24,7 +24,7 @@ cornerGridR1 = efrs.spinObj(  0,  0, -45, cornerGrid)
 cornerGridR2 = efrs.shiftObj(71, -3.2, 0, cornerGridR1)
 
 scene  = backGrid + sideGridL2 + sideGridR2 
-#scene +=          cornerGridL2 + cornerGridR2
+scene +=          cornerGridL2 + cornerGridR2
 
 efrs.renderScad('frs04.scad', scene)
 

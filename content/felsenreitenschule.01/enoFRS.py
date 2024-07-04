@@ -65,11 +65,11 @@ class enoFRS(enoSolid):
 
   ########### synthesize a wall, excised of 2D portal array, at origin ########### 
 
-  def synthPortal2DArrayHoles(self, numX, numY, thickness):
+  def synthPortal2DArrayHoles(self, numX, numY, thickness, xfudge=0):
     portalArray = self.synthPortal2DArray(numX, numY)
 
     aw, ah, ad   = self.elDim['arch']                 # Prep to carve the arch
-    ww, wh       = numX * aw + 10, numY * ah + 23
+    ww, wh       = numX * aw + 10 + xfudge, numY * ah + 23
     c1           = cube([ww, thickness/3., wh])
     #c2           = self.shiftObj(0, -1.5, -5, c1)
     c2           = self.shiftObj(-6, -1.5, -5, c1)
