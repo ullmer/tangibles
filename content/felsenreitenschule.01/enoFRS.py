@@ -23,7 +23,7 @@ class enoFRS(enoSolid):
     for elName in ['column', 'dentil']: #create cubical masses for columns and dentils
       w,h,d = self.elDim[elName]; self.perBoxGeoms[elName] = cube([w,h,d])
 
-    aw, ah, ad  = elDim['arch']                      # Prep to carve the arch
+    aw, ah, ad  = self.elDim['arch']                 # Prep to carve the arch
     archCyl1    = cylinder(r=.5, h=ad)               # We'll excise this cylinder from the archCutter
     archCyl2    = self.scaleObj(aw, ah, 1, archCyl1) # scaling it per elDimensions
 
@@ -43,7 +43,8 @@ class enoFRS(enoSolid):
   def synthPortal2DArray(self, numX, numY):
     
     singlePortal = self.synthPortal()
-    rowPortals = singlePortal
+    rowPortals   = singlePortal
+    aw, ah, ad   = self.elDim['arch']                 # Prep to carve the arch
 
     x1 = 0; dx = aw + self.elDim['column'][0]
     y1 = 0; dy = ah + 4.

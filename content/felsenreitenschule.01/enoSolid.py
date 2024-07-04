@@ -26,8 +26,8 @@ class enoSolid:
   def renderScad(self, fn, outGeomOverride = None):
     hdr = '$fn = %s;' % self.radialSegments # create a header for the export
 
-    if outGeomOveride is None: og = self.outGeom
-    else:                      og = outGeomOveride
+    if outGeomOverride is None: og = self.outGeom
+    else:                       og = outGeomOverride
 
     scad_render_to_file(og, fn, file_header=hdr) # write the .scad file
 
