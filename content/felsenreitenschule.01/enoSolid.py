@@ -12,18 +12,24 @@ class enoSolid:
   def __init__(self, **kwargs): #all
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-  def shiftObj(self, dx, dy, dz, obj): return translate([dx, dy, dz])(obj)
-  def scaleObj(self, sx, sz, sz, obj): return scale(    [sx, sy, sz])(obj)
+  def shiftObj(self, dx, dy, dz, obj): return translate([dx, dy, dz])(obj) #convenience shift func
+  def scaleObj(self, sx, sy, sz, obj): return scale(    [sx, sy, sz])(obj) #convenience scale func
 
   def addObj(self, obj):
     if outGeom is None: outGeom  = obj
     else:               outGeom += obj
 
   def getGeom(self): return self.outGeom
+
+  ############## render OpenSCAD output ##############
  
-  def renderScad(self, fn)
+  def renderScad(self, fn, outGeomOverride = None):
     hdr = '$fn = %s;' % self.radialSegments # create a header for the export
-    scad_render_to_file(self.outGeom, fn, file_header=hdr) # write the .scad file
+
+    if outGeomOveride is None: og = self.outGeom
+    else:                      og = outGeomOveride
+
+    scad_render_to_file(og, fn, file_header=hdr) # write the .scad file
 
 ### end ###
 
