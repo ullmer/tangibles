@@ -1,6 +1,6 @@
 # SolidPython example code for illuminated Salzburg Feltenreitenschule
 # Brygg Ullmer, Clemson University
-# Written 2024-06-24
+# Written 2024-07-03
 
 from solid  import *  # load in SolidPython/SCAD support code; solid2?
 from enoFRS import *
