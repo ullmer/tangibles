@@ -14,60 +14,51 @@ class enoFRS(enoSolid):
 
   archGridWH = [10, 5] # width and height (in # arches) of arch grid
 
-perBoxGeoms  = {}; boxWidth = elDim['box'][0] + elDim['column'][0]
+  perBoxGeoms  = {}; boxWidth = elDim['box'][0] + elDim['column'][0]
 
-for elName in ['column', 'dentil']: #create cubical masses for columns and dentils
-  w,h,d = elDim[elName]; perBoxGeoms[elName] = cube([w,h,d])
+  ########### synthesize a single portal at origin ########### 
+  
+  def synthPortal(self):
 
-aw, ah, ad  = elDim['arch']                # Prep to carve the arch
-archCyl1    = cylinder(r=.5, h=ad)         # We'll excise this cylinder from the archCutter
-archCyl2    = scale([aw, ah, 1])(archCyl1) # scaling it per elDimensions
-archCutter1 = cube([aw*1.1, ah, ad*.5])        # and borrow the archs dimensions, with less depth
-archCutter2 = translate([-aw*1.1/2., 0, .2])(archCutter1) #shifting it appropriately, including nudges
-archCutter3 = archCutter2 - archCyl2       # now, Boolean-subtract the cylindrical void 
-archCutter4 = translate([0, 1.5, -.3])(archCutter3)
+    for elName in ['column', 'dentil']: #create cubical masses for columns and dentils
+      w,h,d = self.elDim[elName]; self.perBoxGeoms[elName] = cube([w,h,d])
 
-archBox1    = cube([aw, ad, ah])
-archBox2    = translate([-aw/2., -ad/2., 0])(archBox1)
-archBox3    = archBox2 - archCutter4 
-archBoxes4  = archBox3
+    aw, ah, ad  = elDim['arch']                      # Prep to carve the arch
+    archCyl1    = cylinder(r=.5, h=ad)               # We'll excise this cylinder from the archCutter
+    archCyl2    = self.scaleObj(aw, ah, 1, archCyl1) # scaling it per elDimensions
+    archCutter1 = cube([aw*1.1, ah, ad*.5])          # and borrow the archs dimensions, with less depth
+    archCutter2 = self.shiftObj(-aw*1.1/2., 0, .2, archCutter1) #shifting it appropriately, including nudges
+    archCutter3 = archCutter2 - archCyl2             # now, Boolean-subtract the cylindrical void 
+    archCutter4 = self.shiftObj(0, 1.5, -.3, archCutter3)
 
-x1 = 0; dx = aw + elDim['column'][0]
-y1 = 0; dy = ah + 4.
+    archBox1    = cube([aw, ad, ah])
+    archBox2    = self.shiftObj(-aw/2., -ad/2., 0, archBox1)
+    archBox3    = archBox2 - archCutter4 
+    return archBox3
 
-for i in range(archGridWH[0]):
-  x1 += dx
-  archBox5    = translate([x1, 0, 0])(archBox3)
-  archBoxes4 += archBox5
+  ########### synthesize a 2D array of portals at origin ########### 
 
-archBoxes6  = archBoxes4
-for i in range(archGridWH[1]):
-  y1         += dy
-  archBoxes7  = translate([0, y1, 0])(archBoxes4)
-  archBoxes6 += archBoxes7
+  def synthPortal2DArray(self, numX, numY):
+    
+    singlePortal = self.synthPortal()
+    rowPortals = singlePortal
+
+    x1 = 0; dx = aw + self.elDim['column'][0]
+    y1 = 0; dy = ah + 4.
+
+    for i in range(numX):
+      x1 += dx
+      archBox5    = translate([x1, 0, 0])(archBox3)
+      rowPortals += archBox5
+
+    archBoxes6  = archBoxes4
+    for i in range(numY):
+      y1         += dy
+      archBoxes7  = translate([0, y1, 0])(archBoxes4)
+      archBoxes6 += archBoxes7
 
 outGeom     = archBoxes6
 
-radialSegments = 25;     hdr = '$fn = %s;' % radialSegments # create a header for the export
-scad_render_to_file(outGeom, 'frs02.scad', file_header=hdr) # write the .scad file
-
-class enoSolid:
-
-  outGeom        = None
-  radialSegments = 25
-
-  def shiftObj(self, dx, dy, dz, obj): return translate([dx, dy, dz])(obj)
-  def scaleObj(self, sx, sz, sz, obj): return scale(    [sx, sy, sz])(obj)
-
-  def addObj(self, obj):
-    if outGeom is None: outGeom  = obj
-    else:               outGeom += obj
-
-  def getGeom(self): return self.outGeom
- 
-  def renderScad(self, fn)
-    hdr = '$fn = %s;' % self.radialSegments # create a header for the export
-    scad_render_to_file(self.outGeom, fn, file_header=hdr) # write the .scad file
 
 ### end ###
 

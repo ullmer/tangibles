@@ -9,6 +9,9 @@ class enoSolid:
   outGeom        = None
   radialSegments = 25
 
+  def __init__(self, **kwargs): #all
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+
   def shiftObj(self, dx, dy, dz, obj): return translate([dx, dy, dz])(obj)
   def scaleObj(self, sx, sz, sz, obj): return scale(    [sx, sy, sz])(obj)
 
