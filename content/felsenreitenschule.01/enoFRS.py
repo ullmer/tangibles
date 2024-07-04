@@ -49,18 +49,19 @@ class enoFRS(enoSolid):
     x1 = 0; dx = aw + self.elDim['column'][0]
     y1 = 0; dy = ah + 4.
 
-    for i in range(numX):
+    for i in range(numX-1):
       x1 += dx
       shiftedPortal = self.shiftObj(x1, 0, 0, singlePortal)
       rowPortals   += shiftedPortal
 
     result = rowPortals
-    for i in range(numY):
+    for i in range(numY-1):
       y1            += dy
       shiftedPortals = self.shiftObj(0, y1, 0, rowPortals)
       result        += shiftedPortals
 
-    return result
+    spunResult = self.spinObj(90, 0, 0, result) #spin to vertical plane
+    return spunResult
 
 ### end ###
 
