@@ -26,8 +26,10 @@ class enoFRS(enoSolid):
     aw, ah, ad  = elDim['arch']                      # Prep to carve the arch
     archCyl1    = cylinder(r=.5, h=ad)               # We'll excise this cylinder from the archCutter
     archCyl2    = self.scaleObj(aw, ah, 1, archCyl1) # scaling it per elDimensions
+
     archCutter1 = cube([aw*1.1, ah, ad*.5])          # and borrow the archs dimensions, with less depth
     archCutter2 = self.shiftObj(-aw*1.1/2., 0, .2, archCutter1) #shifting it appropriately, including nudges
+
     archCutter3 = archCutter2 - archCyl2             # now, Boolean-subtract the cylindrical void 
     archCutter4 = self.shiftObj(0, 1.5, -.3, archCutter3)
 
@@ -48,17 +50,16 @@ class enoFRS(enoSolid):
 
     for i in range(numX):
       x1 += dx
-      archBox5    = translate([x1, 0, 0])(archBox3)
-      rowPortals += archBox5
+      shiftedPortal = self.shiftObj(x1, 0, 0, singlePortal)
+      rowPortals   += shiftedPortal
 
-    archBoxes6  = archBoxes4
+    result = rowPortals
     for i in range(numY):
-      y1         += dy
-      archBoxes7  = translate([0, y1, 0])(archBoxes4)
-      archBoxes6 += archBoxes7
+      y1            += dy
+      shiftedPortals = self.shiftObj(0, y1, 0, rowPortals)
+      result        += shiftedPortals
 
-outGeom     = archBoxes6
-
+    return result
 
 ### end ###
 
