@@ -7,7 +7,10 @@ from enoFRS import *
 
 efrs = enoFRS()
 
-portalGrid = efrs.synthPortal2DArray(10, 5)
+backGrid  = efrs.synthPortal2DArray(10, 5)
+sideGrid  = efrs.synthPortal2DArray(5,  5)
+sideGridL = efrs.spinObj(sideGrid)
+
 efrs.renderScad('frs03.scad', portalGrid)
 
 ### end ###

@@ -12,8 +12,9 @@ class enoSolid:
   def __init__(self, **kwargs): #all
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-  def shiftObj(self, dx, dy, dz, obj): return translate([dx, dy, dz])(obj) #convenience shift func
-  def scaleObj(self, sx, sy, sz, obj): return scale(    [sx, sy, sz])(obj) #convenience scale func
+  def shiftObj(self, dx, dy, dz, obj): return translate([dx, dy, dz])(obj) #convenience shift  func
+  def spinObj(self,  ax, ay, az, obj): return rotate(   [ax, ay, az])(obj) #convenience rotate func
+  def scaleObj(self, sx, sy, sz, obj): return scale(    [sx, sy, sz])(obj) #convenience scale  func
 
   def addObj(self, obj):
     if outGeom is None: outGeom  = obj
