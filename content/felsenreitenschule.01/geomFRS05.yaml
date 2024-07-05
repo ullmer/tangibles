@@ -2,26 +2,25 @@
 # Brygg Ullmer, Clemson University
 # Written 2024-07-03
 
-wallThickness: 4 #in mm
+wallThickness: 4          #in mm
+defaultOutFn:  frs04.scad
 
 - backGrid:   {type: portal2DArrayHoles, x: 10, y: 5, lengthShift:  5}
 - sideGrid:   {type: portal2DArrayHoles, x: 10, y: 5, lengthShift:  5}
 - cornerGrid: {type: portal2DArrayHoles, x: 1   y: 5, lengthShift: -4}
 
-- sideGridL1: {orig: sideGrid,   op: spinObj,  coords: [  0  0, -90]}
-- sideGridL2: {orig: sideGridL1, op: shiftObj, coords: [-11, -16, 0]}
-- sideGridR2: {orig: sideGridL2, op: shiftObj, coords: [ 89, 2,   0]}
+- sideGridL1:   {orig: sideGrid,   op: spinObj,  coords: [  0  0, -90]}
+- sideGridL2:   {orig: sideGridL1, op: shiftObj, coords: [-11, -16, 0]}
+- sideGridR2:   {orig: sideGridL2, op: shiftObj, coords: [ 89, 2,   0]}
 
-cornerGridL1 = efrs.spinObj(  0,  0,  45, cornerGrid)
-cornerGridL2 = efrs.shiftObj(-11, -4.7, 0, cornerGridL1)
+- cornerGridL1: {orig: cornerGrid,   op: spinObj,  coords: [0, 0,  45]}
+- cornerGridR1: {orig: cornerGrid,   op: spinObj,  coords: [0, 0, -45]}
 
-cornerGridR1 = efrs.spinObj(  0,  0, -45, cornerGrid)
-cornerGridR2 = efrs.shiftObj(74, -4.2, 0, cornerGridR1)
+- cornerGridL2: {orig: cornerGridL1, op: shiftObj, coords: [-11, -4.7, 0]}
+- cornerGridR2: {orig: cornerGridR1, op: shiftObj, coords: [ 74, -4.2, 0]}
 
-scene  = backGrid + sideGridL2 + sideGridR2 
-scene +=          cornerGridL2 + cornerGridR2
-
-efrs.renderScad('frs04.scad', scene)
+- scene1: {orig: [backGrid, sideGridL2, sideGridR2],   op: boolAdd}
+- scene2: {orig: [scene1, cornerGridL2, cornerGridR2], op: boolAdd}
 
 ### end ###
 
