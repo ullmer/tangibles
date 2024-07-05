@@ -23,8 +23,8 @@ geomDescr:
   - cornerGridL2: {orig: cornerGridL1, op: shiftObj, coords: [-11, -4.7, 0]}
   - cornerGridR2: {orig: cornerGridR1, op: shiftObj, coords: [ 74, -4.2, 0]}
   
-  - scene1: {orig: [backGrid, sideGridL2, sideGridR2],   op: boolAdd}
-  - scene2: {orig: [scene1, cornerGridL2, cornerGridR2], op: boolAdd}
+  - scene1a: {orig: [backGrid, sideGridL2, sideGridR2],   op: boolAdd}
+  - scene1b: {orig: [scene1a, cornerGridL2, cornerGridR2], op: boolAdd}
   
 ### end ###
 
