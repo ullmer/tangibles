@@ -2,17 +2,13 @@
 # Brygg Ullmer, Clemson University
 # Written 2024-07-03
 
-from solid  import *  # load in SolidPython/SCAD support code; solid2?
-from enoFRS import *
+wallThickness: 4 #in mm
 
-efrs = enoFRS()
+- backGrid:   {type: portal2DArrayHoles, x: 10, y: 5, lengthShift:  5}
+- sideGrid:   {type: portal2DArrayHoles, x: 10, y: 5, lengthShift:  5}
+- cornerGrid: {type: portal2DArrayHoles, x: 1   y: 5, lengthShift: -4}
 
-th = 4 #thickness, in mm
-
-- backGrid: {type: portal2DArrayHoles, x: 10, y: 5, lengthShift: 5}
-- sideGrid: {type: portal2DArrayHoles, x: 10, y: 5, lengthShift: 5}
-5, 5, th,  0)
-cornerGrid = efrs.synthPortal2DArrayHoles( 1, 5, th, -4)
+- sideGridL1: {
 
 sideGridL1 = efrs.spinObj(  0,   0, -90, sideGrid)
 sideGridL2 = efrs.shiftObj(-11, -16, 0,  sideGridL1)
