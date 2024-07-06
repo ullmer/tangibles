@@ -23,7 +23,7 @@ params: #parameters
 geomDescr: #geometry description
   - backGrid:   {type: portal2DArrayHoles, x: 10, y: 5, lengthShift:  5}
   - sideGrid:   {type: portal2DArrayHoles, x: 10, y: 5, lengthShift:  5}
-  - cornerGrid: {type: portal2DArrayHoles, x: 1   y: 5, lengthShift: -4}
+  - cornerGrid: {type: portal2DArrayHoles, x: 1,  y: 5, lengthShift: -4}
   
   - sideGridL1:   {orig: sideGrid,   op: spinObj,  coords: [  0  0, -90]}
   - sideGridL2:   {orig: sideGridL1, op: shiftObj, coords: [-11, -16, 0]}
