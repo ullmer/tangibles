@@ -59,7 +59,7 @@ class enoSolid:
 
   ######## parse yaml geometry description ######## 
 
-  def parseYamlGeomDescr(self): pass
+  def parseYamlGeomDescr(self): 
     if self.yamlGeomDescr is None:           self.err("parseYamlGeomDescr: yamlGeomDescr is None!");      return None
 
     if type(self.yamlGeomDescr) is not list: self.err("parseYamlGeomDescr: yamlGeomDescr is not a list"); return None
@@ -69,6 +69,29 @@ class enoSolid:
         geomParams = geomDescrEl[geomName]
         self.geomNameList.append(geomName)
         self.geomDict[geomName] = geomParams
+
+        if 'type' in geomParams: self.parseYamlGeomType(geomName, geomParams)
+        elif 'op' in geomParams: self.parseYamlGeomOp(geomName, geomParams)
+        else:                    err("parseYamlGeomDescr: ignoring unparseable entry:", geomName, geomParams)
+
+  ######## parse yaml geometry type ######## 
+
+  def parseYamlGeomType(self, geomName, geomParams):
+    if 'type' not in geomParams: err("parseYamlGeomType: type not found"); return None
+
+    geomType = geomParams['type']
+    if geomType == 'portal2DArrayHoles':
+      try:
+        x           = geomParams['x']  #should be generalized, probably in a YAML file; for now, hardwiring
+        y           = geomParams['y']
+        lengthShift = geomParams['lengthShift']
+      except:
+        err("parseYamlGeomType:" 
+
+    else:
+
+    # backGrid:   {type: portal2DArrayHoles, x: 10, y: 5, lengthShift:  5}
+
 
   ############## render OpenSCAD output ##############
  
