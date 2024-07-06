@@ -2,12 +2,12 @@
 # Brygg Ullmer, Clemson University
 # Written 2024-07-05
 
-params: 
+params: #parameters
   modelTitle:    Salzburg Feltenreitschule
   modelDescrUrl: 
     de: https://de.wikipedia.org/wiki/Felsenreitschule
 
-  bldgVariations:
+  bldgVariations: #building variations
     v1: {date: 1693, architect: Johann Bernhard Fischer von Erlach, url: https://de.wikipedia.org/wiki/Johann_Bernhard_Fischer_von_Erlach}
     v2: {date: 1841}
     v3: {date: 1926}
@@ -16,11 +16,11 @@ params:
     v6: {date: 1968}
     v7: {date: 2012}
 
-  wallThickness: 4          #in mm
-  defaultScadFn: at_sz_frs04.scad
-  defaultStlFn:  at_sz_frs04.stl
+  wallThickness: 4                 #wall thickness, in mm
+  defaultScadFn: at_sz_frs04.scad  #default OpenSCAD filename
+  defaultStlFn:  at_sz_frs04.stl   #default STL filename
 
-geomDescr:
+geomDescr: #geometry description
   - backGrid:   {type: portal2DArrayHoles, x: 10, y: 5, lengthShift:  5}
   - sideGrid:   {type: portal2DArrayHoles, x: 10, y: 5, lengthShift:  5}
   - cornerGrid: {type: portal2DArrayHoles, x: 1   y: 5, lengthShift: -4}
