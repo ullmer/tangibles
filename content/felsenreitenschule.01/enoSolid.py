@@ -17,6 +17,12 @@ class enoSolid:
   geomDict        = None #geometries dictionary
   geomNameList    = None
   geomTypeHandler = None
+  geomOpHandler   = None
+
+  ######## register handlers ######## 
+
+  def registerTypeHandler(self, typeName, typeParser): self.geomTypeHandler[typeName] = typeParser
+  def registerOpHandler(self, opName, opParser):       self.geomOpHandler[opName]     = opParser
 
   ######## constructor / class initiation method ######## 
 
@@ -26,20 +32,56 @@ class enoSolid:
     self.geomDict        = {}
     self.geomNameList    = []
     self.geomTypeHandler = {}
+    self.geomOpHandler   = {}
 
     if self.yamlFn is not None:
       self.loadYaml()
 
+    self.registerOpHandler('shiftObj', self.parseOpShiftObj)
+    self.registerOpHandler('spinObj',, self.parseOpSpinObj)
+    self.registerOpHandler('scaleObj', self.parseOpScaleObj)
+
+  ######## error handler (later, to allow non-print error routing) ######## 
+
   def err(self, msg): print("enoSolid error:", msg)
 
-  def registerTypeHandler(self, typeName, typeParser):
-    self.geomTypeHandler[typeName] = typeParser
-
-  ######## constructor / class initiation method ######## 
+  ######## geometry operations ######## 
 
   def shiftObj(self, dx, dy, dz, obj): return translate([dx, dy, dz])(obj) #convenience shift  func
   def spinObj(self,  ax, ay, az, obj): return rotate(   [ax, ay, az])(obj) #convenience rotate func
   def scaleObj(self, sx, sy, sz, obj): return scale(    [sx, sy, sz])(obj) #convenience scale  func
+
+  ######## geometry operation parsers ######## 
+
+  def parseGeometryOp(self, geomName, geomParams):
+    try:
+      x           = geomParams['x']  #should be generalized, probably in a YAML file; for now, hardwiring
+      y           = geomParams['y']
+
+      if 'lengthShift' in geomParams: lengthShift = geomParams['lengthShift']
+      else                          : lengthShift = 0
+
+      if 'wallThickness' in geomParams: wallThickness = geomParams['wallThickness']
+      else:                             wallThickness = self.wallThickness
+
+      self.synthPortal2DArrayHoles(x, y, wallThickness, lengthShift)
+    except:
+      err("parseYamlGeomType: portal2DArrayHoles expects x, y, lengthShift; error:" )
+      traceback.print_exc(); return None
+
+
+  ######## geometry operation parsers ######## 
+
+  def self.parseOpShiftObj(self, opParams): 
+    try:
+      geomOrig = opParams['geomOrig']
+      coords   = opParams['coords']
+    except:
+      err("parseOpShiftObj: error extracting parameters");
+      traceback.print_exc(); return None
+      print("MORE TO COME")
+      
+  ######## getObj, getGeom ######## 
 
   def addObj(self, obj):
     if outGeom is None: outGeom  = obj
@@ -77,17 +119,32 @@ class enoSolid:
         self.geomDict[geomName] = geomParams
 
         if 'type' in geomParams: self.parseYamlGeomType(geomName, geomParams)
-        elif 'op' in geomParams: self.parseYamlGeomOp(geomName, geomParams)
+        elif 'op' in geomParams: self.parseYamlGeomOp(  geomName, geomParams)
         else:                    err("parseYamlGeomDescr: ignoring unparseable entry:", geomName, geomParams)
 
+  ######## parse yaml geometry type ######## 
+
+  def parseYamlGeomOp(self, geomName, geomParams):
+    if 'op' not in geomParams: err("parseYamlGeomOp: op not found"); return None
+
+    geomOp = geomParams['op']
+
+    if geomType in self.registeredGeomOpHandlers:
+      try:
+        geomOpHandler = self.registeredGeomOpHandlers[geomOp]
+        geomOpHandler(geomName, geomParams) # likely dangerous; some sandboxing most likely prudent
+      except:
+        err("parseYamlGeomOp: error in extracting+executing geomOpHandler for", geomOp)
+        traceback.print_exc(); return None
+
+  #- sideGridL1:   {orig: sideGrid,   op: spinObj,  coords: [  0  0, -90]}
+ 
   ######## parse yaml geometry type ######## 
 
   def parseYamlGeomType(self, geomName, geomParams):
     if 'type' not in geomParams: err("parseYamlGeomType: type not found"); return None
 
     geomType = geomParams['type']
-
-    if geomType == 'portal2DArrayHoles':
 
     if geomType in self.registeredGeomTypeHandlers:
       try:
