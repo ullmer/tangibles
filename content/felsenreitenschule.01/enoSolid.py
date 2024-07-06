@@ -13,21 +13,27 @@ class enoSolid:
   yamlParams     = None
   yamlGeomDescr  = None
 
-  radialSegments = 25   #radial segments, used by OpenSCAD for curve transformation
-  geomDict       = None #geometries dictionary
-  geomNameList   = None
+  radialSegments  = 25   #radial segments, used by OpenSCAD for curve transformation
+  geomDict        = None #geometries dictionary
+  geomNameList    = None
+  geomTypeHandler = None
 
   ######## constructor / class initiation method ######## 
 
   def __init__(self, **kwargs): 
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-    self.geomDict = {}; self.geomNameList = []
+    self.geomDict        = {}
+    self.geomNameList    = []
+    self.geomTypeHandler = {}
 
     if self.yamlFn is not None:
       self.loadYaml()
 
   def err(self, msg): print("enoSolid error:", msg)
+
+  def registerTypeHandler(self, typeName, typeParser):
+    self.geomTypeHandler[typeName] = typeParser
 
   ######## constructor / class initiation method ######## 
 
