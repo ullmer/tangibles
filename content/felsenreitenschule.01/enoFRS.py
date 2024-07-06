@@ -15,6 +15,7 @@ class enoFRS(enoSolid):
   archGridWH = [10, 5] # width and height (in # arches) of arch grid
 
   perBoxGeoms  = {}; boxWidth = elDim['box'][0] + elDim['column'][0]
+  wallThickness = 4 #revisit re populating from YAML
 
   ######## constructor / class initiation method ########
 
@@ -73,27 +74,32 @@ class enoFRS(enoSolid):
 
   ########### synthesize a wall, excised of 2D portal array, at origin ########### 
 
-  def synthPortal2DArrayHoles(self, numX, numY, thickness, xfudge=0):
+  def synthPortal2DArrayHoles(self, numX, numY, thickness, lengthShift=0):
     portalArray = self.synthPortal2DArray(numX, numY)
 
     aw, ah, ad   = self.elDim['arch']                 # Prep to carve the arch
-    ww, wh       = numX * aw + 10 + xfudge, numY * ah + 23
+    ww, wh       = numX * aw + 10 + lengthShift, numY * ah + 23
     c1           = cube([ww, thickness/3., wh])
-    #c2           = self.shiftObj(0, -1.5, -5, c1)
     c2           = self.shiftObj(-6, -1.5, -5, c1)
 
     r1 = c2 - portalArray 
     r2 = self.scaleObj(1, 3, 1, r1) #thicken it
     return r2
 
-    # backGrid:   {type: portal2DArrayHoles, x: 10, y: 5, lengthShift:  5}
+  ########### register type handler for 2D portal array ########### 
 
-  ########### register type handler for , excised of 2D portal array, at origin ########### 
   def parsePortal2DArrayHoles(self, geomName, geomParams):
     try:
       x           = geomParams['x']  #should be generalized, probably in a YAML file; for now, hardwiring
       y           = geomParams['y']
-      lengthShift = geomParams['lengthShift']
+
+      if 'lengthShift' in geomParams: lengthShift = geomParams['lengthShift']
+      else                          : lengthShift = 0
+
+      if 'wallThickness' in geomParams: wallThickness = geomParams['wallThickness']
+      else:                             wallThickness = self.wallThickness
+
+      self.synthPortal2DArrayHoles(x, y, wallThickness, lengthShift)
     except:
       err("parseYamlGeomType: portal2DArrayHoles expects x, y, lengthShift; error:" )
       traceback.print_exc(); return None
