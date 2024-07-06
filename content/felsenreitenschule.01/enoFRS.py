@@ -16,6 +16,14 @@ class enoFRS(enoSolid):
 
   perBoxGeoms  = {}; boxWidth = elDim['box'][0] + elDim['column'][0]
 
+  ######## constructor / class initiation method ########
+
+  def __init__(self, **kwargs):
+    super().__init__(kwargs)
+    self.registerTypeHandler('portal2DArrayHoles', self.parsePortal2DArrayHoles)
+
+  def err(self, msg): print("enoFRS error:", msg)
+
   ########### synthesize a single portal at origin ########### 
   
   def synthPortal(self):
@@ -77,6 +85,18 @@ class enoFRS(enoSolid):
     r1 = c2 - portalArray 
     r2 = self.scaleObj(1, 3, 1, r1) #thicken it
     return r2
+
+    # backGrid:   {type: portal2DArrayHoles, x: 10, y: 5, lengthShift:  5}
+
+  ########### register type handler for , excised of 2D portal array, at origin ########### 
+  def parsePortal2DArrayHoles(self, geomName, geomParams):
+    try:
+      x           = geomParams['x']  #should be generalized, probably in a YAML file; for now, hardwiring
+      y           = geomParams['y']
+      lengthShift = geomParams['lengthShift']
+    except:
+      err("parseYamlGeomType: portal2DArrayHoles expects x, y, lengthShift; error:" )
+      traceback.print_exc(); return None
 
 ### end ###
 

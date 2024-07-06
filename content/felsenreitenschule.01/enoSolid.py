@@ -86,7 +86,7 @@ class enoSolid:
     if geomType in self.registeredGeomTypeHandlers:
       try:
         geomTypeHandler = self.registeredGeomTypeHandlers[geomType]
-        geomTypeHandler() # likely dangerous; some sandboxing most likely prudent
+        geomTypeHandler(geomName, geomParams) # likely dangerous; some sandboxing most likely prudent
       except:
         err("parseYamlGeomType: error in extracting+executing geomTypeHandler for", geomType)
         traceback.print_exc(); return None
