@@ -80,18 +80,19 @@ class enoSolid:
     if 'type' not in geomParams: err("parseYamlGeomType: type not found"); return None
 
     geomType = geomParams['type']
+
     if geomType == 'portal2DArrayHoles':
+
+    if geomType in self.registeredGeomTypeHandlers:
       try:
-        x           = geomParams['x']  #should be generalized, probably in a YAML file; for now, hardwiring
-        y           = geomParams['y']
-        lengthShift = geomParams['lengthShift']
+        geomTypeHandler = self.registeredGeomTypeHandlers[geomType]
+        geomTypeHandler() # likely dangerous; some sandboxing most likely prudent
       except:
-        err("parseYamlGeomType:" 
+        err("parseYamlGeomType: error in extracting+executing geomTypeHandler for", geomType)
+        traceback.print_exc(); return None
 
     else:
-
-    # backGrid:   {type: portal2DArrayHoles, x: 10, y: 5, lengthShift:  5}
-
+      err("parseYamlGeomType: unknown geometry type:", geomType); return None
 
   ############## render OpenSCAD output ##############
  
