@@ -4,13 +4,12 @@
   <img src="models/frs09m2.jpg" height=200>
 </p>
 
-- [YAML description v5](geomFRS05.yaml)
+[Brygg Ullmer](https://computing.clemson.edu/~bullmer), [Clemson University](https://clemson.edu/)
 
-- [synthFRS05.py]
-- [enoFRS.py]
-- [enoSolid.py]
-- [synthFRS01.py]
-- [synthFRS02.py]
-- [synthFRS03.py]
-- [synthFRS04.py]
-- [synthShapes.py]
+- [YAML description v5](geomFRS05.yaml)
+- [v0.5 code, hardcoded](synthFRS05.py)
+- [enoSolid base library](enoSolid.py)
+- [enoFRS model-specific code](enoFRS.py)
+- [enoSolid YAML support](enoSolidYaml.py)
+- [v0.1 code, warmup example](earlyCode/synthFRS01.py)
+
