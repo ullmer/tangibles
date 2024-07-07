@@ -1,6 +1,7 @@
 <p float="left">
   <img src="models/frs08h2.jpg" height=200>
-  <img src="models/frs10a2.jpg" height=200>
+  <img src="models/frs10a3.jpg" height=200>
+  <img src="models/frs10d1.jpg" height=200>
 </p>
 
 [Brygg Ullmer](https://computing.clemson.edu/~bullmer), [Clemson University](https://clemson.edu/)
