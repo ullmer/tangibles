@@ -1,4 +1,7 @@
+[](models/frs08h2.jpg)
+
 - [YAML description v5](geomFRS05.yaml)
+
 - [synthFRS05.py]
 - [enoFRS.py]
 - [enoSolid.py]
