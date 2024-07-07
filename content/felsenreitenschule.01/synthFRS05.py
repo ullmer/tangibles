@@ -14,7 +14,7 @@ sideGrid   = efrs.synthPortal2DArrayHoles( 5, 5, th,  0)
 cornerGrid = efrs.synthPortal2DArrayHoles( 1, 5, th, -4)
 
 sideGridL1 = efrs.spinObj(  0,   0, -90, sideGrid)
-sideGridL2 = efrs.shiftObj(-11, -16, 0, sideGridL1)
+sideGridL2 = efrs.shiftObj(-11, -16, 0,  sideGridL1)
 sideGridR2 = efrs.shiftObj(89,   2,   0, sideGridL2)
 
 cornerGridL1 = efrs.spinObj(  0,  0,  45, cornerGrid)
