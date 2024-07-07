@@ -1,3 +1,12 @@
+DIV.repository-content {
+    display: table
+}
+DIV.js-repo-meta-container {
+    display: table-caption
+}
+DIV.readme {
+    display: table-header-group
+}
 
 <p float="left">
   <img src="models/frs08h2.jpg" height=200>
