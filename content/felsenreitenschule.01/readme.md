@@ -1,7 +1,7 @@
 
 <p float="left">
-  <img src="models/frs08h2.jpg">
-  <img src="models/frs09m2.jpg">
+  <img src="models/frs08h2.jpg" height=100>
+  <img src="models/frs09m2.jpg" height=100>
 </p>
 
 - [YAML description v5](geomFRS05.yaml)
