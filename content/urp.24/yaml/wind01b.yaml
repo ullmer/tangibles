@@ -17,7 +17,7 @@ associations:
      publications: [https://dl.acm.org/doi/abs/10.1145/302979.303114]
      authors: 
        original:          [john.underkoffler, hiroshi.ishii]
-       laterContributors: [george.santos, brygg.ullmer, tbd]
+       laterContributors: [OBF, OBF, tbd]
      source:       
        - {path: media.mit.edu:/mas/tangible/u/gsantos/myUrp,               date: 1999-07-30, status: offline}
        - {path: github.com/######/tangibles/content/urp.24/py/exWind05.py, date: 2024-05-20, status: online}
