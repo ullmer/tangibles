@@ -1,0 +1,74 @@
+# YAML descriptives of US Presidents and Presidential Candidates
+# Begun by Brygg Ullmer, Clemson University
+# Begun 2024-08-24
+  
+  presidents:
+    bush2: 
+      cUrl: https://www.c-span.org/person/george-w-bush/3813/
+      periods:
+        usPresidentSon:   {y1: 1946, y2: 2024, n:    4, cUrlPostfix: "personid[]=3813&bioid[]=5234"}
+        comMGPTexasRngrs: {y1: 1991, y2: 1991, n:    1, cUrlPostfix: "personid[]=3813&bioid[]=5233"}
+        stTxGovernorCand: {y1: 1994, y2: 1994, n:    8, cUrlPostfix: "personid[]=3813&bioid[]=5231"}
+        stTxGovernor:     {y1: 1994, y2: 2000, n:  193, cUrlPostfix: "personid[]=3813&bioid[]=5232"}
+        usPresident:      {y1: 2001, y2: 2009, n: 2392, cUrlPostfix: "personid[]=3813&bioid[]=5230"}
+
+    obama: 
+      cUrl: https://www.c-span.org/person/barack-obama/55625/
+      periods:
+        stateSenator:     {y1: 1998, y2: 2004, n:   10, cUrlPostfix: "personid[]=55625&bioid[]=65164"}
+        usSenatorElect:   {y1: 2004, y2: 2005, n:    2, cUrlPostfix: "personid[]=55625&bioid[]=65162"}
+        usSenator:        {y1: 2005, y2: 2008, n:  302, cUrlPostfix: "personid[]=55625&bioid[]=65161"}
+        usPresidentElect: {y1: 2008, y2: 2009, n:   51, cUrlPostfix: "personid[]=55625&bioid[]=215722"}
+        usPresident:      {y1: 2009, y2: 2017, n: 2696, cUrlPostfix: "personid[]=55625&bioid[]=215721"}
+
+    trump: ####################################################################################################
+      cUrl: https://www.c-span.org/person/donald-j-trump/20967/
+      periods:
+        comPresident:     {y1: 1991, y2: 2017, n:   30, cUrlPostfix: "personid[]=20967&bioid[]=25021"}
+        usPresidentCand:  {y1: 2015, y2: 2016, n:  249, cUrlPostfix: "personid[]=20967&bioid[]=666614"}
+        usPresidentElect: {y1: 2016, y2: 2017, n:   36, cUrlPostfix: "personid[]=20967&bioid[]=705540"}
+        usPresident:      {y1: 2009, y2: 2017, n: 2183, cUrlPostfix: "personid[]=20967&bioid[]=706789"}
+
+      #https://www.c-span.org/search/?searchtype=Videos&sort=Newest&personid[]=20967
+      tags:  {foreignAffairsDefense:    724, campaignsElections: 597, healthWelfare: 338, ce_PresidentialNomination: 256,
+              courtsJudicalProceedings: 246, ce_Campaigns:       224, fad_Asia:      222, hw_HealthPolicy:           221,
+              ce_PresidentialCampaign:  210, businessCommercie:  204}
+
+      types: {speech:  1203, remarks: 607,   appearance: 253, newsConf: 245, statement: 89, address: 19, 
+              pubAffairsEvent:         11,        rally:  11,    forum: 10,  broadcast: 9}
+         
+    biden: ####################################################################################################
+      cUrl: https://www.c-span.org/person/joe-biden/34/
+      periods:
+        usSenator:        {y1: 1973, y2: 2009, n: 1167, cUrlPostfix: "personid[]=34&bioid[]=339148"}
+        usPresidentElect: {y1: 2020, y2: 2021, n:   43, cUrlPostfix: "personid[]=34&bioid[]=734770"}
+        usPresident:      {y1: 2021, y2: 2024, n: 1468, cUrlPostfix: "personid[]=34&bioid[]=735981"}
+
+      tags:  {foreignAffairsDefense: 545, businessCommerce: 272, healthWelfare: 232, hwHealthPolicy: 169, 
+              fad_Europe: 188, fad_Asia:  130,          hwDiseasesHealthPolicy: 124, hw_hp_COVID19: 117,
+              bcEconomicPolicy: 116,                         ScienceTechnology: 111}
+
+      types: {speech:  716, remarks: 392,   appearance: 190, newsConf: 74, statement: 63, address: 12, 
+              ceremony: 10, pubAffairsEvent: 4, vignette: 3,    forum: 2}
+
+  candidates:
+    trump:  above #ibid? https://en.wikipedia.org/wiki/Ibid.
+
+    harris: ####################################################################################################
+      cUrl: https://www.c-span.org/person/kamala-d-harris/1018696/
+      periods:
+        ctSFDA:           {y1: 2004, y2: 2011, n:    1, cUrlPostfix: "personid[]=1018696&bioid[]=106086"}
+        stCaAG:           {y1: 2011, y2: 2017, n:    5, cUrlPostfix: "personid[]=1018696&bioid[]=671481"}
+        usSenator:        {y1: 2017, y2: 2021, n:  271, cUrlPostfix: "personid[]=1018696&bioid[]=705547"}
+        usVPresident:     {y1: 2021, y2: 2024, n:  597, cUrlPostfix: "personid[]=1018696&bioid[]=735973"}
+
+      tags:  {foreignAffairsDefense:    182, campaignsElections:        166, healthWelfare:    161, washingtonPolitics: 122,
+              hwHealthPolicy:           119, courtsJudicialProcess:     118, businessCommerce: 111, ce_Campaigns:        81,
+              ce_PresidentialNomination: 79, minoritiesEqualOpportunity: 78}
+
+      types: {speech:  371, senateCommittee: 112,      pubAffairsEvent: 88,   newsConf: 58, remarks: 48, senateProceeding: 46,
+              ceremony: 44,           forum: 32, congressionalNewsConf: 27, roundtable: 15}
+
+  periodsPrefix: {https://www.c-span.org/search/?searchtype=Videos&}
+
+### end ###
