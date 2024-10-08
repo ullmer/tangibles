@@ -44,13 +44,13 @@ interactionPanel:
 tags:
   busCom: 
     - {catLet: B,   catName: "Business & Commerce",          subcats:  35, programs: 14332}
-    - {abbrev: agricu, name:  "Agriculture,                                programs:    30, tagId: 191}
-    - {abbrev: banFin, name:  "Banking & Financial Markets", subcats:   8, programs:  1071}
-    - {abbrev: comput, name:  "Computer",                                  programs:   232}
-    - {abbrev: fedBud, name:  "Federal Budget",              subcats:   8, programs:  6040, tagId: 200}
-    - {abbrev: ecoPol, name:  "Economic Policy",             subcats:   5, programs:  4624, tagId: 224}
-    - {abbrev: empPol, name:  "Employment Policy",           subcats:   9, programs:  1572}
-    - {abbrev: transp, name:  "Transportation",              subcats:   4, programs:   995}
+    - {abbrev: agricu, name: "Agriculture",                                programs:    30, tagId: 191}
+    - {abbrev: banFin, name: "Banking & Financial Markets", subcats:   8, programs:  1071}
+    - {abbrev: comput, name: "Computer",                                  programs:   232}
+    - {abbrev: fedBud, name: "Federal Budget",              subcats:   8, programs:  6040, tagId: 200}
+    - {abbrev: ecoPol, name: "Economic Policy",             subcats:   5, programs:  4624, tagId: 224}
+    - {abbrev: empPol, name: "Employment Policy",           subcats:   9, programs:  1572}
+    - {abbrev: transp, name: "Transportation",              subcats:   4, programs:   995}
 
   camEle:
     - {catLet: C,   catName: "Campaigns & Elections",        subcats: 145, programs: 25820}
