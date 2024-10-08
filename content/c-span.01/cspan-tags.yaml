@@ -109,42 +109,42 @@ tags:
     - {abbrev: wesEur, name:  "Western Europe",             subcats:  16, programs:  2690}
     - {abbrev: weapon, name:  "Weapons"}
 
-Health & Welfare Drug Policy 334  11881  H
-Health & Welfare Health Care Reform 119    
-Health & Welfare Health Policy 6399    
-Health & Welfare Social Policy 4131    
-
-History & Society American Presidents 42  20833  h
-History & Society American Writers 548    
-History & Society Books 1360    
-History & Society Executive Branch 4215    
-History & Society History 7048    
-History & Society Music 47    
-
-Minorities & Equal Opportunity Civil Rights 693  4404  M
-Minorities & Equal Opportunity Minorities 3,593    
-Minorities & Equal Opportunity Racial Relations 118    
-
-Science & Technology Energy Policy 768    T
-Science & Technology Environment 2391    
-Science & Technology Space     
-
-Social Policy Disaster Relief     S
-
-State Politics County Politics 5752  5752  s
-
-Washington Politics Executive Branch 463  4193  W
-Washington Politics Federal Government 80    
-Washington Politics Impeachment Process 308    
-Washington Politics Legislative Branch 2869    
-Washington Politics Presidential Transition 431    
-Washington Politics Public Figures 31    
-
-  mapExpansion:  
-    CECAS: 
-      CECAS: {n: "College of Engineering, Computing, & Applied Sciences", u: "https://clemson.edu/cecas/"}
-      AE:    {n: "Automotive Engineering",              u: "https://clemson.edu/cecas/departments/automotive-engineering/"}
-      BioE:  {n: "Bioengineering",                      u: "https://clemson.edu/cecas/departments/bioe/"}
-      CE:    {n: "Civil Engineering",                   u: "https://clemson.edu/cecas/departments/ce/"}
-      ECE:   {n: "Electrical & Computer Engineering",   u: "https://clemson.edu/cecas/departments/ece/"}
+#Health & Welfare Drug Policy 334  11881  H
+#Health & Welfare Health Care Reform 119    
+#Health & Welfare Health Policy 6399    
+#Health & Welfare Social Policy 4131    
+#
+#History & Society American Presidents 42  20833  h
+#History & Society American Writers 548    
+#History & Society Books 1360    
+#History & Society Executive Branch 4215    
+#History & Society History 7048    
+#History & Society Music 47    
+#
+#Minorities & Equal Opportunity Civil Rights 693  4404  M
+#Minorities & Equal Opportunity Minorities 3,593    
+#Minorities & Equal Opportunity Racial Relations 118    
+#
+#Science & Technology Energy Policy 768    T
+#Science & Technology Environment 2391    
+#Science & Technology Space     
+#
+#Social Policy Disaster Relief     S
+#
+#State Politics County Politics 5752  5752  s
+#
+#Washington Politics Executive Branch 463  4193  W
+#Washington Politics Federal Government 80    
+#Washington Politics Impeachment Process 308    
+#Washington Politics Legislative Branch 2869    
+#Washington Politics Presidential Transition 431    
+#Washington Politics Public Figures 31    
+#
+#  mapExpansion:  
+#    CECAS: 
+#      CECAS: {n: "College of Engineering, Computing, & Applied Sciences", u: "https://clemson.edu/cecas/"}
+#      AE:    {n: "Automotive Engineering",              u: "https://clemson.edu/cecas/departments/automotive-engineering/"}
+#      BioE:  {n: "Bioengineering",                      u: "https://clemson.edu/cecas/departments/bioe/"}
+#      CE:    {n: "Civil Engineering",                   u: "https://clemson.edu/cecas/departments/ce/"}
+#      ECE:   {n: "Electrical & Computer Engineering",   u: "https://clemson.edu/cecas/departments/ece/"}
 ### end ###
