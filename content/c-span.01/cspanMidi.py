@@ -2,7 +2,7 @@
 # Brygg Ullmer, Clemson University
 # Begun 2024-10-09
 
-import sys, os, yaml
+import sys, os, yaml, traceback
 from pygame import time
 from enoMidiController import *
 
@@ -14,7 +14,7 @@ class cspanMidi:
   tagYd = None
   tags  = None
 
-  midiCtrlName     = 'aka_apcmini2
+  midiCtrlName     = 'aka_apcmini2'
   midiCtrlOutputId = 4
 
   ############# constructor #############
@@ -26,15 +26,31 @@ class cspanMidi:
     self.initMidi()
     self.midiIllumDefault()
 
+  ############# error, msg #############
+
+  def err(self, msg): print("cspanMidi error: " + str(msg)); traceback.print_exc(); 
+  def msg(self, msg): print("cspanMidi msg: "   + str(msg))
+
   ############# load yaml #############
 
   def loadYaml(self):
     self.tags  = []
-    yf         = open(self.tagFn, 'rt')
-    self.tagYd = yaml.safe_load(yf)
 
-    ytags      = self.tagYd['tags']
-    for tag in ytags: self.tags.append(tag)
+    try:
+      yf         = open(self.tagFn, 'rt')
+      self.tagYd = yaml.safe_load(yf)
+
+      ytags      = self.tagYd['tags']
+      for tag in ytags: self.tags.append(tag)
+    except: self.err("loadYaml")
+
+  ############# getCharMatrix #############
+
+  def getCharMatrix(self):
+    try:
+      result = self.tagYd['interactionPanel']['charMatrix']
+      return result
+    except: self.err("getCharMatrix")
 
   ############# midi cb #############
 
