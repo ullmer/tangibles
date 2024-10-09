@@ -1,13 +1,5 @@
-busCom: c2
-camEle: h4
-comTod: h2
-couJud: g2
-eduIss: a7
-forDef: c2
-heaWel: e2
-hisSoc: g6
-minEqu: a7
-sciTec: a6
-socPol: b2
-staPol: b2
-wasPol: h6
+import yaml
+yfn = 'cspTagAkaMin01.yaml'
+yf  = open(yfn, 'rt')
+yd  = yaml.safe_load(yf)
+print(yd)
