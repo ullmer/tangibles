@@ -2,37 +2,32 @@
 # Brygg Ullmer, Clemson University
 # Begun 2024-10-09
 
-cspan-tags.yaml
-#!/usr/bin/env python
-
 import sys, os, yaml
 from pygame import time
-
-
-import sys; sys.path.append("..")
 from enoMidiController import *
 
-yfn = '../cspan-tags.yaml'
-yf  = open(yfn, 'rt')
-yd  = yaml.safe_load(yf)
 
-ytags = yd['tags']
-tags = []
-for tag in ytags: tags.append(tag)
-tagIdx = 0
+class cspanMidi:
 
-#emc = enoMidiController('nu_mt3')
-#emc = enoMidiController('nu_dj2go2')
-#emc = enoMidiController('nov_launchpad_mk2')
+  tagFn = 'cspan-tags.yaml'
+  tagYd = None
+  tags  = None
 
-def midiCB(control, arg): 
-  global tags, tagIdx
+  def loadYaml(self):
+    self.tags  = []
+    yf         = open(self.tagFn, 'rt')
+    self.tagYd = yaml.safe_load(yf)
 
-  if arg == 0: return #ignore pad release
+    ytags      = self.tagYd['tags']
+    for tag in ytags: self.tags.append(tag)
 
-  print("%s: %s" % (tags[tagIdx], str(control)))
-  tagIdx += 1
-  print(tags[tagIdx])
+
+  def midiCB(control, arg): 
+    global tags, tagIdx
+
+    if arg == 0: return #ignore pad release
+
+    print("cspan midiCB %s: %s" % (tags[tagIdx], str(control)))
 
 emc = enoMidiController('aka_apcmini2', midiCtrlOutputId=4, activateOutput=True)
 emc.registerControls(midiCB)
