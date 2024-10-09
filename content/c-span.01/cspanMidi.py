@@ -60,10 +60,8 @@ class cspanMidi:
 
     print("cspan midiCB %s: %s" % (tags[tagIdx], str(control)))
 
-
-
-while True:
-  emc.pollMidi()
-  time.wait(100)
+#while True:
+#  emc.pollMidi()
+#  time.wait(100)
 
 ### end ###
