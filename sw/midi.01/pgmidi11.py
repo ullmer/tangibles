@@ -10,7 +10,7 @@ from time import sleep
 #emc = enoMidiController('nov_launchpad_mk2')
 
 emc = enoMidiController('aka_apcmini2', midiCtrlOutputId=4, activateOutput=True)
-#emc.registerControls(emc.debugCallback)
+emc.registerControls(emc.debugCallback)
 
 #emc.clearLights()
 #emc.rightMarginRainbow()
