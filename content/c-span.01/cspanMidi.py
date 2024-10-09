@@ -13,6 +13,7 @@ class cspanMidi:
   tagFn = 'cspan-tags.yaml'
   tagYd = None
   tags  = None
+  tagCharToColor = None
 
   midiCtrlName     = 'aka_apcmini2'
   midiCtrlOutputId = 4
@@ -51,6 +52,13 @@ class cspanMidi:
       result = self.tagYd['interactionPanel']['charMatrix']
       return result
     except: self.err("getCharMatrix")
+
+  ############# getCharMatrix #############
+
+  def mapCharToColor(self, tagChar):
+    if self.tagCharToColor is None: self.tagCharToColor = {}
+
+    #charMap:
 
   ############# midi cb #############
 
