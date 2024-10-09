@@ -9,9 +9,8 @@ from time import sleep
 #emc = enoMidiController('nu_dj2go2')
 #emc = enoMidiController('nov_launchpad_mk2')
 
-
 emc = enoMidiController('aka_apcmini2', midiCtrlOutputId=4, activateOutput=True)
-emc.registerControls(emc.debugCallback)
+#emc.registerControls(emc.debugCallback)
 
 #emc.clearLights()
 #emc.rightMarginRainbow()
@@ -27,8 +26,7 @@ emc.registerControls(emc.debugCallback)
 #o = pygame.midi.Output(4)
 #for i in range(64): o.note_on(i, i, 3)
 
-sleep(1)
-for i in range(64): emc.midiOut(i, i, 3)
+for i in range(64): emc.midiOut.note_on(i, i, 3)
 
 while True:
   emc.pollMidi()
