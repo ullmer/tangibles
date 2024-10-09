@@ -55,11 +55,13 @@ class cspanMidi:
   ############# midi cb #############
 
   def initMidi(self):
-    mcn  = self.midiCtrlName     
-    mcoi = self.midiCtrlOutputId 
+    try:
+      mcn  = self.midiCtrlName     
+      mcoi = self.midiCtrlOutputId 
 
-    self.emc = enoMidiController(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
-    self.emc.registerControls(self.midiCB)
+      self.emc = enoMidiController(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
+      self.emc.registerControls(self.midiCB)
+    except: self.err("initMidi")
 
   ############# midi illum default #############
 
