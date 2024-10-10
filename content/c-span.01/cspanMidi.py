@@ -21,6 +21,7 @@ class cspanMidi:
 
   midiCtrlName     = 'aka_apcmini2'
   midiCtrlOutputId = 4
+  verbose          = True
 
   ############# constructor #############
 
@@ -59,11 +60,11 @@ class cspanMidi:
 
   ############# getCharMatrix #############
 
-  def mapCharToColor(self, tagChar):
+  def mapCharToColor(self, tagChar): #different devices represent color in very different ways. try to accomodate.
     try:
       if self.tagCharToColor is None: self.tagCharToColor = {}
 
-      if tagChar in self.tagCharToColor: return self.tagCharToColor[tagChar]
+      if tagChar in self.tagCharToColor: return self.tagCharToColor[tagChar] #caching very important
 
       try:    cm = self.tagYd['interactionPanel']['charMap']
       except: self.err('mapCharToColor: problem accessing charMap in YAML descriptor'); return None
@@ -83,6 +84,10 @@ class cspanMidi:
         return None
 
       d = self.tagYd[dcl]
+      if self.verbose: self.msg("mapCharToColor late YAML lookup: " + str(d))
+
+      self.tagCharToColor[tagChar] = color
+      return color
 
     except: self.err("mapCharToColor")
 
