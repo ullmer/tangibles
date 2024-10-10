@@ -89,6 +89,7 @@ class enoIpanelMidi:
 
   def mapCharToColor(self, tagChar): #different devices represent color in very different ways. try to accomodate.
     try:
+      if self.verbose: self.msg("mapCharToColor " + str(tagChar))
       if self.tagCharToColor is None: self.tagCharToColor = {}
 
       if tagChar in self.tagCharToColor: return self.tagCharToColor[tagChar] #caching key to performance
@@ -101,7 +102,11 @@ class enoIpanelMidi:
       cme = cm[tagChar]
       tag = cme[0]
 
+      if self.verbose: self.msg("mapCharToColor : tag " + str(tag))
+
       dcl = self.getDeviceColorLookup(self.midiCtrlName)
+
+      if self.verbose: self.msg("mapCharToColor: dcl: " + str(dcl))
 
       if dcl not in self.tagYd: 
         self.err("mapCharToColor: device color lookup " + str(dcl) + " not found in yaml " + self.tagFn)
