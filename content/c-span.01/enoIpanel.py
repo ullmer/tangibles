@@ -83,6 +83,14 @@ class enoIpanel:
       idx  = self.tagCharToCatLIdx[tagChar]
       catl = self.tagCharToCatList[tagChar]
       clen = len(catl)
+
+      if idx >= clen:
+        self.err("mapCharToCatNextEl: unexpected condition 1"); return None
+
+      result = catl[idx]
+      self.tagCharToCatLIdx[tagChar] += 1
+      return result
+
     except: self.err(mapCharToCatNextEl)
 
   ############# getCharMatrix #############
