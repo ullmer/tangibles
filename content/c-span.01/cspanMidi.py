@@ -17,8 +17,9 @@ def cspanMidi(enoIpanelMidi):
 
   def __init__(self, **kwargs):
     self.tagFn = cspTagFn
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-    super.__init__(kwargs)
+    self.super().__init__()
 
   ############# error, msg #############
 
@@ -28,7 +29,7 @@ def cspanMidi(enoIpanelMidi):
 ############# main #############
 
 if __name__ == "__main__":
-  cm = enoIpanelMidi()
+  cm = cspanMidi()
   r  = cm.mapCharToColor('B')
   r  = cm.mapCharToColor('J')
 
