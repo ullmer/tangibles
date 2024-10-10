@@ -15,10 +15,10 @@ def cspanMidi(enoIpanelMidi):
   
   ############# constructor #############
 
-  def __init__(self, controllerName, **kwargs):
+  def __init__(self, **kwargs):
     self.tagFn = cspTagFn
 
-    super.__init__(controllerName, kwargs)
+    super.__init__(kwargs)
 
   ############# error, msg #############
 
