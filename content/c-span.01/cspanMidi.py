@@ -56,9 +56,19 @@ class cspanMidi:
   ############# getCharMatrix #############
 
   def mapCharToColor(self, tagChar):
-    if self.tagCharToColor is None: self.tagCharToColor = {}
+    try:
+      if self.tagCharToColor is None: self.tagCharToColor = {}
 
-    #charMap:
+      if tagChar in self.tagCharToColor: return self.tagCharToColor[tagChar]
+
+      try:    cm = self.tagYd['interactionPanel']['charMap']
+      except: self.err('mapCharToColor: problem accessing charMap in YAML descriptor'); return None
+
+      if tagChar not in cm: self.err('mapCharToColor not finding character ' + str(tagChar)); return None
+
+      cme = cm[tagChar]
+
+    except: self.err("mapCharToColor")
 
   ############# midi cb #############
 
