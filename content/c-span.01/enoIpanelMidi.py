@@ -15,7 +15,7 @@ class enoIpanelMidi:
   tags  = None
   tagCharToColor = None
 
-  autolaunchMidi = False
+  autolaunchMidi = True
 
   deviceColorLookups = {
     'aka_apcmini2' : ['interactionPanel', 'akaiColorMap']
@@ -23,7 +23,7 @@ class enoIpanelMidi:
 
   midiCtrlName     = 'aka_apcmini2'
   midiCtrlOutputId = 4
-  rows, cols       = 8
+  rows, cols       = 8, 8
   verbose          = True
 
   ############# constructor #############
@@ -136,23 +136,35 @@ class enoIpanelMidi:
 
   def illumDefaultMidi(self):
     try:
+      illumFunc = None
+      if self.midiCtrlName is 'aka_apcmini2': illumFunc = self.illumMatrixXYCAkaiApcMini
+
+      if illumFunc is None:
+        self.msg("illumDefaultMidi: no controller function identified"); return
+
       m = self.getCharMatrix()
-      for j in range(rows):
+      for j in range(self.rows):
         row = m[j]
-        for i in range(cols):
+        for i in range(self.cols):
           try:    mch   = row[i]
           except: self.err("illumDefaultMidi error on %i, %i" % (i,j)); continue
           color = self.mapCharToColor(mch)
-          self.illumMatrixXYC(i, j, color)
+          
+          illumFunc(i, j, color)
 
     except: self.err("illumDefaultMidi"); return None
    
   ############# illuminate matrix x, y, color#############
 
   def illumMatrixXYC(self, x, y, color):
-    if self.midiCtrlName is 'aka_apcmini2'
+    if self.midiCtrlName is 'aka_apcmini2': self.illumMatrixXYCAkaiApcMini(x,y,color)
 
-    for i in range(64): emc.midiOut.note_on(i, i, 3)
+  def illumMatrixXYCAkaiApcMini(self, x, y, color):
+     
+    try:
+      addr = self.cols * (y - 7) + x
+      self.emc.midiOut.note_on(addr, color, 3)
+    except: self.err("illumMatrixXYCAkaiApcMini")
 
   ############# midi cb #############
 
