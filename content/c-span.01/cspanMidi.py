@@ -19,7 +19,7 @@ def cspanMidi(enoIpanelMidi):
     self.tagFn = cspTagFn
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
-    self.super().__init__()
+    super().__init__()
 
   ############# error, msg #############
 

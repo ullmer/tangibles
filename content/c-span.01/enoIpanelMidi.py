@@ -23,6 +23,7 @@ class enoIpanelMidi:
 
   midiCtrlName     = 'aka_apcmini2'
   midiCtrlOutputId = 4
+  rows, cols       = 8
   verbose          = True
 
   ############# constructor #############
@@ -34,7 +35,7 @@ class enoIpanelMidi:
 
     if self.autolaunchMidi: 
       self.initMidi()
-      self.midiIllumDefault()
+      self.illumDefaultMidi()
 
   ############# error, msg #############
 
@@ -131,9 +132,25 @@ class enoIpanelMidi:
       self.emc.registerControls(self.midiCB)
     except: self.err("initMidi")
 
-  ############# midi illum default #############
+  ############# illuminate default midi #############
 
-  def midiIllumDefault(self):
+  def illumDefaultMidi(self):
+    try:
+      m = self.getCharMatrix()
+      for j in range(rows):
+        row = m[j]
+        for i in range(cols):
+          try:    mch   = row[i]
+          except: self.err("illumDefaultMidi error on %i, %i" % (i,j)); continue
+          color = self.mapCharToColor(mch)
+          self.illumMatrixXYC(i, j, color)
+
+    except: self.err("illumDefaultMidi"); return None
+   
+  ############# illuminate matrix x, y, color#############
+
+  def illumMatrixXYC(self, x, y, color):
+    if self.midiCtrlName is 'aka_apcmini2'
 
     for i in range(64): emc.midiOut.note_on(i, i, 3)
 
@@ -152,6 +169,8 @@ if __name__ == "__main__":
   cm = enoIpanelMidi(tagFn = 'cspan-tags.yaml')
   r  = cm.mapCharToColor('B')
   r  = cm.mapCharToColor('J')
+  m  = cm.getCharMatrix()
+  print(m)
 
 #while True:
 #  emc.pollMidi()
