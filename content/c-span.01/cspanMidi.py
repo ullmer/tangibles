@@ -1,4 +1,4 @@
-# C-SPAN MIDI code
+# C-SPAN MIDI code ; though abstract most of this to non-C-SPAN specificity
 # Brygg Ullmer, Clemson University
 # Begun 2024-10-09
 
