@@ -18,7 +18,7 @@ class enoIpanelMidi:
   autolaunchMidi = False
 
   deviceColorLookups = {
-    'aka_apcmini2' : 'akaiColorMap'
+    'aka_apcmini2' : ['interactionPanel', akaiColorMap']
   }
 
   midiCtrlName     = 'aka_apcmini2'
@@ -27,7 +27,7 @@ class enoIpanelMidi:
 
   ############# constructor #############
 
-  def __init__(self, controllerName, **kwargs):
+  def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
     if self.tagFn is not None: self.loadYaml()
@@ -62,6 +62,15 @@ class enoIpanelMidi:
       return result
     except: self.err("getCharMatrix")
 
+  ############# get device color lookup #############
+
+  def getDeviceColorLookup(self, midiCtrlName):
+  
+    if midiCtrlName not in self.deviceColorLookups:
+      self.err("getDeviceColorLookup: midi controller name not in device color lookups"); return None
+
+    dcl = self.deviceColorLookups[midiCtrlName]
+
   ############# getCharMatrix #############
 
   def mapCharToColor(self, tagChar): #different devices represent color in very different ways. try to accomodate.
@@ -78,10 +87,7 @@ class enoIpanelMidi:
       cme = cm[tagChar]
       tag = cme[0]
 
-      if self.midiCtrlName not in self.deviceColorLookups:
-        self.err("mapCharToColor: midi controller name not in device color lookups"); return None
-
-      dcl = self.deviceColorLookups[self.midiCtrlName]
+      dcl = self.getDeviceColorLookup(self.midiCtrlName)
 
       if dcl not in self.tagYd: 
         self.err("mapCharToColor: device color lookup " + str(dcl) + " not found in yaml " + self.tagFn)
