@@ -64,7 +64,7 @@ class cspanMidi:
     try:
       if self.tagCharToColor is None: self.tagCharToColor = {}
 
-      if tagChar in self.tagCharToColor: return self.tagCharToColor[tagChar] #caching very important
+      if tagChar in self.tagCharToColor: return self.tagCharToColor[tagChar] #caching key to performance
 
       try:    cm = self.tagYd['interactionPanel']['charMap']
       except: self.err('mapCharToColor: problem accessing charMap in YAML descriptor'); return None
@@ -85,6 +85,11 @@ class cspanMidi:
 
       d = self.tagYd[dcl]
       if self.verbose: self.msg("mapCharToColor late YAML lookup: " + str(d))
+
+      if tag not in d: self.err("mapCharToColor: tag " + str(tag) + "not found in " + str(d)); return None
+
+      color = d[tag]
+      if self.verbose: self.msg("mapCharToColor: tag " + str(tag) + "-> color " + str(color))
 
       self.tagCharToColor[tagChar] = color
       return color
