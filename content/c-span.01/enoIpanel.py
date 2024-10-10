@@ -12,6 +12,8 @@ class enoIpanel:
   tagYd = None
   tags  = None
   tagCharToCategory = None
+  tagCharToCatList  = None
+  tagCharToCatLIdx  = None #index within tagCharToCatList keyed arrays
 
   rows, cols       = 8, 8
   verbose          = True
@@ -47,6 +49,8 @@ class enoIpanel:
     try:
       if self.verbose: self.msg("mapCharToCategory " + str(tagChar))
       if self.tagCharToCategory is None: self.tagCharToCategory = {}
+      if self.tagCharToCatList  is None: self.tagCharToCatList  = {}
+      if self.tagCharToCatLIdx  is None: self.tagCharToCatLIdx  = {}
 
       if tagChar in self.tagCharToCategory: 
         return self.tagCharToCategory[tagChar] #caching important to performance
@@ -59,9 +63,27 @@ class enoIpanel:
       cme = cm[tagChar]
       tag = cme[0]
 
+      self.tagCharToCategory[tagChar] = tag
+      self.tagCharToCatList[tagChar]  = cme[1:]
+      self.tagCharToCatLIdx[tagChar]  = 0
+
       if self.verbose: self.msg("mapCharToCategory result: " + str(tag))
       return tag
     except: self.err('mapCharToCategory')
+
+  ############# map char to category next element #############
+
+  def mapCharToCatNextEl(self, tagChar): 
+    try:
+      cat = self.mapCharToCategory[tagChar] 
+      if tagChar not in self.tagCharToCatList or \
+         tagChar not in self.tagCharToCatLIdx:
+        self.err("mapCharToCatNextEl: unexpected condition 0"); return None
+
+      idx  = self.tagCharToCatLIdx[tagChar]
+      catl = self.tagCharToCatList[tagChar]
+      clen = len(catl)
+    except: self.err(mapCharToCatNextEl)
 
   ############# getCharMatrix #############
 
