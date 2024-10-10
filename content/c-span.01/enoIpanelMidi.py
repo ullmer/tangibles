@@ -65,18 +65,8 @@ class enoIpanelMidi(enoIpanel):
 
   def mapCharToColor(self, tagChar): #different devices represent color in very different ways. try to accomodate.
     try:
-      if self.verbose: self.msg("mapCharToColor " + str(tagChar))
-      if self.tagCharToColor is None: self.tagCharToColor = {}
-
-      if tagChar in self.tagCharToColor: return self.tagCharToColor[tagChar] #caching key to performance
-
-      try:    cm = self.tagYd['interactionPanel']['charMap']
-      except: self.err('mapCharToColor: problem accessing charMap in YAML descriptor'); return None
-
-      if tagChar not in cm: self.err('mapCharToColor not finding character ' + str(tagChar)); return None
-
-      cme = cm[tagChar]
-      tag = cme[0]
+      tag = self.mapCharToCategory(tagChar)
+      if tag is None: self.err('mapCharToColor: mapCharToCategory returned no result'); return
 
       if self.verbose: self.msg("mapCharToColor : tag " + str(tag))
 
