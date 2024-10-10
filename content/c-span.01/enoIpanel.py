@@ -52,25 +52,16 @@ class enoIpanel:
         return self.tagCharToCategory[tagChar] #caching important to performance
 
       try:    cm = self.tagYd['interactionPanel']['charMap']
-      except: self.err('mapCharToColor: problem accessing charMap in YAML descriptor'); return None
+      except: self.err('mapCharToCategory: problem accessing charMap in YAML descriptor'); return None
 
-      if tagChar not in cm: self.err('mapCharToColor not finding character ' + str(tagChar)); return None
+      if tagChar not in cm: self.err('mapCharToCategory not finding character ' + str(tagChar)); return None
 
       cme = cm[tagChar]
       tag = cme[0]
 
-      if self.verbose: self.msg("mapCharToColor : tag " + str(tag))
-
-      dcl = self.getDeviceColorLookup(self.midiCtrlName)
-
-      if self.verbose: self.msg("mapCharToColor: dcl: " + str(dcl))
-
-      if tag not in dcl: 
-        self.err("mapCharToColor: device color lookup " + str(dcl) + " not found in yaml " + self.tagFn)
-        return None
-
-      color = dcl[tag]
-      if self.verbose: self.msg("mapCharToColor result: " + str(color))
+      if self.verbose: self.msg("mapCharToCategory result: " + str(tag))
+      return tag
+    except: self.err('mapCharToCategory')
 
   ############# getCharMatrix #############
 
@@ -83,8 +74,12 @@ class enoIpanel:
 ############# main #############
 
 if __name__ == "__main__":
-  cm = enoIpanel(tagFn = 'cspan-tags.yaml')
-  m  = cm.getCharMatrix()
+  eip = enoIpanel(tagFn = 'cspan-tags.yaml')
+  m   = eip.getCharMatrix()
   print(m)
+
+  cat1 = eip.mapCharToCategory('B')
+  cat2 = eip.mapCharToCategory('C')
+  print(cat1, cat2)
 
 ### end ###
