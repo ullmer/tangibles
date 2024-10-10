@@ -14,6 +14,7 @@ class enoIpanelMidi:
   tagYd = None
   tags  = None
   tagCharToColor = None
+  emc   = None #enodia midi controller
 
   autolaunchMidi = True
 
@@ -128,8 +129,10 @@ class enoIpanelMidi:
       mcn  = self.midiCtrlName     
       mcoi = self.midiCtrlOutputId 
 
+      self.msg("initMidi (%s, %i)" % (mcn, mcoi))
+
       self.emc = enoMidiController(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
-      self.emc.registerControls(self.midiCB)
+      #self.emc.registerControls(self.midiCB)
     except: self.err("initMidi")
 
   ############# illuminate default midi #############
@@ -137,14 +140,15 @@ class enoIpanelMidi:
   def illumDefaultMidi(self):
     try:
       illumFunc = None
-      if self.midiCtrlName is 'aka_apcmini2': illumFunc = self.illumMatrixXYCAkaiApcMini
+      if self.midiCtrlName == 'aka_apcmini2': illumFunc = self.illumMatrixXYCAkaiApcMini
 
       if illumFunc is None:
         self.msg("illumDefaultMidi: no controller function identified"); return
 
       m = self.getCharMatrix()
+      mrows = m.splitlines()
       for j in range(self.rows):
-        row = m[j]
+        row = mrows[j]
         for i in range(self.cols):
           try:    mch   = row[i]
           except: self.err("illumDefaultMidi error on %i, %i" % (i,j)); continue
@@ -157,7 +161,7 @@ class enoIpanelMidi:
   ############# illuminate matrix x, y, color#############
 
   def illumMatrixXYC(self, x, y, color):
-    if self.midiCtrlName is 'aka_apcmini2': self.illumMatrixXYCAkaiApcMini(x,y,color)
+    if self.midiCtrlName == 'aka_apcmini2': self.illumMatrixXYCAkaiApcMini(x,y,color)
 
   def illumMatrixXYCAkaiApcMini(self, x, y, color):
      
