@@ -15,6 +15,8 @@ class cspanMidi:
   tags  = None
   tagCharToColor = None
 
+  autolaunchMidi = False
+
   deviceColorLookups = {
     'aka_apcmini2' : 'akaiColorMap'
   }
@@ -27,10 +29,12 @@ class cspanMidi:
 
   def __init__(self, controllerName, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+
     if self.tagFn is not None: self.loadYaml()
 
-    self.initMidi()
-    self.midiIllumDefault()
+    if self.autolaunchMidi: 
+      self.initMidi()
+      self.midiIllumDefault()
 
   ############# error, msg #############
 
