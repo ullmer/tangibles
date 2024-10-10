@@ -151,7 +151,7 @@ class enoIpanelMidi:
 if __name__ == "__main__":
   cm = enoIpanelMidi(tagFn = 'cspan-tags.yaml')
   r  = cm.mapCharToColor('B')
-  print(r)
+  r  = cm.mapCharToColor('J')
 
 #while True:
 #  emc.pollMidi()

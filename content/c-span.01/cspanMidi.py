@@ -25,5 +25,12 @@ def cspanMidi(enoIpanelMidi):
   def err(self, msg): print("cspanMidi error: " + str(msg)); traceback.print_exc(); 
   def msg(self, msg): print("cspanMidi msg: "   + str(msg))
 
+############# main #############
+
+if __name__ == "__main__":
+  cm = enoIpanelMidi()
+  r  = cm.mapCharToColor('B')
+  r  = cm.mapCharToColor('J')
+
 ### end ###
  
