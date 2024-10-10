@@ -18,7 +18,7 @@ class enoIpanelMidi:
   autolaunchMidi = False
 
   deviceColorLookups = {
-    'aka_apcmini2' : ['interactionPanel', akaiColorMap']
+    'aka_apcmini2' : ['interactionPanel', 'akaiColorMap']
   }
 
   midiCtrlName     = 'aka_apcmini2'
@@ -66,10 +66,24 @@ class enoIpanelMidi:
 
   def getDeviceColorLookup(self, midiCtrlName):
   
-    if midiCtrlName not in self.deviceColorLookups:
-      self.err("getDeviceColorLookup: midi controller name not in device color lookups"); return None
+    try:
+      if midiCtrlName not in self.deviceColorLookups:
+        self.err("getDeviceColorLookup: midi controller name not in device color lookups"); return None
 
-    dcl = self.deviceColorLookups[midiCtrlName]
+      dcl = self.deviceColorLookups[midiCtrlName]
+
+      if type(dcl) is not list: return dcl
+
+      result = self.tagYd #we're working with a list; iterate through it
+
+      for el in dcl:
+        if el not in result: 
+          self.err("getDeviceColorLookup iteration through " + str(dcl) + " fails"); return None
+
+        result = result[el] # awkward, best refined, but hopefully will work
+
+      return result
+    except: self.err("getDeviceColorLookup " + str(midiCtrlName)); return None
 
   ############# getCharMatrix #############
 
