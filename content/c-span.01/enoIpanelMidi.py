@@ -1,21 +1,19 @@
-# C-SPAN MIDI code ; though abstract most of this to non-C-SPAN specificity
+# Interaction panel MIDI code 
 # Brygg Ullmer, Clemson University
 # Begun 2024-10-09
 
 import sys, os, yaml, traceback
 from pygame import time
 from enoMidiController import *
+from enoIpanel import *
 
 ############# cspan midi #############
 
-class enoIpanelMidi:
+class enoIpanelMidi(enoIpanel):
 
-  tagFn = None
-  tagYd = None
-  tags  = None
-  tagCharToColor = None
   emc   = None #enodia midi controller
 
+  tagCharToColor = None
   autolaunchMidi = True
 
   deviceColorLookups = {
@@ -24,15 +22,12 @@ class enoIpanelMidi:
 
   midiCtrlName     = 'aka_apcmini2'
   midiCtrlOutputId = 4
-  rows, cols       = 8, 8
-  verbose          = True
 
   ############# constructor #############
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
-
-    if self.tagFn is not None: self.loadYaml()
+    self.super()
 
     if self.autolaunchMidi: 
       self.initMidi()
@@ -42,27 +37,6 @@ class enoIpanelMidi:
 
   def err(self, msg): print("enoIpanelMidi error: " + str(msg)); traceback.print_exc(); 
   def msg(self, msg): print("enoIpanelMidi msg: "   + str(msg))
-
-  ############# load yaml #############
-
-  def loadYaml(self):
-    self.tags  = []
-
-    try:
-      yf         = open(self.tagFn, 'rt')
-      self.tagYd = yaml.safe_load(yf)
-
-      ytags      = self.tagYd['tags']
-      for tag in ytags: self.tags.append(tag)
-    except: self.err("loadYaml")
-
-  ############# getCharMatrix #############
-
-  def getCharMatrix(self):
-    try:
-      result = self.tagYd['interactionPanel']['charMatrix']
-      return result
-    except: self.err("getCharMatrix")
 
   ############# get device color lookup #############
 
