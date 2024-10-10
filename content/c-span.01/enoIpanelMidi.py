@@ -27,7 +27,7 @@ class enoIpanelMidi(enoIpanel):
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
-    self.super()
+    super().__init__()
 
     if self.autolaunchMidi: 
       self.initMidi()
