@@ -145,6 +145,8 @@ class enoIpanelMidi:
       if illumFunc is None:
         self.msg("illumDefaultMidi: no controller function identified"); return
 
+      if self.emc is None: self.err("illumDefaultMidi: self.emc is none!")
+
       m = self.getCharMatrix()
       mrows = m.splitlines()
       for j in range(self.rows):
@@ -167,6 +169,7 @@ class enoIpanelMidi:
      
     try:
       addr = self.cols * (y - 7) + x
+
       self.emc.midiOut.note_on(addr, color, 3)
     except: self.err("illumMatrixXYCAkaiApcMini")
 
