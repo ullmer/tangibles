@@ -10,7 +10,7 @@ from enoMidiController import *
 
 class cspanMidi:
 
-  tagFn = 'cspan-tags.yaml'
+  tagFn = None
   tagYd = None
   tags  = None
   tagCharToColor = None
