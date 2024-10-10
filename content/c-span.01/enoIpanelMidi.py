@@ -108,17 +108,12 @@ class enoIpanelMidi:
 
       if self.verbose: self.msg("mapCharToColor: dcl: " + str(dcl))
 
-      if dcl not in self.tagYd: 
+      if tag not in dcl: 
         self.err("mapCharToColor: device color lookup " + str(dcl) + " not found in yaml " + self.tagFn)
         return None
 
-      d = self.tagYd[dcl]
-      if self.verbose: self.msg("mapCharToColor late YAML lookup: " + str(d))
-
-      if tag not in d: self.err("mapCharToColor: tag " + str(tag) + "not found in " + str(d)); return None
-
-      color = d[tag]
-      if self.verbose: self.msg("mapCharToColor: tag " + str(tag) + "-> color " + str(color))
+      color = dcl[tag]
+      if self.verbose: self.msg("mapCharToColor result: " + str(color))
 
       self.tagCharToColor[tagChar] = color
       return color
