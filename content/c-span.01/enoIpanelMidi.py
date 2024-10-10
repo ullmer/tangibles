@@ -8,7 +8,7 @@ from enoMidiController import *
 
 ############# cspan midi #############
 
-class cspanMidi:
+class enoIpanelMidi:
 
   tagFn = None
   tagYd = None
@@ -38,8 +38,8 @@ class cspanMidi:
 
   ############# error, msg #############
 
-  def err(self, msg): print("cspanMidi error: " + str(msg)); traceback.print_exc(); 
-  def msg(self, msg): print("cspanMidi msg: "   + str(msg))
+  def err(self, msg): print("enoIpanelMidi error: " + str(msg)); traceback.print_exc(); 
+  def msg(self, msg): print("enoIpanelMidi msg: "   + str(msg))
 
   ############# load yaml #############
 
@@ -125,9 +125,11 @@ class cspanMidi:
     if arg == 0: return #ignore pad release
 
     print("cspan midiCB %s: %s" % (tags[tagIdx], str(control)))
+  
+############# main #############
 
 if __name__ == "__main__":
-  cm = cspanMidi()
+  cm = enoIpanelMidi(tagFn = 'cspan-tags.yaml')
   r  = cm.mapCharToColor('B')
   print(r)
 
