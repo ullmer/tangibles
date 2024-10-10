@@ -15,6 +15,10 @@ class cspanMidi:
   tags  = None
   tagCharToColor = None
 
+  deviceColorLookups = {
+    'aka_apcmini2' : 'akaiColorMap'
+  }
+
   midiCtrlName     = 'aka_apcmini2'
   midiCtrlOutputId = 4
 
@@ -67,6 +71,18 @@ class cspanMidi:
       if tagChar not in cm: self.err('mapCharToColor not finding character ' + str(tagChar)); return None
 
       cme = cm[tagChar]
+      tag = cme[0]
+
+      if self.midiCtrlName not in self.deviceColorLookups:
+        self.err("mapCharToColor: midi controller name not in device color lookups"); return None
+
+      dcl = self.deviceColorLookups[self.midiCtrlName]
+
+      if dcl not in self.tagYd: 
+        self.err("mapCharToColor: device color lookup " + str(dcl) + " not found in yaml " + self.tagFn)
+        return None
+
+      d = self.tagYd[dcl]
 
     except: self.err("mapCharToColor")
 
