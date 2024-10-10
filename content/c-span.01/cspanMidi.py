@@ -126,6 +126,11 @@ class cspanMidi:
 
     print("cspan midiCB %s: %s" % (tags[tagIdx], str(control)))
 
+if __name__ == "__main__":
+  cm = cspanMidi()
+  r  = cm.mapCharToColor('B')
+  print(r)
+
 #while True:
 #  emc.pollMidi()
 #  time.wait(100)
