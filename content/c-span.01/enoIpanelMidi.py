@@ -5,11 +5,11 @@
 import sys, os, yaml, traceback
 from pygame import time
 from enoMidiController import *
-from enoIpanel import *
+from enoIpanelYaml import *
 
 ############# cspan midi #############
 
-class enoIpanelMidi(enoIpanel):
+class enoIpanelMidi(enoIpanelYaml):
 
   emc   = None #enodia midi controller
 
