@@ -16,7 +16,7 @@ class enoIpanel:
   tagCharToCatLIdx  = None #index within tagCharToCatList keyed arrays
 
   rows, cols       = 8, 8
-  verbose          = True
+  verbose          = False
 
   ############# constructor #############
 
@@ -75,7 +75,7 @@ class enoIpanel:
 
   def mapCharToCatNextEl(self, tagChar): 
     try:
-      cat = self.mapCharToCategory[tagChar] 
+      cat = self.mapCharToCategory(tagChar)
       if tagChar not in self.tagCharToCatList or \
          tagChar not in self.tagCharToCatLIdx:
         self.err("mapCharToCatNextEl: unexpected condition 0"); return None
@@ -91,7 +91,7 @@ class enoIpanel:
       self.tagCharToCatLIdx[tagChar] += 1
       return result
 
-    except: self.err(mapCharToCatNextEl)
+    except: self.err('mapCharToCatNextEl')
 
   ############# getCharMatrix #############
 
@@ -100,6 +100,22 @@ class enoIpanel:
       result = self.tagYd['interactionPanel']['charMatrix']
       return result
     except: self.err("getCharMatrix")
+
+  ############# getCharMatrix #############
+
+  def expandMatrixYaml(self):
+    try:
+      m     = self.getCharMatrix()
+      mrows = m.splitlines()
+      for row in mrows:
+        lenrow = len(row)
+        outrow = []
+        for i in range(lenrow):
+          ch  = row[i]
+          tag = self.mapCharToCatNextEl(ch)
+          outrow.append(tag)
+        print(outrow)
+    except: self.err('expanMatrixYaml')
 
 ############# main #############
 
@@ -111,5 +127,6 @@ if __name__ == "__main__":
   cat1 = eip.mapCharToCategory('B')
   cat2 = eip.mapCharToCategory('C')
   print(cat1, cat2)
+  eip.expandMatrixYaml()
 
 ### end ###
