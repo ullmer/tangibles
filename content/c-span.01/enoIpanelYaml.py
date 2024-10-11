@@ -78,14 +78,15 @@ class enoIpanel:
       cat = self.mapCharToCategory(tagChar)
       if tagChar not in self.tagCharToCatList or \
          tagChar not in self.tagCharToCatLIdx:
-        self.err("mapCharToCatNextEl: unexpected condition 0"); return None
+        #self.err("mapCharToCatNextEl: unexpected condition 0"); return None
+        return None
 
       idx  = self.tagCharToCatLIdx[tagChar]
       catl = self.tagCharToCatList[tagChar]
       clen = len(catl)
 
-      if idx >= clen:
-        self.err("mapCharToCatNextEl: unexpected condition 1"); return None
+      if idx >= clen: return None
+        #self.err("mapCharToCatNextEl: unexpected condition 1"); return None
 
       result = catl[idx]
       self.tagCharToCatLIdx[tagChar] += 1
@@ -108,7 +109,7 @@ class enoIpanel:
       m     = self.getCharMatrix()
       mrows = m.splitlines()
       for row in mrows:
-        lenrow = len(row)
+        lenrow = len(row.rstrip())
         outrow = []
         for i in range(lenrow):
           ch  = row[i]
