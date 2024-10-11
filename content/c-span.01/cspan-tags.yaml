@@ -114,17 +114,23 @@ tags:
     - {abbrev: weapon, name:  "Weapons"}
 
   heaWel:
+    - {catLet: H,   catName: "Health & Welfare",            programs: 11881}
+    - {abbrev: druPol, name:  "Drug Policy",                programs:   334}
+    - {abbrev: heCaRe, name:  "Health Care Reform",         programs:   119}
+    - {abbrev: heaPol, name:  "Health Policy",              programs:  6399}
+    - {abbrev: socPol, name:  "Social Policy",              programs:   4131}
+    - {abbrev: , name:  "",                subcats: 334, programs:  11881}
+#Health & Welfare Health Care Reform 119    
+#Health & Welfare Health Policy 6399    
+#Health & Welfare Social Policy 4131    
   hisSoc:
+    - {abbrev: , name:  "",                subcats: 334, programs:  11881}
   minEqu:
   sciTec:
   socPol:
   staPol:
   wasPol:
 
-#Health & Welfare Drug Policy 334  11881  H
-#Health & Welfare Health Care Reform 119    
-#Health & Welfare Health Policy 6399    
-#Health & Welfare Social Policy 4131    
 #
 #History & Society American Presidents 42  20833  h
 #History & Society American Writers 548    
