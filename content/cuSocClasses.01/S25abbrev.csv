@@ -64,27 +64,24 @@ CPSC,4910,Senior Computing Practicum
 CPSC,4910,Senior Computing Practicum- Capstone
 CPSC,4911,Senior Computing Practicum Laboratory
 CPSC,4911,Senior Computing Practicum Laboratory
-CPSC,7030,MSCS Ready: Module 3
-CPSC,7030,1,SYNCH,2,MSCS Ready: Module 3
-CPSC,8030,Scientific Visualization
-CPSC,8120,1,SYNCH,2,MSCS Ready: Module 4
-CPSC,8120,1,SYNCH,2,MSCS Ready: Module 4
+CPSC,7030,mscs ready 3
+CPSC,8030,sci viz 
+CPSC,8120,mscs ready 4
 CPSC,8190,Physically Based Visual Effects
-CPSC,8230,Intro to Quantum Computing
-CPSC,8400,1,CRSRA,3,Design and Analysis of Algorithms
+CPSC,8230,quant comp
+CPSC,8400,algo dsn anl
 CPSC,8470,Information Retrieval
 CPSC,8570,Security in Advanced Networking Technologies
-CPSC,8650,Data Mining
-CPSC,8740,AI Receptive Software Engineering
-CPSC,8740,1,CRSRA,3,AI Receptive Software Engineering
-CPSC,8810,ST: ML for Graph Data,EC09,R
+CPSC,8650,data mining
+CPSC,8740,AI sw eng
+CPSC,8810,graph ML
 CPSC,8810,cybersec side
 CPSC,8810,gaze xr
 CPSC,8810,hpc power
 CPSC,8810,cphoto learn 
 HCC,6400,measur eval
 HCC,6510,inclus acces
-HCC,6520,tang embed
+HCC,x520,tang embed
 HCC,6600,hum-ctr ai
 HCC,8500,team tech
 DPA,3070,Studio Methods for Digital Production
