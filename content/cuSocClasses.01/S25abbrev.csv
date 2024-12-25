@@ -58,19 +58,17 @@ CPSC,4+6620,Database Management Systems,K18
 CPSC,4+6620,Database Management Systems,K18
 CPSC,4+6720,Software Development Methodology,K19
 CPSC,4+6780,General Purpose Computation on Graphical Processing Units,K19
-CPSC,4+6820,Special Topics: Embedded Systems,K20
-CPSC,4+6820,Special Topics: Cryptography,K26
-CPSC,4910,Senior Computing Practicum
-CPSC,4910,Senior Computing Practicum- Capstone
-CPSC,4911,Senior Computing Practicum Laboratory
-CPSC,4911,Senior Computing Practicum Laboratory
+CPSC,x820,embedded sys
+CPSC,x820,crypto
+CPSC,4910,sc practicum
+CPSC,4911,sc practicum lab
 CPSC,7030,mscs ready 3
 CPSC,8030,sci viz 
 CPSC,8120,mscs ready 4
 CPSC,8190,Physically Based Visual Effects
 CPSC,8230,quant comp
 CPSC,8400,algo dsn anl
-CPSC,8470,Information Retrieval
+CPSC,8470,info retr
 CPSC,8570,Security in Advanced Networking Technologies
 CPSC,8650,data mining
 CPSC,8740,AI sw eng
