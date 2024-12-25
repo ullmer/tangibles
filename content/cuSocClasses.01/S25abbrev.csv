@@ -78,11 +78,11 @@ CPSC,8650,Data Mining
 CPSC,8740,AI Receptive Software Engineering
 CPSC,8740,1,CRSRA,3,AI Receptive Software Engineering
 CPSC,8810,ST: ML for Graph Data,EC09,R
-CPSC,8810,ST: Side Channel Issues in Cybersecurity ,EC09,R
-CPSC,8810,ST: Gaze Sensing in XR,EC09,R
-CPSC,8810,ST: HPC For Power System,EC09,R
-CPSC,8810,ST: Deep Learning for Compu Photography
-HCC,6400,Measurement and Evaluation of Human-Centered Computing Systems,K23
+CPSC,8810,cybersec side
+CPSC,8810,gaze xr
+CPSC,8810,hpc power
+CPSC,8810,cphoto learn 
+HCC,6400,measur eval
 HCC,6510,inclus acces
 HCC,6520,tang embed
 HCC,6600,hum-ctr ai
