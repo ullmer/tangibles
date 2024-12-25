@@ -1,0 +1,101 @@
+Subj,Crse,# Sec,Mode,Cred,Title,XList,Rest,Preq,Coreq,Instructor,Enroll Estimate,"Multi Campus"
+BDSI,8000,Biomedical Data Science and Informatics Seminar
+BDSI,8020,Biomedical Data Standards and Terminologies
+BDSI,8120,1,SYNCH,3,Clinical and Translational Informatics
+CPSC,1010,Computer Science I
+CPSC,1011,Computer Science I Laboratory
+CPSC,1020,Computer Science II
+CPSC,1021,Computer Science II Laboratory
+CPSC,1050,Introduction to Programming in Python
+CPSC,1051,Introduction to Programming in Python Laboratory
+CPSC,1070,Programming Methodology
+CPSC,1070,Programming Methodology
+CPSC,1071,Programming Methodology Laboratory
+CPSC,1071,Programming Methodology Laboratory
+CPSC,2070,4,HY,3,Discrete Structures for Computing
+CPSC,2120,Algorithms and Data Structures
+CPSC,2120,Algorithms and Data Structures
+CPSC,2121,Algorithms and Data Structures Laboratory
+CPSC,2150,Software Development Foundations
+CPSC,2200,Problem Solving with Office Applications
+CPSC,2201,Problem Solving with Office Applications Laboratory
+CPSC,2310,Introduction to Computer Organization
+CPSC,2311,Introduction to Computer Organization Laboratory
+CPSC,2920,"Computing, Ethics and Global Society"
+CPSC,2920,"Computing, Ethics and Global Society"
+CPSC,2920,"Computing, Ethics and Global Society"
+CPSC,2921,"Computing, Ethics and Global Society Recitation"
+CPSC,2921,"Computing, Ethics and Global Society Recitation"
+CPSC,2921,"Computing, Ethics and Global Society Recitation"
+CPSC,3120,Introduction to Design and Analysis of Algorithms
+CPSC,3220,Introduction to Operating Systems,EC14
+CPSC,3220,Introduction to Operating Systems
+CPSC,3300,Computer Systems Organization
+CPSC,3520,Programming Systems,EC
+CPSC,3600,Networks and Network Programming
+CPSC,3600,Networks and Network Programming
+CPSC,3710,Systems Analysis
+CPSC,3720,Introduction to Software Engineering
+CPSC,3720,Introduction to Software Engineering
+CPSC,3750,Web Application Development
+CPSC,4+6070,Applied Computer Vision,K1
+CPSC,4+6110,Virtual Reality Systems,K2
+CPSC,4+6140,Human and Computer Interaction,K3
+CPSC,4+6140,Human and Computer Interaction,K4
+CPSC,4+6170,3D Game Programming: Algorithms and Techniques,K5
+CPSC,4+6180,Usable Privacy and Security,K6
+CPSC,4+6190,Physical Modeling and Animation,K7
+CPSC,4+6200,Computer Security Principles,K8
+CPSC,4+6240,System Administration and Security,K9
+CPSC,4+6300,Applied Data Science,K10
+CPSC,6300,1,CRSRA,3,Applied Data Science,K11
+CPSC,4+6420,Artificial Intelligence,K13
+CPSC,4+6430,Machine Learning: Implementation and Evaluation,K14
+CPSC,4+6440,Cloud Computing Architecture,K15
+CPSC,4+6440,Cloud Computing Architecture,K16
+CPSC,6620,1,CRSRA,3,Database Management Systems,K18
+CPSC,4+6620,Database Management Systems,K18
+CPSC,4+6620,Database Management Systems,K18
+CPSC,4+6720,Software Development Methodology,K19
+CPSC,4+6780,General Purpose Computation on Graphical Processing Units,K19
+CPSC,4+6820,Special Topics: Embedded Systems,K20
+CPSC,4+6820,Special Topics: Cryptography,K26
+CPSC,4910,Senior Computing Practicum
+CPSC,4910,Senior Computing Practicum- Capstone
+CPSC,4911,Senior Computing Practicum Laboratory
+CPSC,4911,Senior Computing Practicum Laboratory
+CPSC,7030,MSCS Ready: Module 3
+CPSC,7030,1,SYNCH,2,MSCS Ready: Module 3
+CPSC,8030,Scientific Visualization
+CPSC,8120,1,SYNCH,2,MSCS Ready: Module 4
+CPSC,8120,1,SYNCH,2,MSCS Ready: Module 4
+CPSC,8190,Physically Based Visual Effects
+CPSC,8230,Intro to Quantum Computing
+CPSC,8400,1,CRSRA,3,Design and Analysis of Algorithms
+CPSC,8470,Information Retrieval
+CPSC,8570,Security in Advanced Networking Technologies
+CPSC,8650,Data Mining
+CPSC,8740,AI Receptive Software Engineering
+CPSC,8740,1,CRSRA,3,AI Receptive Software Engineering
+CPSC,8810,ST: ML for Graph Data,EC09,R
+CPSC,8810,ST: Side Channel Issues in Cybersecurity ,EC09,R
+CPSC,8810,ST: Gaze Sensing in XR,EC09,R
+CPSC,8810,ST: HPC For Power System,EC09,R
+CPSC,8810,ST: Deep Learning for Compu Photography
+HCC,4+6400,Measurement and Evaluation of Human-Centered Computing Systems,K23
+HCC,4+6510,Inclusive Design and Accessible Technology,K21
+HCC,4+6520,"Tangible, Embedded, and Embodied Interaction",K21
+HCC,4+6600,Human Centered AI,K23,R
+HCC,6600,1,CRSRA,3,Human Centered AI,K23,R
+HCC,8500,The Science of Teamwork and Technology
+DPA,3070,Studio Methods for Digital Production
+DPA,3071,Studio Methods for Digital Production Laboratory
+DPA,4+6010,Technical Foundations of Digital Production II,K25,R,P
+DPA,4+6030,Visual Foundations of Digital Production II,K24,R,P
+DPA,4+6820,Special Topics: Advanced Rigging,K27
+DPA,4+6820,Special Topics: Visual Effects Animation,K28
+DPA,6830,StoryBoarding
+DPA,8080,Artistic Character Animation
+DPA,8090,Rendering and Shading
+DPA,8150,Special Effects Compositing
+DPA,8600,1,TR,1 to 6,Digital Production Studio
