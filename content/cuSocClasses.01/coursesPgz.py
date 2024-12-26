@@ -16,16 +16,18 @@ os.environ['SDL_VIDEO_WINDOW_POS'] = "0,0"
 
 class CoursesPgz(Courses):
 
-  rows, cols =   6,   3
-  dx, dy     = 350, 100
-  x0, y0     =  50,  70
+  rows, cols =   9,   5
+  dx,  dy1   = 207,  63 #dy1:   between blocks
+  dy2, dy3   =   8,  17 #dy2/3: lines within/between blocks
+  x0, y0     =  49,  28
+  x1, y1     =  56,  37
   actors     = None
   actor2id   = None
   numRd      = None
 
   rrectX, rrectY = 336, 92
   courseGroups   = None
-  timeDotActors  = None
+  timeDotActors  = None     #time dots currently legacy of readings representation, though...
   timeDotImgFn   = 'time_circ01e'
   timeDotX       = 100
   timeDotY       = 900
