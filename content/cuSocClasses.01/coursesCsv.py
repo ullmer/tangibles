@@ -12,7 +12,7 @@ class Course: #not catching any errors; caveat emptor
   fields          = None
   readingGroupNum = None
   fieldsDict      = None
-  verbose         = True
+  verbose         = False
 
   ################## constructor, error ##################
 
@@ -81,7 +81,7 @@ class Courses: #not catching any errors; caveat emptor
   csvHeaderFields = None
   coursesDict     = None
   numCourseGroups = 0
-  verbose         = True
+  verbose         = False
 
   ################## constructor, err ##################
 
