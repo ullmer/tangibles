@@ -24,14 +24,14 @@ class CoursesPgz(Courses):
   numRd      = None
 
   rrectX, rrectY = 336, 92
-  courseGroups  = None
+  courseGroups   = None
   timeDotActors  = None
   timeDotImgFn   = 'time_circ01e'
   timeDotX       = 100
   timeDotY       = 900
   timeDotDX      = 80
 
-  font1      = "oswald-medium"
+  font1      = "o1" #need to add auto-retrieval from fonts/o1.url if o1.ttf not present
   fontSize   = 40
   cwhite     = "#ffffff"
   cblack     = "#000000"
@@ -39,14 +39,14 @@ class CoursesPgz(Courses):
 
   #colorScaleColors = ['orange', 'purple']
   #colorScaleColors = ['yellow', 'white', 'cyan', 'chartreuse', 'mauve']
-  colorScaleColors = ['yellow', 'gold', 'white', 'cyan', 'chartreuse', 'violet']
+  colorScaleColors  = ['yellow', 'gold', 'white', 'cyan', 'chartreuse', 'violet']
   colorScale = None
 
   drawExtraAnnotatives  = True
 
   actorSelectedId       = None
   dotSelected           = False
-  courseTextDrawOffset = None
+  courseTextDrawOffset  = None
   connectingLineWidth   = 3
   olderPgz              = True # suppress line widths and fading for std=older pip pgz version
 
@@ -57,9 +57,9 @@ class CoursesPgz(Courses):
     super().__init__()
     self.actors                = []
     self.actor2id              = {}
-    self.courseTextDrawOffset = {}
+    self.courseTextDrawOffset  = {}
     self.timeDotActors         = {}
-    self.courseGroups         = {}
+    self.courseGroups          = {}
 
     try:    self.colorScale = spectra.scale(self.colorScaleColors)    //A
     except: print("problems with color scale; spectra probably not installed"); pass #if spectra installed, do the right thing
