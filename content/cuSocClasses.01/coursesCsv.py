@@ -144,13 +144,25 @@ class Courses: #not catching any errors; caveat emptor
 
   ################## get course by idx ##################
 
-  def getCourseByIdx(self, i): 
+  def getCourseIdByIdx(self, i): 
     try:
       cidList = list(self.coursesDict.keys())
       if i < 0 or i > len(cidList): self.err("getCourse index out of bounds: " + i); return
 
       result = cidList[i]
-      if self.verbose: self.msg("getCourseByIdx " + i + " " + result)
+      if self.verbose: msgStr = "getCourseIdByIdx %i: %s" % (i, str(result)); print(msgStr) 
+      return result
+      
+    except: self.err("getCourseIdByIdx issue: " + i); return
+
+  ################## get course by idx ##################
+
+  def getCourseByIdx(self, i): 
+    try:
+      cid    = self.getCourseIdByIdx(i)
+      result = self.coursesDict[cid]
+
+      if self.verbose: msgStr = "getCourseByIdx %i: %s" % (i, str(result)); print(msgStr) 
       return result
       
     except: self.err("getCourseByIdx issue: " + i); return
