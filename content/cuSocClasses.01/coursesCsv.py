@@ -15,7 +15,10 @@ class Course: #not catching any errors; caveat emptor
 
   ################## constructor, error ##################
 
-  def __init__(self): self.fieldsDict = {}
+  def __init__(self): 
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    self.fieldsDict = {}
+
   def err(self, msg): print("Course error:", msg); traceback.print_exc()
 
   ################## set fields from yaml ##################
@@ -59,18 +62,17 @@ class Course: #not catching any errors; caveat emptor
 ################## Courses class ##################
 
 class Courses: #not catching any errors; caveat emptor
-  fn          = 'index.yaml'  #filename
-  yd          = None          #YAML data
-  yc          = None          #YAML extraction for classes
-  readingList = None
+  fn          = 'S25.csv'  #filename
+  csvD        = None       #CSV data
+  coursesList = None
   numCourseGroups = 0
 
   ################## constructor, err ##################
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
-    self.readingList = []; self.loadYaml()
-
+    self.loadCsv()
+  
   def err(self, msg): print("Courses error:", msg); traceback.print_exc()
 
   def size(self): 
@@ -78,7 +80,8 @@ class Courses: #not catching any errors; caveat emptor
 
   ################## load YAML from file ##################
 
-  def loadYaml(self): 
+  def loadCsv(self): 
+    self.coursesList = []
     try:
       f       = open(self.fn, 'rt')
       self.yd = yaml.safe_load(f)
