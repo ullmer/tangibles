@@ -2,18 +2,19 @@
 # Brygg Ullmer, Clemson University
 # Begun 2024-09-05
 
-import traceback
+import os, traceback
 import spectra
 import pygame
 from pgzero.builtins import Actor, animate, keyboard, keys
 
-from hccReadingsYaml import *
+from coursesCsv import *
 
-WIDTH, HEIGHT = 1200, 800
+WIDTH, HEIGHT = 1920, 480
+os.environ['SDL_VIDEO_WINDOW_POS'] = "0,0"
 
 ################### readingsPg ################### 
 
-class ReadingsPg(Readings):
+class CoursesPgz(Courses):
 
   rows, cols =   6,   3
   dx, dy     = 350, 100
@@ -136,7 +137,7 @@ class ReadingsPg(Readings):
     
     #draw lines connecting readings within reading groups
     if self.drawExtraAnnotatives: 
-      self.drawLinesAmongReadingsInGroups(screen)
+      self.drawLinesAmongCoursesInGroups(screen)
 
       for i in range(self.numRd):
         self.drawTimeDotLine(screen, i)
@@ -168,7 +169,7 @@ class ReadingsPg(Readings):
 
   ################## draw lines amongs readings in groups ##################
 
-  def drawLinesAmongReadingsInGroups(self, screen): 
+  def drawLinesAmongCoursesInGroups(self, screen): 
     for i in range(self.numReadingGroups):
       readingIds = self.readingGroups[i]
       lri = len(readingIds)
@@ -177,12 +178,12 @@ class ReadingsPg(Readings):
 
       if lri >= 2:
         id0, id1 = readingIds[0], readingIds[1]
-        self.drawLineBetweenReadings(screen, id0, id1, rgcolor, self.connectingLineWidth)
+        self.drawLineBetweenCourses(screen, id0, id1, rgcolor, self.connectingLineWidth)
         if lri > 2:
           for j in range(2, lri):
             id0 = readingIds[j-1]
             id1 = readingIds[j]
-            self.drawLineBetweenReadings(screen, id0, id1, rgcolor, self.connectingLineWidth)
+            self.drawLineBetweenCourses(screen, id0, id1, rgcolor, self.connectingLineWidth)
 
   ################## on_mouse_down ##################
 
@@ -311,7 +312,7 @@ class ReadingsPg(Readings):
 
   ################## draw line between readings: bl to tl ################## 
   
-  def drawLineBetweenReadings(self, screen, readingId1, readingId2, rcolor, lwidth=1):
+  def drawLineBetweenCourses(self, screen, readingId1, readingId2, rcolor, lwidth=1):
     x1, y1 = self.calcReadingPosById(readingId1)
     x2, y2 = self.calcReadingPosById(readingId2)
 
@@ -346,9 +347,9 @@ class ReadingsPg(Readings):
 
 if __name__ == "__main__":
 
-  rpg = ReadingsPg()
+  cpgz = CoursesPgz()
 
-  def draw(): screen.clear(); rpg.draw(screen)
-  def on_mouse_down(pos):     rpg.on_mouse_down(pos)
+  def draw(): screen.clear(); cpgz.draw(screen)
+  def on_mouse_down(pos):     cpgz.on_mouse_down(pos)
 
 ### end ###
