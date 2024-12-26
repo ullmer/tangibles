@@ -15,7 +15,7 @@ class Course: #not catching any errors; caveat emptor
 
   ################## constructor, error ##################
 
-  def __init__(self): 
+  def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     self.fieldsDict = {}
 
@@ -62,6 +62,8 @@ class Course: #not catching any errors; caveat emptor
       return result
     except: self.err("getCourseId issue")
 
+  def printCourseId(self): cid = self.getCourseId(); print(cid)
+
   ################## print ##################
 
   def printCourseAbbrev(self):    
@@ -101,12 +103,11 @@ class Courses: #not catching any errors; caveat emptor
       firstRow = True
 
       for row in rdr:
-        if firstRow: self.processCsvHeader(); firstRow = False
-        else:       
-          c = Course()
-          c.setFields(self.csvHeaderFields, row)
-          courseId = c.getCourseId()
-          self.coursesDict[courseId] = c
+        if firstRow: self.processCsvHeader(row); firstRow = False; continue
+        c = Course()
+        c.setFields(self.csvHeaderFields, row)
+        courseId = c.getCourseId()
+        self.coursesDict[courseId] = c
 
     except: self.err("loadCsv issue")
 
@@ -127,7 +128,7 @@ class Courses: #not catching any errors; caveat emptor
     try:
       nc = self.getNumCourses()
       for i in range(nc):
-        c = self.getCourseByIdx(i); c.printCourseAbbrev()
+        c = self.getCourseByIdx(i); c.printCourseId()
     except: self.err("printCourseIds issue")
 
   ################## get number of courses ##################
