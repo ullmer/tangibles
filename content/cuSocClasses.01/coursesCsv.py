@@ -152,7 +152,6 @@ class Courses: #not catching any errors; caveat emptor
 
 if __name__ == "__main__":
   courses = Courses()
-  courses.loadYaml()
   courses.printCourseIds()
 
 ### end ###
