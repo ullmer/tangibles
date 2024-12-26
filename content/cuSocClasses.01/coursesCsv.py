@@ -1,12 +1,13 @@
-# Example parsing class reading list
+# Evolving hccCoursesYaml to course-related CSV variation
 # Brygg Ullmer, Clemson University
-# Begun 2024-09-05
+# Original written 2024-09-05
+# Evolution begun  2024-12-25
 
-import yaml, traceback
+import csv, traceback
 
-################## Reading class ##################
+################## Course class ##################
 
-class Reading: #not catching any errors; caveat emptor
+class Course: #not catching any errors; caveat emptor
 
   fields          = ['author', 'year', 'abbrevTitle', 'title', 'presenter', 'presentedDate']
   readingGroupNum = None
@@ -15,7 +16,7 @@ class Reading: #not catching any errors; caveat emptor
   ################## constructor, error ##################
 
   def __init__(self): self.fieldsDict = {}
-  def err(self, msg): print("Reading error:", msg); traceback.print_exc()
+  def err(self, msg): print("Course error:", msg); traceback.print_exc()
 
   ################## set fields from yaml ##################
 
@@ -49,20 +50,20 @@ class Reading: #not catching any errors; caveat emptor
 
   ################## print ##################
 
-  def printReadingAbbrev(self):    
+  def printCourseAbbrev(self):    
     try:    print(self.fieldsDict['abbrevTitle'])
-    except: self.err('printReadingAbbrev')
+    except: self.err('printCourseAbbrev')
 
   def print(self): print(self.fieldsDict)   
 
-################## Readings class ##################
+################## Courses class ##################
 
-class Readings: #not catching any errors; caveat emptor
+class Courses: #not catching any errors; caveat emptor
   fn          = 'index.yaml'  #filename
   yd          = None          #YAML data
   yc          = None          #YAML extraction for classes
   readingList = None
-  numReadingGroups = 0
+  numCourseGroups = 0
 
   ################## constructor, err ##################
 
@@ -70,7 +71,7 @@ class Readings: #not catching any errors; caveat emptor
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     self.readingList = []; self.loadYaml()
 
-  def err(self, msg): print("Readings error:", msg); traceback.print_exc()
+  def err(self, msg): print("Courses error:", msg); traceback.print_exc()
 
   def size(self): 
     if self.readingList is not None: return len(self.readingList)
@@ -86,11 +87,11 @@ class Readings: #not catching any errors; caveat emptor
 
       for classDate in self.yc:
         classPeriod = self.yc[classDate]
-        self.numReadingGroups += 1 
+        self.numCourseGroups += 1 
         for reading in classPeriod:
           reading['presentedDate'] = classDate
 
-          r = Reading()
+          r = Course()
           r.setFieldsFromYaml(reading)
           r.readingGroupNum = idx
           self.readingList.append(r)
@@ -101,25 +102,25 @@ class Readings: #not catching any errors; caveat emptor
 
   ################## print reading abbreviations ##################
 
-  def printReadingAbbrevs(self): 
+  def printCourseAbbrevs(self): 
     try:
-      for r in self.readingList: r.printReadingAbbrev()
-    except: self.err("printReadingAbbrevs")
+      for r in self.readingList: r.printCourseAbbrev()
+    except: self.err("printCourseAbbrevs")
 
   ################## get reading index ##################
 
-  def getReading(self, i): 
+  def getCourse(self, i): 
     try:
-      if i < 0 or i > len(self.readingList): self.err("getReading index out of bounds: " + i); return
+      if i < 0 or i > len(self.readingList): self.err("getCourse index out of bounds: " + i); return
       return self.readingList[i]
       
-    except: self.err("getReading: " + i); return
+    except: self.err("getCourse: " + i); return
 
 ################## main ##################
 
 if __name__ == "__main__":
-  readings = Readings()
-  readings.loadYaml()
-  readings.printReadingAbbrevs()
+  courses = Courses()
+  courses.loadYaml()
+  courses.printCourseAbbrevs()
 
 ### end ###
