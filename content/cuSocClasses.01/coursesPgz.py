@@ -21,6 +21,8 @@ class CoursesPgz(Courses):
   dy2, dy3   =   8,  17 #dy2/3: lines within/between blocks
   x0, y0     =  49,  28
   x1, y1     =  56,  37
+  x2, x3     =   4,  42 #offsets from left edge of course block to left of course #, title/instructor
+  y2, y3     =   6,  30 #offsets from  top edge of course block to  top of           title,instructor
   actors     = None
   actor2id   = None
   numRd      = None
