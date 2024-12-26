@@ -103,17 +103,25 @@ class Courses: #not catching any errors; caveat emptor
 
   def printCourseAbbrevs(self): 
     try:
-      for r in self.readingList: r.printCourseAbbrev()
-    except: self.err("printCourseAbbrevs")
+      for cid in self.coursesDict: c = self.coursesDict[cid]; c.printCourseAbbrev()
+    except: self.err("printCourseAbbrevs issue")
 
-  ################## get reading index ##################
+  ################## get number of courses ##################
+
+  def getNumCourses(self): 
+    try:
+      cidList = list(self.coursesDict.keys())
+      return len(cidList)
+    except: self.err("getNumCourses issue:")
+
+  ################## get course by idx ##################
 
   def getCourse(self, i): 
     try:
       if i < 0 or i > len(self.readingList): self.err("getCourse index out of bounds: " + i); return
       return self.readingList[i]
       
-    except: self.err("getCourse: " + i); return
+    except: self.err("getCourse issue: " + i); return
 
 ################## main ##################
 
