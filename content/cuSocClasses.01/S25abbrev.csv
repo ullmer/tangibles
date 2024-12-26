@@ -6,34 +6,25 @@ CPSC,1010,Computer Science I
 CPSC,1011,Computer Science I Laboratory
 CPSC,1020,Computer Science II
 CPSC,1021,Computer Science II Laboratory
-CPSC,1050,Introduction to Programming in Python
-CPSC,1051,Introduction to Programming in Python Laboratory
-CPSC,1070,Programming Methodology
-CPSC,1070,Programming Methodology
-CPSC,1071,Programming Methodology Laboratory
-CPSC,1071,Programming Methodology Laboratory
-CPSC,2070,4,HY,3,Discrete Structures for Computing
-CPSC,2120,Algorithms and Data Structures
-CPSC,2120,Algorithms and Data Structures
-CPSC,2121,Algorithms and Data Structures Laboratory
-CPSC,2150,Software Development Foundations
-CPSC,2200,Problem Solving with Office Applications
-CPSC,2201,Problem Solving with Office Applications Laboratory
-CPSC,2310,Introduction to Computer Organization
-CPSC,2311,Introduction to Computer Organization Laboratory
-CPSC,2920,"Computing, Ethics and Global Society"
-CPSC,2920,"Computing, Ethics and Global Society"
-CPSC,2920,"Computing, Ethics and Global Society"
-CPSC,2921,"Computing, Ethics and Global Society Recitation"
-CPSC,2921,"Computing, Ethics and Global Society Recitation"
-CPSC,2921,"Computing, Ethics and Global Society Recitation"
-CPSC,3120,Introduction to Design and Analysis of Algorithms
-CPSC,3220,Introduction to Operating Systems,EC14
-CPSC,3220,Introduction to Operating Systems
-CPSC,3300,Computer Systems Organization
-CPSC,3520,Programming Systems,EC
-CPSC,3600,Networks and Network Programming
-CPSC,3600,Networks and Network Programming
+CPSC,1050,intro prog python
+CPSC,1051,intro prog python lab 
+CPSC,1070,prog method
+CPSC,1071,prog method lab
+CPSC,2070,discrete structures
+CPSC,2120,algo & data struct
+CPSC,2121,algo & data struct lab
+CPSC,2150,sw dev foundations 
+CPSC,2200,probsolv office apps
+CPSC,2201,probsolv office apps lab
+CPSC,2310,computer org
+CPSC,2311,computer org lab
+CPSC,2920,comp ethics global society 
+CPSC,2921,comp ethics recitation
+CPSC,3120,intro algorithms
+CPSC,3220,intro OS
+CPSC,3300,comp sys org
+CPSC,3520,prog sys
+CPSC,3600,networks & net prog
 CPSC,3710,Systems Analysis
 CPSC,3720,Introduction to Software Engineering
 CPSC,3720,Introduction to Software Engineering
