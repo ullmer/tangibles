@@ -63,9 +63,10 @@ class Course: #not catching any errors; caveat emptor
 ################## Courses class ##################
 
 class Courses: #not catching any errors; caveat emptor
-  fn          = 'S25.csv'  #filename
-  csvD        = None       #CSV data
-  coursesDict = None
+  fn              = 'S25.csv'  #filename
+  csvD            = None       #CSV data
+  csvHeaderFields = None
+  coursesDict     = None
   numCourseGroups = 0
 
   ################## constructor, err ##################
@@ -99,6 +100,17 @@ class Courses: #not catching any errors; caveat emptor
 
     except: self.err("loadCsv issue")
 
+  ################## process CSV header ##################
+
+  def processCsvHeader(self, row): 
+    self.csvHeaderFields     = row 
+    self.csvHeaderFieldsDict = {}
+    idx = 0
+   
+    for field in row:
+      self.csvHeaderFieldsDict[field] = idx
+      idx += 1
+
   ################## print reading abbreviations ##################
 
   def printCourseAbbrevs(self): 
@@ -116,12 +128,13 @@ class Courses: #not catching any errors; caveat emptor
 
   ################## get course by idx ##################
 
-  def getCourse(self, i): 
+  def getCourseByIdx(self, i): 
     try:
-      if i < 0 or i > len(self.readingList): self.err("getCourse index out of bounds: " + i); return
-      return self.readingList[i]
+      cidList = list(self.coursesDict.keys())
+      if i < 0 or i > len(cidList): self.err("getCourse index out of bounds: " + i); return
+      return cidList[i]
       
-    except: self.err("getCourse issue: " + i); return
+    except: self.err("getCourseByIdx issue: " + i); return
 
 ################## main ##################
 
