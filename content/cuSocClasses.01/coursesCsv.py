@@ -55,6 +55,15 @@ class Course: #not catching any errors; caveat emptor
 
   ################## print ##################
 
+  def getCourseId(self):
+    try:
+      subj, crse = self.getFields(['Subj', 'Crse'])
+      result = subj + crse
+      return result
+    except: self.err("getCourseId issue")
+
+  ################## print ##################
+
   def printCourseAbbrev(self):    
     try:    print(self.fieldsDict['abbrevTitle'])
     except: self.err('printCourseAbbrev')
@@ -112,12 +121,14 @@ class Courses: #not catching any errors; caveat emptor
       self.csvHeaderFieldsDict[field] = idx
       idx += 1
 
-  ################## print reading abbreviations ##################
+  ################## print course IDs ##################
 
-  def printCourseAbbrevs(self): 
+  def printCourseIds(self): 
     try:
-      for cid in self.coursesDict: c = self.coursesDict[cid]; c.printCourseAbbrev()
-    except: self.err("printCourseAbbrevs issue")
+      nc = self.getNumCourses()
+      for i in range(nc):
+        c = self.getCourseByIdx(i); c.printCourseAbbrev()
+    except: self.err("printCourseIds issue")
 
   ################## get number of courses ##################
 
@@ -142,6 +153,6 @@ class Courses: #not catching any errors; caveat emptor
 if __name__ == "__main__":
   courses = Courses()
   courses.loadYaml()
-  courses.printCourseAbbrevs()
+  courses.printCourseIds()
 
 ### end ###
