@@ -73,13 +73,13 @@ HCC,6510,inclus acces
 HCC,x520,tang embed
 HCC,6600,hum-ctr ai
 HCC,8500,team tech
-DPA,3070,Studio Methods for Digital Production
-DPA,3071,Studio Methods for Digital Production Laboratory
-DPA,4+6010,Technical Foundations of Digital Production II,K25,R,P
-DPA,4+6030,Visual Foundations of Digital Production II,K24,R,P
-DPA,4+6820,Special Topics: Advanced Rigging,K27
-DPA,4+6820,Special Topics: Visual Effects Animation,K28
-DPA,6830,StoryBoarding
+DPA,3070,studio methods
+DPA,3071,studio methods lab
+DPA,x010,tech production 2
+DPA,x030,Visual Foundations of Digital Production II,K24,R,P
+DPA,x820,advan rigging
+DPA,x820,visual fx anim
+DPA,6830,storyboarding
 DPA,8080,Artistic Character Animation
 DPA,8090,Rendering and Shading
 DPA,8150,Special Effects Compositing
