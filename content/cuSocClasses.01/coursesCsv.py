@@ -12,6 +12,7 @@ class Course: #not catching any errors; caveat emptor
   fields          = None
   readingGroupNum = None
   fieldsDict      = None
+  verbose         = True
 
   ################## constructor, error ##################
 
@@ -80,6 +81,7 @@ class Courses: #not catching any errors; caveat emptor
   csvHeaderFields = None
   coursesDict     = None
   numCourseGroups = 0
+  verbose         = True
 
   ################## constructor, err ##################
 
@@ -88,6 +90,7 @@ class Courses: #not catching any errors; caveat emptor
     self.loadCsv()
   
   def err(self, msg): print("Courses error:", msg); traceback.print_exc()
+  def msg(self, msg): print("Courses msg:",   msg)
 
   def size(self): 
     if self.readingList is not None: return len(self.readingList)
@@ -145,7 +148,10 @@ class Courses: #not catching any errors; caveat emptor
     try:
       cidList = list(self.coursesDict.keys())
       if i < 0 or i > len(cidList): self.err("getCourse index out of bounds: " + i); return
-      return cidList[i]
+
+      result = cidList[i]
+      if self.verbose: self.msg("getCourseByIdx " + i + " " + result)
+      return result
       
     except: self.err("getCourseByIdx issue: " + i); return
 
