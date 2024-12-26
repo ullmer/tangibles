@@ -9,7 +9,7 @@ import csv, traceback
 
 class Course: #not catching any errors; caveat emptor
 
-  fields          = ['author', 'year', 'abbrevTitle', 'title', 'presenter', 'presentedDate']
+  fields          = None
   readingGroupNum = None
   fieldsDict      = None
 
@@ -22,12 +22,13 @@ class Course: #not catching any errors; caveat emptor
   def msg(self, msg): print("Course msg:",   msg)
   def err(self, msg): print("Course error:", msg); traceback.print_exc()
 
-  ################## set fields from yaml ##################
+  ################## set fields ##################
 
-  def setFieldsFromYaml(self, yd):
+  def setFields(self, fieldNames, fieldVals):
     try: 
-      for field in self.fields: self.fieldsDict[field] = yd[field]
-    except: self.err('setFieldsFromYaml')
+      for fieldName, fieldVal in zip(fieldNames, fieldVals):
+        self.setField(fieldName, fieldVal)
+    except: self.err('setFields')
     
   ################## set field ##################
 
@@ -94,7 +95,7 @@ class Courses: #not catching any errors; caveat emptor
         if firstRow: self.processCsvHeader(); firstRow = False
         else:       
           c = Course()
-          c.setFields(self.fields, row)
+          c.setFields(self.csvHeaderFields, row)
           courseId = c.getCourseId()
           self.coursesDict[courseId] = c
 
