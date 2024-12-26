@@ -1,7 +1,10 @@
 import os
 
-WIDTH, HEIGHT=480, 1920
+#WIDTH, HEIGHT=480, 1920
+WIDTH, HEIGHT=1920, 480
 os.environ['SDL_VIDEO_WINDOW_POS'] = "0,0"
+
+a1 = Actor("ak_apc_mm2_d01_1920")
 
 def drawRects():
   numRects = 12; h = 70; dy = 150
@@ -13,6 +16,7 @@ def drawRects():
 
 def draw():
   screen.clear()
-  drawRects()
+  a1.draw()
+  #drawRects()
 
 ### end ###
