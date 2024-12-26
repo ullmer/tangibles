@@ -19,6 +19,7 @@ class Course: #not catching any errors; caveat emptor
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     self.fieldsDict = {}
 
+  def msg(self, msg): print("Course msg:",   msg)
   def err(self, msg): print("Course error:", msg); traceback.print_exc()
 
   ################## set fields from yaml ##################
@@ -64,7 +65,7 @@ class Course: #not catching any errors; caveat emptor
 class Courses: #not catching any errors; caveat emptor
   fn          = 'S25.csv'  #filename
   csvD        = None       #CSV data
-  coursesList = None
+  coursesDict = None
   numCourseGroups = 0
 
   ################## constructor, err ##################
@@ -81,27 +82,22 @@ class Courses: #not catching any errors; caveat emptor
   ################## load YAML from file ##################
 
   def loadCsv(self): 
-    self.coursesList = []
+    self.coursesDict = {}
     try:
-      f       = open(self.fn, 'rt')
-      self.yd = yaml.safe_load(f)
-      self.yc = self.yd['class'] 
-      idx     = 0
+      f   = open(self.fn, 'rt')
+      rdr = csv.reader(f, delimiter=',', quotechar='"')
 
-      for classDate in self.yc:
-        classPeriod = self.yc[classDate]
-        self.numCourseGroups += 1 
-        for reading in classPeriod:
-          reading['presentedDate'] = classDate
+      firstRow = True
 
-          r = Course()
-          r.setFieldsFromYaml(reading)
-          r.readingGroupNum = idx
-          self.readingList.append(r)
+      for row in rdr:
+        if firstRow: self.processCsvHeader(); firstRow = False
+        else:       
+          c = Course()
+          c.setFields(self.fields, row)
+          courseId = c.getCourseId()
+          self.coursesDict[courseId] = c
 
-        idx += 1 # by class period, not reading #
-
-    except: self.err("loadYaml")
+    except: self.err("loadCsv issue")
 
   ################## print reading abbreviations ##################
 
