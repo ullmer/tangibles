@@ -80,7 +80,8 @@ class CoursesPgz(Courses):
 
   ################## error ##################
 
-  def err(self, msg): print("CoursePg error:", msg); traceback.print_exc()
+  def err(self, msg): print("CoursesPgz error:", msg); traceback.print_exc()
+  def msg(self, msg): print("CoursesPgz msg:",   msg)
 
   #def checkPgzVersion(self): 
   #  print(dir(pgzero.builtins))
