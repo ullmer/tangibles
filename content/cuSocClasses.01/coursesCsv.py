@@ -75,18 +75,21 @@ class Course: #not catching any errors; caveat emptor
 ################## Courses class ##################
 
 class Courses: #not catching any errors; caveat emptor
-  fn              = 'S25.csv'  #filename
-  csvD            = None       #CSV data
-  csvHeaderFields = None
-  coursesDict     = None
-  numCourseGroups = 0
-  verbose         = False
+  fnMain           = 'S25.csv'        #filename
+  fnAbbrev         = 'S25abbrev.csv'  #filename
+  csvDMain         = None             #CSV data
+  csvDAbbrev       = None             
+  csvHeaderFieldsM = None
+  csvHeaderFieldsA = None
+  coursesDict      = None
+  numCourseGroups  = 0
+  verbose          = False
 
   ################## constructor, err ##################
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
-    self.loadCsv()
+    self.loadCsvs()
   
   def err(self, msg): print("Courses error:", msg); traceback.print_exc()
   def msg(self, msg): print("Courses msg:",   msg)
@@ -98,26 +101,31 @@ class Courses: #not catching any errors; caveat emptor
 
   ################## load YAML from file ##################
 
-  def loadCsv(self): 
+  def loadCsvs(self): 
     self.coursesDict = {}
     try:
-      f   = open(self.fn, 'rt')
-      rdr = csv.reader(f, delimiter=',', quotechar='"')
-
+      f        = open(self.fnMain, 'rt')
+      rdr      = csv.reader(f, delimiter=',', quotechar='"')
       firstRow = True
 
       for row in rdr:
-        if firstRow: self.processCsvHeader(row); firstRow = False; continue
+        if firstRow: self.processCsvHeaderMain(row); firstRow = False; continue
         c = Course()
         c.setFields(self.csvHeaderFields, row)
         courseId = c.getCourseId()
         self.coursesDict[courseId] = c
 
-    except: self.err("loadCsv issue")
+      f.close()
+
+      f        = open(self.fnAbbrev, 'rt')
+      rdr      = csv.reader(f, delimiter=',', quotechar='"')
+      firstRow = True
+
+    except: self.err("loadCsvs issue")
 
   ################## process CSV header ##################
 
-  def processCsvHeader(self, row): 
+  def processCsvHeaderMain(self, row): 
     self.csvHeaderFields     = row 
     self.csvHeaderFieldsDict = {}
     idx = 0

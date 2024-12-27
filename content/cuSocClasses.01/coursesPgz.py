@@ -250,6 +250,11 @@ class CoursesPgz(Courses):
     c1     = self.cwhite
 
     cid1, cid2 = self.cid
+    
+    x2, x3, y2, y3 = self.x2, self.x3, self.y2, self.y3 # for compact ref below
+
+    #x2, x3     =   4,  42 #offsets from left edge of course block to left of course #, title/instructor
+    #y2, y3     =   6,  30 #offsets from  top edge of course block to  top of           title,instructor
   
     screen.draw.text(au2,   topleft  = (x0+  3, y0- 7), fontsize=fs, fontname=f1, color=c1, alpha=0.2) //B
     screen.draw.text(yr2,   topright = (x0+285, y0- 7), fontsize=fs, fontname=f1, color=c1, alpha=0.2)
