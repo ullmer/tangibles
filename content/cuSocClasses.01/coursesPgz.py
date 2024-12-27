@@ -5,11 +5,15 @@
 import os, traceback
 import spectra
 import pygame
-from pgzero.builtins import Actor, animate, keyboard, keys
 
-from coursesCsv import *
+from pgzero.builtins   import Actor, animate, keyboard, keys
+from coursesCsv        import *
+from courseAssignments import *
 
-WIDTH, HEIGHT = 1920, 480
+portrait=False #mini display default-configs as portrait
+if portrait: WIDTH, HEIGHT = 480, 1920
+else:        WIDTH, HEIGHT = 1920, 480
+
 os.environ['SDL_VIDEO_WINDOW_POS'] = "0,0"
 
 ################### coursesPg ################### 
