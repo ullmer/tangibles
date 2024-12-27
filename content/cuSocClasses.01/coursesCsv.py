@@ -10,7 +10,6 @@ import csv, traceback
 class Course: #not catching any errors; caveat emptor
 
   fields          = None
-  readingGroupNum = None
   fieldsDict      = None
   verbose         = False
 
@@ -93,7 +92,9 @@ class Courses: #not catching any errors; caveat emptor
   def msg(self, msg): print("Courses msg:",   msg)
 
   def size(self): 
-    if self.readingList is not None: return len(self.readingList)
+    if self.coursesDict is None: return 0
+    cdkl = list(self.coursesDict.keys())
+    return len(cdkl)
 
   ################## load YAML from file ##################
 
