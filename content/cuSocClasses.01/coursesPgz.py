@@ -239,11 +239,10 @@ class CoursesPgz(Courses):
   
   def drawCourse(self, screen, courseId, x0, y0):
     course = self.getCourse(courseId)
-    au, yr, abTi, prDa = course.getFields(['author', 'year', 'abbrevTitle', 'presentedDate']) 
-    mo, da = prDa.split('-')
-  
-    if type(au) is list: au2 = ', '.join(au)
-    else:                au2 = str(au)
+    instructor, courseAbbrev = course.getFields(['Instructor', 'abbrevTitle'])
+    courseId                 = course.getCourseId()
+    courseIdFirst2 = courseId[0:2]
+    courseIdLast2  = courseId[-2:]          
   
     yr2    = str(yr)
     f1, fs = self.font1, self.fontSize
