@@ -127,7 +127,8 @@ class Courses: #not catching any errors; caveat emptor
           subject, course, abbrev = row
           courseID = subject + course
           c = self.getCourseById(courseID)
-          c.setField('abbrevTitle', abbrev)
+          if c is None: self.msg("loadCsv: problem in assigning abbrev to " + courseId)
+          else: c.setField('abbrevTitle', abbrev)
         except: self.err("loadCsv abbrev issue")
     except: self.err("loadCsv issue")
 
