@@ -239,17 +239,13 @@ class CoursesPgz(Courses):
   
   def drawCourse(self, screen, courseId, x0, y0):
     course = self.getCourse(courseId)
-    instructor, courseAbbrev = course.getFields(['Instructor', 'abbrevTitle'])
-    courseId                 = course.getCourseId()
-    courseIdFirst2 = courseId[0:2]
-    courseIdLast2  = courseId[-2:]          
+    instr, cabbrev, subj, crse = course.getFields(['Instructor', 'abbrevTitle', 'Subj', 'Crse'])
+    courseIdFirst2 = crse[0:2]
+    courseIdLast2  = crse[-2:]          
   
-    yr2    = str(yr)
     f1, fs = self.font1, self.fontSize
     c1     = self.cwhite
 
-    cid1, cid2 = self.cid
-    
     x2, x3, y2, y3 = self.x2, self.x3, self.y2, self.y3 # for compact ref below
 
     #x2, x3     =   4,  42 #offsets from left edge of course block to left of course #, title/instructor
@@ -260,21 +256,6 @@ class CoursesPgz(Courses):
     screen.draw.text(abTi,  topleft  = (x0+  3, y0+41), fontsize=fs, fontname=f1, color=c1, alpha=0.5)
     screen.draw.text(mo,    topright = (x0+332, y0- 7), fontsize=fs, fontname=f1, color=c1, alpha=0.4)
     screen.draw.text(da,    topright = (x0+332, y0+41), fontsize=fs, fontname=f1, color=c1, alpha=0.3)
-
-    rGn = course.courseGroupNum
-    if rGn is not None:
-      gnt = self.getCourseGroupLetter(rGn)
-      c2 = self.getCourseGroupColor(rGn, 'hex') 
-      if self.drawExtraAnnotatives: 
-        screen.draw.text(gnt, topright = (x0+285, y0+41), fontsize=fs, fontname=f1, color=c2, alpha=.7)
-
-    if self.drawExtraAnnotatives: 
-      rrect  = pygame.Rect(x0, y0, self.rrectX, self.rrectY)
-      rcolor = self.getCourseGroupColor(rGn, 'rgb')
-
-      if self.olderPgz: screen.draw.rect(rrect, rcolor)
-      else:             screen.draw.rect(rrect, rcolor, width=2)
-
 
   ################## draw time dot text ################## 
 
