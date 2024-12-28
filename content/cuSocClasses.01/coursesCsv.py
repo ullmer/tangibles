@@ -9,7 +9,6 @@ import csv, traceback
 
 class Course: #not catching any errors; caveat emptor
 
-  fields          = None
   fieldsDict      = None
   verbose         = False
 
@@ -49,7 +48,7 @@ class Course: #not catching any errors; caveat emptor
 
     try:    
       for field in fields: result.append(self.fieldsDict[field])
-    except: self.err('getField' + field)
+    except: self.err('getFields' + field)
 
     return result
 
@@ -89,7 +88,7 @@ class Courses: #not catching any errors; caveat emptor
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
-    self.loadCsvs()
+    self.loadCsv()
   
   def err(self, msg): print("Courses error:", msg); traceback.print_exc()
   def msg(self, msg): print("Courses msg:",   msg)
@@ -101,14 +100,14 @@ class Courses: #not catching any errors; caveat emptor
 
   ################## load YAML from file ##################
 
-  def loadCsvs(self): 
+  def loadCsv(self): 
     self.coursesDict = {}
     try:
-      f        = open(self.fnMain, 'rt')
+      f        = open(self.fnMain, 'rt')  
       rdr      = csv.reader(f, delimiter=',', quotechar='"')
       firstRow = True
 
-      for row in rdr:
+      for row in rdr:   ### Process main file
         if firstRow: self.processCsvHeaderMain(row); firstRow = False; continue
         c = Course()
         c.setFields(self.csvHeaderFields, row)
@@ -117,11 +116,20 @@ class Courses: #not catching any errors; caveat emptor
 
       f.close()
 
-      f        = open(self.fnAbbrev, 'rt')
+      f        = open(self.fnAbbrev, 'rt') # Read abbrev file next
       rdr      = csv.reader(f, delimiter=',', quotechar='"')
       firstRow = True
 
-    except: self.err("loadCsvs issue")
+      for row in rdr:   ### Process abbreviations file
+        if firstRow: firstRow = False; continue
+   
+        try:
+          subject, course, abbrev = row
+          courseID = subject + course
+          c = self.getCourseById(courseID)
+          c.setField('abbrevTitle', abbrev)
+        except: self.err("loadCsv abbrev issue")
+    except: self.err("loadCsv issue")
 
   ################## process CSV header ##################
 
@@ -153,16 +161,12 @@ class Courses: #not catching any errors; caveat emptor
 
   ################## get course by idx ##################
 
-  def getCourseIdByIdx(self, i): 
+  def getCourseById(self, courseId): 
     try:
-      cidList = list(self.coursesDict.keys())
-      if i < 0 or i > len(cidList): self.err("getCourse index out of bounds: " + i); return
-
-      result = cidList[i]
-      if self.verbose: msgStr = "getCourseIdByIdx %i: %s" % (i, str(result)); print(msgStr) 
-      return result
+      if courseId in self.coursesDict: return self.coursesDict[courseId]
+      return None
       
-    except: self.err("getCourseIdByIdx issue: " + i); return
+    except: self.err("getCourseById issue: " + courseId); return
 
   ################## get course by idx ##################
 
