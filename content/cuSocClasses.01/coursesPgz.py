@@ -43,7 +43,7 @@ class CoursesPgz(Courses):
   fontSize   = 40
   cwhite     = "#ffffff"
   cblack     = "#000000"
-  actorBgFn  = 'courses_box_1c'
+  #actorBgFn  = 'courses_box_1c'
 
   #colorScaleColors = ['orange', 'purple']
   #colorScaleColors = ['yellow', 'white', 'cyan', 'chartreuse', 'mauve']
@@ -111,8 +111,8 @@ class CoursesPgz(Courses):
     #print("PGZ version: ", self.checkPgzVersion())
 
     for i in range(self.numRd):
-      a = Actor(self.actorBgFn, topleft=(x, y))
-      self.actors.append(a)
+      #a = Actor(self.actorBgFn, topleft=(x, y))
+      #self.actors.append(a)
       y += self.dy; row += 1; self.actor2id[a] = i
 
       if row >= self.rows: 
@@ -121,12 +121,6 @@ class CoursesPgz(Courses):
       n = self.getCourse(i).courseGroupNum
       if n not in self.courseGroups: self.courseGroups[n] = []
       self.courseGroups[n].append(i)
-
-      if self.drawExtraAnnotatives: 
-        tdpos = (self.timeDotX, self.timeDotY)
-        timeDotActor          = Actor(self.timeDotImgFn, pos=tdpos)
-        self.timeDotActors[i] = timeDotActor
-        self.timeDotX        += self.timeDotDX
 
   ################## calculate course position by id ##################
 
@@ -340,11 +334,13 @@ class CoursesPgz(Courses):
 
 ################## main ################## 
 
-if __name__ == "__main__":
+cpgz = CoursesPgz()
+a1   = Actor('ak_apc_mm2_d02_1920')
 
-  cpgz = CoursesPgz()
+#if __name__ == "__main__":
 
-  def draw(): screen.clear(); cpgz.draw(screen)
-  def on_mouse_down(pos):     cpgz.on_mouse_down(pos)
+
+def draw(): screen.clear(); a1.draw() #; cpgz.draw(screen)
+def on_mouse_down(pos):     pass #cpgz.on_mouse_down(pos)
 
 ### end ###
