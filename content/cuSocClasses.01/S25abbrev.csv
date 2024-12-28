@@ -1,7 +1,7 @@
 Subj,Crse,Abbrev
 BDSI,8000,Biomedical Data Science and Informatics Seminar
 BDSI,8020,Biomedical Data Standards and Terminologies
-BDSI,8120,1,SYNCH,3,Clinical and Translational Informatics
+BDSI,8120,Clinical and Translational Informatics
 CPSC,1010,Computer Science I
 CPSC,1011,Computer Science I Laboratory
 CPSC,1020,Computer Science II
@@ -29,10 +29,10 @@ CPSC,3710,Systems Analysis
 CPSC,3720,Introduction to Software Engineering
 CPSC,3720,Introduction to Software Engineering
 CPSC,3750,Web Application Development
-CPSC,x070,Applied Computer Vision,K1
-CPSC,x110,Virtual Reality Systems,K2
-CPSC,x6140,Human and Computer Interaction,K3
-CPSC,x140,Human and Computer Interaction,K4
+CPSC,x070,Applied Computer Vision
+CPSC,x110,Virtual Reality Systems
+CPSC,x6140,Human and Computer Interaction
+CPSC,x140,Human and Computer Interaction
 CPSC,x170,3D Game Programming: Algorithms and Techniques,K5
 CPSC,x180,Usable Privacy and Security,K6
 CPSC,x190,Physical Modeling and Animation,K7
