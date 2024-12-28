@@ -124,7 +124,9 @@ class Courses: #not catching any errors; caveat emptor
         if firstRow: firstRow = False; continue
    
         try:
-          subject, course, abbrev = row
+          if len(row) == 3: subject, course, abbrev = row
+          else: self.msg("loadCsv problem with abbrev file re input: " + str(row)); continue
+
           courseID = subject + course
           c = self.getCourseById(courseID)
           if c is None: self.msg("loadCsv: problem in assigning abbrev to " + courseId)
@@ -171,6 +173,15 @@ class Courses: #not catching any errors; caveat emptor
 
   ################## get course by idx ##################
 
+  def getCourseIdByIdx(self, i): 
+    try:
+      coursesL = list(self.coursesDict)
+      result = coursesL[i]
+      return result
+    except: self.err("getCourseIdByIdx" + str(i)); return -1
+
+  ################## get course by idx ##################
+
   def getCourseByIdx(self, i): 
     try:
       cid    = self.getCourseIdByIdx(i)
@@ -179,7 +190,7 @@ class Courses: #not catching any errors; caveat emptor
       if self.verbose: msgStr = "getCourseByIdx %i: %s" % (i, str(result)); print(msgStr) 
       return result
       
-    except: self.err("getCourseByIdx issue: " + i); return
+    except: self.err("getCourseByIdx issue: " + str(i)); return -1
 
 ################## main ##################
 
