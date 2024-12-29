@@ -152,13 +152,15 @@ class CoursesPgz(Courses):
 
     if self.backdropA is not None: self.backdropA.draw()
 
-    a = self.divisionBackdropA[1]; a.topleft=(500,50); a.draw()
+    a = self.divisionBackdropA[1]
 
     hccPrefixCourses = self.getCourseIdsByPrefix('HCC')
     self.msg("draw: hccPrefixCourses: " + str(hccPrefixCourses))
 
     x0, y0 = 500, 25
-    for hccpc in hccPrefixCourses: self.drawCourse(screen, hccpc, x0, y0); y0 += self.y1
+    for hccpc in hccPrefixCourses: 
+      a.topleft=(x0, y0); a.draw()
+      self.drawCourse(screen, hccpc, x0, y0); y0 += self.dy1
     
     for i in range(self.numRd):
       if i in self.courseTextDrawOffset: textDrawOffsetsSaved = True
@@ -236,6 +238,8 @@ class CoursesPgz(Courses):
     course = self.getCourseById(courseId)
     if course is None: self.msg("drawCourse: no course found for id " + str(courseId)); return
 
+    if course.hasField('abbrevTitle') is False: self.msg("ignoring " + courseId); return
+
     instr, cabbrev, subj, crse = course.getFields(['Instructor', 'abbrevTitle', 'Subj', 'Crse'])
     instr = instr.lower()
     courseIdFirst2 = crse[0:2]
@@ -258,8 +262,7 @@ class CoursesPgz(Courses):
 
 cpgz = CoursesPgz()
 #cpgz.printCourseIds()
-
-print(cpgz.courseIdsByPrefix)
+#print(cpgz.courseIdsByPrefix)
 
 #if __name__ == "__main__":
 

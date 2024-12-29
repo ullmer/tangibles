@@ -35,6 +35,14 @@ class Course: #not catching any errors; caveat emptor
     try:    self.fieldsDict[field] = val
     except: self.err('setField' + field + val)
 
+  ################## has field ##################
+
+  def hasField(self, field):       
+    try:    
+      if field in self.fieldsDict: return True
+      return False
+    except: self.err('hasField' + field)
+
   ################## get field ##################
 
   def getField(self, field):       
