@@ -22,12 +22,38 @@ os.environ['SDL_VIDEO_WINDOW_POS'] = "0,0"
 ################### coursesPg ################### 
 
 class CoursesPgzm(CoursesPgz):
-  emc = None #enodia midi controller
+  emc              = None #enodia midi controller
+  numSliders       = 9
+  sliderValDict    = None
+  sliderValDefault = 64
+  sliderFullrange  = 128
 
-  def midiCB(control, arg):   print("midicb: ", str(control), str(arg))
-  def draw(): screen.clear(); pass
-  def on_mouse_down(pos):     pass #cpgz.on_mouse_down(pos)
-  def update():               emc.pollMidi()
+  ################## constructor, error ##################
+
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    super().__init__()
+
+    self.sliderValDict = {}
+    for i in range(self.numSliders): self.sliderValDict[i] = self.sliderValDefault
+
+  ################## error ##################
+
+  def err(self, msg): print("CoursesPgzm error:", msg); traceback.print_exc()
+  def msg(self, msg): print("CoursesPgzm msg:",   msg)
+
+  def midiCB(control, arg):   print("cpgzm midicb: ", str(control), str(arg))
+
+  def drawSliders(self): 
+    try:
+      for i in range(self.numSliders)
+
+
+  def drawSlider(self, whichSlider): 
+
+  def draw(self): screen.clear(); pass
+  def on_mouse_down(self, pos):   pass #cpgz.on_mouse_down(pos)
+  def update(self):               self.emc.pollMidi()
 
 def draw(): screen.clear(); cpgz.draw(screen)
 def on_mouse_down(pos):     pass #cpgz.on_mouse_down(pos)
@@ -35,7 +61,7 @@ def update():               cpgz.update()
 
 ################### main ################### 
 
-emc = enoMidiController('aka_apcmini2', midiCtrlOutputId=4, activateOutput=True)
+emc   = enoMidiController('aka_apcmini2', midiCtrlOutputId=4, activateOutput=True)
 cpgzm = CoursesPgzm(emc=emc)
 
 emc.registerControls(midiCB)

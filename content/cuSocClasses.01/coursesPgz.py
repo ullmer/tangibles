@@ -42,7 +42,7 @@ class CoursesPgz(Courses):
   divisionBackdropA = None
 
   rrectX, rrectY = 336, 92
-  crectX, crectY = 180, 5
+  crectX, crectY = 180, 4
   courseGroups   = None
   timeDotActors  = None     #time dots currently legacy of readings representation, though...
   timeDotImgFn   = 'time_circ01e'
@@ -56,7 +56,8 @@ class CoursesPgz(Courses):
   cwhite     = "#ffffff"
   cblack     = "#000000"
   #divColors  = ['#EFDBB2', '#B94700', '#546223', '#005EB8']
-  divColors  = ['#9b8e73', '#A43800', '#2a3111', '#005EB8']
+  #divColors  = ['#5f5747', '#A43800', '#2a3111', '#005EB8']
+  divColors  = ['#474135', '#B94700', '#323a15', '#005EB8']
 
   #colorScaleColors = ['orange', 'purple']
   #colorScaleColors = ['yellow', 'white', 'cyan', 'chartreuse', 'mauve']
@@ -140,23 +141,28 @@ class CoursesPgz(Courses):
 
     c1, c2, c3, c4 = self.divColors
 
-    x0, y0 = 1283, 30
+    x0, y0 = 1283, 30; idx = 0
     for hccpc in hccPrefixCourses: 
-      a.topleft=(x0, y0); a.draw()
-      self.drawCourse(screen, hccpc, x0, y0, c2); y0 += self.dy1
+      #a.topleft=(x0, y0); a.draw()
+      #self.drawCourse(screen, hccpc, x0, y0, c2); y0 += self.dy1
+      self.drawCourseBar(screen, hccpc, x0, y0, c2); idx += 1
+      if idx % 4 == 0: y0 += 13
+      else:            y0 += 7
 
-    x0 += self.dx; y0 = 30
+    x0 += self.dx; y0 = 30; idx = 0
     for dpapc in dpaPrefixCourses: 
-      b.topleft=(x0, y0); b.draw()
-      self.drawCourse(screen, dpapc, x0, y0, c3); y0 += self.dy1
+      #b.topleft=(x0, y0); b.draw()
+      #self.drawCourse(screen, dpapc, x0, y0, c3); y0 += self.dy1
+      self.drawCourseBar(screen, dpapc, x0, y0, c3); idx += 1
+      if idx % 4 == 0: y0 += 13
+      else:            y0 += 7
 
-    x0 -= self.dx*2; y0 = 30; idx = 1
+    x0 -= self.dx*2; y0 = 30; idx = 0
     for cspc in csPrefixCourses: 
       #c.topleft=(x0, y0); c.draw()
-      self.drawCourseBar(screen, cspc, x0, y0, c1)
+      self.drawCourseBar(screen, cspc, x0, y0, c1); idx += 1
       if idx % 4 == 0: y0 += 13
-      else:            y0 += 9
-      idx += 1
+      else:            y0 += 7
 
     for i in range(self.numRd):
       if i in self.courseTextDrawOffset: textDrawOffsetsSaved = True
