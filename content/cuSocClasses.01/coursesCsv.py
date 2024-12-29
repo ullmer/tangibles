@@ -115,11 +115,10 @@ class Courses: #not catching any errors; caveat emptor
           if c is None: self.msg("loadCsv: problem in assigning abbrev to " + courseId)
           else: 
             c.setField('abbrevTitle', abbrev)
-            a,c,g,h,i = row[4:] # applications,core,graphics,hardware,interaction #hacky, but time-pressed
+            ap,co,gr,hw,ui = row[4:] # applications,core,graphics,hardware,interaction #hacky, but time-pressed
 
             c.cats = self.cats
-            c.setFields(c.cats, [a,c,g,h,i])
-
+            c.setFields(c.cats, [ap,co,gr,hw,ui])
 
         except: self.err("loadCsv abbrev issue")
     except: self.err("loadCsv issue")
