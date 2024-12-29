@@ -8,7 +8,6 @@ import pygame
 
 from pgzero.builtins   import Actor, animate, keyboard, keys
 from coursesCsv        import *
-from courseAssignments import *
 
 portrait=False #mini display default-configs as portrait
 if portrait: WIDTH, HEIGHT = 480, 1920
@@ -16,9 +15,9 @@ else:        WIDTH, HEIGHT = 1920, 480
 
 os.environ['SDL_VIDEO_WINDOW_POS'] = "0,0"
 
-################### coursesPg ################### 
+################### coursesPgzBase ################### 
 
-class CoursesPgz(Courses):
+class CoursesPgzBase(Courses):
 
   rows, cols =   9,   5
   dx,  dy1   = 205,  67 #dy1:   between blocks
@@ -258,13 +257,13 @@ class CoursesPgz(Courses):
 
 ################## main ################## 
 
-cpgz = CoursesPgz()
+
+#if __name__ == "__main__":
+cpgzb = CoursesPgzBase()
 #cpgz.printCourseIds()
 #print(cpgz.courseIdsByPrefix)
 
-#if __name__ == "__main__":
-
-def draw(): screen.clear(); cpgz.draw(screen)
+def draw(): screen.clear(); cpgzb.draw(screen)
 def on_mouse_down(pos):     pass #cpgz.on_mouse_down(pos)
 
 ### end ###
