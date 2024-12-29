@@ -74,17 +74,18 @@ class Course: #not catching any errors; caveat emptor
 ################## Courses class ##################
 
 class Courses: #not catching any errors; caveat emptor
-  fnMain           = 'S25.csv'        #filename
-  fnAbbrev         = 'S25abbrev.csv'  #filename
-  csvDMain         = None             #CSV data
-  csvDAbbrev       = None             
-  csvHeaderFieldsM = None
-  csvHeaderFieldsA = None
-  coursesDict      = None
-  numCourseGroups  = 0
-  verbose          = False
-  instrPostfix1 = ' (P)'; 
-  instrPostfix2 = ' (GTR)'
+  fnMain             = 'S25.csv'        #filename
+  fnAbbrev           = 'S25abbrev.csv'  #filename
+  csvDMain           = None             #CSV data
+  csvDAbbrev         = None             
+  csvHeaderFieldsM   = None
+  csvHeaderFieldsA   = None
+  coursesDict        = None
+  courseIdsByPrefix  = None
+  numCourseGroups    = 0
+  verbose            = False
+  instrPostfix1      = ' (P)'; 
+  instrPostfix2      = ' (GTR)'
 
   ################## constructor, err ##################
 
@@ -103,7 +104,9 @@ class Courses: #not catching any errors; caveat emptor
   ################## load YAML from file ##################
 
   def loadCsv(self): 
-    self.coursesDict = {}
+    self.coursesDict       = {}
+    self.courseIdsByPrefix = {}
+
     try:
       f        = open(self.fnMain, 'rt')  
       rdr      = csv.reader(f, delimiter=',', quotechar='"')
@@ -126,6 +129,9 @@ class Courses: #not catching any errors; caveat emptor
         elif instr1.find(ipf2) > -1: instr2 = instr1[:-6]; c.setField('Instructor', instr2)
 
         self.coursesDict[courseId] = c
+
+        if crse not in self.courseIdsByPrefix: self.courseIdsByPrefix[crse] = []
+        self.courseIdsByPrefix[crse].append(courseId)
 
       f.close()
 
