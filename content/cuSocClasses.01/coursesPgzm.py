@@ -26,7 +26,12 @@ class CoursesPgzm(CoursesPgz):
   numSliders       = 9
   sliderValDict    = None
   sliderValDefault = 64
-  sliderFullrange  = 128
+  sliderFullrangeV = 128 #fullrange of sliders, relative to internal value
+  sliderFullrangeP = 128 #fullrange of sliders, relative to pixels
+  sliderColor      = '#9999' #single-nibble, including alpha
+
+  sliderWidth      = 180
+  sliderHeight     = 10
 
   ################## constructor, error ##################
 
@@ -44,14 +49,31 @@ class CoursesPgzm(CoursesPgz):
 
   def midiCB(control, arg):   print("cpgzm midicb: ", str(control), str(arg))
 
+  ################## drawSlider(s) ##################
+
   def drawSliders(self): 
     try:
-      for i in range(self.numSliders)
+      for i in range(self.numSliders): self.drawSlider(whichSlider)
+    except: self.err("drawSliders issue")
 
+  ################## drawSlider(s) ##################
 
   def drawSlider(self, whichSlider): 
+    try:
+      if whichSlider not in self.sliderValDict: self.err("drawSlider: index unknown: " + str(whichSlider)); return
+      val     = self.sliderValDict[whichSlider]
+      normVal = float(val) / float(self.sliderFullrangeV)
 
-  def draw(self): screen.clear(); pass
+      x1 = self.x0 + self.dx * whichSlider
+      y1 = self.y0 + int(normVal * float(sliderFullrangeP))
+
+      rrect  = pygame.Rect(x1, y1, self.sliderWidth, self.sliderHeight)
+      screen.draw.rect(rrect, self.sliderColor, width=0)
+    except: self.err("drawSlider issue with slider #" + str(whichSlider))
+
+  ################## draw ##################
+
+  def draw(self):                 super.draw(); self.drawSliders()
   def on_mouse_down(self, pos):   pass #cpgz.on_mouse_down(pos)
   def update(self):               self.emc.pollMidi()
 
