@@ -259,7 +259,7 @@ class CoursesPgz(Courses):
 
     if course.hasField('abbrevTitle') is False: self.msg("ignoring " + courseId); return
 
-    instr, cabbrev, subj, crse = course.getFields(['Instructor', 'abbrevTitle', 'Subj', 'Crse'])
+    instr, cabbrev, subj, crse = course.getFields(['InstructorTrunc', 'abbrevTitle', 'Subj', 'Crse'])
     instr = instr.lower()
     courseIdFirst = crse[0:2]
 

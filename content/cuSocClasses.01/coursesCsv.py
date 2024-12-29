@@ -135,6 +135,10 @@ class Courses: #not catching any errors; caveat emptor
         if   instr1.find(ipf1) > -1: instr2 = instr1[:-4]; c.setField('Instructor', instr2)
         elif instr1.find(ipf2) > -1: instr2 = instr1[:-6]; c.setField('Instructor', instr2)
 
+        instr1 = c.getField('InstructorTrunc')
+        if   instr1.find(ipf1) > -1: instr2 = instr1[:-4]; c.setField('InstructorTrunc', instr2)
+        elif instr1.find(ipf2) > -1: instr2 = instr1[:-6]; c.setField('InstructorTrunc', instr2)
+
         self.coursesDict[courseId] = c
 
         subj = c.getField('Subj')
