@@ -21,11 +21,11 @@ os.environ['SDL_VIDEO_WINDOW_POS'] = "0,0"
 class CoursesPgz(Courses):
 
   rows, cols =   9,   5
-  dx,  dy1   = 207,  67 #dy1:   between blocks
+  dx,  dy1   = 205,  67 #dy1:   between blocks
   dy2, dy3   =   8,  17 #dy2/3: lines within/between blocks
   x0, y0     =  38,  28
   x1, y1     =  55,  37
-  x2, x3, x4 =   9,  42,  6 #offsets from left edge of course block to left of course #, title/instructor, subj
+  x2, x3, x4 =   9,  44,  7 #offsets from left edge of course block to left of course #, title/instructor, subj
   y2, y3, y4 =  -2,  26, 55 #offsets from  top edge of course block to  top of           title,instructor
 
   actorCats    = ['cs', 'hcc', 'vc', 'foi']
