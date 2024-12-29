@@ -98,21 +98,6 @@ class CoursesPgz(Courses):
   #  print(dir(pgzero.builtins))
   #  return pgzero.__version__
 
-  ################## get course group color ##################
-
-  def getCourseGroupColor(self, courseGroupId, colorType): 
-    if self.numCourseGroups is None: #unassigned; error, sigh
-      self.err("getGroupColor: numCourseGroups unassigned!"); return '#aaa'; #gray
-
-    if self.colorScale is None: return '#c99' #spectra not installed, return red
-
-    ratio = float(courseGroupId) / float(self.numCourseGroups)
-    #result = self.colorScale(ratio).rgb
-
-    if colorType == 'hex': result = self.colorScale(ratio).hexcode
-    else:                  r,g,b = self.colorScale(ratio).rgb; result = (r*255, g*255, b*255)
-    return result
-
   ################## build UI ##################
 
   def buildUI(self): 
@@ -135,16 +120,6 @@ class CoursesPgz(Courses):
 
       if row >= self.rows: 
         row = 0; col += 1; y = self.y0; x += self.dx
-
-  ################## calculate course position by id ##################
-
-  def calcCoursePosById(self, courseId): 
-    self.msg("calcCoursePosById: needs refactoring"); return
-    try:
-      actor  = self.actors[courseId]
-      result = actor.pos
-      return result
-    except: self.err("calcCoursePosById on courseId " + str(courseId)); return None
 
   ################## draw ##################
 
@@ -196,24 +171,6 @@ class CoursesPgz(Courses):
 
         if row >= self.rows: 
           row = 0; col += 1; y = self.y0; x += self.dx
-
-  ################## draw lines amongs courses in groups ##################
-
-  def drawLinesAmongCoursesInGroups(self, screen): 
-    for i in range(self.numCourseGroups):
-      courseIds = self.courseGroups[i]
-      lri = len(courseIds)
-      if lri == 1: continue #nothing to do, onwards
-      rgcolor = self.getCourseGroupColor(i, 'rgb')
-
-      if lri >= 2:
-        id0, id1 = courseIds[0], courseIds[1]
-        self.drawLineBetweenCourses(screen, id0, id1, rgcolor, self.connectingLineWidth)
-        if lri > 2:
-          for j in range(2, lri):
-            id0 = courseIds[j-1]
-            id1 = courseIds[j]
-            self.drawLineBetweenCourses(screen, id0, id1, rgcolor, self.connectingLineWidth)
 
   ################## on_mouse_down ##################
 
