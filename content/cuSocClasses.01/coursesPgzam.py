@@ -6,17 +6,15 @@ import sys, os, traceback
 import spectra
 import pygame
 
-from pygame            import time
-from enoMidiController import *
-from time              import sleep #mixture of time noted, should resolve
-from pgzero.builtins   import Actor, animate, keyboard, keys
-from coursesCsv        import *
-from courseAssignments import *
-from coursesPgz        import *
+from pygame              import time
+from enoMidiController   import *
+from time                import sleep #mixture of time noted, should resolve
+from pgzero.builtins     import Actor, animate, keyboard, keys
+from coursesPgzAccordion import *
 
-################### coursesPg ################### 
+################### coursesPgz Accordion + MIDI ################### 
 
-class CoursesPgzm(CoursesPgz):
+class CoursesPgzam(CoursesPgzAccordion):
   emc              = None #enodia midi controller
   numSliders       = 9
   sdx0, sdx        = 1, 1.3 #differences in slider x0, dx relative to CoursesPgz
@@ -96,14 +94,14 @@ class CoursesPgzm(CoursesPgz):
 ################### main ################### 
 
 emc   = enoMidiController('aka_apcmini2', midiCtrlOutputId=4, activateOutput=True)
-cpgzm = CoursesPgzm(emc=emc)
+cpgzam = CoursesPgzam(emc=emc)
 
-emc.registerControls(cpgzm.midiCB)
+emc.registerControls(cpgzam.midiCB)
 
 for i in range(64): emc.midiOut.note_on(i, i, 3)
 
-def draw(): screen.clear(); cpgzm.draw(screen)
+def draw(): screen.clear(); cpgzam.draw(screen)
 def on_mouse_down(pos):     pass #cpgzm.on_mouse_down(pos)
-def update():               cpgzm.update()
+def update():               cpgzam.update()
 
 ### end ###

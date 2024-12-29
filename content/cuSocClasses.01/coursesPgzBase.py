@@ -259,11 +259,11 @@ class CoursesPgzBase(Courses):
 
 
 #if __name__ == "__main__":
-cpgzb = CoursesPgzBase()
+#cpgzb = CoursesPgzBase()
 #cpgz.printCourseIds()
 #print(cpgz.courseIdsByPrefix)
 
-def draw(): screen.clear(); cpgzb.draw(screen)
-def on_mouse_down(pos):     pass #cpgz.on_mouse_down(pos)
+#def draw(): screen.clear(); cpgzb.draw(screen)
+#def on_mouse_down(pos):     pass #cpgz.on_mouse_down(pos)
 
 ### end ###
