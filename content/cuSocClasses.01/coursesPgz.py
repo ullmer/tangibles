@@ -32,8 +32,11 @@ class CoursesPgz(Courses):
   actorCatDict = None   #actor category dictionary; contemplating graceful paths to manage pi ram
   actors       = None
   actor2id     = None
-  #numRd        = None
+  #numRd       = None
   numRd        = 0
+
+  backdropFn   = 'ak_apc_mm2_d03_1920'
+  backdropA    = None
 
   rrectX, rrectY = 336, 92
   courseGroups   = None
@@ -112,6 +115,8 @@ class CoursesPgz(Courses):
     row, col = 0, 0
     x, y     = self.x0, self.y0
 
+    self.backdropA = Actor(self.backdropFn)
+
     #print("PGZ version: ", self.checkPgzVersion())
 
     for i in range(self.numRd):
@@ -140,6 +145,9 @@ class CoursesPgz(Courses):
   def draw(self, screen): 
     row, col = 0, 0
     x, y     = self.x0, self.y0
+
+    if self.backdropA is not None: self.backdropA.draw()
+    return
     
     #draw lines connecting courses within course groups
     if self.drawExtraAnnotatives: 
@@ -339,12 +347,11 @@ class CoursesPgz(Courses):
 ################## main ################## 
 
 cpgz = CoursesPgz()
-a1   = Actor('ak_apc_mm2_d03_1920')
-a2   = Actor('ak_apc_mm2_d03_1920_b', pos=(500, 50))
+#a2   = Actor('ak_apc_mm2_d03_1920_b', pos=(500, 50))
 
 #if __name__ == "__main__":
 
-def draw(): screen.clear(); a1.draw(); a2.draw() #; cpgz.draw(screen)
+def draw(): screen.clear(); cpgz.draw(screen)
 def on_mouse_down(pos):     pass #cpgz.on_mouse_down(pos)
 
 ### end ###
