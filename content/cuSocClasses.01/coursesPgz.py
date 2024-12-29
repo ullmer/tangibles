@@ -164,17 +164,17 @@ class CoursesPgz(Courses):
 
     c1, c2, c3, c4 = self.divColors
 
-    x0, y0 = 1283, 40
+    x0, y0 = 1283, 30
     for hccpc in hccPrefixCourses: 
       a.topleft=(x0, y0); a.draw()
       self.drawCourse(screen, hccpc, x0, y0, c2); y0 += self.dy1
 
-    x0 += self.dx; y0 = 40
+    x0 += self.dx; y0 = 30
     for dpapc in dpaPrefixCourses: 
       b.topleft=(x0, y0); b.draw()
       self.drawCourse(screen, dpapc, x0, y0, c3); y0 += self.dy1
 
-    x0 -= self.dx*2; y0 = 40
+    x0 -= self.dx*2; y0 = 30
     for cspc in csPrefixCourses: 
       c.topleft=(x0, y0); c.draw()
       self.drawCourse(screen, cspc, x0, y0, c1); y0 += self.dy1
