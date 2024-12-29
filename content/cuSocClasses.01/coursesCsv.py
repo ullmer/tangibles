@@ -4,6 +4,7 @@
 # Evolution begun  2024-12-25
 
 import csv, traceback
+from courseBase import *
 
 ################## Courses class ##################
 
@@ -178,6 +179,17 @@ class Courses: #not catching any errors; caveat emptor
       return self.courseIdsByPrefix[prefix]
     except:
       self.err("getCourseIdsByPrefix issue"); return None
+
+  ################## get course by index ##################
+
+  def getCourseByIdx(self, i): 
+    try:
+      cid    = self.getCourseIdByIdx(i)
+      result = self.coursesDict[cid]
+      if self.verbose: msgStr = "getCourseByIdx %i: %s" % (i, str(result)); print(msgStr) 
+      return result
+      
+    except: self.err("getCourseByIdx issue: " + str(i)); return -1
 
 ################## main ##################
 
