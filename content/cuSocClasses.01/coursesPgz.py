@@ -27,9 +27,12 @@ class CoursesPgz(Courses):
   x1, y1     =  56,  37
   x2, x3     =   4,  42 #offsets from left edge of course block to left of course #, title/instructor
   y2, y3     =   6,  30 #offsets from  top edge of course block to  top of           title,instructor
-  actors     = None
-  actor2id   = None
-  numRd      = None
+
+  actorCats    = ['cs', 'hcc', 'vc', 'foi']
+  actorCatDict = None   #actor category dictionary; contemplating graceful paths to manage pi ram
+  actors       = None
+  actor2id     = None
+  numRd        = None
 
   rrectX, rrectY = 336, 92
   courseGroups   = None
@@ -111,9 +114,9 @@ class CoursesPgz(Courses):
     #print("PGZ version: ", self.checkPgzVersion())
 
     for i in range(self.numRd):
-      #a = Actor(self.actorBgFn, topleft=(x, y))
+      a = Actor(self.actorBgFn, topleft=(x, y))
       #self.actors.append(a)
-      y += self.dy; row += 1; self.actor2id[a] = i
+      y += self.dy1; row += 1; self.actor2id[a] = i
 
       if row >= self.rows: 
         row = 0; col += 1; y = self.y0; x += self.dx
@@ -335,7 +338,7 @@ class CoursesPgz(Courses):
 ################## main ################## 
 
 cpgz = CoursesPgz()
-a1   = Actor('ak_apc_mm2_d02_1920')
+a1   = Actor('ak_apc_mm2_d03_1920')
 
 #if __name__ == "__main__":
 
