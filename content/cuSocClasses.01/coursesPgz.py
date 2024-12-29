@@ -124,10 +124,6 @@ class CoursesPgz(Courses):
       if row >= self.rows: 
         row = 0; col += 1; y = self.y0; x += self.dx
 
-      n = self.getCourse(i).courseGroupNum
-      if n not in self.courseGroups: self.courseGroups[n] = []
-      self.courseGroups[n].append(i)
-
   ################## calculate course position by id ##################
 
   def calcCoursePosById(self, courseId): 
@@ -145,6 +141,8 @@ class CoursesPgz(Courses):
     x, y     = self.x0, self.y0
 
     if self.backdropA is not None: self.backdropA.draw()
+    self.drawCourse(screen, 'HCCx520', 500, 50)
+    return
     
     for i in range(self.numRd):
       if i in self.courseTextDrawOffset: textDrawOffsetsSaved = True
@@ -219,7 +217,7 @@ class CoursesPgz(Courses):
   ################## draw course ################## 
   
   def drawCourse(self, screen, courseId, x0, y0):
-    course = self.getCourse(courseId)
+    course = self.getCourseById(courseId)
     instr, cabbrev, subj, crse = course.getFields(['Instructor', 'abbrevTitle', 'Subj', 'Crse'])
     courseIdFirst2 = crse[0:2]
     courseIdLast2  = crse[-2:]          
@@ -232,11 +230,10 @@ class CoursesPgz(Courses):
     #x2, x3     =   4,  42 #offsets from left edge of course block to left of course #, title/instructor
     #y2, y3     =   6,  30 #offsets from  top edge of course block to  top of           title,instructor
   
-    screen.draw.text(au2,   topleft  = (x0+  3, y0- 7), fontsize=fs, fontname=f1, color=c1, alpha=0.2) //B
-    screen.draw.text(yr2,   topright = (x0+285, y0- 7), fontsize=fs, fontname=f1, color=c1, alpha=0.2)
-    screen.draw.text(abTi,  topleft  = (x0+  3, y0+41), fontsize=fs, fontname=f1, color=c1, alpha=0.5)
-    screen.draw.text(mo,    topright = (x0+332, y0- 7), fontsize=fs, fontname=f1, color=c1, alpha=0.4)
-    screen.draw.text(da,    topright = (x0+332, y0+41), fontsize=fs, fontname=f1, color=c1, alpha=0.3)
+    screen.draw.text(courseIdFirst2,   topleft  = (x0 + x2, y0 - y2), fontsize=fs, fontname=f1, color=c1, alpha=0.2) 
+    screen.draw.text(courseIdLast2,    topleft  = (x0 + x2, y0 - y3), fontsize=fs, fontname=f1, color=c1, alpha=0.2) 
+    screen.draw.text(cabbrev,          topleft  = (x0 + x3, y0 - y2), fontsize=fs, fontname=f1, color=c1, alpha=0.2)
+    screen.draw.text(instr,            topleft  = (x0 + x3, y0 - y3), fontsize=fs, fontname=f1, color=c1, alpha=0.2)
 
   ################## draw time dot text ################## 
 
