@@ -42,6 +42,7 @@ class CoursesPgz(Courses):
   divisionBackdropA = None
 
   rrectX, rrectY = 336, 92
+  crectX, crectY = 180, 5
   courseGroups   = None
   timeDotActors  = None     #time dots currently legacy of readings representation, though...
   timeDotImgFn   = 'time_circ01e'
@@ -55,7 +56,7 @@ class CoursesPgz(Courses):
   cwhite     = "#ffffff"
   cblack     = "#000000"
   #divColors  = ['#EFDBB2', '#B94700', '#546223', '#005EB8']
-  divColors  = ['#bfaf8e', '#A43800', '#2a3111', '#005EB8']
+  divColors  = ['#EFDBB2', '#A43800', '#2a3111', '#005EB8']
 
   #colorScaleColors = ['orange', 'purple']
   #colorScaleColors = ['yellow', 'white', 'cyan', 'chartreuse', 'mauve']
@@ -151,8 +152,8 @@ class CoursesPgz(Courses):
 
     x0 -= self.dx*2; y0 = 30
     for cspc in csPrefixCourses: 
-      c.topleft=(x0, y0); c.draw()
-      self.drawCourse(screen, cspc, x0, y0, c1); y0 += self.dy1
+      #c.topleft=(x0, y0); c.draw()
+      self.drawCourseBar(screen, cspc, x0, y0, c1); y0 += 15
 
     for i in range(self.numRd):
       if i in self.courseTextDrawOffset: textDrawOffsetsSaved = True
@@ -208,7 +209,16 @@ class CoursesPgz(Courses):
 
   ################## draw course ################## 
   
-  def drawCourse(self, screen, courseId, x0, y0, col):
+  def drawCourseBar(self, screen, courseId, x0, y0, color):
+    rrect  = pygame.Rect(x0, y0, self.crectX, self.crectY)
+    screen.draw.rect(rrect, color, width=0)
+
+    #if self.olderPgz: screen.draw.rect(rrect, rcolor)
+    #else:             screen.draw.rect(rrect, rcolor, width=2)
+
+  ################## draw course ################## 
+  
+  def drawCourse(self, screen, courseId, x0, y0, color):
     course = self.getCourseById(courseId)
     x0 += 16
 
