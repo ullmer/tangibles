@@ -211,6 +211,15 @@ class Courses: #not catching any errors; caveat emptor
       
     except: self.err("getCourseByIdx issue: " + str(i)); return -1
 
+  ################## get course ids by prefix##################
+
+  def getCourseIdsByPrefix(self, prefix): 
+    try:
+      if prefix not in self.courseIdsByPrefix: self.msg("getCourseIdsByPrefix: prefix not found: " + prefix); return None
+      return self.courseIdsByPrefix[prefix]
+    except:
+      self.err("getCourseIdsByPrefix issue"); return None
+
 ################## main ##################
 
 if __name__ == "__main__":
