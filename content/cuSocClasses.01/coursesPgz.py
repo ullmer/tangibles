@@ -25,8 +25,8 @@ class CoursesPgz(Courses):
   dy2, dy3   =   8,  17 #dy2/3: lines within/between blocks
   x0, y0     =  49,  28
   x1, y1     =  55,  37
-  x2, x3     =   7,  42 #offsets from left edge of course block to left of course #, title/instructor
-  y2, y3     =  -2,  26 #offsets from  top edge of course block to  top of           title,instructor
+  x2, x3, x4 =   7,  42,  0 #offsets from left edge of course block to left of course #, title/instructor, subj
+  y2, y3, y4 =  -2,  26, 55 #offsets from  top edge of course block to  top of           title,instructor
 
   actorCats    = ['cs', 'hcc', 'vc', 'foi']
   actorCatDict = None   #actor category dictionary; contemplating graceful paths to manage pi ram
@@ -232,7 +232,7 @@ class CoursesPgz(Courses):
 
       x1, y1 = actor.pos
       dx, dy = rel
-      x2, y2 = x1+dx, y1+dy
+      x2, y2 = x1+dx, y1+dy 
 
       if id in self.courseTextDrawOffset and not(self.dotSelected): 
         x3, y3 = self.courseTextDrawOffset[id]
@@ -261,15 +261,16 @@ class CoursesPgz(Courses):
     f1, fs = self.font1, self.fontSize
     c1     = self.cwhite
 
-    x2, x3, y2, y3 = self.x2, self.x3, self.y2, self.y3 # for compact ref below
+    x2, x3, x4, y2, y3, y4 = self.x2, self.x3, self.x4, self.y2, self.y3, self.y4 # for compact ref below
 
     #x2, x3     =   4,  42 #offsets from left edge of course block to left of course #, title/instructor
     #y2, y3     =   6,  30 #offsets from  top edge of course block to  top of           title,instructor
   
-    screen.draw.text(courseIdFirst2,   topleft  = (x0 + x2, y0 + y2), fontsize=fs, fontname=f1, color=c1, alpha=0.6) 
-    screen.draw.text(courseIdLast2,    topleft  = (x0 + x2, y0 + y3), fontsize=fs, fontname=f1, color=c1, alpha=0.6) 
-    screen.draw.text(cabbrev,          topleft  = (x0 + x3, y0 + y2), fontsize=fs, fontname=f1, color=c1, alpha=0.6)
-    screen.draw.text(instr,            topleft  = (x0 + x3, y0 + y3), fontsize=fs, fontname=f1, color=c1, alpha=0.5)
+    screen.draw.text(courseIdFirst2,   topleft = (x0 + x2, y0 + y2), fontsize=fs, fontname=f1, color=c1, alpha=0.6) 
+    screen.draw.text(courseIdLast2,    topleft = (x0 + x2, y0 + y3), fontsize=fs, fontname=f1, color=c1, alpha=0.6) 
+    screen.draw.text(cabbrev,          topleft = (x0 + x3, y0 + y2), fontsize=fs, fontname=f1, color=c1, alpha=0.6)
+    screen.draw.text(instr,            topleft = (x0 + x3, y0 + y3), fontsize=fs, fontname=f1, color=c1, alpha=0.5)
+    screen.draw.text(subj,          bottomleft = (x0 + x4, y0 + y4), fontsize=fs, fontname=f1, color=c1, alpha=0.5, angle=90)
 
 ################## main ################## 
 
