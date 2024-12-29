@@ -10,7 +10,7 @@ from coursesCsv import *
 
 ################### coursesPgz Categories ################### 
 
-class CoursesCats(CoursesCsv):
+class CoursesCats(Courses):
 
   ################## constructor, error ##################
 

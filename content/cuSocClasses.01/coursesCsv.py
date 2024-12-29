@@ -45,7 +45,7 @@ class Courses: #not catching any errors; caveat emptor
     self.coursesDict       = {}
     self.courseIdsByPrefix = {}
     self.catsDict          = {}
-    for cat in cats: self.catsDict[cat] = [] #list of course IDs associated with each category
+    for cat in self.cats: self.catsDict[cat] = [] #list of course IDs associated with each category
 
   ################## constructor, err ##################
 
@@ -108,15 +108,14 @@ class Courses: #not catching any errors; caveat emptor
         if firstRow: firstRow = False; continue
    
         try:
-          if len(row) == 3: subject, course, abbrev = row
-          else: self.msg("loadCsv problem with abbrev file re input: " + str(row)); continue
+          subject, course, abbrev = row[0:3]
 
           courseID = subject + course
           c = self.getCourseById(courseID)
           if c is None: self.msg("loadCsv: problem in assigning abbrev to " + courseId)
           else: 
             c.setField('abbrevTitle', abbrev)
-            a,c,g,h,i = row[3:] # applications,core,graphics,hardware,interaction #hacky, but time-pressed
+            a,c,g,h,i = row[4:] # applications,core,graphics,hardware,interaction #hacky, but time-pressed
 
             c.cats = self.cats
             c.setFields(c.cats, [a,c,g,h,i])
