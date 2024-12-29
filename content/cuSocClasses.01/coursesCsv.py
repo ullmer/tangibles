@@ -128,9 +128,9 @@ class Courses: #not catching any errors; caveat emptor
         c.setFields(self.csvHeaderFields, row)
 
         crse = c.getField('Crse')
-        if crse.find('4+6') > -1: crse2 = 'x' + crse[3:]; c.setField('Crse', crse2)
-        if c.getField('Crse').find('4+6') > -1: c.setField
+        if crse.find('4+6') > -1: crse2 = 'x' + crse[3:]; c.setField('Crse', crse2); print(">>" + subj + crse2)
         courseId = c.getCourseId()
+        print(courseId)
 
         instr1 = c.getField('Instructor')
         if   instr1.find(ipf1) > -1: instr2 = instr1[:-4]; c.setField('Instructor', instr2)
