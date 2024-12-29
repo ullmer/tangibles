@@ -21,11 +21,11 @@ os.environ['SDL_VIDEO_WINDOW_POS'] = "0,0"
 class CoursesPgz(Courses):
 
   rows, cols =   9,   5
-  dx,  dy1   = 207,  63 #dy1:   between blocks
+  dx,  dy1   = 207,  67 #dy1:   between blocks
   dy2, dy3   =   8,  17 #dy2/3: lines within/between blocks
   x0, y0     =  38,  28
   x1, y1     =  55,  37
-  x2, x3, x4 =   7,  40,  5 #offsets from left edge of course block to left of course #, title/instructor, subj
+  x2, x3, x4 =   9,  42,  6 #offsets from left edge of course block to left of course #, title/instructor, subj
   y2, y3, y4 =  -2,  26, 55 #offsets from  top edge of course block to  top of           title,instructor
 
   actorCats    = ['cs', 'hcc', 'vc', 'foi']
@@ -51,7 +51,7 @@ class CoursesPgz(Courses):
 
   font1      = "o1" #need to add auto-retrieval from fonts/o1.url if o1.ttf not present
   fontSize1  = 24
-  fontSize2  = 18
+  fontSize2  = 17.5
   cwhite     = "#ffffff"
   cblack     = "#000000"
   #divColors  = ['#EFDBB2', '#B94700', '#546223', '#005EB8']
@@ -164,7 +164,7 @@ class CoursesPgz(Courses):
 
     c1, c2, c3, c4 = self.divColors
 
-    x0, y0 = 1290, 40
+    x0, y0 = 1283, 40
     for hccpc in hccPrefixCourses: 
       a.topleft=(x0, y0); a.draw()
       self.drawCourse(screen, hccpc, x0, y0, c2); y0 += self.dy1
@@ -253,7 +253,7 @@ class CoursesPgz(Courses):
   
   def drawCourse(self, screen, courseId, x0, y0, col):
     course = self.getCourseById(courseId)
-    x0 += 13
+    x0 += 16
 
     if course is None: self.msg("drawCourse: no course found for id " + str(courseId)); return
 
