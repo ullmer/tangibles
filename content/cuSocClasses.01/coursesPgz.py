@@ -153,15 +153,21 @@ class CoursesPgz(Courses):
     if self.backdropA is not None: self.backdropA.draw()
 
     a = self.divisionBackdropA[1]
+    b = self.divisionBackdropA[2]
 
     hccPrefixCourses = self.getCourseIdsByPrefix('HCC')
-    self.msg("draw: hccPrefixCourses: " + str(hccPrefixCourses))
 
-    x0, y0 = 500, 25
+    x0, y0 = 1300, 40
     for hccpc in hccPrefixCourses: 
       a.topleft=(x0, y0); a.draw()
       self.drawCourse(screen, hccpc, x0, y0); y0 += self.dy1
-    
+
+    dpaPrefixCourses = self.getCourseIdsByPrefix('DPA')
+    x0 += self.dx; y0 = 40
+    for dpapc in dpaPrefixCourses: 
+      b.topleft=(x0, y0); b.draw()
+      self.drawCourse(screen, dpapc, x0, y0); y0 += self.dy1
+
     for i in range(self.numRd):
       if i in self.courseTextDrawOffset: textDrawOffsetsSaved = True
       else:                               textDrawOffsetsSaved = False
