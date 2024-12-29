@@ -233,6 +233,7 @@ class CoursesPgz(Courses):
     if course is None: self.msg("drawCourse: no course found for id " + str(courseId)); return
 
     instr, cabbrev, subj, crse = course.getFields(['Instructor', 'abbrevTitle', 'Subj', 'Crse'])
+    instr = instr.lower()
     courseIdFirst2 = crse[0:2]
     courseIdLast2  = crse[-2:]          
   
@@ -249,93 +250,10 @@ class CoursesPgz(Courses):
     screen.draw.text(cabbrev,          topleft  = (x0 + x3, y0 + y2), fontsize=fs, fontname=f1, color=c1, alpha=0.6)
     screen.draw.text(instr,            topleft  = (x0 + x3, y0 + y3), fontsize=fs, fontname=f1, color=c1, alpha=0.5)
 
-  ################## draw time dot text ################## 
-
-  def drawTimeDotText(self, screen, courseId):
-    course = self.getCourse(courseId)
-    rGn     = course.courseGroupNum
-    f1, fs  = self.font1, self.fontSize
-
-    if rGn is not None:
-      timeDotActor = self.timeDotActors[courseId]
-      gnt  = self.getCourseGroupLetter(rGn)
-      c2   = self.getCourseGroupColor(rGn, 'hex') 
-      x, y = timeDotActor.pos
-      x   -= 1 #nudge by one pixel; a detail, but shows
-      screen.draw.text(gnt, center=(x,y), fontsize=fs, fontname=f1, color=c2, alpha=.7)
-
-  ################## draw time dot text ################## 
-
-  def drawTimeDotLine(self, screen, courseId):
-    course = self.getCourse(courseId)
-    rGn     = course.courseGroupNum
-    if rGn is None: self.err("drawTimeDotLine: rGn error, ignoring"); return
-
-    x1, y1 = self.calcCoursePosById(courseId)
-    ryDiv2 = self.rrectY/2.
-    y1    += ryDiv2
-
-    gnt = self.getCourseGroupLetter(rGn)
-    c2  = self.getCourseGroupColor(rGn, 'rgb') 
-    timeDotActor = self.timeDotActors[courseId]
-    x2, y2 = timeDotActor.pos
-
-    r,g,b = c2 
-    s = .5 #scale, since transparency not working (well)
-    r *= s; g *= s; b *= s
-    c3    = (r,g,b,250)
-
-    #screen.draw.line((x1, y1), (x2, y2), c3, width=1)
-    screen.draw.line((x1, y1), (x2, y2), c3)
-
-    #if self.olderPgz: screen.draw.rect(rrect, rcolor)
-    #else:             screen.draw.rect(rrect, rcolor, width=2)
-
-  ################## get course group letter ################## 
-
-  def getCourseGroupLetter(self, courseGroupNumber):
-    result = str(chr(ord('A') + courseGroupNumber))
-    return result
-
-  ################## draw line between courses: bl to tl ################## 
-  
-  def drawLineBetweenCourses(self, screen, courseId1, courseId2, rcolor, lwidth=1):
-    x1, y1 = self.calcCoursePosById(courseId1)
-    x2, y2 = self.calcCoursePosById(courseId2)
-
-    rxDiv2 = self.rrectX/2.
-    ryDiv2 = self.rrectY/2.
-
-    x1 -= rxDiv2
-    x2 -= rxDiv2
-    y1 += ryDiv2
-    y2 -= ryDiv2
-
-    x3, x4 = x1+self.rrectX, x2+self.rrectX
-    x5, x6 = x1+rxDiv2,      x2+rxDiv2
-
-    r,g,b = rcolor
-
-    s = .7 #scale, since transparency not working (well)
-    r *= s; g *= s; b *= s
-    
-    rcolor2  = (r,g,b,250)
-
-    if self.olderPgz: 
-      screen.draw.line((x1, y1), (x2, y2), rcolor2)
-      screen.draw.line((x3, y1), (x4, y2), rcolor2)
-      screen.draw.line((x5, y1), (x6, y2), rcolor2)
-    else:             
-      screen.draw.line((x1, y1), (x2, y2), rcolor2, width=lwidth)
-      screen.draw.line((x3, y1), (x4, y2), rcolor2, width=lwidth)
-      screen.draw.line((x5, y1), (x6, y2), rcolor2, width=lwidth)
-
 ################## main ################## 
 
 cpgz = CoursesPgz()
-
-cpgz.printCourseIds()
-#a2   = Actor('ak_apc_mm2_d03_1920_b', pos=(500, 50))
+#cpgz.printCourseIds()
 
 #if __name__ == "__main__":
 
