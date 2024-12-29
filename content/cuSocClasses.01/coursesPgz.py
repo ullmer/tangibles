@@ -25,8 +25,8 @@ class CoursesPgz(Courses):
   dy2, dy3   =   8,  17 #dy2/3: lines within/between blocks
   x0, y0     =  49,  28
   x1, y1     =  56,  37
-  x2, x3     =   4,  42 #offsets from left edge of course block to left of course #, title/instructor
-  y2, y3     =   6,  30 #offsets from  top edge of course block to  top of           title,instructor
+  x2, x3     =   7,  42 #offsets from left edge of course block to left of course #, title/instructor
+  y2, y3     =  -2,  26 #offsets from  top edge of course block to  top of           title,instructor
 
   actorCats    = ['cs', 'hcc', 'vc', 'foi']
   actorCatDict = None   #actor category dictionary; contemplating graceful paths to manage pi ram
@@ -37,6 +37,10 @@ class CoursesPgz(Courses):
   backdropFn   = 'ak_apc_mm2_d03_1920'
   backdropA    = None
 
+  divisionBackdrops = ['ak_apc_mm2_d03_1920_a', 'ak_apc_mm2_d03_1920_b', 
+                       'ak_apc_mm2_d03_1920_c', 'ak_apc_mm2_d03_1920_d']
+  divisionBackdropA = None
+
   rrectX, rrectY = 336, 92
   courseGroups   = None
   timeDotActors  = None     #time dots currently legacy of readings representation, though...
@@ -46,7 +50,7 @@ class CoursesPgz(Courses):
   timeDotDX      = 80
 
   font1      = "o1" #need to add auto-retrieval from fonts/o1.url if o1.ttf not present
-  fontSize   = 40
+  fontSize   = 24
   cwhite     = "#ffffff"
   cblack     = "#000000"
   #actorBgFn  = 'courses_box_1c'
@@ -117,6 +121,12 @@ class CoursesPgz(Courses):
 
     #print("PGZ version: ", self.checkPgzVersion())
 
+    if self.divisionBackdrops is not None:
+      idx = 0; self.divisionBackdropA = []
+      for divisionBackdrop in self.divisionBackdrops:
+        a = Actor(divisionBackdrop) 
+        self.divisionBackdropA.append(a)
+
     for i in range(self.numRd):
       a = Actor(self.actorBgFn, topleft=(x, y))
       y += self.dy1; row += 1; self.actor2id[a] = i
@@ -141,6 +151,8 @@ class CoursesPgz(Courses):
     x, y     = self.x0, self.y0
 
     if self.backdropA is not None: self.backdropA.draw()
+
+    a = self.divisionBackdropA[1]; a.topleft=(500,50); a.draw()
     self.drawCourse(screen, 'HCCx520', 500, 50)
     return
     
@@ -230,10 +242,10 @@ class CoursesPgz(Courses):
     #x2, x3     =   4,  42 #offsets from left edge of course block to left of course #, title/instructor
     #y2, y3     =   6,  30 #offsets from  top edge of course block to  top of           title,instructor
   
-    screen.draw.text(courseIdFirst2,   topleft  = (x0 + x2, y0 - y2), fontsize=fs, fontname=f1, color=c1, alpha=0.2) 
-    screen.draw.text(courseIdLast2,    topleft  = (x0 + x2, y0 - y3), fontsize=fs, fontname=f1, color=c1, alpha=0.2) 
-    screen.draw.text(cabbrev,          topleft  = (x0 + x3, y0 - y2), fontsize=fs, fontname=f1, color=c1, alpha=0.2)
-    screen.draw.text(instr,            topleft  = (x0 + x3, y0 - y3), fontsize=fs, fontname=f1, color=c1, alpha=0.2)
+    screen.draw.text(courseIdFirst2,   topleft  = (x0 + x2, y0 + y2), fontsize=fs, fontname=f1, color=c1, alpha=0.6) 
+    screen.draw.text(courseIdLast2,    topleft  = (x0 + x2, y0 + y3), fontsize=fs, fontname=f1, color=c1, alpha=0.6) 
+    screen.draw.text(cabbrev,          topleft  = (x0 + x3, y0 + y2), fontsize=fs, fontname=f1, color=c1, alpha=0.6)
+    screen.draw.text(instr,            topleft  = (x0 + x3, y0 + y3), fontsize=fs, fontname=f1, color=c1, alpha=0.5)
 
   ################## draw time dot text ################## 
 
