@@ -30,7 +30,6 @@ class CoursesPgz(Courses):
 
   actorCats    = ['cs', 'hcc', 'vc', 'foi']
   actorCatDict = None   #actor category dictionary; contemplating graceful paths to manage pi ram
-  actors       = None
   actor2id     = None
   #numRd       = None
   numRd        = 0
@@ -70,7 +69,6 @@ class CoursesPgz(Courses):
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
-    self.actors                = []
     self.actor2id              = {}
     self.courseTextDrawOffset  = {}
     self.timeDotActors         = {}
@@ -121,7 +119,6 @@ class CoursesPgz(Courses):
 
     for i in range(self.numRd):
       a = Actor(self.actorBgFn, topleft=(x, y))
-      #self.actors.append(a)
       y += self.dy1; row += 1; self.actor2id[a] = i
 
       if row >= self.rows: 
@@ -134,6 +131,7 @@ class CoursesPgz(Courses):
   ################## calculate course position by id ##################
 
   def calcCoursePosById(self, courseId): 
+    self.msg("calcCoursePosById: needs refactoring"); return
     try:
       actor  = self.actors[courseId]
       result = actor.pos
@@ -147,22 +145,7 @@ class CoursesPgz(Courses):
     x, y     = self.x0, self.y0
 
     if self.backdropA is not None: self.backdropA.draw()
-    return
     
-    #draw lines connecting courses within course groups
-    if self.drawExtraAnnotatives: 
-      self.drawLinesAmongCoursesInGroups(screen)
-
-      for i in range(self.numRd):
-        self.drawTimeDotLine(screen, i)
-
-      for i in range(self.numRd):
-        timeDotActor = self.timeDotActors[i]
-        timeDotActor.draw()
-        self.drawTimeDotText(screen, i)
-
-    for actor in self.actors: actor.draw()
-
     for i in range(self.numRd):
       if i in self.courseTextDrawOffset: textDrawOffsetsSaved = True
       else:                               textDrawOffsetsSaved = False
@@ -208,14 +191,6 @@ class CoursesPgz(Courses):
         print("Actor selected:", i)
         self.actorSelectedId = i
         return
-
-      if self.drawExtraAnnotatives: 
-        actor = self.timeDotActors[i]
-        if actor.collidepoint(pos): 
-          print("Actor selected:", i)
-          self.actorSelectedId = i
-          self.dotSelected     = True
-          return
 
   ################## on_mouse_move ##################
 
