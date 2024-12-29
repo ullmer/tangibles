@@ -153,7 +153,7 @@ class CoursesPgz(Courses):
     if self.backdropA is not None: self.backdropA.draw()
 
     a = self.divisionBackdropA[1]
-    b = self.divisionBackdropA[2]
+    b = self.divisionBackdropA[0]
 
     hccPrefixCourses = self.getCourseIdsByPrefix('HCC')
 
