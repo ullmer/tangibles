@@ -14,12 +14,6 @@ from coursesCsv        import *
 from courseAssignments import *
 from coursesPgz        import *
 
-portrait=False #mini display default-configs as portrait
-if portrait: WIDTH, HEIGHT = 480, 1920
-else:        WIDTH, HEIGHT = 1920, 480
-
-os.environ['SDL_VIDEO_WINDOW_POS'] = "0,0"
-
 ################### coursesPg ################### 
 
 class CoursesPgzm(CoursesPgz):
@@ -29,11 +23,8 @@ class CoursesPgzm(CoursesPgz):
   sliderValDefault = 64
   sliderFullrangeV = 128 #fullrange of sliders, relative to internal value
   sliderFullrangeP = 128 #fullrange of sliders, relative to pixels
-  sliderImgFn       = 'ak_apc_mm2_s01_1920'
-  sliderADict       = None #slider actor dict: one actor per sliderr 
-
-  sliderWidth      = 180
-  sliderHeight     = 10
+  sliderImgFn      = 'ak_apc_mm2_s01_1920'
+  sliderADict      = None #slider actor dict: one actor per sliderr 
 
   ################## constructor, error ##################
 
@@ -81,8 +72,8 @@ class CoursesPgzm(CoursesPgz):
       #self.msg("drawSlider: " + str(list[whichSlider, x1, y1]))
 
       a = self.sliderADict[whichSlider]
-      #a.topleft = (x1, y1)
-      a.pos= (x1, y1)
+      a.topleft = (x1, y1)
+      a.draw()
 
     except: self.err("drawSlider issue with slider #" + str(whichSlider))
 
