@@ -259,6 +259,8 @@ class CoursesPgz(Courses):
 cpgz = CoursesPgz()
 #cpgz.printCourseIds()
 
+print(cpgz.courseIdsByPrefix)
+
 #if __name__ == "__main__":
 
 def draw(): screen.clear(); cpgz.draw(screen)

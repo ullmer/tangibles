@@ -130,8 +130,9 @@ class Courses: #not catching any errors; caveat emptor
 
         self.coursesDict[courseId] = c
 
-        if crse not in self.courseIdsByPrefix: self.courseIdsByPrefix[crse] = []
-        self.courseIdsByPrefix[crse].append(courseId)
+        subj = c.getField('Subj')
+        if subj not in self.courseIdsByPrefix: self.courseIdsByPrefix[subj] = []
+        self.courseIdsByPrefix[subj].append(courseId)
 
       f.close()
 
