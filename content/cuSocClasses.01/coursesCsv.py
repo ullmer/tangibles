@@ -83,6 +83,8 @@ class Courses: #not catching any errors; caveat emptor
   coursesDict      = None
   numCourseGroups  = 0
   verbose          = False
+  instrPostfix1 = ' (P)'; 
+  instrPostfix2 = ' (GTR)'
 
   ################## constructor, err ##################
 
@@ -107,6 +109,8 @@ class Courses: #not catching any errors; caveat emptor
       rdr      = csv.reader(f, delimiter=',', quotechar='"')
       firstRow = True
 
+      ipf1, ipf2 = self.instrPostfix1, self.instrPostfix2 
+
       for row in rdr:   ### Process main file
         if firstRow: self.processCsvHeaderMain(row); firstRow = False; continue
         c = Course()
@@ -116,6 +120,11 @@ class Courses: #not catching any errors; caveat emptor
         if crse.find('4+6') > -1: crse2 = 'x' + crse[3:]; c.setField('Crse', crse2)
         if c.getField('Crse').find('4+6') > -1: c.setField
         courseId = c.getCourseId()
+
+        instr1 = c.getField('Instructor')
+        if   instr1.find(ipf1) > -1: instr2 = instr1[:-4]; c.setField('Instructor', instr2)
+        elif instr1.find(ipf2) > -1: instr2 = instr1[:-6]; c.setField('Instructor', instr2)
+
         self.coursesDict[courseId] = c
 
       f.close()

@@ -230,6 +230,8 @@ class CoursesPgz(Courses):
   
   def drawCourse(self, screen, courseId, x0, y0):
     course = self.getCourseById(courseId)
+    if course is None: self.msg("drawCourse: no course found for id " + str(courseId)); return
+
     instr, cabbrev, subj, crse = course.getFields(['Instructor', 'abbrevTitle', 'Subj', 'Crse'])
     courseIdFirst2 = crse[0:2]
     courseIdLast2  = crse[-2:]          
