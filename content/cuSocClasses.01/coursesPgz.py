@@ -25,7 +25,7 @@ class CoursesPgz(Courses):
   dy2, dy3   =   8,  17 #dy2/3: lines within/between blocks
   x0, y0     =  38,  28
   x1, y1     =  55,  37
-  x2, x3, x4 =   7,  42,  4 #offsets from left edge of course block to left of course #, title/instructor, subj
+  x2, x3, x4 =   7,  42,  5 #offsets from left edge of course block to left of course #, title/instructor, subj
   y2, y3, y4 =  -2,  26, 55 #offsets from  top edge of course block to  top of           title,instructor
 
   actorCats    = ['cs', 'hcc', 'vc', 'foi']
@@ -51,7 +51,7 @@ class CoursesPgz(Courses):
 
   font1      = "o1" #need to add auto-retrieval from fonts/o1.url if o1.ttf not present
   fontSize1  = 24
-  fontSize2  = 20
+  fontSize2  = 18
   cwhite     = "#ffffff"
   cblack     = "#000000"
   #divColors  = ['#EFDBB2', '#B94700', '#546223', '#005EB8']
@@ -164,7 +164,7 @@ class CoursesPgz(Courses):
 
     c1, c2, c3, c4 = self.divColors
 
-    x0, y0 = 1305, 40
+    x0, y0 = 1290, 40
     for hccpc in hccPrefixCourses: 
       a.topleft=(x0, y0); a.draw()
       self.drawCourse(screen, hccpc, x0, y0, c2); y0 += self.dy1
@@ -253,6 +253,8 @@ class CoursesPgz(Courses):
   
   def drawCourse(self, screen, courseId, x0, y0, col):
     course = self.getCourseById(courseId)
+    x0 += 13
+
     if course is None: self.msg("drawCourse: no course found for id " + str(courseId)); return
 
     if course.hasField('abbrevTitle') is False: self.msg("ignoring " + courseId); return
@@ -272,11 +274,11 @@ class CoursesPgz(Courses):
     #x2, x3     =   4,  42 #offsets from left edge of course block to left of course #, title/instructor
     #y2, y3     =   6,  30 #offsets from  top edge of course block to  top of           title,instructor
   
-    screen.draw.text(courseIdFirst,   topleft = (x0 + x2, y0 + y2), fontsize=fs1, fontname=f1, color=c1,  alpha=0.6) 
-    screen.draw.text(courseIdLast,    topleft = (x0 + x2, y0 + y3), fontsize=fs1, fontname=f1, color=c1,  alpha=0.6) 
-    screen.draw.text(cabbrev,         topleft = (x0 + x3, y0 + y2), fontsize=fs1, fontname=f1, color=c1,  alpha=0.6)
-    screen.draw.text(instr,           topleft = (x0 + x3, y0 + y3), fontsize=fs1, fontname=f1, color=c1,  alpha=0.5)
-    screen.draw.text(subj,         bottomleft = (x0 + x4, y0 + y4), fontsize=fs2, fontname=f1, color=col, alpha=0.9, angle=90)
+    screen.draw.text(courseIdFirst,   topleft = (x0 + x2, y0 + y2), fontsize=fs1, fontname=f1, color=c1, alpha=0.6) 
+    screen.draw.text(courseIdLast,    topleft = (x0 + x2, y0 + y3), fontsize=fs1, fontname=f1, color=c1, alpha=0.6) 
+    screen.draw.text(cabbrev,         topleft = (x0 + x3, y0 + y2), fontsize=fs1, fontname=f1, color=c1, alpha=0.6)
+    screen.draw.text(instr,           topleft = (x0 + x3, y0 + y3), fontsize=fs1, fontname=f1, color=c1, alpha=0.5)
+    screen.draw.text(subj,         bottomleft = (x0 + x4, y0 + y4), fontsize=fs2, fontname=f1, color=c1, alpha=0.6, angle=90)
 
 ################## main ################## 
 
