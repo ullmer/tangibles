@@ -19,12 +19,14 @@ from coursesPgz        import *
 class CoursesPgzm(CoursesPgz):
   emc              = None #enodia midi controller
   numSliders       = 9
+  sdx0, sdx        = 1, 1.3 #differences in slider x0, dx relative to CoursesPgz
   sliderValDict    = None
-  sliderValDefault = 64
+  sliderValDefault = 128 
   sliderFullrangeV = 128 #fullrange of sliders, relative to internal value
-  sliderFullrangeP = 128 #fullrange of sliders, relative to pixels
+  sliderFullrangeP = 338#fullrange of sliders, relative to pixels
   sliderImgFn      = 'ak_apc_mm2_s01_1920'
   sliderADict      = None #slider actor dict: one actor per sliderr 
+  verbose          = False
 
   ################## constructor, error ##################
 
@@ -39,7 +41,15 @@ class CoursesPgzm(CoursesPgz):
   def err(self, msg): print("CoursesPgzm error:", msg); traceback.print_exc()
   def msg(self, msg): print("CoursesPgzm msg:",   msg)
 
-  def midiCB(self, control, arg):   print("cpgzm midicb: ", str(control), str(arg))
+  ################## midi callback ##################
+
+  def midiCB(self, control, arg):   
+    try:
+      if self.verbose: print("cpgzm midicb: ", str(control), str(arg))
+      whichSlider = int(control[-1]) - 1 #control is "s1", "s2", etc.
+      whichVal    = int(arg)
+      self.sliderValDict[whichSlider] = self.sliderFullrangeV - whichVal
+    except: self.err("midiCb " + str([control, arg]))
 
   ################## initSliders ##################
 
@@ -66,13 +76,13 @@ class CoursesPgzm(CoursesPgz):
       val     = self.sliderValDict[whichSlider]
       normVal = float(val) / float(self.sliderFullrangeV)
 
-      x1 = self.x0 + self.dx * whichSlider
-      y1 = self.y0 + int(normVal * float(self.sliderFullrangeP))
+      x = self.x0 + self.sdx0 + ((self.dx + self.sdx) * whichSlider)
+      y = self.y0 + int(normVal * float(self.sliderFullrangeP))
 
       #self.msg("drawSlider: " + str(list[whichSlider, x1, y1]))
 
       a = self.sliderADict[whichSlider]
-      a.topleft = (x1, y1)
+      a.topleft = (x, y)
       a.draw()
 
     except: self.err("drawSlider issue with slider #" + str(whichSlider))
