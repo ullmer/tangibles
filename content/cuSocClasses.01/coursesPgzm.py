@@ -12,6 +12,7 @@ from time              import sleep #mixture of time noted, should resolve
 from pgzero.builtins   import Actor, animate, keyboard, keys
 from coursesCsv        import *
 from courseAssignments import *
+from coursesPgz        import *
 
 portrait=False #mini display default-configs as portrait
 if portrait: WIDTH, HEIGHT = 480, 1920
@@ -77,16 +78,17 @@ class CoursesPgzm(CoursesPgz):
   def on_mouse_down(self, pos):   pass #cpgz.on_mouse_down(pos)
   def update(self):               self.emc.pollMidi()
 
-def draw(): screen.clear(); cpgz.draw(screen)
-def on_mouse_down(pos):     pass #cpgz.on_mouse_down(pos)
-def update():               cpgz.update()
-
 ################### main ################### 
 
 emc   = enoMidiController('aka_apcmini2', midiCtrlOutputId=4, activateOutput=True)
 cpgzm = CoursesPgzm(emc=emc)
 
-emc.registerControls(midiCB)
+emc.registerControls(cpgzm.midiCB)
+
 for i in range(64): emc.midiOut.note_on(i, i, 3)
+
+def draw(): screen.clear(); cpgzm.draw(screen)
+def on_mouse_down(pos):     pass #cpgzm.on_mouse_down(pos)
+def update():               cpgzm.update()
 
 ### end ###
