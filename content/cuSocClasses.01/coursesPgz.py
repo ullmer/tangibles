@@ -25,7 +25,7 @@ class CoursesPgz(Courses):
   dy2, dy3   =   8,  17 #dy2/3: lines within/between blocks
   x0, y0     =  38,  28
   x1, y1     =  55,  37
-  x2, x3, x4 =   7,  42,  5 #offsets from left edge of course block to left of course #, title/instructor, subj
+  x2, x3, x4 =   7,  40,  5 #offsets from left edge of course block to left of course #, title/instructor, subj
   y2, y3, y4 =  -2,  26, 55 #offsets from  top edge of course block to  top of           title,instructor
 
   actorCats    = ['cs', 'hcc', 'vc', 'foi']
