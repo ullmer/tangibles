@@ -319,6 +319,8 @@ class CoursesPgz(Courses):
 ################## main ################## 
 
 cpgz = CoursesPgz()
+
+cpgz.printCourseIds()
 #a2   = Actor('ak_apc_mm2_d03_1920_b', pos=(500, 50))
 
 #if __name__ == "__main__":
