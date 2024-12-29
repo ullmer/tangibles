@@ -31,7 +31,7 @@ CPSC,3720,Introduction to Software Engineering
 CPSC,3750,Web Application Development
 CPSC,x070,Applied Computer Vision
 CPSC,x110,Virtual Reality Systems
-CPSC,x6140,Human and Computer Interaction
+CPSC,6140,Human and Computer Interaction
 CPSC,x140,Human and Computer Interaction
 CPSC,x170,3D Game Programming: Algorithms and Techniques
 CPSC,x180,Usable Privacy and Security
@@ -43,13 +43,11 @@ CPSC,6300,appl data sci
 CPSC,x420,AI
 CPSC,x430,ML impl eval 
 CPSC,x440,Cloud Computing Architecture
-CPSC,6620,1,CRSRA,3,Database Management Systems
-CPSC,x620,Database Management Systems
 CPSC,x620,Database Management Systems
 CPSC,x720,Software Development Methodology
 CPSC,x780,General Purpose Computation on Graphical Processing Units
-CPSC,x820,embedded sys
-CPSC,x820,crypto
+CPSC,x820a,embedded sys
+CPSC,x820b,crypto
 CPSC,4910,sc practicum
 CPSC,4911,sc practicum lab
 CPSC,7030,mscs ready 3
@@ -67,17 +65,17 @@ CPSC,8810,cybersec side
 CPSC,8810,gaze xr
 CPSC,8810,hpc power
 CPSC,8810,cphoto learn 
-HCC,6400,measur eval
-HCC,6510,inclus acces
-HCC,x520,tang embed
-HCC,6600,hum-ctr ai
+HCC,x400,measur eval
+HCC,x510,inclus acces
+HCC,x520,tang embed ui
+HCC,x600,hum-ctr ai
 HCC,8500,team tech
 DPA,3070,studio methods
 DPA,3071,studio methods lab
 DPA,x010,tech production 2
 DPA,x030,visual production 2
-DPA,x820,advan rigging
-DPA,x820,visual fx anim
+DPA,x820a,advanc rigging
+DPA,x820b,visual fx anim
 DPA,6830,storyboarding
 DPA,8080,art char anim
 DPA,8090,rendering&shading 
