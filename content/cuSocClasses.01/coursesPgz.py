@@ -56,7 +56,7 @@ class CoursesPgz(Courses):
   cwhite     = "#ffffff"
   cblack     = "#000000"
   #divColors  = ['#EFDBB2', '#B94700', '#546223', '#005EB8']
-  divColors  = ['#EFDBB2', '#A43800', '#2a3111', '#005EB8']
+  divColors  = ['#9b8e73', '#A43800', '#2a3111', '#005EB8']
 
   #colorScaleColors = ['orange', 'purple']
   #colorScaleColors = ['yellow', 'white', 'cyan', 'chartreuse', 'mauve']
@@ -150,10 +150,13 @@ class CoursesPgz(Courses):
       b.topleft=(x0, y0); b.draw()
       self.drawCourse(screen, dpapc, x0, y0, c3); y0 += self.dy1
 
-    x0 -= self.dx*2; y0 = 30
+    x0 -= self.dx*2; y0 = 30; idx = 1
     for cspc in csPrefixCourses: 
       #c.topleft=(x0, y0); c.draw()
-      self.drawCourseBar(screen, cspc, x0, y0, c1); y0 += 15
+      self.drawCourseBar(screen, cspc, x0, y0, c1)
+      if idx % 4 == 0: y0 += 13
+      else:            y0 += 9
+      idx += 1
 
     for i in range(self.numRd):
       if i in self.courseTextDrawOffset: textDrawOffsetsSaved = True
