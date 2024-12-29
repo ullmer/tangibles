@@ -6,11 +6,11 @@ import os, traceback
 import pygame
 
 from pgzero.builtins   import Actor, animate, keyboard, keys
-from coursesPgzBase    import *
+from coursesCsv import *
 
 ################### coursesPgz Categories ################### 
 
-class CoursesPgzCats(CoursesPgzBase):
+class CoursesCats(CoursesCsv):
 
   ################## constructor, error ##################
 
@@ -26,7 +26,7 @@ class CoursesPgzCats(CoursesPgzBase):
 ################## main ################## 
 
 if __name__ == "__main__":
-  cpgzc = CoursesPgzCats()
+  cc = CoursesCats()
 
 #def draw(): screen.clear(); cpgza.draw(screen)
 #def on_mouse_down(pos):     pass #cpgz.on_mouse_down(pos)
