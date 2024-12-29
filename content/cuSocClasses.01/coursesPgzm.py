@@ -29,7 +29,8 @@ class CoursesPgzm(CoursesPgz):
   sliderValDefault = 64
   sliderFullrangeV = 128 #fullrange of sliders, relative to internal value
   sliderFullrangeP = 128 #fullrange of sliders, relative to pixels
-  sliderColor      = '#9999' #single-nibble, including alpha
+  sliderImgFn       = 'ak_apc_mm2_s01_1920'
+  sliderADict       = None #slider actor dict: one actor per sliderr 
 
   sliderWidth      = 180
   sliderHeight     = 10
@@ -40,21 +41,30 @@ class CoursesPgzm(CoursesPgz):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
 
-    self.sliderValDict = {}
-    for i in range(self.numSliders): self.sliderValDict[i] = self.sliderValDefault
+    self.initSliders()
 
   ################## error ##################
 
   def err(self, msg): print("CoursesPgzm error:", msg); traceback.print_exc()
   def msg(self, msg): print("CoursesPgzm msg:",   msg)
 
-  def midiCB(control, arg):   print("cpgzm midicb: ", str(control), str(arg))
+  def midiCB(self, control, arg):   print("cpgzm midicb: ", str(control), str(arg))
+
+  ################## initSliders ##################
+
+  def initSliders(self): 
+    self.sliderValDict = {}
+    self.sliderADict   = {}
+
+    for i in range(self.numSliders): 
+      self.sliderValDict[i] = self.sliderValDefault
+      self.sliderADict[i]   = Actor(self.sliderImgFn)
 
   ################## drawSlider(s) ##################
 
   def drawSliders(self): 
     try:
-      for i in range(self.numSliders): self.drawSlider(whichSlider)
+      for i in range(self.numSliders): self.drawSlider(i)
     except: self.err("drawSliders issue")
 
   ################## drawSlider(s) ##################
@@ -66,15 +76,19 @@ class CoursesPgzm(CoursesPgz):
       normVal = float(val) / float(self.sliderFullrangeV)
 
       x1 = self.x0 + self.dx * whichSlider
-      y1 = self.y0 + int(normVal * float(sliderFullrangeP))
+      y1 = self.y0 + int(normVal * float(self.sliderFullrangeP))
 
-      rrect  = pygame.Rect(x1, y1, self.sliderWidth, self.sliderHeight)
-      screen.draw.rect(rrect, self.sliderColor, width=0)
+      #self.msg("drawSlider: " + str(list[whichSlider, x1, y1]))
+
+      a = self.sliderADict[whichSlider]
+      #a.topleft = (x1, y1)
+      a.pos= (x1, y1)
+
     except: self.err("drawSlider issue with slider #" + str(whichSlider))
 
   ################## draw ##################
 
-  def draw(self):                 super.draw(); self.drawSliders()
+  def draw(self, screen):         super().draw(screen); self.drawSliders()
   def on_mouse_down(self, pos):   pass #cpgz.on_mouse_down(pos)
   def update(self):               self.emc.pollMidi()
 
