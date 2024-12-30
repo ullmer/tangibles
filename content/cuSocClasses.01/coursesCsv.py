@@ -120,6 +120,12 @@ class Courses: #not catching any errors; caveat emptor
             c.cats = self.cats
             c.setFields(c.cats, [ap,co,gr,hw,ui])
 
+          for cat in c.cats:
+            v = c.getField(cat)
+            if v in self.catAssocChars: 
+              if cat not in self.catsDict: self.catsDict[cat] = []
+              self.catsDict[cat].append(courseID)
+
         except: self.err("loadCsv abbrev issue")
     except: self.err("loadCsv issue")
 

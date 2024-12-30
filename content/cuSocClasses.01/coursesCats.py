@@ -43,7 +43,7 @@ class CoursesCats(Courses):
 if __name__ == "__main__":
   cc = CoursesCats()
   cats = cc.getCats()
-  print(str(cc.catsDict))
+  print("catsDict:" + str(cc.catsDict))
   for cat in cats:
     numCats = cc.getNumCoursesInCat(cat)
     print("%s: %i courses" % (cat, numCats))
