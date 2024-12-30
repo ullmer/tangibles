@@ -12,7 +12,15 @@ from coursesCsv import *
 ################### coursesPgz Categories ################### 
 
 class CoursesCats(Courses):
-  socDbInst   = None
+  socDbInst       = None
+
+  instructors     = None
+  faculty2div     = None
+  div2faculty     = None
+
+  mapCourse2Div   = None
+  mapDiv2Courses  = None
+  mapCourse2Title = None
 
   ################## constructor, error ##################
 
