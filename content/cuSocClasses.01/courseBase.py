@@ -86,7 +86,8 @@ class Course: #not catching any errors; caveat emptor
   def getCourseId(self):
     if self.fieldsDict is None:              self.msg("getCourseId issue: fields dictionary not instantiated!"); return None
     if not self.hasFields(['Subj', 'Crse']): 
-      self.msg("getCourseId issue: does not have both Subj and Crse!")
+      if self.verbose: self.msg("getCourseId issue: does not have both Subj and Crse!")
+      else:            print("!", end='')
       #self.msg(str(self.fieldsDict))
       return None
 
