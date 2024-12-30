@@ -173,21 +173,21 @@ class CoursesCats(Courses):
     self.mapCourse2Title = {}
 
     try:
-      for row in self.tableRows:
-        print("foo", row)
-        subject, course1, instructor, title, mode = row[0], row[1], row[10], row[5], row[3]
+      for courseID in self.coursesDict:
+        course = self.coursesDict[courseID]
+       
+        subject, crse, instructor, title, mode = course.getFields('Subj', 'Crse', 'Instructor', 'Title', 'Mode')
         if mode == 'CRSRA': continue #skip Coursera for the moment; interesting to consider converse
-        course2  = subject + course1
         name1    = self.mapNameR2C[instructor]
         name2    = self.mapNameC2D[name1]
         division = self.faculty2div[name2]
         #print(course2, name2, division)
 
         if division not in self.mapDiv2Courses: self.mapDiv2Courses[division] = []
-        self.mapCourse2Div[course2]   = division
-        self.mapCourse2Title[course2] = title
+        self.mapCourse2Div[courseID]   = division
+        self.mapCourse2Title[courseID] = title
         if course2 not in self.mapDiv2Courses[division]: 
-          self.mapDiv2Courses[division].append(course2)
+          self.mapDiv2Courses[division].append(courseID)
     except:
       self.err("mapCoursesToDivisions exception")
       traceback.print_exc(); return False
