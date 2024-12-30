@@ -41,7 +41,7 @@ class CoursesCats(Courses):
   ################## get ##################
 
   #def getCats(self): return list(self.catsDict.keys())
-  def getCats(self): return self.cats
+  def getCats(self): return self.cats   #two different approaches; presently uncertain if one is "better"
 
   def getNumCoursesInCat(self, cat): 
     if cat not in self.catsDict: self.msg("getNumCoursesInCats: cat not found: " + str(cat)); return None
@@ -59,6 +59,22 @@ class CoursesCats(Courses):
 
     result = ' '.join(coursesList)
     return result
+
+  ############# extract field values #############
+
+  def extractFieldVals(self, fieldName):
+    try:
+      result = []
+
+      for courseId in self.coursesDict:
+        course = self.coursesDict[courseId]
+        if not course.hasField(fieldName): continue # ignore such courses initially; may benefit from revisiting
+        val = course.getField(fieldName)
+        result.append(val)
+
+      return result
+    except:
+      self.err("extractFieldVals exception")
 
   ############# extract field values unique #############
 
@@ -78,19 +94,11 @@ class CoursesCats(Courses):
   ############# getInstructors #############
 
   def getInstructors(self):
-    instr1 = self.extractFieldValsUnique('Instructor') #first, get raw fields
-    instr2 = []; postfix1 = ' (P)'; postfix2 = ' (GTR)'
-    self.mapNameR2C  = {}
-
-    for instr in instr1:
-      if   instr.find(postfix1) > -1: instrCl = instr[:-4]; instr2.append(instrCl) #instructor-clean
-      elif instr.find(postfix2) > -1: instrCl = instr[:-6]; instr2.append(instrCl) #instructor-clean
-      else:                           instrCl = instr; instr2.append(instr)
-
-      self.mapNameR2C[instr] = instrCl
-
-    instr2.sort()
-    return instr2
+    try:
+      result = self.extractFieldValsUnique('Instructor') #first, get raw fields
+      result.sort()
+      return result
+    except: self.err("getInstructors issue:")
 
   ############# mapInstructorsC2S (map in csv to sql; middle name inclusion inconsistent) #############
 
@@ -180,6 +188,9 @@ class CoursesCats(Courses):
         self.mapCourse2Title[course2] = title
         if course2 not in self.mapDiv2Courses[division]: 
           self.mapDiv2Courses[division].append(course2)
+    except:
+      self.err("mapCoursesToDivisions exception")
+      traceback.print_exc(); return False
 
 ################## main ################## 
 
@@ -192,6 +203,16 @@ if __name__ == "__main__":
     courses = cc.getCoursesInCatStr(cat)
     print("%s: %i courses" % (cat, numCats))
     print(">> " + courses)
+
+  print("=" * 20)
+  subjs = cc.extractFieldValsUnique('Subj')
+  print(cc.div2faculty['HCC'])
+  print(cc.mapDiv2Courses['HCC'])
+  for c in cc.mapDiv2Courses['HCC']: print(ca.mapCourse2Title[c])
+
+  for div in cc.mapDiv2Courses:
+    ndiv = len(cc.mapDiv2Courses[div])
+    print(div, ndiv)
 
 #def draw(): screen.clear(); cpgza.draw(screen)
 #def on_mouse_down(pos):     pass #cpgz.on_mouse_down(pos)
