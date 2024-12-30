@@ -26,7 +26,11 @@ class Course: #not catching any errors; caveat emptor
 
   def setFields(self, fieldNames, fieldVals):
     try: 
-      if self.verbose: self.msg("setFields: " + self.getCourseId() + str(fieldNames) + str(fieldVals))
+      cid = self.getCourseId()
+      if self.verbose: 
+        if cid is None: self.msg("setFields: " + str(fieldNames) + str(fieldVals))
+        else:           self.msg("setFields: " + cid + str(fieldNames) + str(fieldVals))
+
       for fieldName, fieldVal in zip(fieldNames, fieldVals):
         self.setField(fieldName, fieldVal)
     except: self.err('setFields')
@@ -37,7 +41,7 @@ class Course: #not catching any errors; caveat emptor
     try:    self.fieldsDict[field] = val
     except: self.err('setField' + field + val)
 
-  ################## has field ##################
+  ################## has field(s) ##################
 
   def hasField(self, field):       
     try:    
@@ -45,16 +49,26 @@ class Course: #not catching any errors; caveat emptor
       return False
     except: self.err('hasField' + field)
 
+  def hasFields(self, fields):
+    try:    
+      for field in fields: 
+        if not self.hasField(field): return False
+      return True
+    except: self.err('hasFields' + field)
+
   ################## get field ##################
 
   def getField(self, field):       
     try:    return self.fieldsDict[field]
     except: self.err('getField' + field)
 
-  ################## get field ##################
+  ################## get fields ##################
 
   def getFields(self, fields):       
     result = []
+
+    if self.fieldsDicts is None:     self.msg("getFields issue: fields dictionary not instantiated!"); return None
+    if not isinstance(fields, list): self.msg("getFields issue: argument fields is not a list!");      return None
 
     try:    
       for field in fields: result.append(self.fieldsDict[field])
@@ -68,6 +82,9 @@ class Course: #not catching any errors; caveat emptor
   ################## print ##################
 
   def getCourseId(self):
+    if self.fieldsDict is None:              self.msg("getCourseId issue: fields dictionary not instantiated!"); return None
+    if not self.hasFields(['Subj', 'Crse']): self.msg("getCourseId issue: does not have both Subj and Crse!");   return None
+
     try:
       subj, crse = self.getFields(['Subj', 'Crse'])
       result = subj + crse
