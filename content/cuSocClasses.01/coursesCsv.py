@@ -108,11 +108,14 @@ class Courses: #not catching any errors; caveat emptor
         if firstRow: firstRow = False; continue
    
         try:
+          print("foo: " + str(row))
           subject, course, abbrev = row[0:3]
+
+          if subject is 'HCC': self.msg("HCC " + str(row))
 
           courseID = subject + course
           c = self.getCourseById(courseID)
-          if c is None: self.msg("loadCsv: problem in assigning abbrev to " + courseId)
+          if c is None: self.msg("loadCsv: problem in assigning abbrev to " + courseID)
           else: 
             c.setField('abbrevTitle', abbrev)
             ap,co,gr,hw,ui = row[3:8] # applications,core,graphics,hardware,interaction #hacky, but time-pressed
@@ -120,7 +123,7 @@ class Courses: #not catching any errors; caveat emptor
             c.cats = self.cats
             c.setFields(c.cats, [ap,co,gr,hw,ui])
 
-            if abbrev.find('tang') >= -1:
+            if abbrev.find('tang') > -1:
               print('TEI: ' + str(c.fieldsDict))
 
           for cat in self.cats:
