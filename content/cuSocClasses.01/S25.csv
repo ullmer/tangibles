@@ -33,28 +33,28 @@ CPSC,3710,1,TR,3,Systems Analysis,,,P,,Roger Van Scoy (P),Roger Van Scoy (P),60,
 CPSC,3720,1,TR,3,Introduction to Software Engineering,,,P,,Connie Taylor (P),Connie Taylor (P),60,
 CPSC,3720,2,TR,3,Introduction to Software Engineering,,,P,,Adkins-Daniel (P),Alex Adkins-Daniel (P),100,
 CPSC,3750,1,TR,3,Web Application Development,,,P,,Dan Wooster (P),Dan Wooster (P),60,
-CPSC,4+6070,1,TR,3,Applied Computer Vision,K1,,P,,Siyu Huang (P),Siyu Huang (P),30,X
-CPSC,4+6110,1,TR,3,Virtual Reality Systems,K2,,P,,Andrew C Robb (P),Andrew C Robb (P),30,X
-CPSC,4+6140,1,TR,3,Human and Computer Interaction,K3,,P,,Sabarish Venkat Babu (P),Sabarish Venkat Babu (P),60,X
-CPSC,4+6140,1,TR,3,Human and Computer Interaction,K4,,P,,Katie Park (P),Katie Park (P),60,X
-CPSC,4+6170,1,TR,3,3D Game Programming: Algorithms and Techniques,K5,,P,,Matias Volonte (P),Matias Volonte (P),30,X
-CPSC,4+6180,1,TR,3,Usable Privacy and Security,K6,,P,,Catherine Barwulor (GTR),Catherine Barwulor (GTR),50,X
-CPSC,4+6190,1,TR,3,Physical Modeling and Animation,K7,,P,,Jerry A. Tessendorf (P),Jerry A. Tessendorf (P),10,X
-CPSC,4+6200,1,TR,3,Computer Security Principles,K8,,P,,Mert Pese (P),Mert Pese (P),65,X
-CPSC,4+6240,1,TR,3,System Administration and Security,K9,,P,,Svetlana V Drachova (P),Svetlana V Drachova (P),65,X
-CPSC,4+6300,2,TR,3,Applied Data Science,K10,,P,,Tim Ransom (P),Tim Ransom (P),120,X
+CPSC,x070,1,TR,3,Applied Computer Vision,K1,,P,,Siyu Huang (P),Siyu Huang (P),30,X
+CPSC,x110,1,TR,3,Virtual Reality Systems,K2,,P,,Andrew C Robb (P),Andrew C Robb (P),30,X
+CPSC,x140,1,TR,3,Human and Computer Interaction,K3,,P,,Sabarish Venkat Babu (P),Sabarish Venkat Babu (P),60,X
+CPSC,x140,1,TR,3,Human and Computer Interaction,K4,,P,,Katie Park (P),Katie Park (P),60,X
+CPSC,x170,1,TR,3,3D Game Programming: Algorithms and Techniques,K5,,P,,Matias Volonte (P),Matias Volonte (P),30,X
+CPSC,x180,1,TR,3,Usable Privacy and Security,K6,,P,,Catherine Barwulor (GTR),Catherine Barwulor (GTR),50,X
+CPSC,x190,1,TR,3,Physical Modeling and Animation,K7,,P,,Jerry A. Tessendorf (P),Jerry A. Tessendorf (P),10,X
+CPSC,x200,1,TR,3,Computer Security Principles,K8,,P,,Mert Pese (P),Mert Pese (P),65,X
+CPSC,x240,1,TR,3,System Administration and Security,K9,,P,,Svetlana V Drachova (P),Svetlana V Drachova (P),65,X
+CPSC,x300,2,TR,3,Applied Data Science,K10,,P,,Tim Ransom (P),Tim Ransom (P),120,X
 CPSC,6300,1,CRSRA,3,Applied Data Science,K11,,P,,Tim Ransom (P),Tim Ransom (P),50,
-CPSC,4+6420,1,TR,3,Artificial Intelligence,K13,,P,,Abolfazl Razi (P),Abolfazl Razi (P),65,X
-CPSC,4+6430,1,TR,3,Machine Learning: Implementation and Evaluation,K14,,P,,Kai Liu (P),Kai Liu (P),65,X
-CPSC,4+6440,1,TR,3,Cloud Computing Architecture,K15,,P,,Mitch Shue (P),Mitch Shue (P),65,X
-CPSC,4+6440,1,TR,3,Cloud Computing Architecture,K16,,P,,Christopher Tod Flathmann (P),Christopher Tod Flathmann (P),65,
+CPSC,x420,1,TR,3,Artificial Intelligence,K13,,P,,Abolfazl Razi (P),Abolfazl Razi (P),65,X
+CPSC,x430,1,TR,3,Machine Learning: Implementation and Evaluation,K14,,P,,Kai Liu (P),Kai Liu (P),65,X
+CPSC,x440,1,TR,3,Cloud Computing Architecture,K15,,P,,Mitch Shue (P),Mitch Shue (P),65,X
+CPSC,x440,1,TR,3,Cloud Computing Architecture,K16,,P,,Christopher Tod Flathmann (P),Christopher Tod Flathmann (P),65,
 CPSC,6620,1,CRSRA,3,Database Management Systems,K18,,P,,Connie Taylor (P),Connie Taylor (P),60,
-CPSC,4+6620,1,TR,3,Database Management Systems,K18,,P,,Connie Taylor (P),Connie Taylor (P),50,X
-CPSC,4+6620,1,TR,3,Database Management Systems,K18,,P,,James Wang (P),James Wang (P),60,X
-CPSC,4+6720,1,TR,3,Software Development Methodology,K19,,P,,Julian Langston Brinkley (P),Julian Langston Brinkley (P),65,X
-CPSC,4+6780,1,TR,3,General Purpose Computation on Graphical Processing Units,K19,,P,,Shuangshuang Jin (P),Shuangshuang Jin (P),65,X
-CPSC,4+6820a,1,TR,3,Special Topics: Embedded Systems,K20,,P,,Jacob M Sorber (P),Jacob M Sorber (P),30,X
-CPSC,4+6820b,1,TR,3,Special Topics: Cryptography,K26,,P,,Zhenkai Zhang (P),Zhenkai Zhang (P),65,X
+CPSC,x620,1,TR,3,Database Management Systems,K18,,P,,Connie Taylor (P),Connie Taylor (P),50,X
+CPSC,x620,1,TR,3,Database Management Systems,K18,,P,,James Wang (P),James Wang (P),60,X
+CPSC,x720,1,TR,3,Software Development Methodology,K19,,P,,Julian Langston Brinkley (P),Julian Langston Brinkley (P),65,X
+CPSC,x780,1,TR,3,General Purpose Computation on Graphical Processing Units,K19,,P,,Shuangshuang Jin (P),Shuangshuang Jin (P),65,X
+CPSC,x820a,1,TR,3,Special Topics: Embedded Systems,K20,,P,,Jacob M Sorber (P),Jacob M Sorber (P),30,X
+CPSC,x820b,1,TR,3,Special Topics: Cryptography,K26,,P,,Zhenkai Zhang (P),Zhenkai Zhang (P),65,X
 CPSC,4910,1,TR,3,Senior Computing Practicum,,R,P,,Roger Van Scoy (P),Roger Van Scoy (P),80,
 CPSC,4910,1,TR,3,Senior Computing Practicum- Capstone,,R,P,,Carrie Russell (P),Carrie L Russell (P),50,
 CPSC,4911,4,TR,0,Senior Computing Practicum Laboratory,,,,C,Roger Van Scoy (P),Roger Van Scoy (P),80,
@@ -77,16 +77,16 @@ CPSC,8810,1,TR,3,ST: Side Channel Issues in Cybersecurity ,EC09,R,,,Zhenkai Zhan
 CPSC,8810,1,TR,3,ST: Gaze Sensing in XR,EC09,R,,,Andrew Duchowski (P),Andrew Duchowski (P),20,X
 CPSC,8810,1,TR,3,ST: HPC For Power System,EC09,R,,,Shuangshuang Jin (P),Shuangshuang Jin (P),30,X
 CPSC,8810,1,TR,3,ST: Deep Learning for Compu Photography,,,,,Nianyi Li,Nianyi Li,40,X 
-HCC,4+6400,1,TR,3,Measurement and Evaluation of Human-Centered Computing Systems,K23,,P,,B. Knijnenburg (P),Bart Knijnenburg (P),20,X
-HCC,4+6510,1,TR,3,Inclusive Design and Accessible Technology,K21,,P,,Emma Dixon (P),Emma Elizabeth Dixon (P),25,X
-HCC,4+6520,1,TR,3,"Tangible, Embedded, and Embodied Interaction",K21,,P,,Brygg Ullmer (P),Brygg Ullmer (P),15,X
-HCC,4+6600,1,TR,3,Human Centered AI,K23,R,,,C. Toxtli Hernan,Carlos Toxtli Hernandez (P),50,X
+HCC,x400,1,TR,3,Measurement and Evaluation of Human-Centered Computing Systems,K23,,P,,B. Knijnenburg (P),Bart Knijnenburg (P),20,X
+HCC,x510,1,TR,3,Inclusive Design and Accessible Technology,K21,,P,,Emma Dixon (P),Emma Elizabeth Dixon (P),25,X
+HCC,x520,1,TR,3,"Tangible, Embedded, and Embodied Interaction",K21,,P,,Brygg Ullmer (P),Brygg Ullmer (P),15,X
+HCC,x600,1,TR,3,Human Centered AI,K23,R,,,C. Toxtli Hernan,Carlos Toxtli Hernandez (P),50,X
 HCC,8500,1,TR,3,The Science of Teamwork and Technology,,R,,,N. McNeese (P),Nathan McNeese (P),25,X
 DPA,3070,1,TR,3,Studio Methods for Digital Production,,,,,R. F. Da Costa (P),Rodney Florencio Da Costa (P),9,
-DPA,4+6010,1,TR,3,Technical Foundations of Digital Production II,K25,R,P,,Joe Kider (P),Joe Kider (P),15,X
-DPA,4+6030,1,TR,3,Visual Foundations of Digital Production II,K24,R,P,,A. Summey (P),Anthony K Summey (P),10,X
-DPA,4+6820a,1,TR,3,Special Topics: Advanced Rigging,K27,,P,,R. F. Da Costa (P),Rodney Florencio Da Costa (P),10,X
-DPA,4+6820b,1,TR,3,Special Topics: Visual Effects Animation,K28,,P,,R. F. Da Costa (P),Rodney Florencio Da Costa (P),10,X
+DPA,x010,1,TR,3,Technical Foundations of Digital Production II,K25,R,P,,Joe Kider (P),Joe Kider (P),15,X
+DPA,x030,1,TR,3,Visual Foundations of Digital Production II,K24,R,P,,A. Summey (P),Anthony K Summey (P),10,X
+DPA,x820a,1,TR,3,Special Topics: Advanced Rigging,K27,,P,,R. F. Da Costa (P),Rodney Florencio Da Costa (P),10,X
+DPA,x820b,1,TR,3,Special Topics: Visual Effects Animation,K28,,P,,R. F. Da Costa (P),Rodney Florencio Da Costa (P),10,X
 DPA,6830,1,TR,3,StoryBoarding,,R,P,,A. Summey (P),Anthony K Summey (P),10,X
 DPA,8080,1,TR,3,Artistic Character Animation,,R,P,,David Donar (P),David Stewart Donar (P),10,X
 DPA,8090,1,TR,3,Rendering and Shading,,R,P,,Singh Dhillon (P),Daljit Singh Dhillon (P),10,X
