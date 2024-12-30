@@ -36,6 +36,13 @@ class CoursesCats(Courses):
   def getCoursesInCat(self, cat): 
     if cat not in self.catsDict: self.msg("getCoursesInCats: cat not found: " + str(cat)); return None
     result = self.catsDict[cat]
+    return result #returns a list
+
+  def getCoursesInCatStr(self, cat):  
+    coursesList = self.getCoursesInCat(cat)
+    if coursesList is None: self.msg("getCoursesInCatStr: noted problem for cat " + str(cat)); return None
+
+    result = ' '.join(coursesList)
     return result
 
 ################## main ################## 
@@ -43,10 +50,12 @@ class CoursesCats(Courses):
 if __name__ == "__main__":
   cc = CoursesCats()
   cats = cc.getCats()
-  print("catsDict:" + str(cc.catsDict))
+  #print("catsDict:" + str(cc.catsDict))
   for cat in cats:
     numCats = cc.getNumCoursesInCat(cat)
+    courses = cc.getCoursesInCatStr(cat)
     print("%s: %i courses" % (cat, numCats))
+    print(">> " + courses)
 
 #def draw(): screen.clear(); cpgza.draw(screen)
 #def on_mouse_down(pos):     pass #cpgz.on_mouse_down(pos)
