@@ -25,16 +25,17 @@ class CoursesCats(Courses):
 
   ################## get ##################
 
+  #def getCats(self): return list(self.catsDict.keys())
   def getCats(self): return self.cats
 
   def getNumCoursesInCat(self, cat): 
-    if cat not in self.cats: self.msg("getNumCoursesInCats: cat not found: " + str(cat)); return None
-    result = len(self.cats[cat])
+    if cat not in self.catsDict: self.msg("getNumCoursesInCats: cat not found: " + str(cat)); return None
+    result = len(self.catsDict[cat])
     return result
 
   def getCoursesInCat(self, cat): 
-    if cat not in self.cats: self.msg("getCoursesInCats: cat not found: " + str(cat)); return None
-    result = self.cats[cat]
+    if cat not in self.catsDict: self.msg("getCoursesInCats: cat not found: " + str(cat)); return None
+    result = self.catsDict[cat]
     return result
 
 ################## main ################## 
@@ -42,6 +43,7 @@ class CoursesCats(Courses):
 if __name__ == "__main__":
   cc = CoursesCats()
   cats = cc.getCats()
+  print(str(cc.catsDict))
   for cat in cats:
     numCats = cc.getNumCoursesInCat(cat)
     print("%s: %i courses" % (cat, numCats))

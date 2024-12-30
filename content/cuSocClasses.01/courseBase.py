@@ -10,7 +10,7 @@ import csv, traceback
 class Course: #not catching any errors; caveat emptor
 
   fieldsDict      = None
-  verbose         = False
+  verbose         = True
   cats            = None #categories
 
   ################## constructor, error ##################
@@ -26,6 +26,7 @@ class Course: #not catching any errors; caveat emptor
 
   def setFields(self, fieldNames, fieldVals):
     try: 
+      if self.verbose: self.msg("setFields: " + self.getCourseId() + str(fieldNames) + str(fieldVals))
       for fieldName, fieldVal in zip(fieldNames, fieldVals):
         self.setField(fieldName, fieldVal)
     except: self.err('setFields')
@@ -57,7 +58,10 @@ class Course: #not catching any errors; caveat emptor
 
     try:    
       for field in fields: result.append(self.fieldsDict[field])
-    except: self.err('getFields' + field)
+    except: 
+      self.err('getFields ' + field)
+      self.msg('known fields: ' + str(list(self.fieldsDict.keys())))
+      return None
 
     return result
 
