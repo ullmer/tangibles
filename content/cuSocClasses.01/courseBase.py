@@ -76,7 +76,7 @@ class Course: #not catching any errors; caveat emptor
       for field in fields: result.append(self.fieldsDict[field])
     except: 
       self.err('getFields ' + field)
-      self.msg('known fields: ' + str(list(self.fieldsDict.keys())))
+      #self.msg('known fields: ' + str(list(self.fieldsDict.keys())))
       return None
 
     return result
@@ -87,7 +87,7 @@ class Course: #not catching any errors; caveat emptor
     if self.fieldsDict is None:              self.msg("getCourseId issue: fields dictionary not instantiated!"); return None
     if not self.hasFields(['Subj', 'Crse']): 
       self.msg("getCourseId issue: does not have both Subj and Crse!")
-      self.msg(str(self.fieldsDict))
+      #self.msg(str(self.fieldsDict))
       return None
 
     try:

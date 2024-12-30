@@ -81,7 +81,7 @@ class Courses: #not catching any errors; caveat emptor
         c.setFields(self.csvHeaderFields, row)
 
         crse = c.getField('Crse')
-        if crse.find('4+6') > -1: crse2 = 'x' + crse[3:]; c.setField('Crse', crse2)
+        if crse.find('4+6') > -1: crse2 = 'x' + crse[4:]; c.setField('Crse', crse2)
         courseId = c.getCourseId()
 
         instr1 = c.getField('Instructor')
@@ -115,12 +115,16 @@ class Courses: #not catching any errors; caveat emptor
           if c is None: self.msg("loadCsv: problem in assigning abbrev to " + courseId)
           else: 
             c.setField('abbrevTitle', abbrev)
-            ap,co,gr,hw,ui = row[4:] # applications,core,graphics,hardware,interaction #hacky, but time-pressed
+            ap,co,gr,hw,ui = row[3:8] # applications,core,graphics,hardware,interaction #hacky, but time-pressed
 
             c.cats = self.cats
             c.setFields(c.cats, [ap,co,gr,hw,ui])
 
-          for cat in c.cats:
+            if abbrev.find('tang') >= -1:
+              print('TEI: ' + str(c.fieldsDict))
+
+          for cat in self.cats:
+            if c is None: continue #perhaps note
             v = c.getField(cat)
             if v in self.catAssocChars: 
               if cat not in self.catsDict: self.catsDict[cat] = []
