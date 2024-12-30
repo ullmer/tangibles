@@ -44,9 +44,11 @@ class CoursesPgzam(CoursesPgzAccordion):
   def midiCB(self, control, arg):   
     try:
       if self.verbose: print("cpgzm midicb: ", str(control), str(arg))
-      whichSlider = int(control[-1]) - 1 #control is "s1", "s2", etc.
-      whichVal    = int(arg)
-      self.sliderValDict[whichSlider] = self.sliderFullrangeV - whichVal
+
+      if control[0] == 's': #slider
+        whichSlider = int(control[-1]) - 1 #control is "s1", "s2", etc.
+        whichVal    = int(arg)
+        self.sliderValDict[whichSlider] = self.sliderFullrangeV - whichVal
     except: self.err("midiCb " + str([control, arg]))
 
   ################## initSliders ##################
@@ -98,7 +100,13 @@ cpgzam = CoursesPgzam(emc=emc)
 
 emc.registerControls(cpgzam.midiCB)
 
-for i in range(64): emc.midiOut.note_on(i, i, 3)
+#for i in range(6): emc.midiOut.note_on(i, i, 3)
+#for i in range(64): emc.midiOut.note_on(i, i, 3)
+
+#blue 45 orange 5 green 25 brown 9
+for i in [45, 5, 25, 9]:  emc.midiOut.note_on(i, i,   1)
+for i in [46, 6, 26, 10]: emc.midiOut.note_on(i, i-1, 6)
+for i in [47, 7, 27, 11]: emc.midiOut.note_on(i, i-2, 10)
 
 def draw(): screen.clear(); cpgzam.draw(screen)
 def on_mouse_down(pos):     pass #cpgzm.on_mouse_down(pos)

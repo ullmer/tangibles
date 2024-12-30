@@ -10,7 +10,7 @@ import csv, traceback
 class Course: #not catching any errors; caveat emptor
 
   fieldsDict      = None
-  verbose         = True
+  verbose         = False
   cats            = None #categories
 
   ################## constructor, error ##################
@@ -33,13 +33,15 @@ class Course: #not catching any errors; caveat emptor
 
       for fieldName, fieldVal in zip(fieldNames, fieldVals):
         self.setField(fieldName, fieldVal)
-    except: self.err('setFields')
+
+      if self.verbose: self.msg("setFields post-assignment: " + str(self.fieldsDict))
+    except: self.err('setFields issue')
     
   ################## set field ##################
 
   def setField(self, field, val):  
     try:    self.fieldsDict[field] = val
-    except: self.err('setField' + field + val)
+    except: self.err('setField issue' + field + val)
 
   ################## has field(s) ##################
 
@@ -67,7 +69,7 @@ class Course: #not catching any errors; caveat emptor
   def getFields(self, fields):       
     result = []
 
-    if self.fieldsDicts is None:     self.msg("getFields issue: fields dictionary not instantiated!"); return None
+    if self.fieldsDict is None:      self.msg("getFields issue: fields dictionary not instantiated!"); return None
     if not isinstance(fields, list): self.msg("getFields issue: argument fields is not a list!");      return None
 
     try:    
