@@ -5,6 +5,7 @@ books:
   - title: "Why Not the Best?: The First Fifty Years"
     publication_year: 1975
     authors: ["Jimmy Carter"]
+    tn:      1284249019i/645520.jpg
 
   - title: "The Wit and Wisdom of Jimmy Carter"
     publication_year: 1977
@@ -38,14 +39,17 @@ books:
   - title: "The Blood of Abraham: Insights into the Middle East"
     publication_year: 1986
     authors: ["Jimmy Carter"]
+    tn:      1347808814i/99964.jpg
 
   - title: "Everything to Gain: Making the Most of the Rest of Your Life"
     publication_year: 1987
     authors: ["Jimmy Carter"]
+    tn:      1346012983i/1876698.jpg
 
   - title: "An Outdoor Journal: Adventures and Reflections"
     publication_year: 1988
     authors: ["Jimmy Carter"]
+    tn:      1348016723i/943673.jpg
 
   - title: "Living Faith"
     publication_year: 1991
@@ -69,10 +73,12 @@ books:
   - title: "Always a Reckoning and Other Poems"
     publication_year: 1994
     authors: ["Jimmy Carter", "Sarah Elizabeth Chuldenko"]
+    tn:      1320457373i/9353.jpg
 
   - title: "The Little Baby Snoogle-Fleejer"
     publication_year: 1995
     authors: ["Jimmy Carter", "Amy Carter"]
+    tn:      1320552635i/25457.jpg
 
   - title: "The Virtues of Aging"
     publication_year: 1998
@@ -130,10 +136,12 @@ books:
   - title: "Through the Year with Jimmy Carter: 366 Daily Meditations from the 39th President"
     publication_year: 2011
     authors: ["Jimmy Carter"]
+    tn:      1344675291i/13175565.jpg
 
   - title: "NIV Lessons from Life Bible: Personal Reflections with Jimmy Carter"
     publication_year: 2012
     authors: ["Jimmy Carter"]
+    tn:      1330473126i/13504292.jpg
 
   - title: "A Call to Action: Women, Religion, Violence, and Power"
     publication_year: 2014
@@ -170,6 +178,7 @@ books:
   - title: "The Nobel Peace Prize Lecture"
     publication_year: 2002
     authors: ["Jimmy Carter", "Alice Mayhew"]
+    tn:      1347391526i/252101.jpg
 
   - title: "Sharing Good Times"
     publication_year: 2004
@@ -228,6 +237,21 @@ books:
     publication_year: 2003
     authors: ["Jimmy Carter"]
     tn:      1171855025i/123561.jpg
+
+  - title: "Talking Peace: A Vision for the Next Generation"
+    publication_year: 1993:
+    authors: ["Jimmy Carter"]
+    tn:      1387663397i/408857.jpg
+
+  - title: "The Personal Beliefs of Jimmy Carter"
+    publication_year: 2002
+    authors: ["Jimmy Carter"]
+    tn:      1388701633i/9348.jpg
+
+  - title: "Leading a Worthy Life: Sunday Mornings in Plains: Bible Study with Jimmy Carter: v1"
+    publication_year: 2007
+    authors: ["Jimmy Carter"]
+    tn:      1438224425i/486890.jpg
 
 links:
     thumbnailPrefix: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/"
