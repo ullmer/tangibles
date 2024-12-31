@@ -1,0 +1,209 @@
+#copilot initial source: please generate a yaml file containing the titles, publication year, 
+# and authors + co-authors of all books authored by president jimmy carter
+
+books:
+  - title: "Why Not the Best?: The First Fifty Years"
+    publication_year: 1975
+    authors: ["Jimmy Carter"]
+
+  - title: "The Wit and Wisdom of Jimmy Carter"
+    publication_year: 1977
+    authors: ["Jimmy Carter", "Bill Adler"]
+
+  - title: "A Government as Good as Its People"
+    publication_year: 1977
+    authors: ["Jimmy Carter"]
+
+  - title: "Carter On The Arts"
+    publication_year: 1977
+    authors: ["Jimmy Carter"]
+
+  - title: "The Spiritual Journey of Jimmy Carter, in His Own Words"
+    publication_year: 1979
+    authors: ["Jimmy Carter"]
+
+  - title: "Kids' Letters to President Carter"
+    publication_year: 1979
+    authors: ["Jimmy Carter", "Bill Adler", "Edward Malsberg"]
+
+  - title: "Keeping Faith: Memoirs of a President"
+    publication_year: 1982
+    authors: ["Jimmy Carter"]
+
+  - title: "Negotiation: An Alternative to Hostility"
+    publication_year: 1984
+    authors: ["Jimmy Carter"]
+
+  - title: "The Blood of Abraham: Insights into the Middle East"
+    publication_year: 1986
+    authors: ["Jimmy Carter"]
+
+  - title: "Everything to Gain: Making the Most of the Rest of Your Life"
+    publication_year: 1987
+    authors: ["Jimmy Carter"]
+
+  - title: "An Outdoor Journal: Adventures and Reflections"
+    publication_year: 1988
+    authors: ["Jimmy Carter"]
+
+  - title: "Living Faith"
+    publication_year: 1991
+    authors: ["Jimmy Carter"]
+
+  - title: "Sources of Strength: Meditations on Scripture for a Living Faith"
+    publication_year: 1991
+    authors: ["Jimmy Carter"]
+
+  - title: "Turning Point: A Candidate, a State, and a Nation Come of Age"
+    publication_year: 1992
+    authors: ["Jimmy Carter"]
+
+  - title: "Talking Peace: A Vision for the Next Generation"
+    publication_year: 1993
+    authors: ["Jimmy Carter"]
+
+  - title: "Always a Reckoning and Other Poems"
+    publication_year: 1994
+    authors: ["Jimmy Carter", "Sarah Elizabeth Chuldenko"]
+
+  - title: "The Little Baby Snoogle-Fleejer"
+    publication_year: 1995
+    authors: ["Jimmy Carter", "Amy Carter"]
+
+  - title: "The Virtues of Aging"
+    publication_year: 1998
+    authors: ["Jimmy Carter"]
+
+  - title: "Conversations with Carter"
+    publication_year: 1998
+    authors: ["Jimmy Carter"]
+
+  - title: "An Hour Before Daylight: Memories of a Rural Boyhood"
+    publication_year: 2000
+    authors: ["Jimmy Carter"]
+
+  - title: "Christmas in Plains: Memories"
+    publication_year: 2001
+    authors: ["Jimmy Carter", "Amy Carter"]
+
+  - title: "The Nobel Peace Prize Lecture"
+    publication_year: 2002
+    authors: ["Jimmy Carter", "Alice Mayhew"]
+
+  - title: "Sharing Good Times"
+    publication_year: 2004
+    authors: ["Jimmy Carter"]
+
+  - title: "Our Endangered Values: America's Moral Crisis"
+    publication_year: 2005
+    authors: ["Jimmy Carter"]
+
+  - title: "Palestine: Peace Not Apartheid"
+    publication_year: 2006
+    authors: ["Jimmy Carter"]
+
+  - title: "Beyond the White House: Waging Peace, Fighting Disease, Building Hope"
+    publication_year: 2007
+    authors: ["Jimmy Carter"]
+
+  - title: "A Remarkable Mother"
+    publication_year: 2008
+    authors: ["Jimmy Carter"]
+
+  - title: "We Can Have Peace in the Holy Land: A Plan That Will Work"
+    publication_year: 2009
+    authors: ["Jimmy Carter"]
+
+  - title: "White House Diary"
+    publication_year: 2010
+    authors: ["Jimmy Carter"]
+
+  - title: "Through the Year with Jimmy Carter: 366 Daily Meditations from the 39th President"
+    publication_year: 2011
+    authors: ["Jimmy Carter"]
+
+  - title: "NIV Lessons from Life Bible: Personal Reflections with Jimmy Carter"
+    publication_year: 2012
+    authors: ["Jimmy Carter"]
+
+  - title: "A Call to Action: Women, Religion, Violence, and Power"
+    publication_year: 2014
+    authors: ["Jimmy Carter"]
+
+  - title: "A Full Life: Reflections at Ninety"
+    publication_year: 2015
+    authors: ["Jimmy Carter"]
+
+  - title: "Faith: A Journey for All"
+    publication_year: 2018
+    authors: ["Jimmy Carter"]
+
+  - title: "The Virtues of Aging"
+    publication_year: 1998
+    authors: ["Jimmy Carter"]
+
+  - title: "Conversations with Carter"
+    publication_year: 1998
+    authors: ["Jimmy Carter"]
+
+  - title: "An Hour Before Daylight: Memories of a Rural Boyhood"
+    publication_year: 2000
+    authors: ["Jimmy Carter"]
+
+  - title: "Christmas in Plains: Memories"
+    publication_year: 2001
+    authors: ["Jimmy Carter", "Amy Carter"]
+
+  - title: "The Nobel Peace Prize Lecture"
+    publication_year: 2002
+    authors: ["Jimmy Carter", "Alice Mayhew"]
+
+  - title: "Sharing Good Times"
+    publication_year: 2004
+    authors: ["Jimmy Carter"]
+
+  - title: "Our Endangered Values: America's Moral Crisis"
+    publication_year: 2005
+    authors: ["Jimmy Carter"]
+
+  - title: "Palestine: Peace Not Apartheid"
+    publication_year: 2006
+    authors: ["Jimmy Carter"]
+
+  - title: "Beyond the White House: Waging Peace, Fighting Disease, Building Hope"
+    publication_year: 2007
+    authors: ["Jimmy Carter"]
+
+  - title: "A Remarkable Mother"
+    publication_year: 2008
+    authors: ["Jimmy Carter"]
+
+  - title: "We Can Have Peace in the Holy Land: A Plan That Will Work"
+    publication_year: 2009
+    authors: ["Jimmy Carter"]
+
+  - title: "White House Diary"
+    publication_year: 2010
+    authors: ["Jimmy Carter"]
+
+  - title: "Through the Year with Jimmy Carter: 366 Daily Meditations from the 39th President"
+    publication_year: 2011
+    authors: ["Jimmy Carter"]
+
+  - title: "NIV Lessons from Life Bible: Personal Reflections with Jimmy Carter"
+    publication_year: 2012
+    authors: ["Jimmy Carter"]
+
+  - title: "A Call to Action: Women, Religion, Violence, and Power"
+    publication_year: 2014
+    authors: ["Jimmy Carter"]
+
+  - title: "A Full Life: Reflections at Ninety"
+    publication_year: 2015
+    authors: ["Jimmy Carter"]
+
+  - title: "Faith: A Journey for All"
+    publication_year: 2018
+    authors: ["Jimmy Carter"]
+
+### end ###
