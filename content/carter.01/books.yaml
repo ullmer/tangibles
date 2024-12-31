@@ -81,6 +81,7 @@ books:
   - title: "An Hour Before Daylight: Memories of a Rural Boyhood"
     publication_year: 2000
     authors: ["Jimmy Carter"]
+    tn:      1397768323i/9347.jpg
 
   - title: "Christmas in Plains: Memories"
     publication_year: 2001
@@ -129,14 +130,17 @@ books:
   - title: "A Call to Action: Women, Religion, Violence, and Power"
     publication_year: 2014
     authors: ["Jimmy Carter"]
+    tn:      1395629638i/20523863.jpg
 
   - title: "A Full Life: Reflections at Ninety"
     publication_year: 2015
     authors: ["Jimmy Carter"]
+    tn:       1436129369i/25330592.jpg
 
   - title: "Faith: A Journey for All"
     publication_year: 2018
     authors: ["Jimmy Carter"]
+    tn:      1520173250i/37955373.jpg
 
   - title: "The Virtues of Aging"
     publication_year: 1998
@@ -165,10 +169,12 @@ books:
   - title: "Our Endangered Values: America's Moral Crisis"
     publication_year: 2005
     authors: ["Jimmy Carter"]
+    tn:      1389155099i/9346.jpg
 
   - title: "Palestine: Peace Not Apartheid"
     publication_year: 2006
     authors: ["Jimmy Carter"]
+    tn:      1442707994i/9345.jpg
 
   - title: "Beyond the White House: Waging Peace, Fighting Disease, Building Hope"
     publication_year: 2007
@@ -205,5 +211,14 @@ books:
   - title: "Faith: A Journey for All"
     publication_year: 2018
     authors: ["Jimmy Carter"]
+
+###
+  - title: "The Hornet's Nest"
+    publication_year: 2003
+    authors: ["Jimmy Carter"]
+    tn:      1171855025i/123561.jpg
+
+links:
+    thumbnailPrefix: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/"
 
 ### end ###
