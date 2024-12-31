@@ -5,17 +5,29 @@
   presidents:
     carter:
       cUrl: https://www.c-span.org/person/jimmy-carter-jr/2484/
+
       periods:
         stGaGovernor:     {y1: 1971, y2: 1975}
         usPresidentCand:  {y1: 1975, y2: 1976}
         usPresidentElect: {y1: 1976, y2: 1977}
         usPresident:      {y1: 1977, y2: 1981, n: 271}
+
       tags:  {historySociety:     89, hs_execBranch:         78, hs_eb_jimmyCarter:  62, foreignAffairsDefense: 56,
               campaignsElections:     36, americanHistoryTV: 29, washingtonPolitics: 16, ce_campaigns:          14,
               presidentialNomination: 14, fad_middleEast:    13
 
       types: {forum:  46, speech:    46, newsConf: 21, statement: 18, interview: 16, pubAffairsEvent: 16,
               address: 7, convention: 6, vignette: 6}
+
+      series: {americanHistoryTV:  38, bookTV:      12, commencementSpeeches: 4, nationalPartyConvention: 4, 
+               presidentialDebates: 4, presidency:   3, roadToWhiteHouse1992: 2, afterWords:              2,
+               reelAmerica: 2,         campaign1992: 2}
+
+      org:   {whiteHouse:        40, carterCenter: 32, c-span: 15, dnc:     11, carterPresidentialLibraryMuseum: 10,
+              firstBaptistChurch: 9, whnmStakeout:  4, uga:     4, uga_spia: 4, fordPresidentialMuseum:           4}
+  
+      location: {unitedStates: 213, dc: 91, dc_washington: 90, georgia:      52, ga_atlanta: 40, ny_newyork: 10, 
+                 dc_whiteHouse: 10, ny_ny_newyorkcity:      7, pennsylvania:  7, texas:       7}
 
     bush2: 
       cUrl: https://www.c-span.org/person/george-w-bush/3813/
