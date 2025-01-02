@@ -22,6 +22,10 @@ class CoursesCats(Courses):
   mapDiv2Courses  = None
   mapCourse2Title = None
 
+  mapNameR2C  = None
+  mapNameC2D  = None
+  mapNameD2C  = None
+
   ################## constructor, error ##################
 
   def __init__(self, **kwargs):
@@ -91,8 +95,6 @@ class CoursesCats(Courses):
       self.err("extractFieldValsUnique exception")
       traceback.print_exc(); return False
 
-  ############# getInstructors #############
-
   def getInstructors(self):
     try:
       result = self.extractFieldValsUnique('Instructor') #first, get raw fields
@@ -126,6 +128,12 @@ class CoursesCats(Courses):
 
     #print("instr1: ", instr1)
     #print("instr2: ", instr2)
+
+    #print("C2D", self.mapNameC2D)
+    #print("D2C", self.mapNameD2C)
+
+    instr2.sort()
+    return instr2
 
   ############# mapCourseInstructorsToDivisions #############
 
@@ -176,9 +184,12 @@ class CoursesCats(Courses):
       for courseID in self.coursesDict:
         course = self.coursesDict[courseID]
        
-        subject, crse, instructor, title, mode = course.getFields('Subj', 'Crse', 'Instructor', 'Title', 'Mode')
-        if mode == 'CRSRA': continue #skip Coursera for the moment; interesting to consider converse
-        name1    = self.mapNameR2C[instructor]
+        subject, crse, instructor, title, mode = course.getFields(['Subj', 'Crse', 'Instructor', 'Title', 'Mode'])
+        if mode == 'CRSRA': continue #skip Coursera for the moment; interesting to consider onverse
+
+        if instructor in self.mapNameC2D: name1 = self.mapNameC2D[instructor]
+        else:                             name1 = instructor
+
         name2    = self.mapNameC2D[name1]
         division = self.faculty2div[name2]
         #print(course2, name2, division)
@@ -192,6 +203,13 @@ class CoursesCats(Courses):
       self.err("mapCoursesToDivisions exception")
       traceback.print_exc(); return False
 
+  ################## get faculty by division ################## 
+
+  def getFacultyByDiv(self, div):
+    if div in self.div2faculty: return self.div2faculty[div]
+    self.msg("getFacultyByDiv: div not found: " + str(div))
+    return None
+
 ################## main ################## 
 
 if __name__ == "__main__":
@@ -201,13 +219,15 @@ if __name__ == "__main__":
   for cat in cats:
     numCats = cc.getNumCoursesInCat(cat)
     courses = cc.getCoursesInCatStr(cat)
-    print("%s: %i courses" % (cat, numCats))
-    print(">> " + courses)
+    #print("%s: %i courses" % (cat, numCats))
+    #print(">> " + courses)
 
   print("=" * 20)
   subjs = cc.extractFieldValsUnique('Subj')
+  print(cc.getFacultyByDiv('HCC'))
   print(cc.div2faculty['HCC'])
-  print(cc.mapDiv2Courses['HCC'])
+  #print(cc.mapDiv2Courses['HCC'])
+  print(str(list(cc.mapDiv2Courses.keys())))
   for c in cc.mapDiv2Courses['HCC']: print(ca.mapCourse2Title[c])
 
   for div in cc.mapDiv2Courses:
