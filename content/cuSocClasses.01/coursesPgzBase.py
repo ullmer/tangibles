@@ -142,11 +142,11 @@ class CoursesPgzBase(Courses):
 
     x0, y0 = 1283, 30; idx = 0
     for hccpc in hccPrefixCourses: 
-      #a.topleft=(x0, y0); a.draw()
-      #self.drawCourse(screen, hccpc, x0, y0, c2); y0 += self.dy1
-      self.drawCourseBar(screen, hccpc, x0, y0, c2); idx += 1
-      if idx % 4 == 0: y0 += 13
-      else:            y0 += 7
+      a.topleft=(x0, y0); a.draw()
+      self.drawCourse(screen, hccpc, x0, y0, c2); y0 += self.dy1
+      #self.drawCourseBar(screen, hccpc, x0, y0, c2); idx += 1
+      #if idx % 4 == 0: y0 += 13
+      #else:            y0 += 7
 
     x0 += self.dx; y0 = 30; idx = 0
     for dpapc in dpaPrefixCourses: 
