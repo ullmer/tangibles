@@ -29,11 +29,13 @@ class CoursesPgzBase(CoursesCats):
   x2, x3, x4 =   9,  44,  7 #offsets from left edge of course block to left of course #, title/instructor, subj
   y2, y3, y4 =  -2,  26, 55 #offsets from  top edge of course block to  top of           title,instructor
 
-  actorCats    = ['cs', 'hcc', 'vc', 'foi']
-  actorCatDict = None   #actor category dictionary; contemplating graceful paths to manage pi ram
-  actor2id     = None
-  #numRd       = None
-  numRd        = 0
+  barDy1, barDy2 = 7, 13
+
+  actorCats     = ['cs', 'hcc', 'vc', 'foi']
+  actorCatDict  = None   #actor category dictionary; contemplating graceful paths to manage pi ram
+  actor2id      = None
+  #numRd        = None
+  numRd         = 0
 
   backdropFn   = 'ak_apc_mm2_d03_1920'
   backdropA    = None
@@ -149,6 +151,7 @@ class CoursesPgzBase(CoursesCats):
       courses = self.getCoursesInCat(cat)
       catDivs = []
 
+      idx = 0
       for courseID in courses:
         div    = self.mapCourseToDivisions(courseID)
         if div is None: self.msg("drawSamples2: ignoring null div"); continue
@@ -157,11 +160,15 @@ class CoursesPgzBase(CoursesCats):
         if divLow in self.actorCats: divIdx = self.actorCats.index(divLow)
         else:                        self.msg("drawSamples2: ignoring div issue" + str(divLow)); continue
         backdrop = bds[divIdx]; barColor=dcs[divIdx]
-        backdrop.topleft=(x0, y0)
-        backdrop.draw()
 
-        self.drawCourse(screen, courseID, x0, y0, barColor)
-        y0 += self.dy1
+        if idx < 3: 
+          backdrop.topleft=(x0, y0); backdrop.draw()
+          self.drawCourse(screen, courseID, x0, y0, barColor)
+          y0 += self.dy1
+        else: 
+          self.drawCourseBar(screen, courseID, x0, y0, barColor); y0 += self.barDy1
+
+        idx += 1
 
       x0 += self.dx
         
