@@ -19,6 +19,8 @@ class Courses: #not catching any errors; caveat emptor
   courseIdsByPrefix  = None
   numCourseGroups    = 0
   verbose            = False
+  quiet              = True
+
   instrPostfix1      = ' (P)'; 
   instrPostfix2      = ' (GTR)'
   cats               = ['apps', 'core', 'graphics', 'hw', 'interaction'] #categories
@@ -31,8 +33,8 @@ class Courses: #not catching any errors; caveat emptor
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     self.loadCsv()
   
-  def err(self, msg): print("Courses error:", msg); traceback.print_exc()
-  def msg(self, msg): print("Courses msg:",   msg)
+  def err(self, msg): print("CoursesCSV error:", msg); traceback.print_exc()
+  def msg(self, msg): print("CoursesCSV msg:",   msg)
 
   def size(self): 
     if self.coursesDict is None: return 0
@@ -112,7 +114,8 @@ class Courses: #not catching any errors; caveat emptor
           courseID = subject + course
           c = self.getCourseById(courseID)
 
-          if c is None: self.msg("loadCsv: problem in assigning abbrev to " + courseID)
+          if c is None: 
+            if not self.quiet: self.msg("loadCsv: problem in assigning abbrev to " + courseID)
           else: 
             c.setField('abbrevTitle', abbrev)
             ap,co,gr,hw,ui = row[3:8] # applications,core,graphics,hardware,interaction #hacky, but time-pressed

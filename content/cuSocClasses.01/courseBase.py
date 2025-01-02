@@ -11,6 +11,7 @@ class Course: #not catching any errors; caveat emptor
 
   fieldsDict      = None
   verbose         = False
+  quiet           = True  #suppress several warnings
   cats            = None #categories
 
   ################## constructor, error ##################
@@ -86,8 +87,8 @@ class Course: #not catching any errors; caveat emptor
   def getCourseId(self):
     if self.fieldsDict is None:              self.msg("getCourseId issue: fields dictionary not instantiated!"); return None
     if not self.hasFields(['Subj', 'Crse']): 
-      if self.verbose: self.msg("getCourseId issue: does not have both Subj and Crse!")
-      else:            print("!", end='')
+      if self.verbose:     self.msg("getCourseId issue: does not have both Subj and Crse!")
+      elif not self.quiet: print("!", end='')
       #self.msg(str(self.fieldsDict))
       return None
 

@@ -223,7 +223,7 @@ if __name__ == "__main__":
   for cat in cats:
     numCats = cc.getNumCoursesInCat(cat)
     courses = cc.getCoursesInCatStr(cat)
-    #print("%s: %i courses" % (cat, numCats))
+    print("%s: %i courses" % (cat, numCats))
     #print(">> " + courses)
 
   print("=" * 20)
@@ -232,7 +232,8 @@ if __name__ == "__main__":
   #print(cc.div2faculty['HCC'])
   #print(cc.mapDiv2Courses['HCC'])
   #print(str(list(cc.mapDiv2Courses.keys())))
-  for c in cc.mapDiv2Courses['HCC']: print(cc.mapCourse2Title[c])
+  #for c in cc.mapDiv2Courses['HCC']: print(cc.mapCourse2Title[c])
+  for c in cc.mapDiv2Courses['HCC']: print(c, cc.mapCourse2Title[c])
 
   for div in cc.mapDiv2Courses:
     ndiv = len(cc.mapDiv2Courses[div])
