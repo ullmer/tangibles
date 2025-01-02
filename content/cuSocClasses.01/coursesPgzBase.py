@@ -39,15 +39,11 @@ class CoursesPgzBase(Courses):
   divisionBackdrops = ['ak_apc_mm2_d03_1920_a', 'ak_apc_mm2_d03_1920_b', 
                        'ak_apc_mm2_d03_1920_c', 'ak_apc_mm2_d03_1920_d']
   divisionBackdropA = None
+  drawSampleContent = True
 
   rrectX, rrectY = 336, 92
   crectX, crectY = 180, 4
   courseGroups   = None
-  timeDotActors  = None     #time dots currently legacy of readings representation, though...
-  timeDotImgFn   = 'time_circ01e'
-  timeDotX       = 100
-  timeDotY       = 900
-  timeDotDX      = 80
 
   font1      = "o1" #need to add auto-retrieval from fonts/o1.url if o1.ttf not present
   fontSize1  = 24
@@ -130,6 +126,11 @@ class CoursesPgzBase(Courses):
 
     if self.backdropA is not None: self.backdropA.draw()
 
+    if self.drawSampleContent: self.drawSamples(screen)
+
+  ################## draw ##################
+
+  def drawSamples(self, screen): 
     a = self.divisionBackdropA[1]
     b = self.divisionBackdropA[2]
     c = self.divisionBackdropA[0]
@@ -163,23 +164,25 @@ class CoursesPgzBase(Courses):
       if idx % 4 == 0: y0 += 13
       else:            y0 += 7
 
-    for i in range(self.numRd):
-      if i in self.courseTextDrawOffset: textDrawOffsetsSaved = True
-      else:                               textDrawOffsetsSaved = False
+    #return
+    # 
+    #for i in range(self.numRd):
+    #  if i in self.courseTextDrawOffset: textDrawOffsetsSaved = True
+    #  else:                              textDrawOffsetsSaved = False
 
-      if textDrawOffsetsSaved:
-        x2, y2 = self.courseTextDrawOffset[i]
-      else:
-        self.courseTextDrawOffset[i] = (x, y)
-        x2, y2 = x, y
+    #  if textDrawOffsetsSaved:
+    #    x2, y2 = self.courseTextDrawOffset[i]
+    #  else:
+    #    self.courseTextDrawOffset[i] = (x, y)
+    #    x2, y2 = x, y
 
-      self.drawCourse(screen, i, x2, y2)
+    #  self.drawCourse(screen, i, x2, y2)
 
-      if not(textDrawOffsetsSaved): # we need to calculate them. Logic should be relocated
-        y += self.dy; row += 1
+    #  if not(textDrawOffsetsSaved): # we need to calculate them. Logic should be relocated
+    #    y += self.dy; row += 1
 
-        if row >= self.rows: 
-          row = 0; col += 1; y = self.y0; x += self.dx
+    #    if row >= self.rows: 
+    #      row = 0; col += 1; y = self.y0; x += self.dx
 
   ################## on_mouse_down ##################
 
