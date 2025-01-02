@@ -39,7 +39,7 @@ class CoursesPgzBase(Courses):
   divisionBackdrops = ['ak_apc_mm2_d03_1920_a', 'ak_apc_mm2_d03_1920_b', 
                        'ak_apc_mm2_d03_1920_c', 'ak_apc_mm2_d03_1920_d']
   divisionBackdropA = None
-  drawSampleContent = True
+  drawSampleContent = False
 
   rrectX, rrectY = 336, 92
   crectX, crectY = 180, 4
@@ -59,10 +59,7 @@ class CoursesPgzBase(Courses):
   colorScaleColors  = ['yellow', 'gold', 'white', 'cyan', 'chartreuse', 'violet']
   colorScale = None
 
-  drawExtraAnnotatives  = True
-
   actorSelectedId       = None
-  dotSelected           = False
   courseTextDrawOffset  = None
   connectingLineWidth   = 3
   olderPgz              = True # suppress line widths and fading for std=older pip pgz version
@@ -126,11 +123,43 @@ class CoursesPgzBase(Courses):
 
     if self.backdropA is not None: self.backdropA.draw()
 
-    if self.drawSampleContent: self.drawSamples(screen)
+    #if self.drawSampleContent: self.drawSamples1(screen)
+    if self.drawSampleContent:  self.drawSamples2(screen)
 
-  ################## draw ##################
+  ################## draw samples #2 ##################
 
-  def drawSamples(self, screen): 
+  def drawSamples2(self, screen): 
+    a = self.divisionBackdropA[1]
+    b = self.divisionBackdropA[2]
+    c = self.divisionBackdropA[0]
+    d = self.divisionBackdropA[3]
+
+    #hccPrefixCourses = self.getCourseIdsByPrefix('HCC')
+    #dpaPrefixCourses = self.getCourseIdsByPrefix('DPA')
+    #csPrefixCourses = self.getCourseIdsByPrefix('CPSC')
+
+    c4, c2, c3, c1 = self.divColors
+
+    x0, y0 = 1283, 30; idx = 0
+    for hccpc in hccPrefixCourses: 
+      a.topleft=(x0, y0); a.draw()
+      self.drawCourse(screen, hccpc, x0, y0, c2); y0 += self.dy1
+
+    x0 += self.dx; y0 = 30; idx = 0
+    for dpapc in dpaPrefixCourses: 
+      self.drawCourseBar(screen, dpapc, x0, y0, c3); idx += 1
+      if idx % 4 == 0: y0 += 13
+      else:            y0 += 7
+
+    x0 -= self.dx*2; y0 = 30; idx = 0
+    for cspc in csPrefixCourses: 
+      self.drawCourseBar(screen, cspc, x0, y0, c1); idx += 1
+      if idx % 4 == 0: y0 += 13
+      else:            y0 += 7
+
+  ################## draw samples #1 ##################
+
+  def drawSamples1(self, screen): 
     a = self.divisionBackdropA[1]
     b = self.divisionBackdropA[2]
     c = self.divisionBackdropA[0]
