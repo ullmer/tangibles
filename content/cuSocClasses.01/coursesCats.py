@@ -207,6 +207,10 @@ class CoursesCats(Courses):
       self.err("mapCoursesToDivisions exception")
       traceback.print_exc(); return False
 
+  def mapCourseToDivisions(self, courseID):
+    if courseID in self.mapCourse2Div: return self.mapCourse2Div[courseID]
+    return None
+
   ################## get faculty by division ################## 
 
   def getFacultyByDiv(self, div):
@@ -238,6 +242,15 @@ if __name__ == "__main__":
   for div in cc.mapDiv2Courses:
     ndiv = len(cc.mapDiv2Courses[div])
     print(div, ndiv)
+
+  print("=" * 20)
+  for cat in cats:
+    courses = cc.getCoursesInCat(cat)
+    catDivs = []
+    for courseID in courses: 
+      div = cc.mapCourseToDivisions(courseID)
+      catDivs.append(div)
+    print(cat, str(catDivs))
 
 #def draw(): screen.clear(); cpgza.draw(screen)
 #def on_mouse_down(pos):     pass #cpgz.on_mouse_down(pos)
