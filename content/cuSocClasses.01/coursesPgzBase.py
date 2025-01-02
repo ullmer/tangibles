@@ -158,7 +158,7 @@ class CoursesPgzBase(CoursesCats):
 
         divLow = div.lower()
         if divLow in self.actorCats: divIdx = self.actorCats.index(divLow)
-        else:                        self.msg("drawSamples2: ignoring div issue" + str(divLow)); continue
+        else:                        self.msg("drawSamples2: ignoring div issue: " + str(divLow)); continue
         backdrop = bds[divIdx]; barColor=dcs[divIdx]
 
         if idx < 3: 
