@@ -7,7 +7,7 @@ import spectra
 import pygame
 
 from pgzero.builtins   import Actor, animate, keyboard, keys
-from coursesCsv        import *
+from coursesCats       import *
 
 portrait=False #mini display default-configs as portrait
 if portrait: WIDTH, HEIGHT = 480, 1920
@@ -17,7 +17,8 @@ os.environ['SDL_VIDEO_WINDOW_POS'] = "0,0"
 
 ################### coursesPgzBase ################### 
 
-class CoursesPgzBase(Courses):
+#class CoursesPgzBase(Courses):
+class CoursesPgzBase(CoursesCats):
 
   rows, cols =   9,   5
   dx,  dy1   = 205,  67 #dy1:   between blocks
@@ -129,6 +130,17 @@ class CoursesPgzBase(Courses):
   ################## draw samples #2 ##################
 
   def drawSamples2(self, screen): 
+
+    cats = self.getCats()
+
+    for cat in cats:
+      courses = cc.getCoursesInCat(cat)
+      catDivs = []
+      for courseID in courses:
+        div = cc.mapCourseToDivisions(courseID)
+        catDivs.append(div)
+      print(cat, str(catDivs))
+
     a = self.divisionBackdropA[1]
     b = self.divisionBackdropA[2]
     c = self.divisionBackdropA[0]
