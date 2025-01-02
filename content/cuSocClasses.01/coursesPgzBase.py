@@ -151,7 +151,8 @@ class CoursesPgzBase(CoursesCats):
       courses = self.getCoursesInCat(cat)
       catDivs = []
 
-      idx = 0
+      courseIdx = 0
+      barIdx    = 0
       for courseID in courses:
         div    = self.mapCourseToDivisions(courseID)
         if div is None: self.msg("drawSamples2: ignoring null div"); continue
@@ -161,14 +162,17 @@ class CoursesPgzBase(CoursesCats):
         else:                        self.msg("drawSamples2: ignoring div issue: " + str(divLow)); continue
         backdrop = bds[divIdx]; barColor=dcs[divIdx]
 
-        if idx < 3: 
+        if courseIdx < 3: 
           backdrop.topleft=(x0, y0); backdrop.draw()
           self.drawCourse(screen, courseID, x0, y0, barColor)
           y0 += self.dy1
         else: 
-          self.drawCourseBar(screen, courseID, x0, y0, barColor); y0 += self.barDy1
+          self.drawCourseBar(screen, courseID, x0, y0, barColor); 
+          barIdx += 1
+          if barIdx % 4: y0 += self.barDy1
+          else:          y0 += self.barDy2
 
-        idx += 1
+        courseIdx += 1
 
       x0 += self.dx
         
