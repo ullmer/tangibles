@@ -129,8 +129,8 @@ class CoursesCats(Courses):
     #print("instr1: ", instr1)
     #print("instr2: ", instr2)
 
-    print("C2D", self.mapNameC2D)
-    print("D2C", self.mapNameD2C)
+    #print("C2D", self.mapNameC2D)
+    #print("D2C", self.mapNameD2C)
 
     instr2.sort()
     return instr2
@@ -190,15 +190,11 @@ class CoursesCats(Courses):
         if instructor in self.mapNameC2D: name1 = self.mapNameC2D[instructor]
         else:                             name1 = instructor
 
-        if name1 in self.mapNameD2C: name2  = self.mapNameD2C[name1]
-        else:                        name2  = name1
-
-
-        if name2 in self.faculty2div:       
-          division = self.faculty2div[name2]
+        if name1 in self.faculty2div:       
+          division = self.faculty2div[name1]
           #print(course2, name2, division)
         else:
-          self.msg("mapCoursesToDivisions: name not found: " + name2); continue
+          self.msg("mapCoursesToDivisions: name not found: " + name1); continue
 
         if division not in self.mapDiv2Courses: self.mapDiv2Courses[division] = []
         self.mapCourse2Div[courseID]   = division
