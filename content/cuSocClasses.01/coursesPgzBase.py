@@ -132,18 +132,20 @@ class CoursesPgzBase(CoursesCats):
 
   def drawSamples2(self, screen): 
 
+    colorIndices = [3,1,2,0]
+
     bds = [] #backdrops/backgrounds of individual courses, across several colors
-    for i in [1,2,0,3]: bds.append(self.divisionBackdropA[i])
+    for i in colorIndices: bds.append(self.divisionBackdropA[i])
 
     dcs = [] # toward colorbars. refactor next line & above
-    for i in [3,1,2,0]: dcs.append(self.divColors[i]) 
+    for i in colorIndices: dcs.append(self.divColors[i]) 
 
     x0     = self.x0b  #refactor names
     cats   = self.getCats()
     colIdx = 0
 
     for cat in cats:
-      x0 += self.dx; y0 = self.y0b
+      y0 = self.y0b
       courses = self.getCoursesInCat(cat)
       catDivs = []
 
@@ -160,6 +162,8 @@ class CoursesPgzBase(CoursesCats):
 
         self.drawCourse(screen, courseID, x0, y0, barColor)
         y0 += self.dy1
+
+      x0 += self.dx
         
   ################## draw samples #1 ##################
 
