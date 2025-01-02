@@ -129,8 +129,8 @@ class CoursesCats(Courses):
     #print("instr1: ", instr1)
     #print("instr2: ", instr2)
 
-    #print("C2D", self.mapNameC2D)
-    #print("D2C", self.mapNameD2C)
+    print("C2D", self.mapNameC2D)
+    print("D2C", self.mapNameD2C)
 
     instr2.sort()
     return instr2
@@ -190,15 +190,23 @@ class CoursesCats(Courses):
         if instructor in self.mapNameC2D: name1 = self.mapNameC2D[instructor]
         else:                             name1 = instructor
 
-        name2    = self.mapNameC2D[name1]
-        division = self.faculty2div[name2]
-        #print(course2, name2, division)
+        if name1 in self.mapNameD2C: name2  = self.mapNameD2C[name1]
+        else:                        name2  = name1
+
+
+        if name2 in self.faculty2div:       
+          division = self.faculty2div[name2]
+          #print(course2, name2, division)
+        else:
+          self.msg("mapCoursesToDivisions: name not found: " + name2); continue
 
         if division not in self.mapDiv2Courses: self.mapDiv2Courses[division] = []
         self.mapCourse2Div[courseID]   = division
         self.mapCourse2Title[courseID] = title
-        if course2 not in self.mapDiv2Courses[division]: 
+
+        if courseID not in self.mapDiv2Courses[division]: 
           self.mapDiv2Courses[division].append(courseID)
+
     except:
       self.err("mapCoursesToDivisions exception")
       traceback.print_exc(); return False
@@ -225,10 +233,10 @@ if __name__ == "__main__":
   print("=" * 20)
   subjs = cc.extractFieldValsUnique('Subj')
   print(cc.getFacultyByDiv('HCC'))
-  print(cc.div2faculty['HCC'])
+  #print(cc.div2faculty['HCC'])
   #print(cc.mapDiv2Courses['HCC'])
-  print(str(list(cc.mapDiv2Courses.keys())))
-  for c in cc.mapDiv2Courses['HCC']: print(ca.mapCourse2Title[c])
+  #print(str(list(cc.mapDiv2Courses.keys())))
+  for c in cc.mapDiv2Courses['HCC']: print(cc.mapCourse2Title[c])
 
   for div in cc.mapDiv2Courses:
     ndiv = len(cc.mapDiv2Courses[div])
