@@ -136,7 +136,7 @@ class CoursesPgzBase(CoursesCats):
     for i in [1,2,0,3]: bds.append(self.divisionBackdropA[i])
 
     dcs = [] # toward colorbars. refactor next line & above
-    for i in [3,1,2,0]: dcs.append(self.divcolors[i]) 
+    for i in [3,1,2,0]: dcs.append(self.divColors[i]) 
 
     x0     = self.x0b  #refactor names
     cats   = self.getCats()
@@ -144,20 +144,22 @@ class CoursesPgzBase(CoursesCats):
 
     for cat in cats:
       x0 += self.dx; y0 = self.y0b
-      courses = cc.getCoursesInCat(cat)
+      courses = self.getCoursesInCat(cat)
       catDivs = []
 
       for courseID in courses:
-        div    = cc.mapCourseToDivisions(courseID)
+        div    = self.mapCourseToDivisions(courseID)
+        if div is None: self.msg("drawSamples2: ignoring null div"); continue
+
         divLow = div.lower()
-        if divLow in actorCats: divIdx = actorCats.index(divLow)
-        else:                   self.msg("drawSamples2: ignoring div issue" + str(divLow)); continue
+        if divLow in self.actorCats: divIdx = self.actorCats.index(divLow)
+        else:                        self.msg("drawSamples2: ignoring div issue" + str(divLow)); continue
         backdrop = bds[divIdx]; barColor=dcs[divIdx]
         backdrop.topleft=(x0, y0)
         backdrop.draw()
 
         self.drawCourse(screen, courseID, x0, y0, barColor)
-        y += self.dy1
+        y0 += self.dy1
         
   ################## draw samples #1 ##################
 
