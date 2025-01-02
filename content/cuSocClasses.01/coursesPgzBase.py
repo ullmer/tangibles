@@ -23,7 +23,8 @@ class CoursesPgzBase(CoursesCats):
   rows, cols =   9,   5
   dx,  dy1   = 205,  67 #dy1:   between blocks
   dy2, dy3   =   8,  17 #dy2/3: lines within/between blocks
-  x0, y0     =  38,  28
+  x0,  y0    =  38,  28 # column bounding boxes
+  x0b, y0b   =  53,  30 # placements within columns of content
   x1, y1     =  55,  37
   x2, x3, x4 =   9,  44,  7 #offsets from left edge of course block to left of course #, title/instructor, subj
   y2, y3, y4 =  -2,  26, 55 #offsets from  top edge of course block to  top of           title,instructor
@@ -40,7 +41,7 @@ class CoursesPgzBase(CoursesCats):
   divisionBackdrops = ['ak_apc_mm2_d03_1920_a', 'ak_apc_mm2_d03_1920_b', 
                        'ak_apc_mm2_d03_1920_c', 'ak_apc_mm2_d03_1920_d']
   divisionBackdropA = None
-  drawSampleContent = False
+  drawSampleContent = True
 
   rrectX, rrectY = 336, 92
   crectX, crectY = 180, 4
@@ -137,38 +138,27 @@ class CoursesPgzBase(CoursesCats):
     dcs = [] # toward colorbars. refactor next line & above
     for i in [3,1,2,0]: dcs.append(self.divcolors[i]) 
 
-    cats = self.getCats()
+    x0     = self.x0b  #refactor names
+    cats   = self.getCats()
+    colIdx = 0
 
     for cat in cats:
+      x0 += self.dx; y0 = self.y0b
       courses = cc.getCoursesInCat(cat)
       catDivs = []
+
       for courseID in courses:
-        div = cc.mapCourseToDivisions(courseID)
-        catDivs.append(div)
-      print(cat, str(catDivs))
+        div    = cc.mapCourseToDivisions(courseID)
+        divLow = div.lower()
+        if divLow in actorCats: divIdx = actorCats.index(divLow)
+        else:                   self.msg("drawSamples2: ignoring div issue" + str(divLow)); continue
+        backdrop = bds[divIdx]; barColor=dcs[divIdx]
+        backdrop.topleft=(x0, y0)
+        backdrop.draw()
 
-    #hccPrefixCourses = self.getCourseIdsByPrefix('HCC')
-    #dpaPrefixCourses = self.getCourseIdsByPrefix('DPA')
-    #csPrefixCourses = self.getCourseIdsByPrefix('CPSC')
-
-
-    x0, y0 = 1283, 30; idx = 0
-    for hccpc in hccPrefixCourses: 
-      a.topleft=(x0, y0); a.draw()
-      self.drawCourse(screen, hccpc, x0, y0, c2); y0 += self.dy1
-
-    x0 += self.dx; y0 = 30; idx = 0
-    for dpapc in dpaPrefixCourses: 
-      self.drawCourseBar(screen, dpapc, x0, y0, c3); idx += 1
-      if idx % 4 == 0: y0 += 13
-      else:            y0 += 7
-
-    x0 -= self.dx*2; y0 = 30; idx = 0
-    for cspc in csPrefixCourses: 
-      self.drawCourseBar(screen, cspc, x0, y0, c1); idx += 1
-      if idx % 4 == 0: y0 += 13
-      else:            y0 += 7
-
+        self.drawCourse(screen, courseID, x0, y0, barColor)
+        y += self.dy1
+        
   ################## draw samples #1 ##################
 
   def drawSamples1(self, screen): 
