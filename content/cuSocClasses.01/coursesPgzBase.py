@@ -31,7 +31,7 @@ class CoursesPgzBase(CoursesCats):
   y2, y3, y4 =  -2,  26, 55 #offsets from  top edge of course block to  top of           title,instructor
 
   #barDy1, barDy2 = 7, 13
-  barDy1, barDy2 = 4, 12
+  barDy1, barDy2 = 5, 12
 
   actorCats     = ['cs', 'hcc', 'vc', 'foi']
   actorCatDict  = None   #actor category dictionary; contemplating graceful paths to manage pi ram
@@ -165,7 +165,7 @@ class CoursesPgzBase(CoursesCats):
         else:                        self.msg("drawSamples2: ignoring div issue: " + str(divLow)); continue
         backdrop = bds[divIdx]; barColor=dcs[divIdx]
 
-        if courseIdx < 3: 
+        if courseIdx < 4: 
           backdrop.topleft=(x0, y0); backdrop.draw()
           self.drawCourse(screen, courseID, x0, y0, barColor)
           y0 += self.dy1
