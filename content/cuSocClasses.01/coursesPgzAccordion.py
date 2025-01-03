@@ -54,10 +54,12 @@ class CoursesPgzAccordion(CoursesPgzBase):
   def nudgeCol(self, whichColInt, whichDir):
     if self.colDisplayIndexDict is None: self.msg("nudgeCol: column display index not initialized"); return
     if self.colNamesList        is None: self.msg("nudgeCol: column names list not initialized");    return
-    numCols = len(self.colNamesList)
+
+    cnl     = self.getColNames()
+    numCols = len(cnl)
  
     if whichColInt < 0 or whichColInt >= numCols: self.msg("nudgeCol: column index issue: " + str(whichColInt)); return
-    colName    = self.colNamesList[whichColInt]
+    colName    = cnl[whichColInt]
     colNameVal = self.colDisplayIndexDict[colName]
     colLen     = self.getColLenByIdx(whichColInt)
   
@@ -72,6 +74,8 @@ class CoursesPgzAccordion(CoursesPgzBase):
   def on_key_down(self, key):
     if self.keyCodeDict is None:    self.msg("on_key_down: keyCodeDict not initialized!");       return
     if key not in self.keyCodeDict: self.msg("on_keh_down: key not in dictionary: " + str(key)); return
+
+    self.msg("on_key_down " + str(key))
 
     val = self.keyCodeDict[key]
 
@@ -110,8 +114,6 @@ class CoursesPgzAccordion(CoursesPgzBase):
   ################## draw samples #1 ##################
 
   def drawCourses3(self, screen, courses, x0, y0, bds, dcs, whichCol): 
-    self.msg("drawCourses3")
-
     courseIdx, barIdx = 0, 0
     numCourses = len(courses)
     cdwds      = self.colDispWindowDefaultSize #default number of courses that we have room to textually display
