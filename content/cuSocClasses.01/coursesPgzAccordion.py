@@ -12,29 +12,23 @@ from coursesPgzBase    import *
 
 class CoursesPgzAccordion(CoursesPgzBase):
 
-  plsDraw2 = False #copilot asserts that this overriding of CoursePgzBase's class variable defaults
-  plsDraw3 = True
-
   ################## constructor, error ##################
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
+    self.selectedDrawFunc = self.draw3
 
   ################## error ##################
 
   def err(self, msg): print("CoursesPgzAccordion error:", msg); traceback.print_exc()
   def msg(self, msg): print("CoursesPgzAccordion msg:",   msg)
 
-  ################## draw ##################
-
-  def draw(self, screen): 
-    super().draw(screen)
-    if self.plsDraw3: self.draw3(screen)
-
   ################## draw samples #3 ##################
 
   def draw3(self, screen): 
+
+    self.msg('draw3')
 
     colorIndices = [3,1,2,0]
 

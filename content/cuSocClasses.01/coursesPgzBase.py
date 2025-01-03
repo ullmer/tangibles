@@ -71,8 +71,8 @@ class CoursesPgzBase(CoursesCats):
   connectingLineWidth   = 3
   olderPgz              = True # suppress line widths and fading for std=older pip pgz version
 
-  plsDraw1 = False #activation of several iteratively more complex and illustrative draw methods
-  plsDraw2 = True
+  selectedDrawFunc        = None #allows selection of several different impls 
+  selectedDrawCourseFunc  = None #allows selection of several different impls 
 
   ################## constructor, error ##################
 
@@ -92,6 +92,8 @@ class CoursesPgzBase(CoursesCats):
     if self.numRd > rxc: self.numRd = rxc
 
     self.buildUI()
+    self.selectedDrawFunc       = self.draw2
+    self.selectedDrawCourseFunc = self.drawCourses2
 
   ################## error ##################
 
@@ -133,8 +135,9 @@ class CoursesPgzBase(CoursesCats):
 
     if self.backdropA is not None: self.backdropA.draw()
 
-    if self.plsDraw1: self.draw1(screen)
-    if self.plsDraw2: self.draw2(screen)
+    if self.selectedDrawFunc is not None: 
+      self.selectedDrawFunc(screen)
+    else: self.msg('draw issue: selectedDrawFunc is not assigned')
 
   ################## draw samples #2 ##################
 
@@ -155,7 +158,11 @@ class CoursesPgzBase(CoursesCats):
     for cat in cats: #first, work through categories
       y0 = self.y0b
       courses = self.getCoursesInCat(cat)
-      self.drawCourses2(screen, courses, x0, y0, bds, dcs)
+
+      if self.selectedDrawCoursesFunc is not None:
+         self.selectedDrawCoursesFunc(screen, courses, x0, y0, bds, dcs)
+      else: self.msg('draw2 issue: selectedDrawCoursesFunc is not assigned')
+
       x0 += self.dx
 
     littleDivs = self.actorCats
@@ -165,7 +172,11 @@ class CoursesPgzBase(CoursesCats):
     for divBig in bigDivs: #next, work through divisions
       y0 = self.y0b
       courses = self.getCourseByDiv(divBig)
-      self.drawCourses2(screen, courses, x0, y0, bds, dcs)
+
+      if self.selectedDrawCoursesFunc is not None:
+         self.selectedDrawCoursesFunc(screen, courses, x0, y0, bds, dcs)
+      else: self.msg('draw2 issue: selectedDrawCoursesFunc is not assigned')
+
       x0 += self.dx
   
   ################## draw samples #1 ##################
