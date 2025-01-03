@@ -33,6 +33,9 @@ class CoursesPgzAccordion(CoursesPgzBase):
   def initColDisplayIndexDict(self):
 
     self.colDisplayIndexDict = {}
+    colNamesList = self.getColNames()
+    
+    for colName in colNamesList: self.colDisplayIndexDict[colName] = 0 #default to beginning
 
   ################## draw samples #1 ##################
 

@@ -108,7 +108,7 @@ class CoursesPgzBase(CoursesCats):
   #  print(dir(pgzero.builtins))
   #  return pgzero.__version__
 
-  ################## initColNameDict ################## 
+  ################## initColNameList ################## 
 
   def initColNameList(self):
     self.colNameList = []
@@ -121,6 +121,10 @@ class CoursesPgzBase(CoursesCats):
 
     for cat in cats:       self.colNameList.append(cat)
     for divBig in bigDivs: self.colNameList.append(divBig)
+
+  ################## getColNames ################## 
+
+  def getColNames(self): return self.colNameList
 
   ################## build UI ##################
 
