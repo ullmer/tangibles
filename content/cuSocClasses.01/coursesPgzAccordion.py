@@ -45,22 +45,18 @@ class CoursesPgzAccordion(CoursesPgzBase):
     for i in colorIndices: dcs.append(self.divColors[i]) 
 
     x0     = self.x0b  #refactor names
-    cats   = self.getCats()
-    colIdx = 0
+    cats   = self.getCats(); colIdx = 0
 
     for cat in cats: #first, work through categories
-      y0 = self.y0b
-      courses = self.getCoursesInCat(cat)
+      courses = self.getCoursesInCat(cat); y0 = self.y0b
       self.drawCourses2(screen, courses, x0, y0, bds, dcs)
       x0 += self.dx
 
-    littleDivs = self.actorCats
-    bigDivs    = []
+    littleDivs = self.actorCats; bigDivs    = []
     for div in littleDivs: divUp = div.upper(); bigDivs.append(divUp)
 
     for divBig in bigDivs: #next, work through divisions
-      y0 = self.y0b
-      courses = self.getCourseByDiv(divBig)
+      courses = self.getCourseByDiv(divBig); y0 = self.y0b
       self.drawCourses2(screen, courses, x0, y0, bds, dcs)
       x0 += self.dx
   
