@@ -198,10 +198,10 @@ class CoursesPgzBase(CoursesCats):
       courses = self.getCoursesInCat(cat)
 
       if self.selectedDrawCoursesFunc is not None:
-         self.selectedDrawCoursesFunc(screen, courses, x0, y0, bds, dcs)
+         self.selectedDrawCoursesFunc(screen, courses, x0, y0, bds, dcs, colIdx)
       else: self.msg('draw2 issue: selectedDrawCoursesFunc is not assigned')
 
-      x0 += self.dx
+      x0 += self.dx; colIdx += 1
 
     bigDivs = self.colNameList[5:] #refactor
 
@@ -210,14 +210,14 @@ class CoursesPgzBase(CoursesCats):
       courses = self.getCourseByDiv(divBig)
 
       if self.selectedDrawCoursesFunc is not None:
-         self.selectedDrawCoursesFunc(screen, courses, x0, y0, bds, dcs)
+         self.selectedDrawCoursesFunc(screen, courses, x0, y0, bds, dcs, colIdx)
       else: self.msg('draw2 issue: selectedDrawCoursesFunc is not assigned')
 
-      x0 += self.dx
+      x0 += self.dx; colIdx += 1
   
   ################## draw samples #1 ##################
 
-  def drawCourses2(self, screen, courses, x0, y0, bds, dcs): 
+  def drawCourses2(self, screen, courses, x0, y0, bds, dcs, whichCol): 
     courseIdx, barIdx = 0, 0
         
     for courseID in courses:

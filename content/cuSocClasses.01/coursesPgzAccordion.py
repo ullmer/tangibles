@@ -93,13 +93,23 @@ class CoursesPgzAccordion(CoursesPgzBase):
     
     for colName in colNamesList: self.colDisplayIndexDict[colName] = 0 #default to beginning
 
+  ################## get column display index ################## 
+
+  def getColDisplayIndex(self, whichCol):
+    if self.colDisplayIndexDict is None: self.msg("getColDisplayIndex: index dictionary not initialized"); return None
+
+    result = self.colDisplayIndexDict[whichCol]
+    return result
+
   ################## draw samples #1 ##################
 
-  def drawCourses3(self, screen, courses, x0, y0, bds, dcs): 
+  def drawCourses3(self, screen, courses, x0, y0, bds, dcs, whichCol): 
     self.msg("drawCourses3")
 
     courseIdx, barIdx = 0, 0
     numCourses = len(courses)
+
+    colDisplayIndex = self.getColDisplayIndex(whichCol)
         
     for courseID in courses:
       div    = self.mapCourseToDivisions(courseID)
@@ -111,7 +121,7 @@ class CoursesPgzAccordion(CoursesPgzBase):
       backdrop = bds[divIdx]; barColor=dcs[divIdx]
 
       #if courseIdx < 4: 
-      if courseIdx > numCourses-5:
+      #if courseIdx > numCourses-5:
         backdrop.topleft=(x0, y0); backdrop.draw()
         self.drawCourse(screen, courseID, x0, y0, barColor)
         y0 += self.dy1
