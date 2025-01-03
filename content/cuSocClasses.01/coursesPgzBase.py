@@ -149,7 +149,7 @@ class CoursesPgzBase(CoursesCats):
     cats   = self.getCats()
     colIdx = 0
 
-    for cat in cats:
+    for cat in cats: #first, work through categories
       y0 = self.y0b
       courses = self.getCoursesInCat(cat)
       catDivs = []
@@ -178,6 +178,14 @@ class CoursesPgzBase(CoursesCats):
         courseIdx += 1
 
       x0 += self.dx
+
+    bigDivs = []
+    for div in self.actorCats: divUp = div.upper(); bigDivs.append(divUp)
+
+    for div in bigDivs: #next, work through divisions
+      y0 = self.y0b
+      courses = self.getCourseByDiv(div)
+  
         
   ################## draw samples #1 ##################
 
