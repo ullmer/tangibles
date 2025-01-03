@@ -108,8 +108,9 @@ class CoursesPgzAccordion(CoursesPgzBase):
 
     courseIdx, barIdx = 0, 0
     numCourses = len(courses)
+    cdwds      = self.colDispWindowDefaultSize #default number of courses that we have room to textually display
 
-    colDisplayIndex = self.getColDisplayIndex(whichCol)
+    colIdx = self.getColDisplayIndex(whichCol) #column index
         
     for courseID in courses:
       div    = self.mapCourseToDivisions(courseID)
@@ -122,6 +123,8 @@ class CoursesPgzAccordion(CoursesPgzBase):
 
       #if courseIdx < 4: 
       #if courseIdx > numCourses-5:
+      if courseIdx >= colIdx and courseIdx <= colIdx + cdwds: #shape the window
+
         backdrop.topleft=(x0, y0); backdrop.draw()
         self.drawCourse(screen, courseID, x0, y0, barColor)
         y0 += self.dy1
