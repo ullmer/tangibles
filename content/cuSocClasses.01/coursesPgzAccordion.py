@@ -14,7 +14,12 @@ class CoursesPgzAccordion(CoursesPgzBase):
 
   colDisplayIndexDict = None
 
-  keyDict             = None
+  #copilot: "The first known computer game to make extensive use of alphanumeric key bindings for controlling 
+  #          on-screen character movement and actions is "Rogue", developed in 1980."
+  #map "q" to column 0, up, etc.; old keyboard-driven 1980s game-style
+
+  keyDict = {'q': "0U", "w": "1U", "e": "2U", 'r': "3U", 't': "4U", 'y': "5U", 'u': "6U", 'i': "7U", 'o': "8U",
+             'a': "OD", "s": "1D", "d": "2D", 'f': "3D", 'g': "4D", 'h': "5D", 'j': "6D", 'k': "7D", 'l': "8D"}
 
   ################## constructor, error ##################
 
@@ -34,35 +39,9 @@ class CoursesPgzAccordion(CoursesPgzBase):
   ################## bind keys ##################
 
   def bindKeys(self):
-    self.keyDict = {}
+    for key in self.keyDict:
+      val = self.keyDict[key]
 
-    k = keyboard
-
-    #copilot: "The first known computer game to make extensive use of alphanumeric key bindings for controlling 
-    #          on-screen character movement and actions is "Rogue", developed in 1980."
-
-    #The below could all be done more compactly, and perhaps should; but not immediately clear it would assist legibility
-
-    self.keyDict[k.q] = "0U" #map "q" to column 0, up; old keyboard-driven 1980s game-style
-    self.keyDict[k.a] = "0D" #map "a" to column 0, down
-    self.keyDict[k.w] = "1U" #map "w" to column 1, up
-    self.keyDict[k.s] = "1D" #map "s" to column 1, down
-    self.keyDict[k.e] = "2U" #map "e" to column 2, up
-    self.keyDict[k.d] = "2D" #map "d" to column 2, down
-
-    self.keyDict[k.r] = "3U" #map "r" to column 3, up; old keyboard-driven 1980s game-style
-    self.keyDict[k.f] = "3D" #map "f" to column 3, down
-    self.keyDict[k.t] = "4U" #map "t" to column 4, up
-    self.keyDict[k.g] = "4D" #map "g" to column 4, down
-    self.keyDict[k.y] = "5U" #map "y" to column 5, up
-    self.keyDict[k.h] = "5D" #map "h" to column 5, down
-
-    self.keyDict[k.u] = "6U" #map "u" to column 6, up; old keyboard-driven 1980s game-style
-    self.keyDict[k.j] = "6D" #map "j" to column 6, down
-    self.keyDict[k.i] = "7U" #map "i" to column 7, up
-    self.keyDict[k.k] = "7D" #map "k" to column 7, down
-    self.keyDict[k.o] = "8U" #map "o" to column 8, up
-    self.keyDict[k.l] = "8D" #map "l" to column 8, down
 
   ################## initialize col diplsay indices dict ##################
 
