@@ -96,7 +96,11 @@ class CoursesPgzAccordion(CoursesPgzBase):
   ################## get column display index ################## 
 
   def getColDisplayIndex(self, whichCol):
-    if self.colDisplayIndexDict is None: self.msg("getColDisplayIndex: index dictionary not initialized"); return None
+    if self.colDisplayIndexDict is None: 
+      self.msg("getColDisplayIndex: index dictionary not initialized"); return None
+
+    if whichCol not in self.colDisplayIndexDict: 
+      self.msg("getColDisplayIndex: specified column has issue: " + str(whichCol)); return None
 
     result = self.colDisplayIndexDict[whichCol]
     return result
@@ -111,6 +115,7 @@ class CoursesPgzAccordion(CoursesPgzBase):
     cdwds      = self.colDispWindowDefaultSize #default number of courses that we have room to textually display
 
     colIdx = self.getColDisplayIndex(whichCol) #column index
+    if colIdx is None: self.msg("drawCourses3: column index unassigned for column " + str(whichCol)); return None
         
     for courseID in courses:
       div    = self.mapCourseToDivisions(courseID)
