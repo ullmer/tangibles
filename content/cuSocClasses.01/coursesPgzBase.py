@@ -152,42 +152,45 @@ class CoursesPgzBase(CoursesCats):
     for cat in cats: #first, work through categories
       y0 = self.y0b
       courses = self.getCoursesInCat(cat)
-      catDivs = []
-
-      courseIdx = 0
-      barIdx    = 0
-      for courseID in courses:
-        div    = self.mapCourseToDivisions(courseID)
-        if div is None: self.msg("drawSamples2: ignoring null div"); continue
-
-        divLow = div.lower()
-        if divLow in self.actorCats: divIdx = self.actorCats.index(divLow)
-        else:                        self.msg("drawSamples2: ignoring div issue: " + str(divLow)); continue
-        backdrop = bds[divIdx]; barColor=dcs[divIdx]
-
-        if courseIdx < 4: 
-          backdrop.topleft=(x0, y0); backdrop.draw()
-          self.drawCourse(screen, courseID, x0, y0, barColor)
-          y0 += self.dy1
-        else: 
-          self.drawCourseBar(screen, courseID, x0, y0, barColor); 
-          barIdx += 1
-          if barIdx % 4: y0 += self.barDy1
-          else:          y0 += self.barDy2
-
-        courseIdx += 1
-
+      self.drawCoursesSamples2(screen, courses, x0, y0, bds, dcs)
       x0 += self.dx
 
     littleDivs = self.actorCats
     bigDivs    = []
     for div in littleDivs: divUp = div.upper(); bigDivs.append(divUp)
 
-    for divLit, divBig in zip(littleDivs, bigDivs): #next, work through divisions
+    for divBig in bigDivs: #next, work through divisions
       y0 = self.y0b
       courses = self.getCourseByDiv(divBig)
+      self.drawCoursesSamples2(screen, courses, x0, y0, bds, dcs)
+      x0 += self.dx
   
+  ################## draw samples #1 ##################
+
+  def drawCoursesSamples2(self, screen, courses, x0, y0, bds, dcs): 
+    courseIdx, barIdx = 0, 0
         
+    for courseID in courses:
+      div    = self.mapCourseToDivisions(courseID)
+      if div is None: self.msg("drawSamples2: ignoring null div"); continue
+
+      divLow = div.lower()
+      if divLow in self.actorCats: divIdx = self.actorCats.index(divLow)
+      else:                        self.msg("drawSamples2: ignoring div issue: " + str(divLow)); continue
+      backdrop = bds[divIdx]; barColor=dcs[divIdx]
+
+      if courseIdx < 4: 
+        backdrop.topleft=(x0, y0); backdrop.draw()
+        self.drawCourse(screen, courseID, x0, y0, barColor)
+        y0 += self.dy1
+      else: 
+        self.drawCourseBar(screen, courseID, x0, y0, barColor); 
+        barIdx += 1
+        if barIdx % 4: y0 += self.barDy1
+        else:          y0 += self.barDy2
+
+      courseIdx += 1
+
   ################## draw samples #1 ##################
 
   def drawSamples1(self, screen): 
