@@ -71,6 +71,9 @@ class CoursesPgzBase(CoursesCats):
   connectingLineWidth   = 3
   olderPgz              = True # suppress line widths and fading for std=older pip pgz version
 
+  plsDraw1 = False #activation of several iteratively more complex and illustrative draw methods
+  plsDraw2 = True
+
   ################## constructor, error ##################
 
   def __init__(self, **kwargs):
@@ -130,12 +133,12 @@ class CoursesPgzBase(CoursesCats):
 
     if self.backdropA is not None: self.backdropA.draw()
 
-    #if self.drawSampleContent: self.drawSamples1(screen)
-    if self.drawSampleContent:  self.drawSamples2(screen)
+    if self.plsDraw1: self.draw1(screen)
+    if self.plsDraw2: self.draw2(screen)
 
   ################## draw samples #2 ##################
 
-  def drawSamples2(self, screen): 
+  def draw2(self, screen): 
 
     colorIndices = [3,1,2,0]
 
@@ -152,7 +155,7 @@ class CoursesPgzBase(CoursesCats):
     for cat in cats: #first, work through categories
       y0 = self.y0b
       courses = self.getCoursesInCat(cat)
-      self.drawCoursesSamples2(screen, courses, x0, y0, bds, dcs)
+      self.drawCourses2(screen, courses, x0, y0, bds, dcs)
       x0 += self.dx
 
     littleDivs = self.actorCats
@@ -162,12 +165,12 @@ class CoursesPgzBase(CoursesCats):
     for divBig in bigDivs: #next, work through divisions
       y0 = self.y0b
       courses = self.getCourseByDiv(divBig)
-      self.drawCoursesSamples2(screen, courses, x0, y0, bds, dcs)
+      self.drawCourses2(screen, courses, x0, y0, bds, dcs)
       x0 += self.dx
   
   ################## draw samples #1 ##################
 
-  def drawCoursesSamples2(self, screen, courses, x0, y0, bds, dcs): 
+  def drawCourses2(self, screen, courses, x0, y0, bds, dcs): 
     courseIdx, barIdx = 0, 0
         
     for courseID in courses:
@@ -193,7 +196,7 @@ class CoursesPgzBase(CoursesCats):
 
   ################## draw samples #1 ##################
 
-  def drawSamples1(self, screen): 
+  def draw1(self, screen): 
     a = self.divisionBackdropA[1]
     b = self.divisionBackdropA[2]
     c = self.divisionBackdropA[0]
