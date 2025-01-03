@@ -39,6 +39,8 @@ class CoursesPgzBase(CoursesCats):
   #numRd        = None
   numRd         = 0
 
+  colNameList   = None
+
   backdropFn   = 'ak_apc_mm2_d03_1920'
   backdropA    = None
 
@@ -95,6 +97,8 @@ class CoursesPgzBase(CoursesCats):
     self.selectedDrawFunc       = self.draw2
     self.selectedDrawCourseFunc = self.drawCourses2
 
+    self.initColNameList()
+
   ################## error ##################
 
   def err(self, msg): print("CoursesPgz error:", msg); traceback.print_exc()
@@ -103,6 +107,20 @@ class CoursesPgzBase(CoursesCats):
   #def checkPgzVersion(self): 
   #  print(dir(pgzero.builtins))
   #  return pgzero.__version__
+
+  ################## initColNameDict ################## 
+
+  def initColNameList(self):
+    self.colNameList = []
+
+    cats   = self.getCats()
+
+    littleDivs = self.actorCats
+    bigDivs    = []
+    for div in littleDivs: divUp = div.upper(); bigDivs.append(divUp)
+
+    for cat in cats:       self.colNameList.append(cat)
+    for divBig in bigDivs: self.colNameList.append(divBig)
 
   ################## build UI ##################
 
@@ -165,9 +183,7 @@ class CoursesPgzBase(CoursesCats):
 
       x0 += self.dx
 
-    littleDivs = self.actorCats
-    bigDivs    = []
-    for div in littleDivs: divUp = div.upper(); bigDivs.append(divUp)
+    bigDivs = self.colNameList[5:] #refactor
 
     for divBig in bigDivs: #next, work through divisions
       y0 = self.y0b

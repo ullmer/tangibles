@@ -12,6 +12,8 @@ from coursesPgzBase    import *
 
 class CoursesPgzAccordion(CoursesPgzBase):
 
+  colDisplayIndexDict = None
+
   ################## constructor, error ##################
 
   def __init__(self, **kwargs):
@@ -19,10 +21,18 @@ class CoursesPgzAccordion(CoursesPgzBase):
     super().__init__()
     self.selectedDrawCoursesFunc = self.drawCourses3
 
+    self.initColDisplayIndexDict()
+
   ################## error ##################
 
   def err(self, msg): print("CoursesPgzAccordion error:", msg); traceback.print_exc()
   def msg(self, msg): print("CoursesPgzAccordion msg:",   msg)
+
+  ################## initialize col diplsay indices dict ##################
+
+  def initColDisplayIndexDict(self):
+
+    self.colDisplayIndexDict = {}
 
   ################## draw samples #1 ##################
 
