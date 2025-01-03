@@ -89,9 +89,11 @@ class CoursesPgzAccordion(CoursesPgzBase):
   def initColDisplayIndexDict(self):
 
     self.colDisplayIndexDict = {}
-    colNamesList = self.getColNames()
-    
-    for colName in colNamesList: self.colDisplayIndexDict[colName] = 0 #default to beginning
+    nc = self.getNumColumns()
+    for colIdx in range(nc): self.colDisplayIndexDict[colIdx] = 0 #default to beginning
+
+    #colNamesList = self.getColNames()
+    #for colName in colNamesList: self.colDisplayIndexDict[colName] = 0 #default to beginning
 
   ################## get column display index ################## 
 

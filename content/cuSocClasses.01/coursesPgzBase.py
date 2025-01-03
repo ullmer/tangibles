@@ -128,7 +128,9 @@ class CoursesPgzBase(CoursesCats):
 
   ################## getColNames ################## 
 
-  def getColNames(self): return self.colNameList
+  def getColNames(self):   return self.colNameList
+
+  def getNumColumns(self): return len(self.colNameList)
 
   def getColLenByIdx(self, colIdx): 
     colNamesListLen = len(self.colNameList)
