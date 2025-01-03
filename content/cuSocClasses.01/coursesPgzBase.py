@@ -186,11 +186,11 @@ class CoursesPgzBase(CoursesCats):
         
     for courseID in courses:
       div    = self.mapCourseToDivisions(courseID)
-      if div is None: self.msg("drawSamples2: ignoring null div"); continue
+      if div is None: self.msg("drawCourses2: ignoring null div"); continue
 
       divLow = div.lower()
       if divLow in self.actorCats: divIdx = self.actorCats.index(divLow)
-      else:                        self.msg("drawSamples2: ignoring div issue: " + str(divLow)); continue
+      else:                        self.msg("drawCourses2: ignoring div issue: " + str(divLow)); continue
       backdrop = bds[divIdx]; barColor=dcs[divIdx]
 
       if courseIdx < 4: 

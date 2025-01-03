@@ -17,55 +17,27 @@ class CoursesPgzAccordion(CoursesPgzBase):
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
-    self.selectedDrawFunc = self.draw3
+    self.selectedDrawCoursesFunc = self.drawCourses3
 
   ################## error ##################
 
   def err(self, msg): print("CoursesPgzAccordion error:", msg); traceback.print_exc()
   def msg(self, msg): print("CoursesPgzAccordion msg:",   msg)
 
-  ################## draw samples #3 ##################
-
-  def draw3(self, screen): 
-
-    self.msg('draw3')
-
-    colorIndices = [3,1,2,0]
-
-    bds = [] #backdrops/backgrounds of individual courses, across several colors
-    for i in colorIndices: bds.append(self.divisionBackdropA[i])
-
-    dcs = [] # toward colorbars. refactor next line & above
-    for i in colorIndices: dcs.append(self.divColors[i]) 
-
-    x0     = self.x0b  #refactor names
-    cats   = self.getCats(); colIdx = 0
-
-    for cat in cats: #first, work through categories
-      courses = self.getCoursesInCat(cat); y0 = self.y0b
-      self.drawCourses2(screen, courses, x0, y0, bds, dcs)
-      x0 += self.dx
-
-    littleDivs = self.actorCats; bigDivs    = []
-    for div in littleDivs: divUp = div.upper(); bigDivs.append(divUp)
-
-    for divBig in bigDivs: #next, work through divisions
-      courses = self.getCourseByDiv(divBig); y0 = self.y0b
-      self.drawCourses2(screen, courses, x0, y0, bds, dcs)
-      x0 += self.dx
-  
   ################## draw samples #1 ##################
 
   def drawCourses3(self, screen, courses, x0, y0, bds, dcs): 
+    self.msg("drawCourses3")
+
     courseIdx, barIdx = 0, 0
         
     for courseID in courses:
       div    = self.mapCourseToDivisions(courseID)
-      if div is None: self.msg("drawSamples2: ignoring null div"); continue
+      if div is None: self.msg("drawCourses3: ignoring null div"); continue
 
       divLow = div.lower()
       if divLow in self.actorCats: divIdx = self.actorCats.index(divLow)
-      else:                        self.msg("drawSamples2: ignoring div issue: " + str(divLow)); continue
+      else:                        self.msg("drawCourses3: ignoring div issue: " + str(divLow)); continue
       backdrop = bds[divIdx]; barColor=dcs[divIdx]
 
       if courseIdx < 4: 
