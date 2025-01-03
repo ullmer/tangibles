@@ -29,7 +29,8 @@ class CoursesPgzBase(CoursesCats):
   x2, x3, x4 =   9,  44,  7 #offsets from left edge of course block to left of course #, title/instructor, subj
   y2, y3, y4 =  -2,  26, 55 #offsets from  top edge of course block to  top of           title,instructor
 
-  barDy1, barDy2 = 7, 13
+  #barDy1, barDy2 = 7, 13
+  barDy1, barDy2 = 4, 12
 
   actorCats     = ['cs', 'hcc', 'vc', 'foi']
   actorCatDict  = None   #actor category dictionary; contemplating graceful paths to manage pi ram
@@ -46,7 +47,8 @@ class CoursesPgzBase(CoursesCats):
   drawSampleContent = True
 
   rrectX, rrectY = 336, 92
-  crectX, crectY = 180, 4
+  #crectX, crectY = 180, 4
+  crectX, crectY = 180, 2
   courseGroups   = None
 
   font1      = "o1" #need to add auto-retrieval from fonts/o1.url if o1.ttf not present
