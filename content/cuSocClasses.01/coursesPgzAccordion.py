@@ -21,6 +21,8 @@ class CoursesPgzAccordion(CoursesPgzBase):
   keyDict = {'q': "0U", "w": "1U", "e": "2U", 'r': "3U", 't': "4U", 'y': "5U", 'u': "6U", 'i': "7U", 'o': "8U",
              'a': "OD", "s": "1D", "d": "2D", 'f': "3D", 'g': "4D", 'h': "5D", 'j': "6D", 'k': "7D", 'l': "8D"}
 
+  keyCodeDict = None
+
   ################## constructor, error ##################
 
   def __init__(self, **kwargs):
@@ -39,9 +41,18 @@ class CoursesPgzAccordion(CoursesPgzBase):
   ################## bind keys ##################
 
   def bindKeys(self):
-    for key in self.keyDict:
-      val = self.keyDict[key]
+    self.keyCodeDict = {}
 
+    for key in self.keyDict:
+      val = self.keyDict[key]; upkey = key.upper()
+      keycode = keys[upkey]
+      self.keyCodeDict[keycode] = val
+
+  ################## on key down##################
+
+  def on_key_down(self, key):
+    if self.keyCodeDict is None:    self.msg("on_key_down: keyCodeDict not initialized!");       return
+    if key not in self.keyCodeDict: self.msg("on_keh_down: key not in dictionary: " + str(key)); return
 
   ################## initialize col diplsay indices dict ##################
 
