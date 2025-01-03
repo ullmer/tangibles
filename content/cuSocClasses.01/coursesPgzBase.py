@@ -21,10 +21,11 @@ os.environ['SDL_VIDEO_WINDOW_POS'] = "0,0"
 class CoursesPgzBase(CoursesCats):
 
   rows, cols =   9,   5
-  dx,  dy1   = 205,  67 #dy1:   between blocks
+  #dx,  dy1   = 205,  67 #dy1:   between blocks
+  dx,  dy1   = 206.5,  67 #dy1:   between blocks
   dy2, dy3   =   8,  17 #dy2/3: lines within/between blocks
   x0,  y0    =  38,  28 # column bounding boxes
-  x0b, y0b   =  53,  30 # placements within columns of content
+  x0b, y0b   =  44,  30 # placements within columns of content
   x1, y1     =  55,  37
   x2, x3, x4 =   9,  44,  7 #offsets from left edge of course block to left of course #, title/instructor, subj
   y2, y3, y4 =  -2,  26, 55 #offsets from  top edge of course block to  top of           title,instructor
