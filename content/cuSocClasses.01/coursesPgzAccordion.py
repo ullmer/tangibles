@@ -59,9 +59,11 @@ class CoursesPgzAccordion(CoursesPgzBase):
     if whichColInt < 0 or whichColInt >= numCols: self.msg("nudgeCol: column index issue: " + str(whichColInt); return
     colName    = self.colNamesList[whichColInt]
     colNameVal = self.colDisplayIndexDict[colName]
+    colLen     = self.col
 
     if    colNameVal > 0: self.colDisplayIndexDict[colName] -= 1
-    elif 
+    elif  colNameVal < 
+  colDispWindowDefaultSize = 4 #default number of courses that we have room to textually display
 
     colNamesList = self.getColNames()
 

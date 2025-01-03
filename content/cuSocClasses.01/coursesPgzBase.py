@@ -39,7 +39,8 @@ class CoursesPgzBase(CoursesCats):
   #numRd        = None
   numRd         = 0
 
-  colNameList   = None
+  colNameList    = None
+  colNameLenDict = None
 
   backdropFn   = 'ak_apc_mm2_d03_1920'
   backdropA    = None
@@ -50,7 +51,6 @@ class CoursesPgzBase(CoursesCats):
   drawSampleContent = True
 
   rrectX, rrectY = 336, 92
-  #crectX, crectY = 180, 4
   crectX, crectY = 180, 2
   courseGroups   = None
 
@@ -70,8 +70,7 @@ class CoursesPgzBase(CoursesCats):
 
   actorSelectedId       = None
   courseTextDrawOffset  = None
-  connectingLineWidth   = 3
-  olderPgz              = True # suppress line widths and fading for std=older pip pgz version
+  olderPgz              = False # suppress line widths and fading for std=older pip pgz version
 
   selectedDrawFunc        = None #allows selection of several different impls 
   selectedDrawCourseFunc  = None #allows selection of several different impls 
@@ -83,7 +82,6 @@ class CoursesPgzBase(CoursesCats):
     super().__init__()
     self.actor2id              = {}
     self.courseTextDrawOffset  = {}
-    self.timeDotActors         = {}
     self.courseGroups          = {}
 
     try:    self.colorScale = spectra.scale(self.colorScaleColors)    //A
@@ -111,7 +109,8 @@ class CoursesPgzBase(CoursesCats):
   ################## initColNameList ################## 
 
   def initColNameList(self):
-    self.colNameList = []
+    self.colNameList    = []
+    self.colNameLenDict = {}
 
     cats   = self.getCats()
 
