@@ -22,6 +22,7 @@ class CoursesPgzAccordion(CoursesPgzBase):
              'a': "OD", "s": "1D", "d": "2D", 'f': "3D", 'g': "4D", 'h': "5D", 'j': "6D", 'k': "7D", 'l': "8D"}
 
   keyCodeDict = None
+  colDispWindowDefaultSize = 4 #default number of courses that we have room to textually display
 
   ################## constructor, error ##################
 
@@ -50,9 +51,37 @@ class CoursesPgzAccordion(CoursesPgzBase):
 
   ################## on key down##################
 
+  def nudgeCol(self, whichColInt, whichDir):
+    if self.colDisplayIndexDict is None: self.msg("nudgeCol: column display index not initialized"); return
+    if self.colNamesList        is None: self.msg("nudgeCol: column names list not initialized");    return
+    numCols = len(self.colNamesList)
+ 
+    if whichColInt < 0 or whichColInt >= numCols: self.msg("nudgeCol: column index issue: " + str(whichColInt); return
+    colName    = self.colNamesList[whichColInt]
+    colNameVal = self.colDisplayIndexDict[colName]
+
+    if    colNameVal > 0: self.colDisplayIndexDict[colName] -= 1
+    elif 
+
+    colNamesList = self.getColNames()
+
+
+  ################## on key down##################
+
   def on_key_down(self, key):
     if self.keyCodeDict is None:    self.msg("on_key_down: keyCodeDict not initialized!");       return
     if key not in self.keyCodeDict: self.msg("on_keh_down: key not in dictionary: " + str(key)); return
+
+    val = self.keyCodeDict[key]
+
+    try:
+      whichColCh = val[0] #use try-except to "more efficiently" catch all errors
+      whichDir   = val[1]
+
+      whichColInt = int(whichColCh)
+      self.nudgeCol(whichColInt, whichDir)
+
+    except: self.err("on_key_down " + str(key))
 
   ################## initialize col diplsay indices dict ##################
 
@@ -100,6 +129,7 @@ class CoursesPgzAccordion(CoursesPgzBase):
 cpgza = CoursesPgzAccordion()
 
 def draw(): screen.clear(); cpgza.draw(screen)
+def on_key_down(key):       cpgza.on_key_down(key)
 def on_mouse_down(pos):     pass #cpgz.on_mouse_down(pos)
 
 ### end ###
