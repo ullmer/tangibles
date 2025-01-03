@@ -179,12 +179,13 @@ class CoursesPgzBase(CoursesCats):
 
       x0 += self.dx
 
-    bigDivs = []
-    for div in self.actorCats: divUp = div.upper(); bigDivs.append(divUp)
+    littleDivs = self.actorCats
+    bigDivs    = []
+    for div in littleDivs: divUp = div.upper(); bigDivs.append(divUp)
 
-    for div in bigDivs: #next, work through divisions
+    for divLit, divBig in zip(littleDivs, bigDivs): #next, work through divisions
       y0 = self.y0b
-      courses = self.getCourseByDiv(div)
+      courses = self.getCourseByDiv(divBig)
   
         
   ################## draw samples #1 ##################
