@@ -30,6 +30,7 @@ class CoursesPgzAccordion(CoursesPgzBase):
     self.msg("drawCourses3")
 
     courseIdx, barIdx = 0, 0
+    numCourses = len(courses)
         
     for courseID in courses:
       div    = self.mapCourseToDivisions(courseID)
@@ -40,7 +41,8 @@ class CoursesPgzAccordion(CoursesPgzBase):
       else:                        self.msg("drawCourses3: ignoring div issue: " + str(divLow)); continue
       backdrop = bds[divIdx]; barColor=dcs[divIdx]
 
-      if courseIdx < 4: 
+      #if courseIdx < 4: 
+      if courseIdx > numCourses-5:
         backdrop.topleft=(x0, y0); backdrop.draw()
         self.drawCourse(screen, courseID, x0, y0, barColor)
         y0 += self.dy1
