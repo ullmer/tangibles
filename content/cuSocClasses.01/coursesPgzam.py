@@ -49,6 +49,8 @@ class CoursesPgzam(CoursesPgzAccordion):
         whichSlider = int(control[-1]) - 1 #control is "s1", "s2", etc.
         whichVal    = int(arg)
         self.sliderValDict[whichSlider] = self.sliderFullrangeV - whichVal
+        self.assignColumnIdx(whichSlider, whichVal)
+
     except: self.err("midiCb " + str([control, arg]))
 
   ################## initSliders ##################

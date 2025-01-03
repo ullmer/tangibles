@@ -49,7 +49,7 @@ class CoursesPgzAccordion(CoursesPgzBase):
       keycode = keys[upkey]
       self.keyCodeDict[keycode] = val
 
-  ################## on key down##################
+  ################## nudge column ##################
 
   def nudgeCol(self, whichColInt, whichDir):
 
@@ -72,6 +72,28 @@ class CoursesPgzAccordion(CoursesPgzBase):
     if    colLen > 0 and whichDir == 'D':                  self.colDisplayIndexDict[whichColInt] += 1
     elif  colNameVal < colLen - cdwds and whichDir == 'U': self.colDisplayIndexDict[whichColInt] -= 1 
     else: self.msg("nudgeCol: problematics"); return
+
+  ################## on key down ##################
+
+  def assignColumnIdx(self, whichColInt, whichColIdx):
+    cnl     = self.getColNames()
+
+    if cnl                      is None: self.msg("nudgeCol: column names list not initialized");    return
+    if self.colDisplayIndexDict is None: self.msg("nudgeCol: column display index not initialized"); return
+
+    numCols = len(cnl)
+ 
+    if whichColInt < 0 or whichColInt >= numCols: self.msg("nudgeCol: column index issue: " + str(whichColInt)); return
+    colName    = cnl[whichColInt]
+
+    #colNameVal = self.colDisplayIndexDict[colName]
+    colNameVal = self.colDisplayIndexDict[whichColInt]
+    colLen     = self.getColLenByIdx(whichColInt)
+  
+    cdwds = self.colDispWindowDefaultSize; wci   = whichColIdx
+
+    if    wci > 0 and wci < colLen - cdwds: self.colDisplayIndexDict[whichColInt] = whichColIdx
+    else: self.msg("assignColumnIdx: problematics:" + str(wci)); return
     
   ################## on key down##################
 
