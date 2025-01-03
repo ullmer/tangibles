@@ -56,15 +56,15 @@ class CoursesPgzAccordion(CoursesPgzBase):
     if self.colNamesList        is None: self.msg("nudgeCol: column names list not initialized");    return
     numCols = len(self.colNamesList)
  
-    if whichColInt < 0 or whichColInt >= numCols: self.msg("nudgeCol: column index issue: " + str(whichColInt); return
+    if whichColInt < 0 or whichColInt >= numCols: self.msg("nudgeCol: column index issue: " + str(whichColInt)); return
     colName    = self.colNamesList[whichColInt]
     colNameVal = self.colDisplayIndexDict[colName]
     colLen     = self.getColLenByIdx(whichColInt)
   
     cdwds = self.colDispWindowDefaultSize 
 
-    if    colLen > 0 and whichDir is 'D':                  self.colDisplayIndexDict[colName] -= 1
-    elif  colNameVal < colLen - cdwds and whichDir is 'U': self.colDisplayIndexDict[colName] += 1 
+    if    colLen > 0 and whichDir == 'D':                  self.colDisplayIndexDict[colName] -= 1
+    elif  colNameVal < colLen - cdwds and whichDir == 'U': self.colDisplayIndexDict[colName] += 1 
     else: self.msg("nudgeCol: problematics"); return
     
   ################## on key down##################
