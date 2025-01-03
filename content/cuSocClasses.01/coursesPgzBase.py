@@ -136,7 +136,7 @@ class CoursesPgzBase(CoursesCats):
     colNamesListLen = len(self.colNameList)
     if colIdx < 0 or colIdx >= colNamesListLen: self.msg("getColLenByIdx: problem index: " + str(colIdx)); return None
     colName = self.colNameList[colIdx]
-    result  = self.getColLenByName(self, colName)
+    result  = self.getColLenByName(colName)
     return result
 
   def getColLenByName(self, colName): 

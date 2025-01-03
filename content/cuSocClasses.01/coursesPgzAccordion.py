@@ -52,21 +52,25 @@ class CoursesPgzAccordion(CoursesPgzBase):
   ################## on key down##################
 
   def nudgeCol(self, whichColInt, whichDir):
-    if self.colDisplayIndexDict is None: self.msg("nudgeCol: column display index not initialized"); return
-    if self.colNamesList        is None: self.msg("nudgeCol: column names list not initialized");    return
 
     cnl     = self.getColNames()
+
+    if cnl                      is None: self.msg("nudgeCol: column names list not initialized");    return
+    if self.colDisplayIndexDict is None: self.msg("nudgeCol: column display index not initialized"); return
+
     numCols = len(cnl)
  
     if whichColInt < 0 or whichColInt >= numCols: self.msg("nudgeCol: column index issue: " + str(whichColInt)); return
     colName    = cnl[whichColInt]
-    colNameVal = self.colDisplayIndexDict[colName]
+
+    #colNameVal = self.colDisplayIndexDict[colName]
+    colNameVal = self.colDisplayIndexDict[whichColInt]
     colLen     = self.getColLenByIdx(whichColInt)
   
     cdwds = self.colDispWindowDefaultSize 
 
-    if    colLen > 0 and whichDir == 'D':                  self.colDisplayIndexDict[colName] -= 1
-    elif  colNameVal < colLen - cdwds and whichDir == 'U': self.colDisplayIndexDict[colName] += 1 
+    if    colLen > 0 and whichDir == 'D':                  self.colDisplayIndexDict[whichColInt] -= 1
+    elif  colNameVal < colLen - cdwds and whichDir == 'U': self.colDisplayIndexDict[whichColInt] += 1 
     else: self.msg("nudgeCol: problematics"); return
     
   ################## on key down##################
