@@ -19,7 +19,7 @@ class CoursesPgzAccordion(CoursesPgzBase):
   #map "q" to column 0, up, etc.; old keyboard-driven 1980s game-style
 
   keyDict = {'q': "0U", "w": "1U", "e": "2U", 'r': "3U", 't': "4U", 'y': "5U", 'u': "6U", 'i': "7U", 'o': "8U",
-             'a': "OD", "s": "1D", "d": "2D", 'f': "3D", 'g': "4D", 'h': "5D", 'j': "6D", 'k': "7D", 'l': "8D"}
+             'a': "0D", "s": "1D", "d": "2D", 'f': "3D", 'g': "4D", 'h': "5D", 'j': "6D", 'k': "7D", 'l': "8D"}
 
   keyCodeDict = None
   colDispWindowDefaultSize = 4 #default number of courses that we have room to textually display
@@ -69,17 +69,17 @@ class CoursesPgzAccordion(CoursesPgzBase):
   
     cdwds = self.colDispWindowDefaultSize 
 
-    if    colLen > 0 and whichDir == 'D':                  self.colDisplayIndexDict[whichColInt] -= 1
-    elif  colNameVal < colLen - cdwds and whichDir == 'U': self.colDisplayIndexDict[whichColInt] += 1 
+    if    colLen > 0 and whichDir == 'D':                  self.colDisplayIndexDict[whichColInt] += 1
+    elif  colNameVal < colLen - cdwds and whichDir == 'U': self.colDisplayIndexDict[whichColInt] -= 1 
     else: self.msg("nudgeCol: problematics"); return
     
   ################## on key down##################
 
   def on_key_down(self, key):
     if self.keyCodeDict is None:    self.msg("on_key_down: keyCodeDict not initialized!");       return
-    if key not in self.keyCodeDict: self.msg("on_keh_down: key not in dictionary: " + str(key)); return
+    if key not in self.keyCodeDict: self.msg("on_key_down: key not in dictionary: " + str(key)); return
 
-    self.msg("on_key_down " + str(key))
+    if self.verbose: self.msg("on_key_down " + str(key))
 
     val = self.keyCodeDict[key]
 
@@ -127,11 +127,13 @@ class CoursesPgzAccordion(CoursesPgzBase):
         
     for courseID in courses:
       div    = self.mapCourseToDivisions(courseID)
-      if div is None: self.msg("drawCourses3: ignoring null div"); continue
+      if div is None: 
+        if not self.quiet: self.msg("drawCourses3: ignoring null div"); 
+        continue
 
       divLow = div.lower()
       if divLow in self.actorCats: divIdx = self.actorCats.index(divLow)
-      else:                        self.msg("drawCourses3: ignoring div issue: " + str(divLow)); continue
+      elif not self.quiet:         self.msg("drawCourses3: ignoring div issue: " + str(divLow)); continue
       backdrop = bds[divIdx]; barColor=dcs[divIdx]
 
       #if courseIdx < 4: 
