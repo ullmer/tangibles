@@ -137,21 +137,12 @@ class CoursesCats(Courses):
 
   ############# mapCourseInstructorsToDivisions #############
 
-  def getCourseByDiv(self, divSpecified=None):
-    result = []
+  def getCourseByDiv(self, divSpecified):
+    if self.mapDiv2Courses is None or divSpecified not in self.mapDiv2Courses:
+      self.msg("getCourseByDiv: challenges revving up re: " + str(divSpecified)); return None
 
-    if divSpecified is None:
-      try:
-        divisions = self.socDbInst.getDivisions()
-        for div in divisions:
-          r2 = self.getCoursesByDiv(div); result += r2
-      except:
-        self.err("getCoursesByDiv exception on unspecified division")
-        traceback.print_exc(); return False
-    else: 
-      for row in self.rowtableRows:
-        subject, course, instr = row['Subj'], row['Crse'], row['Instructor']
-        instr2 = self.mapNameC2D[instr] 
+    result = self.mapDiv2Courses[divSpecified]
+    return result
 
   ############# mapCourseInstructorsToDivisions #############
 
