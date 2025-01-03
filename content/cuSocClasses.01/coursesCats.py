@@ -52,6 +52,11 @@ class CoursesCats(Courses):
     result = len(self.catsDict[cat])
     return result
 
+  def getNumCoursesInDiv(self, div): 
+    if div not in self.mapDiv2Courses: self.msg("getNumCoursesInDiv: div not  found: " + str(div)); return None
+    result = len(self.mapDiv2Courses[div])
+    return result
+
   def getCoursesInCat(self, cat): 
     if cat not in self.catsDict: self.msg("getCoursesInCats: cat not found: " + str(cat)); return None
     result = self.catsDict[cat]

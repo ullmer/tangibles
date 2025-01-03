@@ -118,13 +118,30 @@ class CoursesPgzBase(CoursesCats):
     bigDivs    = []
     for div in littleDivs: divUp = div.upper(); bigDivs.append(divUp)
 
-    for cat in cats:       self.colNameList.append(cat)
-    for divBig in bigDivs: self.colNameList.append(divBig)
+    for cat in cats:       
+      self.colNameList.append(cat)
+      self.colNameLenDict[cat] = self.getNumCoursesInCat(cat)
+
+    for divBig in bigDivs: 
+      self.colNameList.append(divBig)
+      self.colNameLenDict[divBig] = self.getNumCoursesInDiv(divBig)
 
   ################## getColNames ################## 
 
   def getColNames(self): return self.colNameList
 
+  def getColLenByIdx(self, colIdx): 
+    colNamesListLen = len(self.colNameList)
+    if colIdx < 0 or colIdx >= colNamesListLen: self.msg("getColLenByIdx: problem index: " + str(colIdx)); return None
+    colName = self.colNameList[colIdx]
+    result  = self.getColLenByName(self, colName)
+    return result
+
+  def getColLenByName(self, colName): 
+    if colName not in self.colNameLenDict:      self.msg("getColLenByName: colName not in dict: " + str(colName)); return None
+    colLen  = self.colNameLenDict[colName]
+    return colLen
+   
   ################## build UI ##################
 
   def buildUI(self): 
