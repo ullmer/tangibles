@@ -25,6 +25,8 @@ class CoursesPgzam(CoursesPgzAccordion):
   sliderImgFn      = 'ak_apc_mm2_s01_1920'
   sliderADict      = None #slider actor dict: one actor per sliderr 
   verbose          = False
+  mColColorIndices  = [45, 5, 25, 9]
+  mColorBrights     = [1, 6, 10]
 
   ################## constructor, error ##################
 
@@ -83,6 +85,22 @@ class CoursesPgzam(CoursesPgzAccordion):
       for i in range(self.numSliders): self.drawSlider(i)
     except: self.err("drawSliders issue")
 
+  ################## mapAkaiCoord) ##################
+
+  def setAkaiColorIdxCoord(self, colorIdx, x, y, colorBright=6): #(0,0) = bottom-left = MIDI note 0
+    coord   = self.mapAkaiCoord(x, y)
+    mcciLen = len(self.mColColorIndices)
+    if colorIdx < 0 or colorIdx >= mcciLen: self.msg("setAkaiColorIdxCoord issue with colorIdx " + str(colorIdx)); return
+
+    colorVal = self.mColColorIndices[colorIdx]
+    self.emc.midiOut.note_on(coord, colorVal, colorBright)
+
+  ################## mapAkaiCoord) ##################
+
+  def mapAkaiCoord(self, x, y): #(0,0) = bottom-left = MIDI note 0
+    result = x + (y*8)
+    return result
+
   ################## drawSlider(s) ##################
 
   def drawSlider(self, whichSlider): 
@@ -117,12 +135,16 @@ emc.registerControls(cpgzam.midiCB)
 
 #for i in range(6): emc.midiOut.note_on(i, i, 3)
 #for i in range(64): emc.midiOut.note_on(i, i, 3)
-
 #blue 45 orange 5 green 25 brown 9
-for i in [45, 5, 25, 9]:  emc.midiOut.note_on(i, i,   1)
-for i in [46, 6, 26, 10]: emc.midiOut.note_on(i, i-1, 6)
-for i in [47, 7, 27, 11]: emc.midiOut.note_on(i, i-2, 10)
 
+#for i in [45, 5, 25, 9]:  emc.midiOut.note_on(i, i,   1)
+#for i in [46, 6, 26, 10]: emc.midiOut.note_on(i, i-1, 6)
+#for i in [47, 7, 27, 11]: emc.midiOut.note_on(i, i-2, 10)
+
+for i in range(9):
+  for j in range(4):
+     cpgzam.setAkaiColorIdxCoord(j, j+4, i)
+  
 def draw(): screen.clear(); cpgzam.draw(screen)
 def on_mouse_down(pos):     pass #cpgzm.on_mouse_down(pos)
 def update():               cpgzam.update()
