@@ -21,7 +21,7 @@ class CoursesPgzam(CoursesPgzAccordion):
   sliderValDict    = None
   sliderValDefault = 128 
   sliderFullrangeV = 128 #fullrange of sliders, relative to internal value
-  sliderFullrangeP = 338#fullrange of sliders, relative to pixels
+  sliderFullrangeP = 338 #fullrange of sliders, relative to pixels
   sliderImgFn      = 'ak_apc_mm2_s01_1920'
   sliderADict      = None #slider actor dict: one actor per sliderr 
   verbose          = False
@@ -48,20 +48,33 @@ class CoursesPgzam(CoursesPgzAccordion):
       if control[0] == 's': #slider
         whichSlider = int(control[-1]) - 1 #control is "s1", "s2", etc.
         whichVal    = int(arg)
+        mappedVal   = self.mapSliderVal(whichSlider, whichVal)
+
         self.sliderValDict[whichSlider] = self.sliderFullrangeV - whichVal
-        self.assignColumnIdx(whichSlider, whichVal)
+        #self.sliderValDict[whichSlider] = mappedVal
+        self.assignColumnIdx(whichSlider, mappedVal)
 
     except: self.err("midiCb " + str([control, arg]))
 
   ################## initSliders ##################
 
+  def mapSliderVal(self, whichCol, whichSliderVal): 
+    try:
+      colLen = self.getColLenByIdx(whichCol)
+      result = int((1.-float(whichSliderVal)/float(self.sliderFullrangeV)) * colLen)
+      return result
+
+    except: self.err("mapSliderVal issue:")
+     
+  ################## initSliders ##################
+
   def initSliders(self): 
-    self.sliderValDict = {}
-    self.sliderADict   = {}
+    self.sliderValDict   = {}
+    self.sliderADict     = {}
 
     for i in range(self.numSliders): 
-      self.sliderValDict[i] = self.sliderValDefault
-      self.sliderADict[i]   = Actor(self.sliderImgFn)
+      self.sliderValDict[i]   = self.sliderValDefault
+      self.sliderADict[i]     = Actor(self.sliderImgFn)
 
   ################## drawSlider(s) ##################
 
