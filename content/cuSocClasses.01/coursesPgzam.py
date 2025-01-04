@@ -106,14 +106,10 @@ class CoursesPgzam(CoursesPgzAccordion):
   def updateMatrixColors(self): 
 
     for colIdx in range(8):
-
-     
       for row  in range(8):
+        pass #self.setAkaiColorIdxCoord()
 
-#for i in range(9):
-#  for j in range(4):
-#     cpgzam.setAkaiColorIdxCoord(j, j+4, i, 1)
-  
+        #cpgzam.setAkaiColorIdxCoord(j, j+4, i, 1)
 
   ################## drawSlider(s) ##################
 
