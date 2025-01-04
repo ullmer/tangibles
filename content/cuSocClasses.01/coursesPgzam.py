@@ -85,7 +85,7 @@ class CoursesPgzam(CoursesPgzAccordion):
       for i in range(self.numSliders): self.drawSlider(i)
     except: self.err("drawSliders issue")
 
-  ################## mapAkaiCoord) ##################
+  ################## set akai color index coordinate ##################
 
   def setAkaiColorIdxCoord(self, colorIdx, x, y, colorBright=6): #(0,0) = bottom-left = MIDI note 0
     coord   = self.mapAkaiCoord(x, y)
@@ -95,11 +95,25 @@ class CoursesPgzam(CoursesPgzAccordion):
     colorVal = self.mColColorIndices[colorIdx]
     self.emc.midiOut.note_on(coord, colorVal, colorBright)
 
-  ################## mapAkaiCoord) ##################
+  ################## mapAkaiCoord ##################
 
   def mapAkaiCoord(self, x, y): #(0,0) = bottom-left = MIDI note 0
     result = x + (y*8)
     return result
+
+  ################## update matrix colors ##################
+
+  def updateMatrixColors(self): 
+
+    for colIdx in range(8):
+
+     
+      for row  in range(8):
+
+#for i in range(9):
+#  for j in range(4):
+#     cpgzam.setAkaiColorIdxCoord(j, j+4, i, 1)
+  
 
   ################## drawSlider(s) ##################
 
@@ -141,9 +155,9 @@ emc.registerControls(cpgzam.midiCB)
 #for i in [46, 6, 26, 10]: emc.midiOut.note_on(i, i-1, 6)
 #for i in [47, 7, 27, 11]: emc.midiOut.note_on(i, i-2, 10)
 
-for i in range(9):
-  for j in range(4):
-     cpgzam.setAkaiColorIdxCoord(j, j+4, i)
+#for i in range(9):
+#  for j in range(4):
+#     cpgzam.setAkaiColorIdxCoord(j, j+4, i, 1)
   
 def draw(): screen.clear(); cpgzam.draw(screen)
 def on_mouse_down(pos):     pass #cpgzm.on_mouse_down(pos)
