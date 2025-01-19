@@ -1,0 +1,259 @@
+#copilot initial source: please generate a yaml file containing the titles, publication year, 
+# and authors + co-authors of all books authored by president jimmy carter
+
+books:
+  - title: "Why Not the Best?: The First Fifty Years"
+    publication_year: 1975
+    authors: ["Jimmy Carter"]
+    tn:      1284249019i/645520.jpg
+
+  - title: "The Wit and Wisdom of Jimmy Carter"
+    publication_year: 1977
+    authors: ["Jimmy Carter", "Bill Adler"]
+
+  - title: "A Government as Good as Its People"
+    publication_year: 1977
+    authors: ["Jimmy Carter"]
+
+  - title: "Carter On The Arts"
+    publication_year: 1977
+    authors: ["Jimmy Carter"]
+
+  - title: "The Spiritual Journey of Jimmy Carter, in His Own Words"
+    publication_year: 1979
+    authors: ["Jimmy Carter"]
+
+  - title: "Kids' Letters to President Carter"
+    publication_year: 1979
+    authors: ["Jimmy Carter", "Bill Adler", "Edward Malsberg"]
+
+  - title: "Keeping Faith: Memoirs of a President"
+    publication_year: 1982
+    authors: ["Jimmy Carter"]
+    tn:      1347950667i/25458.jpg
+
+  - title: "Negotiation: An Alternative to Hostility"
+    publication_year: 1984
+    authors: ["Jimmy Carter"]
+
+  - title: "The Blood of Abraham: Insights into the Middle East"
+    publication_year: 1986
+    authors: ["Jimmy Carter"]
+    tn:      1347808814i/99964.jpg
+
+  - title: "Everything to Gain: Making the Most of the Rest of Your Life"
+    publication_year: 1987
+    authors: ["Jimmy Carter"]
+    tn:      1346012983i/1876698.jpg
+
+  - title: "An Outdoor Journal: Adventures and Reflections"
+    publication_year: 1988
+    authors: ["Jimmy Carter"]
+    tn:      1348016723i/943673.jpg
+
+  - title: "Living Faith"
+    publication_year: 1991
+    authors: ["Jimmy Carter"]
+    tn:      1388289401i/9351.jpg
+
+  - title: "Sources of Strength: Meditations on Scripture for a Living Faith"
+    publication_year: 1991
+    authors: ["Jimmy Carter"]
+    tn:      1165949223i/9354.jpg
+
+  - title: "Turning Point: A Candidate, a State, and a Nation Come of Age"
+    publication_year: 1992
+    authors: ["Jimmy Carter"]
+    tn:      1320489206i/1130613.jpg
+
+  - title: "Talking Peace: A Vision for the Next Generation"
+    publication_year: 1993
+    authors: ["Jimmy Carter"]
+
+  - title: "Always a Reckoning and Other Poems"
+    publication_year: 1994
+    authors: ["Jimmy Carter", "Sarah Elizabeth Chuldenko"]
+    tn:      1320457373i/9353.jpg
+
+  - title: "The Little Baby Snoogle-Fleejer"
+    publication_year: 1995
+    authors: ["Jimmy Carter", "Amy Carter"]
+    tn:      1320552635i/25457.jpg
+
+  - title: "The Virtues of Aging"
+    publication_year: 1998
+    authors: ["Jimmy Carter"]
+
+  - title: "Conversations with Carter"
+    publication_year: 1998
+    authors: ["Jimmy Carter"]
+
+  - title: "An Hour Before Daylight: Memories of a Rural Boyhood"
+    publication_year: 2000
+    authors: ["Jimmy Carter"]
+    tn:      1397768323i/9347.jpg
+
+  - title: "Christmas in Plains: Memories"
+    publication_year: 2001
+    authors: ["Jimmy Carter", "Amy Carter"]
+    tn:      1348642859i/337671.jpg
+
+  - title: "The Nobel Peace Prize Lecture"
+    publication_year: 2002
+    authors: ["Jimmy Carter", "Alice Mayhew"]
+
+  - title: "Sharing Good Times"
+    publication_year: 2004
+    authors: ["Jimmy Carter"]
+
+  - title: "Our Endangered Values: America's Moral Crisis"
+    publication_year: 2005
+    authors: ["Jimmy Carter"]
+
+  - title: "Palestine: Peace Not Apartheid"
+    publication_year: 2006
+    authors: ["Jimmy Carter"]
+
+  - title: "Beyond the White House: Waging Peace, Fighting Disease, Building Hope"
+    publication_year: 2007
+    authors: ["Jimmy Carter"]
+
+  - title: "A Remarkable Mother"
+    publication_year: 2008
+    authors: ["Jimmy Carter"]
+    tn:      1438128069i/2588448.jpg
+
+  - title: "We Can Have Peace in the Holy Land: A Plan That Will Work"
+    publication_year: 2009
+    authors: ["Jimmy Carter"]
+    tn:      1347380870i/6071981.jpg
+
+  - title: "White House Diary"
+    publication_year: 2010
+    authors: ["Jimmy Carter"]
+    tn:      1442547227i/8113025.jpg
+
+  - title: "Through the Year with Jimmy Carter: 366 Daily Meditations from the 39th President"
+    publication_year: 2011
+    authors: ["Jimmy Carter"]
+    tn:      1344675291i/13175565.jpg
+
+  - title: "NIV Lessons from Life Bible: Personal Reflections with Jimmy Carter"
+    publication_year: 2012
+    authors: ["Jimmy Carter"]
+    tn:      1330473126i/13504292.jpg
+
+  - title: "A Call to Action: Women, Religion, Violence, and Power"
+    publication_year: 2014
+    authors: ["Jimmy Carter"]
+    tn:      1395629638i/20523863.jpg
+
+  - title: "A Full Life: Reflections at Ninety"
+    publication_year: 2015
+    authors: ["Jimmy Carter"]
+    tn:       1436129369i/25330592.jpg
+
+  - title: "Faith: A Journey for All"
+    publication_year: 2018
+    authors: ["Jimmy Carter"]
+    tn:      1520173250i/37955373.jpg
+
+  - title: "The Virtues of Aging"
+    publication_year: 1998
+    authors: ["Jimmy Carter"]
+    tn:      1389277539i/9350.jpg
+
+  - title: "Conversations with Carter"
+    publication_year: 1998
+    authors: ["Jimmy Carter"]
+
+  - title: "An Hour Before Daylight: Memories of a Rural Boyhood"
+    publication_year: 2000
+    authors: ["Jimmy Carter"]
+
+  - title: "Christmas in Plains: Memories"
+    publication_year: 2001
+    authors: ["Jimmy Carter", "Amy Carter"]
+
+  - title: "The Nobel Peace Prize Lecture"
+    publication_year: 2002
+    authors: ["Jimmy Carter", "Alice Mayhew"]
+    tn:      1347391526i/252101.jpg
+
+  - title: "Sharing Good Times"
+    publication_year: 2004
+    authors: ["Jimmy Carter"]
+    tn:      1347391195i/9352.jpg
+
+  - title: "Our Endangered Values: America's Moral Crisis"
+    publication_year: 2005
+    authors: ["Jimmy Carter"]
+    tn:      1389155099i/9346.jpg
+
+  - title: "Palestine: Peace Not Apartheid"
+    publication_year: 2006
+    authors: ["Jimmy Carter"]
+    tn:      1442707994i/9345.jpg
+
+  - title: "Beyond the White House: Waging Peace, Fighting Disease, Building Hope"
+    publication_year: 2007
+    authors: ["Jimmy Carter"]
+    tn:      1426642686i/1852087.jpg
+
+  - title: "A Remarkable Mother"
+    publication_year: 2008
+    authors: ["Jimmy Carter"]
+
+  - title: "We Can Have Peace in the Holy Land: A Plan That Will Work"
+    publication_year: 2009
+    authors: ["Jimmy Carter"]
+
+  - title: "White House Diary"
+    publication_year: 2010
+    authors: ["Jimmy Carter"]
+
+  - title: "Through the Year with Jimmy Carter: 366 Daily Meditations from the 39th President"
+    publication_year: 2011
+    authors: ["Jimmy Carter"]
+
+  - title: "NIV Lessons from Life Bible: Personal Reflections with Jimmy Carter"
+    publication_year: 2012
+    authors: ["Jimmy Carter"]
+
+  - title: "A Call to Action: Women, Religion, Violence, and Power"
+    publication_year: 2014
+    authors: ["Jimmy Carter"]
+
+  - title: "A Full Life: Reflections at Ninety"
+    publication_year: 2015
+    authors: ["Jimmy Carter"]
+
+  - title: "Faith: A Journey for All"
+    publication_year: 2018
+    authors: ["Jimmy Carter"]
+
+###
+  - title: "The Hornet's Nest"
+    publication_year: 2003
+    authors: ["Jimmy Carter"]
+    tn:      1171855025i/123561.jpg
+
+  - title: "Talking Peace: A Vision for the Next Generation"
+    publication_year: 1993:
+    authors: ["Jimmy Carter"]
+    tn:      1387663397i/408857.jpg
+
+  - title: "The Personal Beliefs of Jimmy Carter"
+    publication_year: 2002
+    authors: ["Jimmy Carter"]
+    tn:      1388701633i/9348.jpg
+
+  - title: "Leading a Worthy Life: Sunday Mornings in Plains: Bible Study with Jimmy Carter: v1"
+    publication_year: 2007
+    authors: ["Jimmy Carter"]
+    tn:      1438224425i/486890.jpg
+
+links:
+    thumbnailPrefix: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/"
+
+### end ###

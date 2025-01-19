@@ -416,18 +416,19 @@ class enoMidiController:
 
   def processMidiUpdate(self, midiStatus, midiNum, val=None):
     if self.controllerNumDict == None: 
-      print("enoMidiController: processMidiUpdate called, but no registered data")
+      print("enoMidiController: processMidiUpdate called, but no registered data (%i %i %i)" % 
+          (midiStatus, midiNum, val))
       return None
 
-    #midiStatNumKey = self.midiStatusNumKey(midiStatus, midiNum)
-    midiStatNumKey = '144_' + str(midiStatus) #hack
+    midiStatNumKey = self.midiStatusNumKey(midiStatus, midiNum)
+    #midiStatNumKey = '144_' + str(midiStatus) #hack; perhaps re novation?
 
     if midiStatNumKey in self.controllerStatusNumDict:
       control = self.controllerStatusNumDict[midiStatNumKey]
       self.invokeCallback(control, val)
     else:
       print("midiNum %s not in scnd list" % str(midiStatNumKey), midiStatus, midiNum, val)
-      print(self.controllerStatusNumDict)
+      #print(self.controllerStatusNumDict)
     
   ############# pollMidi #############
 
