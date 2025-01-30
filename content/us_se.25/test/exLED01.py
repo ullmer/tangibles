@@ -1,3 +1,5 @@
+# http://multiwingspan.co.uk/pico.php?page=dotstar
+
 from machine import SPI,Pin
 from time import sleep
 import micropython_dotstar as DS
