@@ -6,9 +6,10 @@
 # https://github.com/mcauser/micropython-mpr121
 # https://docs.micropython.org/en/latest/rp2/quickref.html
 
-from machine import SPI,I2C,Pin
-from time import sleep
+from   machine import SPI,I2C,Pin
+from   time    import sleep
 import micropython_dotstar as DS
+import mpr121
 
 ledPin2Name = {}
 capPin2Name = {}
