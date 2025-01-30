@@ -1,4 +1,5 @@
 # http://multiwingspan.co.uk/pico.php?page=dotstar
+# https://docs.micropython.org/en/latest/rp2/quickref.html
 
 from machine import SPI,Pin
 from time import sleep
