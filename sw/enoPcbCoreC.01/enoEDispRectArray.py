@@ -38,17 +38,17 @@ class enoEDispRectArray: #EDisp: embedded display (as we'll wish variants for tr
 
   ############################## map coordinate x, y to index ##############################
 
-  def constructRectArrays(self): 
+  def constructRectArray(self): 
     if self.oledRoot is None: self.err("constructRectArrays: oledRoot uninitialized"); return
     self.mapCoordIdx2DispIdx = {}; y = self.y0
 
-    for i in self.rows:
+    for i in range(self.rows):
       x = self.x0
-      for j in self.cols:
+      for j in range(self.cols):
         idx = self.mapXY2Idx(j,i)
-        self.mapCoordIdx2DispIdx[idx] = drawOutlinedRect(x, y, self.width, hself.height)
-        x += dx
-      y += dy  
+        self.mapCoordIdx2DispIdx[idx] = self.drawOutlinedRect(x, y, self.width, self.height)
+        x += self.dx
+      y += self.dy  
 
   ############################## map coordinate x, y to index ##############################
 

@@ -85,7 +85,9 @@ class enoCoreC01:
 
   def initTouch(self):
     self.touchSensors = []
-    for pin in self.touch_pins: self.touchSensors.append(touchio.TouchIn(pin))
+    for pin in self.touch_pins: 
+      try:    self.touchSensors.append(touchio.TouchIn(pin))
+      except: self.err("initTouch: ignoring error on " + str(pin))
 
   ############################## loadFont ##############################
 
