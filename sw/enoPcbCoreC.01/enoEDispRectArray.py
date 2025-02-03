@@ -18,9 +18,9 @@ class enoEDispRectArray: #EDisp: embedded display (as we'll wish variants for tr
 
   oledRoot = None
 
-  rectDimension       = 8
+  width, height       = 8, 8
   rectOutlineWidth    = 2
-  startPos            = (50, 3)
+  x0, y0              = 50, 3
   dx, dy              = 10, 10
   rows, cols          = 2, 10
   mapCoordIdx2DispIdx = None
@@ -28,6 +28,7 @@ class enoEDispRectArray: #EDisp: embedded display (as we'll wish variants for tr
   ############################## constructor ##############################
 
   def __init__(self, oledRoot):
+    self.oledRoot = oledRoot
     self.constructRectArray() 
 
   ############## error, message (allowing future redirection) ##############
@@ -37,7 +38,17 @@ class enoEDispRectArray: #EDisp: embedded display (as we'll wish variants for tr
 
   ############################## map coordinate x, y to index ##############################
 
-  def mapXY2Idx(self, x, y): return (x * self.cols) + y
+  def constructRectArrays(self): 
+    if self.oledRoot is None: self.err("constructRectArrays: oledRoot uninitialized"); return
+    self.mapCoordIdx2DispIdx = {}; y = self.y0
+
+    for i in self.rows:
+      x = self.x0
+      for j in self.cols:
+        idx = self.mapXY2Idx(j,i)
+        self.mapCoordIdx2DispIdx[idx] = drawOutlinedRect(x, y, self.width, hself.height)
+        x += dx
+      y += dy  
 
   ############################## map coordinate x, y to index ##############################
 
@@ -45,14 +56,14 @@ class enoEDispRectArray: #EDisp: embedded display (as we'll wish variants for tr
 
   ############################## oled : draw rectangles ##############################
 
-  def drawFilledRect(self):
+  def drawFilledRect(self, x, y, w, h):
     if self.oledRoot is None: self.err("drawFilledRect: oledRoot uninitialized"); return
-    filled_rect = Rect(x=10, y=10, width=50, height=30, fill=0xFFFFFF)
+    filled_rect = Rect(x=x, y=y, width=w, height=h, fill=0xFFFFFF)
     self.oledRoot.append(filled_rect)
 
-  def drawOutlinedRect(self):
+  def drawOutlinedRect(self, x, y, w, h):
     if self.oledRoot is None: self.err("drawOutlinedRect: oledRoot uninitialized"); return
-    outlined_rect = Rect(x=70, y=10, width=50, height=30, outline=0xFFFFFF, stroke=2)
+    outlined_rect = Rect(x=x, y=y, width=w, height=h, outline=0xFFFFFF, stroke=2)
     self.oledRoot.append(outlined_rect)
 
 ### end ###
