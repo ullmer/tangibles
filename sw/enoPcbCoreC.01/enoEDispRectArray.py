@@ -18,20 +18,30 @@ class enoEDispRectArray: #EDisp: embedded display (as we'll wish variants for tr
 
   oledRoot = None
 
-  rectArrayDimension    = 8
-  rectArrayOutlineWidth = 2
-  rectArrayStartPos     = (50, 3)
-  rectArrayOffset       = 10
+  rectDimension       = 8
+  rectOutlineWidth    = 2
+  startPos            = (50, 3)
+  dx, dy              = 10, 10
+  rows, cols          = 2, 10
+  mapCoordIdx2DispIdx = None
 
   ############################## constructor ##############################
 
   def __init__(self, oledRoot):
-    self.drawArray()
+    self.constructRectArray() 
 
   ############## error, message (allowing future redirection) ##############
 
   def err(self, msg): print("enoEDispRectArray err:", str(msg))
   def msg(self, msg): print("enoEDispRectArray msg:", str(msg))
+
+  ############################## map coordinate x, y to index ##############################
+
+  def mapXY2Idx(self, x, y): return (x * self.cols) + y
+
+  ############################## map coordinate x, y to index ##############################
+
+  def mapXY2Idx(self, x, y): return (x * self.cols) + y
 
   ############################## oled : draw rectangles ##############################
 
