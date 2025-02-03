@@ -49,8 +49,24 @@ class enoEDispRectArray: #EDisp: embedded display (as we'll wish variants for tr
     x1 = self.x0 + (self.dx * (x-1)) + self.rectOutlineWidth
     y1 = self.y0 + (self.dy * (y-1)) + self.rectOutlineWidth
 
-    self.mapCoordIdx2DispInner[idx] = self.drawFilledRect(x1, y1, self.width2, self.height2)
+    self.drawFilledRect(x1, y1, self.width2, self.height2)
+    self.mapCoordIdx2DispInner[idx] = len(self.oledRoot) - 1
 
+  ############################## map coordinate x, y to index ##############################
+
+  def clearEl(self, x, y): 
+    if self.mapCoordIdx2DispInner is None: self.err("setEl: class uninitialized"); return
+
+    idx = self.mapXY2Idx(x,y)
+    if idx not in self.mapCoordIdx2DispInner: return #already unset
+    di = self.mapCoordIdx2DispInner[idx]
+    del self.oledRoot[di]
+
+    orl
+
+
+    # we then probably need to decrement addresses for remaining cached addresses greater than di
+    
   ############################## map coordinate x, y to index ##############################
 
   def constructRectArray(self): 

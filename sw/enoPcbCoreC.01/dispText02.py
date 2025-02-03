@@ -13,5 +13,6 @@ ec1.neopixLightStr("PO") #BY, etc.
 eedra1 = enoEDispRectArray(ec1.oledRoot)
 eedra1.setEl(1, 2)
 eedra1.setEl(4, 1)
+eedra1.clearEl(1, 2)
 
 ### end ###
