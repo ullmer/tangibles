@@ -32,7 +32,7 @@ class enoCoreC01:
   touch_pins = [PA02, PA03, PA04, PA05, PA06, PA07, PA08, PA09, PA10, PA11, PA14, PA15, PA16, 
                 PA17, PA18, PA19, PA20, PA21, PA22, PA23, PA24, PA25, PA27, PA28, PA30, PA31]
 
-  pcb_j2     = [PA08, PA09, PA07]
+  pcb_j2     = [PA05, PA06, PA04, PA07, PB09, PB12, PB08, PB13, PB07, PB14, PB06, PB14, PB05]
 
   ############################## constructor ##############################
 
