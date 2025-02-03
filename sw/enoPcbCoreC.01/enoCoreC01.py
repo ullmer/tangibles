@@ -97,8 +97,8 @@ class enoCoreC01:
 
   ############################## display text ##############################
 
-  def displayText(self, txt):
-    self.text_area = label.Label(self.font, text=txt, color=0xFFFFFF, x=1, y=16)
+  def displayText(self, txt, tx=0, ty=16):
+    self.text_area = label.Label(self.font, text=txt, color=0xFFFFFF, x=tx, y=ty)
     self.oledRoot.append(self.text_area)
 
   ############################## clear oled ##############################

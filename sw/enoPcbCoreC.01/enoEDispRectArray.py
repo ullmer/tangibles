@@ -18,12 +18,14 @@ class enoEDispRectArray: #EDisp: embedded display (as we'll wish variants for tr
 
   oledRoot = None
 
-  width, height       = 8, 8
-  rectOutlineWidth    = 2
-  x0, y0              = 50, 3
-  dx, dy              = 10, 10
-  rows, cols          = 2, 10
-  mapCoordIdx2DispIdx = None
+  width,  height        = 9, 9
+  width2, height2       = 7, 7 #usually width-rectOutlineWidth*2, h-row*2
+  rectOutlineWidth      = 1
+  x0, y0                = 30, 8
+  dx, dy                = 10, 10
+  rows, cols            = 2, 10
+  mapCoordIdx2DispIdx   = None #outer outlined-rect
+  mapCoordIdx2DispInner = None #inner filled-rect
 
   ############################## constructor ##############################
 
@@ -38,9 +40,24 @@ class enoEDispRectArray: #EDisp: embedded display (as we'll wish variants for tr
 
   ############################## map coordinate x, y to index ##############################
 
+  def setEl(self, x, y): 
+    if self.mapCoordIdx2DispInner is None: self.err("setEl: class uninitialized"); return
+
+    idx = self.mapXY2Idx(x,y)
+    if idx in self.mapCoordIdx2DispInner: return #already set
+
+    x1 = self.x0 + (self.dx * (x-1)) + self.rectOutlineWidth
+    y1 = self.y0 + (self.dy * (y-1)) + self.rectOutlineWidth
+
+    self.mapCoordIdx2DispInner[idx] = self.drawFilledRect(x1, y1, self.width2, self.height2)
+
+  ############################## map coordinate x, y to index ##############################
+
   def constructRectArray(self): 
     if self.oledRoot is None: self.err("constructRectArrays: oledRoot uninitialized"); return
-    self.mapCoordIdx2DispIdx = {}; y = self.y0
+
+    self.mapCoordIdx2DispIdx   = {}; y = self.y0
+    self.mapCoordIdx2DispInner = {}
 
     for i in range(self.rows):
       x = self.x0
@@ -63,7 +80,8 @@ class enoEDispRectArray: #EDisp: embedded display (as we'll wish variants for tr
 
   def drawOutlinedRect(self, x, y, w, h):
     if self.oledRoot is None: self.err("drawOutlinedRect: oledRoot uninitialized"); return
-    outlined_rect = Rect(x=x, y=y, width=w, height=h, outline=0xFFFFFF, stroke=2)
+    strk = self.rectOutlineWidth
+    outlined_rect = Rect(x=x, y=y, width=w, height=h, outline=0xFFFFFF, stroke=strk)
     self.oledRoot.append(outlined_rect)
 
 ### end ###
