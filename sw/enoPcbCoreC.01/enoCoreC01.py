@@ -7,8 +7,13 @@
 
 import board, terminalio, displayio, neopixel
 import adafruit_displayio_ssd1306
+
 from   adafruit_display_text import label
 from   adafruit_bitmap_font  import bitmap_font
+
+from board import PA02, PA03, PA04, PA05, PA06, PA07, PA08, PA09, PA10,  #ptc/capacitive lines
+                  PA11, PA14, PA15, PA16, PA17, PA18, PA19, PA20, PA21, 
+                  PA22, PA23, PA24, PA25, PA27, PA28, PA30, PA31
 
 class enoCoreC01:
 
@@ -23,6 +28,11 @@ class enoCoreC01:
   defaultNeopixColor = (3,1,0)
   colorDict = {'R': (3,0,0), 'G': (0,3,0), 'B': (0,0,3), 'O': (3,1,0), 'P': (3,0,3), 
                'W': (2,2,2), 'Y': (3,3,0)}
+
+  touch_pins = [PA02, PA03, PA04, PA05, PA06, PA07, PA08, PA09, PA10, PA11, PA14, PA15, PA16, 
+                PA17, PA18, PA19, PA20, PA21, PA22, PA23, PA24, PA25, PA27, PA28, PA30, PA31]
+
+  pcb_j2     = [PA08, PA09, PA07]
 
   ############################## constructor ##############################
 
