@@ -17,8 +17,7 @@ from board import *
 #                  PA11, PA14, PA15, PA16, PA17, PA18, PA19, PA20, PA21, 
 #                  PA22, PA23, PA24, PA25, PA27, PA28, PA30, PA31
 
-GND = None #hopefully allows these to be referenced in pcb_j2 list
-3V3 = None
+GND, 3V3, VIN = [None]*3 #hopefully allows these to be referenced in pcb_j2 list
   
 ############################## Enodia Core/C v01 ##############################
 
@@ -45,7 +44,11 @@ class enoCoreC01:
                 PA16, PB04, PA17, None, PA18, None, PA23, PB16, PA22, MOSI, PA21, SCK,  PB00, 
                 MISO, GND,  PA15, SCL,   3V3, SDA] # last ~8 entries should be checked again
 
-  pcb_j2_ptc = "++++.........+.+"
+  #pcb_j2_ptc = "++++.........+.+"
+
+  touch_pins = [PA05, PA06, PA04, PA07, PB09, PB12, PB08, PB13, PB07, PB14, PB06, PB15, PB05,
+                PA16, PB04, PA17, PA18, PA23, PB16, PA22, PA21, PB00]
+
 
   ############################## constructor ##############################
 
@@ -81,8 +84,8 @@ class enoCoreC01:
   ############################## initiate oled ##############################
 
   def initTouch(self):
-
-    touch_sensors = [touchio.TouchIn(pin) for pin in touch_pins]
+    self.touchSensors = []
+    for pin in self.touch_pins: self.touchSensors.append(touchio.TouchIn(pin))
 
   ############################## loadFont ##############################
 
