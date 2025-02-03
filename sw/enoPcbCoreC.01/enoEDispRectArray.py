@@ -60,13 +60,14 @@ class enoEDispRectArray: #EDisp: embedded display (as we'll wish variants for tr
     idx = self.mapXY2Idx(x,y)
     if idx not in self.mapCoordIdx2DispInner: return #already unset
     di = self.mapCoordIdx2DispInner[idx]
-    del self.oledRoot[di]
+    del self.oledRoot[di]               #remove the previous entry for the fill
+    del self.mapCoordIdx2DispInner[idx] #unset in our dictionary
 
-    orl
+    orl = len(self.oledRoot)
+    for i in range(di, orl): #search through the range to see which addresses need decrementing
+     if i in self.mapCoordIdx2DispInner:
+       self.mapCoordIdx2DispInner[idx] -= 1 
 
-
-    # we then probably need to decrement addresses for remaining cached addresses greater than di
-    
   ############################## map coordinate x, y to index ##############################
 
   def constructRectArray(self): 
