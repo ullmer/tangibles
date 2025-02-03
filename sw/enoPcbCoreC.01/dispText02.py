@@ -5,5 +5,8 @@
 from enoCoreC01 import *
 
 ec1 = enoCoreC01()
+ec1.oledClear()
+ec1.displayText("go")
+ec1.neopixLightStr("PO") #BY, etc.
 
 ### end ###
