@@ -8,8 +8,9 @@
 import board, terminalio, displayio, neopixel
 import adafruit_displayio_ssd1306
 
-from   adafruit_display_text import label
-from   adafruit_bitmap_font  import bitmap_font
+from adafruit_display_text        import label
+from adafruit_display_shapes.rect import Rect
+from adafruit_bitmap_font         import bitmap_font
 
 from board import *
 
@@ -80,6 +81,16 @@ class enoCoreC01:
     self.color_palette[0] = 0xFFFFFF  # White
     self.font             = self.loadFont(self.defaultFont1)
     if self.displayOledByDefault: self.displayText(self.defaultOledText)
+
+  ############################## oled : draw rectangles ##############################
+
+  def drawFilledRect(self):
+    filled_rect = Rect(x=10, y=10, width=50, height=30, fill=0xFFFFFF)
+    self.oledRoot.append(filled_rect)
+
+  def drawOutlinedRect(self):
+    outlined_rect = Rect(x=70, y=10, width=50, height=30, outline=0xFFFFFF, stroke=2)
+    self.oledRoot.append(outlined_rect)
 
   ############################## initiate oled ##############################
 
