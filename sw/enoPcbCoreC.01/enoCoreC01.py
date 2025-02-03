@@ -11,9 +11,14 @@ import adafruit_displayio_ssd1306
 from   adafruit_display_text import label
 from   adafruit_bitmap_font  import bitmap_font
 
-from board import PA02, PA03, PA04, PA05, PA06, PA07, PA08, PA09, PA10,  #ptc/capacitive lines
-                  PA11, PA14, PA15, PA16, PA17, PA18, PA19, PA20, PA21, 
-                  PA22, PA23, PA24, PA25, PA27, PA28, PA30, PA31
+from board import *
+
+#from board import PA02, PA03, PA04, PA05, PA06, PA07, PA08, PA09, PA10,  #ptc/capacitive lines
+#                  PA11, PA14, PA15, PA16, PA17, PA18, PA19, PA20, PA21, 
+#                  PA22, PA23, PA24, PA25, PA27, PA28, PA30, PA31
+
+GND = None #hopefully allows these to be referenced in pcb_j2 list
+3V3 = None
 
 class enoCoreC01:
 
@@ -29,10 +34,14 @@ class enoCoreC01:
   colorDict = {'R': (3,0,0), 'G': (0,3,0), 'B': (0,0,3), 'O': (3,1,0), 'P': (3,0,3), 
                'W': (2,2,2), 'Y': (3,3,0)}
 
-  touch_pins = [PA02, PA03, PA04, PA05, PA06, PA07, PA08, PA09, PA10, PA11, PA14, PA15, PA16, 
-                PA17, PA18, PA19, PA20, PA21, PA22, PA23, PA24, PA25, PA27, PA28, PA30, PA31]
+  touch_pins_cp = [PA02, PA03, PA04, PA05, PA06, PA07, PA08, PA09, PA10, PA11, PA14, PA15, PA16, 
+                   PA17, PA18, PA19, PA20, PA21, PA22, PA23, PA24, PA25, PA27, PA28, PA30, PA31]
 
-  pcb_j2     = [PA05, PA06, PA04, PA07, PB09, PB12, PB08, PB13, PB07, PB14, PB06, PB14, PB05]
+  pcb_j2     = [PA05, PA06, PA04, PA07, PB09, PB12, PB08, PB13, PB07, PB14, PB06, PB15, PB05,
+                PA16, PB04, PA17, None, PA18, None, PA23, PB16, PA22, MOSI, PA21, SCK,  PB00, 
+                MISO, GND,  PA15, SCL,   3V3, SDA] # last ~8 entries should be checked again
+
+  pcb_j2_ptc = "++++.........+.+"
 
   ############################## constructor ##############################
 
