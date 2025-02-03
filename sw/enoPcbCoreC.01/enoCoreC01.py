@@ -19,16 +19,20 @@ from board import *
 
 GND = None #hopefully allows these to be referenced in pcb_j2 list
 3V3 = None
+  
+############################## Enodia Core/C v01 ##############################
 
 class enoCoreC01:
 
   i2c, display_bus, display, oledRoot = [None]*4 #initialize all to None
   color_bitmap, color_palette, font   = [None]*3
-  text_area, neopix                   = [None]*2
+  text_area, neopix, touchSensors     = [None]*3
 
   pixel_pin       = board.D4
   num_pixels      = 2
-  defaultOledText = "hello"
+  displayOledByDefault = True #if True, displays defaultOledText on initiation
+
+  defaultOledText      = "hello"
   defaultFont1    = "/fonts/ostrich-sans-black-36.pcf"
   defaultNeopixColor = (3,1,0)
   colorDict = {'R': (3,0,0), 'G': (0,3,0), 'B': (0,0,3), 'O': (3,1,0), 'P': (3,0,3), 
@@ -46,8 +50,9 @@ class enoCoreC01:
   ############################## constructor ##############################
 
   def __init__(self):
-    self.oledInit() 
-    self.neopixInit()
+    self.initOled() 
+    self.initNeopix()
+    self.initTouch()
 
   ############## error, message (allowing future redirection) ##############
 
@@ -56,7 +61,7 @@ class enoCoreC01:
 
   ############################## initiate oled ##############################
 
-  def oledInit(self):
+  def initOled(self):
     displayio.release_displays()
 
     self.i2c         = board.I2C()  # uses board.SCL and board.SDA
@@ -71,7 +76,13 @@ class enoCoreC01:
     self.color_palette    = displayio.Palette(1)
     self.color_palette[0] = 0xFFFFFF  # White
     self.font             = self.loadFont(self.defaultFont1)
-    self.displayText(self.defaultOledText)
+    if self.displayOledByDefault: self.displayText(self.defaultOledText)
+
+  ############################## initiate oled ##############################
+
+  def initTouch(self):
+
+    touch_sensors = [touchio.TouchIn(pin) for pin in touch_pins]
 
   ############################## loadFont ##############################
 
@@ -93,7 +104,7 @@ class enoCoreC01:
 
   ############################## neopixel init ##############################
 
-  def neopixInit(self):
+  def initNeopix(self):
     self.neopix = neopixel.NeoPixel(self.pixel_pin, self.num_pixels)
     self.neopixFill(self.defaultNeopixColor)
 
