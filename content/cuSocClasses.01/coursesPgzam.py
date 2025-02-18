@@ -44,6 +44,7 @@ class CoursesPgzam(CoursesPgzAccordion):
   ################## midi callback ##################
 
   def midiCB(self, control, arg):   
+    #print("hello class")
     try:
       if self.verbose: print("cpgzm midicb: ", str(control), str(arg))
 
@@ -52,9 +53,16 @@ class CoursesPgzam(CoursesPgzAccordion):
         whichVal    = int(arg)
         mappedVal   = self.mapSliderVal(whichSlider, whichVal)
 
+        print("slider", str(whichSlider), str(whichVal))
+
         self.sliderValDict[whichSlider] = self.sliderFullrangeV - whichVal
         #self.sliderValDict[whichSlider] = mappedVal
         self.assignColumnIdx(whichSlider, mappedVal)
+      else: 
+        print(control, arg)
+        if control=="a8" and arg == 127: print("dance")
+        if control=="a7" and arg == 127: print("p1 dances")
+        if control=="a6" and arg == 127: print("p0 dances")
 
     except: self.err("midiCb " + str([control, arg]))
 
@@ -144,7 +152,7 @@ cpgzam = CoursesPgzam(emc=emc)
 emc.registerControls(cpgzam.midiCB)
 
 #for i in range(6): emc.midiOut.note_on(i, i, 3)
-#for i in range(64): emc.midiOut.note_on(i, i, 3)
+for i in range(64): emc.midiOut.note_on(i, i, 3)
 #blue 45 orange 5 green 25 brown 9
 
 #for i in [45, 5, 25, 9]:  emc.midiOut.note_on(i, i,   1)
