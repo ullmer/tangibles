@@ -9,12 +9,12 @@ from projMidi          import *
 
 ################### main ################### 
 
-emc = enoMidiController('aka_apcmini2', midiCtrlOutputId=4, activateOutput=True)
-pm  = ProjMidi(emc=emc)
+emc = enoMidiController('aka_apcmini2', midiCtrlOutputId=4, activateOutput=True)  #A
+pm  = ProjMidi(emc=emc)                                                      #B
 
-emc.registerControls(pm.midiCB)
+emc.registerControls(pm.midiCB)   #C
 
-#for i in range(64): emc.midiOut.note_on(i, i, 3)
+#for i in range(64): emc.midiOut.note_on(i, i, 3)  # D (next 7 lines)
 #for i in range(6): emc.midiOut.note_on(i, i, 3)
 #blue 45 orange 5 green 25 brown 9
 
@@ -26,7 +26,7 @@ emc.registerControls(pm.midiCB)
 #  for j in range(4):
 #     cpgzam.setAkaiColorIdxCoord(j, j+4, i, 1)
   
-def draw(): screen.clear(); pm.draw(screen)
+def draw(): screen.clear(); pm.draw(screen)   #E
 def update():               pm.update()
 def on_mouse_down(pos):     pass #cpgzm.on_mouse_down(pos)
 
