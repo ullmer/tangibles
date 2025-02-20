@@ -4,14 +4,12 @@
 
 import yaml, traceback
 
-################## Course class ##################
+################## project base class ##################
 
-class Project: #not catching any errors; caveat emptor
+class Project: 
 
   verbose         = False
-  quiet           = True  #suppress several warnings
-  studentInitials, projName = None, None
-  yamlFn          = 'projects.yaml'
+  peopleAbbrev, projName, projHandle = None, None, None
 
   ################## constructor, error ##################
 
@@ -25,8 +23,39 @@ class Project: #not catching any errors; caveat emptor
     str = "Project %s [Students: %s]" % (self.projName, self.studentInitials)
     print(str)
 
-  ################## loadYaml ##################
+################## project base class ##################
+class Projects: 
+  yamlFn    = 'projects.yaml'
+  yamlD     = None
+  projects  = None
+  
+################## loadYaml ##################
 
-  def __init__(self, **kwargs):
+  def loadYaml(self): 
+    f  = open(self.yamlFn, 'rt')
+    yd = self.yamlD = yaml.safe_load(f)
+    f.close()
+   
+    self.projects  = {}
+
+    if 'projects' not in yd:         self.msg("loadYaml: projects not found"); return
+    yp = yd['projects']
+    for projId in yp:
+      proj = projects[projId]
+      if 'peopleAbbrev' not in proj: continue # silently ignore initially
+      pa = proj['peopleAbbrev']
+
+      ph, pn = None, None
+      if 'projName'   in proj: pn = proj['projName']
+      if 'projHandle' in proj: ph = proj['projHandle']
+      
+      p = Project(peopleAbbrev=pa, projName=pn, projHandle=ph)
+      self.projects[projId] = p
+
+  def print(self): 
+    for projId in self.projects: 
+      proj = self.projects[projId]
+      proj.print()
 
 ### end ###
+
