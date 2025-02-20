@@ -38,11 +38,17 @@ class ProjMidi(ProjectsPgzBase):
     super().__init__()
 
     self.initSliders()
+    self.midiClearLights()
 
   ################## error ##################
 
-  def err(self, msg): print("CoursesPgzm error:", msg); traceback.print_exc()
-  def msg(self, msg): print("CoursesPgzm msg:",   msg)
+  def err(self, msg): print("ProjMidi error:", msg); traceback.print_exc()
+  def msg(self, msg): print("ProjMidi msg:",   msg)
+
+  ################## midi callback ##################
+
+  def midiClearLights(self):
+    for i in range(64): self.emc.midiOut.note_on(i, 0, 0)
 
   ################## midi callback ##################
 

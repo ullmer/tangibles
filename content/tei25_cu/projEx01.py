@@ -14,7 +14,7 @@ pm  = ProjMidi(emc=emc)
 
 emc.registerControls(pm.midiCB)
 
-for i in range(64): emc.midiOut.note_on(i, i, 3)
+#for i in range(64): emc.midiOut.note_on(i, i, 3)
 #for i in range(6): emc.midiOut.note_on(i, i, 3)
 #blue 45 orange 5 green 25 brown 9
 
