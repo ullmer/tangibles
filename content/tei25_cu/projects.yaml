@@ -1,16 +1,20 @@
 ### TEI25 @ Clemson : Student Projects ###
 
 projects:
-  1:  {studAbbrev: [], projName: ""}
-  2:  {studAbbrev: [], projName: ""}
-  3:  {studAbbrev: [], projName: ""}
-  4:  {studAbbrev: [], projName: ""}
-  5:  {studAbbrev: [], projName: ""}
-  6:  {studAbbrev: [], projName: ""}
-  7:  {studAbbrev: [], projName: ""}
-  8:  {studAbbrev: [], projName: ""}
-  9:  {studAbbrev: [], projName: ""}
-  10: {studAbbrev: [], projName: ""}
-  11: {studAbbrev: [], projName: ""}
+  1:  {peopleAbbrev: [SKS, PKT], projName: ""}
+  2:  {peopleAbbrev: [ZAB, JL],  projName: ""}
+  3:  {peopleAbbrev: [CMA],      projName: ""}
+  4:  {peopleAbbrev: [RTB],      projName: ""}
+  5:  {peopleAbbrev: [],         projName: ""}
+  6:  {peopleAbbrev: [],         projName: ""}
+  7:  {peopleAbbrev: [],         projName: ""}
+  8:  {peopleAbbrev: [],         projName: ""}
+  9:  {peopleAbbrev: [],         projName: ""}
+  10: {peopleAbbrev: [],         projName: ""}
+  11: {peopleAbbrev: [],         projName: ""}
+  12: {peopleAbbrev: [BAU],      projHandle: tei25_TNW, projName: "This Noble Work"}
+
+people:
+  BAU: Brygg Ullmer
 
 ### end ###
