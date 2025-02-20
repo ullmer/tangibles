@@ -53,7 +53,7 @@ class ProjMidi(ProjectsPgzBase):
 
   ################## midi callback ##################
 
-  def midiLightInit(self):
+  def midiLightInit(self):                                    #F
     colors = [3,4,5,13,21,29,37,45,53,61]
     for i in colors: self.emc.midiOut.note_on(i, i, 6)
 
@@ -62,7 +62,7 @@ class ProjMidi(ProjectsPgzBase):
   ################## midi callback ##################
 
   def midiCB(self, control, arg):   
-    #print("hello class")                                     #F
+    #print("hello class")                                     #G
     try:
       if self.verbose: print("cpgzm midicb: ", str(control), str(arg))
 
@@ -71,14 +71,14 @@ class ProjMidi(ProjectsPgzBase):
         whichVal    = int(arg)
         mappedVal   = self.mapSliderVal(whichSlider, whichVal)
 
-        print("slider", str(whichSlider), str(whichVal))
+        print("slider", str(whichSlider), str(whichVal))     #H
 
         self.sliderValDict[whichSlider] = self.sliderFullrangeV - whichVal
         #self.sliderValDict[whichSlider] = mappedVal
         #self.assignColumnIdx(whichSlider, mappedVal)
       else: 
         print(control, arg)
-        if control=="a8" and arg == 127: print("dance")      #G
+        if control=="a8" and arg == 127: print("dance")      #I
         if control=="a7" and arg == 127: print("p1 dances")
         if control=="a6" and arg == 127: print("p0 dances")
 
