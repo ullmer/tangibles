@@ -7,7 +7,7 @@ projects:
   4:  {peopleAbbrev: [RTB],      projName: ""}
   5:  {peopleAbbrev: [KMB],      projName: ""}
   6:  {peopleAbbrev: [YH],       projName: ""}
-  7:  {peopleAbbrev: [BLS],      projName: ""}
+  7:  {peopleAbbrev: [BLS],      projName: "Volunteer Trainer", color=cyan}
   8:  {peopleAbbrev: [UAS],      projName: ""}
   9:  {peopleAbbrev: [DNV],      projName: ""}
   10: {peopleAbbrev: [ZJW],      projName: ""}
