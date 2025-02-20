@@ -5,13 +5,13 @@ projects:
   2:  {peopleAbbrev: [ZAB, JL],  projName: ""}
   3:  {peopleAbbrev: [CMA],      projName: ""}
   4:  {peopleAbbrev: [RTB],      projName: ""}
-  5:  {peopleAbbrev: [],         projName: ""}
-  6:  {peopleAbbrev: [],         projName: ""}
-  7:  {peopleAbbrev: [],         projName: ""}
-  8:  {peopleAbbrev: [],         projName: ""}
-  9:  {peopleAbbrev: [],         projName: ""}
-  10: {peopleAbbrev: [],         projName: ""}
-  11: {peopleAbbrev: [],         projName: ""}
+  5:  {peopleAbbrev: [KMB],      projName: ""}
+  6:  {peopleAbbrev: [YH],       projName: ""}
+  7:  {peopleAbbrev: [BLS],      projName: ""}
+  8:  {peopleAbbrev: [UAS],      projName: ""}
+  9:  {peopleAbbrev: [DNV],      projName: ""}
+  10: {peopleAbbrev: [ZJW],      projName: ""}
+  11: {peopleAbbrev: [WW],       projName: ""}
   12: {peopleAbbrev: [BAU],      projHandle: tei25_TNW, projName: "This Noble Work"}
 
 people:
