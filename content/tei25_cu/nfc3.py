@@ -28,7 +28,7 @@ import simpleio
 import busio
 import mfrc522
 
-#sck = board.GP6
+#sck = board.GP6       ##next block = A
 sck = board.GP2
 #mosi = board.GP7
 mosi = board.GP3
@@ -36,14 +36,13 @@ mosi = board.GP3
 miso = board.GP4
 spi = busio.SPI(sck, MOSI=mosi, MISO=miso)
 
-
-
 #cs  = digitalio.DigitalInOut(board.GP5)
 #rst = digitalio.DigitalInOut(board.GP8)
 cs  = digitalio.DigitalInOut(board.GP26)
 rst = digitalio.DigitalInOut(board.GP6)
-rfid = mfrc522.MFRC522(spi, cs, rst)
-#rfid.set_antenna_gain(0x07 << 4)
+
+rfid = mfrc522.MFRC522(spi, cs, rst)      #B
+#rfid.set_antenna_gain(0x07 << 4)         #C
 
 print("\n***** Scan your RFid tag/card *****\n")
 
@@ -52,10 +51,10 @@ prev_time = 0
 timeout = 1
 
 while True:
-  (status, tag_type) = rfid.request(rfid.REQALL)
+  (status, tag_type) = rfid.request(rfid.REQALL)  # next block #D
 
   if status == rfid.OK:
-    (status, raw_uid) = rfid.anticoll()
+    (status, raw_uid) = rfid.anticoll()  #E
 
     if status == rfid.OK:
       rfid_data = "{:02x}{:02x}{:02x}{:02x}".format(
