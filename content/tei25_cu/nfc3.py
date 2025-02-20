@@ -4,13 +4,13 @@
   
   Items:
   - Maker Pi Pico
-    https://my.cytron.io/p-maker-pi-pico
+  https://my.cytron.io/p-maker-pi-pico
   - Mifare RC522 RFID Kit
-    https://my.cytron.io/p-mifare-rc522-rfid-kit
+  https://my.cytron.io/p-mifare-rc522-rfid-kit
   - Grove - Relay
-    https://my.cytron.io/p-grove-relay
+  https://my.cytron.io/p-grove-relay
   - USB Micro B Cable
-    https://my.cytron.io/p-usb-micro-b-cable
+  https://my.cytron.io/p-usb-micro-b-cable
   
   Libraries required from bundle (https://circuitpython.org/libraries):
   - simpleio.mpy
@@ -52,26 +52,24 @@ prev_time = 0
 timeout = 1
 
 while True:
-    (status, tag_type) = rfid.request(rfid.REQALL)
+  (status, tag_type) = rfid.request(rfid.REQALL)
+
+  if status == rfid.OK:
+    (status, raw_uid) = rfid.anticoll()
 
     if status == rfid.OK:
-        (status, raw_uid) = rfid.anticoll()
+      rfid_data = "{:02x}{:02x}{:02x}{:02x}".format(
+        raw_uid[0], raw_uid[1], raw_uid[2], raw_uid[3])
 
-        if status == rfid.OK:
-            rfid_data = "{:02x}{:02x}{:02x}{:02x}".format(raw_uid[0], raw_uid[1], raw_uid[2], raw_uid[3])
+      if rfid_data != prev_data:
+        prev_data = rfid_data
 
-            if rfid_data != prev_data:
-                prev_data = rfid_data
+        print("Card detected! UID: {}".format(rfid_data))
 
-                print("Card detected! UID: {}".format(rfid_data))
+      prev_time = time.monotonic()
 
-                #if rfid_data == "cc40b773":
-                #    time.sleep(1)
-                #else:
-                #    simpleio.tone(buzzer, NOTE_C5, 0.3)
+  else:
+    if time.monotonic() - prev_time > timeout:
+      prev_data = ""
 
-            prev_time = time.monotonic()
-
-    else:
-        if time.monotonic() - prev_time > timeout:
-            prev_data = ""
+### end ###
