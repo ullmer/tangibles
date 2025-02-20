@@ -39,6 +39,7 @@ class ProjMidi(ProjectsPgzBase):
 
     self.initSliders()
     self.midiClearLights()
+    self.midiLightInit()
 
   ################## error ##################
 
@@ -49,6 +50,14 @@ class ProjMidi(ProjectsPgzBase):
 
   def midiClearLights(self):
     for i in range(64): self.emc.midiOut.note_on(i, 0, 0)
+
+  ################## midi callback ##################
+
+  def midiLightInit(self):
+    colors = [3,4,5,13,21,29,37,45,53,61]
+    for i in colors: self.emc.midiOut.note_on(i, i, 6)
+
+    #for i in range(12): self.emc.midiOut.note_on(i, i, 6)
 
   ################## midi callback ##################
 
