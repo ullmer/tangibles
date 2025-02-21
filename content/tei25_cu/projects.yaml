@@ -1,8 +1,10 @@
 ### TEI25 @ Clemson : Student Projects ###
 
+handle_prefix: cu_tei25_
+
 projects:
-  1:  {peopleAbbrev: [SKS, PKT], projName: ""}
-  2:  {peopleAbbrev: [ZAB, JL],  projName: ""}
+  1:  {peopleAbbrev: [SKS, PKT], handle: HR,  projName: "Helper Robot"}
+  2:  {peopleAbbrev: [ZAB, JL],  handle: DMT, projName: "Democratizing music technology"}
   3:  {peopleAbbrev: [CMA],      projName: ""}
   4:  {peopleAbbrev: [RTB],      projName: ""}
   5:  {peopleAbbrev: [KMB],      projName: ""}
@@ -12,9 +14,6 @@ projects:
   9:  {peopleAbbrev: [DNV],      projName: ""}
   10: {peopleAbbrev: [ZJW],      projName: ""}
   11: {peopleAbbrev: [WW],       projName: ""}
-  12: {peopleAbbrev: [BAU],      projHandle: tei25_TNW, projName: "This Noble Work"}
-
-people:
-  BAU: Brygg Ullmer
+  12: {peopleAbbrev: [BAU],      handle: TNW, projName: "This Noble Work"}
 
 ### end ###
