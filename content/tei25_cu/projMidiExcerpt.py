@@ -3,15 +3,12 @@
 # Begun 2025-02-20
 
 import sys, os, traceback
-import spectra
-import pygame
+import spectra,  pygame
 
 from pygame            import time
 from time              import sleep #mixture of time noted, should resolve
 from pgzero.builtins   import Actor, animate, keyboard, keys
-
 from enoMidiController import *
-
 from projBase          import *
 from projPgzBase       import *
 
@@ -27,9 +24,9 @@ class ProjMidi(ProjectsPgzBase):
   sliderFullrangeP = 338 #fullrange of sliders, relative to pixels
   sliderImgFn      = 'ak_apc_mm2_s01_1920'
   sliderADict      = None #slider actor dict: one actor per sliderr 
-  verbose          = False
   mColColorIndices  = [45, 5, 25, 9]
   mColorBrights     = [1, 6, 10]
+  verbose          = False
 
   ################## constructor, error ##################
 
@@ -56,13 +53,12 @@ class ProjMidi(ProjectsPgzBase):
   def midiLightInit(self):                                    #F
     colors = [3,4,5,13,21,29,37,45,53,61]
     for i in colors: self.emc.midiOut.note_on(i, i, 6)
-
     #for i in range(12): self.emc.midiOut.note_on(i, i, 6)
 
   ################## midi callback ##################
 
   def midiCB(self, control, arg):   
-    #print("hello class")                                     #G
+    print("hello class")                                     #G
     try:
       if self.verbose: print("cpgzm midicb: ", str(control), str(arg))
 
@@ -86,17 +82,14 @@ class ProjMidi(ProjectsPgzBase):
      
   ################## excised ##################
 
-  def mapSliderVal(self, whichCol, whichSliderVal): ...
   def initSliders(self): 
   def drawSliders(self): 
+  def drawSlider(self, whichSlider):  ...
   def setAkaiColorIdxCoord(self, colorIdx, x, y, colorBright=6): ...
   def mapAkaiCoord(self, x, y): ...
+  def mapSliderVal(self, whichCol, whichSliderVal): ...
   def updateMatrixColors(self): ...
-  def drawSlider(self, whichSlider):  ...
 
-  ################## draw ##################
-
-  #def draw(self, screen):         super().draw(screen); self.drawSliders()
   def draw(self, screen):         self.drawSliders()
   def on_mouse_down(self, pos):   pass #cpgz.on_mouse_down(pos)
   def update(self):               self.emc.pollMidi()
