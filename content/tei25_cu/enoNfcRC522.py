@@ -6,11 +6,26 @@
 # https://tutorial.cytron.io/2022/01/11/interface-rfid-rc522-reader-using-maker-pi-pico-and-circuitpython/
 # https://github.com/domdfcoding/circuitpython-mfrc522]
   
-import time, board
-import digitalio, simpleio, busio
-import mfrc522
+import time
 
-class enoNfcRC522:
+###################### Enodia NFC abstraction ######################
+
+class enoNfc:
+  hardwareActive = True # False activates virtual/etc. version
+  rfidVal        = None
+  rfidPresent    = None
+
+  def __init__(self, controllerName, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    #https://stackoverflow.com/questions/739625/setattr-with-kwargs-pythonic-or-not
+
+    self.rfidVal = 0; self.rfidPresent=False
+
+  def poll(self): return self.rfidVal
+
+###################### Enodia NFC binding to RC522 ######################
+
+class enoNfcRC522(enoNfc):
 
   sck  = board.GP2 
   mosi = board.GP3 
@@ -25,9 +40,21 @@ class enoNfcRC522:
   spi, cs, rst, rfid            = [None] * 4
   prev_data, prev_time, timeout = [None] * 3
 
+  ############# constructor #############
+
+  def __init__(self, controllerName, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+
+    super().__init__()
+
+  ############# make hardware-specific imports if hardware present #############
+
+  def hardwareImports(self):
+   if hardwareActive: import board, digitalio, simpleio, busio, mfrc522
+
   ############# initiate NFC #############
 
-  def init(self):
+  def initHW(self):
     sc, mo, mi = self.sck, self.mosi, self.miso
     self.spi   = busio.SPI(sc, MOSI=mo, MISO=mi)
 
