@@ -3,9 +3,9 @@
 handle_prefix: cu_tei25_
 
 projects:
-  1:  {peopleAbbrev: [SKS, PKT], handle: HR,  projName: "Helper Robot"}
-  2:  {peopleAbbrev: [ZAB, JL],  handle: DMT, projName: "Democratizing music technology"}
-  3:  {peopleAbbrev: [CMA],      projName: ""}
+  1:  {peopleAbbrev: [SKS, PKT], handle: HR,   projName: "Helper Robot"}
+  2:  {peopleAbbrev: [ZAB, JL],  handle: DMT,  projName: "Democratizing music technology"}
+  3:  {peopleAbbrev: [CMA],      handle: FTDE, projName: "FTD Epaulettes"}
   4:  {peopleAbbrev: [RTB],      projName: ""}
   5:  {peopleAbbrev: [KMB],      projName: ""}
   6:  {peopleAbbrev: [YH],       projName: ""}
