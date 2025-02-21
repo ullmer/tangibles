@@ -76,21 +76,27 @@ class enoNfcRC522(enoNfc):
     if status  == self.rfid.OK: (status2, raw_uid) = self.rfid.anticoll()  
     if status2 == self.rfid.OK:
       a, b, c, d = raw_uid[0:3]
-      rfid_data = "{:02x}{:02x}{:02x}{:02x}".format(a,b,c,d)
+      self.rfidVal = "{:02x}{:02x}{:02x}{:02x}".format(a,b,c,d)
+      self.rfidPresent = True
 
       if rfid_data != self.prev_data:
-        self.prev_data = rfid_data
+        self.prev_data = self.rfidVal
         if self.verbose: print("Card detected! UID: {}".format(rfid_data))
 
       prev_time = time.monotonic()
+      return self.rfidVal
 
-  else:
-    if time.monotonic() - prev_time > timeout:
-      prev_data = ""
+    else:
+      if time.monotonic() - self.prev_time > self.timeout: 
+        self.prev_data = ""; self.rfidPresent=False; return None
 
-print("\n***** Scan your RFid tag/card *****\n")
+      return self.rfidVal #this may need rethinking
 
+if __name__ == "__main__":
 
-while True:
+  print("\n***** Scan your RFid tag/card *****\n")
+  enr = enoNfcRC522(verbose=True)
+
+  while True: enr.poll(); time.sleep(.1)
 
 ### end ###
