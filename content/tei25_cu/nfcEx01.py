@@ -1,6 +1,6 @@
 from enoNfcRC522 import *
 
-print("\n***** Scan your RFid tag/card *****\n")
+print("nfc tag reader active")
 enr = enoNfcRC522(verbose=True)
 
 while True: 
