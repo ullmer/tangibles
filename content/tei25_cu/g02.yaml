@@ -1,0 +1,12 @@
+#Z&J
+
+shapes:
+  a: {color: red,  shape: triangle, uid: 123}
+  b: {color: blue, shape: square,   uid: 245}
+  c:
+
+content:
+  audio:
+
+### end ###
+
