@@ -1,0 +1,34 @@
+#DV
+
+shapes: 
+  globe: 
+
+countries:
+  ethiopia: {}
+  botswana: {}
+
+
+shapes:
+  a: {color: red,  shape: triangle, uid: 123}
+  b: {color: blue, shape: square,   uid: 245}
+
+content:
+  audio: tbd
+
+#copilot response:
+#Peace Corps Activities in Ethiopia
+#1. Education: Volunteers work in primary schools to improve English education. They teach English, support local teachers, and lead extracurricular activities like English clubs, computer training, and gender empowerment clubs1.
+#
+#2. Agriculture: The Nutrition Sensitive Agriculture (NuSA) project focuses on sustainable gardening, poultry production, beekeeping, and agroforestry. The goal is to improve food production and nutrition for households2.
+#
+#3. Health: Volunteers work with local health professionals to reduce maternal and child deaths and improve youth health. They provide education on maternal, newborn, and child health, and conduct home visits and group sessions2.
+#
+#Peace Corps Activities in Botswana
+#1. Youth in Development: The HIV/AIDS and Youth Health and Well-being Project aims to help youth lead healthy, HIV-free lives. Volunteers work with healthcare workers and community organizations to increase knowledge and skills, improve treatment adherence, and strengthen youth-friendly services34.
+#
+#2. Community Economic Development: Volunteers support local entrepreneurs, cooperatives, and community organizations by providing technical support in business skills, entrepreneurship, and digital literacy. The goal is to achieve economic growth and address economic inequities4.
+#
+#3. Health: Volunteers partner with the Government of Botswana to maintain and improve primary health care. They work in clinics, NGOs, and community organizations to support health initiatives4.
+#
+#### end ###
+#
