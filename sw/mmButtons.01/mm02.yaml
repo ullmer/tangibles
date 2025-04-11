@@ -1,0 +1,7 @@
+mmButtons:
+  - {coord: [0, 0], text: R,  bg: lightcoral,  cb: defaultCb,     cbArg: A}
+  - {coord: [1, 0], text: G1, bg: gray,        cb: defaultCb,     cbArg: C}
+  - {coord: [1, 1], text: G2, bg: gray,        cb: dButtonCbFunc, cbArg: howdy}
+  - {coord: [0, 1], text: Y,  bg: lightgoldenrodyellow, cb: defaultCb, cbArg: B}
+
+### end ###
