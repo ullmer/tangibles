@@ -26,7 +26,7 @@ class enoTkiTicButtonArray(enoTkiButtonArray): # Intersects enoTkiButtonArray wi
 
   ########## initialize TIC ########## 
 
-  def initTic(self):
+  def initTic(self, arg=None): #optional argument is ignored, but useful for callback purposes
     if self.hwPresent()
       try:
         self.ticCtrl = TicUSB()
@@ -51,7 +51,7 @@ class enoTkiTicButtonArray(enoTkiButtonArray): # Intersects enoTkiButtonArray wi
 
   ########## stop TIC ########## 
 
-  def stopTic(self):
+  def stopTic(self, arg=None):
     if self.hwPresent() and self.ticHwActive:
       try:
         self.ticCtrl.deenergize()
