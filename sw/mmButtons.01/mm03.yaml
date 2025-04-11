@@ -1,7 +1,7 @@
 mmButtons:
-  - {coord: [0, 0], text: initiate,  bg: lightgreen,  cb: initTic, cbArg: None}
-  - {coord: [0, 0], text: top,       bg: lightcoral,  cb: stopTic, cbArg: None}
-  - {coord: [1, 0], text: waves,     bg: lightblue,   cb: gotoTargetPosAbs, cbArg: 100}
-  - {coord: [1, 1], text: new,       bg: lightorange, cb: gotoTargetPosAbs, cbArg: 0}
+  - {coord: [0, 0], text: initiate,  bg: lightgreen, cb: initTic, cbArg: None}
+  - {coord: [0, 1], text: stop,      bg: lightcoral, cb: stopTic, cbArg: None}
+  - {coord: [1, 0], text: waves,     bg: lightblue,  cb: gotoTargetPosAbs, cbArg: 100}
+  - {coord: [1, 1], text: new,       bg: peachpuff,  cb: gotoTargetPosAbs, cbArg: 0}
 
 ### end ###

@@ -4,8 +4,8 @@
 
 # https://en.wikipedia.org/wiki/Tkinter
 
-from mmButtons import *
-from tkinter   import *
+from enoTkiButtonArray import *
+from tkinter           import *
 
 def dButtonCb(arg): print("d button callback, argument " + str(arg))
 

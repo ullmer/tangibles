@@ -6,7 +6,9 @@
 # https://github.com/jphalip/ticlib
 
 from enoTkiButtonArray import *
-from ticlib            import TicUSB
+try: from ticlib       import TicUSB
+except: print("ticlib not present; continuing")
+
 import traceback
 
 class enoTkiTicButtonArray(enoTkiButtonArray): # Intersects enoTkiButtonArray with Pololu TIC stepper support
@@ -27,7 +29,7 @@ class enoTkiTicButtonArray(enoTkiButtonArray): # Intersects enoTkiButtonArray wi
   ########## initialize TIC ########## 
 
   def initTic(self, arg=None): #optional argument is ignored, but useful for callback purposes
-    if self.hwPresent()
+    if self.hwPresent():
       try:
         self.ticCtrl = TicUSB()
 
