@@ -33,11 +33,22 @@ class enoTkiButtonArray:
   def loadYaml(self):   
     try:
       yf = open(self.yamlFn, 'rt')
-      yd = yaml.safe_load(yf)
-      self.yamlD = yd
+      self.yamlD = yaml.safe_load(yf)
+
+    #example entries: 
+    #mmButtons:
+    #  - {coord: [0, 0], text: A, cb: defaultCb, cbArg: A}
+
+    except: print("loadYaml: ignoring issue"); traceback.print_exc()
+
+  ######### build ui #########
+
+  def buildUI(self): 
+    try:
+      yd = self.yamlD 
 
       if 'mmButtons' not in yd:
-        print("loadYaml: mmButtons not found in yaml file"); return
+        print("buildUI: mmButtons not found in yaml file"); return
 
       mmb = yd['mmButtons']
       self.buttonDict = {}
@@ -60,17 +71,15 @@ class enoTkiButtonArray:
 
         w, h   = self.butWidth, self.butHeight
         b      = Button(self.parent, text=btext, command=cb, width=w, height=h)
-        b.pack()
+        i, j = coord
+        b.grid(row = i, column = j)
+        #b.pack()
 
         self.buttonDict[str(coord)] = b
 
-    except: print("loadYaml: ignoring parsing issue"); traceback.print_exc()
-   
-    #example entries: 
-    #mmButtons:
-    #  - {coord: [0, 0], text: A, cb: defaultCb, cbArg: A}
-
-  def buildUI(self): pass  
+    except: print("buildUI: ignoring issue"); traceback.print_exc()
+  
+######### default main #########
 
 if __name__ == "__main__":
   root = Tk()    # Create the root (base) window 
