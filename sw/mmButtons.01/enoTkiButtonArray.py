@@ -1,4 +1,4 @@
-#
+# Enodia Tkinter-based button array with YAML config (including callbacks)
 # Brygg Ullmer, Sarah Sears, and Uzayr Syed
 # Begun 2025-04-11
 
