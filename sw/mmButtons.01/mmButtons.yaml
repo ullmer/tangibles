@@ -2,6 +2,6 @@ mmButtons:
   - {coord: [0, 0], text: A, cb: defaultCb, cbArg: A}
   - {coord: [0, 1], text: B, cb: defaultCb, cbArg: B}
   - {coord: [1, 0], text: C, cb: defaultCb, cbArg: C}
-  - {coord: [1, 1], text: D, cb: defaultCb, cbArg: D}
+  - {coord: [1, 1], text: D, cb: dButtonCb, cbArg: howdy}
 
 ### end ###
