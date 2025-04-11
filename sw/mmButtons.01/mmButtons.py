@@ -45,12 +45,19 @@ class enoTkiButtonArray:
       for e in mmb: #e is for "entry"
         coord, btext, cbStr, cbArg = e['coord'], e['text'], e['cb'], e['cbArg']
 
-        try: cbFunc = getattr(self, cbStr)  #first, see if the callback str defines a method within this class
-        except:                             #and if not, see if it references a function within global scope
-          try: cbFunc = globals()[cbStr]
-          except: cbFunc = self.defaultCb, self.defaultCbArg
+        cb = None
 
-        cb     = partial(cbFunc, cbArg)
+        try: 
+          cbFunc = getattr(self, cbStr)  #first, see if the callback str defines a method within this class
+          cb     = partial(cbFunc, cbArg)
+        except:                             #and if not, see if it references a function within global scope
+          try: 
+            cbFunc = globals()[cbStr]
+            cb     = partial(cbFunc, cbArg)
+          except: 
+            cbFunc, cbArg = self.defaultCb, self.defaultCbArg
+            cb            = partial(cbFunc, cbArg)
+
         w, h   = self.butWidth, self.butHeight
         b      = Button(self.parent, text=btext, command=cb, width=w, height=h)
         b.pack()
