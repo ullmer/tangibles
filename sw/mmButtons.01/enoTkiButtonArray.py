@@ -67,7 +67,7 @@ class enoTkiButtonArray:
             cbFunc = globals()[cbStr]
             cb     = partial(cbFunc, cbArg)
           except: 
-            print("globals: ", str(globals()))
+            #print("globals: ", str(globals()))
             cbFunc, cbArg = self.defaultCb, self.defaultCbArg
             cb            = partial(cbFunc, cbArg)
 
