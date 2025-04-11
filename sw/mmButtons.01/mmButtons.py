@@ -10,11 +10,12 @@ import yaml, traceback
 
 class enoTkiButtonArray:
   numRows,  numCols   = 2, 2
-  butWidth, butHeight = 200, 200
-  yamlFn              = 'mmButtons.yaml'
-  yamlD      = None
-  buttonDict = None
-  parent     = None
+  butWidth, butHeight = 15, 5
+  yamlFn       = 'mmButtons.yaml'
+  yamlD        = None
+  buttonDict   = None
+  parent       = None
+  defaultCbArg = "default argument"
 
   ######### constructor #########
 
@@ -25,7 +26,7 @@ class enoTkiButtonArray:
 
   ######### default callback #########
 
-  def defaultCb(self): print("button was pushed")
+  def defaultCb(self, arg): print("button was pushed, arg " + str(arg))
 
   ######### loadYaml #########
 
@@ -43,12 +44,18 @@ class enoTkiButtonArray:
 
       for e in mmb: #e is for "entry"
         coord, btext, cbStr, cbArg = e['coord'], e['text'], e['cb'], e['cbArg']
-        cbFunc = getattr(self,   cbStr)
+
+        try: cbFunc = getattr(self, cbStr)  #first, see if the callback str defines a method within this class
+        except:                             #and if not, see if it references a function within global scope
+          try: cbFunc = globals()[cbStr]
+          except: cbFunc = self.defaultCb, self.defaultCbArg
+
         cb     = partial(cbFunc, cbArg)
-        b      = Button(self.parent, text=btext, command=cb) # Create a label with words
+        w, h   = self.butWidth, self.butHeight
+        b      = Button(self.parent, text=btext, command=cb, width=w, height=h)
         b.pack()
 
-        self.buttonDict[coord] = b
+        self.buttonDict[str(coord)] = b
 
     except: print("loadYaml: ignoring parsing issue"); traceback.print_exc()
    
@@ -61,6 +68,6 @@ class enoTkiButtonArray:
 if __name__ == "__main__":
   root = Tk()    # Create the root (base) window 
   etba = enoTkiButtonArray(parent=root)
-  #root.mainloop() # Start the event loop
+  root.mainloop() # Start the event loop
 
 ### end ###
