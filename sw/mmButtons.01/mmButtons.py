@@ -4,14 +4,17 @@
 
 # https://en.wikipedia.org/wiki/Tkinter
 
-from tkinter import *
+from tkinter   import *
+from functools import partial
 import yaml, traceback
 
 class enoTkiButtonArray:
   numRows,  numCols   = 2, 2
   butWidth, butHeight = 200, 200
   yamlFn              = 'mmButtons.yaml'
-  yamlD  = None
+  yamlD      = None
+  buttonDict = None
+  parent     = None
 
   ######### constructor #########
 
@@ -19,6 +22,8 @@ class enoTkiButtonArray:
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     self.loadYaml()
     self.builtUi()
+
+  ######### default callback #########
 
   def defaultCb(self): print("button was pushed")
 
@@ -33,24 +38,28 @@ class enoTkiButtonArray:
       if 'mmButtons' not in yd:
         print("loadYaml: mmButtons not found in yaml file"); return
 
+      mmb = yd['mmButtons']
+      self.buttonDict = None
+
+      for e in mmb: #e is for "entry"
+        coord, btext, cbStr, cbArg = e['coord'], e['text'], e['cb'], e['cbArg']
+        cbFunc = self.getattr(cbStr)
+        cb     = partial(cbFunc, cbArg)
+        b  = Button(parent, text=btext, command=cb) # Create a label with words
+        b.pack()
+
     except: print("loadYaml: ignoring parsing issue"); traceback.print_exc()
-      
    
     #example entries: 
     #mmButtons:
     #  - {coord: [0, 0], text: A, cb: defaultCb, cbArg: A}
 
-  def buildUI(self):   
-
-
-b    = Button(root, text="Hello, world!", command=helloCB) # Create a label with words
-b.pack()                                                   # Put the label into the window
-root.mainloop()                                            # Start the event loop
+  def buildUI(self): pass  
 
 if __name__ == "__main__":
   root = Tk()    # Create the root (base) window 
-  etba = enoTkiButtonArray
+  etba = enoTkiButtonArray(parent=root
 
-
+  root.mainloop()                                            # Start the event loop
 
 ### end ###
