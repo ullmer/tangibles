@@ -5,6 +5,7 @@
 # https://en.wikipedia.org/wiki/Tkinter
 
 from tkinter import *
+import yaml, traceback
 
 class enoTkiButtonArray:
   numRows,  numCols   = 2, 2
@@ -21,7 +22,23 @@ class enoTkiButtonArray:
 
   def defaultCb(self): print("button was pushed")
 
+  ######### loadYaml #########
+
   def loadYaml(self):   
+    try:
+      yf = open(self.yamlFn, 'rt')
+      yd = yaml.safe_load(yf)
+      self.yamlD = yd
+
+      if 'mmButtons' not in yd:
+        print("loadYaml: mmButtons not found in yaml file"); return
+
+    except: print("loadYaml: ignoring parsing issue"); traceback.print_exc()
+      
+   
+    #example entries: 
+    #mmButtons:
+    #  - {coord: [0, 0], text: A, cb: defaultCb, cbArg: A}
 
   def buildUI(self):   
 
