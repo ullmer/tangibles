@@ -1,0 +1,62 @@
+# Enodia embedded devices json ~server 
+# Brygg Ullmer, Clemson University
+# Begun 2025-04-11 
+
+import sys
+
+#https://docs.circuitpython.org/en/latest/shared-bindings/alarm/
+#https://docs.circuitpython.org/en/latest/shared-bindings/supervisor/index.html
+
+import time
+import alarm
+import board
+import busio
+import supervisor
+
+class enoEmbedJserver: 
+
+  i2c        = None
+  pinSCL     = board.GP7
+  pinSDA     = board.GP6
+  address    = 0x6b
+  verbose    = True
+
+  minUpdateMs        =  1000  #ms
+  maxUpdateMs        =  10    #ms
+  scanLockPendingNap =  0.001 #s
+  lastBroadcastMs    = -1
+
+  addressToDeviceDict = None
+
+  msAlarm = None
+
+  def __init__(self): 
+    self.lastBroadcastMs     = supervisor.ticks_ms()
+    self.addressToDeviceDict = {}
+    self.initI2C()
+    self.initAlarm()
+
+  def initI2C(self):    self.i2c = busio.I2C(self.pinSCL, self.pinSDA)
+
+  def initAlarm(self):  self.msAlarm = alarm.time.TimeAlarm()
+
+  def nap(self):        self.msAlarm.light_sleep_until_alarm()
+
+  def getTicksMs(self): return supervisor.ticks_ms()
+
+  def msSinceLastBroadcast(self): 
+    if self.lastBroadcastMs < 0: return self.lastBroadcastMs
+    return self.getTicksMs() - self.lastBroadcastMs
+
+  def scanForDevices(self): 
+    i2cLockActivated = self.i2c.try_lock()
+
+    if not i2cLockActivated: 
+      if self.verbose: self.msg("scanForDevices: pending lock")
+      time.sleep(self.scanLockPendingNap)
+
+    addressesFound = i2c.scan()
+
+    self.i2c.unlock()
+
+### end ###
