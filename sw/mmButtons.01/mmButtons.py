@@ -39,13 +39,13 @@ class enoTkiButtonArray:
         print("loadYaml: mmButtons not found in yaml file"); return
 
       mmb = yd['mmButtons']
-      self.buttonDict = None
+      self.buttonDict = {}
 
       for e in mmb: #e is for "entry"
         coord, btext, cbStr, cbArg = e['coord'], e['text'], e['cb'], e['cbArg']
-        cbFunc = self.getattr(cbStr)
+        cbFunc = getattr(self,   cbStr)
         cb     = partial(cbFunc, cbArg)
-        b  = Button(parent, text=btext, command=cb) # Create a label with words
+        b      = Button(self.parent, text=btext, command=cb) # Create a label with words
         b.pack()
 
         self.buttonDict[coord] = b
