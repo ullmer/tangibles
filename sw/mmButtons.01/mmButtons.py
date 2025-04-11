@@ -21,7 +21,7 @@ class enoTkiButtonArray:
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     self.loadYaml()
-    self.builtUi()
+    self.buildUI()
 
   ######### default callback #########
 
@@ -48,6 +48,8 @@ class enoTkiButtonArray:
         b  = Button(parent, text=btext, command=cb) # Create a label with words
         b.pack()
 
+        self.buttonDict[coord] = b
+
     except: print("loadYaml: ignoring parsing issue"); traceback.print_exc()
    
     #example entries: 
@@ -58,8 +60,7 @@ class enoTkiButtonArray:
 
 if __name__ == "__main__":
   root = Tk()    # Create the root (base) window 
-  etba = enoTkiButtonArray(parent=root
-
-  root.mainloop()                                            # Start the event loop
+  etba = enoTkiButtonArray(parent=root)
+  #root.mainloop() # Start the event loop
 
 ### end ###
