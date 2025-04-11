@@ -11,11 +11,12 @@ import yaml, traceback
 class enoTkiButtonArray:
   numRows,  numCols   = 2, 2
   butWidth, butHeight = 15, 5
-  yamlFn       = 'mmButtons.yaml'
+  yamlFn       = 'mm01.yaml'
   yamlD        = None
   buttonDict   = None
   parent       = None
-  defaultCbArg = "default argument"
+  defaultCbArg   = "default argument"
+  defaultBgColor = 'gray'
 
   ######### constructor #########
 
@@ -66,11 +67,17 @@ class enoTkiButtonArray:
             cbFunc = globals()[cbStr]
             cb     = partial(cbFunc, cbArg)
           except: 
+            print("globals: ", str(globals()))
             cbFunc, cbArg = self.defaultCb, self.defaultCbArg
             cb            = partial(cbFunc, cbArg)
 
         w, h   = self.butWidth, self.butHeight
-        b      = Button(self.parent, text=btext, command=cb, width=w, height=h)
+
+        c = self.defaultBgColor
+        if 'bg' in e: c = e['bg']; print("bg:" + str(c))
+        else: print("no background color specified")
+
+        b    = Button(self.parent, text=btext, command=cb, width=w, height=h, bg=c)
         i, j = coord
         b.grid(row = i, column = j)
         #b.pack()
