@@ -12,12 +12,14 @@ def find_pico_port():
       return port.device
   return None
 
-def send_command(ser, command):
+def interruptAndClear(ser):
   ser.write(b'\x03')  # Send Ctrl+C to interrupt any running code
   time.sleep(0.1)
   ser.write(b'\x01')  # Send Ctrl+A to enter raw REPL mode
   time.sleep(0.1)
 
+def send_command(ser, command):
+  interruptAndClear(ser)
   ser.write((command + '\n').encode('utf-8'))
   ser.flush()
   time.sleep(0.1) # Give some time for the command to be processed
@@ -27,7 +29,11 @@ def send_command(ser, command):
   time.sleep(0.1)
 
   response = ser.read_all().decode('utf-8')
-  return response
+  response2 = response[29:-4]
+
+  #>OK25
+  #♦♦>
+  return response2
 
 def cli(ser):
   try:
@@ -59,6 +65,7 @@ def main():
       if ser.in_waiting > 0:
         line = ser.readline().decode('utf-8').rstrip()
         print(f"Received: {line}")
+        interruptAndClear(ser)
 
         if line[0:cpHLen] == cpHeader: 
           print("!!!")
