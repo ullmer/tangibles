@@ -1,5 +1,5 @@
 # IMU service class
-# Brygg Ullmer and Brandon Spears, Clemson University
+# Brygg Ullmer, Clemson University
 # Begun 2025-04-11 
 
 import sys

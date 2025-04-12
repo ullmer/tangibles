@@ -1,8 +1,8 @@
 # IMU json listener
-# Brygg Ullmer and Brandon Spears, Clemson University
+# Brygg Ullmer, Clemson University
 # Begun 2025-04-11 
 
-import sys, json, traceback
+import sys, json, traceback, time
 
 #https://learn.adafruit.com/adafruit-lsm6ds3tr-c-6-dof-accel-gyro-imu/python-circuitpython
 #https://github.com/xioTechnologies/Fusion/blob/main/Python/simple_example.py
@@ -19,6 +19,7 @@ class enoIMUjlistener: #enodia IMU JSON ~listener
   currentPos        = None
   currentOrient     = None
   ahrs              = None
+  lastTimeMs        = None
 
   ######### constructor #########
 
