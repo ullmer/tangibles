@@ -76,7 +76,7 @@ class enoEmbSerialConsole:
       self.interruptAndClear(); time.sleep(.1)
       cmd = b'\n'; ser.write(cmd); ser.flush(); time.sleep(.1)
       cmd = "from enoEmbBase import *\n".encode('utf-8') + b'\x04'
-      .write(cmd); ser.flush(); time.sleep(.1)
+      ser.write(cmd); ser.flush(); time.sleep(.1)
   
       while True:
         if ser.in_waiting > 0:
@@ -87,14 +87,14 @@ class enoEmbSerialConsole:
           if line[0:cpHLen] == cpHeader: 
             print("connection established")
             time.sleep(0.1)
-            cli(ser)
+            self.cli()
   
     except KeyboardInterrupt:
       print("exiting...")
     finally:
       ser.close()
   
-  if __name__ == "__main__":
-    eesc = enoEmbSerialConsole()
+if __name__ == "__main__":
+  eesc = enoEmbSerialConsole()
   
-  ### end ###
+### end ###
