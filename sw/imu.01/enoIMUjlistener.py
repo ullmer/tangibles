@@ -26,6 +26,9 @@ class enoIMUjlistener: #enodia IMU JSON ~listener
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     self.initImuFsn()
+    self.lastTimeMs = self.getTimeMs()
+
+  def getTimeMs(self):  return time.time_ns() // 1_000_000
 
   def initImuFsn(self): self.ahrs = imufusion.Ahrs()
 
@@ -50,7 +53,12 @@ class enoIMUjlistener: #enodia IMU JSON ~listener
       if 'g' not in agDict:    self.msg("feedAhrsGyroJson: gyro data not present");    return False
 
       a, g = agDict['a'], agDict['g']
+      newTime = self.getTimeMs()
+      timeDiffMs = newTime - self.lastTimeMs
+      timeDelta  = float(timeDiffMs) / 1000.
+
       self.ahrs.update_no_magnetometer(g, a, timeDelta)
+      self.lastTimeMs = newTime
 
     except: self.msg("parseAccelGyroJson exception"); traceback.print_exc(); return False
     return True
