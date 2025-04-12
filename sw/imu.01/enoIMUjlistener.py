@@ -13,6 +13,13 @@ import sys, json, traceback, time
 #https://pypose.org/tutorials/imu/imu_integrator_tutorial.html
 #https://github.com/chengwei0427/Lidar_IMU_Localization
 #https://www.dfrobot.com/blog-1647.html
+#https://robotics.stackexchange.com/questions/110357/slam-with-imu-with-no-wheel-odometry
+#https://www.reddit.com/r/ROS/comments/12v1k3f/navigation_with_lidar_sensorwithout_wheel_odometry/?rdt=34858
+#https://github.com/ChaoqinRobotics/LINS---LiDAR-inertial-SLAM
+#https://ieeexplore.ieee.org/document/10671780
+#https://github.com/avs2805/hector_slam_quickstart
+#https://github.com/sacchinbhg/Hector-Slam-Noetic
+#https://github.com/tu-darmstadt-ros-pkg/hector_slam
 
 try:    import imufusion
 except: print("imufusion class not found!"); sys.exit(-1)
