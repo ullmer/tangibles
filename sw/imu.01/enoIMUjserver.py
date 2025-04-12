@@ -26,7 +26,7 @@ class enoIMUjserver: #enodia IMU JSON ~server
   pinSDA     = board.GP6
   address    = 0x6b
   imuInitialized   = False
-  accelGyroJsonFmt = "{s:ag1, a:[%6.2f,%6.2f,%6.2f], g:[%6.2f,%6.2f,%6.2f]}" 
+  accelGyroJsonFmt = '{"s":"ag1", "a":[%6.2f,%6.2f,%6.2f], "g":[%6.2f,%6.2f,%6.2f]}'
 
   minUpdateMS = 1000 #ms
   maxUpdateMS = 10   #ms
