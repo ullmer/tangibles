@@ -11,6 +11,7 @@ import yaml, traceback
 class enoTkiButtonArray:
   numRows,  numCols   = 2, 2
   butWidth, butHeight = 6, 2
+  butTextWrapLength   = 200
   butFont        = ('Sans','60','bold')
   yamlFn       = 'mm01.yaml'
   yamlD        = None
@@ -74,11 +75,11 @@ class enoTkiButtonArray:
 
         w, h   = self.butWidth, self.butHeight
 
-        c, f = self.defaultBgColor, self.butFont
+        c, f, bwl = self.defaultBgColor, self.butFont, self.butTextWrapLength   
         if 'bg' in e: c = e['bg']; print("bg:" + str(c))
         else: print("no background color specified")
 
-        b    = Button(self.parent, text=btext, command=cb, width=w, height=h, bg=c, font=f)
+        b    = Button(self.parent, text=btext, command=cb, width=w, height=h, bg=c, font=f, wraplength=bwl)
         i, j = coord
         b.grid(row = i, column = j)
         #b.pack()
