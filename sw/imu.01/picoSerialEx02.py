@@ -12,23 +12,32 @@ def find_pico_port():
       return port.device
   return None
 
-
 def send_command(ser, command):
-    ser.write((command + '\n').encode('utf-8'))
-    ser.flush()
-    time.sleep(0.1)  # Give some time for the command to be processed
-    response = ser.read_all().decode('utf-8')
-    return response
+  ser.write(b'\x03')  # Send Ctrl+C to interrupt any running code
+  time.sleep(0.1)
+  ser.write(b'\x01')  # Send Ctrl+A to enter raw REPL mode
+  time.sleep(0.1)
 
-def cli():
-  try:
-    while True:
-      command = input("Enter command for Pico: ")
-      if command.lower() == "exit": break
-      response = send_command(ser, command)
-      print(f"Response: {response}")
-    except KeyboardInterrupt:
-        print("Exiting...")
+  ser.write((command + '\n').encode('utf-8'))
+  ser.flush()
+  time.sleep(0.1) # Give some time for the command to be processed
+
+  ser.write(b'\x04')  # Send Ctrl+D to execute the command
+  ser.flush()
+  time.sleep(0.1)
+
+  response = ser.read_all().decode('utf-8')
+  return response
+
+def cli(ser):
+  try:
+    while True:
+      command = input("Enter command for Pico: ")
+      if command.lower() == "exit": break
+      response = send_command(ser, command)
+      print(f"Response: {response}")
+  except KeyboardInterrupt:
+    print("Exiting...")
 
 def main():
   pico_port = find_pico_port()
@@ -55,7 +64,7 @@ def main():
           print("!!!")
           time.sleep(0.1)
           ser.write("print(3)\n\n".encode('utf-8')); ser.flush()
-          cli()
+          cli(ser)
 
         # You can send data to Pico using ser.write() method
         # ser.write(b'Your message here\n')
