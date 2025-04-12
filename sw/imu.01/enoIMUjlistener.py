@@ -2,15 +2,15 @@
 # Brygg Ullmer and Brandon Spears, Clemson University
 # Begun 2025-04-11 
 
-import sys
-import json
+import sys, json, traceback
 
 #https://learn.adafruit.com/adafruit-lsm6ds3tr-c-6-dof-accel-gyro-imu/python-circuitpython
 #https://github.com/xioTechnologies/Fusion/blob/main/Python/simple_example.py
 
 try:    import imufusion
 except: print("imufusion class not found!"); sys.exit(-1)
-
+  
+######### Enodia IMU json listener & imufusion transformer #########
 
 class enoIMUjlistener: #enodia IMU JSON ~listener
 
@@ -35,15 +35,22 @@ class enoIMUjlistener: #enodia IMU JSON ~listener
   def parseAccelGyroJson(self, agStr):
     try:
       parsed_data = json.loads(agStr)
-
       self.feedAhrsAccelGyroJson(self, agDict)
+    except: self.msg("parseAccelGyroJson exception"); 
 
   ######### parse accelerometer/gyro json #########
 
-  def feedAhrsGyroJson(self, agDict):
+  def feedAhrsGyroJson(self, agDict, timeDelta):
+
+    try:
 
     if 's' not in agDict:    self.msg("feedAhrsGyroJson: sensor spec not present");  return False
     if agDict['s'] != 'ag1': self.msg("feedAhrsGyroJson: sensor ag1 not indicated"); return False
+
+    g, a = agDict['
+
+    ahrs.update_no_magnetometer(gyroscope[index], accelerometer[index], 1 / 100)  # 100 Hz sample rate
+
 
 
     return result
