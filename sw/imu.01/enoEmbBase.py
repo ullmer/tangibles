@@ -9,9 +9,9 @@ import supervisor
 import alarm
 
 from enoEmbedJserver import *
-from enoIMUjserver   import *
-
 ejs = enoEmbedJserver()
+
+#from enoIMUjserver   import *
 #ijs = enoIMUjserver()
 
 ### end ###
