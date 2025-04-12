@@ -60,7 +60,8 @@ def main():
   cpHLen   = len(cpHeader)
 
   try:
-    ser.write(b'\n');         ser.flush()
+    #ser.write(b'\n');         ser.flush()
+    interruptAndClear(ser)
     while True:
       if ser.in_waiting > 0:
         line = ser.readline().decode('utf-8').rstrip()
@@ -68,9 +69,8 @@ def main():
         interruptAndClear(ser)
 
         if line[0:cpHLen] == cpHeader: 
-          print(connection established"
+          print("connection established")
           time.sleep(0.1)
-          #ser.write("print(3)\n\n".encode('utf-8')); ser.flush()
           cli(ser)
 
   except KeyboardInterrupt:

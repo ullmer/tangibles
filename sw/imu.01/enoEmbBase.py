@@ -12,6 +12,6 @@ from enoEmbedJserver import *
 from enoIMUjserver   import *
 
 ejs = enoEmbedJserver()
-ijs = enoIMUjserver()
+#ijs = enoIMUjserver()
 
 ### end ###

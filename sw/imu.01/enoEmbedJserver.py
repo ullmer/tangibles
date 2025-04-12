@@ -51,13 +51,13 @@ class enoEmbedJserver:
 
   def initI2C(self):    self.i2c = busio.I2C(self.pinSCL, self.pinSDA)
 
-  def initAlarm(self):  self.msAlarm = alarm.time.TimeAlarm()
+  def initAlarm(self):  pass
 
   def nap(self):        self.msAlarm.light_sleep_until_alarm()
 
   def getTicksMs(self): return supervisor.ticks_ms()
 
-  def setAlarm(self, duration): self.msAlarm = alarm.time.TimeAlarm()
+  def setAlarm(self, duration): self.msAlarm = alarm.time.TimeAlarm(monotonic_time=time.monotonic() + duration)
 
   def ledCycleSlow(self): #initially, synchronous: 
     while True:
