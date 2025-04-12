@@ -11,6 +11,8 @@ import sys, json, traceback, time
 #https://github.com/PaulKemppi/gtsam_fusion
 #https://github.com/niru-5/imusensor
 #https://pypose.org/tutorials/imu/imu_integrator_tutorial.html
+#https://github.com/chengwei0427/Lidar_IMU_Localization
+#https://www.dfrobot.com/blog-1647.html
 
 try:    import imufusion
 except: print("imufusion class not found!"); sys.exit(-1)
