@@ -61,11 +61,11 @@ def main():
 
   try:
     interruptAndClear(ser); time.sleep(.1)
+    cmd = b'\n'; ser.write(cmd); ser.flush(); time.sleep(.1)
     cmd = "from enoEmbBase import *\n".encode('utf-8') + b'\x04'
-    ser.write(cmd); ser.flush()
+    ser.write(cmd); ser.flush(); time.sleep(.1)
 
     while True:
-      ser.write(cmd); ser.flush()
       if ser.in_waiting > 0:
         line = ser.readline().decode('utf-8').rstrip()
         print(f"Received: {line}")

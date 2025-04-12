@@ -60,14 +60,16 @@ class enoEmbedJserver:
   def setAlarm(self, duration): self.msAlarm = alarm.time.TimeAlarm(monotonic_time=time.monotonic() + duration)
 
   def ledCycleSlow(self): #initially, synchronous: 
+    dur = self.onboardLEDCycleDurSlow
     while True:
-      self.setLED(True);  time.sleep(onboardLEDCycleDurSlow) #self.msAlarm.light_sleep
-      self.setLED(False); time.sleep(onboardLEDCycleDurSlow) #self.msAlarm.light_sleep
+      self.setLED(True);  time.sleep(dur) #self.msAlarm.light_sleep
+      self.setLED(False); time.sleep(dur) #self.msAlarm.light_sleep
 
   def ledCycleFast(self): #initially, synchronous: 
+    dur = self.onboardLEDCycleDurFast
     while True:
-      self.setLED(True);  time.sleep(onboardLEDCycleDurFast) #self.msAlarm.light_sleep
-      self.setLED(False); time.sleep(onboardLEDCycleDurFast) #self.msAlarm.light_sleep
+      self.setLED(True);  time.sleep(dur) #self.msAlarm.light_sleep
+      self.setLED(False); time.sleep(dur) #self.msAlarm.light_sleep
 
   def msSinceLastBroadcast(self): 
     if self.lastBroadcastMs < 0: return self.lastBroadcastMs
