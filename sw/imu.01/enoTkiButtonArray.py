@@ -79,8 +79,8 @@ class enoTkiButtonArray:
         w, h   = self.butWidth, self.butHeight
 
         c, f, bwl = self.defaultBgColor, self.butFont, self.butTextWrapLength   
-        if 'bg' in e: c = e['bg']; print("bg:" + str(c))
-        else: print("no background color specified")
+        if 'bg' in e: c = e['bg']; #print("bg:" + str(c))
+        #else: print("no background color specified")
 
         b    = Button(self.parent, text=btext, command=cb, width=w, height=h, bg=c, font=f, wraplength=bwl)
         i, j = coord

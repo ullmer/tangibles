@@ -1,8 +1,10 @@
 numRows: 2
-numCols: 2
+numCols: 3
 buttons:
-  - {coord: [0, 0], text: blink slow,  bg: lightgreen, cb: ledCycle, cbArg: 2.}
-  - {coord: [0, 1], text: blink fast,  bg: lightcoral, cb: ledCycle, cbArg: .5}
+  - {coord: [0, 0], text: blink slow,  bg: "#00a", cb: ledCycle,  cbArg: 2.}
+  - {coord: [0, 1], text: blink fast,  bg: "#22c", cb: ledCycle,  cbArg: .5}
+  - {coord: [0, 2], text: blink fast2, bg: "#44f", cb: ledCycle, cbArg: .2}
+
 #  - {coord: [1, 0], text: waves,     bg: lightblue,  cb: gotoTargetPosAbs, cbArg: 100}
 #  - {coord: [1, 1], text: new,       bg: peachpuff,  cb: gotoTargetPosAbs, cbArg: 0}
 
