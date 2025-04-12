@@ -11,6 +11,7 @@ import time
 import alarm
 import board
 import busio
+import digitalio
 import supervisor
 
 class enoEmbedJserver: 
@@ -25,6 +26,8 @@ class enoEmbedJserver:
   maxUpdateMs        =  10    #ms
   scanLockPendingNap =  0.001 #s
   lastBroadcastMs    = -1
+  onboardLED         = None
+  onboardLEDPin      = board.GP25
 
   addressToDeviceDict = None
 
@@ -34,7 +37,15 @@ class enoEmbedJserver:
     self.lastBroadcastMs     = supervisor.ticks_ms()
     self.addressToDeviceDict = {}
     self.initI2C()
+    self.initLED()
     self.initAlarm()
+
+  def initLED(self):   
+    self.onboardLED = digitalio.DigitalInOut(self.onboardLEDPin)
+    self.onboardLED.direction = digitalio.Direction.OUTPUT
+    self.onboardLED.value = True
+
+  def setLED(self, value): self.onboardLED.value = value  
 
   def initI2C(self):    self.i2c = busio.I2C(self.pinSCL, self.pinSDA)
 
