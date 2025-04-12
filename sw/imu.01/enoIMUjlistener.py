@@ -36,9 +36,14 @@ class enoIMUjlistener: #enodia IMU JSON ~listener
     try:
       parsed_data = json.loads(agStr)
 
-      self.evalAccelGyroJson(self, agDict)
+      self.feedAhrsAccelGyroJson(self, agDict)
 
-      if 's' not in parsed_data: sle
+  ######### parse accelerometer/gyro json #########
+
+  def feedAhrsGyroJson(self, agDict):
+
+    if 's' not in agDict:    self.msg("feedAhrsGyroJson: sensor spec not present");  return False
+    if agDict['s'] != 'ag1': self.msg("feedAhrsGyroJson: sensor ag1 not indicated"); return False
 
 
     return result
