@@ -95,10 +95,12 @@ class enoEmbSerialConsole:
 
       #      if self.autolaunchCli: self.cli()
   
-    except KeyboardInterrupt:
-      print("exiting...")
-    finally:
-      ser.close()
+    except: print("enoEmbSerialConsole initConsole error:"); 
+
+    #except KeyboardInterrupt:
+    #  print("exiting...")
+    #finally:
+    #  ser.close()
   
 if __name__ == "__main__":
   eesc = enoEmbSerialConsole()
