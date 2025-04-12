@@ -28,6 +28,8 @@ class enoEmbedJserver:
   lastBroadcastMs    = -1
   onboardLED         = None
   onboardLEDPin      = board.GP25
+  onboardLEDCycleDurSlow = 2.  #duration, in s
+  onboardLEDCycleDurFast = 0.5 #duration, in s
 
   addressToDeviceDict = None
 
@@ -54,6 +56,18 @@ class enoEmbedJserver:
   def nap(self):        self.msAlarm.light_sleep_until_alarm()
 
   def getTicksMs(self): return supervisor.ticks_ms()
+
+  def setAlarm(self, duration): self.msAlarm = alarm.time.TimeAlarm()
+
+  def ledCycleSlow(self): #initially, synchronous: 
+    while True:
+      self.setLED(True);  time.sleep(onboardLEDCycleDurSlow) #self.msAlarm.light_sleep
+      self.setLED(False); time.sleep(onboardLEDCycleDurSlow) #self.msAlarm.light_sleep
+
+  def ledCycleFast(self): #initially, synchronous: 
+    while True:
+      self.setLED(True);  time.sleep(onboardLEDCycleDurFast) #self.msAlarm.light_sleep
+      self.setLED(False); time.sleep(onboardLEDCycleDurFast) #self.msAlarm.light_sleep
 
   def msSinceLastBroadcast(self): 
     if self.lastBroadcastMs < 0: return self.lastBroadcastMs
