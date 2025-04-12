@@ -9,12 +9,12 @@ from enoEmbSerialConsole  import *
 from tkinter              import *
 
 class enoTkiEmbButtonArray(enoTkiButtonArray, enoEmbSerialConsole): #inherits methods from both
-  def __init__(self, **kwargs):  #this and subsequent two lines each include ~"opaque magic"
+  def __init__(self, **kwargs):  
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
-    super().__init__()           #call the constructors for both enoTkiButtonArray and enoEmbSerialConsole
+    enoTkiButtonArray.__init__(self)        
+    enoEmbSerialConsole.__init__(self)     
 
 root = Tk()    # Create the root (base) window 
-
 etba = enoTkiEmbButtonArray(parent=root, yamlFn='ps05.yaml')
 
 root.mainloop() # Start the event loop

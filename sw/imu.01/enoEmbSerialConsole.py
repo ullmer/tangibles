@@ -65,8 +65,8 @@ class enoEmbSerialConsole:
     self.serialPort = self.findEmbeddedPort()
     if self.serialPort is None:
       print("CircuitPython device not found."); return
-  
-    #print(f"CircuitPython device found on port {pico_port}")
+
+    print("CircuitPython device found on port " + str(self.serialPort))
   
     self.serialHandle = serial.Serial(self.serialPort, 115200, timeout=1); # Establish serial communication
     ser = self.serialHandle
@@ -77,20 +77,23 @@ class enoEmbSerialConsole:
     try:
       self.interruptAndClear(); time.sleep(.1)
       cmd = b'\n'; ser.write(cmd); ser.flush(); time.sleep(.1)
-      cmd = "from enoEmbBase import *\n".encode('utf-8') + b'\x04'
-      ser.write(cmd); ser.flush(); time.sleep(.1)
+      print(0)
+      self.sendCommand("from enoEmbBase import *")
+      print(1)
   
-      while True:
-        if ser.in_waiting > 0:
-          line = ser.readline().decode('utf-8').rstrip()
-          print(f"Received: {line}")
-          self.interruptAndClear()
-  
-          if line[0:cpHLen] == cpHeader: 
-            print("connection established")
-            time.sleep(0.1)
+      if self.autolaunchCli: self.cli()
 
-            if self.autolaunchCli: self.cli()
+      #while True:
+      #  if ser.in_waiting > 0:
+      #    line = ser.readline().decode('utf-8').rstrip()
+      #    print(f"Received: {line}")
+      #    self.interruptAndClear()
+  
+      #    if line[0:cpHLen] == cpHeader: 
+      #      print("connection established")
+      #      time.sleep(0.1)
+
+      #      if self.autolaunchCli: self.cli()
   
     except KeyboardInterrupt:
       print("exiting...")
