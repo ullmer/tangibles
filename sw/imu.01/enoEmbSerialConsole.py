@@ -6,12 +6,14 @@ import serial, time
 import serial.tools.list_ports
 
 class enoEmbSerialConsole:
-  serialHandle = None
-  serialPort   = None
+  serialHandle  = None
+  serialPort    = None
+  autolaunchCli = False
 
   ################## constructor ##################
 
-  def __init__(self): 
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     self.initConsole()
 
   ################## find embedded-device serial port ##################
@@ -87,7 +89,8 @@ class enoEmbSerialConsole:
           if line[0:cpHLen] == cpHeader: 
             print("connection established")
             time.sleep(0.1)
-            self.cli()
+
+            if self.autolaunchCli: self.cli()
   
     except KeyboardInterrupt:
       print("exiting...")

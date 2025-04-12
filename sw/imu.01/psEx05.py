@@ -5,11 +5,13 @@
 # https://en.wikipedia.org/wiki/Tkinter
 
 from enoTkiTicButtonArray import *
-from tkinter           import *
+from enoEmbSerialConsole  import *
+from tkinter              import *
 
 root = Tk()    # Create the root (base) window 
+
 etba = enoTkiTicButtonArray(parent=root, yamlFn='mm03.yaml')
-#etba = enoTkiTicButtonArray(parent=root, yamlFn='mm03.yaml', ticHwPresent=True)
+eesc = enoEmbSerialConsole()
 
 root.mainloop() # Start the event loop
 
