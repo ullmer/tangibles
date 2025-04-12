@@ -7,6 +7,11 @@ import sys, json, traceback, time
 #https://learn.adafruit.com/adafruit-lsm6ds3tr-c-6-dof-accel-gyro-imu/python-circuitpython
 #https://github.com/xioTechnologies/Fusion/blob/main/Python/simple_example.py
 
+#https://github.com/RPi-Distro/RTIMULib
+#https://github.com/PaulKemppi/gtsam_fusion
+#https://github.com/niru-5/imusensor
+#https://pypose.org/tutorials/imu/imu_integrator_tutorial.html
+
 try:    import imufusion
 except: print("imufusion class not found!"); sys.exit(-1)
   
