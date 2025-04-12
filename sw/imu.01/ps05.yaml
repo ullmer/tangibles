@@ -1,4 +1,6 @@
-mmButtons:
+numRows: 2
+numCols: 2
+buttons:
   - {coord: [0, 0], text: blink slow,  bg: lightgreen, cb: ledCycle, cbArg: 2.}
   - {coord: [0, 1], text: blink fast,  bg: lightcoral, cb: ledCycle, cbArg: .5}
 #  - {coord: [1, 0], text: waves,     bg: lightblue,  cb: gotoTargetPosAbs, cbArg: 100}

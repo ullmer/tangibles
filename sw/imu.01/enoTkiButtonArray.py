@@ -38,11 +38,14 @@ class enoTkiButtonArray:
       yf = open(self.yamlFn, 'rt')
       self.yamlD = yaml.safe_load(yf)
 
-    #example entries: 
-    #mmButtons:
-    #  - {coord: [0, 0], text: A, cb: defaultCb, cbArg: A}
-
+      yd = self.yamlD
+      if 'numRows' in yd: self.numRows = yd['numRows']
+      if 'numCols' in yd: self.numCols = yd['numCols']
     except: print("loadYaml: ignoring issue"); traceback.print_exc()
+
+    #example entries: 
+    #buttons:
+    #  - {coord: [0, 0], text: A, cb: defaultCb, cbArg: A}
 
   ######### build ui #########
 
@@ -50,10 +53,10 @@ class enoTkiButtonArray:
     try:
       yd = self.yamlD 
 
-      if 'mmButtons' not in yd:
-        print("buildUI: mmButtons not found in yaml file"); return
+      if 'buttons' not in yd:
+        print("buildUI: buttons not found in yaml file"); return
 
-      mmb = yd['mmButtons']
+      mmb = yd['buttons']
       self.buttonDict = {}
 
       for e in mmb: #e is for "entry"
