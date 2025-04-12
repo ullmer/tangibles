@@ -7,7 +7,8 @@ import serial.tools.list_ports
 def find_pico_port():
   ports = serial.tools.list_ports.comports()
   for port in ports:
-    if "Pico" in port.description:  # Adjust this string based on your Pico's description
+    print("port description: " + str(port.description))
+    if "USB Serial Device" in port.description:  # Adjust this string based on your Pico's description
       return port.device
   return None
 
