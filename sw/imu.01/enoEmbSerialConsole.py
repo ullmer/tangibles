@@ -6,6 +6,8 @@ import serial, time
 import serial.tools.list_ports
 
 class enoEmbSerialConsole:
+  serialHandle = None
+  serialPort   = None
 
   ################## constructor ##################
 
@@ -14,7 +16,7 @@ class enoEmbSerialConsole:
 
   ################## find embedded-device serial port ##################
   
-  def find_embedded_port():
+  def findEmbeddedPort(self):
     ports = serial.tools.list_ports.comports()
     for port in ports:
       print("port description: " + str(port.description))
@@ -24,14 +26,16 @@ class enoEmbSerialConsole:
   
   ################## send interrupt-and-clear to circuitpython device ##################
   
-  def interruptAndClear(ser):
+  def interruptAndClear(self):
+    ser = self.serialHandle
     ser.write(b'\x03'); time.sleep(0.1) # Send Ctrl+C to interrupt any running code
     ser.write(b'\x01'); time.sleep(0.1) # Send Ctrl+A to enter raw REPL mode
   
   ################## send command to circuitpython device ##################
   
-  def sendCommand(ser, command):
-    interruptAndClear(ser)
+  def sendCommand(self, command):
+    ser = self.serialHandle
+    self.interruptAndClear()
     ser.write((command + '\n').encode('utf-8')); ser.flush(); time.sleep(0.1) 
     ser.write(b'\x04'); ser.flush(); time.sleep(0.1) # Send Ctrl+D to execute the command
   
@@ -41,12 +45,13 @@ class enoEmbSerialConsole:
   
   ################## command-line interface to serial-linked embedded device ##################
   
-  def cli(ser):
+  def cli(self):
+    ser = self.serialHandle
     try:
       while True:
         command = input("Enter command for Pico: ")
         if command.lower() == "exit": break
-        response = sendCommand(ser, command)
+        response = self.sendCommand(command)
         print(f">> {response}")
   
     except KeyboardInterrupt:
@@ -54,29 +59,30 @@ class enoEmbSerialConsole:
   
   ################## main ##################
   
-  def initConsole():
-    pico_port = find_embedded_port()
-    if pico_port is None:
+  def initConsole(self):
+    self.serialPort = self.findEmbeddedPort()
+    if self.serialPort is None:
       print("CircuitPython device not found."); return
   
-    print(f"CircuitPython device found on port {pico_port}")
+    #print(f"CircuitPython device found on port {pico_port}")
   
-    ser = serial.Serial(pico_port, 115200, timeout=1); # Establish serial communication
+    self.serialHandle = serial.Serial(self.serialPort, 115200, timeout=1); # Establish serial communication
+    ser = self.serialHandle
   
     cpHeader = 'Adafruit CircuitPython'
     cpHLen   = len(cpHeader)
   
     try:
-      interruptAndClear(ser); time.sleep(.1)
+      self.interruptAndClear(); time.sleep(.1)
       cmd = b'\n'; ser.write(cmd); ser.flush(); time.sleep(.1)
       cmd = "from enoEmbBase import *\n".encode('utf-8') + b'\x04'
-      ser.write(cmd); ser.flush(); time.sleep(.1)
+      .write(cmd); ser.flush(); time.sleep(.1)
   
       while True:
         if ser.in_waiting > 0:
           line = ser.readline().decode('utf-8').rstrip()
           print(f"Received: {line}")
-          interruptAndClear(ser)
+          self.interruptAndClear()
   
           if line[0:cpHLen] == cpHeader: 
             print("connection established")
