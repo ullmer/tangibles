@@ -36,23 +36,22 @@ class enoIMUjlistener: #enodia IMU JSON ~listener
     try:
       parsed_data = json.loads(agStr)
       self.feedAhrsAccelGyroJson(self, agDict)
-    except: self.msg("parseAccelGyroJson exception"); 
+    except: self.msg("parseAccelGyroJson exception"); traceback.print_exc()
 
   ######### parse accelerometer/gyro json #########
 
   def feedAhrsGyroJson(self, agDict, timeDelta):
 
     try:
+      if 's' not in agDict:    self.msg("feedAhrsGyroJson: sensor spec not present");  return False
+      if agDict['s'] != 'ag1': self.msg("feedAhrsGyroJson: sensor ag1 not indicated"); return False
+      if 'a' not in agDict:    self.msg("feedAhrsGyroJson: accel data not present");   return False
+      if 'g' not in agDict:    self.msg("feedAhrsGyroJson: gyro data not present");    return False
 
-    if 's' not in agDict:    self.msg("feedAhrsGyroJson: sensor spec not present");  return False
-    if agDict['s'] != 'ag1': self.msg("feedAhrsGyroJson: sensor ag1 not indicated"); return False
+      a, g = agDict['a'], agDict['g']
+      self.ahrs.update_no_magnetometer(g, a, timeDelta)
 
-    g, a = agDict['
-
-    ahrs.update_no_magnetometer(gyroscope[index], accelerometer[index], 1 / 100)  # 100 Hz sample rate
-
-
-
-    return result
+    except: self.msg("parseAccelGyroJson exception"); traceback.print_exc(); return False
+    return True
 
 ### end ###
