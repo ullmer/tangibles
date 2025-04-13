@@ -12,7 +12,10 @@ import alarm
 import board
 import busio
 import digitalio
+import traceback
 import supervisor
+
+from enoIMUjserver import *
 
 class enoEmbedJserver: 
 
@@ -48,6 +51,8 @@ class enoEmbedJserver:
     self.onboardLED.direction = digitalio.Direction.OUTPUT
     self.onboardLED.value = True
 
+  def msg(self, msgStr):   print("enoEmbedJserver msg: " + str(msgStr))
+ 
   def setLED(self, value): self.onboardLED.value = value  
 
   def initI2C(self):    self.i2c = busio.I2C(self.pinSCL, self.pinSDA)
@@ -60,10 +65,14 @@ class enoEmbedJserver:
 
   def setAlarm(self, duration): self.msAlarm = alarm.time.TimeAlarm(monotonic_time=time.monotonic() + duration)
 
-  def activateImu(self): 
+  def activateIMU(self): 
     try:
-      from enoIMUjserver   import *
-      self.imu = enoIMUjserver()
+      self.imu = enoIMUjserver(i2c=self.i2c)
+    except Exception as e:
+      self.msg("activateIMU error")
+      traceback.print_exception(e)
+  
+  def readIMU(self): return self.imu.genAccelGyroJson2()
 
   def ledCycle(self, duration): #initially, synchronous
     while True:

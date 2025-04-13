@@ -9,7 +9,7 @@ class enoEmbSerialConsole:
   serialHandle  = None
   serialPort    = None
   autolaunchCli = False
-  verbose       = False
+  verbose       = True
 
   ################## constructor ##################
 
@@ -49,6 +49,12 @@ class enoEmbSerialConsole:
       response  = ser.read_all().decode('utf-8')
       response2 = response[29:-4] #clear prefix (some interrupt&clear-based) and postfix
       if self.verbose: self.msg("sendCommand response: " + str(response2))
+
+      #  if ser.in_waiting > 0:
+      #    line = ser.readline().decode('utf-8').rstrip()
+      #    print(f"Received: {line}")
+      #    self.interruptAndClear()
+  
       return response2
     except: self.msg("sendCommand error: "); traceback.print_exc()
   
@@ -84,9 +90,7 @@ class enoEmbSerialConsole:
     try:
       self.interruptAndClear(); time.sleep(.1)
       cmd = b'\n'; ser.write(cmd); ser.flush(); time.sleep(.1)
-      print(0)
       self.sendCommand("from enoEmbBase import *")
-      print(1)
   
       if self.autolaunchCli: self.cli()
 
@@ -100,7 +104,6 @@ class enoEmbSerialConsole:
       #      print("connection established")
       #      time.sleep(0.1)
 
-      #      if self.autolaunchCli: self.cli()
   
     except: print("enoEmbSerialConsole initConsole error:"); 
 

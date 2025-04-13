@@ -32,12 +32,13 @@ class enoIMUjserver: #enodia IMU JSON ~server
   maxUpdateMS = 10   #ms
   lastUpdateInTicks = -1
 
-  def __init__(self): 
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     self.initIMU()
     self.lastUpdateInTicks = supervisor.ticks_ms()
 
   def initIMU(self):
-    self.i2c        = busio.I2C(self.pinSCL, self.pinSDA)
+    if self.i2c is None: self.i2c = busio.I2C(self.pinSCL, self.pinSDA)
     self.accel_gyro = LSM6DS(self.i2c, address=self.address)
     self.imuInitialized = True
 
