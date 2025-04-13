@@ -2,19 +2,22 @@
 # Brygg Ullmer, Clemson University 
 # pip install pyserial
 
-import serial, time
+import serial, time, traceback
 import serial.tools.list_ports
 
 class enoEmbSerialConsole:
   serialHandle  = None
   serialPort    = None
   autolaunchCli = False
+  verbose       = True
 
   ################## constructor ##################
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     self.initConsole()
+
+  def msg(self, msgStr): print("enoEmbSerialConsole msg: " + str(msgStr))
 
   ################## find embedded-device serial port ##################
   
@@ -37,13 +40,18 @@ class enoEmbSerialConsole:
   
   def sendCommand(self, command):
     ser = self.serialHandle
-    self.interruptAndClear()
-    ser.write((command + '\n').encode('utf-8')); ser.flush(); time.sleep(0.1) 
-    ser.write(b'\x04'); ser.flush(); time.sleep(0.1) # Send Ctrl+D to execute the command
+    if self.verbose: self.msg("sendCommand " + str(command))
+    try:
+      self.interruptAndClear()
+      ser.write((command + '\n').encode('utf-8')); ser.flush(); time.sleep(0.1) 
+      ser.write(b'\x04'); ser.flush(); time.sleep(0.1) # Send Ctrl+D to execute the command
   
-    response  = ser.read_all().decode('utf-8')
-    response2 = response[29:-4] #clear prefix (some interrupt&clear-based) and postfix
-    return response2
+      response  = ser.read_all().decode('utf-8')
+      response2 = response[29:-4] #clear prefix (some interrupt&clear-based) and postfix
+      self.msg(5)
+      self.msg("sendCommand response: " + str(response2))
+      return response2
+    except: self.msg("sendCommand error: "); traceback.print_exc()
   
   ################## command-line interface to serial-linked embedded device ##################
   

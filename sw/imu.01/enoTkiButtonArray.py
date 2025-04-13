@@ -65,13 +65,16 @@ class enoTkiButtonArray:
         cb = None
 
         try: 
+          print(0)
           cbFunc = getattr(self, cbStr)  #first, see if the callback str defines a method within this class
           cb     = partial(cbFunc, cbArg)
         except:                             #and if not, see if it references a function within global scope
           try: 
+            print(1)
             cbFunc = globals()[cbStr]
             cb     = partial(cbFunc, cbArg)
           except: 
+            print(2)
             #print("globals: ", str(globals()))
             cbFunc, cbArg = self.defaultCb, self.defaultCbArg
             cb            = partial(cbFunc, cbArg)
