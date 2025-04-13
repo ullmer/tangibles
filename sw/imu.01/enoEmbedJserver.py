@@ -67,7 +67,7 @@ class enoEmbedJserver:
 
   def activateIMU(self): 
     try:
-      self.imu = enoIMUjserver(i2c=self.i2c)
+      self.imu = enoIMUjserver(self.i2c)
     except Exception as e:
       self.msg("activateIMU error")
       traceback.print_exception(e)

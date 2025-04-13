@@ -32,8 +32,8 @@ class enoIMUjserver: #enodia IMU JSON ~server
   maxUpdateMS = 10   #ms
   lastUpdateInTicks = -1
 
-  def __init__(self, **kwargs):
-    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+  def __init__(self, i2c=None):
+    self.i2c = i2c
     self.initIMU()
     self.lastUpdateInTicks = supervisor.ticks_ms()
 
