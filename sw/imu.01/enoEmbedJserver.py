@@ -72,7 +72,10 @@ class enoEmbedJserver:
       self.msg("activateIMU error")
       traceback.print_exception(e)
   
-  def readIMU(self): return self.imu.genAccelGyroJson2()
+  def readIMU(self): 
+     j = self.imu.genAccelGyroJson2()
+     print(j)
+     return(j)
 
   def ledCycle(self, duration): #initially, synchronous
     while True:
