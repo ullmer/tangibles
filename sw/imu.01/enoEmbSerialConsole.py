@@ -9,7 +9,7 @@ class enoEmbSerialConsole:
   serialHandle  = None
   serialPort    = None
   autolaunchCli = False
-  verbose       = True
+  verbose       = False
 
   ################## constructor ##################
 
@@ -48,8 +48,7 @@ class enoEmbSerialConsole:
   
       response  = ser.read_all().decode('utf-8')
       response2 = response[29:-4] #clear prefix (some interrupt&clear-based) and postfix
-      self.msg(5)
-      self.msg("sendCommand response: " + str(response2))
+      if self.verbose: self.msg("sendCommand response: " + str(response2))
       return response2
     except: self.msg("sendCommand error: "); traceback.print_exc()
   
