@@ -11,7 +11,4 @@ import alarm
 from enoEmbedJserver import *
 ejs = enoEmbedJserver()
 
-#from enoIMUjserver   import *
-#ijs = enoIMUjserver()
-
 ### end ###

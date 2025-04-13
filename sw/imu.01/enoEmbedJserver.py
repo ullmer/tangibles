@@ -33,6 +33,7 @@ class enoEmbedJserver:
 
   addressToDeviceDict = None
 
+  imu     = None
   msAlarm = None
 
   def __init__(self): 
@@ -58,6 +59,11 @@ class enoEmbedJserver:
   def getTicksMs(self): return supervisor.ticks_ms()
 
   def setAlarm(self, duration): self.msAlarm = alarm.time.TimeAlarm(monotonic_time=time.monotonic() + duration)
+
+  def activateImu(self): 
+    try:
+      from enoIMUjserver   import *
+      self.imu = enoIMUjserver()
 
   def ledCycle(self, duration): #initially, synchronous
     while True:
