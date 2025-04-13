@@ -1,4 +1,4 @@
-numRows: 2
+numRows: 3
 numCols: 3
 buttons:
   - {coord: [0, 0], text: blink slow,  bg: "#00a", cb: sendCommand, cbArg: ejs.ledCycleSlow()}
@@ -6,8 +6,9 @@ buttons:
   - {coord: [0, 2], text: blink fast2, bg: "#44f", cb: sendCommand, cbArg: "ejs.ledCycle(.2)"}
   - {coord: [1, 2], text: stop blink,  bg: "#777", cb: sendCommand, cbArg: "ejs.setLED(False)"}
 
-  - {coord: [1, 0], text: start IMU,  bg: "#800", cb: sendCommand, cbArg: "ejs.activateIMU()"}
-  - {coord: [1, 1], text: read IMU,   bg: "#b00", cb: sendCommand, cbArg: "ejs.readIMU(5)"}
+  - {coord: [1, 0], text: start IMU,      bg: "#800", cb: sendCommand, cbArg: "ejs.activateIMU()"}
+  - {coord: [1, 1], text: read IMU,       bg: "#b00", cb: sendCommand, cbArg: "ejs.readIMU(5)"}
+  - {coord: [2, 1], text: read IMU multi, bg: "#d00", cb: readIMUMulti, cbArg: ""}
 
 #  - {coord: [1, 0], text: waves,     bg: lightblue,  cb: gotoTargetPosAbs, cbArg: 100}
 #  - {coord: [1, 1], text: new,       bg: peachpuff,  cb: gotoTargetPosAbs, cbArg: 0}

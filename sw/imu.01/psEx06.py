@@ -15,14 +15,14 @@ class enoTkiEmbButtonArray(enoTkiButtonArray, enoEmbSerialConsole): #inherits me
     enoTkiButtonArray.__init__(self)        
     enoEmbSerialConsole.__init__(self)     
 
-  def readIMUmulti(self):
-    self.sendCmd("ejs.readIMU(50)")
+  def readIMUMulti(self, arg=None):
+    self.sendCommand("ejs.readIMU(50)")
     while True: 
       self.readSerial()
       time.sleep(.05)
 
 root = Tk()    # Create the root (base) window 
-etba = enoTkiEmbButtonArray(parent=root, yamlFn='ps05.yaml')
+etba = enoTkiEmbButtonArray(parent=root, yamlFn='ps06.yaml')
 
 root.mainloop() # Start the event loop
 

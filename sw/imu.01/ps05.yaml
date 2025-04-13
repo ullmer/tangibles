@@ -7,7 +7,7 @@ buttons:
   - {coord: [1, 2], text: stop blink,  bg: "#777", cb: sendCommand, cbArg: "ejs.setLED(False)"}
 
   - {coord: [1, 0], text: start IMU,  bg: "#800", cb: sendCommand, cbArg: "ejs.activateIMU()"}
-  - {coord: [1, 1], text: read IMU,   bg: "#b00", cb: sendCommand, cbArg: "ejs.readIMU()"}
+  - {coord: [1, 1], text: read IMU,   bg: "#b00", cb: sendCommand, cbArg: "ejs.readIMU(5)"}
 
 #  - {coord: [1, 0], text: waves,     bg: lightblue,  cb: gotoTargetPosAbs, cbArg: 100}
 #  - {coord: [1, 1], text: new,       bg: peachpuff,  cb: gotoTargetPosAbs, cbArg: 0}

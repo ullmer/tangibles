@@ -33,6 +33,7 @@ class enoEmbedJserver:
   onboardLEDPin      = board.GP25
   onboardLEDCycleDurSlow = 2.  #duration, in s
   onboardLEDCycleDurFast = 0.5 #duration, in s
+  betweenIMUreadDur      = 0.05 #duration in s
 
   addressToDeviceDict = None
 
@@ -72,9 +73,14 @@ class enoEmbedJserver:
       self.msg("activateIMU error")
       traceback.print_exception(e)
   
-  def readIMU(self): 
-     j = self.imu.genAccelGyroJson2()
-     print(j)
+  def readIMU(self, numReads=1): 
+     if numReads==1: 
+       j = self.imu.genAccelGyroJson2()
+       print(j)
+     else:
+       for i in range(numReads):
+         j = self.imu.genAccelGyroJson2()
+         print(j); time.sleep(self.betweenIMUreadDur)
      return(j)
 
   def ledCycle(self, duration): #initially, synchronous

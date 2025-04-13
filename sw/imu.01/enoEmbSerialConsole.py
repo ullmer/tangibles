@@ -71,8 +71,16 @@ class enoEmbSerialConsole:
   
     except KeyboardInterrupt:
       print("Exiting...")
+      
+  ################## read from serial ##################
+
+  def readSerial(self):
+    ser = self.serialHandle
+    if ser.in_waiting > 0:
+      line = ser.readline().decode('utf-8').rstrip()
+      print(line)
   
-  ################## main ##################
+  ################## initiate console ##################
   
   def initConsole(self):
     self.serialPort = self.findEmbeddedPort()
