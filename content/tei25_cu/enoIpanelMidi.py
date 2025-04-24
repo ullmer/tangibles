@@ -61,10 +61,26 @@ class enoIpanelMidi(enoIpanelYaml):
       return result
     except: self.err("getDeviceColorLookup " + str(midiCtrlName)); return None
 
+  def isAllUpperAlpha(self, text):
+    try:    result = (text.isalpha() and text.isupper()); return result
+    except: return False
+
+  def notAllUpperAlpha(self, text):
+    try: result = (not text.isalpha() or not text.isupper()); return result
+    except: return False
+
   ############# map character to color #############
 
   def registerColormap(self, illumMap, charMap): 
+    if (not istype(charMap,  dict) OR not istype(illumMap, dict)):
+      self.msg("registerColormap: arguments illumMap and charMap must both be of type dict"); return None
+
+    for charMapKey in charMap:
+      if notAllUpperAlpha: continue # ignore elements if not all uppercase & alpha
     
+    #first, map all upper-case single-characters to two characters.
+    #then,  map two characters to (initially, single-value) mappings for upper- and lowercase charmaps
+
 #midiIllum:
 #  akaiApcMiniMk2: {rm: [9, 10], me: [61, 62], gl: [43, 45], se: [5, 7], ne: [41, 38], pl: [27, 19]}
 #
@@ -72,6 +88,7 @@ class enoIpanelMidi(enoIpanelYaml):
 #  charMap:
 #    {N: [NE], n: [vt, nh, me, ct, ri, ma],
 #     M: [ME], m: [pa, ny, nj, de, dc, md],
+
 
   ############# map character to color #############
 
