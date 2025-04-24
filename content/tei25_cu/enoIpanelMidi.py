@@ -61,9 +61,25 @@ class enoIpanelMidi(enoIpanelYaml):
       return result
     except: self.err("getDeviceColorLookup " + str(midiCtrlName)); return None
 
-  ############# getCharMatrix #############
+  ############# map character to color #############
 
-  def mapCharToColor(self, tagChar): #different devices represent color in very different ways. try to accomodate.
+  def registerColormap(self, illumMap, charMap): 
+    
+#midiIllum:
+#  akaiApcMiniMk2: {rm: [9, 10], me: [61, 62], gl: [43, 45], se: [5, 7], ne: [41, 38], pl: [27, 19]}
+#
+#interactionPanel:
+#  charMap:
+#    {N: [NE], n: [vt, nh, me, ct, ri, ma],
+#     M: [ME], m: [pa, ny, nj, de, dc, md],
+
+  ############# map character to color #############
+
+  def mapCharToColor(self, tagChar): 
+
+
+  def mapCharToColor0(self, tagChar):  #first variant
+    #different devices represent color in very different ways. try to accomodate.
     try:
       tag = self.mapCharToCategory(tagChar)
       if tag is None: self.err('mapCharToColor: mapCharToCategory returned no result'); return
@@ -153,8 +169,8 @@ class enoIpanelMidi(enoIpanelYaml):
 if __name__ == "__main__":
   #cm = enoIpanelMidi(tagFn = 'cspan-tags.yaml')
   cm = enoIpanelMidi(tagFn = 'us-bea.yaml')
-  r  = cm.mapCharToColor('B')
-  r  = cm.mapCharToColor('J')
+  #r  = cm.mapCharToColor('B')
+  #r  = cm.mapCharToColor('J')
   m  = cm.getCharMatrix()
   print(m)
 
