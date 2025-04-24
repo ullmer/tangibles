@@ -1,0 +1,80 @@
+#SELECT us.abbrev AS prefixed_parkDetailId, GROUP_CONCAT(pd.abbrev) AS abbrevs
+#FROM parkDetailState pds
+#JOIN parkDetails pd ON pds.parkDetailId = pd.id
+#JOIN usStates us ON pds.stateId = us.id
+#GROUP BY pds.stateId;
+
+usNpsStates2Parks:
+   - {state: AL, parks: [bicr,frri,hobe,liri,natt,natr,ruca,semo,trte,tuai,tuin]}
+   - {state: AK, parks: [alag,anch,aleu,ania,bela,cakr,dena,gaar,glba,inup,katm,
+                         kefj,klgo,kova,lacl,noat,sitk,wrst,yuch]}
+   - {state: AS, parks: [npsa]}
+   - {state: AZ, parks: [buov,cach,cagr,chir,coro,fobo,glca,grca,para,hutr,juba,
+                         lake,moca,nava,olsp,orpi,pefo,pisp,sagu,sucr,tont,tuma,tuzi,waca,wupa]}
+   - {state: AR, parks: [arpo,buff,buov,fosm,hosp,chsc,peri,wicl,trte]}
+   - {state: CA, parks: [alca,buov,cabr,cali,camo,cech,chis,deva,depo,euon,fopo,goga,jomu,jotr,
+                         juba,lavo,labe,manz,moja,muwo,olsp,pinn,pore,poex,poch,prsf,redw,rori,
+                         safr,samo,seki,tule,whis,yose]}
+   - {state: CO, parks: [amch,beol,blca,cali,colm,cure,dino,flfo,grsa,hove,meve,olsp,poex,romo,
+                         sand,safe,yuho]}
+   - {state: CT, parks: [appa,colt,neen,waro,wefa]}
+   - {state: DE, parks: [cajo,cbpo,frst,waro]}
+   - {state: DC, parks: [afam,anac,bepa,cahi,cajo,cawo,cbpo,choh,cwdw,coga,ddem,foth,fodu,frde,
+                         frdo,gwmp,keaq,kowa,lyba,linc,mlkm,mamc,nace,nama,paav,pohe,rocr,stsp,
+                         this,whho,thje,vive,wamo,waro,wwii,wwim]}
+   - {state: FL, parks: [bicy,bisc,cana,casa,deso,drto,ever,foma,guis,timu]}
+   - {state: GA, parks: [ande,appa,chat,chch,cuis,fofr,fopu,jica,kemo,malu,ocmu,trte]}
+   - {state: GU, parks: [wapa]}
+   - {state: HI, parks: [alka,hale,havo,hono,kala,kaho,valr,puho,puhe]}
+   - {state: ID, parks: [cali,ciro,crmo,hafo,iafl,lecl,miin,nepe,oreg,yell]}
+   - {state: IL, parks: [till,lecl,liho,mopi,neph,pull,spra,trte]}
+   - {state: IN, parks: [gero,indu,lecl,libo]}
+   - {state: IA, parks: [efmo,heho,lecl,mopi]}
+   - {state: KS, parks: [brvb,cali,fols,fosc,lecl,nico,oreg,poex,safe,tapr]}
+   - {state: KY, parks: [abli,biso,cane,cuga,fodo,lecl,maca,misp,trte]}
+   - {state: LA, parks: [cari,elte,jela,jazz,popo,vick]}
+   - {state: ME, parks: [acad,appa,frpe,kaww,maac,roca,sacr]}
+   - {state: MD, parks: [anti,appa,asis,bawa,cajo,cato,cbpo,choh,cwdw,clba,fofo,fomc,fowa,gwmp,
+                         glec,gree,hamp,haha,hafe,hatu,mono,oxhi,pisc,pohe,stsp,thst,waro]}
+   - {state: MA, parks: [adam,appa,blrv,bost,boaf,boha,caco,frla,jofi,long,lowe,mima,nebe,neen,
+                         sama,sair,spar,waro]}
+   - {state: MI, parks: [isro,kewe,noco,piro,rira,slbe]}
+   - {state: MN, parks: [grpo,miss,noco,pipe,sacn,voya]}
+   - {state: MS, parks: [brcr,till,guis,memy,natc,natt,natr,shil,tupe,vick]}
+   - {state: MO, parks: [buov,cali,jeff,gwca,hstr,lecl,oreg,ozar,poex,safe,stge,trte,ulsg,wicr]}
+   - {state: MT, parks: [biho,bica,fous,glac,grko,iafl,lecl,libi,nepe,yell]}
+   - {state: NE, parks: [agfo,cali,home,lecl,mnrr,mopi,niob,oreg,poex,scbl]}
+   - {state: NV, parks: [cali,deva,grba,lake,olsp,poex,tusk]}
+   - {state: NH, parks: [appa,saga]}
+   - {state: NJ, parks: [appa,dewa,elis,gate,greg,lode,morr,pine,pagr,edis,waro]}
+   - {state: NM, parks: [azru,band,buov,cavo,cave,chcu,elca,elma,elmo,foun,gicl,mapr,olsp,peco,
+                         petr,sapu,safe,vall,whsa]}
+   - {state: NY, parks: [afbg,appa,cajo,cacl,cbpo,elro,elis,feha,fiis,fost,gate,gegr,gois,hagr,
+                         hart,hofr,loea,mava,npnh,noco,sahi,sapa,sara,stli,ston,thrb,thri,thco,
+                         upde,vama,waro,wori]}
+   - {state: NC, parks: [appa,blri,caha,calo,carl,fora,grsm,guco,mocr,ovvi,trte,wrbr]}
+   - {state: ND, parks: [fous,knri,lecl,noco,thro]}
+   - {state: MP, parks: [amme]}
+   - {state: OH, parks: [chyo,cuva,daav,fila,hocu,jaga,lecl,noco,pevi,wiho]}
+   - {state: OK, parks: [buov,chic,fosm,okci,safe,trte,waba]}
+   - {state: OR, parks: [cali,crla,fova,iafl,joda,lewi,lecl,nepe,oreg,orca]}
+   - {state: PA, parks: [alpo,appa,cajo,cibs,cbpo,dewa,edal,eise,frst,flni,fone,frhi,gett,glde,
+                         hofu,inde,jofl,lecl,lode,noco,pohe,stea,thko,upde,vafo,waro]}
+   - {state: PR, parks: [saju]}
+   - {state: RI, parks: [blrv,rowi,tosy,waro]}
+   - {state: SC, parks: [chpi,cong,cowp,fosu,kimo,nisi,ovvi,reer]}
+   - {state: SD, parks: [badl,jeca,lecl,mimi,mnrr,moru,wica]}
+   - {state: TN, parks: [anjo,appa,biso,chch,cuga,fodo,grsm,mapr,natt,natr,obed,ovvi,shil, stri,trte]}
+   - {state: TX, parks: [alfl,amis,bibe,bith,blsc,buov,cham,elte,elca,foda,gumo,lamr,lyjo,
+                         pais,paal,rigr,saan,waco]}
+   - {state: UT, parks: [arch,brca,cali,cany,care,cebr,dino,glca,gosp,hove,mopi,nabr,olsp,poex,rabr,
+                         tica,zion]}
+   - {state: VT, parks: [appa,mabi,noco]}
+   - {state: VI, parks: [buis,chri,sari,viis,vicr]}
+   - {state: VA, parks: [appa,apco,arho,asis,blri,bowa,came,cajo,cebe,cbpo,cwdw,colo,cuga,fomr,frsp,
+                         gwmp,gewa,grfa,grsp,hafe,jame,mawa,mana,ovvi,pete,pohe,prwi,rich,shen,stsp,waro,wotr,york]}
+   - {state: WA, parks: [ebla,fova,iafl,klse,laro,lewi,lecl,mapr,miin,mora,nepe,noca,olym,oreg,sajh,whmi,wing]}
+   - {state: WV, parks: [appa,blue,cbpo,choh,gari,hafe,lecl,neri]}
+   - {state: WI, parks: [apis,iatr,noco,sacn]}
+   - {state: WY, parks: [bica,cali,deto,fola,fobu,grte,mopi,oreg,poex,yell]}
+### end ###]}

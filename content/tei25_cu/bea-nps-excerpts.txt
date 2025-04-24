@@ -1,0 +1,89 @@
+# United States: Bureau of Economic Analysis grouping of states
+# YAML expression by Brygg Ullmer, Clemson University, 2023-01-19
+
+#### us-bea.yaml #### 
+#### usNpsState2Parks.yaml #### 
+#### usNpsTopic.yaml #### 
+
+regionList: [ne, me, se, gl, pl, sw, rm, fw]
+
+midiIllum:
+  akaiApcMiniMk2: {rm: [9, 10], me: [61, 62], gl: [43, 45], se: [5, 7], ne: [41, 38], pl: [27, 19]} #A
+
+interactionPanel:
+  name:      "US BEA: gridmap" #quoted because of colon within
+
+  charMatrix: |-     #B
+    fPppLnnn
+    frpllnnn
+    frpllmmN
+    frplmmmM
+    frpssmsS
+    fRrwssss
+    Fwwwssss
+    W......s
+
+  charMap:
+    {N: [NE], n: [vt, nh, me, ct, ri, ma],                          #C
+     M: [ME], m: [pa, ny, nj, de, dc, md],                          #C
+     S: [SE], s: [ar, ky, va, tn, wv, ga, nc, la, ms, al, sc, fl],  #C
+     L: [GL], l: [wi, mi, il, oh, in],
+     P: [PL], p: [nd, mn, sd, ia, ka, mo],
+     W: [SW], w: [ok, az, nm, tx],
+     R: [RM], r: [mo, id, ut, wy, co],
+     F: [FW], f: [ak, wa, or, nv, ca, hi], 
+     .: [empty]}
+    
+states: {ct: Connecticut,  me: Maine,        ma: Massachusetts,  nh: New Hampshire,
+         ri: Rhode Island, vt: Vermont,      de: Delaware,       md: Maryland,    
+         nj: New Jersey,   ny: New York,     pa: Pennsylvania,   al: Alabama,     
+...
+
+#### usNpsParks07.yaml #### 
+
+#https://www.nps.gov/findapark/index.htm
+us_nps_parks: 
+  - {abbrev: abli, name: Abraham Lincoln Birthplace National Historical Park}
+  - {abbrev: acad, name: Acadia National Park} 
+  - {abbrev: fosu, name: Fort Sumter and Fort Moultrie National Historical Park}
+  - {abbrev: jica, name: Jimmy Carter National Historical Park}
+  - {abbrev: jomu, name: John Muir National Historic Site}
+  - {abbrev: zion, name: Zion National Park}
+
+ -
+  homepage:  https://www.nps.gov/appa/index.htm
+  image1x:   2B375594-1DD8-B71B-0BC86B7829AAFFC8.jpg
+  image2x:   2B375594-1DD8-B71B-0BC86B7829AAFFC8_003.jpg
+  image3x:   2B375594-1DD8-B71B-0BC86B7829AAFFC8_002.jpg
+  panelHtml: 2B375594-1DD8-B71B-0BC86B7829AAFFC8_004.jpg
+  alt:   Appalachian banner image
+  name:  Appalachian
+  designation: National Scenic Trail
+  state: [Tennessee, Virginia, New York, New Hampshire, Massachusetts, Maryland, 
+          Connecticut, New Jersey, Maine, Georgia, Vermont, Pennsylvania, 
+          North Carolina, West Virginia]
+
+designations:
+  - {count: 83, designation: National Monument}
+  - {count: 81, designation: National Historic Site}
+  - {count: 63, designation: National Historical Park}
+  - {count: 23, designation: National Memorial}
+
+usNpsStates2Parks:
+   - {state: SC, parks: [chpi,cong,cowp,fosu,kimo,nisi,ovvi,reer]}  #D
+   - {state: SD, parks: [badl,jeca,lecl,mimi,mnrr,moru,wica]}       #D
+
+usNps:
+  topics:
+    oceans: [acad, alka, amme, asis, bisc, boha, buis, cabr, caco, caha, #D
+             chis, drto, ebla, ever, fiis, foma, glba, goga, guis, havo, #D
+             katm, kefj, klgo, lacl, lecl, npsa, npnh, nebe, olym, pore, #D
+             puhe, redw, sama, sari, sajh, sitk, stsp, viis, vicr, wapa] #D
+
+#### enoIpanelYaml.py ####
+
+  eip = enoIpanel(tagFn = 'us-bea.yaml')
+  m   = eip.getCharMatrix(); print(m)
+  eip.expandMatrixYaml()
+ 
+### end ###                               

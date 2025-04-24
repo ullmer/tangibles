@@ -1,0 +1,58 @@
+#Examples from tangibles/sw/imu.01
+
+##### picoImuL01.py ##### 
+
+from adafruit_lsm6ds.lsm6ds3 import LSM6DS3 as LSM6DS   #A
+import time, board, busio
+
+i2c = busio.I2C(board.GP7, board.GP6)                   #B
+accel_gyro = LSM6DS(i2c, address=0x6b)                  #B
+
+while True:
+  a = accel_gyro.acceleration                           #C
+  g = accel_gyro.gyro                                   #C
+
+  agJson = "{s:ag1, a:[%2.2f,%2.2f,%2.2f], g:[%2.2f,%2.2f,%2.2f]}" % (a+g) #D
+  print(agJson)                                                            #D
+  time.sleep(.05)                                                          #D
+
+##### psEx06.py ##### 
+
+from enoTkiButtonArray    import *
+from enoEmbSerialConsole  import *
+from tkinter              import *
+import time
+
+class enoTkiEmbButtonArray(enoTkiButtonArray, enoEmbSerialConsole):        #E
+  def __init__(self, **kwargs):  
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    enoTkiButtonArray.__init__(self)        
+    enoEmbSerialConsole.__init__(self)     
+
+  def readIMUMulti(self, arg=None):                                        #F
+    self.sendCommand("ejs.readIMU(50)")                                    #F
+    while True:                                                            #F
+      self.readSerial()                                                    #F
+      time.sleep(.05)                                                      #F
+
+root = Tk()    # Create the root (base) window                             #G
+etba = enoTkiEmbButtonArray(parent=root, yamlFn='ps06.yaml')               #G
+root.mainloop() # Start the event loop                                     #G
+
+##### ps06.yaml ##### 
+numRows: 3
+numCols: 3
+buttons:
+  - {coord: [0, 0], text: blink slow,  bg: "#00a", cb: sendCommand, cbArg: ejs.ledCycleSlow()}  #H
+  - {coord: [0, 1], text: blink fast,  bg: "#22c", cb: sendCommand, cbArg: ejs.ledCycleFast()}  #H
+  - {coord: [0, 2], text: blink fast2, bg: "#44f", cb: sendCommand, cbArg: "ejs.ledCycle(.2)"}  #H
+  - {coord: [1, 2], text: stop blink,  bg: "#777", cb: sendCommand, cbArg: "ejs.setLED(False)"} #H
+
+  - {coord: [1, 0], text: start IMU,      bg: "#800", cb: sendCommand, cbArg: "ejs.activateIMU()"} #I
+  - {coord: [1, 1], text: read IMU,       bg: "#b00", cb: sendCommand, cbArg: "ejs.readIMU(5)"}    #I
+  - {coord: [2, 1], text: read IMU multi, bg: "#d00", cb: readIMUMulti, cbArg: ""}                 #I
+
+#  - {coord: [1, 0], text: waves,     bg: lightblue,  cb: gotoTargetPosAbs, cbArg: 100}
+#  - {coord: [1, 1], text: new,       bg: peachpuff,  cb: gotoTargetPosAbs, cbArg: 0}
+
+### end ###
