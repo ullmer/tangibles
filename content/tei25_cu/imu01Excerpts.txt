@@ -1,44 +1,45 @@
 #Examples from tangibles/sw/imu.01
 
+##### picoImuL01.py ##### 
+
 from adafruit_lsm6ds.lsm6ds3 import LSM6DS3 as LSM6DS   #A
 import time, board, busio
 
 i2c = busio.I2C(board.GP7, board.GP6)                   #B
-accel_gyro = LSM6DS(i2c, address=0x6b)                  #C
+accel_gyro = LSM6DS(i2c, address=0x6b)                  #B
 
 while True:
-  a = accel_gyro.acceleration
-  g = accel_gyro.gyro
+  a = accel_gyro.acceleration                           #C
+  g = accel_gyro.gyro                                   #C
 
-  agJson = "{s:ag1, a:[%2.2f,%2.2f,%2.2f], g:[%2.2f,%2.2f,%2.2f]}" % (a+g)
-  print(agJson)
-  time.sleep(.1)
+  agJson = "{s:ag1, a:[%2.2f,%2.2f,%2.2f], g:[%2.2f,%2.2f,%2.2f]}" % (a+g) #D
+  print(agJson)                                                            #D
+  time.sleep(.05)                                                          #D
 
-##### 
+##### psEx06.py ##### 
 
 from enoTkiButtonArray    import *
 from enoEmbSerialConsole  import *
 from tkinter              import *
 import time
 
-class enoTkiEmbButtonArray(enoTkiButtonArray, enoEmbSerialConsole): #inherits methods from both
+class enoTkiEmbButtonArray(enoTkiButtonArray, enoEmbSerialConsole):        #E
   def __init__(self, **kwargs):  
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     enoTkiButtonArray.__init__(self)        
     enoEmbSerialConsole.__init__(self)     
 
-  def readIMUMulti(self, arg=None):
-    self.sendCommand("ejs.readIMU(50)")
-    while True: 
-      self.readSerial()
-      time.sleep(.05)
+  def readIMUMulti(self, arg=None):                                        #F
+    self.sendCommand("ejs.readIMU(50)")                                    #F
+    while True:                                                            #F
+      self.readSerial()                                                    #F
+      time.sleep(.05)                                                      #F
 
-root = Tk()    # Create the root (base) window 
-etba = enoTkiEmbButtonArray(parent=root, yamlFn='ps06.yaml')
+root = Tk()    # Create the root (base) window                             #G
+etba = enoTkiEmbButtonArray(parent=root, yamlFn='ps06.yaml')               #G
+root.mainloop() # Start the event loop                                     #G
 
-root.mainloop() # Start the event loop
-
-### end ###
+##### ps06.yaml ##### 
 numRows: 3
 numCols: 3
 buttons:
@@ -55,4 +56,3 @@ buttons:
 #  - {coord: [1, 1], text: new,       bg: peachpuff,  cb: gotoTargetPosAbs, cbArg: 0}
 
 ### end ###
-picoImuL01.py psEx06.py ps06.yaml
