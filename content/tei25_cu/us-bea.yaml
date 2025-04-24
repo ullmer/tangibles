@@ -17,6 +17,10 @@ regions:
   rm: {abbrev: Rr, name: Rocky Mountain, col: 0xEBC181, states: [mo, id, ut, wy, co]}
   fw: {abbrev: Ff, name: Far West,       col: 0xFFD65D, states: [ak, wa, or, nv, ca, hi]}
 
+midiIllum:
+  akaiApcMiniMk2: {rm: [9, 10], me: [61, 62], gl: [43, 45], se: [5, 7], ne: [41, 38], pl: [27, 19]}
+
+
 matrix1: |-
   fPppGnnn
   frpggnnn
