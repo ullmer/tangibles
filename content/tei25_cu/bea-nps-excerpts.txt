@@ -41,6 +41,7 @@ states: {ct: Connecticut,  me: Maine,        ma: Massachusetts,  nh: New Hampshi
 
 #### usNpsParks07.yaml #### 
 
+#https://www.nps.gov/findapark/index.htm
 us_nps_parks: 
   - {abbrev: abli, name: Abraham Lincoln Birthplace National Historical Park}
   - {abbrev: acad, name: Acadia National Park} 
@@ -78,5 +79,11 @@ usNps:
              chis, drto, ebla, ever, fiis, foma, glba, goga, guis, havo, #D
              katm, kefj, klgo, lacl, lecl, npsa, npnh, nebe, olym, pore, #D
              puhe, redw, sama, sari, sajh, sitk, stsp, viis, vicr, wapa] #D
+
+#### enoIpanelYaml.py ####
+
+  eip = enoIpanel(tagFn = 'us-bea.yaml')
+  m   = eip.getCharMatrix(); print(m)
+  eip.expandMatrixYaml()
  
 ### end ###                               
