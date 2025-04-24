@@ -6,7 +6,7 @@ import sys, os, yaml, traceback
 
 ############# enodia interaction panel #############
 
-class enoIpanel:
+class enoIpanelYaml:
 
   tagFn = None
   tagYd = None
@@ -125,13 +125,14 @@ class enoIpanel:
 
 if __name__ == "__main__":
   #eip = enoIpanel(tagFn = 'cspan-tags.yaml')
-  eip = enoIpanel(tagFn = 'us-bea.yaml')
-  m   = eip.getCharMatrix()
+  eipy = enoIpanelYaml(tagFn = 'us-bea.yaml')
+  m    = eipy.getCharMatrix()
   print(m)
 
   #cat1 = eip.mapCharToCategory('p')
   #cat2 = eip.mapCharToCategory('f')
   #print(cat1, cat2)
-  eip.expandMatrixYaml()
+
+  eipy.expandMatrixYaml()
 
 ### end ###

@@ -149,7 +149,8 @@ class enoIpanelMidi(enoIpanelYaml):
 ############# main #############
 
 if __name__ == "__main__":
-  cm = enoIpanelMidi(tagFn = 'cspan-tags.yaml')
+  #cm = enoIpanelMidi(tagFn = 'cspan-tags.yaml')
+  cm = enoIpanelMidi(tagFn = 'us-bea.yaml')
   r  = cm.mapCharToColor('B')
   r  = cm.mapCharToColor('J')
   m  = cm.getCharMatrix()
