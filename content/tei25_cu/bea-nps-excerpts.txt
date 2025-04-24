@@ -69,47 +69,14 @@ designations:
   - {count: 23, designation: National Memorial}
 
 usNpsStates2Parks:
-   - {state: SC, parks: [chpi,cong,cowp,fosu,kimo,nisi,ovvi,reer]}
-   - {state: SD, parks: [badl,jeca,lecl,mimi,mnrr,moru,wica]}
+   - {state: SC, parks: [chpi,cong,cowp,fosu,kimo,nisi,ovvi,reer]}  #D
+   - {state: SD, parks: [badl,jeca,lecl,mimi,mnrr,moru,wica]}       #D
 
 usNps:
   topics:
-    architectureAndBuilding: [alka, alpo, amis, anti, apco, azru, band, beol, bica, blrv,
-                              cari, cawo, casa, cacl, cebe, chis, chpi, chic, chri, crla,
-                              dewa, drto, ebla, elte, elca, elis, ever, feha, fila, flni,
-                              foth, foda, fols, foma, fomc, fomr, fopo, fopu, fosu, fova,
-                              frsp, frhi, jeff, gegr, gero, gwmp, gewa, glac, glba, goga,
-                              gois, grca, grte, grsp, guco, hamp, hart, heho, hofu, hosp,
-                              hutr, inde, indu, jela, jomu, jofl, katm, klgo, knri, lecl,
-                              linc, chsc, long, loea, lyjo, mawa, maca, manz, mabi, mamc,
-                              mima, moja, moca, morr, mora, natr, npnh, nebe, peco, pefo,
-                              pinn, pisp, pohe, prsf, pull, rira, sahi, saga, sama, sapu,
-                              saan, safr, saju, sajh, safe, sara, sitk, spar, stli, stge,
-                              tapr, thrb, thri, whho, thje, thst, timu, tosy, trte, tuma,
-                              tuin, ulsg, vall, vafo, vama, wamo, whis, whsa, wori, wwii,
-                              yell, yose, zion]
-
-    oceans: [acad, alka, amme, asis, bisc, boha, buis, cabr, caco, caha,
-             chis, drto, ebla, ever, fiis, foma, glba, goga, guis, havo,
-             katm, kefj, klgo, lacl, lecl, npsa, npnh, nebe, olym, pore,
-             puhe, redw, sama, sari, sajh, sitk, stsp, viis, vicr, wapa]
-
-    nativeAmericanHeritage: [agfo, alca, aleu, alfl, amis, anac, ande, apis, apco, arch,
-                             arpo, azru, badl, band, beol, bibe, bicy, biho, bica, boha, 
-                             brca, cali, cach, cany, caco, care, cajo, cave, cagr, cato, 
-                             cebr, chis, cbpo, chch, chic, ciro, cong, crla, crmo, cuga,
-                             cuva, deva, deso, deto, ebla, efmo, elte, ever, fobo, foda,
-                             fola, fols, fora, fosc, fost, fosu, fous, fova, frhi, gaar,
-                             jeff, gewa, glac, goga, grca, grpo, grte, grsa, gumo, hafo,
-                             home, hocu, hofu, hobe, hosp, hove, hutr, inup, jotr, juba,
-                             kaww, katm, kefj, keaq, kemo, klgo, knri, lacl, lake, laro,
-                             lavo, labe, lecl, libi, long, loea, maca, mabi, meve, mnrr,
-                             moja, moca, mora, natc, natr, nava, nebe, neri, nepe, nisi,
-                             noco, ocmu, olym, oreg, peco, pevi, pefo, petr, pinn, pisp,
-                             pipe, pisc, pore, popo, prwi, rabr, redw, rira, ruca, sapu,
-                             saan, sand, sajh, safe, sara, scbl, sitk, slbe, spar, stsp,
-                             stge, tapr, tica, timu, tont, trte, tusk, tuma, tuzi, upde,
-                             vall, voya, waca, waba, whmi, wica, wrst, wupa, yell, yose,
-                             yuho, yuch, zion]
+    oceans: [acad, alka, amme, asis, bisc, boha, buis, cabr, caco, caha, #D
+             chis, drto, ebla, ever, fiis, foma, glba, goga, guis, havo, #D
+             katm, kefj, klgo, lacl, lecl, npsa, npnh, nebe, olym, pore, #D
+             puhe, redw, sama, sari, sajh, sitk, stsp, viis, vicr, wapa] #D
  
 ### end ###                               
