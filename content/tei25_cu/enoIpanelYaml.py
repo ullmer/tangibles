@@ -66,7 +66,8 @@ class enoIpanel:
       tag = cme[0]
 
       self.tagCharToCategory[tagChar] = tag
-      self.tagCharToCatList[tagChar]  = cme[1:]
+      #self.tagCharToCatList[tagChar]  = cme[1:]
+      self.tagCharToCatList[tagChar]  = cme[0:]
       self.tagCharToCatLIdx[tagChar]  = 0
 
       if self.verbose: self.msg("mapCharToCategory result: " + str(tag))
@@ -128,9 +129,9 @@ if __name__ == "__main__":
   m   = eip.getCharMatrix()
   print(m)
 
-  cat1 = eip.mapCharToCategory('p')
-  cat2 = eip.mapCharToCategory('f')
-  print(cat1, cat2)
+  #cat1 = eip.mapCharToCategory('p')
+  #cat2 = eip.mapCharToCategory('f')
+  #print(cat1, cat2)
   eip.expandMatrixYaml()
 
 ### end ###
