@@ -36,6 +36,16 @@ interactionPanel:
     Fwwwssss
     W......s
 
+  charMap:
+    {N: [bl_ne], n: [vt, nh, me, ct, ri, ma],
+     M: [bl_me], m: [pa, ny, nj, de, dc, md],
+     S: [bl_se], s: [ar, ky, va, tn, wv, ga, nc, la, ms, al, sc, fl],
+     L: [bl_gl], l: [wi, mi, il, oh, in],
+     P: [bl_pl], p: [nd, mn, sd, ia, ka, mo],
+     W: [bl_sw], w: [ok, az, nm, tx],
+     R: [bl_rm], r: [mo, id, ut, wy, co],
+     F: [bl_fw], f: [ak, wa, or, nv, ca, hi]}
+    
 states: {ct: Connecticut,  me: Maine,        ma: Massachusetts,  nh: New Hampshire,
          ri: Rhode Island, vt: Vermont,      de: Delaware,       md: Maryland,    
          nj: New Jersey,   ny: New York,     pa: Pennsylvania,   al: Alabama,     
