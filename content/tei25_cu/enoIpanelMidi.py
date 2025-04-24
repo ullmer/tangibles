@@ -16,6 +16,9 @@ class enoIpanelMidi(enoIpanelYaml):
   tagCharToColor = None
   autolaunchMidi = True
 
+  singleKeyToAbbrev   = None
+  singleKeyToColorVal = None 
+
   deviceColorLookups = {
     'aka_apcmini2' : ['interactionPanel', 'akaiColorMap']
   }
@@ -72,13 +75,29 @@ class enoIpanelMidi(enoIpanelYaml):
   ############# map character to color #############
 
   def registerColormap(self, illumMap, charMap): 
-    if (not istype(charMap,  dict) OR not istype(illumMap, dict)):
+    if (not istype(charMap,  dict) or not istype(illumMap, dict)):
       self.msg("registerColormap: arguments illumMap and charMap must both be of type dict"); return None
 
+    self.singleKeyToAbbrev   = {}
+    self.singleKeyToColorVal = {}
+
+    self.msg("urg")
     for charMapKey in charMap:
-      if notAllUpperAlpha: continue # ignore elements if not all uppercase & alpha
+      if self.notAllUpperAlpha(charMapKey): continue # ignore elements if not all uppercase & alpha
+      self.msg("charMapKey:" + str(charMapKey))
+      charMapVal = charMap[charMapKey]
+      self.singleKeyToAbbrev[charMapKey] = charMapVal
+
+      if charMapVal not in illumMap: self.msg("registerColorMap: charMapVal not in illumMap: " + str(charMapVal)); continue
+      illumVal = illumMap[charMapVal]
+      self.singleKeyToColorVal[charMapVal] = illumVal
+
+      charMapValLower = charMapVal.tolower()
+      if charMapValLower not in illumMap: self.msg("registerColorMap: cmvLower not in illumMap: " + str(charMapValLower)); continue
+      illumValLower = illumMap[charMapValLower]
+      self.singleKeyToColorVal[charMapValLower] = illumValLower
     
-    #first, map all upper-case single-characters to two characters.
+    #first, map all upper-case single-characters to two characters
     #then,  map two characters to (initially, single-value) mappings for upper- and lowercase charmaps
 
 #midiIllum:
