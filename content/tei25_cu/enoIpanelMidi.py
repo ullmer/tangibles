@@ -72,6 +72,8 @@ class enoIpanelMidi(enoIpanelYaml):
 
       dcl = self.getDeviceColorLookup(self.midiCtrlName)
 
+      if dcl is None:  self.msg("mapCharToColor: get device color lookup returns None."); return None
+
       if self.verbose: self.msg("mapCharToColor: dcl: " + str(dcl))
 
       if tag not in dcl: 
@@ -129,11 +131,11 @@ class enoIpanelMidi(enoIpanelYaml):
   def illumMatrixXYC(self, x, y, color):
     if self.midiCtrlName == 'aka_apcmini2': self.illumMatrixXYCAkaiApcMini(x,y,color)
 
+
   def illumMatrixXYCAkaiApcMini(self, x, y, color):
-     
     try:
       addr = self.cols * (y - 7) + x
-
+      if self.emc is None: self.msg("illumMatrixXYCAkaiApcMini: emc not initialized"); return None
       self.emc.midiOut.note_on(addr, color, 3)
     except: self.err("illumMatrixXYCAkaiApcMini")
 
