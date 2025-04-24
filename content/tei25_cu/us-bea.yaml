@@ -27,10 +27,10 @@ interactionPanel:
   #bgImg:     images/cspt13/bg125a
 
   charMatrix: |-
-    fPppGnnn
-    frpggnnn
-    frpggmmN
-    frpgmmmM
+    fPppLnnn
+    frpllnnn
+    frpllmmN
+    frplmmmM
     frpssmsS
     fRrwssss
     Fwwwssss
@@ -44,7 +44,8 @@ interactionPanel:
      P: [bl_pl], p: [nd, mn, sd, ia, ka, mo],
      W: [bl_sw], w: [ok, az, nm, tx],
      R: [bl_rm], r: [mo, id, ut, wy, co],
-     F: [bl_fw], f: [ak, wa, or, nv, ca, hi]}
+     F: [bl_fw], f: [ak, wa, or, nv, ca, hi], 
+     .: [empty]}
     
 states: {ct: Connecticut,  me: Maine,        ma: Massachusetts,  nh: New Hampshire,
          ri: Rhode Island, vt: Vermont,      de: Delaware,       md: Maryland,    
