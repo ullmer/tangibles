@@ -39,8 +39,10 @@ class enoIpanel:
       yf         = open(self.tagFn, 'rt')
       self.tagYd = yaml.safe_load(yf)
 
-      ytags      = self.tagYd['tags']
-      for tag in ytags: self.tags.append(tag)
+      if 'tags' in self.tagYd:
+        ytags      = self.tagYd['tags']
+        for tag in ytags: self.tags.append(tag)
+      else: self.msg('loadYaml: tags not found in ' + str(self.tagFn))
     except: self.err("loadYaml")
 
   ############# map char to category #############
@@ -121,12 +123,13 @@ class enoIpanel:
 ############# main #############
 
 if __name__ == "__main__":
-  eip = enoIpanel(tagFn = 'cspan-tags.yaml')
+  #eip = enoIpanel(tagFn = 'cspan-tags.yaml')
+  eip = enoIpanel(tagFn = 'us-bea.yaml')
   m   = eip.getCharMatrix()
   print(m)
 
-  cat1 = eip.mapCharToCategory('B')
-  cat2 = eip.mapCharToCategory('C')
+  cat1 = eip.mapCharToCategory('p')
+  cat2 = eip.mapCharToCategory('f')
   print(cat1, cat2)
   eip.expandMatrixYaml()
 

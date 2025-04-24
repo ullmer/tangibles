@@ -20,16 +20,21 @@ regions:
 midiIllum:
   akaiApcMiniMk2: {rm: [9, 10], me: [61, 62], gl: [43, 45], se: [5, 7], ne: [41, 38], pl: [27, 19]}
 
+interactionPanel:
+  name:      "US BEA: gridmap" #quoted because of colon within
+  #addr:      https://enodia.computing.clemson.edu/spreads/org.c-span/tags/ #not yet, but candidate
+  #imgPrefix: images/cspt13/125
+  #bgImg:     images/cspt13/bg125a
 
-matrix1: |-
-  fPppGnnn
-  frpggnnn
-  frpggmmN
-  frpgmmmM
-  frpssmsS
-  fRrwssss
-  Fwwwssss
-  W......s
+  charMatrix: |-
+    fPppGnnn
+    frpggnnn
+    frpggmmN
+    frpgmmmM
+    frpssmsS
+    fRrwssss
+    Fwwwssss
+    W......s
 
 states: {ct: Connecticut,  me: Maine,        ma: Massachusetts,  nh: New Hampshire,
          ri: Rhode Island, vt: Vermont,      de: Delaware,       md: Maryland,    
