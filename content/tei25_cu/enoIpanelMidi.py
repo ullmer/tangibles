@@ -20,10 +20,10 @@ class enoIpanelMidi(enoIpanelYaml):
   singleKeyToColorVal = None 
 
   deviceColorLookups = {
-    'aka_apcmini2' : ['interactionPanel', 'akaiColorMap']
+    'akaiApcMiniMk2' : ['interactionPanel', 'akaiColorMap']
   }
 
-  midiCtrlName     = 'aka_apcmini2'
+  midiCtrlName     = 'akaiApcMiniMk2'
   midiCtrlOutputId = 4
 
   ############# constructor #############
@@ -34,7 +34,7 @@ class enoIpanelMidi(enoIpanelYaml):
 
     if self.autolaunchMidi: 
       self.initMidi()
-      self.illumDefaultMidi()
+      self.illumCharMatrixMidi()
 
   ############# error, msg #############
 
@@ -75,7 +75,7 @@ class enoIpanelMidi(enoIpanelYaml):
   ############# map character to color #############
 
   def registerColormap(self, illumMap, charMap): 
-    if (not istype(charMap,  dict) or not istype(illumMap, dict)):
+    if (not isinstance(charMap,  dict) or not isinstance(illumMap, dict)):
       self.msg("registerColormap: arguments illumMap and charMap must both be of type dict"); return None
 
     self.singleKeyToAbbrev   = {}
@@ -108,11 +108,18 @@ class enoIpanelMidi(enoIpanelYaml):
 #    {N: [NE], n: [vt, nh, me, ct, ri, ma],
 #     M: [ME], m: [pa, ny, nj, de, dc, md],
 
-
   ############# map character to color #############
 
   def mapCharToColor(self, tagChar): 
+    try:
+      if self.singleKeyToColorVal is None: 
+        if self.tagYd is None: self.msg("mapCharToColor: tagYd is none!"); return None
 
+      illumMap = self.tagYd['midiIllum'][self.midiCtrlName]
+      charMap  = self.tagYd['interactionPanel']['charMap']
+      self.registerColormap(illumMap, charMap) 
+    except:
+      self.err("mapCharToColor")
 
   def mapCharToColor0(self, tagChar):  #first variant
     #different devices represent color in very different ways. try to accomodate.
@@ -155,15 +162,16 @@ class enoIpanelMidi(enoIpanelYaml):
 
   ############# illuminate default midi #############
 
-  def illumDefaultMidi(self):
+  def illumCharMatrixMidi(self):
     try:
       illumFunc = None
-      if self.midiCtrlName == 'aka_apcmini2': illumFunc = self.illumMatrixXYCAkaiApcMini
+      if self.midiCtrlName == 'aka_apcmini2':   illumFunc = self.illumMatrixXYCAkaiApcMini
+      if self.midiCtrlName == 'akaiApcMiniMk2': illumFunc = self.illumMatrixXYCAkaiApcMini
 
       if illumFunc is None:
-        self.msg("illumDefaultMidi: no controller function identified"); return
+        self.msg("illumCharMatrixMidi: no controller function identified"); return
 
-      if self.emc is None: self.err("illumDefaultMidi: self.emc is none!")
+      if self.emc is None: self.err("illumCharMatrixMidi: self.emc is none!")
 
       m = self.getCharMatrix()
       mrows = m.splitlines()
@@ -171,18 +179,17 @@ class enoIpanelMidi(enoIpanelYaml):
         row = mrows[j]
         for i in range(self.cols):
           try:    mch   = row[i]
-          except: self.err("illumDefaultMidi error on %i, %i" % (i,j)); continue
+          except: self.err("illumCharMatrixMidi error on %i, %i" % (i,j)); continue
           color = self.mapCharToColor(mch)
           
           illumFunc(i, j, color)
 
-    except: self.err("illumDefaultMidi"); return None
+    except: self.err("illumCharMatrixMidi"); return None
    
   ############# illuminate matrix x, y, color#############
 
   def illumMatrixXYC(self, x, y, color):
     if self.midiCtrlName == 'aka_apcmini2': self.illumMatrixXYCAkaiApcMini(x,y,color)
-
 
   def illumMatrixXYCAkaiApcMini(self, x, y, color):
     try:
@@ -204,10 +211,12 @@ class enoIpanelMidi(enoIpanelYaml):
 
 if __name__ == "__main__":
   #cm = enoIpanelMidi(tagFn = 'cspan-tags.yaml')
-  cm = enoIpanelMidi(tagFn = 'us-bea.yaml')
   #r  = cm.mapCharToColor('B')
   #r  = cm.mapCharToColor('J')
+
+  cm = enoIpanelMidi(tagFn = 'us-bea.yaml')
   m  = cm.getCharMatrix()
+  cm.illumCharMatrixMidi()
   print(m)
 
 #while True:
