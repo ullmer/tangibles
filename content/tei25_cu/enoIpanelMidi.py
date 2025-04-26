@@ -92,12 +92,9 @@ class enoIpanelMidi(enoIpanelYaml):
 
       if charMapVal not in illumMap: self.msg("registerColorMap: charMapVal not in illumMap: " + str(charMapVal)); continue
       illumVal = illumMap[charMapVal]
-      self.singleKeyToColorVal[charMapVal] = illumVal
-
       charMapValLower = charMapVal.lower()
-      if charMapValLower not in illumMap: self.msg("registerColorMap: cmvLower not in illumMap: " + str(charMapValLower)); continue
-      illumValLower = illumMap[charMapValLower]
-      self.singleKeyToColorVal[charMapValLower] = illumValLower
+      self.singleKeyToColorVal[charMapVal]      = illumVal[0]
+      self.singleKeyToColorVal[charMapValLower] = illumVal[1]
     
     #first, map all upper-case single-characters to two characters
     #then,  map two characters to (initially, single-value) mappings for upper- and lowercase charmaps
@@ -200,6 +197,7 @@ class enoIpanelMidi(enoIpanelYaml):
     try:
       addr = self.cols * (y - 7) + x
       if self.emc is None: self.msg("illumMatrixXYCAkaiApcMini: emc not initialized"); return None
+      self.msg("illumMatrixXYCAkaiApcMini " + str(addr) + " " + str(color))
       self.emc.midiOut.note_on(addr, color, 3)
     except: self.err("illumMatrixXYCAkaiApcMini")
 
