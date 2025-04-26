@@ -38,8 +38,8 @@ class enoIpanelMidi(enoIpanelYaml):
 
   ############# error, msg #############
 
-  def err(self, msg): print("enoIpanelMidi error: " + str(msg)); traceback.print_exc(); 
-  def msg(self, msg): print("enoIpanelMidi msg: "   + str(msg))
+  def err(self, msgStr): print("enoIpanelMidi error: " + str(msgStr)); traceback.print_exc(); 
+  def msg(self, msgStr): print("enoIpanelMidi msg: "   + str(msgStr))
 
   ############# get device color lookup #############
 
@@ -85,14 +85,16 @@ class enoIpanelMidi(enoIpanelYaml):
     for charMapKey in charMap:
       if self.notAllUpperAlpha(charMapKey): continue # ignore elements if not all uppercase & alpha
       self.msg("charMapKey:" + str(charMapKey))
-      charMapVal = charMap[charMapKey]
+      charMapVal = charMap[charMapKey][0]
       self.singleKeyToAbbrev[charMapKey] = charMapVal
+
+      self.msg("registerColorMap0 : " + str(charMapVal))
 
       if charMapVal not in illumMap: self.msg("registerColorMap: charMapVal not in illumMap: " + str(charMapVal)); continue
       illumVal = illumMap[charMapVal]
       self.singleKeyToColorVal[charMapVal] = illumVal
 
-      charMapValLower = charMapVal.tolower()
+      charMapValLower = charMapVal.lower()
       if charMapValLower not in illumMap: self.msg("registerColorMap: cmvLower not in illumMap: " + str(charMapValLower)); continue
       illumValLower = illumMap[charMapValLower]
       self.singleKeyToColorVal[charMapValLower] = illumValLower
@@ -117,6 +119,9 @@ class enoIpanelMidi(enoIpanelYaml):
 
       illumMap = self.tagYd['midiIllum'][self.midiCtrlName]
       charMap  = self.tagYd['interactionPanel']['charMap']
+
+      self.msg("mapCharToColor " + str(illumMap) + " :: " + str(charMap))
+
       self.registerColormap(illumMap, charMap) 
     except:
       self.err("mapCharToColor")
