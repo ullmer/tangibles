@@ -1,36 +1,34 @@
 # United States: Bureau of Economic Analysis grouping of states
 # YAML expression by Brygg Ullmer, Clemson University, 2023-01-19
 
-regionList: [ne, me, se, gl, pl, sw, rm, fw]
-#populationThresh: [20, 15, 10, 5, 2.5, 1]
-#populationThresh: [5, 2.5, 1.5]
-
-regions:
-  ne: {abbrev: Nn, name: New England,    col: 0x005697, states: [vt, nh, me, ct, ri, ma]}
-  me: {abbrev, Mm, name: Mideast,        col: 0x9B751C, states: [pa, ny, nj, de, dc, md]}
-  se: {abbrev: Ss, name: Southeast,      col: 0xAE573F, states: [ar, ky, va, tn, wv, ga, 
-                                                                 nc, la, ms, al, sc, fl]}
-                                                                 
-  gl: {abbrev: Ll, name: Great Lakes,    col: 0x4984C4, states: [wi, mi, il, oh, in]}
-  pl: {abbrev: Pp, name: Plains,         col: 0xA5B26D, states: [nd, mn, sd, ia, ka, mo]}
-  sw: {abbrev, Ww, name: Southwest,      col: 0x845D56, states: [ok, az, nm, tx]}
-  rm: {abbrev: Rr, name: Rocky Mountain, col: 0xEBC181, states: [mo, id, ut, wy, co]}
-  fw: {abbrev: Ff, name: Far West,       col: 0xFFD65D, states: [ak, wa, or, nv, ca, hi]}
-
-midi:
-  akaiApcMiniMk2: 
-    #illum:      {RM: [ 9, 10], ME: [ 9, 62], GL: [45, 46], SE: [ 5,  6], 
-    #             NE: [41, 38], PL: [18, 19], FW: [13, 15], SW: [12, 11]}
-    illum:      {RM: [ 9, 10], ME: [ 9, 62], GL: [45, 46], SE: [ 5,  6], 
-                 NE: [37, 38], PL: [18, 19], FW: [13, 15], SW: [12, 11]}
-    brightness: {default: 3, max: 6, min: 1}
-
 interactionPanel:
   name:      "US BEA: gridmap" #quoted because of colon within
-  #addr:      https://enodia.computing.clemson.edu/spreads/org.c-span/tags/ #not yet, but candidate
-  #imgPrefix: images/cspt13/125
-  #bgImg:     images/cspt13/bg125a
-
+    #addr:      https://enodia.computing.clemson.edu/spreads/org.c-span/tags/ #not yet, but candidate
+    #imgPrefix: images/cspt13/125
+    #bgImg:     images/cspt13/bg125a
+  
+  regionList: [ne, me, se, gl, pl, sw, rm, fw]
+  #populationThresh: [20, 15, 10, 5, 2.5, 1]
+  #populationThresh: [5, 2.5, 1.5]
+  
+  regions:
+    ne: {abbrev: Nn, name: New England,    col: 0x005697, states: [vt, nh, me, ct, ri, ma]}
+    me: {abbrev, Mm, name: Mideast,        col: 0x9B751C, states: [pa, ny, nj, de, dc, md]}
+    se: {abbrev: Ss, name: Southeast,      col: 0xAE573F, states: [ar, ky, va, tn, wv, ga, 
+                                                                   nc, la, ms, al, sc, fl]}
+                                                                   
+    gl: {abbrev: Ll, name: Great Lakes,    col: 0x4984C4, states: [wi, mi, il, oh, in]}
+    pl: {abbrev: Pp, name: Plains,         col: 0xA5B26D, states: [nd, mn, sd, ia, ka, mo]}
+    sw: {abbrev, Ww, name: Southwest,      col: 0x845D56, states: [ok, az, nm, tx]}
+    rm: {abbrev: Rr, name: Rocky Mountain, col: 0xEBC181, states: [mo, id, ut, wy, co]}
+    fw: {abbrev: Ff, name: Far West,       col: 0xFFD65D, states: [ak, wa, or, nv, ca, hi]}
+  
+  midi:
+    akaiApcMiniMk2: 
+      illum:      {RM: [ 9, 10], ME: [ 9, 62], GL: [45, 46], SE: [ 5,  6], 
+                   NE: [37, 38], PL: [18, 19], FW: [13, 15], SW: [12, 11]}
+      brightness: {default: 3, max: 6, min: 1}
+  
   charMatrix: |-
     fPppLnnn
     .rpllnnn
@@ -40,7 +38,7 @@ interactionPanel:
     fRrwssss
     FwwWssss
     f..w...s
-
+  
   charMap:
     {N: [NE], n: [vt, nh, me, ct, ri, ma],
      M: [ME], m: [pa, ny, nj, de, dc, md],
@@ -51,20 +49,20 @@ interactionPanel:
      R: [RM], r: [mo, id, ut, wy, co],
      F: [FW], f: [ak, wa, or, nv, ca, hi], 
      .: [empty]}
-    
-states: {ct: Connecticut,  me: Maine,        ma: Massachusetts,  nh: New Hampshire,
-         ri: Rhode Island, vt: Vermont,      de: Delaware,       md: Maryland,    
-         nj: New Jersey,   ny: New York,     pa: Pennsylvania,   al: Alabama,     
-         ar: Arkansas,     fl: Florida,      ga: Georgia,        ky: Kentucky,
-         la: Louisiana,    ms: Mississippi,  nc: North Carolina, sc: South Carolina, 
-         tn: Tennessee,    va: Virginia,     wv: West Virginia,  il: Illinois,     
-         in: Indiana,      mi: Michigan,     oh: Ohio,           wi: Wisconsin,     
-         ia: Iowa,         ka: Kansas,       mn: Minnesota,      mo: Missouri,     
-         ne: Nebraska,     nd: North Dakota, sd: South Dakota,   ar: Arizona,
-         nm: New Mexico,   ok: Oklahoma,     tx: Texas,          co: Colorado,       
-         id: Idaho,        mt: Montana,      ut: Utah,           wy: Wyoming,      
-         ak: Alaska,       ca: California,   hi: Hawaii,         nv: Nevada,        
-         or: Oregon,       wa: Washington,   dc: "Washington, DC"}
-
+      
+  states: {ct: Connecticut,  me: Maine,        ma: Massachusetts,  nh: New Hampshire,
+           ri: Rhode Island, vt: Vermont,      de: Delaware,       md: Maryland,    
+           nj: New Jersey,   ny: New York,     pa: Pennsylvania,   al: Alabama,     
+           ar: Arkansas,     fl: Florida,      ga: Georgia,        ky: Kentucky,
+           la: Louisiana,    ms: Mississippi,  nc: North Carolina, sc: South Carolina, 
+           tn: Tennessee,    va: Virginia,     wv: West Virginia,  il: Illinois,     
+           in: Indiana,      mi: Michigan,     oh: Ohio,           wi: Wisconsin,     
+           ia: Iowa,         ka: Kansas,       mn: Minnesota,      mo: Missouri,     
+           ne: Nebraska,     nd: North Dakota, sd: South Dakota,   ar: Arizona,
+           nm: New Mexico,   ok: Oklahoma,     tx: Texas,          co: Colorado,       
+           id: Idaho,        mt: Montana,      ut: Utah,           wy: Wyoming,      
+           ak: Alaska,       ca: California,   hi: Hawaii,         nv: Nevada,        
+           or: Oregon,       wa: Washington,   dc: "Washington, DC"}
+  
 ### end ###
-
+  

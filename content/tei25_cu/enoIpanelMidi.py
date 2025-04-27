@@ -125,7 +125,7 @@ class enoIpanelMidi(enoIpanelYaml):
       if self.singleKey2ColorVal is None: 
         if self.tagYd is None: self.msg("mapCharToColor: tagYd is none!"); return None
 
-      midiMap  = self.tagYd['midi'][self.midiCtrlName]
+      midiMap  = self.tagYd['interactionPanel']['midi'][self.midiCtrlName]
       colorMap  = midiMap['illum']
       brightMap = midiMap['brightness']
 
@@ -215,9 +215,6 @@ class enoIpanelMidi(enoIpanelYaml):
 
 if __name__ == "__main__":
   #cm = enoIpanelMidi(tagFn = 'cspan-tags.yaml')
-  #r  = cm.mapCharToColor('B')
-  #r  = cm.mapCharToColor('J')
-
   #cm = enoIpanelMidi(tagFn = 'us-bea.yaml', autolaunchMidi=False)
 
   print("=" * 70)
