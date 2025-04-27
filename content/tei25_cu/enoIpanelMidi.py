@@ -77,7 +77,8 @@ class enoIpanelMidi(enoIpanelYaml):
   ############# map character to color #############
 
   def registerColormap(self, illumMap, charMap): 
-    if self.singleKey2Abbrev is not None: self.msg("registerColormap called, but skta already populated"); return None
+    if self.singleKey2Abbrev is not None: 
+      self.msg("registerColormap called, but skta already populated"); return None
 
     if (not isinstance(charMap,  dict) or not isinstance(illumMap, dict)):
       self.msg("registerColormap: arguments illumMap and charMap must both be of type dict"); return None
@@ -87,27 +88,23 @@ class enoIpanelMidi(enoIpanelYaml):
     self.abbrev2singleKey   = {}
     self.singleKey2ColorVal = {}
 
-    self.msg("urg" + str(charMap))
+    self.msg("urg" + str(charMap) + " || " + str(illumMap))
     for charMapKey in charMap:
       if self.notAllUpperAlpha(charMapKey): continue # ignore elements if not all uppercase & alpha
       #self.msg("charMapKey:" + str(charMapKey))
       #charMapVal = charMap[charMapKey][0]
       abbrev    = charMap[charMapKey][0]
-      singleKey = charMapKey
-      self.abbrev2singleKey[abbrev]     = singleKey
-      self.singleKey2Abbrev[charMapKey] = abbrev
+      illumVal  = illumMap[abbrev]
+      self.abbrev2singleKey[abbrev]     = charMapKey
 
-      #self.msg("registerColorMap0 : " + str(charMapVal))
-
-      if charMapVal not in illumMap: self.msg("registerColorMap: charMapVal not in illumMap: " + str(charMapVal)); continue
-      illumVal = illumMap[charMapVal]
-
-      charMapValLower = charMapVal.lower()  #this is abbrev, not char
-      self.singleKey2ColorVal[charMapVal]      = illumVal[0]
-      self.singleKey2ColorVal[charMapValLower] = illumVal[1]
+      charMapKeyLower = charMapKey.lower()  #this is abbrev, not char
+      self.singleKey2ColorVal[charMapKey]      = illumVal[0]
+      self.singleKey2ColorVal[charMapKeyLower] = illumVal[1]
     
     #first, map all upper-case single-characters to two characters
     #then,  map two characters to (initially, single-value) mappings for upper- and lowercase charmaps
+
+    print("singleKey2ColorVal: " + str(self.singleKey2ColorVal))
 
 #midiIllum:
 #  akaiApcMiniMk2: {rm: [9, 10], me: [61, 62], gl: [43, 45], se: [5, 7], ne: [41, 38], pl: [27, 19]}
@@ -235,6 +232,8 @@ if __name__ == "__main__":
   #r  = cm.mapCharToColor('J')
 
   #cm = enoIpanelMidi(tagFn = 'us-bea.yaml', autolaunchMidi=False)
+
+  print("=" * 70)
   cm = enoIpanelMidi(tagFn = 'us-bea.yaml')
   m  = cm.getCharMatrix()
   cm.illumCharMatrixMidi()
