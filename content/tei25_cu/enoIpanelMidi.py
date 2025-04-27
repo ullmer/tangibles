@@ -18,6 +18,7 @@ class enoIpanelMidi(enoIpanelYaml):
 
   singleKey2Abbrev   = None
   singleKey2ColorVal = None 
+  abbrev2singleKey   = None
   abbrev2ColorVal    = None 
 
   deviceColorLookups = {
@@ -82,21 +83,26 @@ class enoIpanelMidi(enoIpanelYaml):
       self.msg("registerColormap: arguments illumMap and charMap must both be of type dict"); return None
 
     self.singleKey2Abbrev   = {}
-    self.abbrev2ColorVal     = {}
+    self.abbrev2ColorVal    = {}
+    self.abbrev2singleKey   = {}
     self.singleKey2ColorVal = {}
 
-    self.msg("urg")
+    self.msg("urg" + str(charMap))
     for charMapKey in charMap:
       if self.notAllUpperAlpha(charMapKey): continue # ignore elements if not all uppercase & alpha
-      self.msg("charMapKey:" + str(charMapKey))
-      charMapVal = charMap[charMapKey][0]
-      self.singleKey2Abbrev[charMapKey] = charMapVal
+      #self.msg("charMapKey:" + str(charMapKey))
+      #charMapVal = charMap[charMapKey][0]
+      abbrev    = charMap[charMapKey][0]
+      singleKey = charMapKey
+      self.abbrev2singleKey[abbrev]     = singleKey
+      self.singleKey2Abbrev[charMapKey] = abbrev
 
-      self.msg("registerColorMap0 : " + str(charMapVal))
+      #self.msg("registerColorMap0 : " + str(charMapVal))
 
       if charMapVal not in illumMap: self.msg("registerColorMap: charMapVal not in illumMap: " + str(charMapVal)); continue
       illumVal = illumMap[charMapVal]
-      charMapValLower = charMapVal.lower()
+
+      charMapValLower = charMapVal.lower()  #this is abbrev, not char
       self.singleKey2ColorVal[charMapVal]      = illumVal[0]
       self.singleKey2ColorVal[charMapValLower] = illumVal[1]
     
@@ -228,6 +234,7 @@ if __name__ == "__main__":
   #r  = cm.mapCharToColor('B')
   #r  = cm.mapCharToColor('J')
 
+  #cm = enoIpanelMidi(tagFn = 'us-bea.yaml', autolaunchMidi=False)
   cm = enoIpanelMidi(tagFn = 'us-bea.yaml')
   m  = cm.getCharMatrix()
   cm.illumCharMatrixMidi()
