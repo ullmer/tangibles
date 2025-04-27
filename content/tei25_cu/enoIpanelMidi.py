@@ -94,6 +94,9 @@ class enoIpanelMidi(enoIpanelYaml):
       #self.msg("charMapKey:" + str(charMapKey))
       #charMapVal = charMap[charMapKey][0]
       abbrev    = charMap[charMapKey][0]
+      if abbrev not in illumMap: 
+        self.msg("registerColormap: abbrev not in illumMap: " + str(abbrev), str(illumMap)); continue
+
       illumVal  = illumMap[abbrev]
       self.abbrev2singleKey[abbrev]     = charMapKey
 
@@ -127,7 +130,7 @@ class enoIpanelMidi(enoIpanelYaml):
       #self.msg("mapCharToColor " + str(illumMap) + " :: " + str(charMap))
       if self.singleKey2Abbrev is None: self.registerColormap(illumMap, charMap) 
 
-      self.msg("mapCharToColor foo: " + str(self.singleKey2ColorVal) + "|" + str(tagChar))
+      #self.msg("mapCharToColor foo: " + str(self.singleKey2ColorVal) + "|" + str(tagChar))
 
       cv = self.singleKey2ColorVal[tagChar]
       #cv = self.abbrev2ColorVal[tagChar]
