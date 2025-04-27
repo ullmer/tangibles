@@ -26,6 +26,8 @@ class enoIpanelMidi(enoIpanelYaml):
     'akaiApcMiniMk2' : ['interactionPanel', 'akaiColorMap']
   }
 
+  midiBrightness     = None
+
   midiCtrlName     = 'akaiApcMiniMk2'
   midiCtrlOutputId = 4
 
@@ -77,26 +79,26 @@ class enoIpanelMidi(enoIpanelYaml):
 
   ############# map character to color #############
 
-  def registerColormap(self, illumMap, charMap): 
+  def registerColormap(self, colorMap, charMap): 
     if self.singleKey2Abbrev is not None: 
       self.msg("registerColormap called, but skta already populated"); return None
 
-    if (not isinstance(charMap,  dict) or not isinstance(illumMap, dict)):
-      self.msg("registerColormap: arguments illumMap and charMap must both be of type dict"); return None
+    if (not isinstance(charMap,  dict) or not isinstance(colorMap, dict)):
+      self.msg("registerColormap: arguments colorMap and charMap must both be of type dict"); return None
 
     self.singleKey2Abbrev   = {}
     self.abbrev2ColorVal    = {}
     self.abbrev2singleKey   = {}
     self.singleKey2ColorVal = {}
 
-    if self.verbose: self.msg("rcm" + str(charMap) + " || " + str(illumMap))
+    if self.verbose: self.msg("rcm" + str(charMap) + " || " + str(colorMap))
     for charMapKey in charMap:
       if self.notAllUpperAlpha(charMapKey): continue # ignore elements if not all uppercase & alpha
       abbrev    = charMap[charMapKey][0]
-      if abbrev not in illumMap: 
-        self.msg("registerColormap: abbrev not in illumMap: " + str(abbrev) + str(illumMap)); continue
+      if abbrev not in colorMap: 
+        self.msg("registerColormap: abbrev not in colorMap: " + str(abbrev) + str(colorMap)); continue
 
-      illumVal  = illumMap[abbrev]
+      illumVal  = colorMap[abbrev]
       self.abbrev2singleKey[abbrev]     = charMapKey
 
       charMapKeyLower = charMapKey.lower()  #this is abbrev, not char
@@ -123,11 +125,14 @@ class enoIpanelMidi(enoIpanelYaml):
       if self.singleKey2ColorVal is None: 
         if self.tagYd is None: self.msg("mapCharToColor: tagYd is none!"); return None
 
-      illumMap = self.tagYd['midiIllum'][self.midiCtrlName]
+      midiMap  = self.tagYd['midi'][self.midiCtrlName]
+      colorMap  = midiMap['illum']
+      brightMap = midiMap['brightness']
+
       charMap  = self.tagYd['interactionPanel']['charMap']
 
-      #self.msg("mapCharToColor " + str(illumMap) + " :: " + str(charMap))
-      if self.singleKey2Abbrev is None: self.registerColormap(illumMap, charMap) 
+      #self.msg("mapCharToColor " + str(colorMap) + " :: " + str(charMap))
+      if self.singleKey2Abbrev is None: self.registerColormap(colorMap, charMap) 
 
       #self.msg("mapCharToColor foo: " + str(self.singleKey2ColorVal) + "|" + str(tagChar))
 
