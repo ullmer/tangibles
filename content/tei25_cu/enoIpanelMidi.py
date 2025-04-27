@@ -127,7 +127,7 @@ class enoIpanelMidi(enoIpanelYaml):
       illumMap = self.tagYd['midiIllum'][self.midiCtrlName]
       charMap  = self.tagYd['interactionPanel']['charMap']
 
-      self.msg("mapCharToColor " + str(illumMap) + " :: " + str(charMap))
+      #self.msg("mapCharToColor " + str(illumMap) + " :: " + str(charMap))
       if self.singleKey2Abbrev is None: self.registerColormap(illumMap, charMap) 
 
       self.msg("mapCharToColor foo: " + str(self.singleKey2ColorVal) + "|" + str(tagChar))
@@ -151,7 +151,7 @@ class enoIpanelMidi(enoIpanelYaml):
 
       if dcl is None:  self.msg("mapCharToColor: get device color lookup returns None."); return None
 
-      if self.verbose: self.msg("mapCharToColor: dcl: " + str(dcl))
+      #if self.verbose: self.msg("mapCharToColor: dcl: " + str(dcl))
 
       if tag not in dcl: 
         self.err("mapCharToColor: device color lookup " + str(dcl) + " not found in yaml " + self.tagFn)
