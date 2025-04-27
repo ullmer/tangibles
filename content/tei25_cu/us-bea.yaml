@@ -19,8 +19,10 @@ regions:
 
 midi:
   akaiApcMiniMk2: 
+    #illum:      {RM: [ 9, 10], ME: [ 9, 62], GL: [45, 46], SE: [ 5,  6], 
+    #             NE: [41, 38], PL: [18, 19], FW: [13, 15], SW: [12, 11]}
     illum:      {RM: [ 9, 10], ME: [ 9, 62], GL: [45, 46], SE: [ 5,  6], 
-                 NE: [41, 38], PL: [18, 19], FW: [13, 15], SW: [12, 11]}
+                 NE: [37, 38], PL: [18, 19], FW: [13, 15], SW: [12, 11]}
     brightness: {default: 3, max: 6, min: 1}
 
 interactionPanel:
