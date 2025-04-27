@@ -187,7 +187,9 @@ class enoIpanelMidi(enoIpanelYaml):
 
   def illumMatrixXYCAkaiApcMini(self, x, y, color):
     try:
-      addr = self.cols * (y - 7) + x
+      self.msg("imxyaam " + str(x) + " " + str(y))
+      #addr = self.cols * (y - 7) + x
+      addr = self.cols * (7 - y) + x
       if self.emc is None: self.msg("illumMatrixXYCAkaiApcMini: emc not initialized"); return None
       self.msg("illumMatrixXYCAkaiApcMini " + str(addr) + " " + str(color))
       if addr is None or color is None: self.msg("illumMatrixXYCAkaiApMini args " + str(addr) + " " + str(color))
