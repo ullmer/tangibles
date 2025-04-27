@@ -95,7 +95,7 @@ class enoIpanelMidi(enoIpanelYaml):
       #charMapVal = charMap[charMapKey][0]
       abbrev    = charMap[charMapKey][0]
       if abbrev not in illumMap: 
-        self.msg("registerColormap: abbrev not in illumMap: " + str(abbrev), str(illumMap)); continue
+        self.msg("registerColormap: abbrev not in illumMap: " + str(abbrev) + str(illumMap)); continue
 
       illumVal  = illumMap[abbrev]
       self.abbrev2singleKey[abbrev]     = charMapKey
@@ -132,38 +132,14 @@ class enoIpanelMidi(enoIpanelYaml):
 
       #self.msg("mapCharToColor foo: " + str(self.singleKey2ColorVal) + "|" + str(tagChar))
 
+      if tagChar not in self.singleKey2ColorVal: return None
+
       cv = self.singleKey2ColorVal[tagChar]
       #cv = self.abbrev2ColorVal[tagChar]
       return cv
 
     except:
       self.err("mapCharToColor")
-
-  def mapCharToColor0(self, tagChar):  #first variant
-    #different devices represent color in very different ways. try to accomodate.
-    try:
-      tag = self.mapCharToCategory(tagChar)
-      if tag is None: self.err('mapCharToColor: mapCharToCategory returned no result'); return
-
-      if self.verbose: self.msg("mapCharToColor : tag " + str(tag))
-
-      dcl = self.getDeviceColorLookup(self.midiCtrlName)
-
-      if dcl is None:  self.msg("mapCharToColor: get device color lookup returns None."); return None
-
-      #if self.verbose: self.msg("mapCharToColor: dcl: " + str(dcl))
-
-      if tag not in dcl: 
-        self.err("mapCharToColor: device color lookup " + str(dcl) + " not found in yaml " + self.tagFn)
-        return None
-
-      color = dcl[tag]
-      if self.verbose: self.msg("mapCharToColor result: " + str(color))
-
-      self.tagCharToColor[tagChar] = color
-      return color
-
-    except: self.err("mapCharToColor")
 
   ############# midi cb #############
 
@@ -199,8 +175,8 @@ class enoIpanelMidi(enoIpanelYaml):
           try:    mch   = row[i]
           except: self.err("illumCharMatrixMidi error on %i, %i" % (i,j)); continue
           color = self.mapCharToColor(mch)
-          
-          illumFunc(i, j, color)
+
+          if color is not None: illumFunc(i, j, color)
 
     except: self.err("illumCharMatrixMidi"); return None
    
