@@ -18,7 +18,7 @@ regions:
   fw: {abbrev: Ff, name: Far West,       col: 0xFFD65D, states: [ak, wa, or, nv, ca, hi]}
 
 midiIllum:
-  akaiApcMiniMk2: {RM: [9, 10], ME: [61, 62], GL: [43, 45], SE: [5, 7], NE: [41, 38], PL: [27, 19]}
+  akaiApcMiniMk2: {RM: [9, 10], ME: [61, 62], GL: [43, 45], SE: [5, 7], NE: [41, 38], PL: [27, 19], F: [13, 15], W: [11, 12]}
 
 interactionPanel:
   name:      "US BEA: gridmap" #quoted because of colon within
