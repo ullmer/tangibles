@@ -11,7 +11,8 @@ from enoIpanelYaml import *
 
 class enoIpanelMidi(enoIpanelYaml):
 
-  emc   = None #enodia midi controller
+  emc     = None #enodia midi controller
+  verbose = False
 
   tagCharToColor = None
   autolaunchMidi = True
@@ -88,11 +89,9 @@ class enoIpanelMidi(enoIpanelYaml):
     self.abbrev2singleKey   = {}
     self.singleKey2ColorVal = {}
 
-    self.msg("urg" + str(charMap) + " || " + str(illumMap))
+    if self.verbose: self.msg("rcm" + str(charMap) + " || " + str(illumMap))
     for charMapKey in charMap:
       if self.notAllUpperAlpha(charMapKey): continue # ignore elements if not all uppercase & alpha
-      #self.msg("charMapKey:" + str(charMapKey))
-      #charMapVal = charMap[charMapKey][0]
       abbrev    = charMap[charMapKey][0]
       if abbrev not in illumMap: 
         self.msg("registerColormap: abbrev not in illumMap: " + str(abbrev) + str(illumMap)); continue
@@ -107,7 +106,7 @@ class enoIpanelMidi(enoIpanelYaml):
     #first, map all upper-case single-characters to two characters
     #then,  map two characters to (initially, single-value) mappings for upper- and lowercase charmaps
 
-    print("singleKey2ColorVal: " + str(self.singleKey2ColorVal))
+    if self.verbose: self.msg("singleKey2ColorVal: " + str(self.singleKey2ColorVal))
 
 #midiIllum:
 #  akaiApcMiniMk2: {rm: [9, 10], me: [61, 62], gl: [43, 45], se: [5, 7], ne: [41, 38], pl: [27, 19]}
@@ -193,7 +192,7 @@ class enoIpanelMidi(enoIpanelYaml):
       #addr = self.cols * (y - 7) + x
       addr = self.cols * (7 - y) + x
       if self.emc is None: self.msg("illumMatrixXYCAkaiApcMini: emc not initialized"); return None
-      self.msg("illumMatrixXYCAkaiApcMini " + str(addr) + " " + str(color))
+      if self.verbose: self.msg("illumMatrixXYCAkaiApcMini " + str(addr) + " " + str(color))
       if addr is None or color is None: self.msg("illumMatrixXYCAkaiApMini args " + str(addr) + " " + str(color))
       else:                             self.emc.midiOut.note_on(addr, color, 3)
     except: self.err("illumMatrixXYCAkaiApcMini")
