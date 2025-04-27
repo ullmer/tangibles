@@ -16,8 +16,9 @@ class enoIpanelMidi(enoIpanelYaml):
   tagCharToColor = None
   autolaunchMidi = True
 
-  singleKeyToAbbrev   = None
-  singleKeyToColorVal = None 
+  singleKey2Abbrev   = None
+  singleKey2ColorVal = None 
+  abbrev2ColorVal    = None 
 
   deviceColorLookups = {
     'akaiApcMiniMk2' : ['interactionPanel', 'akaiColorMap']
@@ -75,26 +76,29 @@ class enoIpanelMidi(enoIpanelYaml):
   ############# map character to color #############
 
   def registerColormap(self, illumMap, charMap): 
+    if self.singleKey2Abbrev is not None: self.msg("registerColormap called, but skta already populated"); return None
+
     if (not isinstance(charMap,  dict) or not isinstance(illumMap, dict)):
       self.msg("registerColormap: arguments illumMap and charMap must both be of type dict"); return None
 
-    self.singleKeyToAbbrev   = {}
-    self.singleKeyToColorVal = {}
+    self.singleKey2Abbrev   = {}
+    self.abbrev2ColorVal     = {}
+    self.singleKey2ColorVal = {}
 
     self.msg("urg")
     for charMapKey in charMap:
       if self.notAllUpperAlpha(charMapKey): continue # ignore elements if not all uppercase & alpha
       self.msg("charMapKey:" + str(charMapKey))
       charMapVal = charMap[charMapKey][0]
-      self.singleKeyToAbbrev[charMapKey] = charMapVal
+      self.singleKey2Abbrev[charMapKey] = charMapVal
 
       self.msg("registerColorMap0 : " + str(charMapVal))
 
       if charMapVal not in illumMap: self.msg("registerColorMap: charMapVal not in illumMap: " + str(charMapVal)); continue
       illumVal = illumMap[charMapVal]
       charMapValLower = charMapVal.lower()
-      self.singleKeyToColorVal[charMapVal]      = illumVal[0]
-      self.singleKeyToColorVal[charMapValLower] = illumVal[1]
+      self.singleKey2ColorVal[charMapVal]      = illumVal[0]
+      self.singleKey2ColorVal[charMapValLower] = illumVal[1]
     
     #first, map all upper-case single-characters to two characters
     #then,  map two characters to (initially, single-value) mappings for upper- and lowercase charmaps
@@ -111,15 +115,21 @@ class enoIpanelMidi(enoIpanelYaml):
 
   def mapCharToColor(self, tagChar): 
     try:
-      if self.singleKeyToColorVal is None: 
+      if self.singleKey2ColorVal is None: 
         if self.tagYd is None: self.msg("mapCharToColor: tagYd is none!"); return None
 
       illumMap = self.tagYd['midiIllum'][self.midiCtrlName]
       charMap  = self.tagYd['interactionPanel']['charMap']
 
       self.msg("mapCharToColor " + str(illumMap) + " :: " + str(charMap))
+      if self.singleKey2Abbrev is None: self.registerColormap(illumMap, charMap) 
 
-      self.registerColormap(illumMap, charMap) 
+      self.msg("mapCharToColor foo: " + str(self.singleKey2ColorVal) + "|" + str(tagChar))
+
+      cv = self.singleKey2ColorVal[tagChar]
+      #cv = self.abbrev2ColorVal[tagChar]
+      return cv
+
     except:
       self.err("mapCharToColor")
 
@@ -198,7 +208,8 @@ class enoIpanelMidi(enoIpanelYaml):
       addr = self.cols * (y - 7) + x
       if self.emc is None: self.msg("illumMatrixXYCAkaiApcMini: emc not initialized"); return None
       self.msg("illumMatrixXYCAkaiApcMini " + str(addr) + " " + str(color))
-      self.emc.midiOut.note_on(addr, color, 3)
+      if addr is None or color is None: self.msg("illumMatrixXYCAkaiApMini args " + str(addr) + " " + str(color))
+      else:                             self.emc.midiOut.note_on(addr, color, 3)
     except: self.err("illumMatrixXYCAkaiApcMini")
 
   ############# midi cb #############
