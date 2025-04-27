@@ -32,13 +32,13 @@ interactionPanel:
 
   charMatrix: |-
     fPppLnnn
-    frpllnnn
+    .rpllnnn
     frpllmmN
     frplmmmM
     frpssmsS
     fRrwssss
     FwwWssss
-    ...w...s
+    f..w...s
 
   charMap:
     {N: [NE], n: [vt, nh, me, ct, ri, ma],
