@@ -174,9 +174,11 @@ class enoIpanelMidi(enoIpanelYaml):
         for i in range(self.cols):
           try:    mch   = row[i]
           except: self.err("illumCharMatrixMidi error on %i, %i" % (i,j)); continue
-          color = self.mapCharToColor(mch)
-
-          if color is not None: illumFunc(i, j, color)
+ 
+          if mch == '.': illumFunc(i, j, 0)
+          else: 
+            color = self.mapCharToColor(mch)
+            if color is not None: illumFunc(i, j, color)
 
     except: self.err("illumCharMatrixMidi"); return None
    
