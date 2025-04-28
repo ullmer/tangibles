@@ -12,8 +12,8 @@ from enoIpanelYaml import *
 class enoIpanelMidi(enoIpanelYaml):
 
   emc     = None #enodia midi controller
-  #verbose = False
-  verbose = True
+  verbose = False
+  #verbose = True
 
   tagCharToColor = None
   autolaunchMidi = True
@@ -47,6 +47,14 @@ class enoIpanelMidi(enoIpanelYaml):
 
   def err(self, msgStr): print("enoIpanelMidi error: " + str(msgStr)); traceback.print_exc(); 
   def msg(self, msgStr): print("enoIpanelMidi msg: "   + str(msgStr))
+
+  ############# poll midi #############
+
+  def pollMidi(self):
+    if self.emc is None:
+      self.msg("pollMidi: Enodia midi controller emc is not initialized"); return None
+
+    self.emc.pollMidi()
 
   ############# get device color lookup #############
 
@@ -203,7 +211,8 @@ class enoIpanelMidi(enoIpanelYaml):
       addr = self.cols * (7 - y) + x
       if self.emc is None: self.msg("illumMatrixXYCAkaiApcMini: emc not initialized"); return None
       if self.verbose: self.msg("illumMatrixXYCAkaiApcMini " + str(addr) + " " + str(color))
-      if addr is None or color is None: self.msg("illumMatrixXYCAkaiApMini args " + str(addr) + " " + str(color))
+      if addr is None or color is None: 
+        self.msg("illumMatrixXYCAkaiApMini args " + str(addr) + " " + str(color))
       else:                             self.emc.midiOut.note_on(addr, color, 3)
     except: self.err("illumMatrixXYCAkaiApcMini")
 
@@ -214,7 +223,7 @@ class enoIpanelMidi(enoIpanelYaml):
 
     if arg == 0: return #ignore pad release
 
-    print("cspan midiCB %s: %s" % (tags[tagIdx], str(control)))
+    print("midiCB stub %s: %s" % (tags[tagIdx], str(control)))
   
 ############# main #############
 
@@ -223,8 +232,8 @@ if __name__ == "__main__":
   #cm = enoIpanelMidi(tagFn = 'us-bea.yaml', autolaunchMidi=False)
 
   print("=" * 70)
-  cm = enoIpanelMidi(tagFn = 'cspan-tags.yaml')
-  #cm = enoIpanelMidi(tagFn = 'us-bea.yaml')
+  #cm = enoIpanelMidi(tagFn = 'cspan-tags.yaml', casePaired=False)
+  cm = enoIpanelMidi(tagFn = 'us-bea.yaml',     casePaired=True)
   m  = cm.getCharMatrix()
   cm.illumCharMatrixMidi()
   print(m)
