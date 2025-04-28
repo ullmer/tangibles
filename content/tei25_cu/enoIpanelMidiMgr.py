@@ -30,6 +30,8 @@ class enoIpanelMidiMgr:
   midiCtrlName     = 'akaiApcMiniMk2'
   midiCtrlOutputId = 4
 
+  ipanelSidebarDict = None
+
   ############# constructor #############
 
   def __init__(self, **kwargs):
@@ -39,11 +41,31 @@ class enoIpanelMidiMgr:
     if self.autolaunchMidi: 
       self.initMidi()
       self.dimMatrixSidebarAkaiApcMini()
+      self.rightSidebarPress(0)
 
   ############# error, msg #############
 
   def err(self, msgStr): print("enoIpanelMidiMgr error: " + str(msgStr)); traceback.print_exc(); 
   def msg(self, msgStr): print("enoIpanelMidiMgr msg: "   + str(msgStr))
+
+  ############# register interaction panel #############
+
+  def registerIpanel(self, ipanelHandle, whichSidebarButton):
+    if self.ipanelSidebarDict is None:
+      self.ipanelSidebarDict = {}
+
+    self.ipanelSidebarDict[whichSidebarButton] = ipanelHandle
+    ipanelHandle.emc                           = self.emc #possibly revisit
+    if self.sidebarButtonCurrentlyActive == whichSidebar:
+      ipanelHandle.illumCharMatrixMidi()
+  
+  ############# get registered interaction panel #############
+
+  def getRegisteredIpanel(self, whichSidebarButton):
+    if self.ipanelSidebarDict is None:                   return None
+    if whichSidebarButton not in self.ipanelSidebarDict: return None
+    result = self.ipanelSidebarDict[whichSidebarButton]
+    return result
 
   ############# poll midi #############
 
@@ -140,6 +162,9 @@ class enoIpanelMidiMgr:
     self.illumMatrixSidebar(self.sidebar_right, whichButton, 1)
     self.sidebarButtonCurrentlyActive = whichButton
 
+
+      ipanelHandle.illumCharMatrixMidi()
+
   ############# midi cb #############
 
   def midiCB(self, control, arg): 
@@ -163,6 +188,8 @@ if __name__ == "__main__":
   eim2 = enoIpanelMidi(tagFn = 'us-bea.yaml',     casePaired=True,  autolaunchMidi=False)
 
   eimm = enoIpanelMidiMgr()
+  eimm.registerIpanel(eim1, 0) #bootstrapping logic, to be reworked
+  eimm.registerIpanel(eim2, 1)
 
   while True:
     eimm.pollMidi()
