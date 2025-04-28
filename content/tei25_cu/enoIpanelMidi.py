@@ -12,8 +12,8 @@ from enoIpanelYaml import *
 class enoIpanelMidi(enoIpanelYaml):
 
   emc     = None #enodia midi controller
-  verbose = False
-  #verbose = True
+  #verbose = False
+  verbose = True
 
   tagCharToColor = None
   autolaunchMidi = True
@@ -22,6 +22,9 @@ class enoIpanelMidi(enoIpanelYaml):
   singleKey2ColorVal = None 
   abbrev2singleKey   = None
   abbrev2ColorVal    = None 
+
+  sidebar_bottom = 1
+  sidebar_right  = 2
 
   deviceColorLookups = {
     'akaiApcMiniMk2' : ['interactionPanel', 'akaiColorMap']
@@ -203,10 +206,11 @@ class enoIpanelMidi(enoIpanelYaml):
 
     except: self.err("illumCharMatrixMidi"); return None
    
-  ############# illuminate matrix x, y, color#############
+  ############# illuminate matrix x, y, color #############
 
   def illumMatrixXYC(self, x, y, color):
-    if self.midiCtrlName == 'aka_apcmini2': self.illumMatrixXYCAkaiApcMini(x,y,color)
+    if self.midiCtrlName == 'aka_apcmini2' or \
+       self.midiCtrlName == 'akaiApcMiniMk2': self.illumMatrixXYCAkaiApcMini(x,y,color)
 
   def illumMatrixXYCAkaiApcMini(self, x, y, color):
     try:
@@ -219,6 +223,45 @@ class enoIpanelMidi(enoIpanelYaml):
         self.msg("illumMatrixXYCAkaiApMini args " + str(addr) + " " + str(color))
       else:                             self.emc.midiOut.note_on(addr, color, 3)
     except: self.err("illumMatrixXYCAkaiApcMini")
+  
+  ############# illuminate matrix sidebar #############
+
+  def illumMatrixSidebar(self, side=True, idx=True, color=1):
+    if self.midiCtrlName == 'aka_apcmini2' or \
+       self.midiCtrlName == 'akaiApcMiniMk2': self.illumMatrixSidebarAkaiApcMini(side, idx, color)
+
+  def illumMatrixSidebarAkaiApcMini(self, side=True, idx=True, color=1):
+    try:
+      if self.emc is None: self.msg("illumMatrixXYCAkaiApcMini: emc not initialized"); return None
+      if self.verbose: self.msg("illumMatrixSideAkaiApcMini")
+
+      if side is True and idx is True: #all on
+         for i in range(100, 108): self.emc.midiOut.note_on(i, 1, color)
+         for i in range(112, 120): self.emc.midiOut.note_on(i, 1, color)
+
+      if side == self.sidebar_bottom:
+        if idx is True: #all on
+          for i in range(100, 108): self.emc.midiOut.note_on(i, 1, color)
+        elif idx >= 0 and idx < 8: 
+          idx2 = 100+idx; self.emc.midiOut.note_on(idx2, 1, color)
+        else: 
+          self.msg("illumMatrixSidebarAkaiApcMini bottom called with invalid index: " + str(idx))
+          return None
+
+      if side == self.sidebar_right:
+        if idx is True: #all on
+          for i in range(112, 120): self.emc.midiOut.note_on(i, 1)
+        elif idx >= 0 and idx < 8: 
+          idx2 = 112+idx; self.emc.midiOut.note_on(idx2, 1)
+        else: 
+          self.msg("illumMatrixSidebarAkaiApcMini right called with invalid index: " + str(idx))
+          return None
+
+      #self.emc.midiOut.note_on(100, 1)
+      #self.emc.midiOut.note_on(112, 1)
+
+      #thanks: https://forum.bome.com/t/new-akai-pro-apc-mini-mk2-initial-led-mapping-summary/4752
+    except: self.err("illumMatrixSidebarAkaiApcMini")
 
   ############# midi cb #############
 

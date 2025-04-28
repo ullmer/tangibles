@@ -37,10 +37,7 @@ if __name__ == "__main__":
   print("=" * 70)
   #eimm = enoIpanelMidiMgr(tagFn = 'cspan-tags.yaml', casePaired=False)
   eimm = enoIpanelMidiMgr(tagFn = 'us-bea.yaml',     casePaired=True)
-
-  #m    = eimm.getCharMatrix()
-  #cm.illumCharMatrixMidi()
-  #print(m)
+  eimm.illumMatrixSidebar()
 
   while True:
     eimm.pollMidi()
