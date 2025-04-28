@@ -225,17 +225,35 @@ class enoIpanelMidi(enoIpanelYaml):
       else:                             self.emc.midiOut.note_on(addr, color, 3)
     except: self.err("illumMatrixXYCAkaiApcMini")
   
+  ############# dim matrix sidebar #############
+
+  def dimSidebar(self, side=True, idx=True):
+    if self.midiCtrlName == 'aka_apcmini2' or \
+       self.midiCtrlName == 'akaiApcMiniMk2': 
+         self.dimMatrixSidebarAkaiApcMini(side, idx)
+
+  def dimMatrixSidebarAkaiApcMini(self, side=True, idx=True):
+    if self.verbose: self.msg("dimMatrixSidebarAkaiApcMini")
+    if side is True and idx is True:
+      for i in range(100, 108): self.emc.midiOut.note_on(i, 0)
+      for i in range(112, 120): self.emc.midiOut.note_on(i, 0)
+      return True
+
+    if side == self.sidebar_right:
+      if idx is True: #all on
+        for i in range(112, 120): self.emc.midiOut.note_on(i, 1)
+      elif idx >= 0 and idx < 8: 
+        idx2 = 112+idx; self.emc.midiOut.note_on(idx2, 1)
+      else: 
+        self.msg("dimMatrixSidebarAkaiApcMini right called with invalid index: " + str(idx))
+        return None
+
   ############# illuminate matrix sidebar #############
 
   def illumMatrixSidebar(self, side=True, idx=True, color=1):
     if self.midiCtrlName == 'aka_apcmini2' or \
        self.midiCtrlName == 'akaiApcMiniMk2': 
          self.illumMatrixSidebarAkaiApcMini(side, idx, color)
-
-  def dimMatrixSidebarAkaiApcMini(self):
-    if self.verbose: self.msg("dimMatrixSidebarAkaiApcMini")
-    for i in range(100, 108): self.emc.midiOut.note_on(i, 0)
-    for i in range(112, 120): self.emc.midiOut.note_on(i, 0)
 
   def illumMatrixSidebarAkaiApcMini(self, side=True, idx=True, color=1):
     try:

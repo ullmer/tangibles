@@ -9,6 +9,7 @@ from enoIpanelMidi import *
 ############# Enodia interaction panel MIDI manager #############
 
 class enoIpanelMidiMgr(enoIpanelMidi):
+  sidebarButtonCurrentlyActive = None
 
   ############# constructor #############
 
@@ -24,8 +25,12 @@ class enoIpanelMidiMgr(enoIpanelMidi):
   ############# handle sidebar #############
 
   def rightSidebarPress(self, whichButton):
+    if self.sidebarButtonCurrentlyActive is not None:
+      self.dimSidebar(self.sidebar_right, self.sidebarButtonCurrentlyActive)
+
     if self.verbose: self.msg("rightSidebarPress " + str(whichButton))
     self.illumMatrixSidebar(self.sidebar_right, whichButton, 1)
+    self.sidebarButtonCurrentlyActive = whichButton
 
   ############# midi cb #############
 
