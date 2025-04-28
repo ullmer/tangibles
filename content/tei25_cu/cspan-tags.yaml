@@ -19,6 +19,14 @@ interactionPanel:
     JJBBBBBBB
     JJJJJJJJJ
 
+  midi:
+    akaiApcMiniMk2:
+      illum:      {B: [], C: [], c: [], E: [], F: [], H: [],
+                   h: [], J: [], M: [], T: [], S: [], s: [],
+                   w: [], P: []}
+
+      brightness: {default: 3, max: 6, min: 1}
+
   charMap:  
     B: [busCom,  agricu, banFin, comput, fedBud, ecoPol, empPol, transp]
     C: [camEle,  campai, legBra, preCam, preNom, camWhi]
