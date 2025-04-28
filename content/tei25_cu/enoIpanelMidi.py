@@ -107,12 +107,14 @@ class enoIpanelMidi(enoIpanelYaml):
 
     if self.verbose: self.msg("rcm" + str(charMap) + " || " + str(colorMap))
     for charMapKey in charMap:
-      if self.casePaired and self.notAllUpperAlpha(charMapKey): continue # ignore elements if not all uppercase & alpha
+      if self.casePaired and self.notAllUpperAlpha(charMapKey): 
+        continue # ignore elements if not all uppercase & alpha
       abbrev    = charMap[charMapKey][0]
       if abbrev not in colorMap: 
         if charMapKey in colorMap: abbrev = charMapKey
         else: 
-          self.msg("registerColormap: abbrev, charMapKey not in colorMap: " + str(abbrev) + str(colorMap)); continue
+          self.msg("registerColormap: abbrev, charMapKey not in colorMap: " + \
+                   str(abbrev) + str(colorMap)); continue
 
       illumVal  = colorMap[abbrev]
       self.abbrev2singleKey[abbrev]     = charMapKey
@@ -121,18 +123,7 @@ class enoIpanelMidi(enoIpanelYaml):
       self.singleKey2ColorVal[charMapKey]      = illumVal[0]
       if len(illumVal)>1: self.singleKey2ColorVal[charMapKeyLower] = illumVal[1]
     
-    #first, map all upper-case single-characters to two characters
-    #then,  map two characters to (initially, single-value) mappings for upper- and lowercase charmaps
-
     if self.verbose: self.msg("singleKey2ColorVal: " + str(self.singleKey2ColorVal))
-
-#midiIllum:
-#  akaiApcMiniMk2: {rm: [9, 10], me: [61, 62], gl: [43, 45], se: [5, 7], ne: [41, 38], pl: [27, 19]}
-#
-#interactionPanel:
-#  charMap:
-#    {N: [NE], n: [vt, nh, me, ct, ri, ma],
-#     M: [ME], m: [pa, ny, nj, de, dc, md],
 
   ############# map character to color #############
 
@@ -141,21 +132,21 @@ class enoIpanelMidi(enoIpanelYaml):
       if self.singleKey2ColorVal is None: 
         if self.tagYd is None: self.msg("mapCharToColor: tagYd is none!"); return None
 
-      midiMap  = self.tagYd['interactionPanel']['midi'][self.midiCtrlName]
+      midiMap   = self.tagYd['interactionPanel']['midi'][self.midiCtrlName]
       colorMap  = midiMap['illum']
       brightMap = midiMap['brightness']
 
       charMap  = self.tagYd['interactionPanel']['charMap']
 
-      #self.msg("mapCharToColor " + str(colorMap) + " :: " + str(charMap))
+      #if self.verbose: self.msg("mapCharToColor " + str(colorMap) + " :: " + str(charMap))
       if self.singleKey2Abbrev is None: self.registerColormap(colorMap, charMap) 
 
-      #self.msg("mapCharToColor foo: " + str(self.singleKey2ColorVal) + "|" + str(tagChar))
+      #if self.verbose: 
+      #  self.msg("mapCharToColor foo: " + str(self.singleKey2ColorVal) + "|" + str(tagChar))
 
       if tagChar not in self.singleKey2ColorVal: return None
 
       cv = self.singleKey2ColorVal[tagChar]
-      #cv = self.abbrev2ColorVal[tagChar]
       return cv
 
     except:
