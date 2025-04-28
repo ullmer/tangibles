@@ -21,6 +21,12 @@ class enoIpanelMidiMgr(enoIpanelMidi):
   def msg(self, msgStr): print("enoIpanelMidiMgr msg: "   + str(msgStr))
   def err(self, msgStr): print("enoIpanelMidiMgr error: " + str(msgStr)); traceback.print_exc(); 
 
+  ############# handle sidebar #############
+
+  def rightSidebarPress(self, whichButton):
+    if self.verbose: self.msg("rightSidebarPress " + str(whichButton))
+    self.illumMatrixSidebar(self.sidebar_right, whichButton, 1)
+
   ############# midi cb #############
 
   def midiCB(self, control, arg): 
@@ -29,7 +35,13 @@ class enoIpanelMidiMgr(enoIpanelMidi):
     if arg == 0: return #ignore pad release
 
     #print("midiCB stub %s: %s" % (tags[tagIdx], str(control)))
-    print("midiCB stub %s: %s" % (control, arg))
+    print("enoIpanelMidiMgr midiCB stub %s: %s" % (control, arg))
+
+    if len(control) == 2: #standard
+      if control[1] == '9': #right sidebar candidate
+        if control[0] >= 'a' and control[0] <= 'h':
+          whichSidebar = ord(control[0]) - ord('a')
+          self.rightSidebarPress(whichSidebar)
   
 ############# main #############
 
@@ -37,7 +49,7 @@ if __name__ == "__main__":
   print("=" * 70)
   #eimm = enoIpanelMidiMgr(tagFn = 'cspan-tags.yaml', casePaired=False)
   eimm = enoIpanelMidiMgr(tagFn = 'us-bea.yaml',     casePaired=True)
-  eimm.illumMatrixSidebar()
+  #eimm.illumMatrixSidebar()
 
   while True:
     eimm.pollMidi()
