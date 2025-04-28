@@ -45,6 +45,7 @@ class enoIpanelMidi(enoIpanelYaml):
     if self.autolaunchMidi: 
       self.initMidi()
       self.illumCharMatrixMidi()
+      self.dimMatrixSidebarAkaiApcMini()
 
   ############# error, msg #############
 
@@ -228,7 +229,13 @@ class enoIpanelMidi(enoIpanelYaml):
 
   def illumMatrixSidebar(self, side=True, idx=True, color=1):
     if self.midiCtrlName == 'aka_apcmini2' or \
-       self.midiCtrlName == 'akaiApcMiniMk2': self.illumMatrixSidebarAkaiApcMini(side, idx, color)
+       self.midiCtrlName == 'akaiApcMiniMk2': 
+         self.illumMatrixSidebarAkaiApcMini(side, idx, color)
+
+  def dimMatrixSidebarAkaiApcMini(self):
+    if self.verbose: self.msg("dimMatrixSidebarAkaiApcMini")
+    for i in range(100, 108): self.emc.midiOut.note_on(i, 0)
+    for i in range(112, 120): self.emc.midiOut.note_on(i, 0)
 
   def illumMatrixSidebarAkaiApcMini(self, side=True, idx=True, color=1):
     try:
