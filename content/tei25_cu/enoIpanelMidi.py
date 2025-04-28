@@ -166,8 +166,12 @@ class enoIpanelMidi(enoIpanelYaml):
 
       self.msg("initMidi (%s, %i)" % (mcn, mcoi))
 
-      self.emc = enoMidiController(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
-      #self.emc.registerControls(self.midiCB)
+      #self.emc = enoMidiController(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
+      self.emc = enoMidiController('aka_apcmini2', midiCtrlOutputId=mcoi, activateOutput=True)
+
+      #emc = enoMidiController('aka_apcmini2', midiCtrlOutputId=4, activateOutput=True, verbose=True)
+
+      self.emc.registerControls(self.midiCB)
     except: self.err("initMidi")
 
   ############# illuminate default midi #############
@@ -218,7 +222,7 @@ class enoIpanelMidi(enoIpanelYaml):
 
   ############# midi cb #############
 
-  def midiCB(control, arg): 
+  def midiCB(self, control, arg): 
     global tags, tagIdx
 
     if arg == 0: return #ignore pad release

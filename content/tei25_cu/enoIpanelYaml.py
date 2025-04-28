@@ -66,7 +66,6 @@ class enoIpanelYaml:
       tag = cme[0]
 
       self.tagCharToCategory[tagChar] = tag
-      #self.tagCharToCatList[tagChar]  = cme[1:]
       self.tagCharToCatList[tagChar]  = cme[0:]
       self.tagCharToCatLIdx[tagChar]  = 0
 

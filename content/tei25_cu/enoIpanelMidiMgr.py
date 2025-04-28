@@ -23,28 +23,27 @@ class enoIpanelMidiMgr(enoIpanelMidi):
 
   ############# midi cb #############
 
-  def midiCB(control, arg): 
+  def midiCB(self, control, arg): 
     global tags, tagIdx
 
     if arg == 0: return #ignore pad release
 
-    print("midiCB stub %s: %s" % (tags[tagIdx], str(control)))
+    #print("midiCB stub %s: %s" % (tags[tagIdx], str(control)))
+    print("midiCB stub %s: %s" % (control, arg))
   
 ############# main #############
 
 if __name__ == "__main__":
-  #cm = enoIpanelMidi(tagFn = 'cspan-tags.yaml')
-  #cm = enoIpanelMidi(tagFn = 'us-bea.yaml', autolaunchMidi=False)
-
   print("=" * 70)
-  #cm = enoIpanelMidi(tagFn = 'cspan-tags.yaml', casePaired=False)
-  cm = enoIpanelMidi(tagFn = 'us-bea.yaml',     casePaired=True)
-  m  = cm.getCharMatrix()
-  cm.illumCharMatrixMidi()
-  print(m)
+  #eimm = enoIpanelMidiMgr(tagFn = 'cspan-tags.yaml', casePaired=False)
+  eimm = enoIpanelMidiMgr(tagFn = 'us-bea.yaml',     casePaired=True)
+
+  #m    = eimm.getCharMatrix()
+  #cm.illumCharMatrixMidi()
+  #print(m)
 
   while True:
-    emc.pollMidi()
+    eimm.pollMidi()
     time.wait(100)
 
 ### end ###
