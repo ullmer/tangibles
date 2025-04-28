@@ -12,8 +12,8 @@ from enoIpanelYaml import *
 class enoIpanelMidi(enoIpanelYaml):
 
   emc     = None #enodia midi controller
-  #verbose = False
-  verbose = True
+  verbose = False
+  #verbose = True
 
   tagCharToColor = None
   autolaunchMidi = True
@@ -169,12 +169,7 @@ class enoIpanelMidi(enoIpanelYaml):
       mcoi = self.midiCtrlOutputId 
 
       self.msg("initMidi (%s, %i)" % (mcn, mcoi))
-
-      #self.emc = enoMidiController(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
-      self.emc = enoMidiController('aka_apcmini2', midiCtrlOutputId=mcoi, activateOutput=True)
-
-      #emc = enoMidiController('aka_apcmini2', midiCtrlOutputId=4, activateOutput=True, verbose=True)
-
+      self.emc = enoMidiController(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
       self.emc.registerControls(self.midiCB)
     except: self.err("initMidi")
 
@@ -233,7 +228,8 @@ class enoIpanelMidi(enoIpanelYaml):
          self.dimMatrixSidebarAkaiApcMini(side, idx)
 
   def dimMatrixSidebarAkaiApcMini(self, side=True, idx=True):
-    if self.verbose: self.msg("dimMatrixSidebarAkaiApcMini")
+    if self.verbose: 
+      self.msg("dimMatrixSidebarAkaiApcMini " + str(side) + " " + str(idx)) 
     if side is True and idx is True:
       for i in range(100, 108): self.emc.midiOut.note_on(i, 0)
       for i in range(112, 120): self.emc.midiOut.note_on(i, 0)
@@ -241,9 +237,9 @@ class enoIpanelMidi(enoIpanelYaml):
 
     if side == self.sidebar_right:
       if idx is True: #all on
-        for i in range(112, 120): self.emc.midiOut.note_on(i, 1)
+        for i in range(112, 120): self.emc.midiOut.note_on(i, 0)
       elif idx >= 0 and idx < 8: 
-        idx2 = 112+idx; self.emc.midiOut.note_on(idx2, 1)
+        idx2 = 112+idx; self.emc.midiOut.note_on(idx2, 0)
       else: 
         self.msg("dimMatrixSidebarAkaiApcMini right called with invalid index: " + str(idx))
         return None
@@ -257,7 +253,8 @@ class enoIpanelMidi(enoIpanelYaml):
 
   def illumMatrixSidebarAkaiApcMini(self, side=True, idx=True, color=1):
     try:
-      if self.emc is None: self.msg("illumMatrixXYCAkaiApcMini: emc not initialized"); return None
+      if self.emc is None: 
+        self.msg("illumMatrixXYCAkaiApcMini: emc not initialized"); return None
       if self.verbose: self.msg("illumMatrixSideAkaiApcMini")
 
       if side is True and idx is True: #all on
@@ -295,7 +292,7 @@ class enoIpanelMidi(enoIpanelYaml):
 
     if arg == 0: return #ignore pad release
 
-    print("midiCB stub %s: %s" % (tags[tagIdx], str(control)))
+    if self.verbose: print("midiCB stub %s: %s" % (tags[tagIdx], str(control)))
   
 ############# main #############
 

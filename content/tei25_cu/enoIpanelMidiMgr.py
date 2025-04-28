@@ -39,8 +39,7 @@ class enoIpanelMidiMgr(enoIpanelMidi):
 
     if arg == 0: return #ignore pad release
 
-    #print("midiCB stub %s: %s" % (tags[tagIdx], str(control)))
-    print("enoIpanelMidiMgr midiCB stub %s: %s" % (control, arg))
+    if self.verbose: print("enoIpanelMidiMgr midiCB stub %s: %s" % (control, arg))
 
     if len(control) == 2: #standard
       if control[1] == '9': #right sidebar candidate
