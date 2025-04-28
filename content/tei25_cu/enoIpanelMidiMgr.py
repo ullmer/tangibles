@@ -4,7 +4,9 @@
 
 import sys, os, yaml, traceback
 from pygame import time
+
 from enoMidiController import *
+from enoIpanelMidi     import *
 
 ############# enodia interaction panel MIDI manager #############
 
@@ -14,8 +16,11 @@ class enoIpanelMidiMgr:
   verbose = False
   #verbose = True
 
+  autolaunchMidi = True
+
   sidebar_bottom = 1
   sidebar_right  = 2
+  sidebarButtonCurrentlyActive = None
 
   deviceColorLookups = {
     'akaiApcMiniMk2' : ['interactionPanel', 'akaiColorMap']
@@ -154,8 +159,10 @@ class enoIpanelMidiMgr:
 
 if __name__ == "__main__":
   print("=" * 70)
-  #eimm = enoIpanelMidiMgr(tagFn = 'cspan-tags.yaml', casePaired=False)
-  eimm = enoIpanelMidiMgr(tagFn = 'us-bea.yaml',     casePaired=True)
+  eim1 = enoIpanelMidi(tagFn = 'cspan-tags.yaml', casePaired=False, autolaunchMidi=False)
+  eim2 = enoIpanelMidi(tagFn = 'us-bea.yaml',     casePaired=True,  autolaunchMidi=False)
+
+  eimm = enoIpanelMidiMgr()
 
   while True:
     eimm.pollMidi()
