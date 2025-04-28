@@ -96,7 +96,9 @@ class enoIpanelMidi(enoIpanelYaml):
       if self.notAllUpperAlpha(charMapKey): continue # ignore elements if not all uppercase & alpha
       abbrev    = charMap[charMapKey][0]
       if abbrev not in colorMap: 
-        self.msg("registerColormap: abbrev not in colorMap: " + str(abbrev) + str(colorMap)); continue
+        if charMapKey in colorMap: abbrev = charMapKey
+        else: 
+          self.msg("registerColormap: abbrev, charMapKey not in colorMap: " + str(abbrev) + str(colorMap)); continue
 
       illumVal  = colorMap[abbrev]
       self.abbrev2singleKey[abbrev]     = charMapKey
@@ -218,7 +220,8 @@ if __name__ == "__main__":
   #cm = enoIpanelMidi(tagFn = 'us-bea.yaml', autolaunchMidi=False)
 
   print("=" * 70)
-  cm = enoIpanelMidi(tagFn = 'us-bea.yaml')
+  cm = enoIpanelMidi(tagFn = 'cspan-tags.yaml')
+  #cm = enoIpanelMidi(tagFn = 'us-bea.yaml')
   m  = cm.getCharMatrix()
   cm.illumCharMatrixMidi()
   print(m)
