@@ -12,7 +12,8 @@ from enoIpanelYaml import *
 class enoIpanelMidi(enoIpanelYaml):
 
   emc     = None #enodia midi controller
-  verbose = False
+  #verbose = False
+  verbose = True
 
   tagCharToColor = None
   autolaunchMidi = True
@@ -30,6 +31,7 @@ class enoIpanelMidi(enoIpanelYaml):
 
   midiCtrlName     = 'akaiApcMiniMk2'
   midiCtrlOutputId = 4
+  casePaired       = False
 
   ############# constructor #############
 
@@ -93,7 +95,7 @@ class enoIpanelMidi(enoIpanelYaml):
 
     if self.verbose: self.msg("rcm" + str(charMap) + " || " + str(colorMap))
     for charMapKey in charMap:
-      if self.notAllUpperAlpha(charMapKey): continue # ignore elements if not all uppercase & alpha
+      if self.casePaired and self.notAllUpperAlpha(charMapKey): continue # ignore elements if not all uppercase & alpha
       abbrev    = charMap[charMapKey][0]
       if abbrev not in colorMap: 
         if charMapKey in colorMap: abbrev = charMapKey
@@ -105,7 +107,7 @@ class enoIpanelMidi(enoIpanelYaml):
 
       charMapKeyLower = charMapKey.lower()  #this is abbrev, not char
       self.singleKey2ColorVal[charMapKey]      = illumVal[0]
-      self.singleKey2ColorVal[charMapKeyLower] = illumVal[1]
+      if len(illumVal)>1: self.singleKey2ColorVal[charMapKeyLower] = illumVal[1]
     
     #first, map all upper-case single-characters to two characters
     #then,  map two characters to (initially, single-value) mappings for upper- and lowercase charmaps
@@ -183,6 +185,7 @@ class enoIpanelMidi(enoIpanelYaml):
  
           if mch == '.': illumFunc(i, j, 0)
           else: 
+            if self.verbose: self.msg('illumCharMatrixMidi: ' + str(mch))
             color = self.mapCharToColor(mch)
             if color is not None: illumFunc(i, j, color)
 
