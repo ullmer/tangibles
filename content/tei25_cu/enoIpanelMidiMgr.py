@@ -185,8 +185,8 @@ class enoIpanelMidiMgr:
 
 if __name__ == "__main__":
   print("=" * 70)
-  eim1 = enoIpanelMidi(tagFn = 'cspan-tags.yaml', casePaired=False, autolaunchMidi=False)
-  eim2 = enoIpanelMidi(tagFn = 'us-bea.yaml',     casePaired=True,  autolaunchMidi=False)
+  eim1 = enoIpanelMidi(tagFn = 'us-bea.yaml',     casePaired=True,  autolaunchMidi=False)
+  eim2 = enoIpanelMidi(tagFn = 'cspan-tags.yaml', casePaired=False, autolaunchMidi=False)
 
   eimm = enoIpanelMidiMgr()
   eimm.registerIpanel(eim1, 0) #bootstrapping logic, to be reworked
