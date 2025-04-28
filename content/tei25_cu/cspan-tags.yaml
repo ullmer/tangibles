@@ -21,9 +21,9 @@ interactionPanel:
 
   midi:
     akaiApcMiniMk2:
-      illum:      {B: [], C: [], c: [], E: [], F: [], H: [],
-                   h: [], J: [], M: [], T: [], S: [], s: [],
-                   w: [], P: []}
+      illum:      {B: [41], C: [ 3], c: [ 1], E: [48], F: [37], H: [19],
+                   h: [12], J: [45], M: [10], T: [54], S: [47], s: [44],
+                   w: [ 5], P: [53]}
 
       brightness: {default: 3, max: 6, min: 1}
 
