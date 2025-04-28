@@ -56,7 +56,8 @@ class enoIpanelMidiMgr:
 
     self.ipanelSidebarDict[whichSidebarButton] = ipanelHandle
     ipanelHandle.emc                           = self.emc #possibly revisit
-    if self.sidebarButtonCurrentlyActive == whichSidebar:
+
+    if self.sidebarButtonCurrentlyActive == whichSidebarButton:
       ipanelHandle.illumCharMatrixMidi()
   
   ############# get registered interaction panel #############
@@ -162,8 +163,8 @@ class enoIpanelMidiMgr:
     self.illumMatrixSidebar(self.sidebar_right, whichButton, 1)
     self.sidebarButtonCurrentlyActive = whichButton
 
-
-      ipanelHandle.illumCharMatrixMidi()
+    ripan = self.getRegisteredIpanel(whichButton)
+    if ripan is not None: ripan.illumCharMatrixMidi()
 
   ############# midi cb #############
 
