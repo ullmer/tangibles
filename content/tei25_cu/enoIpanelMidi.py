@@ -7,7 +7,7 @@ from pygame import time
 from enoMidiController import *
 from enoIpanelYaml import *
 
-############# cspan midi #############
+############# enodia interaction panel midi #############
 
 class enoIpanelMidi(enoIpanelYaml):
 
@@ -211,71 +211,6 @@ class enoIpanelMidi(enoIpanelYaml):
       else:                             self.emc.midiOut.note_on(addr, color, 3)
     except: self.err("illumMatrixXYCAkaiApcMini")
   
-  ############# dim matrix sidebar #############
-
-  def dimSidebar(self, side=True, idx=True):
-    if self.midiCtrlName == 'aka_apcmini2' or \
-       self.midiCtrlName == 'akaiApcMiniMk2': 
-         self.dimMatrixSidebarAkaiApcMini(side, idx)
-
-  def dimMatrixSidebarAkaiApcMini(self, side=True, idx=True):
-    if self.verbose: 
-      self.msg("dimMatrixSidebarAkaiApcMini " + str(side) + " " + str(idx)) 
-    if side is True and idx is True:
-      for i in range(100, 108): self.emc.midiOut.note_on(i, 0)
-      for i in range(112, 120): self.emc.midiOut.note_on(i, 0)
-      return True
-
-    if side == self.sidebar_right:
-      if idx is True: #all on
-        for i in range(112, 120): self.emc.midiOut.note_on(i, 0)
-      elif idx >= 0 and idx < 8: 
-        idx2 = 112+idx; self.emc.midiOut.note_on(idx2, 0)
-      else: 
-        self.msg("dimMatrixSidebarAkaiApcMini right called with invalid index: " + str(idx))
-        return None
-
-  ############# illuminate matrix sidebar #############
-
-  def illumMatrixSidebar(self, side=True, idx=True, color=1):
-    if self.midiCtrlName == 'aka_apcmini2' or \
-       self.midiCtrlName == 'akaiApcMiniMk2': 
-         self.illumMatrixSidebarAkaiApcMini(side, idx, color)
-
-  def illumMatrixSidebarAkaiApcMini(self, side=True, idx=True, color=1):
-    try:
-      if self.emc is None: 
-        self.msg("illumMatrixXYCAkaiApcMini: emc not initialized"); return None
-      if self.verbose: self.msg("illumMatrixSideAkaiApcMini")
-
-      if side is True and idx is True: #all on
-         for i in range(100, 108): self.emc.midiOut.note_on(i, 1, color)
-         for i in range(112, 120): self.emc.midiOut.note_on(i, 1, color)
-
-      if side == self.sidebar_bottom:
-        if idx is True: #all on
-          for i in range(100, 108): self.emc.midiOut.note_on(i, 1, color)
-        elif idx >= 0 and idx < 8: 
-          idx2 = 100+idx; self.emc.midiOut.note_on(idx2, 1, color)
-        else: 
-          self.msg("illumMatrixSidebarAkaiApcMini bottom called with invalid index: " + str(idx))
-          return None
-
-      if side == self.sidebar_right:
-        if idx is True: #all on
-          for i in range(112, 120): self.emc.midiOut.note_on(i, 1)
-        elif idx >= 0 and idx < 8: 
-          idx2 = 112+idx; self.emc.midiOut.note_on(idx2, 1)
-        else: 
-          self.msg("illumMatrixSidebarAkaiApcMini right called with invalid index: " + str(idx))
-          return None
-
-      #self.emc.midiOut.note_on(100, 1)
-      #self.emc.midiOut.note_on(112, 1)
-
-      #thanks: https://forum.bome.com/t/new-akai-pro-apc-mini-mk2-initial-led-mapping-summary/4752
-    except: self.err("illumMatrixSidebarAkaiApcMini")
-
   ############# midi cb #############
 
   def midiCB(self, control, arg): 
