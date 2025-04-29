@@ -5,7 +5,8 @@
 import sys, os, yaml, traceback
 from pygame import time
 from enoMidiController import *
-from enoIpanelYaml import *
+from enoMidiAkai       import *
+from enoIpanelYaml     import *
 
 ############# enodia interaction panel midi #############
 
@@ -45,7 +46,7 @@ class enoIpanelMidi(enoIpanelYaml):
     if self.autolaunchMidi: 
       self.initMidi()
       self.illumCharMatrixMidi()
-      self.dimMatrixSidebarAkaiApcMini()
+      self.emc.dimMatrixSidebarAkaiApcMini()
 
   ############# error, msg #############
 
@@ -161,7 +162,8 @@ class enoIpanelMidi(enoIpanelYaml):
       mcoi = self.midiCtrlOutputId 
 
       self.msg("initMidi (%s, %i)" % (mcn, mcoi))
-      self.emc = enoMidiController(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
+      #self.emc = enoMidiController(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
+      self.emc = enoMidiAkai(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
       self.emc.registerControls(self.midiCB)
     except: self.err("initMidi")
 
