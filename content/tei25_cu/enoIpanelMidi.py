@@ -163,7 +163,7 @@ class enoIpanelMidi(enoIpanelYaml):
 
       self.msg("initMidi (%s, %i)" % (mcn, mcoi))
       #self.emc = enoMidiController(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
-      self.emc = enoMidiAkai(mcn, midiCtrlOutputId=mcoi, activateOutput=True, emc=self.emc)
+      self.emc = enoMidiAkai(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
       self.emc.registerControls(self.midiCB)
     except: self.err("initMidi")
 
