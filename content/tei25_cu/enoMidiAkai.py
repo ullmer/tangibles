@@ -37,9 +37,9 @@ class enoMidiAkai(enoMidiController):
 
   ############# constructor #############
 
-  def __init__(self, **kwargs):
+  def __init__(self, controllerName, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
-    super().__init__()
+    super().__init__(controllerName)
 
     if self.autolaunchMidi: 
       self.initMidi()
