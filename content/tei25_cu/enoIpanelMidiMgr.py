@@ -6,6 +6,7 @@ import sys, os, yaml, traceback
 from pygame import time
 
 from enoMidiController import *
+from enoMidiAkai       import *
 from enoIpanelMidi     import *
 
 ############# enodia interaction panel MIDI manager #############
@@ -84,7 +85,8 @@ class enoIpanelMidiMgr:
       mcoi = self.midiCtrlOutputId 
 
       self.msg("initMidi (%s, %i)" % (mcn, mcoi))
-      self.emc = enoMidiController(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
+      #self.emc = enoMidiController(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
+      self.emc = enoMidiAkai(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
       self.emc.registerControls(self.midiCB)
     except: self.err("initMidi")
   
@@ -92,10 +94,10 @@ class enoIpanelMidiMgr:
 
   def rightSidebarPress(self, whichButton):
     if self.sidebarButtonCurrentlyActive is not None:
-      self.dimSidebar(self.sidebar_right, self.sidebarButtonCurrentlyActive)
+      self.emc.dimSidebar(self.sidebar_right, self.sidebarButtonCurrentlyActive)
 
     if self.verbose: self.msg("rightSidebarPress " + str(whichButton))
-    self.illumMatrixSidebar(self.sidebar_right, whichButton, 1)
+    self.emc.illumMatrixSidebar(self.sidebar_right, whichButton, 1)
     self.sidebarButtonCurrentlyActive = whichButton
 
     ripan = self.getRegisteredIpanel(whichButton)

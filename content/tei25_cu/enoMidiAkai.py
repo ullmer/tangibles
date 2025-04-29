@@ -8,7 +8,7 @@ from enoMidiController import *
 
 ############# enodia interaction panel midi #############
 
-class enoMidiAkai:
+class enoMidiAkai(enoMidiController):
 
   emc     = None #enodia midi controller
   verbose = False

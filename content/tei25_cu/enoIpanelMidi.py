@@ -170,8 +170,8 @@ class enoIpanelMidi(enoIpanelYaml):
   def illumCharMatrixMidi(self):
     try:
       illumFunc = None
-      if self.midiCtrlName == 'aka_apcmini2':   illumFunc = self.illumMatrixXYCAkaiApcMini
-      if self.midiCtrlName == 'akaiApcMiniMk2': illumFunc = self.illumMatrixXYCAkaiApcMini
+      if self.midiCtrlName == 'aka_apcmini2':   illumFunc = self.emc.illumMatrixXYCAkaiApcMini
+      if self.midiCtrlName == 'akaiApcMiniMk2': illumFunc = self.emc.illumMatrixXYCAkaiApcMini
 
       if illumFunc is None:
         self.msg("illumCharMatrixMidi: no controller function identified"); return
