@@ -22,6 +22,7 @@ class enoMidiAkai(enoMidiController):
   abbrev2singleKey   = None
   abbrev2ColorVal    = None 
 
+  rows, cols     = 8, 8
   sidebar_bottom = 1
   sidebar_right  = 2
 
@@ -41,11 +42,6 @@ class enoMidiAkai(enoMidiController):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__(controllerName)
 
-    if self.autolaunchMidi: 
-      self.initMidi()
-      #self.illumCharMatrixMidi()
-      self.dimMatrixSidebarAkaiApcMini()
-
   ############# error, msg #############
 
   def err(self, msgStr): print("enoMidiAkai error: " + str(msgStr)); traceback.print_exc(); 
@@ -58,18 +54,6 @@ class enoMidiAkai(enoMidiController):
       self.msg("pollMidi: Enodia midi controller emc is not initialized"); return None
 
     self.emc.pollMidi()
-
-  ############# midi cb #############
-
-  def initMidi(self):
-    try:
-      mcn  = self.midiCtrlName     
-      mcoi = self.midiCtrlOutputId 
-
-      self.msg("initMidi (%s, %i)" % (mcn, mcoi))
-      self.emc = enoMidiController(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
-      self.emc.registerControls(self.midiCB)
-    except: self.err("initMidi")
 
   ############# illuminate matrix x, y, color #############
 
@@ -108,6 +92,9 @@ class enoMidiAkai(enoMidiController):
   def dimMatrixSidebarAkaiApcMini(self, side=True, idx=True):
     if self.verbose: 
       self.msg("dimMatrixSidebarAkaiApcMini " + str(side) + " " + str(idx)) 
+
+    if self.emc is None: self.msg("dimMatrixSidebarAkaiApcMini: emc not assigned"); return None
+
     if side is True and idx is True:
       for i in range(100, 108): self.emc.midiOut.note_on(i, 0)
       for i in range(112, 120): self.emc.midiOut.note_on(i, 0)
