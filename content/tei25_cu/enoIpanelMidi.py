@@ -24,6 +24,9 @@ class enoIpanelMidi(enoIpanelYaml):
   abbrev2singleKey   = None
   abbrev2ColorVal    = None 
 
+  illumFunc   = None
+  coord2color = None
+
   sidebar_bottom = 1
   sidebar_right  = 2
 
@@ -84,6 +87,8 @@ class enoIpanelMidi(enoIpanelYaml):
 
       return result
     except: self.err("getDeviceColorLookup " + str(midiCtrlName)); return None
+
+  ############# helpers #############
 
   def isAllUpperAlpha(self, text):
     try:    result = (text.isalpha() and text.isupper()); return result
@@ -169,16 +174,10 @@ class enoIpanelMidi(enoIpanelYaml):
 
   ############# illuminate default midi #############
 
-  def illumCharMatrixMidi(self):
+  def cacheCharMatrixColors(self):
     try:
-      illumFunc = None
-      if self.midiCtrlName == 'aka_apcmini2':   illumFunc = self.emc.illumMatrixXYCAkaiApcMini
-      if self.midiCtrlName == 'akaiApcMiniMk2': illumFunc = self.emc.illumMatrixXYCAkaiApcMini
-
-      if illumFunc is None:
-        self.msg("illumCharMatrixMidi: no controller function identified"); return
-
-      if self.emc is None: self.err("illumCharMatrixMidi: self.emc is none!")
+      if self.coord2color is None:
+        self.coord2color = {}
 
       m = self.getCharMatrix()
       mrows = m.splitlines()
@@ -186,15 +185,42 @@ class enoIpanelMidi(enoIpanelYaml):
         row = mrows[j]
         for i in range(self.cols):
           try:    mch   = row[i]
-          except: self.err("illumCharMatrixMidi error on %i, %i" % (i,j)); continue
+          except: self.err("cacheCharMatrixColors error on %i, %i" % (i,j)); continue
  
-          if mch == '.': illumFunc(i, j, 0)
+          if mch == '.': self.coord2color[(i,j)] = 0
           else: 
-            if self.verbose: self.msg('illumCharMatrixMidi: ' + str(mch))
+            if self.verbose: self.msg('cacheCharMatrixColors: ' + str(mch))
             color = self.mapCharToColor(mch)
-            if color is not None: illumFunc(i, j, color)
+            if color is not None: self.coord2color[(i,j)] = color
+        self.coord2color = {}
 
-    except: self.err("illumCharMatrixMidi"); return None
+    except: self.err("cacheCharMatrixColors"); return None
+
+  ############# initiate illumination func #############
+
+  def initIllumFunc(self):
+      if self.midiCtrlName == 'aka_apcmini2':   self.illumFunc = self.emc.illumMatrixXYCAkaiApcMini
+      if self.midiCtrlName == 'akaiApcMiniMk2': self.illumFunc = self.emc.illumMatrixXYCAkaiApcMini
+
+      if self.illumFunc is None:
+        self.msg("illumCharMatrixMidi: no controller function identified"); return
+
+      if self.emc is None: self.err("illumCharMatrixMidi: self.emc is none!")
+
+  ############# illuminate default midi #############
+
+  def illumCharMatrixMidi(self):
+    try:
+      if self.illumFunc is None:   self.initIllumFunc()
+      if self.coord2color is None: self.cacheCharMatrixColors()
+      for j in range(self.rows):
+        for i in range(self.cols):
+          coord = (i,j)
+          if coord in self.coord2color:
+            color = self.coord2coord[coord]
+            self.illumFunc(i, j, color)
+
+    except: self.err("illumCharMatrixColors"); return None
    
   ############# midi cb #############
 
