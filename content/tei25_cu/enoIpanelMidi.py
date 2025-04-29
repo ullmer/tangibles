@@ -66,7 +66,8 @@ class enoIpanelMidi(enoIpanelYaml):
   
     try:
       if midiCtrlName not in self.deviceColorLookups:
-        self.err("getDeviceColorLookup: midi controller name not in device color lookups"); return None
+        self.err("getDeviceColorLookup: midi controller name not in device color lookups")
+        return None
 
       dcl = self.deviceColorLookups[midiCtrlName]
 
@@ -193,24 +194,6 @@ class enoIpanelMidi(enoIpanelYaml):
 
     except: self.err("illumCharMatrixMidi"); return None
    
-  ############# illuminate matrix x, y, color #############
-
-  def illumMatrixXYC(self, x, y, color):
-    if self.midiCtrlName == 'aka_apcmini2' or \
-       self.midiCtrlName == 'akaiApcMiniMk2': self.illumMatrixXYCAkaiApcMini(x,y,color)
-
-  def illumMatrixXYCAkaiApcMini(self, x, y, color):
-    try:
-      #self.msg("imxyaam " + str(x) + " " + str(y))
-      #addr = self.cols * (y - 7) + x
-      addr = self.cols * (7 - y) + x
-      if self.emc is None: self.msg("illumMatrixXYCAkaiApcMini: emc not initialized"); return None
-      if self.verbose: self.msg("illumMatrixXYCAkaiApcMini " + str(addr) + " " + str(color))
-      if addr is None or color is None: 
-        self.msg("illumMatrixXYCAkaiApMini args " + str(addr) + " " + str(color))
-      else:                             self.emc.midiOut.note_on(addr, color, 3)
-    except: self.err("illumMatrixXYCAkaiApcMini")
-  
   ############# midi cb #############
 
   def midiCB(self, control, arg): 
