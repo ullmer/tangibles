@@ -13,8 +13,8 @@ from enoIpanelYaml     import *
 class enoIpanelMidi(enoIpanelYaml):
 
   emc     = None #enodia midi controller
-  verbose = False
-  #verbose = True
+  #verbose = False
+  verbose = True
 
   tagCharToColor = None
   autolaunchMidi = True
@@ -175,6 +175,8 @@ class enoIpanelMidi(enoIpanelYaml):
   ############# illuminate default midi #############
 
   def cacheCharMatrixColors(self):
+    print("cacheCharMatrixMidi: ")
+
     try:
       if self.coord2color is None:
         self.coord2color = {}
@@ -213,6 +215,9 @@ class enoIpanelMidi(enoIpanelYaml):
     try:
       if self.illumFunc is None:   self.initIllumFunc()
       if self.coord2color is None: self.cacheCharMatrixColors()
+
+      print("illumCharMatrixMidi: " + str(self.coord2color))
+
       for j in range(self.rows):
         for i in range(self.cols):
           coord = (i,j)
