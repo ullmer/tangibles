@@ -43,7 +43,7 @@ class enoMidiAkai(enoMidiController):
 
     if self.autolaunchMidi: 
       self.initMidi()
-      self.illumCharMatrixMidi()
+      #self.illumCharMatrixMidi()
       self.dimMatrixSidebarAkaiApcMini()
 
   ############# error, msg #############
