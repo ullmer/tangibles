@@ -41,7 +41,7 @@ class enoIpanelMidiMgr:
 
     if self.autolaunchMidi: 
       self.initMidi()
-      self.dimMatrixSidebarAkaiApcMini()
+      self.emc.dimMatrixSidebarAkaiApcMini()
       self.rightSidebarPress(0)
 
   ############# error, msg #############
