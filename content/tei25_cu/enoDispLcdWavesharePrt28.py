@@ -31,9 +31,9 @@ class enoDispLcdWavesharePrt28:
   colorYellow = 0xFFFF00
   colorRed    = 0xFF0000
   colorBlue   = 0x0000FF
-  colorBlue   = 0xFFFFFF
+  colorWhite  = 0xFFFFFF
 
-  colorText   = colorWhite
+  colorText   = 0x555555
 
   ################# constructor #################
 
@@ -41,7 +41,7 @@ class enoDispLcdWavesharePrt28:
     self.initDisplay()
     self.loadFonts()
     #self.displayTest1("testing")
-    self.displayTest2()
+    self.displayTest3()
 
   ################# load fonts #################
 
@@ -88,8 +88,8 @@ class enoDispLcdWavesharePrt28:
 
   ################# draw text #################
 
-  def drawText(self, x, y, text, color=None)
-    textGroup = displayio.Group(scale=self.fontScale, x=57, y=120)
+  def drawText(self, x, y, text, color=None):
+    textGroup = displayio.Group(scale=self.fontScale, x=x, y=y)
     if self.font01 is not None: f = self.font01
     else:                       f = terminalio.FONT
 
@@ -100,23 +100,31 @@ class enoDispLcdWavesharePrt28:
     self.splash.append(textGroup)
     return textGroup
   
+  ################# draw labeled box #################
+ 
+  def drawLabeledBox(self, text, x, y, w=None, h=None, bgColor=None, fgColor=None):
+    if w     is None:   w       = self.boxDefaultWidth
+    if h     is None:   h       = self.boxDefaultHeight
+    if bgColor is None: bgColor = self.boxDefaultColor
+    if fgColor is None: fgColor = self.colorText
+    tdx, tdy = self.textDx, self.textDy
+
+    self.drawBox(x, y, w, h, bgColor)
+    self.drawText(x + tdx, y + tdy, text, fgColor)
+
+  ################# display test 3 #################
+
+  def displayTest3(self):
+    self.drawLabeledBox("now", 5,  5,100,80,self.colorYellow, 0x222222)
+    self.drawLabeledBox("a",   5, 90,100,80,self.colorRed,    0xdddddd)
+    self.drawLabeledBox("test",5,175,100,80,self.colorBlue,   0xeeeeee)
+
   ################# display test 2 #################
 
   def displayTest2(self):
     self.drawBox(5,  5,100,80,self.colorYellow)
     self.drawBox(5, 90,100,80,self.colorRed)
     self.drawBox(5,175,100,80,self.colorBlue)
-
-  ################# draw labeled box #################
- 
-  def drawLabeledBox(self, text, x, y, w=None, h=None, color=None):
-    if w     is None: w     = self.boxDefaultWidth
-    if h     is None: h     = self.boxDefaultHeight
-    if color is None: color = self.boxDefaultColor
-    tdx, tdy = self.textDx, self.textDy
-
-    self.drawBox(x, y, w, h, color)
-    self.drawText(x + tdx, y + tdy, text)
 
   ################# display test 1 #################
 
