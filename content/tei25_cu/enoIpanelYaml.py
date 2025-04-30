@@ -14,6 +14,7 @@ class enoIpanelYaml:
   tagCharToCategory = None
   tagCharToCatList  = None
   tagCharToCatLIdx  = None #index within tagCharToCatList keyed arrays
+  cachedMatrixAbbrevs = None
 
   colorMap  = None
   brightMap = None
@@ -27,11 +28,18 @@ class enoIpanelYaml:
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
     if self.tagFn is not None: self.loadYaml()
+    if self.isYamlLoaded():    self.cacheMatrixYaml()
 
   ############# error, msg #############
 
   def err(self, msg): print("enoIpanel error: " + str(msg)); traceback.print_exc(); 
   def msg(self, msg): print("enoIpanel msg: "   + str(msg))
+
+  ############# see if yaml is loaded #############
+
+  def isYamlLoaded(self):
+    if self.tagYd is not None: return True
+    return False
 
   ############# load yaml #############
 
@@ -126,6 +134,21 @@ class enoIpanelYaml:
       return result
     except: self.err('expandMatrixYaml')
     return None
+  
+  ############# cache matrix yaml #############
+
+  def cacheMatrixYaml(self)
+    try:
+      self.cachedMatrixAbbrevs = {}
+      my = eipy.expandMatrixYaml()
+      i, j = 0, 0
+      for row in my:
+        for abbrev in row:
+          coord = (i, j)
+          self.cachedMatrixAbbrevs[coord] = abbrev
+          i += 1
+        j += 1; i = 0
+    except: self.err('expandMatrixYaml')
 
 ############# main #############
 
