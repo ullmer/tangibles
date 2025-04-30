@@ -4,7 +4,7 @@
 
 import traceback
 
-WIDTH, HEIGHT = 1500, 800
+WIDTH, HEIGHT = 1800, 800
 
 from enoIpanelMidiMgr import *
 
