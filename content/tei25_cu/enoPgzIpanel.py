@@ -15,6 +15,10 @@ from enoIpanelMidi     import *
 class enoPgzIpanel(enoIpanelMidi):
   screen       = None #these two lines probably merit refactoring
   pgzIpanelMgr = None
+  transparentImgVal        = .3
+  transparencyAnimDuration = .5
+  transparencyAnimHandle   = None
+  transparencyAnimTween    = 'accel_decel'
 
   ############# constructor #############
 
@@ -33,8 +37,18 @@ class enoPgzIpanel(enoIpanelMidi):
     try:
       i, j = coordTuple
       gridVal = self.getMatrixLocus(i, j)
-      self.msg("screenAugmentSelectedGrid called, " + \
+      if self.verbose: self.msg("screenAugmentSelectedGrid called, " + \
         str(coordTuple) + " " + str(gridVal))
+
+      pim = self.pgzIpanelMgr
+      if pim is not None:
+        mia = pim.matrixImgActor
+        if mia is not None: 
+          #mia.opacity= self.transparentImgVal
+          animate(mia, opacity=self.transparentImgVal, 
+               tween   =self.transparencyAnimTween,
+               duration=self.transparencyAnimDuration)
+
     except: self.err("screenAugmentSelectedGrid"); return None
 
 ### end ###

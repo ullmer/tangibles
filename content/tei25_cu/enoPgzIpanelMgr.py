@@ -4,6 +4,9 @@
 
 import traceback
 
+import pgzero
+print("pgzero version:",  pgzero.__version__)
+
 WIDTH, HEIGHT = 1800, 800
 
 from enoPgzIpanel     import *
@@ -44,7 +47,8 @@ class enoPgzIpanelMgr(enoIpanelMidiMgr):
     if self.matrixImgActor is None:
       self.matrixImgActor = Actor(imgFn)
     else: 
-      self.matrixImgActor.image = imgFn
+      self.matrixImgActor.image   = imgFn
+      self.matrixImgActor.opacity = 1. #remove transparency
 
   ############# midi cb #############
 
