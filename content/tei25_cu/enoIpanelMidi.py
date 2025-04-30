@@ -24,8 +24,8 @@ class enoIpanelMidi(enoIpanelYaml):
   abbrev2singleKey   = None
   abbrev2ColorVal    = None 
 
-  isMidiGridButtonSelected     = False
-  midiButtonSelectedCoords = None
+  isMidiGridButtonSelected = True
+  midiButtonSelectedCoords = (3,3)
 
   illumFunc   = None
   coord2color = None
@@ -225,6 +225,7 @@ class enoIpanelMidi(enoIpanelYaml):
       for key, idx in [('default',0), ('max',1), ('min',2)]:
         if key in self.midiBrightness: result.append(self.midiBrightness[key])
         else:                          result.append(self.midiBrightDefaults[idx])
+      self.msg("getBrightVals: " + str(result))
       return result
     except: return self.midiBrightDefaults
 
@@ -236,9 +237,9 @@ class enoIpanelMidi(enoIpanelYaml):
       if self.coord2color is None: self.cacheCharMatrixColors()
       if self.verbose:             print("illumCharMatrixMidi: " + str(self.coord2color))
 
-      imbs                         = self.isMidiGridButtonSelected
-      if imbs:                x, y = self.midiButtonSelectedCoords
-      briteNorm, briteMax, britMin = self.getBrightVals() 
+      imbs                          = self.isMidiGridButtonSelected
+      if imbs:                 x, y = self.midiButtonSelectedCoords
+      briteNorm, briteMax, briteMin = self.getBrightVals() 
 
       for j in range(self.rows):
         for i in range(self.cols):
