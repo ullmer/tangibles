@@ -340,7 +340,8 @@ class enoMidiController:
       x = ord(xstr) - ao
       y = int(ystr)
       return (x, y)
-    else: self.err("mapCoord2Tuple")
+
+    except: self.err("mapCoord2Tuple")
 
   ############## clearlights #############
 
