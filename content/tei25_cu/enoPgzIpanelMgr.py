@@ -24,16 +24,26 @@ class enoPgzIpanelMgr(enoIpanelMidiMgr):
 
   def panelUpdated(self): 
     cipan  = self.getCurrentInteractionPanel()
+    currentName = cipan.getPanelName()
+
+    if currentName == self.lastObservedPanelName: return False
+    self.lastObservedPanelName = currentName
+    return True
 
   ############# restage actors #############
 
-  def restageActors(self): pass
-
-  def restageActors(self): pass
+  def restageActors(self): 
+    cipan  = self.getCurrentInteractionPanel()
+    imgFn  = cipan.getMatrixImageFn()
+    if self.matrixImgActor is None:
+      self.matrixImgActor = Actor(imgFn)
+    else: 
+      self.matrixImgActor.image = imgFn
 
   ############# draw #############
 
-  def draw(self): pass
+  def draw(self): 
+    if self.matrixImgActor is not None: self.matrixImgActor.draw()
 
 ############# main #############
 

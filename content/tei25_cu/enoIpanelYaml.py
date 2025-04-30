@@ -38,16 +38,19 @@ class enoIpanelYaml:
 
   ############# get panel name #############
 
-  def getPanelName(self):
+  def getPanelAttrib(self, attrib):
     try:
       if not self.isYamlLoaded(): 
         self.msg("getPanelName: YAML not loaded"); return None
 
       ipan = self.tagYd['interactionPanel']
-      name = ipan['name']
-      return name
+      val  = ipan[attrib]
+      return val 
 
-    except: self.err("getPanelName")
+    except: self.err("getPanelAttrib " + str(attrib))
+  
+  def getPanelName(self):     return self.getPanelAttrib('name')
+  def getMatrixImageFn(self): return self.getPanelAttrib('matrixImage')
 
   ############# check if yaml is loaded #############
 
