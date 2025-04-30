@@ -52,11 +52,11 @@ epim = enoPgzIpanelMgr()
 
 print("=" * 70)
 
-eim1 = enoIpanelMidi(tagFn = 'us-bea.yaml',     casePaired=True,  autolaunchMidi=False)
-eim2 = enoIpanelMidi(tagFn = 'cspan-tags.yaml', casePaired=False, autolaunchMidi=False)
+epi1 = enoPgzIpanel(tagFn = 'us-bea.yaml',     casePaired=True,  autolaunchMidi=False)
+epi2 = enoPgzIpanel(tagFn = 'cspan-tags.yaml', casePaired=False, autolaunchMidi=False)
 
-epim.registerIpanel(eim1, 0) #bootstrapping logic, to be reworked
-epim.registerIpanel(eim2, 1)
+epim.registerIpanel(epi1, 0) #bootstrapping logic, to be reworked
+epim.registerIpanel(epi2, 1)
 
 def draw():   screen.clear(); epim.draw()
 def update(): 
