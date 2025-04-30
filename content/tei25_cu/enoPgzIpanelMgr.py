@@ -58,7 +58,7 @@ eim2 = enoIpanelMidi(tagFn = 'cspan-tags.yaml', casePaired=False, autolaunchMidi
 epim.registerIpanel(eim1, 0) #bootstrapping logic, to be reworked
 epim.registerIpanel(eim2, 1)
 
-def draw():   epim.draw()
+def draw():   screen.clear(); epim.draw()
 def update(): 
   epim.pollMidi()
   if epim.panelUpdated(): epim.restageActors() #probably to be renamed
