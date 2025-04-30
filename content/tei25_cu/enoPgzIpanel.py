@@ -13,6 +13,8 @@ from enoIpanelMidi     import *
 ############# enodia interaction panel midi #############
 
 class enoPgzIpanel(enoIpanelMidi):
+  screen       = None #these two lines probably merit refactoring
+  pgzIpanelMgr = None
 
   ############# constructor #############
 
@@ -27,7 +29,7 @@ class enoPgzIpanel(enoIpanelMidi):
 
   ############# screen augmentation of selected grid locus #############
 
-  def screenAugmentSelectedGrid(self, coordTuple, ipanelMgr=None, screen=None):
+  def screenAugmentSelectedGrid(self, coordTuple): 
     try:
       i, j = coordTuple
       gridVal = self.getMatrixLocus(i, j)

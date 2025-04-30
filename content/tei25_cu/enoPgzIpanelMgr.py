@@ -37,6 +37,10 @@ class enoPgzIpanelMgr(enoIpanelMidiMgr):
   def restageActors(self): 
     cipan  = self.getCurrentInteractionPanel()
     imgFn  = cipan.getMatrixImageFn()
+
+    cipan.screen       = screen #these two lines probably merit refactoring
+    cipan.pgzIpanelMgr = self
+
     if self.matrixImgActor is None:
       self.matrixImgActor = Actor(imgFn)
     else: 
