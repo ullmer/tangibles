@@ -12,7 +12,7 @@ from enoIpanelMidi     import *
 
 ############# enodia interaction panel midi #############
 
-class enoPgzIpanel(enoIpanelMidi):
+class enoIpanelPgz(enoIpanelMidi):
   screen       = None #these two lines probably merit refactoring
   pgzIpanelMgr = None
   transparentImgVal        = .3
@@ -28,8 +28,8 @@ class enoPgzIpanel(enoIpanelMidi):
 
   ############# error, msg #############
  
-  def err(self, msgStr): print("enoPgzIpanel error: " + str(msgStr)); traceback.print_exc(); 
-  def msg(self, msgStr): print("enoPgzIpanel msg: "   + str(msgStr))
+  def err(self, msgStr): print("enoIpanelPgz error: " + str(msgStr)); traceback.print_exc(); 
+  def msg(self, msgStr): print("enoIpanelPgz msg: "   + str(msgStr))
 
   ############# screen augmentation of selected grid locus #############
 

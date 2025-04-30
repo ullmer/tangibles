@@ -9,12 +9,12 @@ print("pgzero version:",  pgzero.__version__)
 
 WIDTH, HEIGHT = 1700, 900
 
-from enoPgzIpanel     import *
+from enoIpanelPgz     import *
 from enoIpanelMidiMgr import *
 
 ############# enodia pygame zero interaction panel manager #############
 
-class enoPgzIpanelMgr(enoIpanelMidiMgr): 
+class enoIpanelPgzMgr(enoIpanelMidiMgr): 
   matrixImgFn    = None
   matrixImgActor = None
   lastObservedPanelName = None
@@ -62,12 +62,12 @@ class enoPgzIpanelMgr(enoIpanelMidiMgr):
 
 ############# main #############
 
-epim = enoPgzIpanelMgr()
+epim = enoIpanelPgzMgr()
 
 print("=" * 70)
 
-epi1 = enoPgzIpanel(tagFn = 'us-bea.yaml',     casePaired=True,  autolaunchMidi=False)
-epi2 = enoPgzIpanel(tagFn = 'cspan-tags.yaml', casePaired=False, autolaunchMidi=False)
+epi1 = enoIpanelPgz(tagFn = 'us-bea.yaml',     casePaired=True,  autolaunchMidi=False)
+epi2 = enoIpanelPgz(tagFn = 'cspan-tags.yaml', casePaired=False, autolaunchMidi=False)
 
 epim.registerIpanel(epi1, 0) #bootstrapping logic, to be reworked
 epim.registerIpanel(epi2, 1)
