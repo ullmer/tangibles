@@ -110,6 +110,7 @@ class enoIpanelYaml:
   ############# getCharMatrix #############
 
   def expandMatrixYaml(self):
+    result = []
     try:
       m     = self.getCharMatrix()
       mrows = m.splitlines()
@@ -120,8 +121,11 @@ class enoIpanelYaml:
           ch  = row[i]
           tag = self.mapCharToCatNextEl(ch)
           outrow.append(tag)
-        print(outrow)
-    except: self.err('expanMatrixYaml')
+        #print(outrow)
+        result.append(outrow)
+      return result
+    except: self.err('expandMatrixYaml')
+    return None
 
 ############# main #############
 
@@ -135,6 +139,7 @@ if __name__ == "__main__":
   #cat2 = eip.mapCharToCategory('f')
   #print(cat1, cat2)
 
-  eipy.expandMatrixYaml()
+  my = eipy.expandMatrixYaml()
+  print(my)
 
 ### end ###
