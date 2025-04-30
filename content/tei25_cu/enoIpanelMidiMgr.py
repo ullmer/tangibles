@@ -138,12 +138,14 @@ class enoIpanelMidiMgr:
       if self.verbose: print("enoIpanelMidiMgr midiCB stub %s: %s" % (control, arg)) 
 
       if self.isSidebarButton(control):
+        self.msg("sidebar button pressed") #console message, to assist interpretation
         whichSidebarButton = self.getSidebarButtonVal(control)
         self.rightSidebarPress(whichSidebarButton)
         cipan  = self.getCurrentInteractionPanel()
         cipan.isMidiGridButtonSelected = False
         cipan.illumCharMatrixMidi()
       else: 
+        self.msg("grid matrix button pressed") #console message, to assist interpretation
         cipan       = self.getCurrentInteractionPanel()
         coordTuple  = self.emc.mapCoord2Tuple(control)
         cipan.midiButtonSelectedCoords = coordTuple
