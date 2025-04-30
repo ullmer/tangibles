@@ -12,12 +12,28 @@ from enoIpanelMidiMgr import *
 class enoPgzIpanelMgr(enoIpanelMidiMgr): 
   matrixImgFn    = None
   matrixImgActor = None
+  lastObservedPanelName = None
 
   ############# constructor #############
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
+
+  ############# panel updated #############
+
+  def panelUpdated(self): 
+    cipan  = self.getCurrentInteractionPanel()
+
+  ############# restage actors #############
+
+  def restageActors(self): pass
+
+  def restageActors(self): pass
+
+  ############# draw #############
+
+  def draw(self): pass
 
 ############# main #############
 
@@ -31,6 +47,9 @@ eim2 = enoIpanelMidi(tagFn = 'cspan-tags.yaml', casePaired=False, autolaunchMidi
 epim.registerIpanel(eim1, 0) #bootstrapping logic, to be reworked
 epim.registerIpanel(eim2, 1)
 
-def update(): epim.pollMidi()
+def draw():   epim.draw()
+def update(): 
+  epim.pollMidi()
+  if epim.panelUpdated(): epim.restageActors() #probably to be renamed
 
 ### end ###
