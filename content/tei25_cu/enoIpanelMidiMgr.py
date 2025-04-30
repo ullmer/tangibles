@@ -106,17 +106,22 @@ class enoIpanelMidiMgr:
   ############# midi cb #############
 
   def midiCB(self, control, arg): 
-    global tags, tagIdx
+    try:
+      if arg == 0: return #ignore pad release
+      if self.verbose: print("enoIpanelMidiMgr midiCB stub %s: %s" % (control, arg))
 
-    if arg == 0: return #ignore pad release
+      if len(control) == 2: #standard
+        if control[1] == '9': #right sidebar candidate
+          if control[0] >= 'a' and control[0] <= 'h':
+            whichSidebar = ord(control[0]) - ord('a')
+            self.rightSidebarPress(whichSidebar)
+        else: 
+          whichSidebarButton = self.sidebarButtonCurrentlyActive 
+          ripan              = self.getRegisteredIpanel(whichSidebarButton)
+          coordTuple         = self.emc.mapCoord2Tuple(control)
+          ripan.midiButtonSelectedCoords = coordTuple
 
-    if self.verbose: print("enoIpanelMidiMgr midiCB stub %s: %s" % (control, arg))
-
-    if len(control) == 2: #standard
-      if control[1] == '9': #right sidebar candidate
-        if control[0] >= 'a' and control[0] <= 'h':
-          whichSidebar = ord(control[0]) - ord('a')
-          self.rightSidebarPress(whichSidebar)
+    except: self.err("midiCB " + str(control) + ":" + str(arg)) 
   
 ############# main #############
 
