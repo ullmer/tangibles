@@ -16,6 +16,7 @@ from adafruit_st7789       import ST7789
 class enoDispLcdWavesharePrt28:
   display  = None
   splash   = None
+  led      = None
   color_bitmap  = None
   color_palette = None
   bg_sprite     = None
@@ -27,15 +28,14 @@ class enoDispLcdWavesharePrt28:
     self.initBoard()
     self.loadFonts()
     self.displayTest("testing")
-    self.cycleLed()
 
   def loadFonts(self):
     if self.font01Fn is not None:
       self.font01 = bitmap_font.load_font(self.font01Fn)
 
   def initBoard(self):
-    led = digitalio.DigitalInOut(board.LED) # onboard LED
-    led.direction = digitalio.Direction.OUTPUT
+    self.led = digitalio.DigitalInOut(board.LED) # onboard LED
+    self.led.direction = digitalio.Direction.OUTPUT
     
     displayio.release_displays() # Release any resources currently in use for the displays
     
@@ -80,7 +80,7 @@ class enoDispLcdWavesharePrt28:
     if self.font01 is not None: f = self.font01
     else:                       f = terminalio.FONT
 
-    text_area = label.Label(terminalio.FONT, text=text, color=0xFFFF00)
+    text_area = label.Label(f, text=text, color=0xFFFF00)
     text_group.append(text_area)  # Subgroup for text scaling
     self.splash.append(text_group)
     
@@ -96,9 +96,10 @@ class enoDispLcdWavesharePrt28:
          #print("Loop " + str(count))
          count = count + 1
 
-         if led.value == True: led.value = False
-         else:                 led.value = True
+         if self.led.value == True: self.led.value = False
+         else:                      self.led.value = True
 
-edlwp28 = enoDispLcdWavesharePrt28()
+edlwp = enoDispLcdWavesharePrt28()
+edlwp.cycleLed()
 
 ### end ###
