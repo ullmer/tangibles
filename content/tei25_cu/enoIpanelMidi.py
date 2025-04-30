@@ -25,7 +25,7 @@ class enoIpanelMidi(enoIpanelYaml):
   abbrev2ColorVal    = None 
 
   isMidiGridButtonSelected = True
-  midiButtonSelectedCoords = (3,3)
+  midiButtonSelectedCoords = (2,3)
 
   illumFunc   = None
   coord2color = None
@@ -38,7 +38,7 @@ class enoIpanelMidi(enoIpanelYaml):
   }
 
   midiBrightness     = None
-  midiBrightDefaults = [4, 7, 2]
+  midiBrightDefaults = [3, 10, 1]
 
   midiCtrlName     = 'akaiApcMiniMk2'
   midiCtrlOutputId = 4
@@ -144,13 +144,13 @@ class enoIpanelMidi(enoIpanelYaml):
         if self.tagYd is None: self.msg("mapCharToColor: tagYd is none!"); return None
 
       midiMap   = self.tagYd['interactionPanel']['midi'][self.midiCtrlName]
-      colorMap  = midiMap['illum']
-      brightMap = midiMap['brightness']
+      self.colorMap  = midiMap['illum']
+      self.brightMap = midiMap['brightness']
 
       charMap  = self.tagYd['interactionPanel']['charMap']
 
       #if self.verbose: self.msg("mapCharToColor " + str(colorMap) + " :: " + str(charMap))
-      if self.singleKey2Abbrev is None: self.registerColormap(colorMap, charMap) 
+      if self.singleKey2Abbrev is None: self.registerColormap(self.colorMap, charMap) 
 
       #if self.verbose: 
       #  self.msg("mapCharToColor foo: " + str(self.singleKey2ColorVal) + "|" + str(tagChar))
@@ -217,7 +217,7 @@ class enoIpanelMidi(enoIpanelYaml):
   ############# get brightness values #############
 
   def getBrightVals(self):
-    if self.midiBrightness is None: return self.midiBrightDefaults
+    if self.brightMap is None: return self.midiBrightDefaults
     #brightness: {default: 3, max: 6, min: 1}
    
     try:
@@ -225,6 +225,7 @@ class enoIpanelMidi(enoIpanelYaml):
       for key, idx in [('default',0), ('max',1), ('min',2)]:
         if key in self.midiBrightness: result.append(self.midiBrightness[key])
         else:                          result.append(self.midiBrightDefaults[idx])
+
       self.msg("getBrightVals: " + str(result))
       return result
     except: return self.midiBrightDefaults

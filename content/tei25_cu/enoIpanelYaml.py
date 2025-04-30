@@ -15,6 +15,9 @@ class enoIpanelYaml:
   tagCharToCatList  = None
   tagCharToCatLIdx  = None #index within tagCharToCatList keyed arrays
 
+  colorMap  = None
+  brightMap = None
+
   rows, cols       = 8, 8
   verbose          = False
 
