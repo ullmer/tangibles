@@ -113,13 +113,17 @@ class enoIpanelMidiMgr:
       if len(control) == 2: #standard
         if control[1] == '9': #right sidebar candidate
           if control[0] >= 'a' and control[0] <= 'h':
-            whichSidebar = ord(control[0]) - ord('a')
-            self.rightSidebarPress(whichSidebar)
+            whichSidebarButton = ord(control[0]) - ord('a')
+            self.rightSidebarPress(whichSidebarButton)
+            ripan  = self.getRegisteredIpanel(whichSidebarButton)
+            ripan.isMidiGridButtonSelected = False
+            ripan.illumCharMatrixMidi()
         else: 
           whichSidebarButton = self.sidebarButtonCurrentlyActive 
           ripan              = self.getRegisteredIpanel(whichSidebarButton)
           coordTuple         = self.emc.mapCoord2Tuple(control)
           ripan.midiButtonSelectedCoords = coordTuple
+          ripan.isMidiGridButtonSelected = True
           ripan.illumCharMatrixMidi()
           if self.verbose: print("midiCB grid coord: " + str(coordTuple))
 

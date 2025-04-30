@@ -24,8 +24,8 @@ class enoIpanelMidi(enoIpanelYaml):
   abbrev2singleKey   = None
   abbrev2ColorVal    = None 
 
-  isMidiGridButtonSelected = True
-  midiButtonSelectedCoords = (2,3)
+  isMidiGridButtonSelected = False #True
+  midiButtonSelectedCoords = None  #(2,3)
 
   illumFunc   = None
   coord2color = None
