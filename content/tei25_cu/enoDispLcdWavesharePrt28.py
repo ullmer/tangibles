@@ -29,15 +29,21 @@ class enoDispLcdWavesharePrt28:
   colorRed    = 0xFF0000
   colorBlue   = 0x0000FF
 
+  ################# constructor #################
+
   def __init__(self):
     self.initDisplay()
     self.loadFonts()
     #self.displayTest1("testing")
     self.displayTest2()
 
+  ################# load fonts #################
+
   def loadFonts(self):
     if self.font01Fn is not None:
       self.font01 = bitmap_font.load_font(self.font01Fn)
+
+  ################# initate display #################
 
   def initDisplay(self):
     self.led = digitalio.DigitalInOut(board.LED) # onboard LED
@@ -147,6 +153,9 @@ class enoDispLcdWavesharePrt28:
 
          if self.led.value == True: self.led.value = False
          else:                      self.led.value = True
+
+##################################
+############## main ##############
 
 edlwp = enoDispLcdWavesharePrt28()
 edlwp.cycleLed()
