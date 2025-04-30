@@ -18,6 +18,13 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
   matrixImgFn    = None
   matrixImgActor = None
   lastObservedPanelName = None
+  
+  matrixCursorActive          = False
+  matrixCursorCurrentCoordIdx = None #tuple, initially 
+  matrixCursorCurrentCoordPos = None
+  matrixCursorDx,    matrixCursorDy     = (100, 100)
+  matrixCursorWidth, matrixCursorHeight = (100, 100)
+  matrixCursorXoff,  matrixCursorYoff   = (  0,   0)
 
   ############# constructor #############
 
