@@ -151,6 +151,7 @@ class enoIpanelMidiMgr:
         cipan.midiButtonSelectedCoords = coordTuple
         cipan.isMidiGridButtonSelected = True
         cipan.illumCharMatrixMidi()
+        cipan.screenAugmentSelectedGrid(coordTuple)
         if self.verbose: print("midiCB grid coord: " + str(coordTuple))
 
     except: self.err("midiCB " + str(control) + ":" + str(arg)) 
