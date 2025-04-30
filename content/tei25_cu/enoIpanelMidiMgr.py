@@ -120,6 +120,8 @@ class enoIpanelMidiMgr:
           ripan              = self.getRegisteredIpanel(whichSidebarButton)
           coordTuple         = self.emc.mapCoord2Tuple(control)
           ripan.midiButtonSelectedCoords = coordTuple
+          ripan.illumCharMatrixMidi()
+          if self.verbose: print("midiCB grid coord: " + str(coordTuple))
 
     except: self.err("midiCB " + str(control) + ":" + str(arg)) 
   

@@ -339,8 +339,8 @@ class enoMidiController:
       xo         = ord(xstr)
       if xo < ao or xo > ho: self.msg("mapCoord2Tuple: letter value out of bounds: " + str(xstr)); return None
       x = ord(xstr) - ao
-      y = int(ystr)
-      return (x, y)
+      y = int(ystr) - 1
+      return (y, x)
 
     except: self.err("mapCoord2Tuple")
 
