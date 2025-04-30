@@ -27,7 +27,7 @@ class enoPgzIpanel(enoIpanelMidi):
 
   ############# screen augmentation of selected grid locus #############
 
-  def screenAugmentSelectedGrid(self, coordTuple):
+  def screenAugmentSelectedGrid(self, coordTuple, ipanelMgr=None, screen=None):
     try:
       i, j = coordTuple
       gridVal = self.getMatrixLocus(i, j)

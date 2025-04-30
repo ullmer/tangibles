@@ -42,6 +42,11 @@ class enoPgzIpanelMgr(enoIpanelMidiMgr):
     else: 
       self.matrixImgActor.image = imgFn
 
+  ############# midi cb #############
+
+  def midiCB(self, control, arg): 
+    super().midiCB(control, arg)
+
   ############# draw #############
 
   def draw(self): 
