@@ -7,7 +7,7 @@ import traceback
 import pgzero
 print("pgzero version:",  pgzero.__version__)
 
-WIDTH, HEIGHT = 1800, 900
+WIDTH, HEIGHT = 1700, 900
 
 from enoPgzIpanel     import *
 from enoIpanelMidiMgr import *
