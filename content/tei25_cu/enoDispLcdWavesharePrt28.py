@@ -26,7 +26,7 @@ class enoDispLcdWavesharePrt28:
   font01Fn       = '/fonts/SairaCondensed-Regular.bdf'
   font01         = None
   fontScale      = 1 #with terminalio, was 3 with example code
-  textDx, textDy = 5, 5
+  textDx, textDy = 3, 10
 
   colorYellow = 0xFFFF00
   colorRed    = 0xFF0000
@@ -115,16 +115,16 @@ class enoDispLcdWavesharePrt28:
   ################# display test 3 #################
 
   def displayTest3(self):
-    self.drawLabeledBox("now", 5,  5,100,80,self.colorYellow, 0x222222)
-    self.drawLabeledBox("a",   5, 90,100,80,self.colorRed,    0xdddddd)
-    self.drawLabeledBox("test",5,175,100,80,self.colorBlue,   0xeeeeee)
+    self.drawLabeledBox("now", 0,  5,100,70,self.colorYellow, 0x222222)
+    self.drawLabeledBox("a",   0, 80,100,70,self.colorRed,    0xdddddd)
+    self.drawLabeledBox("test",0,155,100,70,self.colorBlue,   0xeeeeee)
 
   ################# display test 2 #################
 
   def displayTest2(self):
-    self.drawBox(5,  5,100,80,self.colorYellow)
-    self.drawBox(5, 90,100,80,self.colorRed)
-    self.drawBox(5,175,100,80,self.colorBlue)
+    self.drawBox(0,  5,100,70,self.colorYellow)
+    self.drawBox(0, 75,100,70,self.colorRed)
+    self.drawBox(0,150,100,70,self.colorBlue)
 
   ################# display test 1 #################
 
