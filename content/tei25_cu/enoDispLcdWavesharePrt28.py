@@ -13,6 +13,8 @@ from adafruit_st7789       import ST7789
 # initDisplay and displayTest1 code largely from 
 #   https://markmcgookin.com/2023/01/11/using-the-waveshare-pico-restouch-lcd-2-8-screen-with-circuitpython/
 #   updated for CircuitPython 9 by CoPilot 
+  
+############## enodia display lcd Waveshare PRT 2.8 ##############
 
 class enoDispLcdWavesharePrt28:
   display  = None
