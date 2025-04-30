@@ -38,7 +38,7 @@ class enoIpanelMidi(enoIpanelYaml):
   }
 
   midiBrightness     = None
-  midiBrightDefaults = [3, 10, 1]
+  midiBrightDefaults = [4, 10, 1]
 
   midiCtrlName     = 'akaiApcMiniMk2'
   midiCtrlOutputId = 4
