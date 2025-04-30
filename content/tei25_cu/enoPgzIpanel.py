@@ -4,9 +4,11 @@
 
 import sys, os, yaml, traceback
 from pygame import time
+
 from enoMidiController import *
 from enoMidiAkai       import *
 from enoIpanelYaml     import *
+from enoIpanelMidi     import *
 
 ############# enodia interaction panel midi #############
 

@@ -6,6 +6,7 @@ import traceback
 
 WIDTH, HEIGHT = 1800, 800
 
+from enoPgzIpanel     import *
 from enoIpanelMidiMgr import *
 
 ############# enodia pygame zero interaction panel manager #############
