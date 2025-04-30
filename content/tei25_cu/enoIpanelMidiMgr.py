@@ -118,8 +118,16 @@ class enoIpanelMidiMgr:
   def isSidebarButton(self, whichButton): 
     try:
       if len(whichButton) != 2: return False
-      if whichButton[1] == '9': #right sidebar candidate
-        if whichButton[0] >= 'a' and whichButton[0] <= 'h': return True
+      w0, w1 = whichButton
+      if w1 == '9' and 'a' <= w0 <= 'h': return True
+      return False
+    except: self.err("isSidebarButton " + str(whichButton))
+
+  def isMatrixButton(self, whichButton): 
+    try:
+      if len(whichButton) != 2: return False
+      w0, w1 = whichButton
+      if '0' <= w1 < '9' and 'a' <= w0 <= 'h': return True
       return False
     except: self.err("isSidebarButton " + str(whichButton))
 
@@ -144,7 +152,7 @@ class enoIpanelMidiMgr:
         cipan  = self.getCurrentInteractionPanel()
         cipan.isMidiGridButtonSelected = False
         cipan.illumCharMatrixMidi()
-      else: 
+      elif self.isMatrixButton(control):
         self.msg("grid matrix button pressed") #console message, to assist interpretation
         cipan       = self.getCurrentInteractionPanel()
         coordTuple  = self.emc.mapCoord2Tuple(control)
