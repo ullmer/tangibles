@@ -7,7 +7,8 @@ import sys
 import fourwire  # Updated import for FourWire
 
 from adafruit_display_text import label
-from adafruit_st7789 import ST7789
+from adafruit_bitmap_font  import bitmap_font
+from adafruit_st7789       import ST7789
 
 # initial code from https://markmcgookin.com/2023/01/11/using-the-waveshare-pico-restouch-lcd-2-8-screen-with-circuitpython/
 #  updated for CircuitPython 9 by CoPilot 
@@ -18,11 +19,19 @@ class enoDispLcdWavesharePrt28:
   color_bitmap  = None
   color_palette = None
   bg_sprite     = None
+  font01Fn      = '/fonts/SairaCondensed-Regular.bdf'
+  font01        = None
+  fontScale     = 1 #with terminalio, was 3 with example code
 
   def __init__(self):
     self.initBoard()
+    self.loadFonts()
     self.displayTest("testing")
     self.cycleLed()
+
+  def loadFonts(self):
+    if self.font01Fn is not None:
+      self.font01 = bitmap_font.load_font(self.font01Fn)
 
   def initBoard(self):
     led = digitalio.DigitalInOut(board.LED) # onboard LED
@@ -65,8 +74,12 @@ class enoDispLcdWavesharePrt28:
     self.splash.append(inner_sprite)
     
     # Draw a label
-    text_group = displayio.Group(scale=3, x=57, y=120)
+    text_group = displayio.Group(scale=self.fontScale, x=57, y=120)
     text = displaytext
+    
+    if self.font01 is not None: f = self.font01
+    else:                       f = terminalio.FONT
+
     text_area = label.Label(terminalio.FONT, text=text, color=0xFFFF00)
     text_group.append(text_area)  # Subgroup for text scaling
     self.splash.append(text_group)
