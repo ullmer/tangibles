@@ -2,8 +2,9 @@
 # Brygg Ullmer, Clemson University
 # Begun 2025-04-28
 
-import sys, os, yaml, traceback
-from pygame import time
+import traceback
+
+WIDTH, HEIGHT = 1500, 800
 
 from enoIpanelMidiMgr import *
 
