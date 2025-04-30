@@ -69,11 +69,12 @@ class enoDispLcdWavesharePrt28:
     rPalette[0] = color
     rSprite = displayio.TileGrid(r, pixel_shader=rPalette, x=x, y=y)
     self.splash.append(rSprite)
+    return rSprite
 
   def displayTest2(self):
     self.drawBox(5,  5,100,80,self.colorYellow)
-    self.drawBox(5, 85,100,80,self.colorRed)
-    self.drawBox(5,170,100,80,self.colorBlue)
+    self.drawBox(5, 90,100,80,self.colorRed)
+    self.drawBox(5,175,100,80,self.colorBlue)
 
   def displayTest1(self, displaytext):
     self.color_bitmap     = displayio.Bitmap(320, 240, 1)
@@ -100,6 +101,14 @@ class enoDispLcdWavesharePrt28:
     text_area = label.Label(f, text=text, color=0xFFFF00)
     text_group.append(text_area)  # Subgroup for text scaling
     self.splash.append(text_group)
+  
+  def drawLabeledBox(self, text, x, y, w=None, h=None, color=None):
+    if w     is None: w     = self.boxDefaultWidth
+    if h     is None: h     = self.boxDefaultHeight
+    if color is None: color = self.boxDefaultColor
+
+    self.drawBox(5,175,100,80,self.colorBlue)
+  
     
   def cycleLed(self):
     count = 0
