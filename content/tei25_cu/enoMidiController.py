@@ -328,6 +328,20 @@ class enoMidiController:
 
   def initAkaiApcMiniMk2(self): pass
 
+  ############## map letter coordinate to integer tuple #############
+
+  def mapCoord2Tuple(self, letterCoord):
+    try:
+      llc = len(letterCoord)
+      if llc != 2:               self.msg("mapCoord2Tuple: letterCoord length!=2: " + str(llc)); return None
+      ao, ho     = ord('a'), ord('o')
+      xstr, ystr = letterCoord[0], letterCoord[1]
+      if xstr < ao or xstr > ho: self.msg("mapCoord2Tuple: letter value out of bounds: " + str(xstr)); return None
+      x = ord(xstr) - ao
+      y = int(ystr)
+      return (x, y)
+    else: self.err("mapCoord2Tuple")
+
   ############## clearlights #############
 
   #def clearLights(self):
