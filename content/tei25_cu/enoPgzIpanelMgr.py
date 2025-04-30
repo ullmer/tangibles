@@ -7,20 +7,22 @@ from pygame import time
 
 from enoIpanelMidiMgr import *
 
-class enoPgzIpanelMgr: pass
+class enoPgzIpanelMgr(enoIpanelMidiMgr): 
+  matrixImgFn    = None
+  matrixImgActor = None
 
 ############# main #############
 
-eimm = enoIpanelMidiMgr()
+epim = enoPgzIpanelMgr()
 
 print("=" * 70)
 
 eim1 = enoIpanelMidi(tagFn = 'us-bea.yaml',     casePaired=True,  autolaunchMidi=False)
 eim2 = enoIpanelMidi(tagFn = 'cspan-tags.yaml', casePaired=False, autolaunchMidi=False)
 
-eimm.registerIpanel(eim1, 0) #bootstrapping logic, to be reworked
-eimm.registerIpanel(eim2, 1)
+epim.registerIpanel(eim1, 0) #bootstrapping logic, to be reworked
+epim.registerIpanel(eim2, 1)
 
-def update(): eimm.pollMidi()
+def update(): epim.pollMidi()
 
 ### end ###
