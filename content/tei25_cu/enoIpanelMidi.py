@@ -13,8 +13,8 @@ from enoIpanelYaml     import *
 class enoIpanelMidi(enoIpanelYaml):
 
   emc     = None #enodia midi controller
-  #verbose = False
-  verbose = True
+  verbose = False
+  #verbose = True
 
   tagCharToColor = None
   autolaunchMidi = True
@@ -175,7 +175,7 @@ class enoIpanelMidi(enoIpanelYaml):
   ############# illuminate default midi #############
 
   def cacheCharMatrixColors(self):
-    print("cacheCharMatrixMidi: ")
+    if self.verbose: print("cacheCharMatrixMidi: ")
 
     try:
       if self.coord2color is None:
@@ -191,11 +191,12 @@ class enoIpanelMidi(enoIpanelYaml):
  
           if mch == '.': self.coord2color[(i,j)] = 0
           else: 
-            if self.verbose: self.msg('cacheCharMatrixColors: ' + str(mch))
-            color = self.mapCharToColor(mch)
-            if color is not None: self.coord2color[(i,j)] = color
-        self.coord2color = {}
+            color, coord = self.mapCharToColor(mch), (i, j)
+            if self.verbose: self.msg('cacheCharMatrixColors: ' + \
+              str(mch) + ":" + str(color) + ":" + str(coord))
+            if color is not None: self.coord2color[coord] = color
 
+      if self.verbose: print("c2c: " + str(self.coord2color))
     except: self.err("cacheCharMatrixColors"); return None
 
   ############# initiate illumination func #############
@@ -216,13 +217,13 @@ class enoIpanelMidi(enoIpanelYaml):
       if self.illumFunc is None:   self.initIllumFunc()
       if self.coord2color is None: self.cacheCharMatrixColors()
 
-      print("illumCharMatrixMidi: " + str(self.coord2color))
+      if self.verbose: print("illumCharMatrixMidi: " + str(self.coord2color))
 
       for j in range(self.rows):
         for i in range(self.cols):
           coord = (i,j)
           if coord in self.coord2color:
-            color = self.coord2coord[coord]
+            color = self.coord2color[coord]
             self.illumFunc(i, j, color)
 
     except: self.err("illumCharMatrixColors"); return None
