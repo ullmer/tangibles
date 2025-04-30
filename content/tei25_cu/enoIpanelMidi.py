@@ -237,7 +237,7 @@ class enoIpanelMidi(enoIpanelYaml):
       if self.verbose:             print("illumCharMatrixMidi: " + str(self.coord2color))
 
       imbs                         = self.isMidiGridButtonSelected
-      x, y                         = self.midiButtonSelectedCoords
+      if imbs:                x, y = self.midiButtonSelectedCoords
       briteNorm, briteMax, britMin = self.getBrightVals() 
 
       for j in range(self.rows):
