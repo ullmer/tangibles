@@ -82,9 +82,9 @@ class enoDispLcdWavesharePrt28:
     rect3_sprite = displayio.TileGrid(rect3, pixel_shader=rect3_palette, x=5, y=220)
     
     # Add rectangles to the display context
-    splash.append(rect1_sprite)
-    splash.append(rect2_sprite)
-    splash.append(rect3_sprite)
+    self.splash.append(rect1_sprite)
+    self.splash.append(rect2_sprite)
+    self.splash.append(rect3_sprite)
 
   def displayTest1(self, displaytext):
     self.color_bitmap     = displayio.Bitmap(320, 240, 1)
