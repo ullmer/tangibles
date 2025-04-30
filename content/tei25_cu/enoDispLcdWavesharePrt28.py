@@ -31,6 +31,9 @@ class enoDispLcdWavesharePrt28:
   colorYellow = 0xFFFF00
   colorRed    = 0xFF0000
   colorBlue   = 0x0000FF
+  colorBlue   = 0xFFFFFF
+
+  colorText   = colorWhite
 
   ################# constructor #################
 
@@ -86,13 +89,16 @@ class enoDispLcdWavesharePrt28:
   ################# draw text #################
 
   def drawText(self, x, y, text, color=None)
-    text_group = displayio.Group(scale=self.fontScale, x=57, y=120)
-    text = displaytext
+    textGroup = displayio.Group(scale=self.fontScale, x=57, y=120)
     if self.font01 is not None: f = self.font01
     else:                       f = terminalio.FONT
 
-    text_area = label.Label(f, text=text, color=0xFFFF00)
-    text_group.append(text_area)  # Subgroup for text scaling
+    if color is None: color = self.colorText
+
+    textArea = label.Label(f, text=text, color=color)
+    textGroup.append(textArea)  # Subgroup for text scaling
+    self.splash.append(textGroup)
+    return textGroup
   
   ################# display test 2 #################
 
