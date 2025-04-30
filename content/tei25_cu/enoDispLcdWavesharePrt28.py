@@ -28,9 +28,9 @@ class enoDispLcdWavesharePrt28:
   fontScale      = 1 #with terminalio, was 3 with example code
   textDx, textDy = 3, 10
 
-  colorYellow = 0xFFFF00
-  colorRed    = 0xFF0000
-  colorBlue   = 0x0000FF
+  colorYellow = 0xCCCC00
+  colorRed    = 0xDD0000
+  colorBlue   = 0x0000DD
   colorWhite  = 0xFFFFFF
 
   colorText   = 0x555555
@@ -117,7 +117,7 @@ class enoDispLcdWavesharePrt28:
   def displayTest3(self):
     self.drawLabeledBox("now", 0,  5,100,70,self.colorYellow, 0x222222)
     self.drawLabeledBox("a",   0, 80,100,70,self.colorRed,    0xdddddd)
-    self.drawLabeledBox("test",0,155,100,70,self.colorBlue,   0xeeeeee)
+    self.drawLabeledBox("test",0,155,100,70,self.colorBlue,   0xdddddd)
 
   ################# display test 2 #################
 
@@ -174,7 +174,8 @@ class enoDispLcdWavesharePrt28:
 ##################################
 ############## main ##############
 
-edlwp = enoDispLcdWavesharePrt28()
-edlwp.cycleLed()
+if __name__ == "__main__":
+  edlwp = enoDispLcdWavesharePrt28()
+  edlwp.cycleLed()
 
 ### end ###
