@@ -14,7 +14,8 @@ class enoIpanelYaml:
   tagCharToCategory = None
   tagCharToCatList  = None
   tagCharToCatLIdx  = None #index within tagCharToCatList keyed arrays
-  cachedMatrixAbbrevs = None
+  cachedMatrixDict  = None
+  cachedMatrix      = None
 
   colorMap  = None
   brightMap = None
@@ -118,6 +119,8 @@ class enoIpanelYaml:
   ############# getCharMatrix #############
 
   def expandMatrixYaml(self):
+    if self.cachedMatrix is not None: return self.cachedMatrix
+    else:                             self.cachedMatrix = []
     result = []
     try:
       m     = self.getCharMatrix()
@@ -131,24 +134,25 @@ class enoIpanelYaml:
           outrow.append(tag)
         #print(outrow)
         result.append(outrow)
+      self.cachedMatrix = result
       return result
     except: self.err('expandMatrixYaml')
     return None
   
   ############# cache matrix yaml #############
 
-  def cacheMatrixYaml(self)
+  def cacheMatrixYaml(self):
     try:
-      self.cachedMatrixAbbrevs = {}
-      my = eipy.expandMatrixYaml()
+      self.cachedMatrixDict = {}
+      my = self.expandMatrixYaml()
       i, j = 0, 0
       for row in my:
         for abbrev in row:
           coord = (i, j)
-          self.cachedMatrixAbbrevs[coord] = abbrev
+          self.cachedMatrixDict[coord] = abbrev
           i += 1
         j += 1; i = 0
-    except: self.err('expandMatrixYaml')
+    except: self.err('cacheMatrixYaml')
 
 ############# main #############
 
@@ -164,5 +168,6 @@ if __name__ == "__main__":
 
   my = eipy.expandMatrixYaml()
   print(my)
+  print(eipy.cachedMatrixDict)
 
 ### end ###
