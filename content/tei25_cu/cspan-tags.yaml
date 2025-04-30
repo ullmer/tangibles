@@ -7,6 +7,7 @@ interactionPanel:
   addr:      https://enodia.computing.clemson.edu/spreads/org.c-span/tags/ #not yet, but candidate
   imgPrefix: images/cspt13/125
   bgImg:     images/cspt13/bg125a
+  matrixImage: cspan10b3
 
   charMatrix: |-
     MMMPPPPP
