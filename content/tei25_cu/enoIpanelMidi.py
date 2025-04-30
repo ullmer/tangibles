@@ -214,17 +214,16 @@ class enoIpanelMidi(enoIpanelYaml):
 
   def illumCharMatrixMidi(self):
     try:
-      if self.illumFunc is None:   self.initIllumFunc()
+      if self.illumFunc   is None: self.initIllumFunc()
       if self.coord2color is None: self.cacheCharMatrixColors()
-
-      if self.verbose: print("illumCharMatrixMidi: " + str(self.coord2color))
+      if self.verbose:             print("illumCharMatrixMidi: " + str(self.coord2color))
 
       for j in range(self.rows):
         for i in range(self.cols):
           coord = (i,j)
           if coord in self.coord2color:
             color = self.coord2color[coord]
-            self.illumFunc(i, j, color)
+            self.illumFunc(i, j, color, 3)
 
     except: self.err("illumCharMatrixColors"); return None
    

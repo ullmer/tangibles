@@ -48,11 +48,11 @@ class enoMidiAkai(enoMidiController):
 
   ############# illuminate matrix x, y, color #############
 
-  def illumMatrixXYC(self, x, y, color):
+  def illumMatrixXYC(self, x, y, color, brightness):
     if self.midiCtrlName == 'aka_apcmini2' or \
-       self.midiCtrlName == 'akaiApcMiniMk2': self.illumMatrixXYCAkaiApcMini(x,y,color)
+       self.midiCtrlName == 'akaiApcMiniMk2': self.illumMatrixXYCAkaiApcMini(x,y,color,brightness)
 
-  def illumMatrixXYCAkaiApcMini(self, x, y, color):
+  def illumMatrixXYCAkaiApcMini(self, x, y, color, brightness=3):
     try:
       #self.msg("imxyaam " + str(x) + " " + str(y))
       #addr = self.cols * (y - 7) + x
@@ -60,7 +60,8 @@ class enoMidiAkai(enoMidiController):
       if self.verbose: self.msg("illumMatrixXYCAkaiApcMini " + str(addr) + " " + str(color))
       if addr is None or color is None: 
         self.msg("illumMatrixXYCAkaiApMini args " + str(addr) + " " + str(color))
-      else:                             self.midiOut.note_on(addr, color, 3)
+      else:                             
+        self.midiOut.note_on(addr, color, brightness)
     except: self.err("illumMatrixXYCAkaiApcMini")
   
   ############# midi cb #############
