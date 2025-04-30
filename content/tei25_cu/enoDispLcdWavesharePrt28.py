@@ -63,28 +63,17 @@ class enoDispLcdWavesharePrt28:
     self.splash = displayio.Group()
     self.display.root_group = self.splash  # Updated to use root_group
     
+  def drawBox(self, x, y, w, h, color):
+    r = displayio.Bitmap(w, h, 1)
+    rPalette    = displayio.Palette(1)
+    rPalette[0] = color
+    rSprite = displayio.TileGrid(r, pixel_shader=rPalette, x=x, y=y)
+    self.splash.append(rSprite)
+
   def displayTest2(self):
-    # Define colors
-    # Create rectangles
-    rect1 = displayio.Bitmap(100, 80, 1)
-    rect1_palette = displayio.Palette(1)
-    rect1_palette[0] = self.colorYellow
-    rect1_sprite = displayio.TileGrid(rect1, pixel_shader=rect1_palette, x=5, y=5)
-    
-    rect2 = displayio.Bitmap(100, 80, 1)
-    rect2_palette = displayio.Palette(1)
-    rect2_palette[0] = self.colorRed
-    rect2_sprite = displayio.TileGrid(rect2, pixel_shader=rect2_palette, x=5, y=110)
-    
-    rect3 = displayio.Bitmap(100, 80, 1)
-    rect3_palette = displayio.Palette(1)
-    rect3_palette[0] = self.colorBlue
-    rect3_sprite = displayio.TileGrid(rect3, pixel_shader=rect3_palette, x=5, y=220)
-    
-    # Add rectangles to the display context
-    self.splash.append(rect1_sprite)
-    self.splash.append(rect2_sprite)
-    self.splash.append(rect3_sprite)
+    self.drawBox(5,  5,100,80,self.colorYellow)
+    self.drawBox(5, 85,100,80,self.colorRed)
+    self.drawBox(5,170,100,80,self.colorBlue)
 
   def displayTest1(self, displaytext):
     self.color_bitmap     = displayio.Bitmap(320, 240, 1)
