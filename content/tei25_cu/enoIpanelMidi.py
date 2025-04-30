@@ -258,8 +258,13 @@ class enoIpanelMidi(enoIpanelYaml):
   ############# screen augmentation of selected grid locus #############
 
   def screenAugmentSelectedGrid(self, coordTuple):
-    self.msg("screenAugmentSelected Grid called, coordinate tuple: " + str(coordTuple))
- 
+    try:
+      i, j = coordTuple
+      gridVal = self.getMatrixLocus(i, j)
+      self.msg("screenAugmentSelectedGrid called, " + \
+        str(coordTuple) + " " + str(gridVal))
+    except: self.err("screenAugmentSelectedGrid"); return None
+
   ############# midi cb #############
 
   def midiCB(self, control, arg): 
