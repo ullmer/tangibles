@@ -36,7 +36,20 @@ class enoIpanelYaml:
   def err(self, msg): print("enoIpanel error: " + str(msg)); traceback.print_exc(); 
   def msg(self, msg): print("enoIpanel msg: "   + str(msg))
 
-  ############# see if yaml is loaded #############
+  ############# get panel name #############
+
+  def getPanelName(self):
+    try:
+      if not self.isYamlLoaded(): 
+        self.msg("getPanelName: YAML not loaded"); return None
+
+      ipan = self.tagYd['interactionPanel']
+      name = ipan['name']
+      return name
+
+    except: self.err("getPanelName")
+
+  ############# check if yaml is loaded #############
 
   def isYamlLoaded(self):
     if self.tagYd is not None: return True
