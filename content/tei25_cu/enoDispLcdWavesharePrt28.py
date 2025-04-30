@@ -10,8 +10,9 @@ from adafruit_display_text import label
 from adafruit_bitmap_font  import bitmap_font
 from adafruit_st7789       import ST7789
 
-# initial code from https://markmcgookin.com/2023/01/11/using-the-waveshare-pico-restouch-lcd-2-8-screen-with-circuitpython/
-#  updated for CircuitPython 9 by CoPilot 
+# initDisplay and displayTest1 code largely from 
+#   https://markmcgookin.com/2023/01/11/using-the-waveshare-pico-restouch-lcd-2-8-screen-with-circuitpython/
+#   updated for CircuitPython 9 by CoPilot 
 
 class enoDispLcdWavesharePrt28:
   display  = None
@@ -29,7 +30,7 @@ class enoDispLcdWavesharePrt28:
   colorBlue   = 0x0000FF
 
   def __init__(self):
-    self.initBoard()
+    self.initDisplay()
     self.loadFonts()
     #self.displayTest1("testing")
     self.displayTest2()
@@ -38,7 +39,7 @@ class enoDispLcdWavesharePrt28:
     if self.font01Fn is not None:
       self.font01 = bitmap_font.load_font(self.font01Fn)
 
-  def initBoard(self):
+  def initDisplay(self):
     self.led = digitalio.DigitalInOut(board.LED) # onboard LED
     self.led.direction = digitalio.Direction.OUTPUT
     
@@ -63,6 +64,8 @@ class enoDispLcdWavesharePrt28:
     self.splash = displayio.Group()
     self.display.root_group = self.splash  # Updated to use root_group
     
+  ################# draw text #################
+
   def drawBox(self, x, y, w, h, color):
     r = displayio.Bitmap(w, h, 1)
     rPalette    = displayio.Palette(1)
@@ -71,10 +74,36 @@ class enoDispLcdWavesharePrt28:
     self.splash.append(rSprite)
     return rSprite
 
+  ################# draw text #################
+
+  def drawText(self, x, y, text, color=None)
+    text_group = displayio.Group(scale=self.fontScale, x=57, y=120)
+    text = displaytext
+    if self.font01 is not None: f = self.font01
+    else:                       f = terminalio.FONT
+
+    text_area = label.Label(f, text=text, color=0xFFFF00)
+    text_group.append(text_area)  # Subgroup for text scaling
+  
+  ################# display test 2 #################
+
   def displayTest2(self):
     self.drawBox(5,  5,100,80,self.colorYellow)
     self.drawBox(5, 90,100,80,self.colorRed)
     self.drawBox(5,175,100,80,self.colorBlue)
+
+  ################# draw labeled box #################
+ 
+  def drawLabeledBox(self, text, x, y, w=None, h=None, color=None):
+    if w     is None: w     = self.boxDefaultWidth
+    if h     is None: h     = self.boxDefaultHeight
+    if color is None: color = self.boxDefaultColor
+    tdx, tdy = self.textDx, self.textDy
+
+    self.drawBox(x, y, w, h, color)
+    self.drawText(x + tdx, y + tdy, text)
+
+  ################# display test 1 #################
 
   def displayTest1(self, displaytext):
     self.color_bitmap     = displayio.Bitmap(320, 240, 1)
@@ -102,13 +131,7 @@ class enoDispLcdWavesharePrt28:
     text_group.append(text_area)  # Subgroup for text scaling
     self.splash.append(text_group)
   
-  def drawLabeledBox(self, text, x, y, w=None, h=None, color=None):
-    if w     is None: w     = self.boxDefaultWidth
-    if h     is None: h     = self.boxDefaultHeight
-    if color is None: color = self.boxDefaultColor
-
-    self.drawBox(5,175,100,80,self.colorBlue)
-  
+  ################# cycle led #################
     
   def cycleLed(self):
     count = 0
