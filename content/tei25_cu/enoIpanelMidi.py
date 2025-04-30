@@ -24,6 +24,9 @@ class enoIpanelMidi(enoIpanelYaml):
   abbrev2singleKey   = None
   abbrev2ColorVal    = None 
 
+  isMidiGridButtonSelected     = False
+  midiButtonSelectedCoords = None
+
   illumFunc   = None
   coord2color = None
 
@@ -35,6 +38,7 @@ class enoIpanelMidi(enoIpanelYaml):
   }
 
   midiBrightness     = None
+  midiBrightDefaults = [4, 7, 2]
 
   midiCtrlName     = 'akaiApcMiniMk2'
   midiCtrlOutputId = 4
@@ -210,6 +214,20 @@ class enoIpanelMidi(enoIpanelYaml):
 
       if self.emc is None: self.err("illumCharMatrixMidi: self.emc is none!")
 
+  ############# get brightness values #############
+
+  def getBrightVals(self):
+    if self.midiBrightness is None: return self.midiBrightDefaults
+    #brightness: {default: 3, max: 6, min: 1}
+   
+    try:
+      result = []
+      for key, idx in [('default',0), ('max',1), ('min',2)]:
+        if key in self.midiBrightness: result.append(self.midiBrightness[key])
+        else:                          result.append(self.midiBrightDefaults[idx])
+      return result
+    except: return self.midiBrightDefaults
+
   ############# illuminate default midi #############
 
   def illumCharMatrixMidi(self):
@@ -218,12 +236,20 @@ class enoIpanelMidi(enoIpanelYaml):
       if self.coord2color is None: self.cacheCharMatrixColors()
       if self.verbose:             print("illumCharMatrixMidi: " + str(self.coord2color))
 
+      imbs                         = self.isMidiGridButtonSelected
+      x, y                         = self.midiButtonSelectedCoords
+      briteNorm, briteMax, britMin = self.getBrightVals() 
+
       for j in range(self.rows):
         for i in range(self.cols):
           coord = (i,j)
           if coord in self.coord2color:
             color = self.coord2color[coord]
-            self.illumFunc(i, j, color, 3)
+            if not imbs:        brightness = briteNorm #no midi grid buttons selected
+            elif i==x and j==y: brightness = briteMax
+            else:               brightness = briteMin
+            
+            self.illumFunc(i, j, color, brightness)
 
     except: self.err("illumCharMatrixColors"); return None
    
