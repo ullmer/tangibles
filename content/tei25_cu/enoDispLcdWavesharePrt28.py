@@ -10,7 +10,7 @@ from adafruit_display_text import label
 from adafruit_bitmap_font  import bitmap_font
 from adafruit_st7789       import ST7789
 
-# initDisplay and displayTest1 code largely from 
+# initDisplay, displayTest1, cycleLED code drawn from 
 #   https://markmcgookin.com/2023/01/11/using-the-waveshare-pico-restouch-lcd-2-8-screen-with-circuitpython/
 #   updated for CircuitPython 9 by CoPilot 
   
@@ -79,7 +79,7 @@ class enoDispLcdWavesharePrt28:
     r = displayio.Bitmap(w, h, 1)
     rPalette    = displayio.Palette(1)
     rPalette[0] = color
-    rSprite = displayio.TileGrid(r, pixel_shader=rPalette, x=x, y=y)
+    rSprite     = displayio.TileGrid(r, pixel_shader=rPalette, x=x, y=y)
     self.splash.append(rSprite)
     return rSprite
 
