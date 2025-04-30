@@ -20,12 +20,13 @@ class enoDispLcdWavesharePrt28:
   display  = None
   splash   = None
   led      = None
-  color_bitmap  = None
-  color_palette = None
-  bg_sprite     = None
-  font01Fn      = '/fonts/SairaCondensed-Regular.bdf'
-  font01        = None
-  fontScale     = 1 #with terminalio, was 3 with example code
+  color_bitmap   = None
+  color_palette  = None
+  bg_sprite      = None
+  font01Fn       = '/fonts/SairaCondensed-Regular.bdf'
+  font01         = None
+  fontScale      = 1 #with terminalio, was 3 with example code
+  textDx, textDy = 5, 5
 
   colorYellow = 0xFFFF00
   colorRed    = 0xFF0000
