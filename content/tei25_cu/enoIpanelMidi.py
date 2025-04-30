@@ -254,7 +254,12 @@ class enoIpanelMidi(enoIpanelYaml):
             self.illumFunc(i, j, color, brightness)
 
     except: self.err("illumCharMatrixColors"); return None
-   
+
+  ############# screen augmentation of selected grid locus #############
+
+  def screenAugmentSelectedGrid(self, coordTuple):
+    self.msg("screenAugmentSelected Grid called, coordinate tuple: " + str(coordTuple))
+ 
   ############# midi cb #############
 
   def midiCB(self, control, arg): 
