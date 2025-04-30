@@ -6,6 +6,8 @@ interactionPanel:
     #addr:      https://enodia.computing.clemson.edu/spreads/org.c-span/tags/ #not yet, but candidate
     #imgPrefix: images/cspt13/125
     #bgImg:     images/cspt13/bg125a
+
+  matrixImage: ipan_usa_bea08a
   
   regionList: [ne, me, se, gl, pl, sw, rm, fw]
   #populationThresh: [20, 15, 10, 5, 2.5, 1]
@@ -27,7 +29,7 @@ interactionPanel:
     akaiApcMiniMk2: 
       illum:      {RM: [ 9, 10], ME: [ 9, 62], GL: [45, 46], SE: [ 5,  6], 
                    NE: [37, 38], PL: [18, 19], FW: [13, 15], SW: [12, 11]}
-      brightness: {default: 3, max: 6, min: 1}
+      brightness: {default: 3, max: 4, min: 1}
   
   charMatrix: |-
     fPppLnnn
