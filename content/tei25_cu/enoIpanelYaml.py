@@ -139,6 +139,16 @@ class enoIpanelYaml:
     except: self.err('expandMatrixYaml')
     return None
   
+  ############# get matrix locus #############
+
+  def getMatrixLocus(self, i, j):
+    try:
+      if self.cachedMatrixDict is None: self.cacheMatrixYaml()
+      result = self.cachedMatrixDict[(i,j)] #dict is indexed on coord tuples
+      return result
+    except: self.err('getMatrixLocus ' + str(i) + " " + str(j))
+    return None
+
   ############# cache matrix yaml #############
 
   def cacheMatrixYaml(self):
