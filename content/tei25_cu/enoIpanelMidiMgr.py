@@ -103,6 +103,16 @@ class enoIpanelMidiMgr:
     ripan = self.getRegisteredIpanel(whichButton)
     if ripan is not None: ripan.illumCharMatrixMidi()
 
+
+  ############# get current interaction panel #############
+ 
+  def getCurrentInteractionPanel(self):
+    try:
+      whichSidebarButton = self.sidebarButtonCurrentlyActive 
+      cipan              = self.getRegisteredIpanel(whichSidebarButton)
+      return cipan
+    except: self.err("getCurrentInteractionPanel")
+
   ############# midi cb #############
 
   def midiCB(self, control, arg): 
@@ -115,16 +125,15 @@ class enoIpanelMidiMgr:
           if control[0] >= 'a' and control[0] <= 'h':
             whichSidebarButton = ord(control[0]) - ord('a')
             self.rightSidebarPress(whichSidebarButton)
-            ripan  = self.getRegisteredIpanel(whichSidebarButton)
-            ripan.isMidiGridButtonSelected = False
-            ripan.illumCharMatrixMidi()
+            cipan  = self.getCurrentInteractionPanel()
+            cipan.isMidiGridButtonSelected = False
+            cipan.illumCharMatrixMidi()
         else: 
-          whichSidebarButton = self.sidebarButtonCurrentlyActive 
-          ripan              = self.getRegisteredIpanel(whichSidebarButton)
+          cipan = self.getCurrentInteractionPanel()
           coordTuple         = self.emc.mapCoord2Tuple(control)
-          ripan.midiButtonSelectedCoords = coordTuple
-          ripan.isMidiGridButtonSelected = True
-          ripan.illumCharMatrixMidi()
+          cipan.midiButtonSelectedCoords = coordTuple
+          cipan.isMidiGridButtonSelected = True
+          cipan.illumCharMatrixMidi()
           if self.verbose: print("midiCB grid coord: " + str(coordTuple))
 
     except: self.err("midiCB " + str(control) + ":" + str(arg)) 
