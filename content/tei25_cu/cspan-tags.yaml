@@ -7,6 +7,7 @@ interactionPanel:
   addr:      https://enodia.computing.clemson.edu/spreads/org.c-span/tags/ #not yet, but candidate
   imgPrefix: images/cspt13/125
   bgImg:     images/cspt13/bg125a
+  matrixImage: cspan10b3
 
   charMatrix: |-
     MMMPPPPP
@@ -18,6 +19,14 @@ interactionPanel:
     HHHHCCCCC
     JJBBBBBBB
     JJJJJJJJJ
+
+  midi:
+    akaiApcMiniMk2:
+      illum:      {B: [41], C: [ 3], c: [ 1], E: [48], F: [37], H: [19],
+                   h: [12], J: [45], M: [10], T: [54], S: [47], s: [44],
+                   w: [ 5], P: [53]}
+
+      brightness: {default: 3, max: 6, min: 1}
 
   charMap:  
     B: [busCom,  agricu, banFin, comput, fedBud, ecoPol, empPol, transp]
