@@ -1,0 +1,19 @@
+### TEI25 @ Clemson : Student Projects ###
+
+handle_prefix: cu_tei25_
+
+projects:
+  1:  {peopleAbbrev: [SKS, PKT], handle: HR,   projName: "Helper Robot"}
+  2:  {peopleAbbrev: [ZAB, JL],  handle: DMT,  projName: "Democratizing music technology"}
+  3:  {peopleAbbrev: [CMA],      handle: FTDE, projName: "FTD Epaulettes"}
+  4:  {peopleAbbrev: [RTB],      projName: ""}
+  5:  {peopleAbbrev: [KMB],      projName: ""}
+  6:  {peopleAbbrev: [YH],       projName: ""}
+  7:  {peopleAbbrev: [BLS],      projName: "Volunteer Trainer", color=cyan}
+  8:  {peopleAbbrev: [UAS],      projName: ""}
+  9:  {peopleAbbrev: [DNV],      projName: ""}
+  10: {peopleAbbrev: [ZJW],      projName: ""}
+  11: {peopleAbbrev: [WW],       projName: ""}
+  12: {peopleAbbrev: [BAU],      handle: TNW, projName: "This Noble Work"}
+
+### end ###
