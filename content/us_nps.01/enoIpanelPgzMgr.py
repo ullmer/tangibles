@@ -40,8 +40,6 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
 
-    self.calcCursorCurrentCoordPos()
-
   ############# error, msg #############
 
   def err(self, msgStr): print("enoIpanelPgzMgr error: " + str(msgStr)); traceback.print_exc(); 
@@ -89,6 +87,7 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
   ############# restage actors #############
 
   def restageActors(self): 
+    self.calcCursorCurrentCoordPos()
     cipan  = self.getCurrentInteractionPanel()
     imgFn  = cipan.getMatrixImageFn()
 
@@ -103,7 +102,7 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
 
   ############# drawMatrixCursor #############
 
-  def drawMatrixCursor(self): 
+  def drawMatrixCursor(self, screen): 
 
     if self.matrixCursorActive is False: self.msg("drawMatrixCursor called, but flag disabled"); return
 
@@ -114,7 +113,7 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
 
     x, y = self.matrixCursorCurrentCoordPos
     cr   = Rect(x, y, self.matrixCursorWidth, self.matrixCursorHeight)
-    draw.filled_rect(cr, self.matrixCursorColor)
+    screen.draw.filled_rect(cr, self.matrixCursorColor)
     
   ############# constructor #############
   #def __init__(self, **kwargs): 
@@ -135,9 +134,9 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
 
   ############# draw #############
 
-  def draw(self): 
+  def draw(self, screen): 
     if self.matrixImgActor is not None: self.matrixImgActor.draw()
-    if self.matrixCursorActive:         self.drawMatrixCursor()
+    if self.matrixCursorActive:         self.drawMatrixCursor(screen)
 
 ############# main #############
 
@@ -151,9 +150,9 @@ epi2 = enoIpanelPgz(tagFn = 'yaml/cspan-tags.yaml', casePaired=False, autolaunch
 epim.registerIpanel(epi1, 0) #bootstrapping logic, to be reworked
 epim.registerIpanel(epi2, 1)
   
-epim.changeMatrixScale(.5)
-
-def draw():   screen.clear(); epim.draw()
+def draw():   
+  epim.changeMatrixScale(.5)
+  screen.clear(); epim.draw(screen)
 
 def update(): 
   epim.pollMidi()
