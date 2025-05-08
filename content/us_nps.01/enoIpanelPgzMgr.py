@@ -58,7 +58,9 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
       dx = w * self.matrixCursorDx + self.matrixCursorXoff
       dy = h * self.matrixCursorDy + self.matrixCursorYoff
 
-      x1, y1 = x0+dx, y0+dy
+      print("ccccp:", dx, dy)
+
+      x1, y1 = x0-dx, y0-dy
       result = (x1, y1)
       self.matrixCursorCurrentCoordPos = result
       return result
@@ -113,6 +115,7 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
 
     x, y = self.matrixCursorCurrentCoordPos
     cr   = Rect(x, y, self.matrixCursorWidth, self.matrixCursorHeight)
+    print("DMC: ", x, y, self.matrixCursorWidth, self.matrixCursorHeight, self.matrixCursorColor)
     screen.draw.filled_rect(cr, self.matrixCursorColor)
     
   ############# constructor #############
@@ -135,8 +138,8 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
   ############# draw #############
 
   def draw(self, screen): 
-    if self.matrixImgActor is not None: self.matrixImgActor.draw()
     if self.matrixCursorActive:         self.drawMatrixCursor(screen)
+    if self.matrixImgActor is not None: self.matrixImgActor.draw()
 
 ############# main #############
 
