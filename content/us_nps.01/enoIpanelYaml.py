@@ -184,7 +184,7 @@ class enoIpanelYaml:
 
 if __name__ == "__main__":
   #eip = enoIpanel(tagFn = 'cspan-tags.yaml')
-  eipy = enoIpanelYaml(tagFn = 'us-bea.yaml')
+  eipy = enoIpanelYaml(tagFn = 'yaml/us-bea.yaml')
   m    = eipy.getCharMatrix()
   print(m)
 

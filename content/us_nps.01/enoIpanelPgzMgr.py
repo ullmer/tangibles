@@ -73,8 +73,8 @@ epim = enoIpanelPgzMgr()
 
 print("=" * 70)
 
-epi1 = enoIpanelPgz(tagFn = 'us-bea.yaml',     casePaired=True,  autolaunchMidi=False)
-epi2 = enoIpanelPgz(tagFn = 'cspan-tags.yaml', casePaired=False, autolaunchMidi=False)
+epi1 = enoIpanelPgz(tagFn = 'yaml/us-bea.yaml',     casePaired=True,  autolaunchMidi=False)
+epi2 = enoIpanelPgz(tagFn = 'yaml/cspan-tags.yaml', casePaired=False, autolaunchMidi=False)
 
 epim.registerIpanel(epi1, 0) #bootstrapping logic, to be reworked
 epim.registerIpanel(epi2, 1)
