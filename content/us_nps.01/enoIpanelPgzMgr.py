@@ -7,7 +7,9 @@ import traceback
 import pgzero
 print("pgzero version:",  pgzero.__version__)
 
-WIDTH, HEIGHT = 1700, 900
+#WIDTH, HEIGHT = 1700, 900
+#WIDTH, HEIGHT = 1920, 1080
+WIDTH, HEIGHT = 2100, 1150
 
 from enoIpanelPgz     import *
 from enoIpanelMidiMgr import *
@@ -52,7 +54,8 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
     cipan.pgzIpanelMgr = self
 
     if self.matrixImgActor is None:
-      self.matrixImgActor = Actor(imgFn)
+      brpos = (WIDTH, HEIGHT)
+      self.matrixImgActor = Actor(imgFn, bottomright=brpos)
     else: 
       self.matrixImgActor.image   = imgFn
       self.matrixImgActor.opacity = 1. #remove transparency
