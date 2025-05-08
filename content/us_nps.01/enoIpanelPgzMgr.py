@@ -28,8 +28,8 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
   matrixCursorActive          = True
   matrixCursorCurrentCoordIdx = (0, 0)          #tuple, initially 
   matrixCursorCurrentCoordPos = None
-  matrixCursorDx,    matrixCursorDy     = (100, 100)
-  matrixCursorWidth, matrixCursorHeight = (200, 100)
+  matrixCursorDx,    matrixCursorDy     = (253, 143)
+  matrixCursorWidth, matrixCursorHeight = (253, 143)
   matrixCursorXoff,  matrixCursorYoff   = (  0,   0)
   matrixCursorColor                     = tup3(200)
   matrixBrPos                           = (WIDTH, HEIGHT)
@@ -59,8 +59,7 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
       dx = (w - i) * self.matrixCursorDx + self.matrixCursorXoff
       dy = (h - j) * self.matrixCursorDy + self.matrixCursorYoff
 
-      print("ccccp:", dx, dy)
-
+      #print("ccccp:", dx, dy)
       x1, y1 = x0-dx, y0-dy
       result = (x1, y1)
       self.matrixCursorCurrentCoordPos = result
