@@ -107,17 +107,22 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
 
   def drawMatrixCursor(self, screen): 
 
-    if self.matrixCursorActive is False: self.msg("drawMatrixCursor called, but flag disabled"); return
+    if self.matrixCursorActive is False: 
+      self.msg("drawMatrixCursor called, but flag disabled"); return
 
-    mccci, mcccp = self.matrixCursorCurrentCoordIdx, self.matrixCursorCurrentCoordPos
+    try:
+      #mccci, mcccp = self.matrixCursorCurrentCoordIdx, self.matrixCursorCurrentCoordPos
+      x, y = self.calcCursorCurrentCoordPos()
 
-    if mccci is None or mcccp is None:   
-      self.msg("drawMatrixCursor: mccci or mcccp not initialized!"); return
+      #if mccci is None or mcccp is None:   
+      #  self.msg("drawMatrixCursor: mccci or mcccp not initialized!"); return
 
-    x, y = self.matrixCursorCurrentCoordPos
-    cr   = Rect(x, y, self.matrixCursorWidth, self.matrixCursorHeight)
-    print("DMC: ", x, y, self.matrixCursorWidth, self.matrixCursorHeight, self.matrixCursorColor)
-    screen.draw.filled_rect(cr, self.matrixCursorColor)
+      cr   = Rect(x, y, self.matrixCursorWidth, self.matrixCursorHeight)
+      #print("DMC: ", x, y, self.matrixCursorWidth, \
+      #   self.matrixCursorHeight, self.matrixCursorColor)
+      screen.draw.filled_rect(cr, self.matrixCursorColor)
+
+    except: self.err("drawMatrixCursor")
     
   ############# constructor #############
   #def __init__(self, **kwargs): 
