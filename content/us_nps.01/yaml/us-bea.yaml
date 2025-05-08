@@ -7,7 +7,7 @@ interactionPanel:
     #imgPrefix: images/cspt13/125
     #bgImg:     images/cspt13/bg125a
 
-  matrixImage: ipan_usa_bea08a
+  matrixImage: ipan_usa_bea08c
   
   regionList: [ne, me, se, gl, pl, sw, rm, fw]
   #populationThresh: [20, 15, 10, 5, 2.5, 1]
