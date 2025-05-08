@@ -29,8 +29,10 @@ class enoIpanelMidiMgr(enoIpanelMgr):
   midiBrightness   = None
   midiCtrlName     = 'akaiApcMiniMk2'
   midiCtrlOutputId = 4
+  midiActive       = False
 
   ipanelSidebarDict = None
+  midiUnavailabilityReported = None
 
   ############# constructor #############
 
@@ -67,7 +69,11 @@ class enoIpanelMidiMgr(enoIpanelMgr):
 
   def pollMidi(self):
     if self.emc is None:
-      self.msg("pollMidi: Enodia midi controller emc is not initialized"); return None
+      mur = self.midiUnavailabilityReported 
+      if mur is None or mur is False:
+        self.msg("pollMidi: Enodia midi controller emc is not initialized")
+        self.midiUnavailabilityReported = True
+        return None
 
     self.emc.pollMidi()
 
@@ -82,6 +88,7 @@ class enoIpanelMidiMgr(enoIpanelMgr):
       #self.emc = enoMidiController(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
       self.emc = enoMidiAkai(mcn, midiCtrlOutputId=mcoi, activateOutput=True)
       self.emc.registerControls(self.midiCB)
+      self.midiActive = True
     except: self.err("initMidi")
   
   ############# handle sidebar #############

@@ -137,6 +137,7 @@ epim.registerIpanel(epi2, 1)
 epim.changeMatrixScale(.5)
 
 def draw():   screen.clear(); epim.draw()
+
 def update(): 
   epim.pollMidi()
   if epim.panelUpdated(): epim.restageActors() #probably to be renamed
