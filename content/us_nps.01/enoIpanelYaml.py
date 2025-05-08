@@ -4,9 +4,10 @@
 
 import sys, os, yaml, traceback
 
+from enoIpanel import *
 ############# enodia interaction panel #############
 
-class enoIpanelYaml:
+class enoIpanelYaml(enoIpanel):
 
   tagFn = None
   tagYd = None
@@ -20,21 +21,19 @@ class enoIpanelYaml:
   colorMap  = None
   brightMap = None
 
-  rows, cols       = 8, 8
-  verbose          = False
-
   ############# constructor #############
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    super().__init__()
 
     if self.tagFn is not None: self.loadYaml()
     if self.isYamlLoaded():    self.cacheMatrixYaml()
 
   ############# error, msg #############
 
-  def err(self, msg): print("enoIpanel error: " + str(msg)); traceback.print_exc(); 
-  def msg(self, msg): print("enoIpanel msg: "   + str(msg))
+  def err(self, msg): print("enoIpanelYaml error: " + str(msg)); traceback.print_exc(); 
+  def msg(self, msg): print("enoIpanelYaml msg: "   + str(msg))
 
   ############# get panel name #############
 
