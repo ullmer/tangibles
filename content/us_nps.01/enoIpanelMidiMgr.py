@@ -8,14 +8,13 @@ from pygame import time
 from enoMidiController import *
 from enoMidiAkai       import *
 from enoIpanelMidi     import *
+from enoIpanelMgr      import *
 
 ############# enodia interaction panel MIDI manager #############
 
-class enoIpanelMidiMgr:
+class enoIpanelMidiMgr(enoIpanelMgr):
 
   emc     = None #enodia midi controller
-  verbose = False
-  #verbose = True
 
   autolaunchMidi = True
 
@@ -52,23 +51,13 @@ class enoIpanelMidiMgr:
   ############# register interaction panel #############
 
   def registerIpanel(self, ipanelHandle, whichSidebarButton):
-    if self.ipanelSidebarDict is None:
-      self.ipanelSidebarDict = {}
+    super().registerIpanel(ipanelHandle, whichSidebarButton)
 
-    self.ipanelSidebarDict[whichSidebarButton] = ipanelHandle
     ipanelHandle.emc                           = self.emc #possibly revisit
 
     if self.sidebarButtonCurrentlyActive == whichSidebarButton:
       ipanelHandle.illumCharMatrixMidi()
   
-  ############# get registered interaction panel #############
-
-  def getRegisteredIpanel(self, whichSidebarButton):
-    if self.ipanelSidebarDict is None:                   return None
-    if whichSidebarButton not in self.ipanelSidebarDict: return None
-    result = self.ipanelSidebarDict[whichSidebarButton]
-    return result
-
   ############# poll midi #############
 
   def pollMidi(self):
@@ -102,41 +91,6 @@ class enoIpanelMidiMgr:
 
     ripan = self.getRegisteredIpanel(whichButton)
     if ripan is not None: ripan.illumCharMatrixMidi()
-
-
-  ############# get current interaction panel #############
- 
-  def getCurrentInteractionPanel(self):
-    try:
-      whichSidebarButton = self.sidebarButtonCurrentlyActive 
-      cipan              = self.getRegisteredIpanel(whichSidebarButton)
-      return cipan
-    except: self.err("getCurrentInteractionPanel")
-
-  ############# is sidebar button #############
-
-  def isSidebarButton(self, whichButton): 
-    try:
-      if len(whichButton) != 2: return False
-      w0, w1 = whichButton
-      if w1 == '9' and 'a' <= w0 <= 'h': return True
-      return False
-    except: self.err("isSidebarButton " + str(whichButton))
-
-  def isMatrixButton(self, whichButton): 
-    try:
-      if len(whichButton) != 2: return False
-      w0, w1 = whichButton
-      if '0' <= w1 < '9' and 'a' <= w0 <= 'h': return True
-      return False
-    except: self.err("isSidebarButton " + str(whichButton))
-
-  def getSidebarButtonVal(self, whichButton): 
-    try:
-      if len(whichButton) != 2: return None
-      result = ord(whichButton[0]) - ord('a')
-      return result
-    except: self.err("getSidebarButtonVal" + str(whichButton))
 
   ############# midi cb #############
 

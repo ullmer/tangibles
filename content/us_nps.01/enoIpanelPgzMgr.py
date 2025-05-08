@@ -14,6 +14,8 @@ WIDTH, HEIGHT = 2100, 1150
 from enoIpanelPgz     import *
 from enoIpanelMidiMgr import *
 
+def tup3(val): return (val, val, val) # convenience function for grayscale (three-element tuple)
+
 ############# enodia pygame zero interaction panel manager #############
 
 class enoIpanelPgzMgr(enoIpanelMidiMgr): 
@@ -21,18 +23,30 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
   matrixImgActor = None
   lastObservedPanelName = None
   
-  matrixCursorActive          = False
-  matrixCursorCurrentCoordIdx = None #tuple, initially 
+  #matrixCursorActive         = False
+  matrixCursorActive          = True
+  matrixCursorCurrentCoordIdx = (0, 0)          #tuple, initially 
   matrixCursorCurrentCoordPos = None
   matrixCursorDx,    matrixCursorDy     = (100, 100)
   matrixCursorWidth, matrixCursorHeight = (100, 100)
   matrixCursorXoff,  matrixCursorYoff   = (  0,   0)
+  matrixCursorColor                     = tup3(200)
+  matrixBrPos                           = (WIDTH, HEIGHT)
 
   ############# constructor #############
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
+
+    self.calcCursorCurrentCoordPos()
+
+  ############# panel updated #############
+
+  def calcCursorCurrentCoordPos(self):
+    x0, y0 = self.matrixBrPos
+
+    self.matrixCursorCurrentCoordPos = None
 
   ############# panel updated #############
 
@@ -54,11 +68,36 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
     cipan.pgzIpanelMgr = self
 
     if self.matrixImgActor is None:
-      brpos = (WIDTH, HEIGHT)
-      self.matrixImgActor = Actor(imgFn, bottomright=brpos)
+      self.matrixImgActor = Actor(imgFn, bottomright=self.matrixBrPos)
     else: 
       self.matrixImgActor.image   = imgFn
       self.matrixImgActor.opacity = 1. #remove transparency
+
+  ############# drawMatrixCursor #############
+
+  def drawMatrixCursor(self): 
+
+    if self.matrixCursorActive is False: self.msg("drawMatrixCursor called, but flag disabled"); return
+
+    mccci, mcccp = self.matrixCursorCurrentCoordIdx, self.matrixCursorCurrentCoordPos
+
+    if mccci is None or mcccp is None:   self.msg("drawMatrixCusor: mccci or mcccp not initialized!"); return
+
+    x, y = self.matrixCursorCurrentCoordPos
+    cr   = Rect(x, y, self.matrixCursorWidth, self.matrixCursorHeight)
+    draw.filled_rect(cr, self.matrixCursorColor)
+
+    
+  #matrixCursorColor                     = tup3(200)
+  #matrixCursorCurrentCoordIdx = None #tuple, initially 
+  #matrixCursorCurrentCoordPos = None
+  #matrixCursorDx,    matrixCursorDy     = (100, 100)
+  #matrixCursorWidth, matrixCursorHeight = (100, 100)
+  #matrixCursorXoff,  matrixCursorYoff   = (  0,   0)
+
+  ############# constructor #############
+
+  #def __init__(self, **kwargs): 
 
   ############# midi cb #############
 
@@ -69,6 +108,7 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
 
   def draw(self): 
     if self.matrixImgActor is not None: self.matrixImgActor.draw()
+    if self.matrixCursorActive:         self.drawMatrixCursor()
 
 ############# main #############
 
