@@ -19,8 +19,9 @@ def tup3(val): return (val, val, val) # convenience function for grayscale (thre
 ############# enodia pygame zero interaction panel manager #############
 
 class enoIpanelPgzMgr(enoIpanelMidiMgr): 
-  matrixImgFn    = None
-  matrixImgActor = None
+  matrixImgFn         = None
+  matrixImgActor      = None
+  matrixImgActorScale = 1.
   lastObservedPanelName = None
   
   #matrixCursorActive         = False
@@ -51,12 +52,14 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
   ############# panel updated #############
 
   def panelUpdated(self): 
-    cipan  = self.getCurrentInteractionPanel()
-    currentName = cipan.getPanelName()
+    try:
+      cipan  = self.getCurrentInteractionPanel()
+      currentName = cipan.getPanelName()
 
-    if currentName == self.lastObservedPanelName: return False
-    self.lastObservedPanelName = currentName
-    return True
+      if currentName == self.lastObservedPanelName: return False
+      self.lastObservedPanelName = currentName
+      return True
+    except: self.err("panelUpdated")
 
   ############# restage actors #############
 
@@ -104,6 +107,15 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
   def midiCB(self, control, arg): 
     super().midiCB(control, arg)
 
+  ############# change matrix scale #############
+
+  def changeMatrixScale(self, scale): 
+    if self.matrixImgActor is None: 
+      self.msg("changeMatrixScale called, but matrix actor not initiated"); return None
+
+    self.matrixImgActorScale  = scale
+    self.matrixImgActor.scale = scale
+
   ############# draw #############
 
   def draw(self): 
@@ -121,6 +133,8 @@ epi2 = enoIpanelPgz(tagFn = 'yaml/cspan-tags.yaml', casePaired=False, autolaunch
 
 epim.registerIpanel(epi1, 0) #bootstrapping logic, to be reworked
 epim.registerIpanel(epi2, 1)
+  
+epim.changeMatrixScale(.5)
 
 def draw():   screen.clear(); epim.draw()
 def update(): 

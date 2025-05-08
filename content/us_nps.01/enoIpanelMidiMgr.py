@@ -38,10 +38,15 @@ class enoIpanelMidiMgr(enoIpanelMgr):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
 
+
     if self.autolaunchMidi: 
-      self.initMidi()
-      self.emc.dimMatrixSidebarAkaiApcMini()
-      self.rightSidebarPress(0)
+      try: 
+        self.initMidi()
+        if self.emc is not None:
+          self.emc.dimMatrixSidebarAkaiApcMini()
+        else: self.msg("constructor noting that midi initiation apparently unsuccessful")
+        self.rightSidebarPress(0)
+      except: self.err("constructor challenges with midi launch"); return None
 
   ############# error, msg #############
 
