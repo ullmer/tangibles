@@ -15,6 +15,8 @@ class enoIpanelMgr:
   sidebar_right  = 2
   sidebarButtonCurrentlyActive = None
 
+  currentCoord = (0, 0)
+
   ipanelSidebarDict = None
 
   ############# constructor #############
@@ -27,6 +29,11 @@ class enoIpanelMgr:
 
   def err(self, msgStr): print("enoIpanelMgr error: " + str(msgStr)); traceback.print_exc(); 
   def msg(self, msgStr): print("enoIpanelMgr msg: "   + str(msgStr))
+
+  ############# set, get current coord #############
+
+  def setCurrentCoord(self, newCoord): self.currentCoord = newCoord
+  def getCurrentCoord(self):    return self.currentCoord 
 
   ############# register interaction panel #############
 

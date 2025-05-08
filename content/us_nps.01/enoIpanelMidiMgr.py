@@ -122,6 +122,7 @@ class enoIpanelMidiMgr(enoIpanelMgr):
         self.msg("grid matrix button pressed") #console message, to assist interpretation
         cipan       = self.getCurrentInteractionPanel()
         coordTuple  = self.emc.mapCoord2Tuple(control)
+        self.setCurrentCoord(coordTuple)
         cipan.midiButtonSelectedCoords = coordTuple
         cipan.isMidiGridButtonSelected = True
         cipan.illumCharMatrixMidi()
