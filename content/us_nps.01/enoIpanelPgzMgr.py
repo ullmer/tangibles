@@ -42,12 +42,37 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
 
     self.calcCursorCurrentCoordPos()
 
+  ############# error, msg #############
+
+  def err(self, msgStr): print("enoIpanelPgzMgr error: " + str(msgStr)); traceback.print_exc(); 
+  def msg(self, msgStr): print("enoIpanelPgzMgr msg: "   + str(msgStr))
+
   ############# panel updated #############
 
   def calcCursorCurrentCoordPos(self):
-    x0, y0 = self.matrixBrPos
+    try:
+      x0, y0 = self.matrixBrPos
 
-    self.matrixCursorCurrentCoordPos = None
+      self.matrixCursorCurrentCoordPos = None
+      ipan = self.getCurrentInteractionPanel()
+      w, h = ipan.getDim()
+
+      dx = w * self.matrixCursorDx + self.matrixCursorXoff
+      dy = h * self.matrixCursorDy + self.matrixCursorYoff
+
+      x1, y1 = x0+dx, y0+dy
+      result = (x1, y1)
+      self.matrixCursorCurrentCoordPos = result
+      return result
+
+    except: self.err("calcCursorCurrentCoordPos")
+  
+  #matrixCursorColor                     = tup3(200)
+  #matrixCursorCurrentCoordIdx = None #tuple, initially 
+  #matrixCursorCurrentCoordPos = None
+  #matrixCursorDx,    matrixCursorDy     = (100, 100)
+  #matrixCursorWidth, matrixCursorHeight = (100, 100)
+  #matrixCursorXoff,  matrixCursorYoff   = (  0,   0)
 
   ############# panel updated #############
 
@@ -84,22 +109,14 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
 
     mccci, mcccp = self.matrixCursorCurrentCoordIdx, self.matrixCursorCurrentCoordPos
 
-    if mccci is None or mcccp is None:   self.msg("drawMatrixCusor: mccci or mcccp not initialized!"); return
+    if mccci is None or mcccp is None:   
+      self.msg("drawMatrixCursor: mccci or mcccp not initialized!"); return
 
     x, y = self.matrixCursorCurrentCoordPos
     cr   = Rect(x, y, self.matrixCursorWidth, self.matrixCursorHeight)
     draw.filled_rect(cr, self.matrixCursorColor)
-
     
-  #matrixCursorColor                     = tup3(200)
-  #matrixCursorCurrentCoordIdx = None #tuple, initially 
-  #matrixCursorCurrentCoordPos = None
-  #matrixCursorDx,    matrixCursorDy     = (100, 100)
-  #matrixCursorWidth, matrixCursorHeight = (100, 100)
-  #matrixCursorXoff,  matrixCursorYoff   = (  0,   0)
-
   ############# constructor #############
-
   #def __init__(self, **kwargs): 
 
   ############# midi cb #############

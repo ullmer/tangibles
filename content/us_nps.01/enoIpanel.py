@@ -22,4 +22,8 @@ class enoIpanel:
   def err(self, msg): print("enoIpanel error: " + str(msg)); traceback.print_exc(); 
   def msg(self, msg): print("enoIpanel msg: "   + str(msg))
 
+  ############# get dimensions #############
+
+  def getDim(self): return (self.rows, self.cols)
+
 ### end ###
