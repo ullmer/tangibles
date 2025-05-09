@@ -3,6 +3,7 @@
 # Begun 2025-05-09
 
 import pygame, traceback
+from pgzero.actor import Actor
 
 WIDTH, HEIGHT = 1920, 1080
 
@@ -11,6 +12,11 @@ def ActorScaled(Actor): #scaled actor
   lastScaleVal   = None
   lastScaledSurf = None
   scaleIncrement = 1000
+
+  def __init__(self, image, pos=(0, 0), anchor=('center', 'center'), **kwargs):
+    self.DELEGATED_ATTRIBUTES += ['scale']
+    super().__init__(image, pos, anchor, **kwargs)
+    if scale in kwargs: self.scale = kwargs.get('scale', 1)
 
   def update(self): #updated scaled surface
     try:
