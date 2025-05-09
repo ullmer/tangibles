@@ -14,8 +14,9 @@ def ActorScaled(Actor): #scaled actor
   scaleIncrement = 1000
 
   def __init__(self, image, pos=(0, 0), anchor=('center', 'center'), **kwargs):
-    self.DELEGATED_ATTRIBUTES += ['scale']
     super().__init__(image, pos, anchor, **kwargs)
+
+    self.DELEGATED_ATTRIBUTES += ['scale']
     if scale in kwargs: self.scale = kwargs.get('scale', 1)
 
   def update(self): #updated scaled surface
@@ -36,7 +37,9 @@ def ActorScaled(Actor): #scaled actor
       self.blit(self.lastScaledSurf, self.pos)
 
 a1 = ActorScaled("ipan_usa_bea08c")
-animate(a1, scale=1, duration=2.)
+print("foo")
+
+#animate(a1, scale=1, duration=2.)
 
 def draw(): 
   a1.draw()
