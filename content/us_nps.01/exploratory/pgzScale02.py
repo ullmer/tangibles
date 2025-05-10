@@ -11,17 +11,13 @@ WIDTH, HEIGHT = 1920, 1080
 
 class ActorScaled(Actor): #scaled actor
   scale          = 1.
-  lastScaleVal   = None
+  lastScaleVal   = 1.
   lastScaledSurf = None
   scaleIncrement = 1000
 
   ############# constructor ############# 
 
-  def __init__(self, image, pos=(0, 0), anchor=('center', 'center'), **kwargs):
-    super().__init__(image, pos, anchor, **kwargs)
-
-    self.DELEGATED_ATTRIBUTES += ['scale']
-    #if 'scale' in kwargs: self.scale = kwargs.get('scale')
+  def prep(self): self.DELEGATED_ATTRIBUTES += ['scale']
 
   ############# update ############# 
 
@@ -30,7 +26,7 @@ class ActorScaled(Actor): #scaled actor
       scaleInt     = int(self.scale * self.scaleIncrement)  #toward nuancing precision issues 
       lastScaleInt = int(self.lastScaleVal * self.scaleIncrement)
 
-      if lastScaleVal != None or scaleInt == lastScaleInst: return  #nothing to do
+      if scaleInt == lastScaleInt: return  #nothing to do
       w, h           = self.width * self.scale, self.height * self.scale
       lastScaledSurf = pygame.transform.scale(self._orig_surf, (w, h))
 
@@ -42,12 +38,13 @@ class ActorScaled(Actor): #scaled actor
     if self.scale == 1.: super().draw()
     else: 
       self.update()
-      self.blit(self.lastScaledSurf, self.pos)
+      screen.blit(self.lastScaledSurf, self.pos)
 
-a1 = ActorScaled("ipan_usa_bea08c", scale=.1)
+a1 = ActorScaled("ipan_usa_bea08c", topleft=(0,0))
 a1.scale=.1
+a1.prep()
 
-animate(a1, scale=1., duration=10.)
+#animate(a1, scale=1., duration=10.)
 
 def draw(): 
   a1.draw()
