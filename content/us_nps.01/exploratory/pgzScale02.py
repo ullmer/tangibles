@@ -7,17 +7,23 @@ from pgzero.actor import Actor
 
 WIDTH, HEIGHT = 1920, 1080
 
+############# Actor, scaled ############# 
+
 def ActorScaled(Actor): #scaled actor
   scale          = 1.
   lastScaleVal   = None
   lastScaledSurf = None
   scaleIncrement = 1000
 
+  ############# constructor ############# 
+
   def __init__(self, image, pos=(0, 0), anchor=('center', 'center'), **kwargs):
     super().__init__(image, pos, anchor, **kwargs)
 
     self.DELEGATED_ATTRIBUTES += ['scale']
     if scale in kwargs: self.scale = kwargs.get('scale', 1)
+
+  ############# update ############# 
 
   def update(self): #updated scaled surface
     try:
@@ -29,6 +35,8 @@ def ActorScaled(Actor): #scaled actor
       lastScaledSurf = pygame.transform.scale(self._orig_surf, (w, h))
 
     except: print("ActorScaled update issue"); traceback.print_exc(); return None
+
+  ############# draw ############# 
 
   def draw(self): 
     if self.scale == 1.: super().draw()
