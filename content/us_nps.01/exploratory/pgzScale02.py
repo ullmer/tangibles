@@ -21,7 +21,7 @@ class ActorScaled(Actor): #scaled actor
     super().__init__(image, pos, anchor, **kwargs)
 
     self.DELEGATED_ATTRIBUTES += ['scale']
-    if 'scale' in kwargs: self.scale = kwargs.get('scale', 1)
+    #if 'scale' in kwargs: self.scale = kwargs.get('scale')
 
   ############# update ############# 
 
@@ -45,10 +45,12 @@ class ActorScaled(Actor): #scaled actor
       self.blit(self.lastScaledSurf, self.pos)
 
 a1 = ActorScaled("ipan_usa_bea08c", scale=.1)
+a1.scale=.1
 
-animate(a1, scale=1, duration=2.)
+animate(a1, scale=1., duration=10.)
 
 def draw(): 
-  if a1 is not None: a1.draw()
+  a1.draw()
+  print(a1.scale)
 
 ### end ###
