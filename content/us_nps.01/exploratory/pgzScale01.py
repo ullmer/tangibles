@@ -25,7 +25,7 @@ def actorScale(actor, scale, actorScaleCacheDict):
 
   except: print("actorScale issue"); traceback.print_exc(); return None
 
-animate(a1, scale=1, duration=2.)
+animate(a1, scale=1, duration=2., tween='accel_decel')
 
 def draw(): 
   a1s = actorScale(a1, a1.scale, a1sCache)
