@@ -27,27 +27,31 @@ class ActorScaled(Actor): #scaled actor
       lastScaleInt = int(self.lastScaleVal * self.scaleIncrement)
 
       if scaleInt == lastScaleInt: return  #nothing to do
-      w, h           = self.width * self.scale, self.height * self.scale
-      lastScaledSurf = pygame.transform.scale(self._orig_surf, (w, h))
+      w, h                = self.width * self.scale, self.height * self.scale
+      self.lastScaledSurf = pygame.transform.scale(self._orig_surf, (w, h))
 
     except: print("ActorScaled update issue"); traceback.print_exc(); return None
 
   ############# draw ############# 
 
   def draw(self): 
+    print(self.scale)
     if self.scale == 1.: super().draw()
     else: 
       self.update()
-      screen.blit(self.lastScaledSurf, self.pos)
+      if self.lastScaledSurf is None:
+        print("ActorScaled draw: unexpected error with last scaled surface")
+      else:
+        screen.blit(self.lastScaledSurf, self.pos)
 
-a1 = ActorScaled("ipan_usa_bea08c", topleft=(0,0))
+#a1 = ActorScaled("ipan_usa_bea08c", topleft=(0,0))
+a1 = ActorScaled("ipan_usa_bea08c")
 a1.scale=.1
 a1.prep()
 
-#animate(a1, scale=1., duration=10.)
+animate(a1, scale=1., duration=10.)
 
 def draw(): 
   a1.draw()
-  print(a1.scale)
 
 ### end ###
