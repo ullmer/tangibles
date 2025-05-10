@@ -21,7 +21,7 @@ class ActorScaled(Actor): #scaled actor
 
   ############# update ############# 
 
-  def update(self): #updated scaled surface
+  def updateScale(self): #updated scaled surface
     try:
       scaleInt     = int(self.scale * self.scaleIncrement)  #toward nuancing precision issues 
       lastScaleInt = int(self.lastScaleVal * self.scaleIncrement)
@@ -38,16 +38,18 @@ class ActorScaled(Actor): #scaled actor
     print(self.scale)
     if self.scale == 1.: super().draw()
     else: 
-      self.update()
+      self.updateScale()
       if self.lastScaledSurf is None:
         print("ActorScaled draw: unexpected error with last scaled surface")
       else:
-        screen.blit(self.lastScaledSurf, self.pos)
+        #screen.blit(self.lastScaledSurf, self.pos)
+        screen.blit(self.lastScaledSurf, self.topleft)
 
 #a1 = ActorScaled("ipan_usa_bea08c", topleft=(0,0))
 a1 = ActorScaled("ipan_usa_bea08c")
 a1.scale=.1
 a1.prep()
+#print(a1.DELEGATED_ATTRIBUTES)
 
 animate(a1, scale=1., duration=10.)
 
