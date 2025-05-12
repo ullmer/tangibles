@@ -49,9 +49,12 @@ class ActorScaled(Actor): #scaled actor
 a1 = ActorScaled("ipan_usa_bea08c")
 a1.scale=.1
 a1.prep()
-#print(a1.DELEGATED_ATTRIBUTES)
+print(a1.DELEGATED_ATTRIBUTES)
 
-animate(a1, scale=1., duration=10.)
+def grow():   animate(a1, scale=1,  duration=1.5, tween='accel_decel', on_finished=shrink)
+def shrink(): animate(a1, scale=.1, duration=1.5, tween='accel_decel', on_finished=grow)
+
+grow()
 
 def draw(): 
   a1.draw()
