@@ -36,6 +36,12 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
   matrixCursorColor                     = tup3(200)
   matrixBrPos                           = (WIDTH, HEIGHT)
 
+  isZoomed = False #unsure of this initial setting
+  zoomExpandScale   = 1.
+  zoomCollapseScale =  .05
+  zoomDuration      =  .75
+  zoomTween         =  'accel_decel'
+
   ############# constructor #############
 
   def __init__(self, **kwargs):
@@ -133,6 +139,24 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
   def midiCB(self, control, arg): 
     super().midiCB(control, arg)
 
+  ############# zoom toggle #############
+
+  def zoomToggle(self): 
+    if self.isZoomed: self.zoomCollapse()
+    else:             self.zoomExpand()
+
+  def zoomExpand(self): 
+    if self.isZoomed:               self.msg("zoomExpand called, but already zoomed");             return
+    if self.matrixImgActor is None: self.msg("zoomExpand called, but matrix actor not initiated"); return
+    animate(self.matrixImgActor, scale=self.zoomExpandScale, tween=self.zoomTween, duration=self.zoomDuration) 
+    self.isZoomed = True
+    
+  def zoomCollapse(self): 
+    if self.isZoomed:               self.msg("zoomCollapse called, but already zoomed");             return
+    if self.matrixImgActor is None: self.msg("zoomCollapse called, but matrix actor not initiated"); return
+    animate(self.matrixImgActor, scale=self.zoomCollapseScale, tween=self.zoomTween, duration=self.zoomDuration) 
+    self.isZoomed = True
+    
   ############# change matrix scale #############
 
   def changeMatrixScale(self, scale): 

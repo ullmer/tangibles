@@ -31,6 +31,8 @@ class enoIpanelMidiMgr(enoIpanelMgr):
   midiCtrlOutputId = 4
   midiActive       = False
 
+  midiButtonZoomToggle = 'i9'
+
   ipanelSidebarDict = None
   midiUnavailabilityReported = None
 
@@ -39,7 +41,6 @@ class enoIpanelMidiMgr(enoIpanelMgr):
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
-
 
     if self.autolaunchMidi: 
       try: 
@@ -54,6 +55,10 @@ class enoIpanelMidiMgr(enoIpanelMgr):
 
   def err(self, msgStr): print("enoIpanelMidiMgr error: " + str(msgStr)); traceback.print_exc(); 
   def msg(self, msgStr): print("enoIpanelMidiMgr msg: "   + str(msgStr))
+
+  def isZoomToggleButton(self, control):
+    if control == self.midiButtonZoomToggle: return True
+    return False
 
   ############# register interaction panel #############
 
@@ -128,8 +133,13 @@ class enoIpanelMidiMgr(enoIpanelMgr):
         cipan.illumCharMatrixMidi()
         cipan.screenAugmentSelectedGrid(coordTuple)
         if self.verbose: print("midiCB grid coord: " + str(coordTuple))
+      elif self.isZoomToggleButton(control):
+        self.zoomToggle()
+      else: self.msg("midiCB unhandled: " + str(control))
 
     except: self.err("midiCB " + str(control) + ":" + str(arg)) 
+
+  def zoomToggle(self): self.msg("zoomToggle called (unhandled)")
   
 ############# main #############
 
