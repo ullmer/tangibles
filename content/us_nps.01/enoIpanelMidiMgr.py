@@ -34,7 +34,9 @@ class enoIpanelMidiMgr(enoIpanelMgr):
   midiButtonZoomToggle = 'i9'
 
   ipanelSidebarDict = None
-  midiUnavailabilityReported = None
+  midiUnavailabilityReported  = None
+  lastNotHandledControl       = None
+  suppressRepeatNotHandledMsg = True
 
   ############# constructor #############
 
@@ -135,7 +137,12 @@ class enoIpanelMidiMgr(enoIpanelMgr):
         if self.verbose: print("midiCB grid coord: " + str(coordTuple))
       elif self.isZoomToggleButton(control):
         self.zoomToggle()
-      else: self.msg("midiCB unhandled: " + str(control))
+
+      else: 
+        if self.suppressRepeatNotHandledMsg and control == self.lastNotHandledControl: return
+        self.lastNotHandledControl = control
+
+        self.msg("midiCB unhandled: " + str(control))
 
     except: self.err("midiCB " + str(control) + ":" + str(arg)) 
 
