@@ -14,7 +14,7 @@ a1sCache = {} # note that cache size management must still be handled
 
 def actorScale(actor, scale, actorScaleCacheDict):
   try:  
-    scaleInt = int(scale*100) #toward nuancing precision issues 
+    scaleInt = int(scale*1000) #toward nuancing precision issues 
     if scaleInt in actorScaleCacheDict: return actorScaleCacheDict[scaleInt] 
 
     origSurf   = actor._orig_surf
@@ -25,9 +25,13 @@ def actorScale(actor, scale, actorScaleCacheDict):
 
   except: print("actorScale issue"); traceback.print_exc(); return None
 
-animate(a1, scale=1, duration=2., tween='accel_decel')
+def grow():   animate(a1, scale=1,  duration=1.5, tween='accel_decel', on_finished=shrink)
+def shrink(): animate(a1, scale=.1, duration=1.5, tween='accel_decel', on_finished=grow)
+
+grow()
 
 def draw(): 
+  screen.clear()
   a1s = actorScale(a1, a1.scale, a1sCache)
   screen.blit(a1s, (0, 0))
 
