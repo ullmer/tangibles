@@ -36,6 +36,9 @@ class enoIpanelMidiMgr(enoIpanelMgr):
   ipanelSidebarDict = None
   midiUnavailabilityReported  = None
   lastNotHandledControl       = None
+  
+  midiZoomToggleSet = False
+ 
   suppressRepeatNotHandledMsg = True
 
   ############# constructor #############
@@ -125,6 +128,7 @@ class enoIpanelMidiMgr(enoIpanelMgr):
         cipan  = self.getCurrentInteractionPanel()
         cipan.isMidiGridButtonSelected = False
         cipan.illumCharMatrixMidi()
+
       elif self.isMatrixButton(control):
         self.msg("grid matrix button pressed") #console message, to assist interpretation
         cipan       = self.getCurrentInteractionPanel()
@@ -135,6 +139,7 @@ class enoIpanelMidiMgr(enoIpanelMgr):
         cipan.illumCharMatrixMidi()
         cipan.screenAugmentSelectedGrid(coordTuple)
         if self.verbose: print("midiCB grid coord: " + str(coordTuple))
+
       elif self.isZoomToggleButton(control):
         self.zoomToggle()
 
@@ -146,7 +151,14 @@ class enoIpanelMidiMgr(enoIpanelMgr):
 
     except: self.err("midiCB " + str(control) + ":" + str(arg)) 
 
-  def zoomToggle(self): self.msg("zoomToggle called (unhandled)")
+  def zoomToggle(self): 
+    self.msg("zoomToggle/midi activated")
+    if self.midiZoomToggleSet is False:
+      self.emc.illumMatrixSidebar(self.sidebar_bottom, 8, 1)
+      self.midiZoomToggleSet = True 
+    else:
+      self.emc.illumMatrixSidebar(self.sidebar_bottom, 8, 0)
+      self.midiZoomToggleSet = False
   
 ############# main #############
 

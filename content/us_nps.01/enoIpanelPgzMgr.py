@@ -142,6 +142,7 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
   ############# zoom toggle #############
 
   def zoomToggle(self): 
+    super().zoomToggle() #handles (e.g.) MIDI aspects
     if self.isZoomed: self.zoomCollapse()
     else:             self.zoomExpand()
 
