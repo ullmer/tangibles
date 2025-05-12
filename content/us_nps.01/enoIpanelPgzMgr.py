@@ -3,7 +3,6 @@
 # Begun 2025-04-28
 
 import traceback
-
 import pgzero
 print("pgzero version:",  pgzero.__version__)
 
@@ -11,8 +10,11 @@ print("pgzero version:",  pgzero.__version__)
 #WIDTH, HEIGHT = 1920, 1080
 WIDTH, HEIGHT = 2100, 1150
 
+from pgzero.builtins import Actor, animate, keyboard
+
 from enoIpanelPgz     import *
 from enoIpanelMidiMgr import *
+from enoActorScaled   import *
 
 def tup3(val): return (val, val, val) # convenience function for grayscale (three-element tuple)
 
@@ -62,7 +64,7 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
       #print("ccccp:", dx, dy)
       x1, y1 = x0-dx, y0-dy
       result = (x1, y1)
-      self.matrixCursorCurrentCoordPos = result
+      #self.matrixCursorCurrentCoordPos = result
       return result
 
     except: self.err("calcCursorCurrentCoordPos")
@@ -89,7 +91,12 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
   ############# restage actors #############
 
   def restageActors(self): 
-    self.calcCursorCurrentCoordPos()
+    cp = self.calcCursorCurrentCoordPos()
+    if cp != self.getCurrentCoord():
+      #animate
+
+      self.setCurrentCoord(cp)
+
     cipan  = self.getCurrentInteractionPanel()
     imgFn  = cipan.getMatrixImageFn()
 
@@ -97,7 +104,7 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
     cipan.pgzIpanelMgr = self
 
     if self.matrixImgActor is None:
-      self.matrixImgActor = Actor(imgFn, bottomright=self.matrixBrPos)
+      self.matrixImgActor = enoActorScaled(imgFn, bottomright=self.matrixBrPos, scale=1.)
     else: 
       self.matrixImgActor.image   = imgFn
       self.matrixImgActor.opacity = 1. #remove transparency
@@ -110,14 +117,9 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
       self.msg("drawMatrixCursor called, but flag disabled"); return
 
     try:
-      #mccci, mcccp = self.matrixCursorCurrentCoordIdx, self.matrixCursorCurrentCoordPos
       x, y = self.calcCursorCurrentCoordPos()
-
-      #if mccci is None or mcccp is None:   
-      #  self.msg("drawMatrixCursor: mccci or mcccp not initialized!"); return
-
-      cr   = Rect(x, y, self.matrixCursorWidth, self.matrixCursorHeight)
-      #print("DMC: ", x, y, self.matrixCursorWidth, \
+      cr   = Rect((x, y), (self.matrixCursorWidth, self.matrixCursorHeight))
+      #if self.verbose: #print("DMC: ", x, y, self.matrixCursorWidth, \
       #   self.matrixCursorHeight, self.matrixCursorColor)
       screen.draw.filled_rect(cr, self.matrixCursorColor)
 
