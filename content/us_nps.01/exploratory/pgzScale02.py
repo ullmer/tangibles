@@ -15,6 +15,13 @@ class ActorScaled(Actor): #scaled actor
   lastScaledSurf = None
   scaleIncrement = 1000
 
+  ############# constructor ############# 
+
+  def __init__(self, image, pos=None, anchor=None, **kwargs):
+    self.__dict__.update(kwargs) 
+    super().__init(image, pos, anchor)
+    self.DELEGATED_ATTRIBUTES += ['scale']
+
   ############# update ############# 
 
   def updateScale(self): #updated scaled surface
@@ -41,8 +48,8 @@ class ActorScaled(Actor): #scaled actor
         #screen.blit(self.lastScaledSurf, self.pos)
         screen.blit(self.lastScaledSurf, self.topleft)
 
-a1 = ActorScaled("ipan_usa_bea08c")
-a1.scale=.1
+a1 = ActorScaled("ipan_usa_bea08c", scale=.1)
+#a1.scale=.1
 
 def grow():   animate(a1, scale=1,  duration=1.5, tween='accel_decel', on_finished=shrink)
 def shrink(): animate(a1, scale=.1, duration=1.5, tween='accel_decel', on_finished=grow)
