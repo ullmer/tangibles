@@ -15,10 +15,6 @@ class ActorScaled(Actor): #scaled actor
   lastScaledSurf = None
   scaleIncrement = 1000
 
-  ############# constructor ############# 
-
-  def prep(self): self.DELEGATED_ATTRIBUTES += ['scale']
-
   ############# update ############# 
 
   def updateScale(self): #updated scaled surface
@@ -35,7 +31,7 @@ class ActorScaled(Actor): #scaled actor
   ############# draw ############# 
 
   def draw(self): 
-    print(self.scale)
+    screen.clear()
     if self.scale == 1.: super().draw()
     else: 
       self.updateScale()
@@ -45,11 +41,8 @@ class ActorScaled(Actor): #scaled actor
         #screen.blit(self.lastScaledSurf, self.pos)
         screen.blit(self.lastScaledSurf, self.topleft)
 
-#a1 = ActorScaled("ipan_usa_bea08c", topleft=(0,0))
 a1 = ActorScaled("ipan_usa_bea08c")
 a1.scale=.1
-a1.prep()
-print(a1.DELEGATED_ATTRIBUTES)
 
 def grow():   animate(a1, scale=1,  duration=1.5, tween='accel_decel', on_finished=shrink)
 def shrink(): animate(a1, scale=.1, duration=1.5, tween='accel_decel', on_finished=grow)
