@@ -110,7 +110,7 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
     cipan.pgzIpanelMgr = self
 
     if self.matrixImgActor is None:
-      self.matrixImgActor = enoActorScaled(imgFn, bottomright=self.matrixBrPos, scale=.3)
+      self.matrixImgActor = enoActorScaled(imgFn, bottomright=self.matrixBrPos, scale=.1)
     else: 
       self.matrixImgActor.image   = imgFn
       self.matrixImgActor.opacity = 1. #remove transparency
@@ -152,10 +152,10 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
     self.isZoomed = True
     
   def zoomCollapse(self): 
-    if self.isZoomed:               self.msg("zoomCollapse called, but already zoomed");             return
+    if self.isZoomed is False:      self.msg("zoomCollapse called, but already collapsed");             return
     if self.matrixImgActor is None: self.msg("zoomCollapse called, but matrix actor not initiated"); return
     animate(self.matrixImgActor, scale=self.zoomCollapseScale, tween=self.zoomTween, duration=self.zoomDuration) 
-    self.isZoomed = True
+    self.isZoomed = False
     
   ############# change matrix scale #############
 
@@ -185,8 +185,8 @@ epim.registerIpanel(epi1, 0) #bootstrapping logic, to be reworked
 epim.registerIpanel(epi2, 1)
   
 def draw():   
-  epim.changeMatrixScale(.5)
-  screen.clear(); epim.draw(screen)
+  screen.clear(); 
+  epim.draw(screen)
 
 def update(): 
   epim.pollMidi()

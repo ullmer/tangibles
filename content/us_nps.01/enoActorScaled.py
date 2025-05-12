@@ -15,6 +15,12 @@ class enoActorScaled(Actor): #scaled actor
   lastScaledSurf = None
   scaleIncrement = 1000
 
+  ############# constructor ############# 
+
+  def __init__(self, image, pos=None, anchor=None, **kwargs):
+    self.__dict__.update(kwargs) 
+    super().__init__(image, pos, anchor)
+
   ############# update ############# 
 
   def updateScale(self): #updated scaled surface
