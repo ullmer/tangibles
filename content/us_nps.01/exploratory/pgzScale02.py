@@ -19,7 +19,7 @@ class ActorScaled(Actor): #scaled actor
 
   def __init__(self, image, pos=None, anchor=None, **kwargs):
     self.__dict__.update(kwargs) 
-    super().__init(image, pos, anchor)
+    super().__init__(image, pos, anchor)
     self.DELEGATED_ATTRIBUTES += ['scale']
 
   ############# update ############# 
