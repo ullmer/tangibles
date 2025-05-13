@@ -126,6 +126,17 @@ class enoIpanelMidiMgr(enoIpanelMgr):
     ripan = self.getRegisteredIpanel(whichButton)
     if ripan is not None: ripan.illumCharMatrixMidi()
 
+  ############# slider callback #############
+
+  def sliderCb(self, control):
+    try:
+      self.msg("sliderCb invoked")
+      # self.isSlider(control): for the moment, assume this test has already been performed
+      whichSlider = int(control[1])
+
+      self.emc.illumMatrixSidebar(self.sidebar_bottom, whichSlider, 5)
+    except: self.err("sliderCb")
+
   ############# midi cb #############
 
   def midiCB(self, control, arg): 
