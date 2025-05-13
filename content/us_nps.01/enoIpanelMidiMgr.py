@@ -32,6 +32,8 @@ class enoIpanelMidiMgr(enoIpanelMgr):
   midiActive       = False
 
   midiButtonZoomToggle = 'i9'
+  midiSliderPrefix     = 's'
+  midiSliderCmdLen     = 2
 
   ipanelSidebarDict = None
   midiUnavailabilityReported  = None
@@ -61,9 +63,19 @@ class enoIpanelMidiMgr(enoIpanelMgr):
   def err(self, msgStr): print("enoIpanelMidiMgr error: " + str(msgStr)); traceback.print_exc(); 
   def msg(self, msgStr): print("enoIpanelMidiMgr msg: "   + str(msgStr))
 
+  ############# is zoom toggle button, slider #############
+
   def isZoomToggleButton(self, control):
     if control == self.midiButtonZoomToggle: return True
     return False
+
+  def isSlider(self, control):
+    if control is None: self.msg("isSlider: argument is unassigned"); return False
+    try:
+      lc = len(control)
+      if lc == self.midiSliderCmdLen and control[0] == self.midiSliderPrefix: return True
+      return False
+    except: self.err("isSlider"); return False
 
   ############# register interaction panel #############
 
@@ -142,6 +154,9 @@ class enoIpanelMidiMgr(enoIpanelMgr):
 
       elif self.isZoomToggleButton(control):
         self.zoomToggle()
+
+      elif self.isSlider(control):
+        self.sliderCb(control)
 
       else: 
         if self.suppressRepeatNotHandledMsg and control == self.lastNotHandledControl: return
