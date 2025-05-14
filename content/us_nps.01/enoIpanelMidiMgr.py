@@ -134,7 +134,7 @@ class enoIpanelMidiMgr(enoIpanelMgr):
       # self.isSlider(control): for the moment, assume this test has already been performed
       whichSlider = int(control[1])
 
-      self.emc.illumMatrixSidebar(self.sidebar_bottom, whichSlider, 5)
+      self.emc.illumMatrixSidebar(self.sidebar_bottom, whichSlider, 1)
     except: self.err("sliderCb")
 
   ############# midi cb #############

@@ -117,7 +117,9 @@ class enoMidiAkai(enoMidiController):
         if idx is True: #all on
           for i in range(100, 108): self.midiOut.note_on(i, 1, color)
         elif idx >= 0 and idx < 9: 
-          idx2 = 100+idx; self.midiOut.note_on(idx2, 1, color)
+          idx2 = 100+idx
+          print("imsaam", str(idx2))
+          self.midiOut.note_on(idx2, 1, color)
         else: 
           self.msg("illumMatrixSidebarAkaiApcMini bottom called with invalid index: " + str(idx))
           return None
