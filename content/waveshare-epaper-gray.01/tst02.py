@@ -30,6 +30,8 @@ display_bus = fourwire.FourWire(spi, command=epd_dc, chip_select=epd_cs, reset=e
 #    display_bus, width=296, height=128, rotation=270, busy_pin=epd_busy
 #)
 
-display = Adafruit_SSD1680(display_bus, 296, 128, epd_busy)
+#display = Adafruit_SSD1680(display_bus, 296, 128, epd_busy)
+
+display = Adafruit_SSD1680(display_bus, 296, 128, 0, busy_pin=epd_busy)
 
 
