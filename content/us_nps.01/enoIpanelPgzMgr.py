@@ -124,7 +124,7 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
 
     try:
       x, y = self.calcCursorCurrentCoordPos()
-      cr   = Rect((x, y), (self.matrixCursorWidth, self.matrixCursorHeight))
+      cr   = pygame.Rect(x, y, self.matrixCursorWidth, self.matrixCursorHeight)
       #if self.verbose: #print("DMC: ", x, y, self.matrixCursorWidth, \
       #   self.matrixCursorHeight, self.matrixCursorColor)
       screen.draw.filled_rect(cr, self.matrixCursorColor)
