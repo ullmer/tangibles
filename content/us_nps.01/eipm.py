@@ -24,6 +24,6 @@ def draw():
 
 def update(): 
   epim.pollMidi()
-  if epim.panelUpdated(): epim.restageActors() #probably to be renamed
+  if epim.panelUpdated(): epim.restageActors(screen) #probably to be renamed
 
 ### end ###
