@@ -36,7 +36,7 @@ class enoActorScaled(Actor): #scaled actor
 
   ############# draw ############# 
 
-  def draw(self): 
+  def draw(self, screen): 
     screen.clear()
     if self.scale == 1.: super().draw()
     else: 

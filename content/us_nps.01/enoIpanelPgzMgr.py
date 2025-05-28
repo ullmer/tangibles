@@ -96,7 +96,7 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
 
   ############# restage actors #############
 
-  def restageActors(self): 
+  def restageActors(self, screen): 
     cp = self.calcCursorCurrentCoordPos()
     if cp != self.getCurrentCoord():
       #animate
@@ -124,7 +124,7 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
 
     try:
       x, y = self.calcCursorCurrentCoordPos()
-      cr   = Rect((x, y), (self.matrixCursorWidth, self.matrixCursorHeight))
+      cr   = pygame.Rect(x, y, self.matrixCursorWidth, self.matrixCursorHeight)
       #if self.verbose: #print("DMC: ", x, y, self.matrixCursorWidth, \
       #   self.matrixCursorHeight, self.matrixCursorColor)
       screen.draw.filled_rect(cr, self.matrixCursorColor)
@@ -171,7 +171,7 @@ class enoIpanelPgzMgr(enoIpanelMidiMgr):
 
   def draw(self, screen): 
     if self.matrixCursorActive:         self.drawMatrixCursor(screen)
-    if self.matrixImgActor is not None: self.matrixImgActor.draw()
+    if self.matrixImgActor is not None: self.matrixImgActor.draw(screen)
 
 ############# main #############
 
