@@ -2,20 +2,20 @@
 # Port co-lead by CoPilot 2025
 # Begun 2025-06-08
 
-import yaml
 import sqlite3
+import yaml
 
 class Sequencer:
     def __init__(self, config_path, db_path):
         self.config = self.load_config(config_path)
         self.db_path = db_path
-        self.setup_database()
+        self.create_tables()
 
     def load_config(self, path):
         with open(path, 'r') as file:
             return yaml.safe_load(file)
 
-    def setup_database(self):
+    def create_tables(self):
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         cursor.execute('''
@@ -36,28 +36,45 @@ class Sequencer:
         conn.commit()
         conn.close()
 
-    def create_sequence(self, name, length, items):
+    def create_sequence(self, name, length):
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         cursor.execute('INSERT INTO sequences (name, length) VALUES (?, ?)', (name, length))
         sequence_id = cursor.lastrowid
-        for item in items:
-            cursor.execute('INSERT INTO sequence_items (sequence_id, item_name) VALUES (?, ?)', (sequence_id, item))
         conn.commit()
         conn.close()
+        return sequence_id
 
-    def get_sequences(self):
+    def get_sequence(self, sequence_id):
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        cursor.execute('SELECT * FROM sequences')
-        sequences = cursor.fetchall()
-        conn.close()
-        return sequences
-
-    def get_sequence_items(self, sequence_id):
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
+        cursor.execute('SELECT * FROM sequences WHERE id = ?', (sequence_id,))
+        sequence = cursor.fetchone()
         cursor.execute('SELECT * FROM sequence_items WHERE sequence_id = ?', (sequence_id,))
         items = cursor.fetchall()
         conn.close()
-        return items
+        return sequence, items
+
+    def copySeqRackToTarget(self):
+        # Placeholder for copySeqRackToTarget logic
+        pass
+
+    def makeStack(self):
+        # Placeholder for makeStack logic
+        pass
+
+    def moveStack(self):
+        # Placeholder for moveStack logic
+        pass
+
+    def placeStack(self):
+        # Placeholder for placeStack logic
+        pass
+
+    def swap(self):
+        # Placeholder for swap logic
+        pass
+
+    def mapLocalTextures(self):
+        # Placeholder for mapLocalTextures logic
+        pass
