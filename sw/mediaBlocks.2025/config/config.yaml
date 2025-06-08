@@ -1,0 +1,11 @@
+sequencer:
+  sequence_length: 10
+  sequence_items:
+    - item1
+    - item2
+    - item3
+visualization:
+  window_size: [800, 600]
+  background_color: black
+communication:
+  plasma_endpoint: localhost:12345
