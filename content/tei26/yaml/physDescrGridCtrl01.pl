@@ -18,5 +18,34 @@ grid_controller(akai_apc_mini_mk2, notes("Rectangular pads, RGB, includes faders
 grid_controller(adafruit_neotrellis, notes("Tileable 4x4 grid, RGB NeoPixels, I2C, elastomer pad opt"),
     dims_mm( 60,  60,  7), grid(4, 4), pad_pitch_mm(15, 15), pad_size_mm(12, 12)).
 
+%%%% latter may soon be migrated to a different file %%%% 
+
+% Distance between pads in X and Y directions
+% Example: grid_pad_dist_between_pads(adafruit_neotrellis, mm, 3, 3).
+grid_pad_dist_between_pads(Controller, Unit, GapX, GapY) :-
+    pad_spacing(Controller, Unit, GapX, GapY).
+
+% Optional offset from center
+% Example: grid_pad_center_offset(adafruit_neotrellis, mm, 1.5, 1.5).
+grid_pad_center_offset(Controller, Unit, OffsetX, OffsetY) :-
+    pad_offset(Controller, Unit, OffsetX, OffsetY).
+
+% Margins around the grid
+% If offset exists, margins are asymmetric and centered is false
+% If no offset, margins are symmetric and centered is true
+grid_pad_dist_margins(Controller, Unit, margin(Left, Right, top_bottom(Top, Bottom)), false) :-
+    grid_pad_center_offset(Controller, Unit, OffsetX, OffsetY),
+    pad_spacing(Controller, Unit, GapX, GapY),
+    Left is OffsetX,
+    Right is GapX - OffsetX,
+    Top is OffsetY,
+    Bottom is GapY - OffsetY.
+
+grid_pad_dist_margins(Controller, Unit, margin(Horiz, Vert, both), true) :-
+    \+ grid_pad_center_offset(Controller, Unit, _, _),
+    pad_spacing(Controller, Unit, GapX, GapY),
+    Horiz is GapX / 2,
+    Vert is GapY / 2.
+
 %%% end %%%
 
