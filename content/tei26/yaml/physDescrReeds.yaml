@@ -16,5 +16,11 @@ reed:
       - {fraction:   3/4, dec: 0.75  }
       - {fraction:   7/8, dec: 0.875 }
       - {fraction:     1, dec: 1.    }
-
+    fab:
+      constraints:
+        copilotEstimates:
+          - origWidthRangeFrac: [0,   1/4], minPostCutFrac: 1/16, preferredPostCutFrac: 3/32}
+          - origWidthRangeFrac: [3/8, 1/2], minPostCutFrac: 3/32, preferredPostCutFrac:  1/8}
+          - origWidthRangeFrac: [5/8, 1],   minPostCutFrac: 1/8,  preferredPostCutFrac: 5/32}
+       
 ### end ###
