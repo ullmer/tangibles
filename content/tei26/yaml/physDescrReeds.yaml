@@ -1,0 +1,20 @@
+# Brygg Ullmer
+# 2025-07-16
+
+reed:
+  dimensions:
+    system: inch
+      sources:
+        - {web: https://basketweaving.com/shopsite_sc/store/html/flat-reed.html,       co: us, st: ne}
+        - {web: https://www.easttroybasketry.com/index.php?main_page=index&cPath=4_69, co: us, st: ny}
+      - {fraction: 11/64, dec: 0.1718}
+      - {fraction:  3/16, dec: 0.1875}
+      - {fraction:   1/4, dec: 0.25  } 
+      - {fraction:   3/8, dec: 0.375 }
+      - {fraction:   1/2, dec: 0.5   }
+      - {fraction:   5/8, dec: 0.625 }
+      - {fraction:   3/4, dec: 0.75  }
+      - {fraction:   7/8, dec: 0.875 }
+      - {fraction:     1, dec: 1.    }
+
+### end ###
