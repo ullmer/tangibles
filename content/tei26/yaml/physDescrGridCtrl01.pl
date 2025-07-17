@@ -18,7 +18,7 @@ grid_controller(akai_apc_mini_mk2, notes("Rectangular pads, RGB, includes faders
 grid_controller(adafruit_neotrellis, notes("Tileable 4x4 grid, RGB NeoPixels, I2C, elastomer pad opt"),
     dims_mm( 60,  60,  7), grid(4, 4), pad_pitch_mm(15, 15), pad_size_mm(12, 12)).
 
-%%%% latter may soon be migrated to a different file %%%% 
+%%% transformational predicates (copilot impl, per naming and functionality requested by BAU)
 
 % Distance between pads in X and Y directions
 % Example: grid_pad_dist_between_pads(adafruit_neotrellis, mm, 3, 3).
@@ -46,6 +46,32 @@ grid_pad_dist_margins(Controller, Unit, margin(Horiz, Vert, both), true) :-
     pad_spacing(Controller, Unit, GapX, GapY),
     Horiz is GapX / 2,
     Vert is GapY / 2.
+
+% Conversion factor
+mm_to_in(25.4).
+
+% Extract pad spacing from grid_controller facts
+pad_spacing(Controller, mm, GapX, GapY) :-
+    grid_controller(Controller, _, _, _, pad_pitch_mm(GapX, GapY), _).
+
+% Convert pad spacing to inches
+pad_spacing(Controller, in, GapX_in, GapY_in) :-
+    pad_spacing(Controller, mm, GapX_mm, GapY_mm),
+    mm_to_in(Factor),
+    GapX_in is GapX_mm / Factor,
+    GapY_in is GapY_mm / Factor.
+
+% Extract dimensions in mm
+dims(Controller, mm, W, H, D) :-
+    grid_controller(Controller, _, dims_mm(W, H, D), _, _, _).
+
+% Convert dimensions to inches
+dims(Controller, in, W_in, H_in, D_in) :-
+    dims(Controller, mm, W_mm, H_mm, D_mm),
+    mm_to_in(Factor),
+    W_in is W_mm / Factor,
+    H_in is H_mm / Factor,
+    D_in is D_mm / Factor.
 
 %%% end %%%
 
