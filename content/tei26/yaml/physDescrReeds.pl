@@ -27,8 +27,8 @@ reed_cut_constraint_frac( range("0",   "1/4"), min_cut("1/16"), preferred_cut("3
 reed_cut_constraint_frac( range("3/8", "1/2"), min_cut("3/32"), preferred_cut("1/8")).
 reed_cut_constraint_frac( range("5/8", "1"),   min_cut("1/8"),  preferred_cut("5/32")).
 
-reed_cut_constraint_dec( range(0,     .25), min_cut(.0625), preferred_cut(.0938)).
-reed_cut_constraint_dec( range(.375,  .50), min_cut(.0938), preferred_cut(.1250)).
-reed_cut_constraint_dec( range(.675, 1.00), min_cut(.1250), preferred_cut(.1560)).
+reed_cut_constraint_dec( range(0,     0.25), min_cut(0.0625), preferred_cut(0.0938)).
+reed_cut_constraint_dec( range(0.375, 0.50), min_cut(0.0938), preferred_cut(0.1250)).
+reed_cut_constraint_dec( range(0.675, 1.00), min_cut(0.1250), preferred_cut(0.1560)).
 
 %%% end %%%
