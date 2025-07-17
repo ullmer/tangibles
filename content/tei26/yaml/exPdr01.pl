@@ -1,3 +1,5 @@
+%pack_install('https://github.com/honnix/yaml.git').
+
 use_module(library(yaml)).
 
 yaml_read('physDescrReeds.yaml', Dict),
