@@ -3,24 +3,31 @@
 # Refactoring swiftly to come
 
 novation-launchpad-x:
-  dims_mm:      {w: 241, h: 241, d: 17}
-  grid:         {rows: 8, cols: 8}
-  pad_pitch_mm: {x:   30, y:   30}
-  pad_size_mm:  {w:   24, h:   24}
+  dims_mm:      {w:  241,    h: 241, d: 17}
+  grid:         {rows: 8, cols:   8}
+  pad_pitch_mm: {x:   30,    y:  30}
+  pad_size_mm:  {w:   24,    h:  24}
   notes: Square pads, RGB, velocity-sensitive
 
 novation-launchpad-mini:
-  dims_mm:      {w: 180, h: 180, d: 14}
-  grid:         {rows: 8, cols: 8}
-  pad_pitch_mm: {x:   27, y: 27}
-  pad_size_mm:  {w:   20, h: 20}
+  dims_mm:      {w: 180,     h: 180, d: 14}
+  grid:         {rows: 8, cols:   8}
+  pad_pitch_mm: {x:   27,    y:  27}
+  pad_size_mm:  {w:   20,    h:  20}
   notes: Compact form, square pads, RGB
 
 akai-apc-mini-mk2:
-  dims_mm:      {w:  232, h: 172, d: 32}
-  grid:         {rows: 8, cols: 8}
-  pad_pitch_mm: {x:   26, y: 21}
-  pad_size_mm:  {w:   21, h: 15}
+  dims_mm:      {w:  232,    h: 172, d: 32}
+  grid:         {rows: 8, cols:   8}
+  pad_pitch_mm: {x:   26,    y:  21}
+  pad_size_mm:  {w:   21,    h:  15}
   notes: Rectangular pads, RGB, includes faders
+
+adafruit-neotrellis:
+  dims_mm:      {w:   60,    h: 60,  d: 7}
+  grid:         {rows: 4, cols:  4}
+  pad_pitch_mm: {x:   15,    y: 15}
+  pad_size_mm:  {w:   12,    h: 12}
+  notes:        Tileable 4x4 grid, RGB NeoPixels, I2C, elastomer pad optional
 
 ### end ###
