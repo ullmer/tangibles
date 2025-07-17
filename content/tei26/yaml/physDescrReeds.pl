@@ -1,3 +1,7 @@
+% Reed descriptions toward interactive compositional fabrication
+% Transcoded from YAML by CoPilot for Brygg Ullmer, with BAU evolutions
+% 2025-07-16
+
 % Metadata
 reed_dimensions(inch).
 
