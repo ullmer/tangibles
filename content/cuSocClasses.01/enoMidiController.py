@@ -7,7 +7,7 @@ import traceback, yaml
 import pygame, pygame.midi
 
 from pygame import time
-from atabase import *
+from ataBase import *
 
 from functools   import partial
 #cb = partial(self.bodyCb, "rank") # example of callback construction
