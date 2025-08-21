@@ -5,7 +5,9 @@
 import os, os.path, sys
 import traceback, yaml
 import pygame, pygame.midi
-from   pygame import time
+
+from pygame import time
+from atabase import *
 
 from functools   import partial
 #cb = partial(self.bodyCb, "rank") # example of callback construction
@@ -13,7 +15,7 @@ from functools   import partial
 ##########################################################
 ################# Enodia MIDI Controller #################
 
-class enoMidiController:
+class enoMidiController(AtaBase):
 
   yamlDir = 'yaml' #yaml directory
   yamlFn  = None   #yaml filename
@@ -136,10 +138,16 @@ class enoMidiController:
     inId, outId = self.midiCtrlInputId, self.midiCtrlOutputId
 
     if self.activateInput:     
-      self.midiIn  = pygame.midi.Input(inId);   print("enoMidiController: launching midi input")
+      try:
+        self.midiIn  = pygame.midi.Input(inId);   
+        print("enoMidiController: launching midi input")
+      except: self.err("startMidi activateInput error")
 
-    if self.activateOutput:    
-      self.midiOut = pygame.midi.Output(outId); print("enoMidiController: launching midi output")
+    if self.activateOutput: 
+      try:
+        self.midiOut = pygame.midi.Output(outId); 
+        print("enoMidiController: launching midi output")
+      except: self.err("startMidi activateOutput error")
 
     if self.isActiveDevice('nov_launchpad'): self.initLaunchpad() # migrate to some form of reflection
     if self.isActiveDevice('aka_apcmini2'):  self.initAkaiApcMiniMk2()
