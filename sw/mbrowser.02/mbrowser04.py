@@ -3,6 +3,7 @@
 # Begun 2025-11-03
 
 import os, sys
+from pgzero import clock
 os.environ['SDL_VIDEO_WINDOW_POS'] = '0,0' #place window at 0,0 
 sys.path.insert(0, #access module in parent directory (for test stubs)
   os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -38,11 +39,12 @@ def update(): ep.update();
 
 firstDraw = True
 
+def initPrismBarPairIntersect(): ep.intersectPrismBarPair(0, 1, 0, 0)
+clock.schedule_unique(lambda: initPrismBarPairIntersect(), 0) 
+
 ################ draw ################
 def draw(): 
-  global firstDraw
   screen.clear()
-  if firstDraw: firstDraw=False; ep.intersectPrismBarPair(0, 1, 0, 0)
   for el in [eel, ep, rb]: el.draw(screen)
   rcol = rb.fillColor
   screen.draw.text("TEI", midleft=(305,70), alpha=.2, 
