@@ -22,8 +22,9 @@ class EnoCursorBox(EnoFrameBox):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
   
-  ############# move cursor #############
+  ############# shift location, shape of cursor #############
 
-  def moveCursor(self, newPos): animate(self, pos=newPos, duration=self.duration)
+  def shiftCursor(self, newPos): animate(self, pos=newPos, duration=self.duration)
+  def shiftShape (self, newDim): animate(self, dim=newDim, duration=self.duration)
 
 ### end ###

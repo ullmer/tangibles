@@ -124,7 +124,7 @@ class EnoPrisms(AtaBase):
 
       firstResult = plr[0]
       locusIdx, locusXY, locusName = firstResult #unpack
-      ecb.moveCursor(locusXY)
+      ecb.shiftCursor(locusXY)
      
     except: self.err("evolveLocus")
 
