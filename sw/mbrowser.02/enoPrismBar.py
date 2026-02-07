@@ -11,7 +11,9 @@ from ataBase import *
 class EnoPrismBar(AtaBase):
   basePos    = (0, 0)
   baseShiftX = None
-  barWidth   = 500
+  barWidth     = 500
+  lastBarWidth   = None
+  lastBaseShiftX = None
   baseWidth  = None # if None, same as barWidth
   pathMaxDx  = 800
   pathMaxDy  = 950
@@ -38,6 +40,9 @@ class EnoPrismBar(AtaBase):
   fontSize     = 32
   textOffset   = (10, 10)
   textOffset2  = (0, 0)
+
+  duration = .3
+  tween    = 'accel_decel'
 
   regenSurfRequired = True
 
@@ -190,6 +195,9 @@ class EnoPrismBar(AtaBase):
   
         else: pygame.draw.polygon(surf, self.outlineColor, points, width=self.outlineWidth)
   
+      lastBarWidth   = self.barWidth
+      lastBaseShiftX = self.baseShiftX
+
       self.surfaceList.append(surf)
     except: self.err("createSurface")
 
@@ -206,11 +214,29 @@ class EnoPrismBar(AtaBase):
 
     except: self.err("regenSurface")
 
+  ############# shift bar width #############
+
+  def shiftBarWidth(self, newBarWidth):
+    try:
+      animate(self, barWidth=newBarWidth, duration=self.duration, tween=self.tween)
+    except: self.err("shiftBarWidth")
+
+  ############# shift bar width #############
+
+  def shiftBarShiftX(self, newBarShiftX):
+    try:
+      animate(self, barShiftX=newBarShiftX, duration=self.duration, tween=self.tween)
+    except: self.err("shiftBarWidth")
+
   ############# draw #############
 
   def draw(self, screen):
     try: 
+      if self.lastBarWidth   != self.barWidth or
+         self.lastBaseShiftX != self.baseShiftX: self.regenSurfRequired = True
+
       if self.regenSurfRequired: self.regenSurface()
+
       for surf in self.surfaceList:
         pos = self.basePos
         if self.baseShiftX is not None and (self.flowLeft or (self.refractBar and self.dvlflx < 0)):
