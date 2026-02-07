@@ -34,8 +34,8 @@ class EnoPrismBars(AtaBase):
   def addBarL(self, barList):
     try:
       bl = len(barList)
-      if   bl==3: bt, bc, bw      = barList; self.addBar(bt,bc,bw)
-      elif bl==4: bt, bc, bw, eby = barList; self.addBar(bt,bc,bw,eby)
+      if   bl==3: bt, bc, bw      = barList; b=self.addBar(bt,bc,bw)
+      elif bl==4: bt, bc, bw, eby = barList; b=self.addBar(bt,bc,bw,eby)
       else: self.msg("addBarL: non-matching parameters"); return None
     except: self.err("addBarL")
 
@@ -61,32 +61,44 @@ class EnoPrismBars(AtaBase):
   ############# addBar #############
 
   def addBar(self, barText, barColor, barWidth, extendBottomY=0): 
-    if self.barList is None: 
-      self.barList = []
-      self.cumPosTop = self.basePos
-      self.cumPosBot = 0
-
-    bottomWidth = barWidth
-    if self.baseWidth is not None: bottomWidth = self.baseWidth
-
-    fl       = self.flowLeft
-    fs       = self.fontSize
-    to2      = self.textOffset2
-    cx1, cy1 = self.cumPosTop
-    epb      = EnoPrismBar(textStrs=barText,     barColor=barColor, barWidth=barWidth, 
-                         basePos =self.cumPosTop, flowLeft=fl,    textOffset2=to2, 
-                         pathMaxDx=self.pathMaxDx, pathMaxDy=self.pathMaxDy+extendBottomY, fontSize=fs,
-                         baseWidth=self.baseWidth, baseShiftX=self.baseShiftX, refractBar = self.refractBars)
+    try:
+      if self.barList is None: 
+        self.barList = []
+        self.cumPosTop = self.basePos
+        self.cumPosBot = 0
   
-    #if self.refractBars and fl: cx1 += barWidth/2
-    #else:                       cx1 += barWidth
-
-    cx1 += barWidth
-    if fl: self.baseShiftX += (bottomWidth-barWidth)
-    else:  self.baseShiftX += (bottomWidth-barWidth)
-    self.cumPosTop   = (cx1, cy1)
+      bottomWidth = barWidth
+      if self.baseWidth is not None: bottomWidth = self.baseWidth
+  
+      fl       = self.flowLeft
+      fs       = self.fontSize
+      to2      = self.textOffset2
+      cx1, cy1 = self.cumPosTop
+      epb      = EnoPrismBar(textStrs=barText,        barColor=barColor, barWidth=barWidth, 
+                           basePos   =self.cumPosTop, flowLeft=fl,       textOffset2=to2, 
+                           pathMaxDx =self.pathMaxDx, pathMaxDy=self.pathMaxDy+extendBottomY, 
+                           fontSize  =fs, baseWidth=self.baseWidth, baseShiftX=self.baseShiftX, 
+                           refractBar=self.refractBars)
     
-    self.barList.append(epb)
+      #if self.refractBars and fl: cx1 += barWidth/2
+      #else:                       cx1 += barWidth
+  
+      cx1 += barWidth
+      if fl: self.baseShiftX += (bottomWidth-barWidth)
+      else:  self.baseShiftX += (bottomWidth-barWidth)
+      self.cumPosTop   = (cx1, cy1)
+      
+      self.barList.append(epb)
+    except: self.err("addBar")
+
+  ############# getBar #############
+
+  def getBar(self, barIdx):
+    try:
+      if self.barList is None: return None
+      result = self.barList[barIdx]
+      return result
+    except: self.err("getBar"); return None
 
   ############# draw #############
 

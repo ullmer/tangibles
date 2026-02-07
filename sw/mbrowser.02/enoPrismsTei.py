@@ -17,6 +17,11 @@ class EnoPrismsTei(AtaBase):
   cgr2 = (0,   255, 0, 20); cred = (255,   0, 0, 70)
   bars = None
 
+  currentBarWideIdx = None
+
+  barNarrow = 35
+  barWide   = 400
+
   initialized       = None
   #activePrisms      = None
   bars              = None
@@ -49,7 +54,8 @@ class EnoPrismsTei(AtaBase):
 
   def summonPrismTeiLandscapeL(self):
     try:
-      n,w,pmdy=35,400, self.pathMaxDy
+      n,w,pmdy=self.barNarrow, self.barWide, self.pathMaxDy
+
       cyel, cblu, cred = self.cyel, self.cblu, self.cred
 
       epb1a = EnoPrismBars(flowLeft=False, textOffset2=(-18,0), fontSize=25, 
@@ -60,6 +66,7 @@ class EnoPrismsTei(AtaBase):
 
       bindings1 = [["22: Daejeon",  cyel, n], ["23: Warsaw",  cblu, n], ["24: Cork", cblu, w],
                    ["25: Bordeaux", cblu, n], ["26: Chicago", cred, n]]
+      self.currentBarWideIdx = 2
 
       for b in bindings1: epb1a.addBarL(b)
       for b in bindings1: epb1b.addBarL2(b)
