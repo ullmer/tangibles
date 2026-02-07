@@ -11,6 +11,8 @@ class EnoParseGrid(AtaBase):
   x0, y0       = None, None
   pixDim       = None
   gridBindings = None
+  elWidth      = None
+  elHeight     = None
 
   callbacks       = None
   callbacksActive = False
@@ -99,8 +101,7 @@ class EnoParseGrid(AtaBase):
       x,  y         = pos
       x1, y1        = self.x0 + width, self.y0 + height
 
-      if x < self.x0 or y < self.y0 or x > x1 or y > y1:
-        return False
+      if x < self.x0 or y < self.y0 or x > x1 or y > y1: return False
       return True
 
     except: self.err("collidepoint"); return None
@@ -132,7 +133,7 @@ class EnoParseGrid(AtaBase):
       fx,       fy = normX * self.cols, normY * self.rows
       gx,       gy = int(fx), int(fy) 
 
-      if self.verbose: pass
+      #if self.verbose: pass
         #self.msg("determineGridPos: relXY: " + str([relX, relY]))
         #self.msg("determineGridPos: fXY: " + str([fx, fy]))
         #self.msg("determineGridPos: gXY: " + str([gx, gy]))
@@ -147,10 +148,12 @@ class EnoParseGrid(AtaBase):
 
     try:
       gx, gy        = gridPos
-      width, height = self.pixDim
-      width /= self.cols; height /= self.rows
-      x = self.x0 + gx*width
-      y = self.y0 + gy*height
+      if self.elWidth is None or self.elHeight is None:
+        width, height = self.pixDim
+        self.elWidth  = width  / self.cols
+        self.elHeight = height / self.rows
+      x = self.x0 + gx*self.elWidth
+      y = self.y0 + gy*self.elHeight
       return (x, y)
 
     except: self.err("mapGridPosToXY"); return None
