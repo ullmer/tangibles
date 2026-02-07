@@ -99,13 +99,32 @@ class EnoPrisms(AtaBase):
 
   def parseLocus(self, pos):
     try: 
-      results = []
+      results = None
       for  p in self.prisms: 
         r = p.parseLocus(pos)
         if r is not False:
           locusIdx, locusXY, locusName = r
           self.msg("prisms parseLocus: " + str(r))
+          if results is None: results = []
+          results.append(r)
+      return results 
 
     except: self.err("parseLocus")
+
+  ############# evolve locus #############
+
+  def evolveLocus(self, pos, ecb): #ecb = cursorBox
+    try:
+      plr = self.parseLocus(pos) #parse locus results
+      if plr is None: return     #nothing to do (at least per present code evolution)
+      plrc = len(plr)  #parse locus results count
+
+      if plrc > 1:  
+        self.msg("evolveLocus: multiple parseLocus results; for present, handling first")
+
+      firstResult = plr[0]
+      locusIdx, locusXY, locusName = firstResult #unpack
+     
+    except: self.err("evolveLocus")
 
 ### end ###
