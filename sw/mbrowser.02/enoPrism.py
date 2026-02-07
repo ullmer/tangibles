@@ -63,7 +63,8 @@ class EnoPrism(AtaBase):
   def parseLocus(self, pos):
     try:
       if self.parseGrid is None: self.msg("parseLocus: parseGrid not present"); return
-      self.parseGrid.parseLocus(pos)
+      result = self.parseGrid.parseLocus(pos)
+      return result
     except: self.err("parseLocus")
 
 ### end ###

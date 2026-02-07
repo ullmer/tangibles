@@ -99,7 +99,13 @@ class EnoPrisms(AtaBase):
 
   def parseLocus(self, pos):
     try: 
-      for  p in self.prisms: p.parseLocus(pos)
+      results = []
+      for  p in self.prisms: 
+        r = p.parseLocus(pos)
+        if r is not False:
+          locusIdx, locusXY, locusName = r
+          self.msg("prisms parseLocus: " + str(r))
+
     except: self.err("parseLocus")
 
 ### end ###
