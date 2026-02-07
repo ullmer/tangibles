@@ -62,7 +62,7 @@ class EnoParseGrid(AtaBase):
         for i in range(self.cols):
           if idx < numBindings: self.gridBindings[(i, j)] = bindings[idx]
           idx += 1
-      self.msg("sgb: " + str(idx) + str(bindings))
+      if self.verbose: self.msg("sgb: " + str(idx) + str(bindings))
     except: self.err("setGridBindings")
 
   ############# set grid callbacks #############
