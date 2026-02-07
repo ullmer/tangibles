@@ -126,68 +126,69 @@ class EnoPrismBar(AtaBase):
   ############# create surface #############
 
   def createSurface(self):
-
-    bottomWidth = self.barWidth
-    if self.baseWidth is not None: bottomWidth = self.baseWidth
-
-    self.maxH = self.pathMaxDy 
-    self.maxW = self.pathMaxDx
-    bwp = bottomWidth + self.pathMaxDx
-    if self.barWidth > self.maxW: self.maxW = self.barWidth
-    if bwp > self.maxW:           self.maxW = bwp
-    if self.baseShiftX > 0:       self.maxW += self.baseShiftX
-
-    self.surfaceList = []
-
-    #bpxs                  = self.botPosXStart 
-    #if bpxs is None: bpxs = self.pathMaxDx
-    bpxs = self.pathMaxDx
-
-    bsx = 0 # baseShift X
-    if self.baseShiftX is not None: bsx += self.baseShiftX
-    
-    # Define polygon points
-    if not self.flowLeft:
-      points = [(0, 0), (self.barWidth, 0), 
-                (bsx + bpxs + bottomWidth, self.maxH),
-                (bsx + bpxs,               self.maxH)]
-
-    else: 
-      points = [(self.pathMaxDx + self.barWidth, 0), (self.pathMaxDx, 0), 
-                (bsx,               self.maxH),
-                (bsx + bottomWidth, self.maxH)]
-
-    self.vertices = points
-
-    minX, maxX = self.findTupleListMinMaxX(points)
-    maxSpanX = abs(maxX - minX)
-    if maxSpanX > self.maxW: self.maxW = maxSpanX
-
-    # Create a transparent surface
-    surf = pygame.Surface((self.maxW, self.maxH), pygame.SRCALPHA)
-
-    if minX < 0: 
-      points = self.normPoints(points, minX)
-      self.baseShiftX = minX
-
-    self.dvlflx = self.diffVertexListFirstLastX(points)
-
-    #if self.refractBar: self.baseShiftX -= 25
-
-    # Draw the polygon on the transparent surface
-    pygame.draw.polygon(surf, self.barColor, points)
-
-    if self.drawOutline:
-      if self.drawAntialiased:
-        lenPoints = len(points)
-        for i in range(lenPoints):
-          start, end = points[i], points[(i+1) % lenPoints]
-          x1, y1 = start; x2, y2 = end; x1 += 1; x2 -= 1
-          pygame.gfxdraw.line(surf, x1, y1, x2, y2, self.outlineColor)
-
-      else: pygame.draw.polygon(surf, self.outlineColor, points, width=self.outlineWidth)
-
-    self.surfaceList.append(surf)
+    try:
+      bottomWidth = self.barWidth
+      if self.baseWidth is not None: bottomWidth = self.baseWidth
+  
+      self.maxH = self.pathMaxDy 
+      self.maxW = self.pathMaxDx
+      bwp = bottomWidth + self.pathMaxDx
+      if self.barWidth > self.maxW: self.maxW = self.barWidth
+      if bwp > self.maxW:           self.maxW = bwp
+      if self.baseShiftX > 0:       self.maxW += self.baseShiftX
+  
+      self.surfaceList = []
+  
+      #bpxs                  = self.botPosXStart 
+      #if bpxs is None: bpxs = self.pathMaxDx
+      bpxs = self.pathMaxDx
+  
+      bsx = 0 # baseShift X
+      if self.baseShiftX is not None: bsx += self.baseShiftX
+      
+      # Define polygon points
+      if not self.flowLeft:
+        points = [(0, 0), (self.barWidth, 0), 
+                  (bsx + bpxs + bottomWidth, self.maxH),
+                  (bsx + bpxs,               self.maxH)]
+  
+      else: 
+        points = [(self.pathMaxDx + self.barWidth, 0), (self.pathMaxDx, 0), 
+                  (bsx,               self.maxH),
+                  (bsx + bottomWidth, self.maxH)]
+  
+      self.vertices = points
+  
+      minX, maxX = self.findTupleListMinMaxX(points)
+      maxSpanX = abs(maxX - minX)
+      if maxSpanX > self.maxW: self.maxW = maxSpanX
+  
+      # Create a transparent surface
+      surf = pygame.Surface((self.maxW, self.maxH), pygame.SRCALPHA)
+  
+      if minX < 0: 
+        points = self.normPoints(points, minX)
+        self.baseShiftX = minX
+  
+      self.dvlflx = self.diffVertexListFirstLastX(points)
+  
+      #if self.refractBar: self.baseShiftX -= 25
+  
+      # Draw the polygon on the transparent surface
+      pygame.draw.polygon(surf, self.barColor, points)
+  
+      if self.drawOutline:
+        if self.drawAntialiased:
+          lenPoints = len(points)
+          for i in range(lenPoints):
+            start, end = points[i], points[(i+1) % lenPoints]
+            x1, y1 = start; x2, y2 = end; x1 += 1; x2 -= 1
+            pygame.gfxdraw.line(surf, x1, y1, x2, y2, self.outlineColor)
+  
+        else: pygame.draw.polygon(surf, self.outlineColor, points, width=self.outlineWidth)
+  
+      self.surfaceList.append(surf)
+    except: self.err("createSurface")
 
   ############# draw #############
 
