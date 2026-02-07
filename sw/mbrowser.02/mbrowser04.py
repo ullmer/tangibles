@@ -34,7 +34,7 @@ eel = EnoEntityListing(entries=yd, fieldsToPostfix=[0],
                        entryFontSize=25, winDim=winDim)
 
 rb  = EnoRefractBar((WIDTH, 80), (0, 750))
-ecb = EnoCursorBox()
+ecb = EnoCursorBox(dim=(10, 10), width=4)
 
 def update(): ep.update(); 
 
