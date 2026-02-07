@@ -12,7 +12,7 @@ class EnoCursorBox(EnoFrameBox):
 
   borderCol = (255, 255, 0, 70)
   width     = 2
-  pos, dim  = (2, 2), (10, 10)
+  pos, dim  = (2, 2), (100, 100)
   duration  = .15
   tween     = 'accel_decel'
 
@@ -21,5 +21,9 @@ class EnoCursorBox(EnoFrameBox):
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
+  
+  ############# move cursor #############
+
+  def moveCursorPix(self, newPos): animate(self, pos=newPos, duration=self.duration)
 
 ### end ###
