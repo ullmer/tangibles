@@ -55,7 +55,7 @@ def draw():
 ################ on_mouse/key_down ################
 
 def on_mouse_down(pos):    ep.parseLocus(pos)
-def on_key_down(key, mod): efb.on_key_down(key, mod)
+def on_key_down(key, mod): ecb.on_key_down(key, mod)
 
 pgzrun.go()
 

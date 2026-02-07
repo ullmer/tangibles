@@ -141,6 +141,19 @@ class EnoParseGrid(AtaBase):
 
     except: self.err("determineGridPos"); return None
 
+  ############# mapGridPosToXY #############
+
+  def mapGridPosToXY(self, gridPos):
+
+    try:
+      gx, gy        = gridPos
+      width, height = self.pixDim
+      x = self.x0 + gx*width
+      y = self.y0 + gy*height
+      return (x, y)
+
+    except: self.err("mapGridPosToXY"); return None
+
   ############# determine grid binding #############
 
   def determineGridBinding(self, pos):
@@ -169,6 +182,7 @@ class EnoParseGrid(AtaBase):
           except: self.err("parseLocus error on autocallback")
 
       result = [gridPos]
+      resultXY = self.mapGridPosToXY(gridPos) 
       if self.verbose: self.msg(gridPos)
 
       if self.gridBindings is not None and gridPos in self.gridBindings: 
