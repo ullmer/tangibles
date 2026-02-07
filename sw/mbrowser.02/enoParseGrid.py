@@ -148,6 +148,7 @@ class EnoParseGrid(AtaBase):
     try:
       gx, gy        = gridPos
       width, height = self.pixDim
+      width /= self.cols; height /= self.rows
       x = self.x0 + gx*width
       y = self.y0 + gy*height
       return (x, y)
