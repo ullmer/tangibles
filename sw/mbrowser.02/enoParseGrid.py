@@ -193,6 +193,7 @@ class EnoParseGrid(AtaBase):
       if self.gridBindings is not None and gridPos in self.gridBindings: 
         gb = self.gridBindings[gridPos]
         result.append(gb)
+        result.append((self.elWidth, self.elHeight))
         if self.verbose: self.msg(gb)
 
       if self.callbacksActive:

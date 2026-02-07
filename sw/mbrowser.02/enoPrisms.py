@@ -123,8 +123,9 @@ class EnoPrisms(AtaBase):
         self.msg("evolveLocus: multiple parseLocus results; for present, handling first")
 
       firstResult = plr[0]
-      locusIdx, locusXY, locusName = firstResult #unpack
+      locusIdx, locusXY, locusWH, locusName = firstResult #unpack
       ecb.shiftCursor(locusXY)
+      ecb.shiftShape(locusWH)
      
     except: self.err("evolveLocus")
 
