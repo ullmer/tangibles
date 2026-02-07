@@ -4,6 +4,7 @@
 
 import os, sys
 from pgzero import clock
+
 os.environ['SDL_VIDEO_WINDOW_POS'] = '0,0' #place window at 0,0 
 sys.path.insert(0, #access module in parent directory (for test stubs)
   os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -25,14 +26,14 @@ ep = EnoPrisms()
 ep.summonPrism('teiLandscape', 0)
 ep.summonPrism('teiYearsQ4',   1)
 
+winDim = (WIDTH, HEIGHT)
+
 yf  = open('yaml/sampleEntries.yaml', 'rt')
 yd  = yaml.safe_load(yf); yf.close()
-winDim = (WIDTH, HEIGHT)
 eel = EnoEntityListing(entries=yd, fieldsToPostfix=[0],
                        entryFontSize=25, winDim=winDim)
 
 rb  = EnoRefractBar((WIDTH, 80), (0, 750))
-efb = EnoFrameBox()
 ecb = EnoCursorBox()
 
 def update(): ep.update(); 
@@ -42,14 +43,14 @@ firstDraw = True
 def initPrismBarPairIntersect(): ep.intersectPrismBarPair(0, 1, 0, 0)
 clock.schedule_unique(lambda: initPrismBarPairIntersect(), 0) 
 
+tfn = "barlow_black"
+
 ################ draw ################
 def draw(): 
   screen.clear()
-  for el in [eel, ep, rb]: el.draw(screen)
+  for el in [eel, ep, rb, ecb]: el.draw(screen)
   rcol = rb.fillColor
-  screen.draw.text("TEI", midleft=(305,70), alpha=.2, 
-    color=rcol, fontname="barlow_black", fontsize=250)
-  for el in [efb, ecb]: el.draw(screen)
+  screen.draw.text("TEI", midleft=(305,70), alpha=.2, color=rcol, fontname=tfn, fontsize=250)
 
 ################ on_mouse/key_down ################
 
