@@ -39,12 +39,15 @@ class EnoPrismBar(AtaBase):
   textOffset   = (10, 10)
   textOffset2  = (0, 0)
 
+  regenSurfRequired = True
+
   ############# constructor #############
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
 
     self.createSurface()
+    self.regenSurfRequired = False
 
   ############# calcTextAngle #############
 
@@ -192,8 +195,22 @@ class EnoPrismBar(AtaBase):
 
   ############# draw #############
 
+  def regenSurface(self):
+    try:
+      if self.surfaceList is None:   return
+      if len(self.surfaceList) == 0: return
+
+     self.surfaceList.clear() # clear out existing surfaces, exposing for garbage collection
+     self.createSurface()
+     self.regenSurfRequired = False
+
+    except: self.err("regenSurface")
+
+  ############# draw #############
+
   def draw(self, screen):
     try: 
+      if self.regenSurfRequired: self.regenSurface()
       for surf in self.surfaceList:
         pos = self.basePos
         if self.baseShiftX is not None and (self.flowLeft or (self.refractBar and self.dvlflx < 0)):
