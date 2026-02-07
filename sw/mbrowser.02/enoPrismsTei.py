@@ -51,8 +51,12 @@ class EnoPrismsTei(AtaBase):
     try:
       n,w,pmdy=35,400, self.pathMaxDy
       cyel, cblu, cred = self.cyel, self.cblu, self.cred
-      epb1a = EnoPrismBars(flowLeft=False, textOffset2=(-18,0), fontSize=25, pathMaxDy=pmdy, pathMaxDx=700, basePos=(200,0))
-      epb1b = EnoPrismBars(flowLeft=False, pathMaxDx=140, pathMaxDy=80, baseWidth=79, basePos=(900, pmdy), refractBars=True)
+
+      epb1a = EnoPrismBars(flowLeft=False, textOffset2=(-18,0), fontSize=25, 
+                           pathMaxDy=pmdy, pathMaxDx=700, basePos=(200,0))
+
+      epb1b = EnoPrismBars(flowLeft=False, pathMaxDx=140, pathMaxDy=80, 
+                           baseWidth=79, basePos=(900, pmdy), refractBars=True)
 
       bindings1 = [["22: Daejeon",  cyel, n], ["23: Warsaw",  cblu, n], ["24: Cork", cblu, w],
                    ["25: Bordeaux", cblu, n], ["26: Chicago", cred, n]]
@@ -79,17 +83,22 @@ class EnoPrismsTei(AtaBase):
     try:
       n2,pmdy=88, self.pathMaxDy
       cgre, cyel, cgr2 = self.cgre, self.cyel, self.cgr2
-      epb2a = EnoPrismBars(flowLeft=True, textOffset2=(930, 0), fontSize=40, pathMaxDy=pmdy, pathMaxDx=1000)
+
+      epb2a = EnoPrismBars(flowLeft=True, textOffset2=(930, 0), fontSize=40, 
+                           pathMaxDy=pmdy, pathMaxDx=1000)
+
       epb2b = EnoPrismBars(flowLeft=True, textOffset2=(705, 0), pathMaxDy=80, pathMaxDx=-100,
                            fontSize=25, basePos=(100, pmdy), baseWidth=105, refractBars=True)
 
-      bindings2a = [["creativity", cgre, n2], ["dance+theater",          cgre, n2], ["music+sound",        cgre, n2],
-                    ["actuation",  cyel, n2], ["artificial intelligence", cyel, n2], ["computing hardware", cyel, n2]]
+      bindings2a = [["creativity", cgre, n2], ["dance+theater",  cgre, n2], 
+                    ["music+sound",cgre, n2], ["actuation",      cyel, n2], 
+                    ["artificial intelligence", cyel, n2], ["computing hardware", cyel, n2]]
 
       for b in bindings2a: epb2a.addBarL(b)
 
-      bindings2b = [["creativity", cgr2, n2], ["dance+theater",          cgr2, n2], ["music+sound",        cgr2, n2],
-                    ["actuation",  cyel, n2], ["artificial intelligence", cyel, n2], ["computing hardware", cyel, n2]]
+      bindings2b = [["creativity", cgr2, n2], ["dance+theater", cgr2, n2], 
+                    ["music+sound",cgr2, n2], ["actuation",     cyel, n2], 
+                    ["artificial intelligence", cyel, n2], ["computing hardware", cyel, n2]]
 
       for b in bindings2b[0:3]: epb2b.addBarL3(b,65)
       epb2b.baseWidth  =  97
