@@ -20,7 +20,7 @@ class EnoFrameBox(AtaBase):
   width     = 2
   #pos, dim  = (900, 900), (100, 100)
   pos, dim  = (2, 2), (10, 10)
-  duration  = .15
+  duration  = .3
   tween     = 'accel_decel'
 
   ############# constructor #############

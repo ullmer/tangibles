@@ -103,7 +103,7 @@ class EnoPrisms(AtaBase):
       for  p in self.prisms: 
         r = p.parseLocus(pos)
         if r is not False:
-          locusIdx, locusXY, locusName = r
+          #locusIdx, locusXY, locusDim, locusName = r
           self.msg("prisms parseLocus: " + str(r))
           if results is None: results = []
           results.append(r)

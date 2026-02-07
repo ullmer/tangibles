@@ -13,7 +13,6 @@ class EnoCursorBox(EnoFrameBox):
   borderCol = (255, 255, 0, 70)
   width     = 2
   pos, dim  = (2, 2), (100, 100)
-  duration  = .15
   tween     = 'accel_decel'
 
   ############# constructor #############

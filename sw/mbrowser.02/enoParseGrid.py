@@ -150,8 +150,8 @@ class EnoParseGrid(AtaBase):
       gx, gy        = gridPos
       if self.elWidth is None or self.elHeight is None:
         width, height = self.pixDim
-        self.elWidth  = width  / self.cols
-        self.elHeight = height / self.rows
+        self.elWidth  = int(width  / self.cols)
+        self.elHeight = int(height / self.rows)
       x = self.x0 + gx*self.elWidth
       y = self.y0 + gy*self.elHeight
       return (x, y)
@@ -187,13 +187,13 @@ class EnoParseGrid(AtaBase):
 
       resultXY = self.mapGridPosToXY(gridPos) 
       result = [gridPos, resultXY]
+      result.append((self.elWidth, self.elHeight))
 
       if self.verbose: self.msg(gridPos); self.msg(resultXY)
 
       if self.gridBindings is not None and gridPos in self.gridBindings: 
         gb = self.gridBindings[gridPos]
         result.append(gb)
-        result.append((self.elWidth, self.elHeight))
         if self.verbose: self.msg(gb)
 
       if self.callbacksActive:
