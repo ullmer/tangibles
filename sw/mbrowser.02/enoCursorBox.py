@@ -24,6 +24,6 @@ class EnoCursorBox(EnoFrameBox):
   
   ############# move cursor #############
 
-  def moveCursorPix(self, newPos): animate(self, pos=newPos, duration=self.duration)
+  def moveCursor(self, newPos): animate(self, pos=newPos, duration=self.duration)
 
 ### end ###
