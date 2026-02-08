@@ -225,7 +225,7 @@ class EnoPrismBar(AtaBase):
 
   def shiftBarSX(self, newBarShiftX):
     try:
-      animate(self, barShiftX=newBarShiftX, duration=self.duration, tween=self.tween)
+      animate(self, baseShiftX=newBarShiftX, duration=self.duration, tween=self.tween)
     except: self.err("shiftBarWidth")
 
   ############# draw #############

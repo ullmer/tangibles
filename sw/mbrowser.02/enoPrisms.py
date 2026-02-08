@@ -129,7 +129,7 @@ class EnoPrisms(AtaBase):
       ecb.shiftCursor(locusXY)
       ecb.shiftShape(locusWH)
 
-      pb = prism.getBarIdx(locusIdx)
+      pb = prism.getBarIdx(locusIdx).getBar(1)
       pb.shiftBarSX(100)
      
     except: self.err("evolveLocus")

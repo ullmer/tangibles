@@ -49,11 +49,11 @@ class EnoPrism(AtaBase):
 
   def getBarIdx(self, barIdxTuple):
     try:
-      self.msg("getBarIdx " + str(barIdxTuple))
+      #self.msg("getBarIdx " + str(barIdxTuple))
       rows, cols = self.getRowsCols()
       i, j       = barIdxTuple
       idx        = i + (rows*j)
-      self.msg("getBarIdx2 " + str([i, j, rows, cols, idx]))
+      #self.msg("getBarIdx2 " + str([i, j, rows, cols, idx]))
       result     = self.getPrismBar(idx)
       return result
     except: self.err("getBarIdx")
@@ -63,7 +63,7 @@ class EnoPrism(AtaBase):
   def getPrismBar(self, whichBar: int):
     try:
       if self.prismBars is None: return None
-      self.msg("getPrismBar " + str(whichBar))
+      #self.msg("getPrismBar " + str(whichBar))
       return self.prismBars[whichBar]
     except: self.err("getPrismBars")
 
