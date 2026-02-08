@@ -15,12 +15,27 @@ class EnoPrism(AtaBase):
   prismName = None
   prismBars = None
   parseGrid = None
+  rows,cols = None, None
 
   ############# constructor #############
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     if self.prismBars is None: self.prismBars = []
+
+  ############# get rows, cols #############
+
+  def getRows(self):
+    try:    return parseGrid.rows
+    except: self.err("getRows"); return None
+
+  def getCols(self):
+    try:    return parseGrid.cols
+    except: self.err("getCols"); return None
+
+  def getRowsCols(self):
+    try:    return (parseGrid.rows, parseGrid.cols)
+    except: self.err("getRowsCols")
 
   ############# number prism bars #############
 
@@ -29,6 +44,17 @@ class EnoPrism(AtaBase):
       if self.prismBars is None: return 0
       return len(self.prismBars)
     except: self.err("numPrismBars")
+
+  ############# get bar idx #############
+
+  def getBarIdx(self, barIdxTuple):
+    try:
+      rows, cols = self.getRowsCols
+      i, j       = barIdxTuple
+      idx        = rows*i + cols
+      result     = self.getPrismBar(idx)
+      return result
+    except: self.err("getBarIdx")
 
   ############# get prism bar #############
 

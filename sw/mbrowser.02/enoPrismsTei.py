@@ -64,8 +64,9 @@ class EnoPrismsTei(AtaBase):
       epb1b = EnoPrismBars(flowLeft=False, pathMaxDx=140, pathMaxDy=80, 
                            baseWidth=79, basePos=(900, pmdy), refractBars=True)
 
-      bindings1 = [["22: Daejeon",  cyel, n], ["23: Warsaw",  cblu, n], ["24: Cork", cblu, w],
-                   ["25: Bordeaux", cblu, n], ["26: Chicago", cred, n]]
+      bindings1 = [["22: Daejeon",  cyel, n], ["23: Warsaw",   cblu, n], 
+                   ["24: Cork",     cblu, w], ["25: Bordeaux", cblu, n], 
+                   ["26: Chicago", cred, n]]
       self.currentBarWideIdx = 2
 
       for b in bindings1: epb1a.addBarL(b)
