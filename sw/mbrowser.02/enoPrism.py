@@ -25,6 +25,8 @@ class EnoPrism(AtaBase):
 
   ############# get rows, cols #############
 
+  def getName(self): return self.prismName
+
   def getRows(self):
     try:    return self.parseGrid.rows
     except: self.err("getRows"); return None
