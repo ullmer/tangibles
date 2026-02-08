@@ -234,13 +234,14 @@ class EnoPrismBar(AtaBase):
   def draw(self, screen):
     try: 
       if self.lastBarWidth   != self.barWidth or \
-         self.lastBaseShiftX != self.baseShiftX: self.regenSurfRequired = True
+         self.lastBaseShiftX != self.baseShiftX:   self.regenSurfRequired = True
 
       if self.regenSurfRequired: self.regenSurface()
 
       for surf in self.surfaceList:
         pos = self.basePos
-        if self.baseShiftX is not None and (self.flowLeft or (self.refractBar and self.dvlflx < 0)):
+        if self.baseShiftX is not None and \
+           (self.flowLeft or (self.refractBar and self.dvlflx < 0)):
           x, y = pos
           x   += self.baseShiftX
           pos  = (x, y)
