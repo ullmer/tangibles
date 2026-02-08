@@ -208,9 +208,9 @@ class EnoPrismBar(AtaBase):
       if self.surfaceList is None:   return
       if len(self.surfaceList) == 0: return
 
-     self.surfaceList.clear() # clear out existing surfaces, exposing for garbage collection
-     self.createSurface()
-     self.regenSurfRequired = False
+      self.surfaceList.clear() # clear out existing surfaces, exposing for garbage collection
+      self.createSurface()
+      self.regenSurfRequired = False
 
     except: self.err("regenSurface")
 
@@ -223,7 +223,7 @@ class EnoPrismBar(AtaBase):
 
   ############# shift bar width #############
 
-  def shiftBarShiftX(self, newBarShiftX):
+  def shiftBarSX(self, newBarShiftX):
     try:
       animate(self, barShiftX=newBarShiftX, duration=self.duration, tween=self.tween)
     except: self.err("shiftBarWidth")
@@ -232,7 +232,7 @@ class EnoPrismBar(AtaBase):
 
   def draw(self, screen):
     try: 
-      if self.lastBarWidth   != self.barWidth or
+      if self.lastBarWidth   != self.barWidth or \
          self.lastBaseShiftX != self.baseShiftX: self.regenSurfRequired = True
 
       if self.regenSurfRequired: self.regenSurface()
