@@ -122,8 +122,9 @@ class EnoPrisms(AtaBase):
       if plrc > 1:  
         self.msg("evolveLocus: multiple parseLocus results; for present, handling first")
 
-      firstResultCoords, prism = plr[0] 
-      locusIdx, locusXY, locusWH, locusName = firstResult #unpack
+      self.msg("el: " + str(plr[0]))
+      prism, firstResultCoords = plr[0] 
+      locusIdx, locusXY, locusWH, locusName = firstResultCoords #unpack
       self.msg("evolveLocus:" + str(locusName) + str(locusIdx))
       ecb.shiftCursor(locusXY)
       ecb.shiftShape(locusWH)
