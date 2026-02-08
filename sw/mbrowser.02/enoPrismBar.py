@@ -191,7 +191,8 @@ class EnoPrismBar(AtaBase):
           for i in range(lenPoints):
             start, end = points[i], points[(i+1) % lenPoints]
             x1, y1 = start; x2, y2 = end; x1 += 1; x2 -= 1
-            pygame.gfxdraw.line(surf, x1, y1, x2, y2, self.outlineColor)
+            x1i, y1i, x2i, y2i = int(x1), int(y1), int(x2), int(y2)
+            pygame.gfxdraw.line(surf, x1i, y1i, x2i, y2i, self.outlineColor)
   
         else: pygame.draw.polygon(surf, self.outlineColor, points, width=self.outlineWidth)
   

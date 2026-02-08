@@ -63,7 +63,7 @@ class EnoPrism(AtaBase):
   def getPrismBar(self, whichBar: int):
     try:
       if self.prismBars is None: return None
-      #self.msg("getPrismBar " + str(whichBar))
+      self.msg("getPrismBar " + str(whichBar))
       return self.prismBars[whichBar]
     except: self.err("getPrismBars")
 
