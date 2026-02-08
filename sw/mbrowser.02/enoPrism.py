@@ -26,15 +26,15 @@ class EnoPrism(AtaBase):
   ############# get rows, cols #############
 
   def getRows(self):
-    try:    return parseGrid.rows
+    try:    return self.parseGrid.rows
     except: self.err("getRows"); return None
 
   def getCols(self):
-    try:    return parseGrid.cols
+    try:    return self.parseGrid.cols
     except: self.err("getCols"); return None
 
   def getRowsCols(self):
-    try:    return (parseGrid.rows, parseGrid.cols)
+    try:    return (self.parseGrid.rows, self.parseGrid.cols)
     except: self.err("getRowsCols")
 
   ############# number prism bars #############
@@ -49,9 +49,11 @@ class EnoPrism(AtaBase):
 
   def getBarIdx(self, barIdxTuple):
     try:
-      rows, cols = self.getRowsCols
+      self.msg("getBarIdx " + str(barIdxTuple))
+      rows, cols = self.getRowsCols()
       i, j       = barIdxTuple
-      idx        = rows*i + cols
+      idx        = i + (rows*j)
+      self.msg("getBarIdx2 " + str([i, j, rows, cols, idx]))
       result     = self.getPrismBar(idx)
       return result
     except: self.err("getBarIdx")
@@ -61,6 +63,7 @@ class EnoPrism(AtaBase):
   def getPrismBar(self, whichBar: int):
     try:
       if self.prismBars is None: return None
+      self.msg("getPrismBar " + str(whichBar))
       return self.prismBars[whichBar]
     except: self.err("getPrismBars")
 
