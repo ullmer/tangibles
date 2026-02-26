@@ -89,7 +89,8 @@ class EnoPrismBars(AtaBase):
       self.cumPosTop   = (cx1, cy1)
       
       self.barList.append(epb)
-    except: self.err("addBar")
+      return epb
+    except: self.err("addBar"); return None
 
   ############# getBar #############
 
