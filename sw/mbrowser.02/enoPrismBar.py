@@ -222,12 +222,20 @@ class EnoPrismBar(AtaBase):
       animate(self, barWidth=newBarWidth, duration=self.duration, tween=self.tween)
     except: self.err("shiftBarWidth")
 
-  ############# shift bar width #############
+  ############# shift bar bottom x #############
 
-  def shiftBarSX(self, newBarShiftX):
+  def shiftBarBX(self, nx):
     try:
-      animate(self, baseShiftX=newBarShiftX, duration=self.duration, tween=self.tween)
-    except: self.err("shiftBarWidth")
+      animate(self, baseShiftX=nx, duration=self.duration, tween=self.tween)
+    except: self.err("shiftBarBX")
+
+  ############# shift bar top x #############
+
+  def shiftBarTX(self, nx):
+    try:
+      animate(self, pathMaxDx=nx, duration=self.duration, tween=self.tween)
+      animate(self, barWidth=nx, duration=self.duration, tween=self.tween)
+    except: self.err("shiftBarTX")
 
   ############# draw #############
 
