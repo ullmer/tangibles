@@ -46,43 +46,7 @@ pin(rpiPico1, 38, [gnd]).
 pin(rpiPico1, 39, [vsys]).
 pin(rpiPico1, 40, [vbus]).
 
-% -------- Convenience predicates --------
-
-% true if Pin supplies Capability (exact term match).
-pin_supports(Component, Pin, Capability) :-
-    pin(Component, Pin, Caps),
-    member(Capability, Caps).
-
-% list all physical pins that match a Capability, e.g., pins_with(i2c(1,sda), Pins).
-pins_with(Component, Capability, Pins) :-
-    findall(P, pin_supports(Component, P, Capability), PList),
-    sort(PList, Pins).
-
-% collect pins that offer any role on a given SPI or I2C controller
-% (e.g., pins_for_spi(0, Pins).)
-pins_for_spi(Component, Ctrl, Pins) :-
-    findall(P, (pin(Component, P, Caps), member(spi(Ctrl, _), Caps)), PList),
-    sort(PList, Pins).
-
-pins_for_i2c(Component, Ctrl, Pins) :-
-    findall(P, (pin(Component, P, Caps), member(i2c(Ctrl, _), Caps)), PList),
-    sort(PList, Pins).
-
-% lightweight name lookup helpers
-is_ground(Component, Pin)   :- pin(Component, Pin, Caps), member(gnd, Caps).
-is_analog(Component, Pin)   :- pin(Component, Pin, Caps), (member(adc(_), Caps); member(adc_vref, Caps); member(agnd, Caps)).
-
 % Deterministic yes/no test when Pin is (usually) ground
 power_pins(rpiPico1, [35,36,37,39,40]).
-
-% Enumerates on backtracking (use this as your main is_power/2)
-is_power(Component, Pin) :-
-    power_pins(Component, L),
-    member(Pin, L).
-
-% Deterministic yes/no test when Pin is (usually) ground
-is_power_chk(Component, Pin) :-
-    power_pins(Component, L),
-    memberchk(Pin, L).
 
 %%% end %%%
