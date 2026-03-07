@@ -1,0 +1,17 @@
+#Brygg Ullmer, Clemson University
+#Begun 2026-03-07 
+#Some mappings auto-expanded by CoPilot
+
+component: hlgRfidRC522
+ pins: 
+   1:  [SDA]
+   2:  [SCK]
+   3:  [GND] 
+   4:  [MOSI]
+   5:  [MISO]
+   6:  [IRQ]
+   7:  [GND]
+   8:  [RST]
+   9:  [3V3]
+
+### end ###
