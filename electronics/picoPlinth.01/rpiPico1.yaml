@@ -5,6 +5,8 @@ component: rpiPico1
   pins:
     1: [GP0, SPIO RX,  I2C0 SDA, UART0 TX]
     2: [GP1, SPI0 CSn, I2C0 SCL, UART0 RX]
+    4: [GP2, SPI0 SCK, I2C1 SDA]
+    5: [SP3, SPIO TX,  I2C1 SCL]
     3: [GND]
 
 ### end ###
