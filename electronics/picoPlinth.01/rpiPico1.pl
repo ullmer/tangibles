@@ -72,7 +72,6 @@ pins_for_i2c(Component, Ctrl, Pins) :-
 is_ground(Component, Pin)   :- pin(Component, Pin, Caps), member(gnd, Caps).
 is_analog(Component, Pin)   :- pin(Component, Pin, Caps), (member(adc(_), Caps); member(adc_vref, Caps); member(agnd, Caps)).
 
-
 % Deterministic yes/no test when Pin is (usually) ground
 power_pins(rpiPico1, [35,36,37,39,40]).
 
