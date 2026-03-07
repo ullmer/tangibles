@@ -73,4 +73,20 @@ is_ground(Component, Pin)   :- pin(Component, Pin, Caps), member(gnd, Caps).
 is_power(Component, Pin)    :- memberchk(Pin, [35,36,37,39,40]).
 is_analog(Component, Pin)   :- pin(Component, Pin, Caps), (member(adc(_), Caps); member(adc_vref, Caps); member(agnd, Caps)).
 
+
+is_power(Component, Pin) :- power_pins(Component, L), member(Pin, L).
+
+% Deterministic yes/no test when Pin is (usually) ground
+power_pins(rpiPico1, [35,36,37,39,40]).
+
+% Enumerates on backtracking (use this as your main is_power/2)
+is_power(Component, Pin) :-
+    power_pins(Component, L),
+    member(Pin, L).
+
+% Deterministic yes/no test when Pin is (usually) ground
+is_power_chk(Component, Pin) :-
+    power_pins(Component, L),
+    memberchk(Pin, L).
+
 %%% end %%%
