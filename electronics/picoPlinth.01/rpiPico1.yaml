@@ -1,0 +1,10 @@
+#Brygg Ullmer, Clemson University
+#Begun 2026-03-07
+
+component: rpiPico1
+  pins:
+    1: [GP0, SPIO RX,  I2C0 SDA, UART0 TX]
+    2: [GP1, SPI0 CSn, I2C0 SCL, UART0 RX]
+    3: [GND]
+
+### end ###
