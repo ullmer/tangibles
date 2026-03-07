@@ -43,4 +43,65 @@ is_power_chk(Component, Pin) :-
     power_pins(Component, L),
     memberchk(Pin, L).
 
+%% ---- Alias maps to canonical roles ----
+%% Canonical atoms we’ll use: spi_cs, spi_sck, spi_mosi, spi_miso, rst, irq, v3v3, gnd
+
+role_alias(spi_cs,   sda).
+role_alias(spi_cs,   ss).
+role_alias(spi_cs,   cs).
+role_alias(spi_cs,   csn).
+role_alias(spi_cs,   nss).
+
+role_alias(spi_sck,  sck).
+role_alias(spi_sck,  sclk).
+role_alias(spi_sck,  clk).
+
+role_alias(spi_mosi, mosi).
+role_alias(spi_mosi, copi).
+role_alias(spi_mosi, sdi).
+role_alias(spi_mosi, di).
+role_alias(spi_mosi, din).
+
+role_alias(spi_miso, miso).
+role_alias(spi_miso, cipo).
+role_alias(spi_miso, sdo).
+role_alias(spi_miso, do).
+role_alias(spi_miso, dout).
+
+role_alias(rst,      rst).
+role_alias(rst,      reset).
+role_alias(rst,      rst_n).
+role_alias(rst,      nreset).
+
+role_alias(irq,      irq).
+role_alias(irq,      int).
+
+role_alias(v3v3,     '3v3').
+role_alias(v3v3,     '3.3v').
+role_alias(v3v3,     vcc).
+role_alias(v3v3,     vdd).
+
+role_alias(gnd,      gnd).
+role_alias(gnd,      ground).
+
+%% Resolve a possibly-aliased label into a canonical role
+canonical_role(Label, Canon) :-
+    (   role_alias(Canon, Label)
+    ->  true
+    ;   Canon = Label     % if already canonical or unrecognized, leave as-is
+    ).
+
+%% true if Caps contains something that matches CanonRole via aliasing
+caps_has_role(Caps, CanonRole) :-
+    member(Lab, Caps),
+    canonical_role(Lab, CanonRole0),
+    CanonRole0 == CanonRole.
+
+%% has_role(Component, Pin, CanonRole, Caps) unifies if pin supports a role (with alias resolution)
+has_role(Component, Pin, CanonRole, CapsOut) :-
+    pin(Component, Pin, Caps),
+    canonical_role(CanonRole, CanonRole), % ensure CanonRole is canonical atom we use
+    caps_has_role(Caps, CanonRole),
+    CapsOut = Caps.
+
 %%% end %%%
