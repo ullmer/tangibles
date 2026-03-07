@@ -70,11 +70,8 @@ pins_for_i2c(Component, Ctrl, Pins) :-
 
 % lightweight name lookup helpers
 is_ground(Component, Pin)   :- pin(Component, Pin, Caps), member(gnd, Caps).
-is_power(Component, Pin)    :- memberchk(Pin, [35,36,37,39,40]).
 is_analog(Component, Pin)   :- pin(Component, Pin, Caps), (member(adc(_), Caps); member(adc_vref, Caps); member(agnd, Caps)).
 
-
-is_power(Component, Pin) :- power_pins(Component, L), member(Pin, L).
 
 % Deterministic yes/no test when Pin is (usually) ground
 power_pins(rpiPico1, [35,36,37,39,40]).
