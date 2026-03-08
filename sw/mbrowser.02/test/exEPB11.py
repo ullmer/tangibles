@@ -3,9 +3,13 @@
 # Begun 2025-11-03
 
 import os,sys
+
 os.environ['SDL_VIDEO_WINDOW_POS'] = '0,0' #place window at 0,0 
 sys.path.insert(0, #access module in parent directory (for test stubs)
-  os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+                os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+sys.path.append('..')
+
 import pgzrun
 WIDTH, HEIGHT=1900,1000
 
