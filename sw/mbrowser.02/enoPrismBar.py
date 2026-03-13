@@ -6,20 +6,24 @@ import math
 import pygame
 import pygame.gfxdraw
 
+from pgzero.builtins import Actor, animate, keyboard, keys
+
 from ataBase import *
 
 class EnoPrismBar(AtaBase):
   basePos    = (0, 0)
   baseShiftX = None
-  barWidth     = 500
+  barWidth       = 500
   lastBarWidth   = None
   lastBaseShiftX = None
+  topShiftX      = 0
+  lastTopShiftX  = 0
+
   baseWidth  = None # if None, same as barWidth
   pathMaxDx  = 800
   pathMaxDy  = 950
   refractBar = False
   vertices   = None
-
   barColor   = None
   maxW, maxH = None, None
 
@@ -152,11 +156,12 @@ class EnoPrismBar(AtaBase):
       bpxs = self.pathMaxDx
   
       bsx = 0 # baseShift X
+      tsx = self.topShiftX
       if self.baseShiftX is not None: bsx += self.baseShiftX
       
       # Define polygon points
       if not self.flowLeft:
-        points = [(0, 0), (self.barWidth, 0), 
+        points = [(tsx, 0), (tsx+self.barWidth, 0), 
                   (bsx + bpxs + bottomWidth, self.maxH),
                   (bsx + bpxs,               self.maxH)]
   
@@ -196,8 +201,8 @@ class EnoPrismBar(AtaBase):
   
         else: pygame.draw.polygon(surf, self.outlineColor, points, width=self.outlineWidth)
   
-      lastBarWidth   = self.barWidth
-      lastBaseShiftX = self.baseShiftX
+      self.lastBarWidth   = self.barWidth
+      self.lastBaseShiftX = self.baseShiftX
 
       self.surfaceList.append(surf)
     except: self.err("createSurface")
@@ -234,7 +239,7 @@ class EnoPrismBar(AtaBase):
   def shiftBarTX(self, nx):
     try:
       animate(self, pathMaxDx=nx, duration=self.duration, tween=self.tween)
-      animate(self, barWidth=nx, duration=self.duration, tween=self.tween)
+      animate(self, barWidth=nx,  duration=self.duration, tween=self.tween)
     except: self.err("shiftBarTX")
 
   ############# draw #############
