@@ -10,6 +10,7 @@ from ataBase      import *
 from enoPrismBar  import *
 from enoPrismBars import *
 from enoParseGrid import *
+from pygame       import Rect
 
 class EnoFrameBox(AtaBase):
   verbose         = False
