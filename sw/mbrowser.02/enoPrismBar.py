@@ -166,7 +166,7 @@ class EnoPrismBar(AtaBase):
                   (bsx + bpxs,               self.maxH)]
   
       else: 
-        points = [(self.pathMaxDx + self.barWidth, 0), (self.pathMaxDx, 0), 
+        points = [(tsx + self.pathMaxDx + self.barWidth, 0), (tsx + self.pathMaxDx, 0), 
                   (bsx,               self.maxH),
                   (bsx + bottomWidth, self.maxH)]
   
@@ -203,6 +203,7 @@ class EnoPrismBar(AtaBase):
   
       self.lastBarWidth   = self.barWidth
       self.lastBaseShiftX = self.baseShiftX
+      self.lastTopShiftX  = self.topShiftX
 
       self.surfaceList.append(surf)
     except: self.err("createSurface")
@@ -238,8 +239,7 @@ class EnoPrismBar(AtaBase):
 
   def shiftBarTX(self, nx):
     try:
-      animate(self, pathMaxDx=nx, duration=self.duration, tween=self.tween)
-      animate(self, barWidth=nx,  duration=self.duration, tween=self.tween)
+      animate(self, topShiftX=nx, duration=self.duration, tween=self.tween)
     except: self.err("shiftBarTX")
 
   ############# draw #############
@@ -247,7 +247,8 @@ class EnoPrismBar(AtaBase):
   def draw(self, screen):
     try: 
       if self.lastBarWidth   != self.barWidth or \
-         self.lastBaseShiftX != self.baseShiftX:   self.regenSurfRequired = True
+         self.lastBaseShiftX != self.baseShiftX or \
+         self.lastTopShiftX  != self.topShiftX:   self.regenSurfRequired = True
 
       if self.regenSurfRequired: self.regenSurface()
 
