@@ -95,12 +95,12 @@ prisms:
   # ---------------------- teiYearsQ4 ----------------------
   teiYearsQ4:
     bars:
+       bindings: *teiYearsQ4Bindings
       upper:
         params: { flowLeft: true, textOffset2: [930, 0], fontSize: 40,
                   pathMaxDy: *pathMaxDy, pathMaxDx: 1000 }
 
         bindings_method: addBarL
-        bindings: *teiYearsQ4BindingsA
 
       lower:
         params:  { flowLeft: true, textOffset2: [705, 0], fontSize: 25,
@@ -110,7 +110,6 @@ prisms:
         add_sequence:
           - { method: addBarL3, count: 3, args: [65] }
           - { method: addBarL2 }
-        bindings: *teiYearsQ4BindingsB
 
     parseGrid:
       rows: 1
