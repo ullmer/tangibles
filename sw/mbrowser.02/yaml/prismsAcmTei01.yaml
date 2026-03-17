@@ -50,7 +50,7 @@ prisms:
 
       upper:
         params: {flowLeft: false, textOffset2: [ -18, 0 ], fontSize: 25,
-                 pathMaxDy: *pathMaxDy, pathMaxDx: 700, basePos: [200, 0] }
+                 pathMaxDxy: [700, *pathMaxDy], basePos: [200, 0] }
 
         bindingsMethod: addBarL
 
@@ -76,8 +76,7 @@ prisms:
 
       upper:
         params: { flowLeft: true, textOffset2: [930, 0], fontSize: 40,
-                  pathMaxDy: *pathMaxDy, pathMaxDx: 1000 }
-
+                  pathMaxDxy: [1000, *pathMaxDy]}
         bindingsMethod: addBarL
 
       lower:
