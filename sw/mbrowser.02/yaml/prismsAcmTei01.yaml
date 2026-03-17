@@ -11,10 +11,10 @@ globals:
   barWide:     &barWide      400
 
 colors:
-  cblu: &cblu [ 0,   0, 255, 75 ]
+  cblu: &cblu [  0,   0, 255, 75 ]
   cyel: &cyel [255, 255,   0, 70 ]
-  cgre: &cgre [ 0, 255,   0, 70 ]
-  cgr2: &cgr2 [ 0, 255,   0, 20 ]
+  cgre: &cgre [  0, 255,   0, 70 ]
+  cgr2: &cgr2 [  0, 255,   0, 20 ]
   cred: &cred [255,   0,   0, 70 ]
 
 # --------------------------------------------------------------------
@@ -61,15 +61,13 @@ shared:
   teiYearsQ4Grid: &teiYearsQ4Grid
     [ tei22, tei23, tei24, tei25, tei26 ]
 
-# --------------------------------------------------------------------
+####################################################
 # Prism specifications (now using labeled bar roles)
-# --------------------------------------------------------------------
+####################################################
 prisms:
 
   # ---------------------- teiLandscape ----------------------
   teiLandscape:
-    prismName: teiLandscape
-
     bars:
       upper:
         params: {flowLeft: false, textOffset2: [ -18, 0 ], fontSize: 25,
@@ -96,8 +94,6 @@ prisms:
 
   # ---------------------- teiYearsQ4 ----------------------
   teiYearsQ4:
-    prismName: "teiYearsQ4"
-
     bars:
       upper:
         params: { flowLeft: true, textOffset2: [930, 0], fontSize: 40,
