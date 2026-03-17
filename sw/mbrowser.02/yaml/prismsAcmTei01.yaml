@@ -83,14 +83,7 @@ prisms:
         bindings_method: addBarL2
         bindings: *teiLandscapeBindings
 
-    parseGrid:
-      rows: 2
-      cols: 4
-      x0:  -10
-      y0:  831
-      pixDim: [413, 116]
-      verbose: false
-      gridBindings: *teiLandscapeGrid
+    parseGrid: {rowsCols: [2, 4], xy0: [-10, 831], pixDim: [413, 116], verbose: false, gridBindings: *teiLandscapeGrid}
 
   # ---------------------- teiYearsQ4 ----------------------
   teiYearsQ4:
@@ -111,13 +104,6 @@ prisms:
           - { method: addBarL3, count: 3, args: [65] }
           - { method: addBarL2 }
 
-    parseGrid:
-      rows: 1
-      cols: 5
-      x0:  1040
-      y0:  831
-      pixDim: [398, 116]
-      verbose: false
-      gridBindings: *teiYearsQ4Grid
+    parseGrid: {rowsCols: [1, 5],   xy0: [1040, 831], pixDim: [398, 116], verbose: false, gridBindings: *teiYearsQ4Grid}
 
 ### end ###
