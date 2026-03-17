@@ -45,22 +45,13 @@ shared:
     - { year: 26, city: Chicago,  color: *cred, firstWidth: *barNarrow1 }
 
   # ---------------- teiYearsQ4 A (greens + yellow) ----------------
-  teiYearsQ4BindingsA: &teiYearsQ4BindingsA
-    - { label: creativity,               color: *cgre, firstWidth: *barNarrow2 }
-    - { label: dance+theater,            color: *cgre, firstWidth: *barNarrow2 }
-    - { label: music+sound,              color: *cgre, firstWidth: *barNarrow2 }
-    - { label: actuation,                color: *cyel, firstWidth: *barNarrow2 }
-    - { label: artificial intelligence,  color: *cyel, firstWidth: *barNarrow2 }
-    - { label: computing hardware,       color: *cyel, firstWidth: *barNarrow2 }
-
-  # ---------------- teiYearsQ4 B (green‑fade then yellow) ----------------
-  teiYearsQ4BindingsB: &teiYearsQ4BindingsB
-    - { label: creativity,              color: *cgr2, firstWidth: *barNarrow2 }
-    - { label: dance+theater,           color: *cgr2, firstWidth: *barNarrow2 }
-    - { label: music+sound,             color: *cgr2, firstWidth: *barNarrow2 }
-    - { label: actuation,               color: *cyel, firstWidth: *barNarrow2 }
-    - { label: artificial intelligence, color: *cyel, firstWidth: *barNarrow2 }
-    - { label: computing hardware,      color: *cyel, firstWidth: *barNarrow2 }
+  teiYearsQ4Bindings: &teiYearsQ4BindingsA
+    - { label: creativity,               colors: [*cgre, *cgr2], firstWidth: *barNarrow2 }
+    - { label: dance+theater,            colors: [*cgre, *cgr2], firstWidth: *barNarrow2 }
+    - { label: music+sound,              colors: [*cgre, *cgr2], firstWidth: *barNarrow2 }
+    - { label: actuation,                colors: [*cyel, *cyel], firstWidth: *barNarrow2 }
+    - { label: artificial intelligence,  colors: [*cyel, *cyel], firstWidth: *barNarrow2 }
+    - { label: computing hardware,       colors: [*cyel, *cyel], firstWidth: *barNarrow2 }
 
   # ---------------- ParseGrid bindings ----------------
   teiLandscapeGrid: &teiLandscapeGrid
