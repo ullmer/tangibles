@@ -53,13 +53,6 @@ shared:
     - { label: artificial intelligence,  colors: [*cyel, *cyel], firstWidth: *barNarrow2 }
     - { label: computing hardware,       colors: [*cyel, *cyel], firstWidth: *barNarrow2 }
 
-  # ---------------- ParseGrid bindings ----------------
-  teiLandscapeGrid: &teiLandscapeGrid
-    [ tools, actuation, AI, "computing hardware",
-      art, creativity, "dance&theater", "music&sound" ]
-
-  teiYearsQ4Grid: &teiYearsQ4Grid
-    [ tei22, tei23, tei24, tei25, tei26 ]
 
 ####################################################
 # Prism specifications (now using labeled bar roles)
@@ -69,21 +62,21 @@ prisms:
   # ---------------------- teiLandscape ----------------------
   teiLandscape:
     bars:
+      bindings: *teiLandscapeBindings
       upper:
         params: {flowLeft: false, textOffset2: [ -18, 0 ], fontSize: 25,
                  pathMaxDy: *pathMaxDy, pathMaxDx: 700, basePos: [200, 0] }
 
         bindings_method: addBarL
-        bindings: *teiLandscapeBindings
 
       lower:
         params: {flowLeft: false, pathMaxDx: 140, pathMaxDy: 80, baseWidth: 79,
                  basePos: [900, *pathMaxDy], refractBars: true }
 
         bindings_method: addBarL2
-        bindings: *teiLandscapeBindings
 
-    parseGrid: {rowsCols: [2, 4], xy0: [-10, 831], pixDim: [413, 116], verbose: false, gridBindings: *teiLandscapeGrid}
+    parseGrid: {rowsCols: [2, 4], xy0: [-10, 831], pixDim: [413, 116], verbose: false} 
+    gridBindings: [tools, actuation, AI, "computing hardware", art, creativity, "dance&theater", "music&sound"]
 
   # ---------------------- teiYearsQ4 ----------------------
   teiYearsQ4:
@@ -104,6 +97,7 @@ prisms:
           - { method: addBarL3, count: 3, args: [65] }
           - { method: addBarL2 }
 
-    parseGrid: {rowsCols: [1, 5],   xy0: [1040, 831], pixDim: [398, 116], verbose: false, gridBindings: *teiYearsQ4Grid}
+    parseGrid: {rowsCols: [1, 5],   xy0: [1040, 831], pixDim: [398, 116], verbose: false}
+    gridBindings: [tei22, tei23, tei24, tei25, tei26]
 
 ### end ###
