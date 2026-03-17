@@ -1,14 +1,6 @@
 # enoPrismsDetails config — ACM/TEI v02 (refactored for labeled bindings + bar roles)
-
-# --------------------------------------------------------------------
-# Global scalars and palettes (reusable anchors)
-# --------------------------------------------------------------------
-globals:
-  pathMaxDy:   &pathMaxDy    750
-  barYShift:   &barYShift   1090
-  barNarrow1:  &barNarrow1    35
-  barNarrow2:  &barNarrow2    88
-  barWide:     &barWide      400
+# Brygg Ullmer (Clemson University) and CoPilot
+# Begun 2026-03-16
 
 colors:
   cblu: [  0,   0, 255, 75 ]
@@ -16,6 +8,16 @@ colors:
   cgre: [  0, 255,   0, 70 ]
   cgr2: [  0, 255,   0, 20 ]
   cred: [255,   0,   0, 70 ]
+
+# --------------------------------------------------------------------
+# Scalars (reusable anchors)
+# --------------------------------------------------------------------
+scalars:
+  pathMaxDy:   &pathMaxDy    750
+  barYShift:   &barYShift   1090
+  barNarrow1:  &barNarrow1    35
+  barNarrow2:  &barNarrow2    88
+  barWide:     &barWide      400
 
 # --------------------------------------------------------------------
 # Summon map
@@ -45,6 +47,7 @@ prisms:
         - { year: 24, city: Cork,     color: cblu, firstWidth: *barWide    }
         - { year: 25, city: Bordeaux, color: cblu, firstWidth: *barNarrow1 }
         - { year: 26, city: Chicago,  color: cred, firstWidth: *barNarrow1 }
+
       upper:
         params: {flowLeft: false, textOffset2: [ -18, 0 ], fontSize: 25,
                  pathMaxDy: *pathMaxDy, pathMaxDx: 700, basePos: [200, 0] }
@@ -70,6 +73,7 @@ prisms:
         - { label: actuation,                colors: [cyel, cyel], firstWidth: *barNarrow2 }
         - { label: artificial intelligence,  colors: [cyel, cyel], firstWidth: *barNarrow2 }
         - { label: computing hardware,       colors: [cyel, cyel], firstWidth: *barNarrow2 }
+
       upper:
         params: { flowLeft: true, textOffset2: [930, 0], fontSize: 40,
                   pathMaxDy: *pathMaxDy, pathMaxDx: 1000 }
