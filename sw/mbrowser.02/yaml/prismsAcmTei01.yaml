@@ -45,7 +45,7 @@ shared:
     - { year: 26, city: Chicago,  color: *cred, firstWidth: *barNarrow1 }
 
   # ---------------- teiYearsQ4 A (greens + yellow) ----------------
-  teiYearsQ4Bindings: &teiYearsQ4BindingsA
+  teiYearsQ4Bindings: &teiYearsQ4Bindings
     - { label: creativity,               colors: [*cgre, *cgr2], firstWidth: *barNarrow2 }
     - { label: dance+theater,            colors: [*cgre, *cgr2], firstWidth: *barNarrow2 }
     - { label: music+sound,              colors: [*cgre, *cgr2], firstWidth: *barNarrow2 }
@@ -95,7 +95,7 @@ prisms:
   # ---------------------- teiYearsQ4 ----------------------
   teiYearsQ4:
     bars:
-       bindings: *teiYearsQ4Bindings
+      bindings: *teiYearsQ4Bindings
       upper:
         params: { flowLeft: true, textOffset2: [930, 0], fontSize: 40,
                   pathMaxDy: *pathMaxDy, pathMaxDx: 1000 }
