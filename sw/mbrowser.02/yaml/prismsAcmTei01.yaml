@@ -31,22 +31,6 @@ background_bars:
   land: { image: teiland04,      bottomleft: [ 0,   *barYShift ], name: teiLandscape, scale: 0.45 }
   conf: { image: teiblockconf04, bottomleft: [ 910, *barYShift ], name: teiConfsQ04,  scale: 0.45 }
 
-# --------------------------------------------------------------------
-# Shared bindings (now all dictionaries)
-# --------------------------------------------------------------------
-shared:
-
-
-  # ---------------- teiYearsQ4 A (greens + yellow) ----------------
-  teiYearsQ4Bindings: &teiYearsQ4Bindings
-    - { label: creativity,               colors: [cgre, cgr2], firstWidth: *barNarrow2 }
-    - { label: dance+theater,            colors: [cgre, cgr2], firstWidth: *barNarrow2 }
-    - { label: music+sound,              colors: [cgre, cgr2], firstWidth: *barNarrow2 }
-    - { label: actuation,                colors: [cyel, cyel], firstWidth: *barNarrow2 }
-    - { label: artificial intelligence,  colors: [cyel, cyel], firstWidth: *barNarrow2 }
-    - { label: computing hardware,       colors: [cyel, cyel], firstWidth: *barNarrow2 }
-
-
 ####################################################
 # Prism specifications (now using labeled bar roles)
 ####################################################
@@ -79,7 +63,13 @@ prisms:
   # ---------------------- teiYearsQ4 ----------------------
   teiYearsQ4:
     bars:
-      bindings: *teiYearsQ4Bindings
+      bindings: 
+        - { label: creativity,               colors: [cgre, cgr2], firstWidth: *barNarrow2 }
+        - { label: dance+theater,            colors: [cgre, cgr2], firstWidth: *barNarrow2 }
+        - { label: music+sound,              colors: [cgre, cgr2], firstWidth: *barNarrow2 }
+        - { label: actuation,                colors: [cyel, cyel], firstWidth: *barNarrow2 }
+        - { label: artificial intelligence,  colors: [cyel, cyel], firstWidth: *barNarrow2 }
+        - { label: computing hardware,       colors: [cyel, cyel], firstWidth: *barNarrow2 }
       upper:
         params: { flowLeft: true, textOffset2: [930, 0], fontSize: 40,
                   pathMaxDy: *pathMaxDy, pathMaxDx: 1000 }
