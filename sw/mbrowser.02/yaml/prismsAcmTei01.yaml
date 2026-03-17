@@ -52,13 +52,13 @@ prisms:
         params: {flowLeft: false, textOffset2: [ -18, 0 ], fontSize: 25,
                  pathMaxDy: *pathMaxDy, pathMaxDx: 700, basePos: [200, 0] }
 
-        bindings_method: addBarL
+        bindingsMethod: addBarL
 
       lower:
         params: {flowLeft: false, pathMaxDx: 140, pathMaxDy: 80, baseWidth: 79,
                  basePos: [900, *pathMaxDy], refractBars: true }
 
-        bindings_method: addBarL2
+        bindingsMethod: addBarL2
 
     parseGrid: {rowsCols: [2, 4], xy0: [-10, 831], pixDim: [413, 116], verbose: false} 
     gridBindings: [tools, actuation, AI, "computing hardware", art, creativity, "dance&theater", "music&sound"]
@@ -78,7 +78,7 @@ prisms:
         params: { flowLeft: true, textOffset2: [930, 0], fontSize: 40,
                   pathMaxDy: *pathMaxDy, pathMaxDx: 1000 }
 
-        bindings_method: addBarL
+        bindingsMethod: addBarL
 
       lower:
         params:  { flowLeft: true, textOffset2: [705, 0], fontSize: 25,
