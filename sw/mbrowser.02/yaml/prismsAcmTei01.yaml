@@ -1,110 +1,143 @@
-# enoPrismsDetails config — ACM/TEI v01 (anchors & aliases only)
+# enoPrismsDetails config — ACM/TEI v02 (refactored for labeled bindings + bar roles)
 
-# ---------- Reusable scalars & palettes ----------
+# --------------------------------------------------------------------
+# Global scalars and palettes (reusable anchors)
+# --------------------------------------------------------------------
 globals:
-  pathMaxDy:  &pathMaxDy   750
-  barYShift:  &barYShift  1090      # 750 + 340 (kept as a literal to stay spec‑native)
-  barNarrow1:  &barNarrow1  35
-  barNarrow2:  &barNarrow2  88
-  barWide:    &barWide     400
+  pathMaxDy:   &pathMaxDy    750
+  barYShift:   &barYShift   1090
+  barNarrow1:  &barNarrow1    35
+  barNarrow2:  &barNarrow2    88
+  barWide:     &barWide      400
 
 colors:
-  cblu: &cblu [  0,   0, 255, 75 ]
+  cblu: &cblu [ 0,   0, 255, 75 ]
   cyel: &cyel [255, 255,   0, 70 ]
-  cgre: &cgre [  0, 255,   0, 70 ]
-  cgr2: &cgr2 [  0, 255,   0, 20 ]
+  cgre: &cgre [ 0, 255,   0, 70 ]
+  cgr2: &cgr2 [ 0, 255,   0, 20 ]
   cred: &cred [255,   0,   0, 70 ]
 
-# ---------- Summon map: (prism, slot) -> spec ----------
+# --------------------------------------------------------------------
+# Summon map
+# --------------------------------------------------------------------
 summon_bindings:
   - { prism: teiLandscape, slot: 0, use: teiLandscape }
-  - { prism: teiYearsQ4,  slot: 1, use: teiYearsQ4  }
+  - { prism: teiYearsQ4,   slot: 1, use: teiYearsQ4 }
 
-# ---------- Background actors (images under TEI block) ----------
+# --------------------------------------------------------------------
+# Background actors
+# --------------------------------------------------------------------
 background_bars:
-  - &bg_land  { image: "teiland04",     bottomleft: [   0, *barYShift ], name: "teiLandscape", scale: 0.45 }
-  - &bg_conf  { image: "teiblockconf04", bottomleft: [ 910, *barYShift ], name: "teiConfsQ04",  scale: 0.45 }
+  land: { image: "teiland04",     bottomleft: [ 0,   *barYShift ], name: "teiLandscape", scale: 0.45 }
+  conf: { image: "teiblockconf04", bottomleft: [ 910, *barYShift ], name: "teiConfsQ04",  scale: 0.45 }
 
-# ---------- Shared bindings & params (anchors) ----------
+# --------------------------------------------------------------------
+# Shared bindings (now all dictionaries)
+# --------------------------------------------------------------------
 shared:
-  # teiLandscape — five city bars (wide on Cork)
+
+  # ---------------- teiLandscape bindings ----------------
   teiLandscapeBindings: &teiLandscapeBindings
-    #- [ "22: Daejeon",  *cyel, *barNarrow ]
-    - {year: 22, city: Daejeon, color: *cyel, firstWidth: *barNarrow1}
-    - [ "23: Warsaw",   *cblu, *barNarrow ]
-    - [ "24: Cork",     *cblu, *barWide   ]
-    - [ "25: Bordeaux", *cblu, *barNarrow ]
-    - [ "26: Chicago",  *cred, *barNarrow ]
+    - { year: 22, city: Daejeon,  color: *cyel, firstWidth: *barNarrow1 }
+    - { year: 23, city: Warsaw,   color: *cblu, firstWidth: *barNarrow1 }
+    - { year: 24, city: Cork,     color: *cblu, firstWidth: *barWide    }
+    - { year: 25, city: Bordeaux, color: *cblu, firstWidth: *barNarrow1 }
+    - { year: 26, city: Chicago,  color: *cred, firstWidth: *barNarrow1 }
 
-  # teiYearsQ4 — top track (greens+yellow)
+  # ---------------- teiYearsQ4 A (greens + yellow) ----------------
   teiYearsQ4BindingsA: &teiYearsQ4BindingsA
-    - {label: creativity, color: *cgre, firstWidth: *barNarrow2}
-    - [ "creativity",               *cgre, 88 ]
-    - [ "dance+theater",           *cgre, 88 ]
-    - [ "music+sound",             *cgre, 88 ]
-    - [ "actuation",               *cyel, 88 ]
-    - [ "artificial intelligence", *cyel, 88 ]
-    - [ "computing hardware",      *cyel, 88 ]
+    - { label: creativity,               color: *cgre, firstWidth: *barNarrow2 }
+    - { label: dance+theater,            color: *cgre, firstWidth: *barNarrow2 }
+    - { label: music+sound,              color: *cgre, firstWidth: *barNarrow2 }
+    - { label: actuation,                color: *cyel, firstWidth: *barNarrow2 }
+    - { label: artificial intelligence,  color: *cyel, firstWidth: *barNarrow2 }
+    - { label: computing hardware,       color: *cyel, firstWidth: *barNarrow2 }
 
-  # teiYearsQ4 — bottom track (translucent greens for first three, then yellow)
+  # ---------------- teiYearsQ4 B (green‑fade then yellow) ----------------
   teiYearsQ4BindingsB: &teiYearsQ4BindingsB
-    - [ "creativity",               *cgr2, 88 ]
-    - [ "dance+theater",           *cgr2, 88 ]
-    - [ "music+sound",             *cgr2, 88 ]
-    - [ "actuation",               *cyel, 88 ]
-    - [ "artificial intelligence", *cyel, 88 ]
-    - [ "computing hardware",      *cyel, 88 ]
+    - { label: creativity,              color: *cgr2, firstWidth: *barNarrow2 }
+    - { label: dance+theater,           color: *cgr2, firstWidth: *barNarrow2 }
+    - { label: music+sound,             color: *cgr2, firstWidth: *barNarrow2 }
+    - { label: actuation,               color: *cyel, firstWidth: *barNarrow2 }
+    - { label: artificial intelligence, color: *cyel, firstWidth: *barNarrow2 }
+    - { label: computing hardware,      color: *cyel, firstWidth: *barNarrow2 }
 
-  # Common EnoPrismBars param blocks (for readability & reuse)
-  epb1aParams: &epb1aParams { flowLeft: false, textOffset2: [ -18, 0 ], fontSize: 25,
-                              pathMaxDy: *pathMaxDy, pathMaxDx: 700, basePos: [ 200, 0 ] }
+  # ---------------- Shared bar parameter anchors ----------------
+  epb1a: &epb1a { flowLeft: false, textOffset2: [ -18, 0 ], fontSize: 25,
+                  pathMaxDy: *pathMaxDy, pathMaxDx: 700, basePos: [200, 0] }
 
-  epb1bParams: &epb1bParams { flowLeft: false, pathMaxDx: 140, pathMaxDy: 80,
-                              baseWidth: 79, basePos: [ 900, *pathMaxDy ], refractBars: true }
+  epb1b: &epb1b { flowLeft: false, pathMaxDx: 140, pathMaxDy: 80, baseWidth: 79,
+                  basePos: [900, *pathMaxDy], refractBars: true }
 
-  epb2aParams: &epb2aParams { flowLeft: true, textOffset2: [ 930, 0 ], fontSize: 40,
-                              pathMaxDy: *pathMaxDy, pathMaxDx: 1000 }
+  epb2a: &epb2a { flowLeft: true, textOffset2: [930, 0], fontSize: 40,
+                  pathMaxDy: *pathMaxDy, pathMaxDx: 1000 }
 
-  epb2bParams: &epb2bParams { flowLeft: true, textOffset2: [ 705, 0 ], fontSize: 25,
-                              pathMaxDy: 80, pathMaxDx: -100, basePos: [ 100, *pathMaxDy ],
-                              baseWidth: 105, refractBars: true }
+  epb2b: &epb2b { flowLeft: true, textOffset2: [705, 0], fontSize: 25,
+                  pathMaxDy: 80, pathMaxDx: -100, basePos: [100, *pathMaxDy],
+                  baseWidth: 105, refractBars: true }
 
-  # ParseGrid bindings (named lists for clarity)
+  # ---------------- ParseGrid bindings ----------------
   teiLandscapeGrid: &teiLandscapeGrid
-    [ tools, actuation, AI, "computing hardware", art, creativity, "dance&theater", "music&sound" ]
+    [ tools, actuation, AI, "computing hardware",
+      art, creativity, "dance&theater", "music&sound" ]
 
   teiYearsQ4Grid: &teiYearsQ4Grid
     [ tei22, tei23, tei24, tei25, tei26 ]
 
-# ---------- Prism specifications ----------
+# --------------------------------------------------------------------
+# Prism specifications (now using labeled bar roles)
+# --------------------------------------------------------------------
 prisms:
 
+  # ---------------------- teiLandscape ----------------------
   teiLandscape:
     prismName: "teiLandscape"
+
     bars:
-      #- { params: *epb1aParams, bindings_method: "addBarL",  bindings: *teiLandscapeBindings }
-      upper: { bindings_method: "addBarL",  bindings: *teiLandscapeBindings,
-               flowLeft: false, textOffset2: [ -18, 0 ], fontSize: 25,
-               pathMaxDy: *pathMaxDy, pathMaxDx: 700, basePos: [ 200, 0 ] }
+      upper:
+        <<: *epb1a
+        bindings_method: addBarL
+        bindings: *teiLandscapeBindings
 
-      - { params: *epb1bParams, bindings_method: "addBarL2", bindings: *teiLandscapeBindings }
-    parseGrid: { rows: 2, cols: 4, x0: -10, y0: 831, pixDim: [ 413, 116 ], verbose: false,
-                 gridBindings: *teiLandscapeGrid }
+      lower:
+        <<: *epb1b
+        bindings_method: addBarL2
+        bindings: *teiLandscapeBindings
 
+    parseGrid:
+      rows: 2
+      cols: 4
+      x0:  -10
+      y0:  831
+      pixDim: [413, 116]
+      verbose: false
+      gridBindings: *teiLandscapeGrid
+
+  # ---------------------- teiYearsQ4 ----------------------
   teiYearsQ4:
     prismName: "teiYearsQ4"
+
     bars:
-      - { params: *epb2aParams, bindings_method: "addBarL", bindings: *teiYearsQ4BindingsA }
+      upper:
+        <<: *epb2a
+        bindings_method: addBarL
+        bindings: *teiYearsQ4BindingsA
 
-      # For the second bar set we need mixed methods:
-      #   first 3 -> addBarL3(b, 65), remaining -> addBarL2(b)
-      # We keep that sequencing semantic in the loader (post‑YAML),
-      # so here we only supply params + bindings and a small "sequence hint".
-      - { params: *epb2bParams,
-          set_attrs:   { baseWidth: 97, baseShiftX: -260 },
-          add_sequence: [ { method: "addBarL3", count: 3, args: [ 65 ] },
-                          { method: "addBarL2" } ],
-          bindings: *teiYearsQ4BindingsB }
+      lower:
+        <<: *epb2b
+        set_attrs: { baseWidth: 97, baseShiftX: -260 }
+        add_sequence:
+          - { method: addBarL3, count: 3, args: [65] }
+          - { method: addBarL2 }
+        bindings: *teiYearsQ4BindingsB
 
-    parseGrid: { cols: 5, rows: 1, x0: 1040, y0: 831, pixDim: [ 398, 116 ], verbose: false,
-                 gridBindings: *teiYearsQ4Grid }
+    parseGrid:
+      rows: 1
+      cols: 5
+      x0:  1040
+      y0:  831
+      pixDim: [398, 116]
+      verbose: false
+      gridBindings: *teiYearsQ4Grid
+
+### end ###
