@@ -1,0 +1,45 @@
+meta:   { schemaVersion: 0.3, id: prismsAcmTei01, version: 2026.03.16.2, signer: Clemson-TEI }
+
+colors: 
+  cblu: [0,0,255,75]
+  cyel: [255,255,0,70]
+  cgre: [0,255,0,70]
+  cgr2: [0,255,0,20]
+  cred: [255,0,0,70] 
+
+scalars: { pathMaxDy: &pathMaxDy 750, barYShift: &barYShift 1090, barNarrow1: &barNarrow1 35, barNarrow2: &barNarrow2 88, barWide: &barWide 400 }
+
+policy:
+  allowedOps: [ addL, addL2, addL3 ]
+  overlays:
+    mayOverride:
+      - { path: "prisms.*.bindingText.template", keysSubsetOf: "prisms.*.bindingText.allowedKeys" }
+      - { path: "prisms.*.bars.upper.op", enum: [ addL, addL2 ] }   # example
+    mayNotOverride:
+      - "colors"
+      - "policy.allowedOps"
+      - "prisms.*.bars.*.ops.*.kind"    # forbid introducing new op sequence kinds
+
+prisms:
+  teiLandscape:
+    bindingText: { template: "{year}: {city}", allowedKeys: [year, city] }
+    bars:
+      roles:
+        upper: { params: { flowLeft: false, textOffset2: [-18,0], fontSize: 25, pathMaxDxy: [700, *pathMaxDy], basePos: [200,0] }, op: addL }
+        lower: { params: { flowLeft: false, pathMaxDx: 140, pathMaxDy: 80, baseWidth: 79, basePos: [900, *pathMaxDy], refractBars: true }, op: addL2 }
+    parseGrid: { rowsCols: [2,4], xy0: [-10,831], pixDim: [413,116], verbose: false }
+    gridBindings: [ tools, actuation, AI, "computing hardware", art, creativity, "dance&theater", "music&sound" ]
+
+  teiYearsQ4:
+    colorStrategy: { mode: dual, field: colors, roleIndex: { upper: 0, lower: 1 } }
+    bindingText:   { template: "{label}", allowedKeys: [label] }
+    bars:
+      roles:
+        upper: { params: { flowLeft: true, textOffset2: [930,0], fontSize: 40, pathMaxDxy: [1000, *pathMaxDy] }, op: addL }
+        lower: { params: { flowLeft: true, textOffset2: [705,0], fontSize: 25, pathMaxDy: 80, pathMaxDx: -100, basePos: [100, *pathMaxDy], baseWidth: 105, refractBars: true },
+                 set_attrs: { baseWidth: 97, baseShiftX: -260 },
+                 ops: [ { kind: addL3, take: 3, arg: 65 }, { kind: addL2 } ] }
+    parseGrid: { rowsCols: [1,5], xy0: [1040,831], pixDim: [398,116], verbose: false }
+    gridBindings: [ tei22, tei23, tei24, tei25, tei26 ]
+
+### end ###
