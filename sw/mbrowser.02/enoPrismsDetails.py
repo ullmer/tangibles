@@ -117,7 +117,7 @@ def build_op_registry():
 
 BAR_OPS = build_op_registry()
 
-# ------------------------- Loader -------------------------
+##################### Role Specification ##################### 
 
 @dataclass(frozen=True)
 class RoleSpec:
@@ -127,13 +127,16 @@ class RoleSpec:
   ops: Optional[List[Dict[str, Any]]] = None
   set_attrs: Dict[str, Any] = field(default_factory=dict)
 
-class EnoPrismsDetailsV03(AtaBase):
+##################### Enodia Prisms Details ##################### 
+
+class EnoPrismsDetails(AtaBase):
   """
   Construct with:
-    EnoPrismsDetailsV03(base_yaml='prismsAcmTei01bb.yaml', overlay_yaml='prismsAcmTei01bo.yaml')
+    EnoPrismsDetails(base_yaml='prismsAcmTei01bb.yaml', overlay_yaml='prismsAcmTei01bo.yaml')
   The instance exposes summonPrism(whichPrism, whichSlot), update(), draw(screen)
   and serves as a drop-in domain provider for EnoPrisms.
   """
+
   def __init__(self, base_yaml: str, overlay_yaml: Optional[str] = None, **kwargs):
     self.__dict__.update(kwargs)
     self.base_yaml = base_yaml
