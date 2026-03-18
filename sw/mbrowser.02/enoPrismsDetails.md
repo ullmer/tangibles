@@ -8,7 +8,7 @@ This document explains the intent, structure, and usage of the YAML‑driven loa
 collaborators contribute *untrusted, content‑only* overlays—preserving flexibility without
 sacrificing safety or legibility over time.
 
-> Implemented in **`enoPrismsDetails_v03.py`** and validated against
+> Implemented in **`enoPrismsDetails.py`** and validated against
 > **`prismsAcmTei01bb.yaml`** (trusted base) and **`prismsAcmTei01bo.yaml`** (untrusted overlay). citeturn8file10turn8search1turn8search2
 
 ---
