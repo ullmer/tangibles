@@ -15,6 +15,7 @@ policy:
     mayOverride:
       - { path: "prisms.*.bindingText.template", keysSubsetOf: "prisms.*.bindingText.allowedKeys" }
       - { path: "prisms.*.bars.upper.op", enum: [ addL, addL2 ] }   # example
+
     mayNotOverride:
       - "colors"
       - "policy.allowedOps"
@@ -27,6 +28,7 @@ prisms:
       roles:
         upper: { params: { flowLeft: false, textOffset2: [-18,0], fontSize: 25, pathMaxDxy: [700, *pathMaxDy], basePos: [200,0] }, op: addL }
         lower: { params: { flowLeft: false, pathMaxDx: 140, pathMaxDy: 80, baseWidth: 79, basePos: [900, *pathMaxDy], refractBars: true }, op: addL2 }
+
     parseGrid: { rowsCols: [2,4], xy0: [-10,831], pixDim: [413,116], verbose: false }
     gridBindings: [ tools, actuation, AI, "computing hardware", art, creativity, "dance&theater", "music&sound" ]
 
@@ -39,6 +41,7 @@ prisms:
         lower: { params: { flowLeft: true, textOffset2: [705,0], fontSize: 25, pathMaxDy: 80, pathMaxDx: -100, basePos: [100, *pathMaxDy], baseWidth: 105, refractBars: true },
                  set_attrs: { baseWidth: 97, baseShiftX: -260 },
                  ops: [ { kind: addL3, take: 3, arg: 65 }, { kind: addL2 } ] }
+
     parseGrid: { rowsCols: [1,5], xy0: [1040,831], pixDim: [398,116], verbose: false }
     gridBindings: [ tei22, tei23, tei24, tei25, tei26 ]
 
