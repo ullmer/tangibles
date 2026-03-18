@@ -1,4 +1,5 @@
-meta: { baseId: prismsAcmTei01, baseVersion: 2026.03.16.2, schemaVersion: 0.3 }
+meta:    { baseId: prismsAcmTei01, baseVersion: 2026.03.16.2, schemaVersion: 0.3 }
+scalars: { pathMaxDy: &pathMaxDy 750, barYShift: &barYShift 1090, barNarrow1: &barNarrow1 35, barNarrow2: &barNarrow2 88, barWide: &barWide 400 }
 
 prisms:
   teiLandscape:
