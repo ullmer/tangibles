@@ -80,6 +80,9 @@ def _merge_overlay_into_base(base: Dict[str, Any], overlay: Dict[str, Any]) -> D
   result['prisms'] = prisms_b
   return result
 
+
+##################### Bar operations ##################### 
+
 # ------------------------- Op Registry -------------------------
 
 # We do not expose getattr on user strings. Instead, we map declarative ops to small adapters.
@@ -101,12 +104,9 @@ def _binding_to_tuple(binding: Dict[str, Any], *,
 # Registry is exposed as an immutable mapping
 
 def build_op_registry():
-  def addL(epb: EnoPrismBars, item: Tuple[str, Tuple[int,int,int,int], float]):
-    epb.addBarL(item)
-  def addL2(epb: EnoPrismBars, item: Tuple[str, Tuple[int,int,int,int], float]):
-    epb.addBarL2(item)
-  def addL3(epb: EnoPrismBars, item: Tuple[str, Tuple[int,int,int,int], float], arg: Any):
-    epb.addBarL3(item, arg)
+  def addL( epb: EnoPrismBars, item: Tuple[str, Tuple[int,int,int,int], float]):           epb.addBarL(item)
+  def addL2(epb: EnoPrismBars, item: Tuple[str, Tuple[int,int,int,int], float]):           epb.addBarL2(item)
+  def addL3(epb: EnoPrismBars, item: Tuple[str, Tuple[int,int,int,int], float], arg: Any): epb.addBarL3(item, arg)
   ops = {
     'addL':  BarOp('addL',  addL,  accepts_arg=False),
     'addL2': BarOp('addL2', addL2, accepts_arg=False),
