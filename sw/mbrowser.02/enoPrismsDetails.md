@@ -29,7 +29,7 @@ sacrificing safety or legibility over time.
 
 ## 2) Files & roles
 
-- **`enoPrismsDetails_v03.py`** — the loader that
+- **`enoPrismsDetails.py`** — the loader that
   1) loads base and overlay YAMLs with `safe_load`,
   2) merges overlay **bindings** (and optionally `bindingText.template` when allowed),
   3) constructs `EnoActor`, `EnoPrismBars`, `EnoParseGrid`, and `EnoPrism` instances via a strict
@@ -184,6 +184,6 @@ before. citeturn1search2
 ---
 
 **Maintainers’ note:** If you’re returning to this a year from now, start by reading the base YAML
-(top to bottom), then the overlay YAML, then skim `EnoPrismsDetails_v03.__init__`, the
+(top to bottom), then the overlay YAML, then skim `EnoPrismsDetails.__init__`, the
 `_apply_ops` registry, and `_render_label` to refresh the mental model. The code is intentionally
 small; the behavior lives in the data.

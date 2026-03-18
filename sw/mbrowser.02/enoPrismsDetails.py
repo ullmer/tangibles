@@ -1,5 +1,5 @@
 
-# enoPrismsDetails_v03.py — trusted base + untrusted overlay loader
+# enoPrismsDetails.py — trusted base + untrusted overlay loader
 # Brygg Ullmer & collaborators — refactor scaffold by Copilot (2026-03-16)
 # - Loads a **trusted** base YAML (policy + machinery) and an **untrusted** overlay YAML (content)
 # - Validates and merges them with a minimal, sealed op registry (no getattr on user-provided names)
@@ -19,7 +19,7 @@ import re
 try:
     import yaml
 except Exception as e:
-    raise RuntimeError("PyYAML is required to use enoPrismsDetails_v03") from e
+    raise RuntimeError("PyYAML is required to use enoPrismsDetails") from e
 
 # ------------------------- Utilities -------------------------
 
