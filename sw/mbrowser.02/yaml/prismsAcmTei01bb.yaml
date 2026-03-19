@@ -9,6 +9,10 @@ colors:
 
 scalars: { pathMaxDy: &pathMaxDy 750, barYShift: &barYShift 1090, barNarrow1: &barNarrow1 35, barNarrow2: &barNarrow2 88, barWide: &barWide 400 }
 
+summmon_bindings:
+  - { prism: teiLandscape, slot: 0, use: teiLandscape }
+  - { prism: teiYearsQ4, slot: 1, use: teiYearsQ4 }
+
 policy:
   allowedOps: [ addL, addL2, addL3 ]
   overlays:

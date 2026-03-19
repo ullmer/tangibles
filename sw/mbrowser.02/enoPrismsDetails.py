@@ -291,7 +291,10 @@ class EnoPrismsDetails(AtaBase):
     try:
       key = self._summon_map.get((whichPrism, whichSlot))
       if key is None:
-        return None
+        if 'prisms' in self.cfg and whichPrism in self.cfg['prisms']:
+          key = whichPrism
+      else: return None
+
       pcfg = self.cfg['prisms'][key]
       bars_roles = self._build_bars_for_prism(key, pcfg)  # { role: (RoleSpec, EnoPrismBars) }
 
