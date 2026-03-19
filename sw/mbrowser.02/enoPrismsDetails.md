@@ -3,7 +3,7 @@
 # Initial documentation on 2026-03-18
 
 This document explains the intent, structure, and usage of the YAML‑driven loader
-**`EnoPrismsDetailsV03`** and its companion base/overlay configuration files. The aim is to keep
+**`EnoPrismsDetails`** and its companion base/overlay configuration files. The aim is to keep
 **powerful rendering behaviors** in a *trusted, signed* base spec while letting datasets and
 collaborators contribute *untrusted, content‑only* overlays—preserving flexibility without
 sacrificing safety or legibility over time.
@@ -52,7 +52,7 @@ Related context in the current codebase:
 
 ### A. Minimal harness
 ```python
-from enoPrismsDetails_v03 import EnoPrismsDetailsV03
+from enoPrismsDetails import EnoPrismsDetails
 
 # Construct the trusted+overlay provider
 provider = EnoPrismsDetailsV03(
