@@ -1,0 +1,22 @@
+import os, sys
+
+sys.path.insert(0, #access module in parent directory (for test stubs)
+                os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from enoPrismsDetails import EnoPrismsDetails
+
+# Construct the trusted+overlay provider
+epd = EnoPrismsDetails(
+    base_yaml='yaml/prismsAcmTei01bb.yaml',
+    overlay_yaml='yaml/prismsAcmTei01bo.yaml'
+)
+
+# Usual lifecycle
+#epd.update()  # lazy setup of background actors
+p1 = epd.summonPrism('teiLandscape', 0)
+p2 = epd.summonPrism('teiYearsQ4', 1)
+
+print(p1)
+print(p2)
+# in draw loop: provider.draw(screen)
+
