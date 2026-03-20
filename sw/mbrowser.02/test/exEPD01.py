@@ -16,7 +16,11 @@ epd = EnoPrismsDetails(
 p1 = epd.summonPrism('teiLandscape', 0)
 p2 = epd.summonPrism('teiYearsQ4', 1)
 
+#print(epd)
+#print(epd.cfg)
+#print(epd.activePrisms)
 print(p1)
 print(p2)
+#print("summon_map =", epd._summon_map)  # should show {('teiLandscape', 0): 'teiLandscape', ('teiYearsQ4', 1): 'teiYearsQ4'}
 # in draw loop: provider.draw(screen)
 

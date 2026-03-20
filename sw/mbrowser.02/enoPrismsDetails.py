@@ -35,6 +35,7 @@ class _SafeMap(dict):
   def __missing__(self, key):
     return ""
 
+#_placeholder_re = re.compile(r"\{([a-zA-Z0-9_]+)\}")
 _placeholder_re = re.compile(r"\{([a-zA-Z0-9_]+)\}")
 
 def _validate_template_keys(template: str, allowed: List[str]):
@@ -136,6 +137,8 @@ class EnoPrismsDetails(AtaBase):
   The instance exposes summonPrism(whichPrism, whichSlot), update(), draw(screen)
   and serves as a drop-in domain provider for EnoPrisms.
   """
+
+  verbose = False
 
   def __init__(self, base_yaml: str, overlay_yaml: Optional[str] = None, **kwargs):
     self.__dict__.update(kwargs)
@@ -289,6 +292,7 @@ class EnoPrismsDetails(AtaBase):
   # ---------------- API expected by EnoPrisms ----------------
   def summonPrism(self, whichPrism: str, whichSlot: int):
     try:
+      if self.verbose: print("DEBUG: summonPrism entry", whichPrism, whichSlot)
       key = self._summon_map.get((whichPrism, whichSlot))
       if key is None:
         if 'prisms' in self.cfg and whichPrism in self.cfg['prisms']:
@@ -296,6 +300,7 @@ class EnoPrismsDetails(AtaBase):
       else: return None
 
       pcfg = self.cfg['prisms'][key]
+      if self.verbose: print("DEBUG: about to build bars for prism", key)  
       bars_roles = self._build_bars_for_prism(key, pcfg)  # { role: (RoleSpec, EnoPrismBars) }
 
       # Build binding items once, then feed to roles
