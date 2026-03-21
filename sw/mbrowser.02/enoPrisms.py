@@ -8,6 +8,8 @@ from enoPrismIntersects import *
 from enoPrismsDetails   import *
 
 #from enoPrismsTei  import *
+  
+############# Enodia Prisms #############
 
 class EnoPrisms(AtaBase):
   prisms       = None
@@ -16,9 +18,7 @@ class EnoPrisms(AtaBase):
   activateIntersects = True
   epi, epd           = None, None
 
-
   drawPrismBarSelIntersection   = True
-
   currentPrismIntersectBars     = None
   currentPrismIntersectVertices = None
 
@@ -45,6 +45,9 @@ class EnoPrisms(AtaBase):
     self.epd = EnoPrismsDetails()
     p1 = epd.summonPrism('teiLandscape', 0)
     p2 = epd.summonPrism('teiYearsQ4',   1)
+
+    self.addPrism(p1)
+    self.addPrism(p2)
 
   ############# summon prism #############
 
