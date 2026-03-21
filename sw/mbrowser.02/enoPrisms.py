@@ -4,20 +4,26 @@
 
 from ataBase       import *
 from enoPrism      import *
-from enoPrismsTei  import *
 from enoPrismIntersects import *
+from enoPrismsDetails   import *
+
+#from enoPrismsTei  import *
 
 class EnoPrisms(AtaBase):
   prisms       = None
   domainPrisms = None
 
   activateIntersects = True
-  epi          = None
+  epi, epd           = None, None
+
 
   drawPrismBarSelIntersection   = True
 
   currentPrismIntersectBars     = None
   currentPrismIntersectVertices = None
+
+  base_yaml    = 'yaml/prismsAcmTei01bb.yaml'
+  overlay_yaml = 'yaml/prismsAcmTei01bo.yaml'
 
   ############# constructor #############
 
@@ -26,10 +32,19 @@ class EnoPrisms(AtaBase):
     self.prisms       = []
     self.domainPrisms = []
 
-    ept = EnoPrismsTei() #clearly needs further abstraction; a bridge 
-    self.domainPrisms.append(ept)
+    #ept = EnoPrismsTei() #clearly needs further abstraction; a bridge 
+    #self.domainPrisms.append(ept)
 
+    self.loadDetails()
     if self.activateIntersects: self.epi = EnoPrismIntersects()
+
+  ############# constructor #############
+
+  def loadDetails(selfkwargs):
+
+    self.epd = EnoPrismsDetails()
+    p1 = epd.summonPrism('teiLandscape', 0)
+    p2 = epd.summonPrism('teiYearsQ4',   1)
 
   ############# summon prism #############
 
