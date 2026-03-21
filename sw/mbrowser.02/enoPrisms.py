@@ -40,11 +40,11 @@ class EnoPrisms(AtaBase):
 
   ############# constructor #############
 
-  def loadDetails(selfkwargs):
+  def loadDetails(self):
 
-    self.epd = EnoPrismsDetails()
-    p1 = epd.summonPrism('teiLandscape', 0)
-    p2 = epd.summonPrism('teiYearsQ4',   1)
+    self.epd = EnoPrismsDetails(self.base_yaml, self.overlay_yaml)
+    p1 = self.epd.summonPrism('teiLandscape', 0)
+    p2 = self.epd.summonPrism('teiYearsQ4',   1)
 
     self.addPrism(p1)
     self.addPrism(p2)
