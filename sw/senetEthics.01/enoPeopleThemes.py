@@ -5,6 +5,8 @@
 
 from ataBase import *
 
+################### Enodia Token ###################
+
 class EnoTok(AtaBase):
   def draw():   pass
   def update(): pass
@@ -12,10 +14,38 @@ class EnoTok(AtaBase):
   def on_mouse_down(pos):    pass
   def on_key_down(key, mod): pass
 
-class EnoPeople(enoTok):
+################### Enodia Person ###################
+
+class EnoPerson(EnoTok):
   name, abbrev, era, domains, themes, colors, notes = [None]*7
 
-class EnoTheme(enoTok):
+################### Enodia Theme ###################
+
+class EnoTheme(EnoTok):
   name, color, themes = [None]*3
+
+################### Enodia People ###################
+
+class EnoPeople(AtaBase):
+  people = None
+
+  def __init__(self):          self.people = []
+
+  def addPerson(self, person): self.people.append(person)
+
+  def draw(self):
+    for person in self.people: person.draw()
+
+################### Enodia Themes ###################
+
+class EnoThemes(AtaBase):
+  themes = None
+
+  def __init__(self):          self.themes = []
+
+  def addTheme(self, theme): self.themes.append(person)
+
+  def draw(self):
+    for theme in self.themes: theme.draw()
 
 ### end ###
