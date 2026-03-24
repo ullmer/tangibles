@@ -1,0 +1,219 @@
+# Example corpus, initially engaging a class
+# Brygg Ullmer (Clemson University) and CoPilot
+# Begun 2026-03-24
+
+########################################################################
+# PEOPLE — ethical figures, abbreviations, color rings
+########################################################################
+
+people:
+
+  GEL:
+    name: Gotthold Ephraim Lessing
+    abbrev: GEL
+    era: 18th century
+    domains: [drama, enlightenment ethics, religious tolerance]
+    themes: [ethMoral, knowLearn, exprCreat]
+    colors:
+      outer:  [90, 30, 150]
+      middle: [170, 120, 60]
+      inner:  [20, 20, 40]
+    notes: Bridges rational critique with humanistic tolerance.
+
+  JGH:
+    name: Johann Gottfried Herder
+    abbrev: JGH
+    era: 18th century
+    domains: [philosophy, cultural pluralism]
+    themes: [cultIdent, knowLearn]
+    colors:
+      outer:  [20, 140, 140]
+      middle: [200, 170, 80]
+      inner:  [60, 60, 80]
+    notes: Culture as polyphony; opposition to homogenization.
+
+  JM:
+    name: John Muir
+    abbrev: JM
+    era: 19th–20th century
+    domains: [environment, wilderness philosophy]
+    themes: [natuSust, ethMoral]
+    colors:
+      outer:  [10, 70, 30]
+      middle: [40, 90, 140]
+      inner:  [55, 55, 55]
+    notes: Nature as intrinsic value; spiritual ecology.
+
+  GWC:
+    name: George Washington Carver
+    abbrev: GWC
+    era: 19th–20th century
+    domains: [agriculture, sustainability, education]
+    themes: [natuSust, knowLearn, civGovern]
+    colors:
+      outer:  [110, 80, 40]
+      middle: [40, 120, 60]
+      inner:  [200, 165, 70]
+    notes: Regeneration, community uplift through applied science.
+
+  TR:
+    name: Theodore Roosevelt
+    abbrev: TR
+    era: 19th–20th century
+    domains: [governance, conservation policy]
+    themes: [civGovern, natuSust]
+    colors:
+      outer:  [20, 100, 60]
+      middle: [160, 90, 50]
+      inner:  [40, 70, 140]
+    notes: Balancing use with preservation.
+
+  FDR:
+    name: Franklin D. Roosevelt
+    abbrev: FDR
+    era: 20th century
+    domains: [governance, infrastructure, collective action]
+    themes: [civGovern, ethMoral]
+    colors:
+      outer:  [50, 60, 120]
+      middle: [90, 100, 170]
+      inner:  [230, 230, 230]
+    notes: Large-scale civic capacity building.
+
+  ER:
+    name: Eleanor Roosevelt
+    abbrev: ER
+    era: 20th century
+    domains: [human rights, ethics, international frameworks]
+    themes: [ethMoral, cultIdent, civGovern]
+    colors:
+      outer:  [60, 40, 120]
+      middle: [230, 200, 90]
+      inner:  [240, 240, 225]
+    notes: Universal Declaration values; inclusive ethics.
+
+  RF:
+    name: Robert Frost
+    abbrev: RF
+    era: 20th century
+    domains: [poetry, moral reflection]
+    themes: [exprCreat, ethMoral]
+    colors:
+      outer:  [40, 60, 110]
+      middle: [200, 150, 60]
+      inner:  [40, 40, 40]
+    notes: Moral branching; reflective ambiguity.
+
+  JH:
+    name: Joy Harjo
+    abbrev: JH
+    era: 21st century
+    domains: [poetry, indigenous knowledge, music]
+    themes: [cultIdent, exprCreat, natuSust]
+    colors:
+      outer:  [25, 60, 110]
+      middle: [90, 140, 60]
+      inner:  [200, 180, 120]
+    notes: Embodied voice, Indigenous ecologies, intergenerational continuity.
+
+  AG:
+    name: Amanda Gorman
+    abbrev: AG
+    era: 21st century
+    domains: [poetry, performance, civic imagination]
+    themes: [exprCreat, civGovern, ethMoral]
+    colors:
+      outer:  [60, 40, 120]
+      middle: [230, 200, 90]
+      inner:  [40, 40, 40]
+    notes: Youthful moral vision, luminous civic language
+
+  LAJM:
+    name: Lizelia Augusta Jenkins Moorer
+    abbrev: LAJM
+    era: Late 19th–Early 20th century
+    domains: [poetry, education, civic advocacy]
+    themes: [ethMoral, civGovern, knowLearn]
+    colors:
+      outer:  [120, 80, 40]
+      middle: [60, 60, 120]
+      inner:  [230, 220, 180]
+    signature_line: The doors of hope are open wide
+    notes: >
+      Author of 'Prejudice Unveiled' (1907) and 'The Door of Hope.'
+      Taught at Claflin University in Orangeburg.
+      Described as producing some of the strongest early poems against racial injustice.
+
+  AS:
+    name: Arthur Sze
+    abbrev: AS
+    era: 21st century
+    domains: [poetry, ecology, cross-cultural imagination]
+    themes: [natuSust, cultIdent, exprCreat, knowLearn]
+    colors:
+      outer:  [25, 45, 80]
+      middle: [70, 120, 100]
+      inner:  [220, 220, 190]
+    notes: >
+      First Asian American U.S. Poet Laureate (2025). His work emphasizes
+      juxtaposition, perception, humility before landscape, and ethical interdependence.
+
+########################################################################
+# THEMES — abbreviated conceptual anchors with color palettes
+########################################################################
+
+categories:
+
+  natuSust:
+    name:  Nature & Sustainability
+    color: [ 60, 140,  70 ]   # mid‑green: ecology, land, regeneration
+    themes:
+      eco:    { name: Ecology,        color: [ 50, 130,  60 ] }
+      env:    { name: Environment,    color: [ 40, 120,  55 ] }
+      consrv: { name: Conservation,   color: [ 70, 150,  80 ] }
+      sust:   { name: Sustainability, color: [ 80, 160,  90 ] }
+      agr:    { name: Agriculture,    color: [ 90, 170,  95 ] }
+
+  cultIdent:
+    name:  Culture & Identity
+    color: [200,  60,  50 ]   # warm red: plurality, belonging
+    themes:
+      culPlr: { name: Cultural Pluralism, color: [210,  80,  70 ] }
+      xcultu: { name: Cross‑Cultural,     color: [190,  70,  60 ] }
+      indig:  { name: Indigenous,         color: [170,  60,  55 ] }
+      intl:   { name: International,      color: [220,  90,  80 ] }
+
+  exprCreat:
+    name:  Expression & Creativity
+    color: [230, 140,  60 ]   # orange: artistic creation, performance
+    themes:
+      drama: { name: Drama,        color: [240, 150,  70 ] }
+      mus:   { name: Music,        color: [225, 135,  55 ] }
+      perf:  { name: Performance,  color: [250, 160,  80 ] }
+
+  civGovern:
+    name:  Civics & Governance
+    color: [ 50,  90, 160 ]   # civic blue: coordination, institutions
+    themes:
+      gov:   { name: Governance,        color: [ 40,  80, 150 ] }
+      civ:   { name: Civics,            color: [ 60, 100, 170 ] }
+      colAc: { name: Collective Action, color: [ 70, 110, 180 ] }
+      infr:  { name: Infrastructure,    color: [ 90, 130, 190 ] }
+
+  ethMoral:
+    name:  Ethics & Moral Reasoning
+    color: [110,  60, 160 ]   # violet: rights, dignity, principles
+    themes:
+      eth:    { name: Ethics,             color: [120,  70, 170 ] }
+      moral:  { name: Morality,           color: [130,  80, 180 ] }
+      humRi:  { name: Human Rights,       color: [140,  90, 190 ] }
+      relTol: { name: Religious Tolerance,color: [150, 100, 200 ] }
+
+  knowLearn:
+    name:  Knowledge & Learning
+    color: [200, 170,  80 ]   # gold/ochre: learning, philosophy
+    themes:
+      edu:  { name: Education,  color: [210, 180,  90 ] }
+      phil: { name: Philosophy, color: [220, 190, 100 ] }
+
+### end ###
