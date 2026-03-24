@@ -3,16 +3,17 @@
 # Brygg Ullmer, Clemson Universty
 # Begun 2026-03-24
 
-from ataBase import *
+from ataBase  import *
+from enoActor import *
 
 ################### Enodia Token ###################
 
-class EnoTok(AtaBase):
+class EnoTok(EnoActor):
   def draw():   pass
   def update(): pass
 
-  def on_mouse_down(pos):    pass
-  def on_key_down(key, mod): pass
+  #def on_mouse_down(pos):    pass
+  #def on_key_down(key, mod): pass
 
 ################### Enodia Person ###################
 
