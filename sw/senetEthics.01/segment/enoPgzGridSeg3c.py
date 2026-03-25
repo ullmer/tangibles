@@ -14,10 +14,10 @@ WIDTH, HEIGHT = 1920, 1080
 #################### main ####################
 
 actions = ['save',     'load',   'shard']
-data    = ['tbt28j01', 'tbt28j20']
+data    = ['senet03k']
 
-#epgs = enoPgzGridSeg(baseName='tbt28j01', baseImg='tbt28j/0001')
-epgs = enoPgzGridSeg(baseName='tbt28j20', baseImg='tbt28j/0020lh')
+#epgs = enoPgzGridSeg(baseName='tbt28j20', baseImg='tbt28j/0020lh')
+epgs = enoPgzGridSeg(baseName='senet03k', baseImg='senet03k.png', numDivsX=3, numDivsY=10)
 ebaa = enoButtonArray(labelArray=actions, basePos=(30, 30), dx=0, dy=35)
 ebad = enoButtonArray(labelArray=data,    basePos=(130,30), dx=0, dy=35)
 
