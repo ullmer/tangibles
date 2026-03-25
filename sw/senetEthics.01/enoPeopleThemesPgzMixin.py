@@ -20,7 +20,7 @@ class EnoPersonPgzMixin:
 
 ################### Enodia People Yaml Mixin ###################
 
-class EnoPeopleYamlMixin:
+class EnoPeoplePgzMixin:
 # people = None # type: list[EnoPerson]
 
   def draw(self):
@@ -29,7 +29,7 @@ class EnoPeopleYamlMixin:
 
 ################### Enodia Theme ###################
 
-class EnoThemeYamlMixin:
+class EnoThemePgzMixin:
   def draw(self): pass
 
 ################### Enodia Themes ###################
