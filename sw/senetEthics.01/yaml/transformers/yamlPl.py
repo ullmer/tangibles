@@ -2,7 +2,10 @@
 # by brygg ullmer (clemson) and copilot
 # begun 2026-03-24
 
-import yaml
+import yaml, sys
+
+try:    yfn = sys.argv[1]
+except: print("expect filename as argument"); sys.exit(-1)
 
 # Convert Python list to Prolog list syntax
 def emit_theme_abbrev(key, themes):
@@ -23,6 +26,6 @@ def yaml_to_prolog_dsl(path):
   return "\n".join(lines)
 
 if __name__ == "__main__":
-  print(yaml_to_prolog_dsl("figures_themes03.yaml"))
+  print(yaml_to_prolog_dsl(yfn))
 
 ### end ###
