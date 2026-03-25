@@ -6,12 +6,12 @@
 :- discontiguous (:=)/2.         % allow (e.g.) grouping by person rather than by predicate-type
 :- discontiguous personAbbrev/2. % ditto
 
-themeAbbrev(natuSust)  := [eco, env, consrv, sust, agr].
-themeAbbrev(cultIdent) := [culPlr, xcultu, indig, intl].
-themeAbbrev(exprCreat) := [drama, mus, perf].
-themeAbbrev(civGovern) := [gov, civ, colAc, infr].
-themeAbbrev(ethMoral)  := [eth, moral, humRi, relTol].
-themeAbbrev(knowLearn) := [edu, phil].
+catTheme(natuSust)  := [eco, env, consrv, sust, agr].
+catTheme(cultIdent) := [culPlr, xcultu, indig, intl].
+catTheme(exprCreat) := [drama, mus, perf].
+catTheme(civGovern) := [gov, civ, colAc, infr].
+catTheme(ethMoral)  := [eth, moral, humRi, relTol].
+catTheme(knowLearn) := [edu, phil].
 
 personAbbrev(gottholdEphraimLessing, gel).
 personDomains(gottholdEphraimLessing) := [drama, enlightenmentEthics, religiousTolerance].
@@ -60,5 +60,9 @@ personThemes(lizeliaAugustaJenkinsMoorer)  := [ethMoral, civGovern, knowLearn].
 personAbbrev(arthurSze, as).
 personDomains(arthurSze) := [poetry, ecology, crossCulturalImagination].
 personThemes(arthurSze)  := [natuSust, cultIdent, exprCreat, knowLearn].
+
+catTheme(Category, Theme)    :- Category := L, member(Theme,  L).
+personDomain(Person, Domain) :- Person   := L, member(Domain, L).
+personTheme(Person,  Theme)  :- Person   := L, member(Theme,  L).
 
 %%% end %%%
