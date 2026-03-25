@@ -9,7 +9,7 @@ from typing import TypedDict
 
 ################### Enodia Token ###################
 
-class EnoTok(EnoActor):
+class EnoTok(EnoActor): pass
 #  def draw(self):   
 #  def update(self): 
 #  def on_mouse_down(self, pos):    

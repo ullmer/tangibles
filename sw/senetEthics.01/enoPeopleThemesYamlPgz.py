@@ -6,7 +6,7 @@ from enoPeopleThemes          import *
 from enoPeopleThemesYamlMixin import *
 from enoPeopleThemesPgzMixin  import *
 
-class EnoPersonYamlPgz(EnoPersonYamlMixin, EnoPersonPgzMixin, EnoPerson): 
+class EnoPersonYamlPgz(EnoPersonYamlMixin, EnoPersonPgzMixin, EnoPerson):  pass
 
 #  name    = None # type: str | None 
 #  abbrev  = None # type: str | None
@@ -15,7 +15,6 @@ class EnoPersonYamlPgz(EnoPersonYamlMixin, EnoPersonPgzMixin, EnoPerson):
 #  domains = None # type: list[str]  | None
 #  themes  = None # type: list[str]  | None
 #  colors  = None # type: ColorRings | None
-  
 #  def draw(self):
 #  def update(self):
 #  def on_mouse_down(self, pos):    

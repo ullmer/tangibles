@@ -47,7 +47,9 @@ class EnoPeoplePgzMixin:
 
       for pa in abbrevs:
         fn = self.peoplePathPrefix + a
-        a  = Actor(fn) 
+        try:    a  = Actor(fn) 
+        except: self.msg("buildActors: problem with "+pa); continue
+
         self.actors.append(a)
         a.pos = (x, y); x += self.dx 
         
@@ -56,7 +58,8 @@ class EnoPeoplePgzMixin:
   ############# draw #############
 
   def draw(self):
-    try:    for a in self.actors: a.draw()
+    try:    
+      for a in self.actors: a.draw()
     except: self.err("draw")
 
   ############# on_mouse_down #############
@@ -99,7 +102,8 @@ class EnoThemesPgzMixin:
 # themes = None # type: list[EnoTheme]
 
   def draw(self):
-    try:    for theme in self.themes: theme.draw()
+    try:    
+      for theme in self.themes: theme.draw()
     except: self.err("draw")
 
 ### end ###
