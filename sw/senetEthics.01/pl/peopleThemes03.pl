@@ -1,9 +1,14 @@
-themeAbbrev(natuSust) := [eco, env, consrv, sust, agr].
+%%% expressions of people and themes %%%
+% brygg ullmer (clemson) & copilot
+% begun 2026-03-24
+
+themeAbbrev(natuSust)  := [eco, env, consrv, sust, agr].
 themeAbbrev(cultIdent) := [culPlr, xcultu, indig, intl].
 themeAbbrev(exprCreat) := [drama, mus, perf].
 themeAbbrev(civGovern) := [gov, civ, colAc, infr].
-themeAbbrev(ethMoral) := [eth, moral, humRi, relTol].
+themeAbbrev(ethMoral)  := [eth, moral, humRi, relTol].
 themeAbbrev(knowLearn) := [edu, phil].
+
 personAbbrev(gottholdEphraimLessing, gel).
 personDomains(gottholdEphraimLessing) := [drama, enlightenmentEthics, religiousTolerance].
 personThemes(gottholdEphraimLessing)  := [ethMoral, knowLearn, exprCreat].
@@ -52,3 +57,4 @@ personAbbrev(arthurSze, as).
 personDomains(arthurSze) := [poetry, ecology, crossCulturalImagination].
 personThemes(arthurSze)  := [natuSust, cultIdent, exprCreat, knowLearn].
 
+%%% end %%%
