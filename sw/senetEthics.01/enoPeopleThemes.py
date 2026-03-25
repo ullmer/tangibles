@@ -18,13 +18,13 @@ class EnoTok(EnoActor):
 ################### Enodia Person ###################
 
 class EnoPerson(EnoTok):
-  name    = None # type: str
-  abbrev  = None # type: str
-  era     = None # type: str
-  domains = None # type: list[str]
-  themes  = None # type: list[str]
-  colors  = None # type:
-  notes   = None # type: str 
+  name    = None # type: str | None 
+  abbrev  = None # type: str | None
+  era     = None # type: str | None
+  notes   = None # type: str | None
+  domains = None # type: list[str] | None
+  themes  = None # type: list[str] | None
+  colors  = None # type: dict[str, list[int]] | None
 
 ################### Enodia Theme ###################
 
