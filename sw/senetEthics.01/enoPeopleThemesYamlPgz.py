@@ -6,7 +6,8 @@ from enoPeopleThemes          import *
 from enoPeopleThemesYamlMixin import *
 from enoPeopleThemesPgzMixin  import *
 
-class EnoPersonYamlPgz(EnoPersonYamlMixin, EnoPersonPgzMixin, EnoPerson): pass
+class EnoPersonYamlPgz(EnoPersonYamlMixin, EnoPersonPgzMixin, EnoPerson): 
+
 #  name    = None # type: str | None 
 #  abbrev  = None # type: str | None
 #  era     = None # type: str | None
@@ -20,11 +21,32 @@ class EnoPersonYamlPgz(EnoPersonYamlMixin, EnoPersonPgzMixin, EnoPerson): pass
 #  def on_mouse_down(self, pos):    
 #  def on_key_down(self, key, mod): 
 
-################### Enodia Theme ###################
+################### Enodia Theme Yaml Pgz ###################
 
 class EnoThemeYamlPgz( EnoThemeYamlMixin,  EnoThemePgzMixin,  EnoTheme):  pass
 
-class EnoPeopleYamlPgz(EnoPeopleYamlMixin, EnoPeoplePgzMixin, EnoPeople): pass
-class EnoThemesYamlPgz(EnoThemesYamlMixin, EnoThemesPgzMixin, EnoThemes): pass
+############################################################# 
+################### Enodia People Yaml Pgz ##################
+
+class EnoPeopleYamlPgz(EnoPeopleYamlMixin, EnoPeoplePgzMixin, EnoPeople): 
+
+  ############# constructor #############
+
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    super().__init__()
+    self.personClass = EnoPersonYamlPgz
+
+############################################################# 
+################### Enodia Themes Yaml Pgz ##################
+
+class EnoThemesYamlPgz(EnoThemesYamlMixin, EnoThemesPgzMixin, EnoThemes): 
+  
+  ############# constructor #############
+
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    super().__init__()
+    self.themeClass = EnoThemeYamlPgz
 
 ### end ###
