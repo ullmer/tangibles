@@ -68,7 +68,4 @@ class EnoThemes(AtaBase):
 
   def addTheme(self, theme): self.themes.append(theme)
 
-  def draw(self):
-    for theme in self.themes: theme.draw()
-
 ### end ###

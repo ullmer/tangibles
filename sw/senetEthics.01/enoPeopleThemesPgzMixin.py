@@ -21,7 +21,11 @@ class EnoPersonPgzMixin:
 ################### Enodia People Yaml Mixin ###################
 
 class EnoPeopleYamlMixin:
-  def draw(self): pass
+# people = None # type: list[EnoPerson]
+
+  def draw(self):
+    try:    for person in self.people: person.draw()
+    except: self.err("draw")
 
 ################### Enodia Theme ###################
 
@@ -31,7 +35,10 @@ class EnoThemeYamlMixin:
 ################### Enodia Themes ###################
 
 class EnoThemesPgzMixin:
+# themes = None # type: list[EnoTheme]
+
   def draw(self):
-    for theme in self.themes: theme.draw()
+    try:    for theme in self.themes: theme.draw()
+    except: self.err("draw")
 
 ### end ###
