@@ -68,6 +68,26 @@ class EnoPeoplePgzMixin:
           self.selectedActor = a
     except: self.err("on_mouse_down")
 
+  ############# on_mouse_down #############
+
+  def on_mouse_up(self): 
+    try:    
+      animate(self.selectedActor, pos=(100,100), tween='accel_decel')
+      self.selectedActor = None
+    except: self.err("on_mouse_up")
+
+  ############# on_mouse_move #############
+
+  def on_mouse_move(self, rel):
+    try:    
+      if self.selectedActor is not None: 
+        dx, dy = rel
+        x,  y  = self.selectedActor.pos
+        x += dx; y += dy
+        self.selectedActor.pos = (x,y)
+    except: self.err("on_mouse_up")
+
+####################################################
 ################### Enodia Theme ###################
 
 class EnoThemePgzMixin:
@@ -84,15 +104,3 @@ class EnoThemesPgzMixin:
 
 ### end ###
 
-  def on_mouse_up(self): 
-    animate(self.selectedActor, pos=(100,100), tween='accel_decel')
-    self.selectedActor = None
-
-  def on_mouse_move(self, rel):
-    if self.selectedActor is not None: 
-      dx, dy = rel
-      x,  y  = self.selectedActor.pos
-      x += dx; y += dy
-      self.selectedActor.pos = (x,y)
-
-### end ###
