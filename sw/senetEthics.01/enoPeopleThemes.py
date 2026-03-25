@@ -5,6 +5,7 @@
 
 from ataBase  import *
 from enoActor import *
+from typing import TypedDict
 
 ################### Enodia Token ###################
 
@@ -15,6 +16,15 @@ class EnoTok(EnoActor):
   #def on_mouse_down(pos):    pass
   #def on_key_down(key, mod): pass
 
+################### Color support classes for EnoPerson, EnoTheme ###################
+
+RGB = tuple[int, int, int]
+
+class ColorRings(TypedDict):
+  outer:  RGB
+  middle: RGB
+  inner:  RGB
+
 ################### Enodia Person ###################
 
 class EnoPerson(EnoTok):
@@ -22,9 +32,9 @@ class EnoPerson(EnoTok):
   abbrev  = None # type: str | None
   era     = None # type: str | None
   notes   = None # type: str | None
-  domains = None # type: list[str] | None
-  themes  = None # type: list[str] | None
-  colors  = None # type: dict[str, list[int]] | None
+  domains = None # type: list[str]  | None
+  themes  = None # type: list[str]  | None
+  colors  = None # type: ColorRings | None
 
 ################### Enodia Theme ###################
 
