@@ -2,7 +2,9 @@
 % brygg ullmer (clemson) & copilot
 % begun 2026-03-24
 
-:- op(950, xfx, :=). % helper to support more compact & human-legible mappings
+:- op(950, xfx, :=).     % helper to support more compact & human-legible mappings
+:- discontiguous (:=)/2.         % allow (e.g.) grouping by person rather than by predicate-type
+:- discontiguous personAbbrev/2. % ditto
 
 themeAbbrev(natuSust)  := [eco, env, consrv, sust, agr].
 themeAbbrev(cultIdent) := [culPlr, xcultu, indig, intl].
@@ -31,9 +33,9 @@ personAbbrev(theodoreRoosevelt, tr).
 personDomains(theodoreRoosevelt) := [governance, conservationPolicy].
 personThemes(theodoreRoosevelt)  := [civGovern, natuSust].
 
-personAbbrev(franklinD.Roosevelt, fdr).
-personDomains(franklinD.Roosevelt) := [governance, infrastructure, collectiveAction].
-personThemes(franklinD.Roosevelt)  := [civGovern, ethMoral].
+personAbbrev(franklinDRoosevelt, fdr).
+personDomains(franklinDRoosevelt) := [governance, infrastructure, collectiveAction].
+personThemes(franklinDRoosevelt)  := [civGovern, ethMoral].
 
 personAbbrev(eleanorRoosevelt, er).
 personDomains(eleanorRoosevelt) := [humanRights, ethics, internationalFrameworks].
