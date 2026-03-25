@@ -47,8 +47,10 @@ class EnoPeopleYamlMixin:
       yamlf.close()
 
       for abbrev, entry in self.yamld["people"].items():
-        p = EnoPersonYamlPgz().loadYamlDict(entry)
+        p = self.personClass()
+        p.loadYamlDict(entry)
         self.addPerson(p)
+
     except: self.err("loadYaml")
 
 ################### Enodia Theme ###################
@@ -68,9 +70,9 @@ class EnoThemesYamlMixin:
       yamlf.close()
 
       for abbrev, entry in self.yamld["people"].items():
-        p = EnoThemeYamlPgz().loadYamlDict(entry)
-        self.addPerson(p)
+        t = self.themeClass()
+        t.loadYamlDict(entry)
+        self.addTheme(t)
     except: self.err("loadYaml")
-
 
 ### end ###
