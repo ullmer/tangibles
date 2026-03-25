@@ -28,12 +28,12 @@ def on_mouse_up():
   global selectedActor
   selectedActor = None
 
-
-def on_mouse_move(self, rel):
-  if selectedActors is not None: 
+def on_mouse_move(rel):
+  global selectedActor
+  if selectedActor is not None: 
     dx, dy = rel
     x,  y  = selectedActor.pos
     x += dx; y += dy
-    selectedActor = (x,y)
+    selectedActor.pos = (x,y)
 
 ### end ###
