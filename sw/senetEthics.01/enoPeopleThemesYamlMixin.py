@@ -44,6 +44,7 @@ class EnoPeopleYamlMixin:
     try:
       yamlf = open(yamlFn, 'rt')
       self.yamld = yaml.safe_load(yamlf)
+      yamlf.close()
 
       for abbrev, entry in self.yamld["people"].items():
         p = EnoPersonYamlPgz().loadYamlDict(entry)
@@ -52,19 +53,24 @@ class EnoPeopleYamlMixin:
 
 ################### Enodia Theme ###################
 
-class EnoTheme(EnoTok):
-  name, color, themes = [None]*3
+class EnoThemeYamlMixin:
 
 ################### Enodia Themes ###################
 
-class EnoThemes(AtaBase):
-  themes = None
+class EnoThemesYamlMixin:
+ #themes = None # type: list[EnoTheme]
+  yamld = None
 
-  def __init__(self):          self.themes = []
+  def loadYaml(self, yamlFn: str):
+    try:
+      yamlf = open(yamlFn, 'rt')
+      self.yamld = yaml.safe_load(yamlf)
+      yamlf.close()
 
-  def addTheme(self, theme): self.themes.append(person)
+      for abbrev, entry in self.yamld["people"].items():
+        p = EnoThemeYamlPgz().loadYamlDict(entry)
+        self.addPerson(p)
+    except: self.err("loadYaml")
 
-  def draw(self):
-    for theme in self.themes: theme.draw()
 
 ### end ###

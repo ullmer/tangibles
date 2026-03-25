@@ -35,10 +35,7 @@ class EnoPerson(EnoTok):
   themes  = None # type: list[str]  | None
   colors  = None # type: ColorRings | None
 
-# def draw(self):   
-# def update(self): 
-# def on_mouse_down(self, pos):    
-# def on_key_down(self, key, mod): 
+  personClass = None # toward mixin integration
 
 ################### Enodia Theme ###################
 
@@ -46,6 +43,8 @@ class EnoTheme(EnoTok):
   name    = None # type: str | None 
   colors  = None # type: ColorRings | None
   themes  = None # type: list[str]  | None
+
+  themeClass = None # toward mixin integration
 
 ################### Enodia People ###################
 
