@@ -16,6 +16,7 @@ class EnoPersonYamlMixin:
 #  themes  = None # type: list[str]  | None
 #  colors  = None # type: ColorRings | None
 
+
   def load_from_yaml_dict(self, d: dict):
     try:
       self.name    = d.get("name")
@@ -40,12 +41,15 @@ class EnoPeopleYamlMixin:
  #people = None
   yamld  = None 
 
-  def load_from_yaml(self, path: str):
-    with open(path) as f: self.yamld = yaml.safe_load(f)
+  def loadYaml(self, yamlFn: str):
+    try:
+      yamlf = open(yamlFn, 'rt')
+      self.yamld = yaml.safe_load(yamlf)
 
-    for abbrev, entry in self.yamld["people"].items():
-       p = EnoPersonYamlPgz().load_from_yaml_dict(entry)
-       self.addPerson(p)
+      for abbrev, entry in self.yamld["people"].items():
+        p = EnoPersonYamlPgz().loadYamlDict(entry)
+        self.addPerson(p)
+    except: self.err("loadYaml")
 
 ################### Enodia Theme ###################
 
