@@ -2,6 +2,8 @@
 % brygg ullmer (clemson) & copilot
 % begun 2026-03-24
 
+:- op(950, xfx, :=). % helper to support more compact & human-legible mappings
+
 themeAbbrev(natuSust)  := [eco, env, consrv, sust, agr].
 themeAbbrev(cultIdent) := [culPlr, xcultu, indig, intl].
 themeAbbrev(exprCreat) := [drama, mus, perf].
