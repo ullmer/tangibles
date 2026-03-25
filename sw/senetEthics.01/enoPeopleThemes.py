@@ -37,6 +37,9 @@ class EnoPerson(EnoTok):
 
   personClass = None # toward mixin integration
 
+  def getAbbrev(self): return self.abbrev
+  def getName(self):   return self.name
+
 ################### Enodia Theme ###################
 
 class EnoTheme(EnoTok):
@@ -51,11 +54,33 @@ class EnoTheme(EnoTok):
 class EnoPeople(AtaBase):
   people = None # type: list[EnoPerson]
 
-  def __init__(self):          self.people = []
+  def __init__(self):  self.people = []
+
+  def getPeople(self): return self.people
 
   def addPerson(self, person): 
     try:    self.people.append(person)
     except: self.err("addPerson")
+
+  ################### get abbreviations ###################
+
+  def getAbbrevs(self): 
+    try:
+      result = []
+      for p in self.people: 
+        pa = p.getAbbrev(); result.append(pa)
+      return result
+    except: self.err("getAbbrevs")
+
+  ################### get names ###################
+
+  def getNames(self): 
+    try:
+      result = []
+      for p in self.people: 
+        pn = p.getName(); result.append(pn)
+      return result
+    except: self.err("getNames")
 
 ################### Enodia Themes ###################
 
@@ -63,6 +88,8 @@ class EnoThemes(AtaBase):
   themes = None # type: list[EnoTheme]
 
   def __init__(self):          self.themes = []
+
+  def getThemes(self): return self.people
 
   def addTheme(self, theme): 
     try:    self.themes.append(theme)
