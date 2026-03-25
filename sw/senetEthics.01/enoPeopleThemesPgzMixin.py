@@ -22,6 +22,29 @@ class EnoPersonPgzMixin:
 
 class EnoPeoplePgzMixin:
 # people = None # type: list[EnoPerson]
+  actors = None # type: list[Actor]
+  peoplePathPrefix = "people/"
+
+  ############# constructor #############
+
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    super().__init__()
+    self.buildPeople()
+
+  ############# build people #############
+
+  def buildPeople(self):
+    try:    
+      abbrevs = self.getAbbrevs()
+      for pa in abbrevs:
+        fn = self.peoplePathPrefix + a
+        a  = Actor(fn) 
+        self.actors.append(a)
+        
+    except: self.err("buildPeople")
+
+  ############# draw #############
 
   def draw(self):
     try:    for person in self.people: person.draw()
