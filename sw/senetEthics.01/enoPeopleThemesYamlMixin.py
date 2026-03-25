@@ -3,8 +3,9 @@
 # Begun 2026-03-25
 
 from enoPeopleThemes import *
+import yaml
 
-################### Enodia Person ###################
+################### Enodia Person Yaml Mixin ###################
 
 class EnoPersonYamlMixin:
 #  name    = None # type: str | None 
@@ -15,23 +16,39 @@ class EnoPersonYamlMixin:
 #  themes  = None # type: list[str]  | None
 #  colors  = None # type: ColorRings | None
 
+  def load_from_yaml_dict(self, d: dict):
+    self.name    = d.get("name")
+    self.abbrev  = d.get("abbrev")
+    self.era     = d.get("era")
+    self.notes   = d.get("notes")
+    self.domains = d.get("domains", [])
+    self.themes  = d.get("themes", [])
+
+    # RGB tuples
+    if "colors" in d:
+      self.colors = {
+        k: tuple(v) for k, v in d["colors"].items()
+      }
+
+    return self
+
+################### Enodia People Yaml Mixin ###################
+
+class EnoPeopleYamlMixin:
+ #people = None
+  yamld  = None 
+
+  def load_from_yaml(self, path: str):
+    with open(path) as f: self.yamld = yaml.safe_load(f)
+
+    for abbrev, entry in self.yamld["people"].items():
+       p = EnoPersonYamlPgz().load_from_yaml_dict(entry)
+       self.addPerson(p)
 
 ################### Enodia Theme ###################
 
 class EnoTheme(EnoTok):
   name, color, themes = [None]*3
-
-################### Enodia People ###################
-
-class EnoPeople(AtaBase):
-  people = None
-
-  def __init__(self):          self.people = []
-
-  def addPerson(self, person): self.people.append(person)
-
-  def draw(self):
-    for person in self.people: person.draw()
 
 ################### Enodia Themes ###################
 
