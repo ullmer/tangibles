@@ -2,6 +2,7 @@
 # Brygg Ullmer, Clemson University
 # Begun 2026-03-25
 
+from pgzero.builtins import Actor, animate, keyboard, keys
 
 class senetEth06People:
 
