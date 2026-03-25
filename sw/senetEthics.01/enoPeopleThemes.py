@@ -54,10 +54,9 @@ class EnoPeople(AtaBase):
 
   def __init__(self):          self.people = []
 
-  def addPerson(self, person): self.people.append(person)
-
-  def draw(self):
-    for person in self.people: person.draw()
+  def addPerson(self, person): 
+    try:    self.people.append(person)
+    except: self.err("addPerson")
 
 ################### Enodia Themes ###################
 
@@ -66,6 +65,8 @@ class EnoThemes(AtaBase):
 
   def __init__(self):          self.themes = []
 
-  def addTheme(self, theme): self.themes.append(theme)
+  def addTheme(self, theme): 
+    try:    self.themes.append(theme)
+    except: self.err("addTheme")
 
 ### end ###

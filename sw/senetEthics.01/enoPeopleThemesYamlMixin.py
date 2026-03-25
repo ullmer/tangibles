@@ -16,8 +16,7 @@ class EnoPersonYamlMixin:
 #  themes  = None # type: list[str]  | None
 #  colors  = None # type: ColorRings | None
 
-
-  def load_from_yaml_dict(self, d: dict):
+  def loadYamlDict(self, d: dict):
     try:
       self.name    = d.get("name")
       self.abbrev  = d.get("abbrev")
