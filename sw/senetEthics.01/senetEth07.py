@@ -4,15 +4,15 @@
 
 WIDTH, HEIGHT=1535,1180
 
-from senetEth06People import *
+from enoPeopleThemesYamlPgz import *
 
-a  = Actor('senet03k')
-se6p = senetEth06People()
+a    = Actor('senet03k')
+epyp = EnoPeopleYamlPgz()
 
-def draw(): a.draw(); se6p.draw()
+def draw(): a.draw(); epyp.draw()
 
-def on_mouse_down(pos): se6p.on_mouse_down(pos)
-def on_mouse_up():      se6p.on_mouse_up()
-def on_mouse_move(rel): se6p.on_mouse_move(rel)
+def on_mouse_down(pos): epyp.on_mouse_down(pos)
+def on_mouse_up():      epyp.on_mouse_up()
+def on_mouse_move(rel): epyp.on_mouse_move(rel)
 
 ### end ###
