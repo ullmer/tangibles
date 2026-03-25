@@ -43,12 +43,14 @@ class EnoPerson(EnoTok):
 ################### Enodia Theme ###################
 
 class EnoTheme(EnoTok):
-  name, color, themes = [None]*3
+  name    = None # type: str | None 
+  colors  = None # type: ColorRings | None
+  themes  = None # type: list[str]  | None
 
 ################### Enodia People ###################
 
 class EnoPeople(AtaBase):
-  people = None
+  people = None # type: list[EnoPerson]
 
   def __init__(self):          self.people = []
 
@@ -60,11 +62,11 @@ class EnoPeople(AtaBase):
 ################### Enodia Themes ###################
 
 class EnoThemes(AtaBase):
-  themes = None
+  themes = None # type: list[EnoTheme]
 
   def __init__(self):          self.themes = []
 
-  def addTheme(self, theme): self.themes.append(person)
+  def addTheme(self, theme): self.themes.append(theme)
 
   def draw(self):
     for theme in self.themes: theme.draw()
