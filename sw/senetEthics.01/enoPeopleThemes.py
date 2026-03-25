@@ -10,11 +10,10 @@ from typing import TypedDict
 ################### Enodia Token ###################
 
 class EnoTok(EnoActor):
-  def draw():   pass
-  def update(): pass
-
-  #def on_mouse_down(pos):    pass
-  #def on_key_down(key, mod): pass
+#  def draw(self):   
+#  def update(self): 
+#  def on_mouse_down(self, pos):    
+#  def on_key_down(self, key, mod): 
 
 ################### Color support classes for EnoPerson, EnoTheme ###################
 
@@ -35,6 +34,11 @@ class EnoPerson(EnoTok):
   domains = None # type: list[str]  | None
   themes  = None # type: list[str]  | None
   colors  = None # type: ColorRings | None
+
+# def draw(self):   
+# def update(self): 
+# def on_mouse_down(self, pos):    
+# def on_key_down(self, key, mod): 
 
 ################### Enodia Theme ###################
 
