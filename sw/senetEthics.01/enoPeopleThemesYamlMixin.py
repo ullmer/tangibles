@@ -32,7 +32,7 @@ class EnoPersonYamlMixin:
         }
 
       return self
-    except: self.err("load_from_yaml_dict")
+    except: self.err("loadYamlDict")
 
 ################### Enodia People Yaml Mixin ###################
 
@@ -56,6 +56,23 @@ class EnoPeopleYamlMixin:
 ################### Enodia Theme ###################
 
 class EnoThemeYamlMixin:
+  name    = None # type: str | None 
+  colors  = None # type: ColorRings | None
+  themes  = None # type: list[str]  | None
+
+  def loadYamlDict(self, d: dict):
+    try:
+      self.name    = d.get("name")
+      self.themes  = d.get("themes", [])
+
+      # RGB tuples
+      if "colors" in d:
+        self.colors = {
+          k: tuple(v) for k, v in d["colors"].items()
+        }
+
+      return self
+    except: self.err("loadYamlDict")
 
 ################### Enodia Themes ###################
 
@@ -69,7 +86,7 @@ class EnoThemesYamlMixin:
       self.yamld = yaml.safe_load(yamlf)
       yamlf.close()
 
-      for abbrev, entry in self.yamld["people"].items():
+      for abbrev, entry in self.yamld["categories"].items():
         t = self.themeClass()
         t.loadYamlDict(entry)
         self.addTheme(t)
