@@ -17,20 +17,22 @@ class EnoPersonYamlMixin:
 #  colors  = None # type: ColorRings | None
 
   def load_from_yaml_dict(self, d: dict):
-    self.name    = d.get("name")
-    self.abbrev  = d.get("abbrev")
-    self.era     = d.get("era")
-    self.notes   = d.get("notes")
-    self.domains = d.get("domains", [])
-    self.themes  = d.get("themes", [])
+    try:
+      self.name    = d.get("name")
+      self.abbrev  = d.get("abbrev")
+      self.era     = d.get("era")
+      self.notes   = d.get("notes")
+      self.domains = d.get("domains", [])
+      self.themes  = d.get("themes", [])
 
-    # RGB tuples
-    if "colors" in d:
-      self.colors = {
-        k: tuple(v) for k, v in d["colors"].items()
-      }
+      # RGB tuples
+      if "colors" in d:
+        self.colors = {
+          k: tuple(v) for k, v in d["colors"].items()
+        }
 
-    return self
+      return self
+    except: self.err("load_from_yaml_dict")
 
 ################### Enodia People Yaml Mixin ###################
 
