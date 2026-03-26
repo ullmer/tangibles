@@ -39,7 +39,7 @@ class EnoPeoplePgzMixin:
       abbrevs = self.getAbbrevs()
 
       for pa in abbrevs:
-        fn = self.peoplePathPrefix + pa
+        fn = self.peoplePathPrefix + pa.lower()
         if self.fileExists(fn):
           try:    a  = Actor(fn) 
           except: self.msg("buildActors: problem with "+pa); continue
