@@ -38,7 +38,8 @@ class EnoPersonYamlMixin:
 
 class EnoPeopleYamlMixin:
  #people = None
-  yamld  = None 
+  yamld  = None # type: dict[str, Any] # populated from YAML
+  yamlfn = None # type: str
 
   def loadYaml(self, yamlFn: str):
     try:
