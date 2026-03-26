@@ -2,9 +2,9 @@
 # Brygg Ullmer, Clemson Universty
 # Begun 2026-03-25
 
-from pgzero.builtins import Actor, animate, keyboard, keys
 import yaml
-
+from pathlib         import Path
+from pgzero.builtins import Actor, animate, keyboard, keys
 from enoPeopleThemes import *
 
 ################### Enodia Person Pgz Mixin ###################
@@ -39,14 +39,23 @@ class EnoPeoplePgzMixin:
       abbrevs = self.getAbbrevs()
 
       for pa in abbrevs:
-        fn = self.peoplePathPrefix + a
-        try:    a  = Actor(fn) 
-        except: self.msg("buildActors: problem with "+pa); continue
+        fn = self.peoplePathPrefix + pa
+        if self.fileExists(fn):
+          try:    a  = Actor(fn) 
+          except: self.msg("buildActors: problem with "+pa); continue
+        else: self.msg("File " + pa + " does not exist; ignoring"); continue
 
         self.actors.append(a)
         a.pos = (x, y); x += self.dx 
         
     except: self.err("buildActors")
+
+  ############# file exists #############
+
+  def fileExists(self, filepath: str) -> bool:
+    p      = Path(filepath)
+    result = any(p.parent.glob(p.stem + ".*"))
+    return result
 
   ############# draw #############
 
