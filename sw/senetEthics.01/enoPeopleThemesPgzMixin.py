@@ -30,13 +30,6 @@ class EnoPeoplePgzMixin:
   dx = 100
   selectedActor = None
 
-  ############# constructor #############
-
-  def __init__(self, **kwargs):
-    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
-    super().__init__()
-    self.buildActors()
-
   ############# build people #############
 
   def buildActors(self):
