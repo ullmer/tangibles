@@ -39,11 +39,12 @@ class EnoPersonYamlMixin:
 class EnoPeopleYamlMixin:
  #people = None
   yamld  = None # type: dict[str, Any] # populated from YAML
-  yamlfn = None # type: str
+  yamlFn = None # type: str
 
-  def loadYaml(self, yamlFn: str):
+  def loadYaml(self, yamlFn: str|None = None):
     try:
-      yamlf = open(yamlFn, 'rt')
+      if yamlFn is not None: self.yamlFn = yamlFn
+      yamlf      = open(self.yamlFn, 'rt')
       self.yamld = yaml.safe_load(yamlf)
       yamlf.close()
 
@@ -79,11 +80,13 @@ class EnoThemeYamlMixin:
 
 class EnoThemesYamlMixin:
  #themes = None # type: list[EnoTheme]
-  yamld = None
+  yamld  = None # type: dict[str, Any] # populated from YAML
+  yamlFn = None # type: str
 
-  def loadYaml(self, yamlFn: str):
+  def loadYaml(self, yamlFn: str|None = None):
     try:
-      yamlf = open(yamlFn, 'rt')
+      if yamlFn is not None: self.yamlFn = yamlFn
+      yamlf      = open(self.yamlFn, 'rt')
       self.yamld = yaml.safe_load(yamlf)
       yamlf.close()
 
