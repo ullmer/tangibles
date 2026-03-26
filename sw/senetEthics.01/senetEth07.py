@@ -6,7 +6,7 @@ WIDTH, HEIGHT=1535,1180
 
 from enoPeopleThemesYamlPgz import *
 
-yfn = 'peopleThemes03.yaml'
+yfn = 'yaml/peopleThemes03.yaml'
 
 a    = Actor('senet03k')
 epyp = EnoPeopleYamlPgz()

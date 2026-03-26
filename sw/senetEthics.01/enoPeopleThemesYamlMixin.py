@@ -3,6 +3,7 @@
 # Begun 2026-03-25
 
 from enoPeopleThemes import *
+from typing          import Optional
 import yaml
 
 ################### Enodia Person Yaml Mixin ###################
@@ -41,7 +42,7 @@ class EnoPeopleYamlMixin:
   yamld  = None # type: dict[str, Any] # populated from YAML
   yamlFn = None # type: str
 
-  def loadYaml(self, yamlFn: str|None = None):
+  def loadYaml(self, yamlFn: Optional[str] = None):
     try:
       if yamlFn is not None: self.yamlFn = yamlFn
       yamlf      = open(self.yamlFn, 'rt')
@@ -83,7 +84,7 @@ class EnoThemesYamlMixin:
   yamld  = None # type: dict[str, Any] # populated from YAML
   yamlFn = None # type: str
 
-  def loadYaml(self, yamlFn: str|None = None):
+  def loadYaml(self, yamlFn: Optional[str] = None):
     try:
       if yamlFn is not None: self.yamlFn = yamlFn
       yamlf      = open(self.yamlFn, 'rt')
