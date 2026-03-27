@@ -4,12 +4,13 @@
 
 WIDTH, HEIGHT=1535,1180
 
-a  = Actor('senet03k')
+a  = Actor('backdrops/senet03k')
 
 peopleAbbrev = ['gel', 'jgh', 'tr', 'fdr', 'er', 'rf']
 people = []; x, y = 300, 500; dx = 75
 for pa in peopleAbbrev: 
-  p = Actor(pa); people.append(p)
+  imgFn = "people/" + pa
+  p = Actor(imgFn); people.append(p)
   p.pos = (x,y); x+= dx
 
 def draw(): 

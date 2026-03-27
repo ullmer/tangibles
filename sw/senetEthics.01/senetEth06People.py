@@ -7,6 +7,7 @@ from pgzero.builtins import Actor, animate, keyboard, keys
 class senetEth06People:
 
   peopleAbbrev = ['gel', 'jgh', 'tr', 'fdr', 'er', 'rf']
+  peoplePath   = "people/"
   people = None
   basePos = (300, 500)
   dx = 100
@@ -18,7 +19,8 @@ class senetEth06People:
     self.people = []
     x, y = self.basePos
     for pa in self.peopleAbbrev:
-      p = Actor(pa); self.people.append(p)
+      imgFn = self.peoplePath + pa
+      p = Actor(imgFn); self.people.append(p)
       p.pos = (x, y); x += self.dx 
 
   def draw(self): 

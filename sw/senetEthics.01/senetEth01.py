@@ -4,7 +4,7 @@
 
 WIDTH, HEIGHT=1535,1180
 
-a = Actor('senet03k')
+a = Actor('backdrops/senet03k')
 
 def draw(): a.draw()
 

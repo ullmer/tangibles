@@ -6,7 +6,7 @@ WIDTH, HEIGHT=1535,1180
 
 from senetEth06People import *
 
-a  = Actor('senet03k')
+a  = Actor('backdrops/senet03k')
 se6p = senetEth06People()
 
 def draw(): a.draw(); se6p.draw()
