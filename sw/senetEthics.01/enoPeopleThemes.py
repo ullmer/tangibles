@@ -1,6 +1,6 @@
 # Broad contours of "key objects of interest" toward
 #  Computing, Ethics, and Global Society example
-# Brygg Ullmer, Clemson Universty
+# Brygg Ullmer, Clemson University
 # Begun 2026-03-24
 
 from ataBase  import *

@@ -11,7 +11,7 @@ from enoFilepath     import *
 
 ################### Enodia Person Pgz Mixin ###################
 
-class EnoPersonPgzMixin:
+class EnoPersonMixinPgz:
 # name    = None # type: str | None 
 # abbrev  = None # type: str | None
 # era     = None # type: str | None
@@ -24,7 +24,7 @@ class EnoPersonPgzMixin:
 
 ################### Enodia People Yaml Mixin ###################
 
-class EnoPeoplePgzMixin:
+class EnoPeopleMixinPgz:
 # people = None # type: list[EnoPerson]
   actors = None # type: list[Actor]
   peoplePathPrefix = "people/"
@@ -92,12 +92,12 @@ class EnoPeoplePgzMixin:
 ####################################################
 ################### Enodia Theme ###################
 
-class EnoThemePgzMixin:
+class EnoThemeMixinPgz:
   def draw(self): pass
 
 ################### Enodia Themes ###################
 
-class EnoThemesPgzMixin:
+class EnoThemesMixinPgz:
 # themes = None # type: list[EnoTheme]
 
   def draw(self):

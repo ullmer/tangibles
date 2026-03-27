@@ -11,7 +11,7 @@ from enoFilepath     import *
 
 ################### Enodia Person Yaml Mixin ###################
 
-class EnoPersonYamlMixin:
+class EnoPersonMixinYaml:
 #  name    = None # type: str | None 
 #  abbrev  = None # type: str | None
 #  era     = None # type: str | None
@@ -40,7 +40,7 @@ class EnoPersonYamlMixin:
 
 ################### Enodia People Yaml Mixin ###################
 
-class EnoPeopleYamlMixin:
+class EnoPeopleMixinYaml:
  #people = None
   yamld  = None # type: dict[str, Any] # populated from YAML
   yamlFn = None # type: str
@@ -68,7 +68,7 @@ class EnoPeopleYamlMixin:
 
 ################### Enodia Theme ###################
 
-class EnoThemeYamlMixin:
+class EnoThemeMixinYaml:
   name    = None # type: str | None 
   colors  = None # type: ColorRings | None
   themes  = None # type: list[str]  | None
@@ -89,7 +89,7 @@ class EnoThemeYamlMixin:
 
 ################### Enodia Themes ###################
 
-class EnoThemesYamlMixin:
+class EnoThemesMixinYaml:
  #themes = None # type: list[EnoTheme]
   yamld  = None # type: dict[str, Any] # populated from YAML
   yamlFn = None # type: str

@@ -3,10 +3,10 @@
 # Begun 2026-03-25
 
 from enoPeopleThemes          import *
-from enoPeopleThemesYamlMixin import *
-from enoPeopleThemesPgzMixin  import *
+from enoPeopleThemesMixinYaml import *
+from enoPeopleThemesMixinPgz  import *
 
-class EnoPersonYamlPgz(EnoPersonYamlMixin, EnoPersonPgzMixin, EnoPerson):  pass
+class EnoPersonYamlPgz(EnoPersonMixinYaml, EnoPersonMixinPgz, EnoPerson):  pass
 
 #  name    = None # type: str | None 
 #  abbrev  = None # type: str | None
@@ -22,12 +22,12 @@ class EnoPersonYamlPgz(EnoPersonYamlMixin, EnoPersonPgzMixin, EnoPerson):  pass
 
 ################### Enodia Theme Yaml Pgz ###################
 
-class EnoThemeYamlPgz( EnoThemeYamlMixin,  EnoThemePgzMixin,  EnoTheme):  pass
+class EnoThemeYamlPgz( EnoThemeMixinYaml,  EnoThemeMixinPgz,  EnoTheme):  pass
 
 ############################################################# 
 ################### Enodia People Yaml Pgz ##################
 
-class EnoPeopleYamlPgz(EnoPeopleYamlMixin, EnoPeoplePgzMixin, EnoPeople): 
+class EnoPeopleYamlPgz(EnoPeopleMixinYaml, EnoPeopleMixinPgz, EnoPeople): 
 
   ############# constructor #############
 
@@ -39,7 +39,7 @@ class EnoPeopleYamlPgz(EnoPeopleYamlMixin, EnoPeoplePgzMixin, EnoPeople):
 ############################################################# 
 ################### Enodia Themes Yaml Pgz ##################
 
-class EnoThemesYamlPgz(EnoThemesYamlMixin, EnoThemesPgzMixin, EnoThemes): 
+class EnoThemesYamlPgz(EnoThemesMixinYaml, EnoThemesMixinPgz, EnoThemes): 
   
   ############# constructor #############
 
