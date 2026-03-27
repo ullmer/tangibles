@@ -18,6 +18,7 @@ class EnoSegmentedImgCoords(AtaBase):
   ############# constructor #############
   def __init__(self, **kwargs): 
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    super().__init__()
     if self.yamlFn is not None: self.loadYaml()
 
   ############# getGridSize #############

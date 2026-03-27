@@ -9,7 +9,21 @@ from typing                import Any, List
 Matrix = List[List[Any]]
 
 class EnoGridWorkspace(AtaBase):
-  dimensions:    tuple[int,int]|None = None
+  width:  int|None = None
+  height: int|None = None
   gridWorkspace: Matrix|None         = None
+
+  ############# constructor #############
+
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    super().__init__()
+
+  ################## create matrix  ##################
+
+  def createMatrix(self, rows: int|None=None, cols: int|None=None):
+    if dimensions is Tuple and 
+    w, h = 
+    if 
 
 ### end ###

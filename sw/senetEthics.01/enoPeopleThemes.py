@@ -54,7 +54,14 @@ class EnoTheme(EnoTok):
 class EnoPeople(AtaBase):
   people = None # type: list[EnoPerson]
 
-  def __init__(self):  self.people = []
+  ############# constructor #############
+
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    super().__init__()
+    self.people = []
+
+  ############# getPeople & addPerson #############
 
   def getPeople(self): return self.people
 
@@ -87,7 +94,15 @@ class EnoPeople(AtaBase):
 class EnoThemes(AtaBase):
   themes = None # type: list[EnoTheme]
 
-  def __init__(self):          self.themes = []
+
+  ############# constructor #############
+
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    super().__init__()
+    self.themes = []
+
+  ############# getThemes & addTheme #############
 
   def getThemes(self): return self.people
 
