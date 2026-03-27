@@ -2,6 +2,9 @@
 # Brygg Ullmer, Clemson University
 # Begun 2026-03-27
 
+# Using pandas or numpy might have made sense, but considering a variant either in
+# micropython or a micropython c binding, and special aspects re subclass warping
+
 from ataBase               import *
 from typing                import Any, List
 
