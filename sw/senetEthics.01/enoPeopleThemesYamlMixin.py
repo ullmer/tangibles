@@ -1,11 +1,13 @@
 # Enodia People and Themes: YAML mixin (largely populated by CoPilot)
-# Brygg Ullmer, Clemson Universty
+# Brygg Ullmer, Clemson University
 # Begun 2026-03-25
 
 import yaml
 from pathlib         import Path
 from typing          import Optional
+
 from enoPeopleThemes import *
+from enoFilepath     import *
 
 ################### Enodia Person Yaml Mixin ###################
 
@@ -43,13 +45,6 @@ class EnoPeopleYamlMixin:
   yamld  = None # type: dict[str, Any] # populated from YAML
   yamlFn = None # type: str
 
-  ############# file exists #############
-
-  def fileExists(self, filepath: str) -> bool:
-    p      = Path(filepath)
-    result = any(p.parent.glob(p.stem + ".*"))
-    return result
-
   ############# load yaml #############
 
   def loadYaml(self, yamlFn: Optional[str] = None):
@@ -62,7 +57,7 @@ class EnoPeopleYamlMixin:
       for abbrev, entry in self.yamld["people"].items():
         abbrevLower = abbrev.lower()
         imgFn = "people/" + abbrevLower
-        if not self.fileExists(imgFn): self.msg("loadYaml ignoring " + abbrev); continue
+        if not filepatExists(imgFn): self.msg("loadYaml ignoring " + abbrev); continue
         p = self.personClass(imgFn) #single pgz file-specifying argument -> enoActor
         p.loadYamlDict(entry)
         self.addPerson(p)

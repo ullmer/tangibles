@@ -1,11 +1,13 @@
 # Enodia People and Themes: PyGame Zero mixin 
-# Brygg Ullmer, Clemson Universty
+# Brygg Ullmer, Clemson University
 # Begun 2026-03-25
 
 import yaml
 from pathlib         import Path
 from pgzero.builtins import Actor, animate, keyboard, keys
+
 from enoPeopleThemes import *
+from enoFilepath     import *
 
 ################### Enodia Person Pgz Mixin ###################
 
@@ -40,7 +42,7 @@ class EnoPeoplePgzMixin:
 
       for pa in abbrevs:
         fn = self.peoplePathPrefix + pa.lower()
-        if self.fileExists(fn):
+        if filepatExists(fn):
           try:    a  = Actor(fn) 
           except: self.msg("buildActors: problem with "+pa); continue
         else: self.msg("File " + pa + " does not exist; ignoring"); continue
@@ -49,13 +51,6 @@ class EnoPeoplePgzMixin:
         a.pos = (x, y); x += self.dx 
         
     except: self.err("buildActors")
-
-  ############# file exists #############
-
-  def fileExists(self, filepath: str) -> bool:
-    p      = Path(filepath)
-    result = any(p.parent.glob(p.stem + ".*"))
-    return result
 
   ############# draw #############
 
