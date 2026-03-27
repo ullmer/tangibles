@@ -7,24 +7,34 @@ from ataBase import *
 
 class EnoSegmentedImgCoords(AtaBase):
 
-  yamlFn  =None
+  yamlFn  = None
   yamlD   = None
   tTop    = None
   tBottom = None
   tLeft   = None
   tRight  = None
+  grid    = None
 
   ############# constructor #############
   def __init__(self, **kwargs): 
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     if self.yamlFn is not None: self.loadYaml()
 
-  ############# lerp #############
+  ############# getGridSize #############
+
+   def getGridSize(self):
+     try:
+       if self.yamlD is None: self.msg("getGridSize: no yaml"); return None
+
+       dimensions = self.yamlD['numDivs']
+       return dimensions
+     except: self.err("getGridSize")
+
+  ############# loadYaml #############
 
   def loadYaml(self):
     try:
       if self.yamlFn is None: self.msg("yamlFn is not initiated"); return None
-     
     except: self.err("loadYaml")
 
   ############# lerp #############
