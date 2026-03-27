@@ -2,12 +2,12 @@
 # Brygg Ullmer, Clemson University
 # Begun 2026-03-27
 
-from enoMatrix             import *
+from enoMatrix2D           import *
 from enoSegmentedImgCoords import *
 
 Matrix = List[List[Any]]
 
-class EnoMatrixWarped(EnoMatrix):
+class EnoMatrixWarped(EnoMatrix2D):
 
   ############# constructor #############
 
