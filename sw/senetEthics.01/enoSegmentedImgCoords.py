@@ -7,8 +7,12 @@ from ataBase import *
 
 class EnoSegmentedImgCoords(AtaBase):
 
-  yamlFn=None
-  yamlD = None
+  yamlFn  =None
+  yamlD   = None
+  tTop    = None
+  tBottom = None
+  tLeft   = None
+  tRight  = None
 
   ############# constructor #############
   def __init__(self, **kwargs): 
@@ -34,16 +38,20 @@ class EnoSegmentedImgCoords(AtaBase):
       data = self.yamlD
       # Extract components
       TL, TR, BL, BR = map(lambda p: np.array(p, dtype=float), data["coords"])
-      tTop    = np.array(data["sectorIndices"]["top"])
-      tBottom = np.array(data["sectorIndices"]["bottom"])
-      tLeft   = np.array(data["sectorIndices"]["left"])
-      tRight  = np.array(data["sectorIndices"]["right"])
+
+      if None in [self.tTop, self.tBottom, self.tLeft, self.tRight]:      
+        self.tTop    = np.array(data["sectorIndices"]["top"])
+        self.tBottom = np.array(data["sectorIndices"]["bottom"])
+        self.tLeft   = np.array(data["sectorIndices"]["left"])
+        self.tRight  = np.array(data["sectorIndices"]["right"])
+
+      tTop, tBottom, tLeft, tRight = self.tTop, self.tBottom, self.tLeft, self.tRight
     
       # Mid-fractions for the cell's center
-      tTopMid    = 0.5*(tTop[x]  + tTop[x+1])
+      tTopMid    = 0.5*(tTop[   x] + tTop[   x+1])
       tBottomMid = 0.5*(tBottom[x] + tBottom[x+1])
-      tLeftMid   = 0.5*(tLeft[y]   + tLeft[y+1])
-      tRightMid  = 0.5*(tRight[y]  + tRight[y+1])
+      tLeftMid   = 0.5*(tLeft[  y] + tLeft[  y+1])
+      tRightMid  = 0.5*(tRight[ y] + tRight[ y+1])
     
       # Convert to unified horizontal/vertical fractions
       tx = 0.5*(tTopMid + tBottomMid)
