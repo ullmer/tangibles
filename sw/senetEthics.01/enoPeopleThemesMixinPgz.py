@@ -28,8 +28,8 @@ class EnoPeoplePgzMixin:
 # people = None # type: list[EnoPerson]
   actors = None # type: list[Actor]
   peoplePathPrefix = "people/"
-  basePos = (300, 500)
-  dx = 100
+  basePos = (300, 100)
+  dx      = 90
   selectedActor   = None
   pgzImagesPrefix = "images/"
 
