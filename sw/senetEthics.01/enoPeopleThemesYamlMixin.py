@@ -44,11 +44,13 @@ class EnoPeopleYamlMixin:
  #people = None
   yamld  = None # type: dict[str, Any] # populated from YAML
   yamlFn = None # type: str
+  pgzImagesPrefix = "images/"
 
   ############# load yaml #############
 
   def loadYaml(self, yamlFn: Optional[str] = None):
     try:
+      pif = self.pgzImagesPrefix
       if yamlFn is not None: self.yamlFn = yamlFn
       yamlf      = open(self.yamlFn, 'rt')
       self.yamld = yaml.safe_load(yamlf)
@@ -57,7 +59,7 @@ class EnoPeopleYamlMixin:
       for abbrev, entry in self.yamld["people"].items():
         abbrevLower = abbrev.lower()
         imgFn = "people/" + abbrevLower
-        if not filepatExists(imgFn): self.msg("loadYaml ignoring " + abbrev); continue
+        if not filepatExists(pif+imgFn): self.msg("loadYaml ignoring " + abbrev); continue
         p = self.personClass(imgFn) #single pgz file-specifying argument -> enoActor
         p.loadYamlDict(entry)
         self.addPerson(p)

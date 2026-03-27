@@ -30,19 +30,21 @@ class EnoPeoplePgzMixin:
   peoplePathPrefix = "people/"
   basePos = (300, 500)
   dx = 100
-  selectedActor = None
+  selectedActor   = None
+  pgzImagesPrefix = "images/"
 
   ############# build people #############
 
   def buildActors(self):
     try:    
+      pif = self.pgzImagesPrefix
       self.actors = []
       x, y = self.basePos
       abbrevs = self.getAbbrevs()
 
       for pa in abbrevs:
         fn = self.peoplePathPrefix + pa.lower()
-        if filepatExists(fn):
+        if filepatExists(pif+fn):
           try:    a  = Actor(fn) 
           except: self.msg("buildActors: problem with "+pa); continue
         else: self.msg("File " + pa + " does not exist; ignoring"); continue
