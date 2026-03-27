@@ -37,6 +37,7 @@ class EnoMatrix2D(AtaBase):
       if i < 0 or i > self.cols: self.msg("checkBounds: i out of bound!"); return False
       if j < 0 or j > self.rows: self.msg("checkBounds: j out of bound!"); return False
       return True
+    except: self.err("validIndices")
 
   ################## getEl ##################
 
@@ -94,7 +95,7 @@ class EnoMatrix2D(AtaBase):
 
 ########## main ##########
 if __name__ == "__main__":
-  m = EnoMatrix(3,3)
+  m = EnoMatrix2D(rows=3,cols=3)
   m.printMatrix()
     
 ### end ###
