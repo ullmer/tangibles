@@ -20,6 +20,7 @@ class EnoMatrix2D(AtaBase):
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
+    if self.rows is not None and self.cols is not None: self.createMatrix()
 
   ################## getSize ##################
 
@@ -57,6 +58,20 @@ class EnoMatrix2D(AtaBase):
 
   ################## create matrix  ##################
 
+  def printMatrix(self):
+    try:
+      if None in [self.matrix, self.rows, self.cols]:
+        self.msg("printMatrix: dimensions or contents invalid"); return False
+
+      for j in range(self.cols):
+        for i in range(self.rows):
+          val = self.matrix[i][j]
+          print(str(val) + " ", end="")
+        print()
+    except: self.err("printMatrix")
+    
+  ################## create matrix  ##################
+
   def createMatrix(self, rows: int|None=None, cols: int|None=None):
     try:
       if rows is None:
@@ -76,5 +91,10 @@ class EnoMatrix2D(AtaBase):
 
       return True
     except: self.err("createMatrix")
+
+########## main ##########
+if __name__ == "__main__":
+  m = EnoMatrix(3,3)
+  m.printMatrix()
     
 ### end ###
