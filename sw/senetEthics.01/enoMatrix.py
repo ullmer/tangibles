@@ -2,16 +2,15 @@
 # Brygg Ullmer, Clemson University
 # Begun 2026-03-27
 
-from enoSegmentedImgCoords import *
 from ataBase               import *
 from typing                import Any, List
 
 Matrix = List[List[Any]]
 
-class EnoGridWorkspace(AtaBase):
-  width:  int|None = None
-  height: int|None = None
-  gridWorkspace: Matrix|None         = None
+class EnoMatrix(AtaBase):
+  rows: int|None = None
+  cols: int|None = None
+  gridWorkspace: Matrix|None = None
 
   ############# constructor #############
 
@@ -22,8 +21,20 @@ class EnoGridWorkspace(AtaBase):
   ################## create matrix  ##################
 
   def createMatrix(self, rows: int|None=None, cols: int|None=None):
-    if dimensions is Tuple and 
-    w, h = 
+    try:
+      if rows is None:
+        if self.rows is not None: rows = self.rows
+        else: self.msg("createMatrix: rows size not specified!"); return None
+      else: self.rows = rows 
+
+      if cols is None:
+        if self.cols is not None: cols = self.cols
+        else: self.msg("createMatrix: cols size not specified!"); return None
+      else: self.cols = cols
+
+      self.gridWorkspace = []
+      for col in range(cols)
+    
     if 
 
 ### end ###
