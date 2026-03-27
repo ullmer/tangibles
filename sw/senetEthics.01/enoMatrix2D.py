@@ -1,4 +1,4 @@
-# Experiment in representing a gridded workspace (virtual or physical)
+# Simple 2D Matrix
 # Brygg Ullmer, Clemson University
 # Begun 2026-03-27
 
@@ -7,7 +7,7 @@ from typing                import Any, List
 
 Matrix = List[List[Any]]
 
-class EnoMatrix(AtaBase):
+class EnoMatrix2D(AtaBase):
   rows:   int|None = None
   cols:   int|None = None
   matrix: Matrix|None = None
