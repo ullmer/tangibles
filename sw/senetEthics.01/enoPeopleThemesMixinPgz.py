@@ -7,7 +7,7 @@ from pathlib         import Path
 from pgzero.builtins import Actor, animate, keyboard, keys
 
 from enoPeopleThemes import *
-from enoFilepath     import *
+from enoOSsupport    import *
 
 ################### Enodia Person Pgz Mixin ###################
 

@@ -7,7 +7,7 @@ from pathlib         import Path
 from typing          import Optional
 
 from enoPeopleThemes import *
-from enoFilepath     import *
+from enoOSsupport    import *
 
 ################### Enodia Person Yaml Mixin ###################
 
