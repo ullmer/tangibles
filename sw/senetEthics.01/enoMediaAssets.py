@@ -3,21 +3,15 @@
 # Begun 2026-03-28
 
 import yaml
-from pgzero.builtins import Actor, animate, keyboard, keys
-
-from enoActor        import *
 from enoOSsupport    import *
 
-################### Enodia People Yaml Mixin ###################
+################### Enodia Media Asset ###################
 
-class EnoBackdropsPgz:
-  actors           = None # type: dict[Actor]|None
-  imagesSubpath    = "images/"
-  backdropsSubpath = "backdrops/"
-  backdropsYamlFn  = "yaml/backdrops.yaml"
+class EnoMediaAsset:
+  mediaSubpath    = "images/" # type: str|None
+  mediaUrl        = None      # type: str|None
+  mediaLocalpath  = None      # type: str|None
 
-  basePos = (0, 0)
-  selectedActor   = None
 
   ############# build people #############
 
