@@ -3,7 +3,6 @@
 # Begun 2026-03-25
 
 import yaml
-from pathlib         import Path
 from typing          import Optional
 
 from enoPeopleThemes import *
