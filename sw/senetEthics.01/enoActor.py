@@ -41,6 +41,8 @@ class EnoActor:
   toggleOnFingerDown = False  #may be either redundant or contradictory wrt toggleMode
   toggleState = False
   verbose     = False
+  duration    = .5
+  tween       = 'accel_decel'
 
   ############# constructor #############
 
@@ -106,6 +108,31 @@ class EnoActor:
     #screen.draw.text(self.buttonText, centerx=cx, centery=cy, align="center",
     #                 fontsize=self.fontSize, 
     #                 color=self.fgcolor, alpha=self.alpha)
+
+  ############# fade #############
+
+  def fade(self, targetAlpha, duration=None, tween=None, onDone = None):
+    """
+    Fade actor to full transparency using pgzero 1.3 opacity support.
+    """
+    try:
+      if duration is None: duration = self.duration
+      if tween    is None: tween    = self.tween
+      
+
+
+
+duration=0.5, on_done=None):
+    def _finished():
+        if on_done:
+            on_done(self)
+
+    animate(
+        self.actor,
+        opacity=0.0,
+        duration=duration,
+        on_finished=_finished
+    )
 
   ############# nudge #############
 
