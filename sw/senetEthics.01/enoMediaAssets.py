@@ -31,12 +31,12 @@ class EnoMediaAsset(AtaBase):
   def stageMediaForUse(self):
     try:
       if self.mediaUrl is not None and self.autoDLMedia:
-        self.downloadMedia(); return True
+        result = self.downloadMedia(); return result
 
       if self.mediaFn is not None:
-        mediaPath = self.mediaSubpath + 
-    if None not in [self.mediaSubpath
-
+        mediaPath = self.mediaSubpath + self.mediaFn
+        if filepatExists(mediaPath): return True
+      return False
     except: self.err("stageMediaForUse")
 
 ################### Enodia Media Assets ###################
