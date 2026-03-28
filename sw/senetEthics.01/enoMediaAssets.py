@@ -6,19 +6,11 @@ import yaml
 from pgzero.builtins import Actor, animate, keyboard, keys
 
 from enoActor        import *
-from enoMediaAssets  import *
 from enoOSsupport    import *
 
-################### enodia backdrop pgz###################
-
-class EnoBackdropPgz(EnoActor):
-  ema = None # type: EnoMediaAsset|None
+################### Enodia People Yaml Mixin ###################
 
 class EnoBackdropsPgz:
-  ebackdropsPgz = None # type: dict[EnoBackdropPgz]|None
-
-
-class EnoBackdropsPgz(E:
   actors           = None # type: dict[Actor]|None
   imagesSubpath    = "images/"
   backdropsSubpath = "backdrops/"
