@@ -13,15 +13,31 @@ from enoOSsupport    import *
 ################### Enodia Media Asset ###################
 
 class EnoMediaAsset(AtaBase):
-  mediaSubpath    = "images/" # type: str|None
-  mediaUrl        = None      # type: str|None
-  mediaLocalpath  = None      # type: str|None
+  mediaSubpath = "images/" # type: str|None
+  mediaUrl     = None      # type: str|None
+  mediaFn      = None      # type: str|None
+  autoDLMedia  = True      # type: bool
 
   ############# constructor #############
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
+    try:    self.stageMediaForUse()
+    except: self.err("__init__")
+
+  ############# stage media for use #############
+
+  def stageMediaForUse(self):
+    try:
+      if self.mediaUrl is not None and self.autoDLMedia:
+        self.downloadMedia(); return True
+
+      if self.mediaFn is not None:
+        mediaPath = self.mediaSubpath + 
+    if None not in [self.mediaSubpath
+
+    except: self.err("stageMediaForUse")
 
 ################### Enodia Media Assets ###################
 
