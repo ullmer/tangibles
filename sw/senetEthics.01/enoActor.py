@@ -8,9 +8,11 @@
 
 import yaml
 import pygame
+
 #import pgzero #scaling seems to depend on a newer version of pgzero
 # than within pypi ca. 2025-11; could add dependencies here to check
 
+from functools import partial
 from pygame import Rect
 from pgzero.builtins import Actor, animate, keyboard
 
@@ -111,28 +113,23 @@ class EnoActor:
 
   ############# fade #############
 
-  def fade(self, targetAlpha, duration=None, tween=None, onDone = None):
+  def _fade_finished(self, endAlpha):
+    try:    self.alpha = endAlpha
+    except: self.err("_fade_finished)
+
+  def fade(self, targetAlpha, duration=None, tween=None, endCb = None):
     """
     Fade actor to full transparency using pgzero 1.3 opacity support.
     """
     try:
       if duration is None: duration = self.duration
       if tween    is None: tween    = self.tween
+      if endCb    is None:
+        endCb = partial(self._fade_finished, targetAlpha)
       
-
-
-
-duration=0.5, on_done=None):
-    def _finished():
-        if on_done:
-            on_done(self)
-
-    animate(
-        self.actor,
-        opacity=0.0,
-        duration=duration,
-        on_finished=_finished
-    )
+      animate(self.actor, opacity=targetAlpha, duration=duration, \
+              tween=tween, on_Finished=endCb)
+    except: self.err(fade)
 
   ############# nudge #############
 
