@@ -7,6 +7,9 @@ import yaml
 from ataBase         import *
 from enoOSsupport    import *
 
+# def filepatExists(filepath: str) 
+# def downloadRemote(url: str, localPath: str)
+
 ################### Enodia Media Asset ###################
 
 class EnoMediaAsset(AtaBase):
