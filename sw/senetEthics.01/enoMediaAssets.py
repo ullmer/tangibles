@@ -42,5 +42,43 @@ class EnoMediaAsset(AtaBase):
 ################### Enodia Media Assets ###################
 
 class EnoMediaAssets(AtaBase):
+  yamlFn = "yaml/mediaAssets"
+  yamlD  = None # type: dict[Any]|None
+  autoDLMedia  = True      # type: bool
+
+  ############# constructor #############
+
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs) #allow class fields to be passed in constructor
+    super().__init__()
+    try:    
+      self.loadYaml()
+      self.stageMediaForUse()
+    except: self.err("__init__")
+
+  ############# load yaml #############
+
+  def loadYaml(self):
+    try:
+      if not filepatExists(self.yamlFn): 
+        self.msg("loadYaml: called, but yaml file doesn't exist"); return False
+
+      yf = open(self.yamlFn, 'rt')
+      self.yamlD = yaml.safe_load(yf)
+      yf.close()
+    except: self.err("loadYaml")
+
+### end ###
+
+# Media assets description
+backdrops:
+  chessSA1:
+    url:       https://computing.clemson.edu/~bullmer/images/chessSofonisbaAnguissola1555o.jpg
+    copyright: https://en.wikipedia.org/wiki/Chess#/media/File:The_Chess_Game_(Sofonisba_Anguissola)_1555_(4096x3236px).jpg
+    copyrightNotes: Creative Commons Attribution-Share Alike 4.0 International : Mortendrak + Ullmer
+    local: chessSofonisbaAnguissola1555o.jpg
+
+  chessSA1:
+    local: senet03k.png
 
 ### end ###
