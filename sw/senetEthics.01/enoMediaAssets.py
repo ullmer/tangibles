@@ -46,14 +46,15 @@ class EnoMediaAssets(AtaBase):
   yamlD  = None # type: dict[Any]|None
   autoDLMedia  = True      # type: bool
 
-  mediaTypes = ['backdrops', 'people']
+  mediaTypes     = None # type: dict[Any]|None
+  mediaTypesStrs = ['backdrops', 'people'] # type: dict[str]
 
   ############# constructor #############
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
-    try:    
+    try:
       self.loadYaml()
       self.stageMediaForUse()
     except: self.err("__init__")
@@ -78,7 +79,13 @@ class EnoMediaAssets(AtaBase):
     try:
       if self.yamlD is None: self.loadYaml()
       if self.autoDLMedia:
-        mt = self.mediaTypes
+        mts = self.mediaTypesStrs
+        self.mediaTypes = {}
+
+        for mt in mts:
+          if mt not in self.yamlD: 
+            self.msg("stageMediaForUse: media type not found in yaml: " + mt); continue
+          self.mediaTypes[mt] = self.yamlD[mt]
       
     except: self.err("stageMediaForUse")
 
