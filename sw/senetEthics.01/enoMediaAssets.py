@@ -46,6 +46,8 @@ class EnoMediaAssets(AtaBase):
   yamlD  = None # type: dict[Any]|None
   autoDLMedia  = True      # type: bool
 
+  mediaTypes = ['backdrops', 'people']
+
   ############# constructor #############
 
   def __init__(self, **kwargs):
@@ -66,7 +68,19 @@ class EnoMediaAssets(AtaBase):
       yf = open(self.yamlFn, 'rt')
       self.yamlD = yaml.safe_load(yf)
       yf.close()
+      return True
     except: self.err("loadYaml")
+    return False
+
+  ############# stage media for use #############
+
+  def stageMediaForUse(self):
+    try:
+      if self.yamlD is None: self.loadYaml()
+      if self.autoDLMedia:
+        mt = self.mediaTypes
+      
+    except: self.err("stageMediaForUse")
 
 ### end ###
 
