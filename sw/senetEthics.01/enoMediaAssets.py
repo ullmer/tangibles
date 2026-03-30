@@ -42,6 +42,7 @@ class EnoMediaAsset(AtaBase):
 ################### Enodia Media Assets ###################
 
 class EnoMediaAssets(AtaBase):
+  mediaSubpath = "images/" # type: str|None
   yamlFn = "yaml/mediaAssets"
   yamlD  = None # type: dict[Any]|None
   autoDLMedia  = True      # type: bool
@@ -85,21 +86,20 @@ class EnoMediaAssets(AtaBase):
         for mt in mts:
           if mt not in self.yamlD: 
             self.msg("stageMediaForUse: media type not found in yaml: " + mt); continue
-          self.mediaTypes[mt] = self.yamlD[mt]
-      
+          mty = self.mediaTypes[mt] = self.yamlD[mt]
+
+          for ydt in mty: #yd = yaml data tag
+
+            url = None
+            yd  = mty[ydt]
+
+            subpath = self.mediaSubpath + mt + "/"
+            if 'local' in yd: mediaFn = yd['local']
+            if 'url'   in yd: url     = yd['url']
+            ema = EnoMediaAsset(url=url, mediaFn=mediaFn, mediaSubpath=subpath)
+            self.mediaTypes[mt][ydt] = ema
+
     except: self.err("stageMediaForUse")
 
 ### end ###
 
-# Media assets description
-backdrops:
-  chessSA1:
-    url:       https://computing.clemson.edu/~bullmer/images/chessSofonisbaAnguissola1555o.jpg
-    copyright: https://en.wikipedia.org/wiki/Chess#/media/File:The_Chess_Game_(Sofonisba_Anguissola)_1555_(4096x3236px).jpg
-    copyrightNotes: Creative Commons Attribution-Share Alike 4.0 International : Mortendrak + Ullmer
-    local: chessSofonisbaAnguissola1555o.jpg
-
-  chessSA1:
-    local: senet03k.png
-
-### end ###
