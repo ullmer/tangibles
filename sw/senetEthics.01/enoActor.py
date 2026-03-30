@@ -115,7 +115,7 @@ class EnoActor:
 
   def _fade_finished(self, endAlpha):
     try:    self.alpha = endAlpha
-    except: self.err("_fade_finished)
+    except: self.err("_fade_finished")
 
   def fade(self, targetAlpha, duration=None, tween=None, endCb = None):
     """
