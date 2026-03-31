@@ -78,12 +78,12 @@ class EnoRemoteContent(AtaBase):
     r.raise_for_status()
     return r.content
 
-  # ---------- integrity ----------
+  ################# integrity #################
 
   def computeHash(self, content: bytes) -> str:
     return hashlib.sha256(content).hexdigest()
 
-  # ---------- storage ----------
+  ################# store #################
 
   def store(self, content: bytes, sha: str):
     cacheDir = Path(self.cacheRoot)
@@ -103,7 +103,7 @@ class EnoRemoteContent(AtaBase):
 
     self.msg(f"stored: {linkPath}")
 
-  # ---------- provenance ----------
+  ################# provenance #################
 
   def logTrustDecision(self, sha: str):
     tlp = Path(self.cacheRoot) / self.trustLogFn
