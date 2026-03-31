@@ -3,6 +3,7 @@
 # Begun 2026-03-28
 
 import yaml
+import os
 
 from ataBase         import *
 from enoOSsupport    import *
@@ -14,6 +15,7 @@ from enoOSsupport    import *
 
 class EnoMediaAsset(AtaBase):
   mediaSubpath = "images/" # type: str|None
+  cacheSubpath = "cache/"  # type: str|None
   mediaUrl     = None      # type: str|None
   mediaFn      = None      # type: str|None
   autoDLMedia  = True      # type: bool
@@ -30,11 +32,25 @@ class EnoMediaAsset(AtaBase):
 
   def stageMediaForUse(self):
     try:
+      if not os.path.isdir(self.mediaSubpath):
+        self.msg("stageMediaForUse: media subpath does not exist; creating")
+        os.path.mkdir(self.mediaSubpath)
+        if os.path.isdir(self.mediaSubpath): self.msg("stageMediaForUse: media subpath created")
+        else: self.msg("stageMediaForUse: problem case, media subpath directory creation attempt failed"); return False
+
+      msc = self.mediaSubpath + self.cacheSubpath
+
+      if not os.path.isdir(msc):
+        self.msg("stageMediaForUse: media cache subpath does not exist; creating")
+        os.path.mkdir(msc)
+        if os.path.isdir(msc): self.msg("stageMediaForUse: media cache subpath created")
+        else: self.msg("stageMediaForUse: problem case, media cache subpath directory creation attempt failed"); return False
+
       if self.mediaUrl is not None and self.autoDLMedia:
         result = self.downloadMedia(); return result
 
       if self.mediaFn is not None:
-        mediaPath = self.mediaSubpath + self.mediaFn
+        mediaPath = msc + self.mediaFn
         if filepatExists(mediaPath): return True
       return False
     except: self.err("stageMediaForUse")
