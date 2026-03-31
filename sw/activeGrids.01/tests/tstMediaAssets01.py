@@ -2,6 +2,7 @@
 # Brygg Ullmer, Clemson University
 # Begun 2026-03-31
 
+import sys; sys.path.append("..")
 from enoMediaAssets import *
 
 url = "https://computing.clemson.edu/~bullmer/images/chessSofonisbaAnguissola1555o.jpg"
