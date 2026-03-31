@@ -5,6 +5,7 @@
 from pathlib import Path
 import traceback
 import requests
+import certifi
 
 ############# filepat exists #############
 
@@ -24,7 +25,8 @@ def downloadRemote(url: str, localPath: str) -> bool:
       #self.msg("downloadRemote: file present, ignoring"); return None
       print("downloadRemote: file present, ignoring"); return None
 
-    response = requests.get(url, timeout=10)
+    response = requests.get(url, timeout=10, verify=certifi.where())
+
     response.raise_for_status()  # Ensures HTTP errors raise an exception
 
     with open(local_path, "wb") as f: f.write(response.content)
