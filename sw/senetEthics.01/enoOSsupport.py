@@ -3,7 +3,7 @@
 # Begun 2026-03-25
 
 from pathlib import Path
-
+import traceback
 import requests
 
 ############# filepat exists #############
