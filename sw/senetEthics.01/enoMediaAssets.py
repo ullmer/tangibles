@@ -19,13 +19,24 @@ class EnoMediaAsset(AtaBase):
   mediaUrl     = None      # type: str|None
   mediaFn      = None      # type: str|None
   autoDLMedia  = True      # type: bool
+  verbose      = True      # type: bool
+  assetDownloaded = None   # type: bool|None
 
   ############# constructor #############
 
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
-    try:    self.stageMediaForUse()
+    try:    result = self.stageMediaForUse(); return Result
+    except: self.err("__init__")
+
+  ############# is asset downloaded #############
+
+  def isAssetDownloaded(self):
+    try:
+      if self.assetDownloaded: return True
+      if not self.assetDownloaded: return False
+      self.msg("isAssetDownloaded: implement additional check: is asset not newly downloaded, but already present?")
     except: self.err("__init__")
 
   ############# stage media for use #############
@@ -34,7 +45,9 @@ class EnoMediaAsset(AtaBase):
     try:
       if not os.path.isdir(self.mediaSubpath):
         self.msg("stageMediaForUse: media subpath does not exist; creating")
-        os.path.mkdir(self.mediaSubpath)
+
+        os.mkdir(self.mediaSubpath)
+
         if os.path.isdir(self.mediaSubpath): self.msg("stageMediaForUse: media subpath created")
         else: self.msg("stageMediaForUse: problem case, media subpath directory creation attempt failed"); return False
 
@@ -42,18 +55,41 @@ class EnoMediaAsset(AtaBase):
 
       if not os.path.isdir(msc):
         self.msg("stageMediaForUse: media cache subpath does not exist; creating")
-        os.path.mkdir(msc)
+
+        os.mkdir(msc)
+
         if os.path.isdir(msc): self.msg("stageMediaForUse: media cache subpath created")
         else: self.msg("stageMediaForUse: problem case, media cache subpath directory creation attempt failed"); return False
 
       if self.mediaUrl is not None and self.autoDLMedia:
-        result = self.downloadMedia(); return result
+        result = self.downloadMedia()
+
+        if not ok: self.msg("downloadMedia: download failed!"); self.assetDownloaded = False
+        else: self.assetDownloaded = True
+        return result
 
       if self.mediaFn is not None:
         mediaPath = msc + self.mediaFn
         if filepatExists(mediaPath): return True
       return False
     except: self.err("stageMediaForUse")
+
+  ############# stage media for use #############
+
+  def downloadMedia(self):
+    try:
+      if self.verbose: self.msg("downloadMedia: beginning download: " + self.mediaUrl)
+      msc = self.mediaSubpath + self.cacheSubpath
+
+      if not os.path.isdir(msc): self.msg("downloadMedia: target directory does not exist: " + msc); return False
+  
+      mediaPath = msc + self.mediaFn
+
+      downloadRemote(self.mediaUrl, mediaPath)
+
+      if self.verbose: self.msg("downloadMedia: download completed")
+      return True
+    except: self.err("downloadMedia")
 
 ################### Enodia Media Assets ###################
 
