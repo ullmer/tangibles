@@ -24,7 +24,8 @@ class EnoMediaAsset(AtaBase):
   allowInsecure   = False
   autoDLMedia     = True      # type: bool
   verbose         = True      # type: bool
-  assetDownloaded = None   # type: bool|None
+  assetDownloaded = None      # type: bool|None
+  erc             = None      # enodia remote content
 
   ############# constructor #############
 
@@ -67,10 +68,18 @@ class EnoMediaAsset(AtaBase):
 
       if self.mediaUrl is not None and self.autoDLMedia:
         result = self.downloadMedia()
+        self.erc = EnoRemoteContent(
+          url=self.mediaUrl,
+          localFn=self.mediaFn,
+          expectedSha256=self.expectedSha256,
+          trustPolicy=self.trustPolicy,
+          allowInsecure=self.allowInsecure
+        )
+        self.erc.cacheRoot = self.mediaSubpath + self.cacheSubpath
+        self.erc.stage()
 
         if not ok: self.msg("downloadMedia: download failed!"); self.assetDownloaded = False
         else: self.assetDownloaded = True
-        return result
 
       if self.mediaFn is not None:
         mediaPath = msc + self.mediaFn
