@@ -66,6 +66,10 @@ class EnoMediaAsset(AtaBase):
         if os.path.isdir(msc): self.msg("stageMediaForUse: media cache subpath created")
         else: self.msg("stageMediaForUse: problem case, media cache subpath directory creation attempt failed"); return False
 
+      if self.mediaFn is not None: #see if it's already cached
+        mediaPath = msc + self.mediaFn
+        if filepatExists(mediaPath): return True
+
       if self.mediaUrl is not None and self.autoDLMedia:
         result = self.downloadMedia()
         self.erc = EnoRemoteContent(
