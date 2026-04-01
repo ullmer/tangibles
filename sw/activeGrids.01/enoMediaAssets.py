@@ -5,8 +5,9 @@
 import yaml
 import os
 
-from ataBase         import *
-from enoOSsupport    import *
+from ataBase          import *
+from enoOSsupport     import *
+from enoRemoteContent import EnoRemoteContent
 
 # def filepatExists(filepath: str) 
 # def downloadRemote(url: str, localPath: str)
@@ -14,12 +15,15 @@ from enoOSsupport    import *
 ################### Enodia Media Asset ###################
 
 class EnoMediaAsset(AtaBase):
-  mediaSubpath = "images/" # type: str|None
-  cacheSubpath = "cache/"  # type: str|None
-  mediaUrl     = None      # type: str|None
-  mediaFn      = None      # type: str|None
-  autoDLMedia  = True      # type: bool
-  verbose      = True      # type: bool
+  mediaSubpath    = "images/" # type: str|None
+  cacheSubpath    = "cache/"  # type: str|None
+  mediaUrl        = None      # type: str|None
+  mediaFn         = None      # type: str|None
+  expectedSha256  = None      
+  trustPolicy     = None
+  allowInsecure   = False
+  autoDLMedia     = True      # type: bool
+  verbose         = True      # type: bool
   assetDownloaded = None   # type: bool|None
 
   ############# constructor #############
