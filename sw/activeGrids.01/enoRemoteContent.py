@@ -21,11 +21,11 @@ class EnoRemoteContent(AtaBase):
   objectRoot = ".objects/"
   trustLogFn = "trust_decisions.json"
 
-  url      = None
-  localFn    = None    # human-legible filename
+  url            = None
+  localFn        = None    # human-legible filename
   expectedSha256 = None
-  trustPolicy  = None
-  riskClass    = "passive_visual"
+  trustPolicy    = None
+  riskClass      = "passive_visual"
   allowInsecure  = False
 
   ################# constructor #################
