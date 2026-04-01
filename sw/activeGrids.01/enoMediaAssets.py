@@ -32,7 +32,7 @@ class EnoMediaAsset(AtaBase):
   def __init__(self, **kwargs):
     self.__dict__.update(kwargs) #allow class fields to be passed in constructor
     super().__init__()
-    try:    result = self.stageMediaForUse(); return result
+    try:    result = self.stageMediaForUse()
     except: self.err("__init__")
 
   ############# is asset downloaded #############
@@ -99,7 +99,7 @@ class EnoMediaAsset(AtaBase):
   
       mediaPath = msc + self.mediaFn
 
-      downloadRemote(self.mediaUrl, mediaPath)
+      #downloadRemote(self.mediaUrl, mediaPath)
 
       if self.verbose: self.msg("downloadMedia: download completed")
       return True
