@@ -28,6 +28,12 @@ class EnoRemoteContent(AtaBase):
   riskClass    = "passive_visual"
   allowInsecure  = False
 
+  ################# constructor #################
+
+  def __init__(self, **kwargs):
+    self.__dict__.update(kwargs)
+    super().__init__()
+
   ############### stage ###############
 
   def stage(self):
