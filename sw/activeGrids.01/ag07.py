@@ -2,7 +2,7 @@
 # Brygg Ullmer, Clemson University
 # Begun 2026-03-24
 
-import sys; sys.path.append("py")
+import sys; sys.path.append("py") #support modules in py/ subdirectory
 
 # Brygg Ullmer, Clemson University
 
