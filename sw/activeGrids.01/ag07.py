@@ -4,11 +4,7 @@
 
 import sys; sys.path.append("py") #support modules in py/ subdirectory
 
-# Brygg Ullmer, Clemson University
-
-from enoPgzWinOrigin        import *
-
-WIDTH, HEIGHT=1535,1180
+WIDTH, HEIGHT=1600,1100
 
 from enoPeopleThemesYamlPgz import *
 
