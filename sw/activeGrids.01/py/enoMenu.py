@@ -70,31 +70,31 @@ class EnoMenu(AtaBase):
   ############# load yaml #############
 
   def loadYaml(self):
-    if self.yamlFn is None:                  err("loadYaml: yaml filename undefined"); return
-    if os.path.exists(self.yamlFn) == False: err("loadYaml: yaml file not found:" + self.yamlFn); return
+    if self.yamlFn is None:                  self.err("loadYaml: yaml filename undefined"); return
+    if os.path.exists(self.yamlFn) == False: self.err("loadYaml: yaml file not found:" + self.yamlFn); return
 
     f = open(self.yamlFn, 'rt')
     self.yamlD = yaml.safe_load(f)
     f.close()
 
-    if 'animist' not in self.yamlD:  err("loadYaml: animist not found in yaml" + self.yamlFn); return
+    if 'animist' not in self.yamlD:  self.err("loadYaml: animist not found in yaml" + self.yamlFn); return
 
     ad = self.yamlD['animist']
 
-    if self.whichMenuName not in ad: err("loadYaml: %s menu not found in yaml %s" % (self.whichMenuName, self.yamlFn)); return
+    if self.whichMenuName not in ad: self.err("loadYaml: %s menu not found in yaml %s" % (self.whichMenuName, self.yamlFn)); return
 
     self.yamlMenuD = ad[self.whichMenuName]
 
   ############# build menu #############
 
   def buildMenu(self):
-    if self.yamlMenuD is None: err("buildMenu: yaml menu datastructure not found"); return
+    if self.yamlMenuD is None: self.err("buildMenu: yaml menu datastructure not found"); return
 
     textHandles = []; imageFns = []
 
     for menuEntry in self.yamlMenuD:
       try:    name = menuEntry['name']; imageFn = menuEntry['imageFn']
-      except: err("buildMenu: menuEntry parsing issue"); traceback.print_exc(); return
+      except: self.err("buildMenu: menuEntry parsing issue"); traceback.print_exc(); return
       textHandles.append(name); imageFns.append(imageFn)
 
     self.msg("buildMenu: %s || %s" % (str(textHandles), str(imageFns)))
