@@ -1,0 +1,26 @@
+# Animist core menu prototype
+# Initiated by Brygg Ullmer, Clemson University
+# Begun 2024-08-11
+
+animist:
+  homeMenu:
+    - {name: home_animist, imageFn: glyphs/animist01a_100}
+    - {name: home_apps,    imageFn: glyphs/app01a_100}
+    - {name: home_ops,     imageFn: glyphs/op01a_100}
+    - {name: home_props,   imageFn: glyphs/props01a_100}
+    - {name: home_team,    imageFn: glyphs/team01a_100}
+    - {name: home_data,    imageFn: glyphs/data01a_100}
+    - {name: home_help,    imageFn: glyphs/help01a_100}
+  
+  mapSubmenu:
+    - {name: map_bos, imageFn: glyphs/map_bos01a_100}
+    - {name: map_mit, imageFn: glyphs/map_mit01a_100}
+    - {name: map_lax, imageFn: glyphs/map_lax01a_100}
+    - {name: map_dca, imageFn: glyphs/map_dca01a_100}
+    - {name: map_ceu, imageFn: glyphs/map_ceu01a_100}
+    - {name: map_ber, imageFn: glyphs/map_ber01a_100}
+    - {name: map_tyo, imageFn: glyphs/map_tyo01a_100}
+
+#map45_ber01a_100
+
+### end ###
