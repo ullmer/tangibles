@@ -8,12 +8,13 @@
 # https://pygame-zero.readthedocs.io/en/stable/ptext.html
 # https://pythonprogramming.altervista.org/pygame-4-fonts/
 
+from ataBase   import *
 from enoButton import *
 import traceback
 
 ##################### enodia button array #####################
 
-class enoButtonArray:
+class EnoButtonArray(AtaBase):
   basePos    = (0,0)
   buttonDim  = (100, 30)
   dx, dy     = 190, 0
