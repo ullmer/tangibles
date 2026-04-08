@@ -7,8 +7,8 @@
 import yaml
 import os
 import traceback
-import ataBase
 
+from   ataBase        import *
 from   enoButton      import *
 from   enoButtonArray import *
 

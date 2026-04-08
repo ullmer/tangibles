@@ -7,11 +7,11 @@ import yaml
 import os
 import traceback
 
-from   enoMenu import *
+from enoMenu import *
 
 ##################### enodia animist home menu #####################
 
-class enoAnimistHomeMenu(enoMenu):
+class EnoAnimistHomeMenu(EnoMenu):
   menuExpanded = True
 
   ############# constructor #############
