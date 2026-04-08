@@ -130,7 +130,9 @@ class EnoMenu(AtaBase):
 
   ############# draw #############
 
-  def draw(self,          screen): self.enoButtonArr.draw(screen)
+  def draw(self, screen): 
+    try: self.enoButtonArr.draw(screen)
+    except: self.err("draw")
 
   def on_mouse_down(self, pos):    
     if self.buttonsActive: self.enoButtonArr.on_mouse_down(pos)
