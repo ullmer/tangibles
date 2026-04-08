@@ -34,7 +34,9 @@ class EnoAnimistHomeMenu(EnoMenu):
   ############# constructor #############
 
   def buildMenu(self): 
-    super().buildMenu()
+    try: super().buildMenu()
+    except: self.err("buildMenu")
+
     #self.enoButtonArr.addCallback(self.buttonCb)
 
   ############# home animist callback #############
