@@ -88,18 +88,19 @@ class EnoMenu(AtaBase):
   ############# build menu #############
 
   def buildMenu(self):
-    if self.yamlMenuD is None: self.err("buildMenu: yaml menu datastructure not found"); return
+    try:
+      if self.yamlMenuD is None: self.err("buildMenu: yaml menu datastructure not found"); return
 
-    textHandles = []; imageFns = []
+      textHandles = []; imageFns = []
 
-    for menuEntry in self.yamlMenuD:
-      try:    name = menuEntry['name']; imageFn = menuEntry['imageFn']
-      except: self.err("buildMenu: menuEntry parsing issue"); traceback.print_exc(); return
-      textHandles.append(name); imageFns.append(imageFn)
+      for menuEntry in self.yamlMenuD:
+        try:    name = menuEntry['name']; imageFn = menuEntry['imageFn']
+        except: self.err("buildMenu: menuEntry parsing issue"); traceback.print_exc(); return
+        textHandles.append(name); imageFns.append(imageFn)
 
-    self.msg("buildMenu: %s || %s" % (str(textHandles), str(imageFns)))
+      self.msg("buildMenu: %s || %s" % (str(textHandles), str(imageFns)))
 
-    self.enoButtonArr = EnoButtonArray(textHandles,  imageFns = imageFns, buttonDim = self.buttonDim,
+      self.enoButtonArr = EnoButtonArray(textHandles,  imageFns = imageFns, buttonDim = self.buttonDim,
                           dx = self.dx, dy = self.dy, basePos = self.basePos, 
                           drawText = self.drawText,  drawImg = self.drawImg, drawAdapt = self.drawAdapt,
                           bgcolor1 = self.bgcolor1, bgcolor2 = self.bgcolor2,  fgcolor = self.fgcolor, 
@@ -107,7 +108,8 @@ class EnoMenu(AtaBase):
                           requestAnim  = self.requestAnim, motionAnimTween = self.motionAnimTween,
                           animDuration = self.animDuration);
 
-    self.enoButtonArr.addCallback(self.buttonCb)
+      self.enoButtonArr.addCallback(self.buttonCb)
+    except: self.err("buildMenu")
 
   ############# expand/contract #############
 
