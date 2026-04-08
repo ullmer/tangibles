@@ -4,7 +4,7 @@
 
 WIDTH, HEIGHT = 800, 800
 
-import sys; sys.path.append("..")
+import sys; sys.path.append("../py")
 from enoButtonArray import *
 
 bd        = (70, 40)  #button dimension
