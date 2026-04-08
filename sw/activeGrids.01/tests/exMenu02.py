@@ -6,7 +6,7 @@ from enoAnimistHomeMenu import *
 
 WIDTH, HEIGHT = 900, 900
 
-eahm = enoAnimistHomeMenu(yamlFn = "yaml/animistHomeMenu01.yaml", requestAnim=True)
+eahm = EnoAnimistHomeMenu(yamlFn = "yaml/animistHomeMenu01.yaml", requestAnim=True)
 
 def draw(): screen.clear(); eahm.draw(screen)
 def on_mouse_down(pos):     eahm.on_mouse_down(pos)
