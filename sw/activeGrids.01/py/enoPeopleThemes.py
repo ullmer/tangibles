@@ -3,7 +3,7 @@
 # Brygg Ullmer, Clemson University
 # Begun 2026-03-24
 
-from ataBase  import *
+from enoBase  import *
 from enoActor import *
 from typing import TypedDict
 
@@ -51,7 +51,7 @@ class EnoTheme(EnoTok):
 
 ################### Enodia People ###################
 
-class EnoPeople(AtaBase):
+class EnoPeople(EnoBase):
   people = None # type: list[EnoPerson]
 
   ############# constructor #############
@@ -91,9 +91,8 @@ class EnoPeople(AtaBase):
 
 ################### Enodia Themes ###################
 
-class EnoThemes(AtaBase):
+class EnoThemes(EnoBase):
   themes = None # type: list[EnoTheme]
-
 
   ############# constructor #############
 

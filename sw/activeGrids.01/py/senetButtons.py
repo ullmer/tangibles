@@ -4,10 +4,10 @@
 
 WIDTH, HEIGHT = 1200, 800
 
-from ataBase        import *
+from enoBase        import *
 from enoButtonArray import *
 
-class SenetButtons(AtaBase):
+class SenetButtons(EnoBase):
 
   bd        = (70, 40)  #button dimension
   bdx       = 75        #x offset between buttons

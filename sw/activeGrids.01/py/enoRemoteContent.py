@@ -5,9 +5,9 @@
 import os, json, hashlib, datetime
 from pathlib import Path
 import requests, certifi
-from ataBase import AtaBase
+from enoBase import *
 
-class EnoRemoteContent(AtaBase):
+class EnoRemoteContent(EnoBase):
   """
   Retrieve remote content with:
     - explicit TLS policy

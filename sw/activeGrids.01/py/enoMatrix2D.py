@@ -5,12 +5,12 @@
 # Using pandas or numpy might have made sense, but considering a variant either in
 # micropython or a micropython c binding, and special aspects re subclass warping
 
-from ataBase               import *
+from enoBase               import *
 from typing                import Any, List
 
 Matrix = List[List[Any]]
 
-class EnoMatrix2D(AtaBase):
+class EnoMatrix2D(EnoBase):
   rows:   int|None = None
   cols:   int|None = None
   matrix: Matrix|None = None

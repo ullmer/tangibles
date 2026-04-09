@@ -5,7 +5,7 @@
 import yaml
 import os
 
-from ataBase          import *
+from enoBase          import *
 from enoOSsupport     import *
 from enoRemoteContent import EnoRemoteContent
 
@@ -14,7 +14,7 @@ from enoRemoteContent import EnoRemoteContent
 
 ################### Enodia Media Asset ###################
 
-class EnoMediaAsset(AtaBase):
+class EnoMediaAsset(EnoBase):
   mediaSubpath    = "images/" # type: str|None
   cacheSubpath    = "cache/"  # type: str|None
   mediaUrl        = None      # type: str|None
@@ -111,7 +111,7 @@ class EnoMediaAsset(AtaBase):
 
 ################### Enodia Media Assets ###################
 
-class EnoMediaAssets(AtaBase):
+class EnoMediaAssets(EnoBase):
   mediaSubpath = "images/" # type: str|None
   yamlFn = "yaml/mediaAssets"
   yamlD  = None # type: dict[Any]|None

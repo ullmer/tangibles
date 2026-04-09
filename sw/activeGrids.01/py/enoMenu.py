@@ -8,13 +8,13 @@ import yaml
 import os
 import traceback
 
-from   ataBase        import *
+from   enoBase        import *
 from   enoButton      import *
 from   enoButtonArray import *
 
 ##################### enodia menu #####################
 
-class EnoMenu(AtaBase):
+class EnoMenu(EnoBase):
   basePos    = (50,50)
 
   animTargetsSet  = False #animation target positions set

@@ -6,7 +6,7 @@ import traceback
 
 ########## animist tangible allomorphs domain ##########
 
-class AtaBase:
+class EnoBase:
   verbose  = True
 
   ########## message ##########
@@ -22,7 +22,7 @@ class AtaBase:
 
 ########## main ##########
 if __name__ == "__main__":
-  ab = AtaBase()
+  ab = EnoBase()
   ab.msg("hello world")
 
 ### end ###

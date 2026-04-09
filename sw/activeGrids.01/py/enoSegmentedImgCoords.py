@@ -3,9 +3,9 @@
 # Begun 2026-03-24
 
 import numpy as np
-from ataBase import *
+from enoBase import *
 
-class EnoSegmentedImgCoords(AtaBase):
+class EnoSegmentedImgCoords(EnoBase):
 
   yamlFn  = None
   yamlD   = None
