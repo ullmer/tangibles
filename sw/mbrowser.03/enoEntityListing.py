@@ -2,11 +2,11 @@
 # Brygg Ullmer, Clemson University
 # Begun 2025-11-12
 
-from ataBase       import *
+from enoBase       import *
 from enoPrism      import *
 from enoPrismsTei  import *
 
-class EnoEntityListing(AtaBase):
+class EnoEntityListing(EnoBase):
   entries        = None
   entryFontName  = "barlow_condensed_extralight"
   entryFontSize  = 32
