@@ -2,7 +2,7 @@
 # Brygg Ullmer, Clemson University
 # Begun 2025-11-06
 
-from ataBase       import *
+from enoBase       import *
 from enoPrism      import *
 from enoPrismIntersects import *
 from enoPrismsDetails   import *
@@ -11,7 +11,7 @@ from enoPrismsDetails   import *
   
 ############# Enodia Prisms #############
 
-class EnoPrisms(AtaBase):
+class EnoPrisms(EnoBase):
   prisms       = None
   domainPrisms = None
 

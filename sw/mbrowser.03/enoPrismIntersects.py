@@ -8,12 +8,12 @@ import pygame.gfxdraw
 import pyclipper
 
 from typing  import List, Tuple
-from ataBase import *
+from enoBase import *
 
 CoordF = Tuple[float, float]
 CoordI = Tuple[int, int]
 
-class EnoPrismIntersects(AtaBase):
+class EnoPrismIntersects(EnoBase):
   winWidth, winHeight = None, None
   barHeight           = 10 
 

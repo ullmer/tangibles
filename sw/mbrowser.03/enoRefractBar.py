@@ -2,13 +2,13 @@
 # Brygg Ullmer, Clemson University
 # Begun 2025-11-06
 
-from ataBase       import *
+from enoBase       import *
 from enoPrism      import *
 from enoPrismsTei  import *
 
 ############# refract bar #############
 
-class EnoRefractBar(AtaBase):
+class EnoRefractBar(EnoBase):
   dimensions = None
   position   = None
   surf       = None

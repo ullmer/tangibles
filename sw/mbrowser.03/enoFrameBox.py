@@ -6,13 +6,13 @@ import pygame
 
 from pgzero.constants import * #e.g., keys
 
-from ataBase      import *
+from enoBase      import *
 from enoPrismBar  import *
 from enoPrismBars import *
 from enoParseGrid import *
 from pygame       import Rect
 
-class EnoFrameBox(AtaBase):
+class EnoFrameBox(EnoBase):
   verbose         = False
   shiftMultiplier = 10
 

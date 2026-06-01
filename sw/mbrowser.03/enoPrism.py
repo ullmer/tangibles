@@ -6,12 +6,12 @@ import math
 import pygame
 import pygame.gfxdraw
 
-from ataBase      import *
+from enoBase      import *
 from enoPrismBar  import *
 from enoPrismBars import *
 from enoParseGrid import *
 
-class EnoPrism(AtaBase):
+class EnoPrism(EnoBase):
   prismName = None
   prismBars = None
   parseGrid = None

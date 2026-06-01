@@ -6,10 +6,10 @@ import math
 import pygame
 import pygame.gfxdraw
 
-from ataBase            import *
+from enoBase            import *
 from enoPrismBar        import *
 
-class EnoPrismBars(AtaBase):
+class EnoPrismBars(EnoBase):
   basePos    = (0, 0)
   cumPosTop  = None
   baseShiftX = 0

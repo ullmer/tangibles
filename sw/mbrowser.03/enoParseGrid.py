@@ -2,10 +2,10 @@
 # Brygg Ullmer, Clemson University
 # Begun 2025-11-06
 
-from ataBase   import *
+from enoBase   import *
 from functools import partial
 
-class EnoParseGrid(AtaBase):
+class EnoParseGrid(EnoBase):
 
   rows, cols   = None, None
   x0, y0       = None, None

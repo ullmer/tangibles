@@ -1,11 +1,10 @@
-
 # enoPrismsDetails.py — trusted base + untrusted overlay loader
 # Brygg Ullmer & collaborators — refactor scaffold by Copilot (2026-03-16)
 # - Loads a **trusted** base YAML (policy + machinery) and an **untrusted** overlay YAML (content)
 # - Validates and merges them with a minimal, sealed op registry (no getattr on user-provided names)
 # - Renders prisms with safe label templating and color resolution
 
-from ataBase import *
+from enoBase import *
 from enoActor import *
 from enoPrism import *
 from enoPrismBars import *
@@ -130,7 +129,7 @@ class RoleSpec:
 
 ##################### Enodia Prisms Details ##################### 
 
-class EnoPrismsDetails(AtaBase):
+class EnoPrismsDetails(EnoBase):
   """
   Construct with:
     EnoPrismsDetails(base_yaml='prismsAcmTei01bb.yaml', overlay_yaml='prismsAcmTei01bo.yaml')

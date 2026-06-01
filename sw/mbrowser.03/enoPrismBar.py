@@ -8,9 +8,9 @@ import pygame.gfxdraw
 
 from pgzero.builtins import Actor, animate, keyboard, keys
 
-from ataBase import *
+from enoBase import *
 
-class EnoPrismBar(AtaBase):
+class EnoPrismBar(EnoBase):
   basePos    = (0, 0)
   baseShiftX = None
   barWidth       = 500
