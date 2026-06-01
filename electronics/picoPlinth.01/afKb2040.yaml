@@ -3,7 +3,8 @@
 #Initial generation relative to rpiPico1 by CoPilot
 #Mapped to L/R geometric pin schema (top-down, USB at top)
 
-component: adafruitKb2040
+component: 
+  id:  adafruitKb2040
   pins:
     # left
     L1:  [D+,   USB_DP]
