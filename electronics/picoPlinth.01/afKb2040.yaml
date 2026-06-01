@@ -5,9 +5,8 @@
 
 component: adafruitKb2040
   pins:
-
     # left
-    L1:  [D+, USB_DP]
+    L1:  [D+,   USB_DP]
     L2:  [D0,   GP0,  UART0 TX, I2C0 SDA, SPI0 RX]
     L3:  [D1,   GP1,  UART0 RX, I2C0 SCL, SPI0 CSn]
     L4:  [GND]
@@ -17,14 +16,14 @@ component: adafruitKb2040
     L8:  [D4,   GP4,  SPI0 MISO, I2C0 SDA, UART1 TX]
     L9:  [D5,   GP5,  SPI0 CSn,  I2C0 SCL, UART1 RX]
     L10: [D6,   GP6,  SPI0 SCK,  I2C1 SDA]
-    L11: [D7,   GP7,  SPI0 MOSI, I2C1 SCL]
-    L12: [D8,   GP8,  SPI1 MISO, I2C0 SDA, UART1 TX]
+    L11: [D7,   GP7,  SPI0 MOSI, I2C1 SCL,           SPI0 TX]
+    L12: [D8,   GP8,  SPI1 MISO, I2C0 SDA, UART1 TX, SPI1 RX]
     L13: [D9,   GP9,  SPI1 CSn,  I2C0 SCL, UART1 RX]
     L14: [BUTTON, GP11]
     
     #right:
     R1:  [D-, USB_DM]
-    R2:  [RAW, VBUS]
+    R2:  [RAW, VBUS] #VBUS via fuse/diode (unless jumper bridged)
     R3:  [GND]
     R4:  [RESET]
     R5:  [3V3]
