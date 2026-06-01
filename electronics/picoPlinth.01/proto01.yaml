@@ -1,0 +1,14 @@
+# Descriptives of protoboard
+# Brygg Ullmer, Clemson University
+# Begun 2026-06-01
+
+component:
+  id: EPLZON mini PCB
+  purchase:
+    amazon: https://www.amazon.com/gp/product/B0D6FZ2PFJ/
+
+  pins:
+    cols: [A B C D E + F G H I J]
+    rows: 17
+
+### end ###
