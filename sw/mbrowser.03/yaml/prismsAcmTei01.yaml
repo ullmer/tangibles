@@ -1,0 +1,95 @@
+# enoPrismsDetails config — ACM/TEI v02 (refactored for labeled bindings + bar roles)
+# Brygg Ullmer (Clemson University) and CoPilot
+# Begun 2026-03-16
+
+colors:
+  cblu: [  0,   0, 255, 75 ]
+  cyel: [255, 255,   0, 70 ]
+  cgre: [  0, 255,   0, 70 ]
+  cgr2: [  0, 255,   0, 20 ]
+  cred: [255,   0,   0, 70 ]
+
+# --------------------------------------------------------------------
+# Scalars (reusable anchors)
+# --------------------------------------------------------------------
+scalars:
+  pathMaxDy:   &pathMaxDy    750
+  barYShift:   &barYShift   1090
+  barNarrow1:  &barNarrow1    35
+  barNarrow2:  &barNarrow2    88
+  barWide:     &barWide      400
+
+# --------------------------------------------------------------------
+# Summon map
+# --------------------------------------------------------------------
+summon_bindings:
+  - { prism: teiLandscape, slot: 0, use: teiLandscape }
+  - { prism: teiYearsQ4,   slot: 1, use: teiYearsQ4 }
+
+# --------------------------------------------------------------------
+# Background actors
+# --------------------------------------------------------------------
+background_bars:
+  land: { image: teiland04,      bottomleft: [ 0,   *barYShift ], name: teiLandscape, scale: 0.45 }
+  conf: { image: teiblockconf04, bottomleft: [ 910, *barYShift ], name: teiConfsQ04,  scale: 0.45 }
+
+####################################################
+# Prism specifications (now using labeled bar roles)
+####################################################
+
+prisms:
+
+  # ---------------------- teiLandscape ----------------------
+  teiLandscape:
+    bars:
+      bindings: 
+        - { year: 22, city: Daejeon,  color: cyel, firstWidth: *barNarrow1 }
+        - { year: 23, city: Warsaw,   color: cblu, firstWidth: *barNarrow1 }
+        - { year: 24, city: Cork,     color: cblu, firstWidth: *barWide    }
+        - { year: 25, city: Bordeaux, color: cblu, firstWidth: *barNarrow1 }
+        - { year: 26, city: Chicago,  color: cred, firstWidth: *barNarrow1 }
+
+      upper:
+        params: {flowLeft: false, textOffset2: [ -18, 0 ], fontSize: 25,
+                 pathMaxDxy: [700, *pathMaxDy], basePos: [200, 0] }
+
+        bindingsMethod: addBarL
+
+      lower:
+        params: {flowLeft: false, pathMaxDx: 140, pathMaxDy: 80, baseWidth: 79,
+                 basePos: [900, *pathMaxDy], refractBars: true }
+
+        bindingsMethod: addBarL2
+
+    parseGrid: {rowsCols: [2, 4], xy0: [-10, 831], pixDim: [413, 116], verbose: false} 
+    gridBindings: [tools, actuation, AI, "computing hardware", art, creativity, "dance&theater", "music&sound"]
+
+  # ---------------------- teiYearsQ4 ----------------------
+  teiYearsQ4:
+    bars:
+      bindings: 
+        - { label: creativity,               colors: [cgre, cgr2], firstWidth: *barNarrow2 }
+        - { label: dance+theater,            colors: [cgre, cgr2], firstWidth: *barNarrow2 }
+        - { label: music+sound,              colors: [cgre, cgr2], firstWidth: *barNarrow2 }
+        - { label: actuation,                colors: [cyel, cyel], firstWidth: *barNarrow2 }
+        - { label: artificial intelligence,  colors: [cyel, cyel], firstWidth: *barNarrow2 }
+        - { label: computing hardware,       colors: [cyel, cyel], firstWidth: *barNarrow2 }
+
+      upper:
+        params: { flowLeft: true, textOffset2: [930, 0], fontSize: 40,
+                  pathMaxDxy: [1000, *pathMaxDy]}
+        bindingsMethod: addBarL
+
+      lower:
+        params:  { flowLeft: true, textOffset2: [705, 0], fontSize: 25,
+                   pathMaxDy: 80, pathMaxDx: -100, basePos: [100, *pathMaxDy],
+                   baseWidth: 105, refractBars: true }
+        set_attrs: { baseWidth: 97, baseShiftX: -260 }
+        add_sequence:
+          - { method: addBarL3, count: 3, args: [65] }
+          - { method: addBarL2 }
+
+    parseGrid: {rowsCols: [1, 5],   xy0: [1040, 831], pixDim: [398, 116], verbose: false}
+    gridBindings: [tei22, tei23, tei24, tei25, tei26]
+
+### end ###

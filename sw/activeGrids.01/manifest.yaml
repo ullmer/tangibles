@@ -1,0 +1,67 @@
+# Manifest: ActiveGrids / Enodia Tangibles
+# Auto-expressed by CoPilot per request by Brygg Ullmer, Clemson University
+# Begun 2026-04-08
+
+project:
+  name: activeGrids
+  domain: tangible-interaction-and-ethics
+  primary_languages:
+    - python
+    - yaml
+    - prolog
+
+intent:
+  primary_goals:
+    - human-legible computation
+    - ethical and civic modeling
+    - bidirectional specification/code flow
+    - educational usability
+
+governance:
+  constitution: constitution.md
+  spec: spec.md
+  authority: human-authored-text
+  mutation_policy: explicit-diff-only
+
+representations:
+  semantic_sources:
+    - yaml/peopleThemes03.yaml
+    - yaml/mediaAssets.yaml
+    - yaml/senet03k.yaml
+
+  reasoning_backends:
+    prolog:
+      transformer:
+        - yaml/transformers/yamlPl.py
+        - yaml/transformers/yamlPl.pl
+      role: declarative-model-and-query
+
+execution:
+  interaction:
+    framework: pygame-zero
+    interaction_modes:
+      - mouse
+      - touch
+  visualization: pygame
+
+constraints:
+  trust:
+    explicit_policy_required: true
+    silent_remote_fetch: false
+
+  legibility:
+    min_comment_density: medium
+    require_narrative_headers: true
+
+provenance:
+  track_llm_generated_diffs: true
+  track_human_curated_diffs: true
+  preserve_yaml_sources: true
+
+future_targets:
+  aspirational_backends:
+    - datalog
+    - sql
+    - unnamed_future_languages
+
+### end ###
