@@ -8,7 +8,7 @@ from enoPrismBar  import *
 from enoPrismBars import *
 from enoParseGrid import *
 
-class EnoPrismsTei(AtaBase):
+class EnoPrismsTei(EnoBase):
 
   #pathMaxDy = 850
   pathMaxDy = 750
