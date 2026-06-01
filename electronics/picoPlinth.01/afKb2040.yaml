@@ -14,12 +14,12 @@ component: adafruitKb2040
     L5:  [GND]
     L6:  [D2,   GP2,  SPI0 SCK,  I2C1 SDA]
     L7:  [D3,   GP3,  SPI0 MOSI, I2C1 SCL]
-    L8:  [D4,   GP4,  UART1 TX,  I2C0 SDA, SPI0 MISO]
-    L9:  [D5,   GP5,  UART1 RX,  I2C0 SCL, SPI0 CSn]
-    L10: [D6,   GP6,             I2C1 SDA, SPI0 SCK]
-    L11: [D7,   GP7,             I2C1 SCL, SPI0 MOSI]
-    L12: [D8,   GP8,  UART1 TX,  I2C0 SDA, SPI1 MISO]
-    L13: [D9,   GP9,  UART1 RX,  I2C0 SCL, SPI1 CSn]
+    L8:  [D4,   GP4,  SPI0 MISO, I2C0 SDA, UART1 TX]
+    L9:  [D5,   GP5,  SPI0 CSn,  I2C0 SCL, UART1 RX]
+    L10: [D6,   GP6,  SPI0 SCK,  I2C1 SDA]
+    L11: [D7,   GP7,  SPI0 MOSI, I2C1 SCL]
+    L12: [D8,   GP8,  SPI1 MISO, I2C0 SDA, UART1 TX]
+    L13: [D9,   GP9,  SPI1 CSn,  I2C0 SCL, UART1 RX]
     L14: [BUTTON, GP11]
     
     #right:
