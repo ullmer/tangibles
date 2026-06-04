@@ -30,4 +30,9 @@ class EnoVuTbox(EnoBase):
       self.drawText()
     except: self.err("draw")
 
+  ############ drawBox, drawText ############
+
+  def drawBox(self)  -> None: self.msg('drawBox called, abstract class')
+  def drawText(self) -> None: self.msg('drawText called, abstract class')
+
 ### end ###
