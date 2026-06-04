@@ -4,4 +4,14 @@
 
 from enoBase import *
 
+def EnoVuTbox(EnoBase):
+
+  width:   int = -1
+  height:  int = -1
+  textStr: str = None
+
+  def __init__(self, width: int, height: int, textStr: str): pass
+
+  def draw(self): pass 
+
 ### end ###
