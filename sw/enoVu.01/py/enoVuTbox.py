@@ -6,10 +6,11 @@ from enoBase import *
 
 class EnoVuTbox(EnoBase):
 
-  width:     int  = -1
-  height:    int  = -1
-  textStr:   str  = None
-  textScale: int  = 1
+  width:      int  = -1
+  height:     int  = -1
+  textStr:    str  = None
+  textScale:  int  = 1
+  textOffset: (int, int) = (5, 5)
 
   fillBox:   bool = True
 
