@@ -4,4 +4,12 @@
 
 from enoBase import *
 
+class EnoVuWin(EnoBase):
+  width  = None
+  height = None
+
+  #### draw ####
+
+  def draw(self): pass
+
 ### end ###
