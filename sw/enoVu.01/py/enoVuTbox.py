@@ -6,10 +6,14 @@ from enoBase import *
 
 class EnoVuTbox(EnoBase):
 
-  width:     int = -1
-  height:    int = -1
-  textStr:   str = None
-  textScale: int = 1
+  width:     int  = -1
+  height:    int  = -1
+  textStr:   str  = None
+  textScale: int  = 1
+
+  fillBox:   bool = True
+
+  ############ constructor ############
 
   def __init__(self, width: int, height: int, textStr: str) -> None: 
     super().__init__()
@@ -18,6 +22,12 @@ class EnoVuTbox(EnoBase):
     self.height  = height
     self.textStr = textStr
 
-  def draw(self): pass 
+  ############ draw ############
+
+  def draw(self): 
+    try:
+      self.drawBox()
+      self.drawText()
+    except: self.err("draw")
 
 ### end ###
