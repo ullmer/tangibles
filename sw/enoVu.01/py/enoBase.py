@@ -7,16 +7,16 @@ import traceback
 ########## animist tangible allomorphs domain ##########
 
 class EnoBase:
-  verbose  = True
+  verbose: bool  = True
 
   ########## message ##########
-  def msg(self, mstr: str): 
+  def msg(self, mstr: str) -> None: 
     mstr2 = self.getClassName() + ' msg: ' + str(mstr); print(mstr2)
 
-  def getClassName(self): return self.__class__.__name__
+  def getClassName(self) -> str: return self.__class__.__name__
 
   ########## error ##########
-  def err(self, estr: str):
+  def err(self, estr: str) -> None:
     estr2 = self.getClassName() + ' err: ' + str(estr); print(estr2)
     traceback.print_exc(); 
 

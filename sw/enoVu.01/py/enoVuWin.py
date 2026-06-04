@@ -10,7 +10,7 @@ class EnoVuWin(EnoBase):
 
   #### constructor ####
 
-  def __init__(self, width: int, height: int): 
+  def __init__(self, width: int, height: int) -> None: 
     super().__init__()
 
     self.width  = width
@@ -18,6 +18,6 @@ class EnoVuWin(EnoBase):
 
   #### draw ####
 
-  def draw(self): pass
+  def draw(self) -> None: pass
 
 ### end ###
